@@ -1,1 +1,1 @@
-# @lifinance/types
+# lifinance/types
