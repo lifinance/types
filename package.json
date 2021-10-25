@@ -1,56 +1,39 @@
 {
-  "name": "example-typescript-package",
-  "version": "0.2.2",
-  "description": "",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "umd:main": "dist/umd/index.js",
-  "types": "dist/types/index.d.js",
+  "name": "@lifinance/types",
+  "version": "0.0.1",
+  "description": "Types for lifi projects",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "postinstall": "husky install",
+    "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
-    "build:cjs": "node tools/cleanup cjs && tsc -p config/tsconfig.cjs.json",
-    "build:esm": "node tools/cleanup esm && tsc -p config/tsconfig.esm.json",
-    "build:umd": "node tools/cleanup umd && webpack --config config/webpack.config.js",
-    "build:types": "node tools/cleanup types && tsc -p config/tsconfig.types.json",
+    "build": "node tools/cleanup types && tsc -p config/tsconfig.json",
     "clean": "node tools/cleanup",
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @tomchen/example-typescript-package"
-  },
-  "publishConfig": {
-    "access": "public"
+    "addscope": "node tools/packagejson name @lifinance/types"
   },
   "files": [
     "dist"
   ],
-  "keywords": [
-    "example",
-    "typescript",
-    "npm",
-    "package",
-    "sample",
-    "boilerplate",
-    "starter",
-    "demo",
-    "cjs",
-    "esm",
-    "umd"
-  ],
-  "author": "Tom Chen <tomchen.org@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Michael Pautov <michael.pautov@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/tomchen/example-typescript-package",
+  "homepage": "https://github.com/lifinance/lifi-types",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tomchen/example-typescript-package.git"
+    "url": "git@github.com:lifinance/lifi-types.git"
   },
   "bugs": {
-    "url": "https://github.com/tomchen/example-typescript-package/issues"
+    "url": "https://github.com/lifinance/lifi-types"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ethers": "^5.4.7"
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
