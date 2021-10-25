@@ -1,13 +1,10 @@
 {
   "name": "@lifinance/types",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Types for lifi projects",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
     "build": "node tools/cleanup types && tsc -p ./tsconfig.json",
     "clean": "node tools/cleanup",
     "package": "npm run build && npm pack",
@@ -16,7 +13,12 @@
     "addscope": "node tools/packagejson name @lifinance/types",
     "pre-commit": "lint-staged",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
-    "prettier:fix": "prettier --write ./src/."
+    "prettier:fix": "prettier --write ./src/.",
+    "postinstall": "husky install",
+    "use:npmReadme": "mv 'README.md' 'git.README.md' && mv 'npm.README.md' 'README.md'",
+    "use:gitReadme": "mv 'README.md' 'npm.README.md' && mv 'git.README.md' 'README.md'",
+    "prepublishOnly": "run-s build use:npmReadme && pinst --enable",
+    "postpublish": "npm run use:gitReadme && pinst --enable"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -53,8 +55,9 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
-    "lint-staged": ">=10",
     "jest": "^27.2.0",
+    "lint-staged": ">=10",
+    "npm-run-all": "^4.1.5",
     "pinst": "^2.1.6",
     "prettier": "^2.4.0",
     "ts-jest": "^27.0.5",
