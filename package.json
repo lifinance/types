@@ -1,6 +1,6 @@
 {
   "name": "@lifinance/types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Types for lifi projects",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -29,7 +29,7 @@
     "url": "git+ssh://git@github.com/lifinance/lifi-types.git"
   },
   "bugs": {
-    "url": "https://github.com/lifinance/lifi-types"
+    "url": "https://github.com/lifinance/types"
   },
   "dependencies": {
     "ethers": "^5.4.7"
