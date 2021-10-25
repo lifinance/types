@@ -8,7 +8,7 @@
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "build": "node tools/cleanup types && tsc -p config/tsconfig.json",
+    "build": "node tools/cleanup types && tsc -p ./tsconfig.json",
     "clean": "node tools/cleanup",
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
