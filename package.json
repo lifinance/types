@@ -23,10 +23,10 @@
   },
   "author": "Michael Pautov <michael.pautov@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/lifinance/lifi-types",
+  "homepage": "https://github.com/lifinance/types",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lifinance/lifi-types.git"
+    "url": "git+ssh://git@github.com/lifinance/types.git"
   },
   "bugs": {
     "url": "https://github.com/lifinance/types"
