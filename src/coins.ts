@@ -960,7 +960,7 @@ export const defaultCoins: Array<Coin> = [
   },
 ]
 
-export const findDefaultCoin = (coinKey: CoinKey): Coin => {
+export const findDefaultCoin = (coinKey: CoinKey) => {
   const coin = defaultCoins.find((coin) => coin.key === coinKey)
   if (!coin) {
     throw new Error('Invalid Coin')
@@ -970,9 +970,10 @@ export const findDefaultCoin = (coinKey: CoinKey): Coin => {
 export const findDefaultCoinOnChain = (
   coinKey: CoinKey,
   chainKey: ChainKey
-): Token => {
+) => {
   const coin = findDefaultCoin(coinKey)
-  return coin.chains[chainKey]
+  const token = coin.chains[chainKey]
+  return token
 }
 
 export const defaultTokens: { [ChainKey: string]: Array<Token> } = {

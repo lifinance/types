@@ -632,7 +632,7 @@ export const supportedChains: Array<Chain> = [
   // https://faucet.buni.finance/
 ]
 
-export const getChainByKey = (chainKey: ChainKey): Chain => {
+export const getChainByKey = (chainKey: ChainKey) => {
   const chain = supportedChains.find((chain) => chain.key === chainKey)
   if (!chain) {
     throw new Error('Invalid chainKey')
@@ -640,7 +640,7 @@ export const getChainByKey = (chainKey: ChainKey): Chain => {
   return chain
 }
 
-export const getChainById = (chainId: number): Chain => {
+export const getChainById = (chainId: number) => {
   const chain = supportedChains.find((chain) => chain.id === chainId)
   if (!chain) {
     throw new Error('Invalid chainId')

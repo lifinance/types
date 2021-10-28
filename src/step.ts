@@ -13,19 +13,22 @@ export interface BaseEstimate {
   }
 }
 
-export type DepositEstimate = BaseEstimate
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface DepositEstimate extends BaseEstimate {}
 
 export interface SwapEstimate extends BaseEstimate {
   type: 'swap'
-  data: unknown
+  toAmountMin: string
+  data: any
 }
 
 export interface CrossEstimate extends BaseEstimate {
   type: 'cross'
-  data: unknown
+  data: any
 }
 
-export type WithdrawEstimate = BaseEstimate
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface WithdrawEstimate extends BaseEstimate {}
 
 export interface FailedEstimate {
   type: 'error'
@@ -47,7 +50,7 @@ export type Status =
   | 'FAILED'
   | 'DONE'
 
-type AcceptableMessages = string | unknown
+type AcceptableMessages = string | any
 export type ProcessMessage =
   | AcceptableMessages
   | { message: AcceptableMessages; footer: AcceptableMessages }
@@ -56,13 +59,13 @@ export interface Process {
   startedAt: number
   doneAt?: number
   failedAt?: number
-  errorMessage?: unknown
-  errorCode?: unknown
+  errorMessage?: any
+  errorCode?: any
   message: ProcessMessage
   status: Status
 
   // additional information
-  [key: string]: unknown
+  [key: string]: any
 }
 
 export interface Execution {
@@ -76,6 +79,7 @@ export const emptyExecution: Execution = {
   status: 'NOT_STARTED',
   process: [],
 }
+
 // ACTION
 interface ActionBase {
   type: string
@@ -91,12 +95,14 @@ export interface DepositAction extends ActionBase {
 export interface WithdrawAction extends ActionBase {
   type: 'withdraw'
   toAddress: string
+  slippage: number
 }
 
 export interface SwapAction extends ActionBase {
   type: 'swap'
   tool: string
   toToken: Token
+  slippage: number
 }
 
 export interface CrossAction extends ActionBase {
