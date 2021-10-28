@@ -1,6 +1,6 @@
 {
   "name": "@lifinance/types",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Types for lifi projects",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,7 +14,6 @@
     "pre-commit": "lint-staged",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
     "prettier:fix": "prettier --write ./src/.",
-    "postinstall": "husky install",
     "use:npmReadme": "mv 'README.md' 'git.README.md' && mv 'npm.README.md' 'README.md'",
     "use:gitReadme": "mv 'README.md' 'npm.README.md' && mv 'git.README.md' 'README.md'",
     "prepublishOnly": "run-s build use:npmReadme && pinst --enable",
