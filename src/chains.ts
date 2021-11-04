@@ -24,7 +24,7 @@ export interface AddEthereumChainParameter {
   rpcUrls: string[]
 }
 
-export const prefixChainId = (chainId: number) => {
+export const prefixChainId = (chainId: number): string => {
   return '0x' + BigNumber.from(chainId)._hex.split('0x')[1].replace(/\b0+/g, '')
 }
 
@@ -555,7 +555,7 @@ export const supportedChains: Array<Chain> = [
   // https://faucet.buni.finance/
 ]
 
-export const getChainByKey = (chainKey: ChainKey) => {
+export const getChainByKey = (chainKey: ChainKey): Chain => {
   const chain = supportedChains.find((chain) => chain.key === chainKey)
   if (!chain) {
     throw new Error('Invalid chainKey')
@@ -563,7 +563,7 @@ export const getChainByKey = (chainKey: ChainKey) => {
   return chain
 }
 
-export const getChainById = (chainId: number) => {
+export const getChainById = (chainId: number): Chain => {
   const chain = supportedChains.find((chain) => chain.id === chainId)
   if (!chain) {
     throw new Error('Invalid chainId')

@@ -18,7 +18,7 @@ export interface Exchange {
   routerAddress: string
   factoryAddress: string
   initCodeHash: string
-  baseTokens?: Array<Token>
+  baseTokens: Array<Token>
 }
 
 export const supportedExchanges: Array<Exchange> = [
@@ -542,6 +542,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
   //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+  //   baseTokens: [],
   // },
 
   // 42 - Kovan
@@ -574,6 +575,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
   //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+  //   baseTokens: [],
   // },
 
   // 1666700000 - HARMONY TESTNET
@@ -591,6 +593,7 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+    baseTokens: [],
   },
 
   // 97 - Binance Smart Chain TESTNET
@@ -607,10 +610,13 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+    baseTokens: [
+      findWrappedGasOnChain(ChainKey.ONET),
+    ],
   },
 ]
 
-export const getExchangeByKey = (key: string) => {
+export const getExchangeByKey = (key: string): Exchange => {
   const exchange = supportedExchanges.find((exchange) => exchange.key === key)
   if (!exchange) {
     throw new Error('Invalid key')
