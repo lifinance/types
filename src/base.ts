@@ -8,6 +8,7 @@ export enum CoinKey {
   AVAX = 'AVAX',
   HT = 'HT',
   ONE = 'ONE',
+  FSN = 'FSN',
 
   // Stable coins
   USDT = 'USDT',
@@ -15,6 +16,11 @@ export enum CoinKey {
 
   // Testnet
   TEST = 'TEST',
+
+  // Other tokens
+  WBTC = 'WBTC',
+  WETH = 'WETH',
+  SUSHI = 'SUSHI',
 }
 
 export enum ChainKey {
@@ -29,6 +35,7 @@ export enum ChainKey {
   HEC = 'hec',
   OPT = 'opt',
   ONE = 'one',
+  FSN = 'fsn',
 
   // Testnets
   ROP = 'rop',
@@ -55,6 +62,7 @@ export enum ChainId {
   HEC = 128,
   OPT = 10,
   ONE = 1666600000,
+  FSN = 32659,
 
   // Testnets
   ROP = 3,

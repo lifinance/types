@@ -1,5 +1,5 @@
 import { BigNumber } from 'ethers'
-import { ChainKey, CoinKey } from './base'
+import { ChainKey, CoinKey } from '.'
 
 export interface Chain {
   key: ChainKey
@@ -7,7 +7,7 @@ export interface Chain {
   coin: CoinKey
   id: number
   visible: boolean
-  exchange?: Exchange
+  tokenlistUrl?: string
   faucetUrls?: string[]
   metamask: AddEthereumChainParameter
 }
@@ -24,14 +24,7 @@ export interface AddEthereumChainParameter {
   rpcUrls: string[]
 }
 
-export interface Exchange {
-  name: string
-  webUrl: string
-  graph: string
-  tokenlistUrl: string
-}
-
-const prefixChainId = (chainId: number) => {
+export const prefixChainId = (chainId: number) => {
   return '0x' + BigNumber.from(chainId)._hex.split('0x')[1].replace(/\b0+/g, '')
 }
 
@@ -44,13 +37,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 1,
     visible: true,
-
-    exchange: {
-      name: 'UniswapV2',
-      webUrl: 'https://app.uniswap.org/#/swap',
-      graph: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2', // https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2
-      tokenlistUrl: 'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
-    },
+    tokenlistUrl: 'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
 
     metamask: {
       chainId: prefixChainId(1),
@@ -73,14 +60,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.MATIC,
     id: 137,
     visible: true,
-
-    exchange: {
-      name: 'QuickSwap',
-      webUrl: 'https://quickswap.exchange/',
-      graph: 'https://api.thegraph.com/subgraphs/name/sameepsi/quickswap06', // https://thegraph.com/explorer/subgraph/sameepsi/quickswap06 (often new versions)
-      tokenlistUrl:
-        'https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json',
-    },
+    tokenlistUrl:
+      'https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json',
 
     // https://docs.matic.network/docs/develop/metamask/config-matic/
     metamask: {
@@ -105,14 +86,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.BNB,
     id: 56,
     visible: true,
-
-    exchange: {
-      name: 'Pancake',
-      webUrl: 'https://exchange.pancakeswap.finance/',
-      graph: 'https://api.thegraph.com/subgraphs/name/bscnodes/pancakeswap', // https://thegraph.com/explorer/subgraph/bscnodes/pancakeswap
-      tokenlistUrl:
-        'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
-    },
+    tokenlistUrl:
+      'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
 
     // https://docs.binance.org/smart-chain/wallet/metamask.html
     metamask: {
@@ -138,13 +113,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.DAI,
     id: 100,
     visible: true,
-
-    exchange: {
-      name: 'Honeyswap',
-      webUrl: 'https://app.honeyswap.org/',
-      graph: 'https://api.thegraph.com/subgraphs/name/1hive/honeyswap-xdai',
-      tokenlistUrl: 'https://tokens.honeyswap.org/',
-    },
+    tokenlistUrl: 'https://tokens.honeyswap.org/',
 
     // https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup
     metamask: {
@@ -171,17 +140,11 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.FTM,
     id: 250,
     visible: true,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
     faucetUrls: [
       'https://docs.spookyswap.finance/getting-started/how-to-get-fantom-gas',
     ],
-
-    exchange: {
-      name: 'SpookySwap',
-      webUrl: 'https://spookyswap.finance/swap',
-      graph: '',
-      tokenlistUrl:
-        'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
-    },
 
     // https://docs.fantom.foundation/tutorials/set-up-metamask
     metamask: {
@@ -294,40 +257,36 @@ export const supportedChains: Array<Chain> = [
       blockExplorerUrls: ['https://optimistic.etherscan.io/'],
       chainName: 'Optimistic Ethereum',
       nativeCurrency: {
-        name: 'OETH',
-        symbol: 'OETH',
+        name: 'ETH',
+        symbol: 'ETH',
         decimals: 18,
       },
       rpcUrls: ['https://mainnet.optimism.io/'],
     },
   },
 
-  // 32659 - FSN-MAIN (anyswap)
-  // {
-  //   key: ChainKey.FSN,
-  //   name: 'FSN-MAIN (anyswap)',
-  //   coin: CoinKey.FSN,
-  //   id: 32659,
-  //   visible: false,
+  // 32659 - Fusion (anyswap)
+  {
+    key: ChainKey.FSN,
+    name: 'Fusion Mainnet',
+    coin: CoinKey.FSN,
+    id: 32659,
+    visible: false,
 
-  //   // https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche
-  //   metamask: {
-  //     chainId: prefixChainId(32659),
-  //     blockExplorerUrls: [
-  //       'https://fsnex.com/',
-  //     ],
-  //     chainName: 'Fusion Mainnet',
+    // https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche
+    metamask: {
+      chainId: prefixChainId(32659),
+      blockExplorerUrls: ['https://fsnex.com/'],
+      chainName: 'Fusion Mainnet',
 
-  //     nativeCurrency: {
-  //       name: 'FSN',
-  //       symbol: 'FSN',
-  //       decimals: 18,
-  //     },
-  //     rpcUrls: [
-  //       'https://fsnmainnet2.anyswap.exchange',
-  //     ],
-  //   }
-  // },
+      nativeCurrency: {
+        name: 'FSN',
+        symbol: 'FSN',
+        decimals: 18,
+      },
+      rpcUrls: ['https://fsnmainnet2.anyswap.exchange'],
+    },
+  },
 
   // 1666600000 - Harmony Mainnet Shard 0
   {
@@ -336,14 +295,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ONE,
     id: 1666600000,
     visible: false,
-
-    exchange: {
-      name: 'ViperSwap',
-      webUrl: 'https://viper.exchange/#/swap',
-      graph: '',
-      tokenlistUrl:
-        'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
-    },
+    tokenlistUrl:
+      'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
 
     // https://docs.harmony.one/home/developers/wallets/metamask/connect-metamask-to-the-harmony-chain
     metamask: {
@@ -368,18 +321,12 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 3,
     visible: false,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: [
       'https://faucet.ropsten.be/',
       'https://app.compound.finance/', // https://teller.gitbook.io/teller-1/testing-guide/getting-testnet-tokens-ropsten-1
     ],
-
-    exchange: {
-      name: 'Uniswap',
-      webUrl: 'https://app.uniswap.org/',
-      graph: '',
-      tokenlistUrl:
-        'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    },
 
     metamask: {
       chainId: prefixChainId(3),
@@ -402,15 +349,9 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 4,
     visible: false,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://faucet.rinkeby.io/'],
-
-    exchange: {
-      name: 'Uniswap',
-      webUrl: 'https://app.uniswap.org/',
-      graph: '',
-      tokenlistUrl:
-        'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    },
 
     metamask: {
       chainId: prefixChainId(4),
@@ -433,15 +374,9 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 5,
     visible: false,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://goerli-faucet.slock.it/'],
-
-    exchange: {
-      name: 'Uniswap',
-      webUrl: 'https://app.uniswap.org/',
-      graph: '',
-      tokenlistUrl:
-        'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    },
 
     metamask: {
       chainId: prefixChainId(5),
@@ -462,18 +397,12 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 42,
     visible: false,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: [
       'https://ethdrop.dev/',
       'https://gitter.im/kovan-testnet/faucet',
     ],
-
-    exchange: {
-      name: 'Uniswap',
-      webUrl: 'https://app.uniswap.org/',
-      graph: '',
-      tokenlistUrl:
-        'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    },
 
     metamask: {
       chainId: prefixChainId(42),
@@ -494,15 +423,9 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.MATIC,
     id: 80001,
     visible: false,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/elkfinance/tokens/main/mumbai.tokenlist.json',
     faucetUrls: ['https://faucet.matic.network/'],
-
-    exchange: {
-      name: 'QuickSwap',
-      webUrl: 'https://quickswap.exchange/',
-      graph: '',
-      tokenlistUrl:
-        'https://raw.githubusercontent.com/elkfinance/tokens/main/mumbai.tokenlist.json',
-    },
 
     metamask: {
       chainId: prefixChainId(80001),
