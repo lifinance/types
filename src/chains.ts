@@ -1,5 +1,5 @@
 import { BigNumber } from 'ethers'
-import { ChainKey, CoinKey } from '.'
+import { ChainKey, CoinKey } from './base'
 
 export interface Chain {
   key: ChainKey
@@ -187,6 +187,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.AVAX,
     id: 43114,
     visible: true,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/avalanche.json',
 
     // https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche
     metamask: {
@@ -208,6 +210,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 42161,
     visible: true,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/arbitrum.json',
     faucetUrls: ['https://bridge.arbitrum.io/'],
 
     metamask: {
@@ -250,6 +254,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 10,
     visible: true,
+    tokenlistUrl: 'https://static.optimism.io/optimism.tokenlist.json',
+
     faucetUrls: ['https://gateway.optimism.io/'],
 
     metamask: {
@@ -257,8 +263,8 @@ export const supportedChains: Array<Chain> = [
       blockExplorerUrls: ['https://optimistic.etherscan.io/'],
       chainName: 'Optimistic Ethereum',
       nativeCurrency: {
-        name: 'ETH',
-        symbol: 'ETH',
+        name: 'OETH',
+        symbol: 'OETH',
         decimals: 18,
       },
       rpcUrls: ['https://mainnet.optimism.io/'],
