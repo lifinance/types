@@ -122,6 +122,7 @@ export interface Step {
   action: Action
   estimate?: Estimate
   execution?: Execution
+  id?: string
 }
 
 export interface SwapStep {
