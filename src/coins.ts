@@ -1420,12 +1420,15 @@ export const findWrappedGasOnChain = (chainKey: ChainKey): Token => {
   return token
 }
 
-export const findTokenByAddress = (tokenAddress: string): Token | null => {
+export const findTokenByChainIdAndAddress = (
+  chainId: number,
+  tokenAddress: string
+): Token | null => {
   let token: Token | null = null
 
   defaultCoins.forEach((coin) => {
     Object.values(coin.chains).forEach((coinToken: Token) => {
-      if (coinToken.id === tokenAddress) {
+      if (coinToken.chainId === chainId && coinToken.id === tokenAddress) {
         token = coinToken
       }
     })
