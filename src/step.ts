@@ -23,6 +23,10 @@ export interface SwapEstimate extends BaseEstimate {
   data: any
 }
 
+export function isSwapEstimate(estimate: Estimate): estimate is SwapEstimate {
+  return estimate.type === 'swap'
+}
+
 export interface CrossEstimate extends BaseEstimate {
   type: 'cross'
   data: any
