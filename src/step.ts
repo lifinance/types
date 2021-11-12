@@ -90,6 +90,7 @@ export type StepType = 'swap' | 'cross' | 'lifi'
 export type StepTool = string
 
 export interface StepBase {
+  id: string
   type: StepType
   tool: StepTool
   action: Action

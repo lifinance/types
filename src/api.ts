@@ -35,7 +35,7 @@ export interface RoutesRequest {
 }
 
 export interface Route {
-  routeId: string
+  id: string
 
   fromChainId: number
   fromAmountUSD: string
