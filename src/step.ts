@@ -105,10 +105,18 @@ export interface SwapStep extends StepBase {
   estimate: Estimate
 }
 
+export function isSwapStep(step: Step): step is SwapStep {
+  return step.type === 'swap'
+}
+
 export interface CrossStep extends StepBase {
   type: 'cross'
   action: Action
   estimate: Estimate
+}
+
+export function isCrossStep(step: Step): step is CrossStep {
+  return step.type === 'cross'
 }
 
 export interface LifiStep extends StepBase {
@@ -116,6 +124,10 @@ export interface LifiStep extends StepBase {
   action: Action
   estimate: Estimate
   includedSteps: Step[]
+}
+
+export function isLifiStep(step: Step): step is LifiStep {
+  return step.type === 'lifi'
 }
 
 export type Step = SwapStep | CrossStep | LifiStep
