@@ -1,5 +1,5 @@
-import { Step } from '.'
-import { Token } from './base'
+import { providers } from 'ethers'
+import { Coin, Token, Chain, Step } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
 
@@ -61,4 +61,40 @@ export interface Route {
 
 export interface RoutesResponse {
   routes: Route[]
+}
+
+export interface PossibilitiesRequest {
+  chains?: number[] // (default: [all]) // eg. [1, 56, 100]
+  bridges?: {
+    allow?: string[] // (default: [all]) // eg. ['nxtp'] to allow only nxtp
+    deny?: string[] // (default: [])
+    prefer?: string[] // (default: [])
+  }
+  exchanges?: {
+    allow?: string[] // (default: [all])
+    deny?: string[] // (default: [])
+    prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
+  }
+}
+
+export interface PossibilitiesResponse {
+  chains: Chain[]
+  coins: Coin[]
+  // TODO: add available bridges/exchanges
+}
+
+export interface StepTransactionResponse {
+  tx: providers.TransactionRequest
+}
+
+export declare class LifiAPI {
+  getRoutes(request: RoutesRequest): Promise<RoutesResponse>
+
+  getPossibilities(
+    request?: PossibilitiesRequest
+  ): Promise<PossibilitiesResponse>
+
+  updateRoute(route: Route): Promise<Route>
+
+  getStepTransaction(step: Step): Promise<StepTransactionResponse>
 }
