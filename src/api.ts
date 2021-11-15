@@ -79,7 +79,7 @@ export interface PossibilitiesRequest {
 
 export interface PossibilitiesResponse {
   chains: Chain[]
-  coins: Coin[]
+  tokens: Token[]
   // TODO: add available bridges/exchanges
 }
 
