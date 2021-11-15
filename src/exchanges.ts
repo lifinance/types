@@ -327,7 +327,7 @@ export const supportedExchanges: Array<Exchange> = [
     webUrl: 'https://viper.exchange/#/swap',
     tokenlistUrl:
       'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
-    routerAddress: '',
+    routerAddress: '0xf012702a5f0e54015362cBCA26a26fc90AA832a3',
     factoryAddress: '0x7D02c116b98d0965ba7B642ace0183ad8b8D2196',
     initCodeHash:
       '0x162f79e638367cd45a118c778971dfd8d96c625d2798d3b71994b035cfe9b6dc',

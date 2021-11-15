@@ -1,51 +1,51 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Token } from './base'
 
+export interface FeeCost {
+  name: string
+  description?: string
+  percentage: string
+  token: Token
+  amount: string
+  amountUSD?: string
+}
+
+export interface GasCost {
+  type: 'SUM' | 'APPROVE' | 'SEND'
+  price?: string // suggested current standard price for chain
+  estimate?: string // estimate how much gas will be needed
+  limit?: string // suggested gas limit (estimate +25%)
+  amount: string // estimate * price = amount of tokens that will be needed
+  amountUSD?: string // usd value of token amount
+  token: Token // the used gas token
+}
+
+// ACTION
+export interface Action {
+  fromChainId: number
+  fromAmount: string
+  fromToken: Token
+  fromAddress?: string
+
+  toChainId: number
+  toToken: Token
+  toAddress?: string
+
+  slippage: number
+}
+
 // ESTIMATE
-export interface BaseEstimate {
-  type: string
+export interface Estimate {
   fromAmount: string
   toAmount: string
-  fees: {
-    included: boolean
-    percentage: string | null
-    token: Token
-    amount: string
-  }
-}
-
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface DepositEstimate extends BaseEstimate {}
-
-export interface SwapEstimate extends BaseEstimate {
-  type: 'swap'
   toAmountMin: string
-  data: any
+  approvalAddress: string
+
+  feeCosts?: FeeCost[]
+  gasCosts?: GasCost[]
+
+  data?: any // differs by tool
 }
-
-export function isSwapEstimate(estimate: Estimate): estimate is SwapEstimate {
-  return estimate.type === 'swap'
-}
-
-export interface CrossEstimate extends BaseEstimate {
-  type: 'cross'
-  data: any
-}
-
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface WithdrawEstimate extends BaseEstimate {}
-
-export interface FailedEstimate {
-  type: 'error'
-  error: string
-  message: string
-}
-
-export type Estimate =
-  | SwapEstimate
-  | DepositEstimate
-  | CrossEstimate
-  | WithdrawEstimate
 
 // EXECUTION
 export type Status =
@@ -86,54 +86,48 @@ export const emptyExecution: Execution = {
   process: [],
 }
 
-// ACTION
-interface ActionBase {
-  type: string
-  chainId: number
-  amount: string
-  token: Token
-}
-
-export interface DepositAction extends ActionBase {
-  type: 'deposit'
-}
-
-export interface WithdrawAction extends ActionBase {
-  type: 'withdraw'
-  toAddress: string
-  slippage: number
-}
-
-export interface SwapAction extends ActionBase {
-  type: 'swap'
-  tool: string
-  toToken: Token
-  slippage: number
-}
-
-export interface CrossAction extends ActionBase {
-  type: 'cross'
-  tool: string
-  toChainId: number
-  toToken: Token
-  toAddress: string
-}
-
-export type Action = DepositAction | WithdrawAction | SwapAction | CrossAction
-
 // STEP
-export interface Step {
+export type StepType = 'swap' | 'cross' | 'lifi'
+export type StepTool = string
+
+export interface StepBase {
+  id: string
+  type: StepType
+  tool: StepTool
   action: Action
   estimate?: Estimate
   execution?: Execution
 }
 
-export interface SwapStep {
-  action: SwapAction
-  estimate: SwapEstimate
+export interface SwapStep extends StepBase {
+  type: 'swap'
+  action: Action
+  estimate: Estimate
 }
 
-export interface CrossStep {
-  action: CrossAction
-  estimate: CrossEstimate
+export function isSwapStep(step: Step): step is SwapStep {
+  return step.type === 'swap'
 }
+
+export interface CrossStep extends StepBase {
+  type: 'cross'
+  action: Action
+  estimate: Estimate
+}
+
+export function isCrossStep(step: Step): step is CrossStep {
+  return step.type === 'cross'
+}
+
+export interface LifiStep extends StepBase {
+  type: 'lifi'
+  action: Action
+  estimate: Estimate
+  includedSteps: Step[]
+}
+
+export function isLifiStep(step: Step): step is LifiStep {
+  return step.type === 'lifi'
+}
+
+export type Step = SwapStep | CrossStep | LifiStep
