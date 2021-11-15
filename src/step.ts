@@ -54,6 +54,7 @@ export type Status =
   | 'PENDING'
   | 'FAILED'
   | 'DONE'
+  | 'RESUME'
 
 type AcceptableMessages = string | any
 export type ProcessMessage =
