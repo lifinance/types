@@ -1,5 +1,5 @@
 import { providers } from 'ethers'
-import { Coin, Token, Chain, Step } from '.'
+import { Token, Chain, Step } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
 
