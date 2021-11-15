@@ -319,6 +319,30 @@ export const supportedChains: Array<Chain> = [
     },
   },
 
+  // 1285 - Moonriver
+  {
+    key: ChainKey.MOR,
+    name: 'Moonriver',
+    coin: CoinKey.MOVR,
+    id: 1285,
+    visible: false,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
+
+    metamask: {
+      chainId: prefixChainId(1285),
+      blockExplorerUrls: ['https://blockscout.moonriver.moonbeam.network'],
+      chainName: 'Moonriver',
+
+      nativeCurrency: {
+        name: 'Moonriver',
+        symbol: 'MOVR',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.moonriver.moonbeam.network'],
+    },
+  },
+
   // TESTNETS
   // 3 - Ropsten
   {

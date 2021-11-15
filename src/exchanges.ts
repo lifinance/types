@@ -447,6 +447,21 @@ export const supportedExchanges: Array<Exchange> = [
   //   ]
   // },
 
+  {
+    key: 'sushiswap-mor',
+    name: 'SushiSwap',
+    chainId: ChainId.MOR,
+    logoURI: '...',
+    webUrl: 'https://app.sushi.com/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
+    routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    initCodeHash:
+      '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+    baseTokens: [findWrappedGasOnChain(ChainKey.MOR)],
+  },
+
   // TESTNETS
   // 3 - Ropsten
   {

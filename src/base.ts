@@ -9,6 +9,7 @@ export enum CoinKey {
   HT = 'HT',
   ONE = 'ONE',
   FSN = 'FSN',
+  MOVR = 'MOVR',
 
   // Stable coins
   USDT = 'USDT',
@@ -36,6 +37,7 @@ export enum ChainKey {
   OPT = 'opt',
   ONE = 'one',
   FSN = 'fsn',
+  MOR = 'mor',
 
   // Testnets
   ROP = 'rop',
@@ -63,6 +65,7 @@ export enum ChainId {
   OPT = 10,
   ONE = 1666600000,
   FSN = 32659,
+  MOR = 1285,
 
   // Testnets
   ROP = 3,
