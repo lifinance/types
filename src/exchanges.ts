@@ -63,7 +63,7 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultCoinOnChain(CoinKey.USDT, ChainKey.ETH),
       findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.ETH),
       {
-        id: '0x383518188C0C6d7730D91b2c03a03C837814a899',
+        id: '0x383518188c0c6d7730d91b2c03a03c837814a899',
         symbol: 'OHM',
         decimals: 9,
         chainId: ChainId.ETH,
@@ -95,7 +95,7 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultCoinOnChain(CoinKey.ETH, ChainKey.POL),
       findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.POL),
       {
-        id: '0x831753DD7087CaC61aB5644b308642cc1c33Dc13',
+        id: '0x831753dd7087cac61ab5644b308642cc1c33dc13',
         symbol: 'QUICK',
         decimals: 18,
         chainId: ChainId.POL,
@@ -168,21 +168,21 @@ export const supportedExchanges: Array<Exchange> = [
     baseTokens: [
       findWrappedGasOnChain(ChainKey.BSC),
       {
-        id: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+        id: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
         symbol: 'BUSD',
         decimals: 18,
         chainId: ChainId.BSC,
         chainKey: ChainKey.BSC,
       } as Token,
       {
-        id: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
+        id: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
         symbol: 'CAKE',
         decimals: 18,
         chainId: ChainId.BSC,
         chainKey: ChainKey.BSC,
       } as Token,
       {
-        id: '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c',
+        id: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
         symbol: 'BTCB',
         decimals: 18,
         chainId: ChainId.BSC,
@@ -210,14 +210,14 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultCoinOnChain(CoinKey.USDC, ChainKey.BSC),
       findDefaultCoinOnChain(CoinKey.USDT, ChainKey.BSC),
       {
-        id: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+        id: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
         symbol: 'BUSD',
         decimals: 18,
         chainId: ChainId.BSC,
         chainKey: ChainKey.BSC,
       } as Token,
       {
-        id: '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c',
+        id: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
         symbol: 'BTCB',
         decimals: 18,
         chainId: ChainId.BSC,
@@ -416,7 +416,7 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultCoinOnChain(CoinKey.USDT, ChainKey.ARB),
       findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.ARB),
       {
-        id: '0x3E6648C5a70A150A88bCE65F4aD4d506Fe15d2AF',
+        id: '0x3e6648c5a70a150a88bce65f4ad4d506fe15d2af',
         symbol: 'SPELL',
         decimals: 18,
         chainId: ChainId.ARB,

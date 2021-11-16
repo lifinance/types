@@ -33,7 +33,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.POL]: {
-        id: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
+        id: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
         symbol: CoinKey.ETH,
         decimals: 18,
         chainId: ChainId.POL,
@@ -44,7 +44,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.DAI]: {
-        id: '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1',
+        id: '0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1',
         symbol: CoinKey.ETH,
         decimals: 18,
         chainId: ChainId.DAI,
@@ -89,7 +89,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.FTM]: {
-        id: '0x74b23882a30290451A17c44f4F05243b6b58C76d',
+        id: '0x74b23882a30290451a17c44f4f05243b6b58c76d',
         symbol: CoinKey.ETH,
         decimals: 18,
         chainId: ChainId.FTM,
@@ -100,7 +100,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.AVA]: {
-        id: '0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB',
+        id: '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab',
         symbol: CoinKey.ETH,
         decimals: 18,
         chainId: ChainId.AVA,
@@ -426,7 +426,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
       },
       [ChainKey.OPT]: {
-        id: '0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1',
+        id: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
         symbol: CoinKey.DAI,
         decimals: 18,
         chainId: ChainId.OPT,
@@ -448,7 +448,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
       },
       [ChainKey.ONE]: {
-        id: '0xEf977d2f931C1978Db5F6747666fa1eACB0d0339',
+        id: '0xef977d2f931c1978db5f6747666fa1eacb0d0339',
         symbol: CoinKey.DAI,
         decimals: 18,
         chainId: ChainId.ONE,
@@ -483,7 +483,7 @@ export const defaultCoins: Array<Coin> = [
 
       // Testnets
       [ChainKey.ROP]: {
-        id: '0x31f42841c2db5173425b5223809cf3a38fede360', // on para 0xaD6D458402F60fD3Bd25163575031ACDce07538D, on faucet 0xf80A32A835F79D7787E8a8ee5721D0fEaFd78108
+        id: '0x31f42841c2db5173425b5223809cf3a38fede360', // on para 0xad6d458402f60fd3bd25163575031acdce07538d, on faucet 0xf80a32a835f79d7787e8a8ee5721d0feafd78108
         symbol: CoinKey.DAI,
         decimals: 18,
         chainId: ChainId.ROP,
@@ -516,7 +516,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
       },
       [ChainKey.KOV]: {
-        id: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa', // other: 0xc61ba16e864efbd06a9fe30aab39d18b8f63710a'
+        id: '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa', // other: 0xc61ba16e864efbd06a9fe30aab39d18b8f63710a'
         symbol: CoinKey.DAI,
         decimals: 18,
         chainId: ChainId.KOV,
@@ -527,7 +527,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
       },
       [ChainKey.MUM]: {
-        id: '0xb224913CE3851b0a0d7C0FB461eEF40f2e31ddb8',
+        id: '0xb224913ce3851b0a0d7c0fb461eef40f2e31ddb8',
         symbol: CoinKey.DAI,
         decimals: 18,
         chainId: ChainId.MUM,
@@ -760,7 +760,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
       },
       [ChainKey.OPT]: {
-        id: '0x94b008aA00579c1307B0EF2c499aD98a8ce58e58',
+        id: '0x94b008aa00579c1307b0ef2c499ad98a8ce58e58',
         symbol: CoinKey.USDT,
         decimals: 6,
         chainId: ChainId.OPT,
@@ -826,7 +826,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
       },
       [ChainKey.MOR]: {
-        id: '0xB44a9B6905aF7c801311e8F4E76932ee959c663C',
+        id: '0xb44a9b6905af7c801311e8f4e76932ee959c663c',
         symbol: CoinKey.USDT,
         decimals: 6,
         chainId: ChainId.MOR,
@@ -861,7 +861,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
       },
       [ChainKey.KOV]: {
-        id: '0x07de306FF27a2B630B1141956844eB1552B956B5',
+        id: '0x07de306ff27a2b630b1141956844eb1552b956b5',
         symbol: CoinKey.USDT,
         decimals: 6,
         chainId: ChainId.KOV,
@@ -926,7 +926,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
       },
       [ChainKey.OPT]: {
-        id: '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
+        id: '0x7f5c764cbc14f9669b88837ca1490cca17c31607',
         symbol: CoinKey.USDC,
         decimals: 6,
         chainId: ChainId.OPT,
@@ -992,7 +992,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
       },
       [ChainKey.MOR]: {
-        id: '0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D',
+        id: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d',
         symbol: CoinKey.USDC,
         decimals: 6,
         chainId: ChainId.MOR,
@@ -1038,7 +1038,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
       },
       [ChainKey.MUM]: {
-        id: '0x6D4dd09982853F08d9966aC3cA4Eb5885F16f2b2',
+        id: '0x6d4dd09982853f08d9966ac3ca4eb5885f16f2b2',
         symbol: CoinKey.USDC,
         decimals: 6,
         chainId: ChainId.MUM,
@@ -1141,7 +1141,7 @@ export const defaultCoins: Array<Coin> = [
     verified: true,
     chains: {
       [ChainKey.ETH]: {
-        id: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
+        id: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.ETH,
@@ -1152,7 +1152,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
       },
       [ChainKey.POL]: {
-        id: '0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6',
+        id: '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.POL,
@@ -1163,7 +1163,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
       },
       [ChainKey.DAI]: {
-        id: '0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252',
+        id: '0x8e5bbbb09ed1ebde8674cda39a0c169401db4252',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.DAI,
@@ -1174,7 +1174,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
       },
       [ChainKey.FTM]: {
-        id: '0x321162Cd933E2Be498Cd2267a90534A804051b11',
+        id: '0x321162cd933e2be498cd2267a90534a804051b11',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.FTM,
@@ -1186,7 +1186,7 @@ export const defaultCoins: Array<Coin> = [
       },
       [ChainKey.OPT]: {
         // guessed from debank api
-        id: '0x68f180fcCe6836688e9084f035309E29Bf0A2095',
+        id: '0x68f180fcce6836688e9084f035309e29bf0a2095',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.OPT,
@@ -1198,7 +1198,7 @@ export const defaultCoins: Array<Coin> = [
       },
       [ChainKey.AVA]: {
         // guessed from debank api
-        id: '0x50b7545627a5162F82A992c33b87aDc75187B218',
+        id: '0x50b7545627a5162f82a992c33b87adc75187b218',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.AVA,
@@ -1209,7 +1209,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
       },
       [ChainKey.ARB]: {
-        id: '0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f',
+        id: '0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.ARB,
@@ -1220,7 +1220,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
       },
       [ChainKey.ONE]: {
-        id: '0x3095c7557bCb296ccc6e363DE01b760bA031F2d9',
+        id: '0x3095c7557bcb296ccc6e363de01b760ba031f2d9',
         symbol: CoinKey.WBTC,
         decimals: 8,
         chainId: ChainId.ONE,
@@ -1253,7 +1253,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.FTM]: {
-        id: '0x74b23882a30290451A17c44f4F05243b6b58C76d',
+        id: '0x74b23882a30290451a17c44f4f05243b6b58c76d',
         symbol: CoinKey.WETH,
         decimals: 18,
         chainId: ChainId.FTM,
@@ -1265,7 +1265,7 @@ export const defaultCoins: Array<Coin> = [
       },
       [ChainKey.AVA]: {
         // guessed from debank api
-        id: '0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB',
+        id: '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab',
         symbol: CoinKey.WETH,
         decimals: 18,
         chainId: ChainId.AVA,
@@ -1276,7 +1276,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.ARB]: {
-        id: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+        id: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1',
         symbol: 'WETH',
         decimals: 18,
         chainId: ChainId.ARB,
@@ -1287,7 +1287,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.ROP]: {
-        id: '0xc778417E063141139Fce010982780140Aa0cD5Ab',
+        id: '0xc778417e063141139fce010982780140aa0cd5ab',
         symbol: 'WETH',
         decimals: 18,
         chainId: ChainId.ROP,
@@ -1298,7 +1298,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.RIN]: {
-        id: '0xc778417E063141139Fce010982780140Aa0cD5Ab',
+        id: '0xc778417e063141139fce010982780140aa0cd5ab',
         symbol: 'WETH',
         decimals: 18,
         chainId: ChainId.RIN,
@@ -1309,7 +1309,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.GOR]: {
-        id: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
+        id: '0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6',
         symbol: 'WETH',
         decimals: 18,
         chainId: ChainId.GOR,
@@ -1320,7 +1320,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.KOV]: {
-        id: '0xd0A1E359811322d97991E03f863a0C30C2cF029C',
+        id: '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
         symbol: 'WETH',
         decimals: 18,
         chainId: ChainId.GOR,
@@ -1342,7 +1342,7 @@ export const defaultCoins: Array<Coin> = [
     verified: true,
     chains: {
       [ChainKey.ETH]: {
-        id: '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
+        id: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.ETH,
@@ -1353,7 +1353,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
       },
       [ChainKey.POL]: {
-        id: '0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a',
+        id: '0x0b3f868e0be5597d5db7feb59e1cadbb0fdda50a',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.POL,
@@ -1364,7 +1364,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
       },
       [ChainKey.BSC]: {
-        id: '0x947950BcC74888a40Ffa2593C5798F11Fc9124C4',
+        id: '0x947950bcc74888a40ffa2593c5798f11fc9124c4',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.BSC,
@@ -1375,7 +1375,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
       },
       [ChainKey.DAI]: {
-        id: '0x2995D1317DcD4f0aB89f4AE60F3f020A4F17C7CE',
+        id: '0x2995d1317dcd4f0ab89f4ae60f3f020a4f17c7ce',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.DAI,
@@ -1386,7 +1386,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
       },
       [ChainKey.FTM]: {
-        id: '0xae75A438b2E0cB8Bb01Ec1E1e376De11D44477CC',
+        id: '0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.FTM,
@@ -1398,7 +1398,7 @@ export const defaultCoins: Array<Coin> = [
       },
       [ChainKey.AVA]: {
         // guessed from debank api
-        id: '0x37B608519F91f70F2EeB0e5Ed9AF4061722e4F76',
+        id: '0x37b608519f91f70f2eeb0e5ed9af4061722e4f76',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.AVA,
@@ -1409,7 +1409,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
       },
       [ChainKey.ARB]: {
-        id: '0xd4d42F0b6DEF4CE0383636770eF773390d85c61A',
+        id: '0xd4d42f0b6def4ce0383636770ef773390d85c61a',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.ARB,
@@ -1420,7 +1420,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
       },
       [ChainKey.ONE]: {
-        id: '0xBEC775Cb42AbFa4288dE81F387a9b1A3c4Bc552A',
+        id: '0xbec775cb42abfa4288de81f387a9b1a3c4bc552a',
         symbol: CoinKey.SUSHI,
         decimals: 18,
         chainId: ChainId.ONE,
@@ -1498,7 +1498,7 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
   },
   [ChainKey.FTM]: {
     //
-    id: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+    id: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
     symbol: 'wFTM',
     decimals: 18,
     chainId: ChainId.FTM,
@@ -1509,7 +1509,7 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
       'https://assets.spookyswap.finance/coins/0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83.png',
   },
   [ChainKey.ONE]: {
-    id: '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
+    id: '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a',
     symbol: 'WONE',
     decimals: 18,
     chainId: ChainId.ONE,
@@ -1519,7 +1519,7 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
     logoURI: 'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/tokens/WONE.png',
   },
   [ChainKey.AVA]: {
-    id: '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
+    id: '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7',
     symbol: 'WAVAX',
     decimals: 18,
     chainId: ChainId.AVA,
@@ -1529,7 +1529,7 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
     logoURI: '',
   },
   [ChainKey.ARB]: {
-    id: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+    id: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1',
     symbol: 'WETH',
     decimals: 18,
     chainId: ChainId.ARB,
@@ -1541,7 +1541,7 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
   },
 
   [ChainKey.MOR]: {
-    id: '0xf50225a84382c74CbdeA10b0c176f71fc3DE0C4d',
+    id: '0xf50225a84382c74cbdea10b0c176f71fc3de0c4d',
     symbol: 'WMOVR',
     decimals: 18,
     chainId: ChainId.MOR,
@@ -1613,7 +1613,7 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
       'https://zapper.fi/images/networks/polygon/0x0000000000000000000000000000000000000000.png',
   },
   [ChainKey.ONET]: {
-    id: '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2',
+    id: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
     symbol: 'WONE',
     decimals: 18,
     chainId: ChainId.ONET,
