@@ -331,7 +331,7 @@ export const supportedChains: Array<Chain> = [
 
     metamask: {
       chainId: prefixChainId(1285),
-      blockExplorerUrls: ['https://blockscout.moonriver.moonbeam.network'],
+      blockExplorerUrls: ['https://blockscout.moonriver.moonbeam.network/'],
       chainName: 'Moonriver',
 
       nativeCurrency: {
