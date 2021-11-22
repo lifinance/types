@@ -88,6 +88,7 @@ export interface Token {
   name: string
   chainKey: ChainKey
   key: CoinKey
+  priceUSD?: string
   logoURI: string
 }
 
