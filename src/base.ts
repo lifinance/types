@@ -22,6 +22,10 @@ export enum CoinKey {
   WBTC = 'WBTC',
   WETH = 'WETH',
   SUSHI = 'SUSHI',
+  DODO = 'DODO',
+  MCB = 'MCB',
+  CELR = 'CELR',
+  IF = 'IF',
 }
 
 export enum ChainKey {
