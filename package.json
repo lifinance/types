@@ -44,6 +44,7 @@
     "url": "https://github.com/lifinance/types"
   },
   "dependencies": {
+    "ajv": "^8.8.2",
     "ethers": "^5.4.7"
   },
   "devDependencies": {

@@ -1,28 +1,5 @@
 import { BigNumber } from 'ethers'
-import { ChainKey, CoinKey } from './base'
-
-export interface Chain {
-  key: ChainKey
-  name: string
-  coin: CoinKey
-  id: number
-  visible: boolean
-  tokenlistUrl?: string
-  faucetUrls?: string[]
-  metamask: AddEthereumChainParameter
-}
-
-export interface AddEthereumChainParameter {
-  chainId: string
-  blockExplorerUrls: string[]
-  chainName: string
-  nativeCurrency: {
-    name: string
-    symbol: string
-    decimals: number
-  }
-  rpcUrls: string[]
-}
+import { Chain, ChainKey, CoinKey } from '../types'
 
 export const prefixChainId = (chainId: number): string => {
   return '0x' + BigNumber.from(chainId)._hex.split('0x')[1].replace(/\b0+/g, '')

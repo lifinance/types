@@ -1,25 +1,5 @@
-import {
-  ChainId,
-  ChainKey,
-  CoinKey,
-  findDefaultCoinOnChain,
-  findWrappedGasOnChain,
-  Token,
-} from '.'
-
-export interface Exchange {
-  key: string
-  name: string
-  chainId: number
-  logoURI: string
-  webUrl: string
-  graph?: string
-  tokenlistUrl: string
-  routerAddress: string
-  factoryAddress: string
-  initCodeHash: string
-  baseTokens: Array<Token>
-}
+import { ChainId, ChainKey, CoinKey, Exchange } from '../types'
+import { findDefaultCoinOnChain, findWrappedGasOnChain } from './coins'
 
 export const supportedExchanges: Array<Exchange> = [
   // 1 - Ethereum

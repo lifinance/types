@@ -1,7 +1,15 @@
 import { providers } from 'ethers'
-import { Token, Chain, Step } from '.'
+import { Chain } from './chains'
+import { Step } from './step'
+import { Token } from './base'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
+
+export type BridgesOrExchanges = {
+  allow?: string[] // (default: [all]) // eg. ['nxtp'] to allow only nxtp
+  deny?: string[] // (default: [])
+  prefer?: string[] // (default: [])
+}
 
 export interface RouteOptions {
   order?: Order // (default : BEST_VALUE)
@@ -9,28 +17,17 @@ export interface RouteOptions {
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
   encryptionSupport?: boolean // (default : false)
-  bridges?: {
-    allow?: string[] // (default: [all]) // eg. ['nxtp'] to allow only nxtp
-    deny?: string[] // (default: [])
-    prefer?: string[] // (default: [])
-  }
-  exchanges?: {
-    allow?: string[] // (default: [all])
-    deny?: string[] // (default: [])
-    prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
-  }
+  bridges?: BridgesOrExchanges
+  exchanges?: BridgesOrExchanges
 }
-
 export interface RoutesRequest {
   fromChainId: number
   fromAmount: string
   fromTokenAddress: string
   fromAddress?: string
-
   toChainId: number
   toTokenAddress: string
   toAddress?: string
-
   options?: RouteOptions
 }
 

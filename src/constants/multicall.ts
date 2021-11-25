@@ -1,8 +1,8 @@
-import { ChainId } from '.'
-
 // based on:
 // - https://github.com/sushiswap/sushiswap-sdk/blob/canary/src/constants/addresses.ts#L323
 // - https://github.com/joshstevens19/ethereum-multicall#multicall-contracts
+import { ChainId } from '../types'
+
 export const multicallAddresses: { [ChainId: number]: string } = {
   // Mainnet
   [ChainId.ETH]: '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696',

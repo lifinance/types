@@ -98,6 +98,6 @@ export interface Coin {
   logoURI: string
   verified: boolean
   chains: {
-    [ChainKey: string]: Token
+    [key in keyof typeof ChainKey]: Token
   }
 }

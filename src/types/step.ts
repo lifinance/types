@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Token } from './base'
 
 export interface FeeCost {
@@ -55,8 +54,7 @@ export type Status =
   | 'FAILED'
   | 'DONE'
   | 'RESUME'
-
-type AcceptableMessages = string | any
+export type AcceptableMessages = string | any
 export type ProcessMessage =
   | AcceptableMessages
   | { message: AcceptableMessages; footer: AcceptableMessages }
@@ -81,11 +79,6 @@ export interface Execution {
   toAmount?: string
 }
 
-export const emptyExecution: Execution = {
-  status: 'NOT_STARTED',
-  process: [],
-}
-
 // STEP
 export type StepType = 'swap' | 'cross' | 'lifi'
 export type StepTool = string
@@ -101,23 +94,15 @@ export interface StepBase {
 
 export interface SwapStep extends StepBase {
   type: 'swap'
-  action: Action
   estimate: Estimate
-}
-
-export function isSwapStep(step: Step): step is SwapStep {
-  return step.type === 'swap'
 }
 
 export interface CrossStep extends StepBase {
   type: 'cross'
-  action: Action
   estimate: Estimate
 }
 
-export function isCrossStep(step: Step): step is CrossStep {
-  return step.type === 'cross'
-}
+export type Step = SwapStep | CrossStep | LifiStep
 
 export interface LifiStep extends StepBase {
   type: 'lifi'
@@ -125,9 +110,3 @@ export interface LifiStep extends StepBase {
   estimate: Estimate
   includedSteps: Step[]
 }
-
-export function isLifiStep(step: Step): step is LifiStep {
-  return step.type === 'lifi'
-}
-
-export type Step = SwapStep | CrossStep | LifiStep
