@@ -980,17 +980,6 @@ export const defaultCoins: Array<Coin> = [
         logoURI:
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
       },
-      [ChainKey.OPT]: {
-        id: '0x7f5c764cbc14f9669b88837ca1490cca17c31607',
-        symbol: CoinKey.USDC,
-        decimals: 6,
-        chainId: ChainId.OPT,
-        chainKey: ChainKey.OPT,
-        key: CoinKey.USDC,
-        name: CoinKey.USDC,
-        logoURI:
-          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
-      },
       [ChainKey.ONE]: {
         id: '0x985458e523db3d53125813ed68c274899e9dfab4',
         symbol: CoinKey.USDC,
@@ -1030,6 +1019,17 @@ export const defaultCoins: Array<Coin> = [
         decimals: 6,
         chainId: ChainId.HEC,
         chainKey: ChainKey.HEC,
+        key: CoinKey.USDC,
+        name: CoinKey.USDC,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+      },
+      [ChainKey.OKT]: {
+        id: '0xc946daf81b08146b1c7a8da2a851ddf2b3eaaf85',
+        symbol: CoinKey.USDC,
+        decimals: 18,
+        chainId: ChainId.OKT,
+        chainKey: ChainKey.OKT,
         key: CoinKey.USDC,
         name: CoinKey.USDC,
         logoURI:
@@ -1506,6 +1506,39 @@ export const defaultCoins: Array<Coin> = [
         logoURI:
           'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
       },
+      [ChainKey.MOR]: {
+        id: '0xf390830df829cf22c53c8840554b98eafc5dcbc2',
+        symbol: CoinKey.SUSHI,
+        decimals: 18, // check
+        chainId: ChainId.MOR,
+        chainKey: ChainKey.MOR,
+        key: CoinKey.SUSHI,
+        name: CoinKey.SUSHI,
+        logoURI:
+          'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
+      },
+      [ChainKey.OKT]: {
+        id: '0x2218e0d5e0173769f5b4939a3ae423f7e5e4eab7',
+        symbol: CoinKey.SUSHI,
+        decimals: 18, // check
+        chainId: ChainId.OKT,
+        chainKey: ChainKey.OKT,
+        key: CoinKey.SUSHI,
+        name: CoinKey.SUSHI,
+        logoURI:
+          'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
+      },
+      [ChainKey.HEC]: {
+        id: '0x52e00b2da5bd7940ffe26b609a42f957f31118d5',
+        symbol: CoinKey.SUSHI,
+        decimals: 18, // check
+        chainId: ChainId.HEC,
+        chainKey: ChainKey.HEC,
+        key: CoinKey.SUSHI,
+        name: CoinKey.SUSHI,
+        logoURI:
+          'https://raw.githubusercontent.com/sushiswapclassic/token-list/master/assets/sushi_logo.png',
+      },
     },
   },
 
@@ -1766,7 +1799,6 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
     logoURI:
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
   },
-
   [ChainKey.MOR]: {
     id: '0xf50225a84382c74cbdea10b0c176f71fc3de0c4d',
     symbol: 'WMOVR',
@@ -1776,6 +1808,28 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
     key: 'WMOVR' as CoinKey,
     name: 'WMOVR',
     logoURI: 'https://assets.coingecko.com/coins/images/17984/small/9285.png',
+  },
+  [ChainKey.OKT]: {
+    id: '0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15',
+    symbol: 'wOKT',
+    decimals: 18,
+    chainId: ChainId.OKT,
+    chainKey: ChainKey.OKT,
+    key: 'wOKT' as CoinKey,
+    name: 'wOKT',
+    logoURI:
+      'https://static.debank.com/image/okt_token/logo_url/okt/1228cd92320b3d33769bd08eecfb5391.png',
+  },
+  [ChainKey.HEC]: {
+    id: '0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f',
+    symbol: 'wHT',
+    decimals: 18,
+    chainId: ChainId.HEC,
+    chainKey: ChainKey.HEC,
+    key: 'wHT' as CoinKey,
+    name: 'wHT',
+    logoURI:
+      'https://static.debank.com/image/heco_token/logo_url/heco/c399dcddde07e1944c4dd8f922832b53.png',
   },
 
   // Testnets

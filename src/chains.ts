@@ -166,6 +166,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.OKT,
     id: 66,
     visible: true,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
 
     // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start-for-mainnet.html
     metamask: {
@@ -233,7 +235,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.HT,
     id: 128,
     visible: true,
-    faucetUrls: [],
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/heco.json',
 
     metamask: {
       chainId: prefixChainId(128),

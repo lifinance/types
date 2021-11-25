@@ -19,7 +19,7 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   // [ChainId.OPT]: '',
   [ChainId.MOR]: '0x270f2F35bED92B7A59eA5F08F6B3fd34c8D9D9b5',
   // [ChainId.CELO]: '0x9aac9048fC8139667D6a2597B902865bfdc225d3',
-  // [ChainId.HECO]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
+  [ChainId.HEC]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
   // [ChainId.PALM]: '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F',
   // [ChainId.FUSE]: '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F',
   // [ChainId.TELOS]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',

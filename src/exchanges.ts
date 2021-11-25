@@ -447,6 +447,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   ]
   // },
 
+  // 1285 - Moonriver
   {
     key: 'sushiswap-mor',
     name: 'SushiSwap',
@@ -459,7 +460,65 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
-    baseTokens: [findWrappedGasOnChain(ChainKey.MOR)],
+    baseTokens: [
+      findWrappedGasOnChain(ChainKey.MOR),
+      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.MOR),
+      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.MOR),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.MOR),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.MOR),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.MOR),
+      // FRAX
+      // MIM
+      // aROME
+    ],
+  },
+
+  // 128 - HECO Chain
+  {
+    key: 'sushiswap-hec',
+    name: 'SushiSwap',
+    chainId: ChainId.HEC,
+    logoURI: '...',
+    webUrl: 'https://app.sushi.com/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/heco.json',
+    routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    initCodeHash:
+      '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+    baseTokens: [
+      findWrappedGasOnChain(ChainKey.HEC),
+      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.HEC),
+      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.HEC),
+      // findDefaultCoinOnChain(CoinKey.DAI, ChainKey.HEC),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.HEC),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.HEC),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.HEC),
+    ],
+  },
+
+  // 66 - OKEX
+  {
+    key: 'sushiswap-okt',
+    name: 'SushiSwap',
+    chainId: ChainId.OKT,
+    logoURI: '...',
+    webUrl: 'https://app.sushi.com/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
+    routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    initCodeHash:
+      '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+    baseTokens: [
+      findWrappedGasOnChain(ChainKey.OKT),
+      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.OKT),
+      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.OKT),
+      // findDefaultCoinOnChain(CoinKey.DAI, ChainKey.OKT),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.OKT),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.OKT),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.OKT),
+    ],
   },
 
   // TESTNETS
