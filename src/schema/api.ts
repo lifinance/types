@@ -113,6 +113,8 @@ export const RoutesRequestSchema: JSONSchemaType<RoutesRequest> = {
   ],
   additionalProperties: false,
 }
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const RouteSchema: JSONSchemaType<Route> = {
   type: 'object',
   properties: {
@@ -232,6 +234,8 @@ export const PossibilitiesResponseSchema: JSONSchemaType<PossibilitiesResponse> 
     required: ['chains', 'tokens'],
     additionalProperties: false,
   }
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const StepTransactionResponseSchema: JSONSchemaType<StepTransactionResponse> =
   {
     type: 'object',

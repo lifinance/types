@@ -1,4 +1,4 @@
-import { ChainId, ChainKey, CoinKey, Exchange } from '../types'
+import { ChainId, ChainKey, CoinKey, Exchange, Token } from '../types'
 import { findDefaultCoinOnChain, findWrappedGasOnChain } from './coins'
 
 export const supportedExchanges: Array<Exchange> = [

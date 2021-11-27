@@ -1,6 +1,6 @@
 import { ChainId, ChainKey, Coin, CoinKey, Token } from '../types'
 
-export const defaultCoins: Array<Coin> = [
+export const defaultCoins: Coin[] = [
   // NATIVE COINS
   // > ETH
   {

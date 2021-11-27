@@ -167,6 +167,8 @@ export const AcceptableMessagesSchema: JSONSchemaType<AcceptableMessages> = {
     },
   ],
 }
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const ProcessMessageSchema: JSONSchemaType<ProcessMessage> = {
   anyOf: [
     AcceptableMessagesSchema,
@@ -182,6 +184,8 @@ export const ProcessMessageSchema: JSONSchemaType<ProcessMessage> = {
   ],
 }
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const ProcessSchema: JSONSchemaType<Process> = {
   type: 'object',
   properties: {
@@ -209,6 +213,8 @@ export const ProcessSchema: JSONSchemaType<Process> = {
   },
   required: ['startedAt', 'message', 'status'],
 }
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const ExecutionSchema: JSONSchemaType<Execution> = {
   type: 'object',
   properties: {
@@ -287,6 +293,8 @@ export const CrossStepSchema: JSONSchemaType<CrossStep> = {
   required: ['action', 'estimate', 'id', 'tool', 'type'],
   additionalProperties: false,
 }
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const LifiStepSchema: JSONSchemaType<LifiStep> = {
   type: 'object',
   properties: {

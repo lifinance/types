@@ -97,7 +97,5 @@ export interface Coin {
   name: string
   logoURI: string
   verified: boolean
-  chains: {
-    [key in keyof typeof ChainKey]: Token
-  }
+  chains: { [key in ChainKey]?: Token }
 }
