@@ -62,6 +62,7 @@ export const supportedChains: Array<Chain> = [
     visible: true,
     tokenlistUrl:
       'https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json',
+    faucetUrls: ['https://stakely.io/faucet/polygon-matic'],
 
     // https://docs.matic.network/docs/develop/metamask/config-matic/
     metamask: {
@@ -88,6 +89,7 @@ export const supportedChains: Array<Chain> = [
     visible: true,
     tokenlistUrl:
       'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
+    faucetUrls: ['https://stakely.io/faucet/bsc-chain-bnb'],
 
     // https://docs.binance.org/smart-chain/wallet/metamask.html
     metamask: {
@@ -114,6 +116,7 @@ export const supportedChains: Array<Chain> = [
     id: 100,
     visible: true,
     tokenlistUrl: 'https://tokens.honeyswap.org/',
+    faucetUrls: ['https://stakely.io/faucet/xdai-chain'],
 
     // https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup
     metamask: {
@@ -143,6 +146,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
     faucetUrls: [
+      'https://stakely.io/faucet/fantom-blockchain-ftm',
       'https://docs.spookyswap.finance/getting-started/how-to-get-fantom-gas',
     ],
 
@@ -306,6 +310,7 @@ export const supportedChains: Array<Chain> = [
     visible: false,
     tokenlistUrl:
       'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
+    faucetUrls: ['https://stakely.io/faucet/harmony-one'],
 
     // https://docs.harmony.one/home/developers/wallets/metamask/connect-metamask-to-the-harmony-chain
     metamask: {
@@ -586,6 +591,10 @@ export const supportedChains: Array<Chain> = [
   },
 
   // https://faucet.buni.finance/
+  // solana faucet: https://stakely.io/faucet/solana-sol
+  // celo faucet: https://stakely.io/faucet/celo-platform
+  // kucoin faucet: https://stakely.io/faucet/kucoin-kcc-kcs
+  // Velas faucet: https://stakely.io/faucet/velas-vlx
 ]
 
 export const getChainByKey = (chainKey: ChainKey): Chain => {
