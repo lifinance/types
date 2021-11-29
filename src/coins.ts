@@ -439,7 +439,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.FTM]: {
         id: '0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e',
         symbol: CoinKey.DAI,
-        decimals: 18, // TODO: check
+        decimals: 18,
         chainId: ChainId.FTM,
         chainKey: ChainKey.FTM,
         key: CoinKey.DAI,
@@ -550,7 +550,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.FTM]: {
         id: '0x0000000000000000000000000000000000000000',
         symbol: CoinKey.FTM,
-        decimals: 18, // check
+        decimals: 18,
         chainId: ChainId.FTM,
         chainKey: ChainKey.FTM,
         key: CoinKey.FTM,
@@ -570,7 +570,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.OKT]: {
         id: '0x0000000000000000000000000000000000000000',
         symbol: CoinKey.OKT,
-        decimals: 18, // check
+        decimals: 18,
         chainId: ChainId.OKT,
         chainKey: ChainKey.OKT,
         key: CoinKey.OKT,
@@ -591,7 +591,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.AVA]: {
         id: '0x0000000000000000000000000000000000000000',
         symbol: CoinKey.AVAX,
-        decimals: 18, // check
+        decimals: 18,
         chainId: ChainId.AVA,
         chainKey: ChainKey.AVA,
         key: CoinKey.AVAX,
@@ -961,7 +961,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.FTM]: {
         id: '0x04068da6c83afcfa0e13ba15a6696662335d5b75',
         symbol: CoinKey.USDC,
-        decimals: 6, // Check
+        decimals: 6,
         chainId: 250,
         chainKey: ChainKey.FTM,
         key: CoinKey.USDC,
@@ -1509,7 +1509,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.MOR]: {
         id: '0xf390830df829cf22c53c8840554b98eafc5dcbc2',
         symbol: CoinKey.SUSHI,
-        decimals: 18, // check
+        decimals: 18,
         chainId: ChainId.MOR,
         chainKey: ChainKey.MOR,
         key: CoinKey.SUSHI,
@@ -1520,7 +1520,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.OKT]: {
         id: '0x2218e0d5e0173769f5b4939a3ae423f7e5e4eab7',
         symbol: CoinKey.SUSHI,
-        decimals: 18, // check
+        decimals: 18,
         chainId: ChainId.OKT,
         chainKey: ChainKey.OKT,
         key: CoinKey.SUSHI,
@@ -1531,7 +1531,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.HEC]: {
         id: '0x52e00b2da5bd7940ffe26b609a42f957f31118d5',
         symbol: CoinKey.SUSHI,
-        decimals: 18, // check
+        decimals: 18,
         chainId: ChainId.HEC,
         chainKey: ChainKey.HEC,
         key: CoinKey.SUSHI,
