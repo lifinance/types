@@ -96,6 +96,10 @@ export interface Token {
   logoURI: string
 }
 
+export interface TokenAmount extends Token {
+  amount: string
+}
+
 export interface Coin {
   key: CoinKey
   name: string
