@@ -468,7 +468,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.CELO,
     id: 42220,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
     faucetUrls: ['https://free-online-app.com/faucet-for-eth-evm-chains/'],
 
     metamask: {
@@ -491,7 +492,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.FUSE,
     id: 122,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
 
     metamask: {
       chainId: prefixChainId(122),
@@ -513,7 +515,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.TLOS,
     id: 40,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/telos.json',
 
     metamask: {
       chainId: prefixChainId(40),
