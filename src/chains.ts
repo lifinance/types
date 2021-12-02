@@ -351,6 +351,117 @@ export const supportedChains: Array<Chain> = [
     },
   },
 
+  // 2 - Expanse Network
+  {
+    key: ChainKey.EXP,
+    name: 'Expanse Network',
+    coin: CoinKey.EXP,
+    id: 2,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(2),
+      blockExplorerUrls: ['https://expanse.tech'],
+      chainName: 'Expanse Network',
+
+      nativeCurrency: {
+        name: 'EXP',
+        symbol: 'EXP',
+        decimals: 18,
+      },
+      rpcUrls: ['https://node.expanse.tech'],
+    },
+  },
+  // 7 - ThaiChain
+  {
+    key: ChainKey.TCH,
+    name: 'ThaiChain',
+    coin: CoinKey.TCH,
+    id: 7,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(7),
+      blockExplorerUrls: ['https://thaichain.io'],
+      chainName: 'ThaiChain',
+
+      nativeCurrency: {
+        name: 'TCH',
+        symbol: 'TCH',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.dome.cloud/'],
+    },
+  },
+  // 8 - Ubiq
+  {
+    key: ChainKey.UBQ,
+    name: 'Ubiq',
+    coin: CoinKey.UBQ,
+    id: 8,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(8),
+      blockExplorerUrls: ['https://ubiqscan.io'],
+      chainName: 'Ubiq',
+
+      nativeCurrency: {
+        name: 'UBQ',
+        symbol: 'UBQ',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.octano.dev/'],
+    },
+  },
+  // 11 - Metadium Mainnet
+  {
+    key: ChainKey.META,
+    name: 'Metadium Mainnet',
+    coin: CoinKey.META,
+    id: 11,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(11),
+      blockExplorerUrls: ['https://metadium.com'],
+      chainName: 'Metadium Mainnet',
+
+      nativeCurrency: {
+        name: 'META',
+        symbol: 'META',
+        decimals: 18,
+      },
+      rpcUrls: ['https://api.metadium.com/prod'],
+    },
+  },
+  // 15 - Diode Prenet
+  {
+    key: ChainKey.DIODE,
+    name: 'DIODE',
+    coin: CoinKey.DIODE,
+    id: 15,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(15),
+      blockExplorerUrls: ['https://diode.io/prenet'],
+      chainName: 'Diode Prenet',
+
+      nativeCurrency: {
+        name: 'Diodes',
+        symbol: 'DIODE',
+        decimals: 18,
+      },
+      rpcUrls: ['https://prenet.diode.io:8443/'],
+    },
+  },
+
   // TESTNETS
   // 3 - Ropsten
   {
@@ -426,6 +537,50 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: ['https://goerli.infura.io/v3/d1caeba320f94122ba8f791f50122c4c'],
+    },
+  },
+  // 12 - Metadium Testnet
+  {
+    key: ChainKey.KAL,
+    name: 'Metadium Testnet',
+    coin: CoinKey.KAL,
+    id: 12,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(12),
+      blockExplorerUrls: ['https://metadium.com'],
+      chainName: 'Metadium Testnet',
+
+      nativeCurrency: {
+        name: 'KAL',
+        symbol: 'KAL',
+        decimals: 18,
+      },
+      rpcUrls: ['https://api.metadium.com/dev'],
+    },
+  },
+  // 13 - Diode Testnet Staging
+  {
+    key: ChainKey.DIODE,
+    name: 'DIODE',
+    coin: CoinKey.SDIODE,
+    id: 13,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(13),
+      blockExplorerUrls: ['https://diode.io/staging'],
+      chainName: 'Diode Testnet Staging',
+
+      nativeCurrency: {
+        name: 'Staging Diodes',
+        symbol: 'sDIODE',
+        decimals: 18,
+      },
+      rpcUrls: ['https://staging.diode.io:8443/'],
     },
   },
   // 42 - Kovan

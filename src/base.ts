@@ -10,6 +10,11 @@ export enum CoinKey {
   ONE = 'ONE',
   FSN = 'FSN',
   MOVR = 'MOVR',
+  EXP = 'EXP',
+  TCH = 'tch',
+  UBQ = 'UBQ',
+  META = 'META',
+  DIODE = 'DIODE',
 
   // Stable coins
   USDT = 'USDT',
@@ -17,6 +22,8 @@ export enum CoinKey {
 
   // Testnet
   TEST = 'TEST',
+  KAL = 'KAL',
+  SDIODE = 'SDIODE',
 
   // Other tokens
   WBTC = 'WBTC',
@@ -42,11 +49,18 @@ export enum ChainKey {
   ONE = 'one',
   FSN = 'fsn',
   MOR = 'mor',
+  EXP = 'exp',
+  TCH = 'tch',
+  UBQ = 'ubq',
+  META = 'meta',
+  DIODE = 'diode',
 
   // Testnets
   ROP = 'rop',
   RIN = 'rin',
   GOR = 'gor',
+  KAL = 'kal',
+  SDIODE = 'sdiode',
   KOV = 'kov',
   MUM = 'mum',
   ARBT = 'arbt',
