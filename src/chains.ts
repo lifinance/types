@@ -461,6 +461,73 @@ export const supportedChains: Array<Chain> = [
       rpcUrls: ['https://prenet.diode.io:8443/'],
     },
   },
+  // 42220 Celo Mainnet
+  {
+    key: ChainKey.CELO,
+    name: 'CELO',
+    coin: CoinKey.CELO,
+    id: 42220,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+    faucetUrls: ['https://free-online-app.com/faucet-for-eth-evm-chains/'],
+
+    metamask: {
+      chainId: prefixChainId(42220),
+      blockExplorerUrls: ['https://explorer.celo.org/'],
+      chainName: 'Celo Mainnet',
+
+      nativeCurrency: {
+        name: 'CELO',
+        symbol: 'CELO',
+        decimals: 18,
+      },
+      rpcUrls: ['https://forno.celo.org'],
+    },
+  },
+  // 122 Fuse Mainnet
+  {
+    key: ChainKey.FUSE,
+    name: 'FUSE',
+    coin: CoinKey.FUSE,
+    id: 122,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(122),
+      blockExplorerUrls: ['https://fuse.io/'],
+      chainName: 'Fuse Mainnet',
+
+      nativeCurrency: {
+        name: 'FUSE',
+        symbol: 'FUSE',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.fuse.io'],
+    },
+  },
+  // 40 Telos EVM Mainnet
+  {
+    key: ChainKey.TLOS,
+    name: 'Telos',
+    coin: CoinKey.TLOS,
+    id: 40,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(40),
+      blockExplorerUrls: ['https://telos.net'],
+      chainName: 'Telos EVM Mainnet',
+
+      nativeCurrency: {
+        name: 'Telos',
+        symbol: 'TLOS',
+        decimals: 18,
+      },
+      rpcUrls: ['https://mainnet.telos.net/evm'],
+    },
+  },
 
   // TESTNETS
   // 3 - Ropsten
@@ -563,7 +630,7 @@ export const supportedChains: Array<Chain> = [
   },
   // 13 - Diode Testnet Staging
   {
-    key: ChainKey.DIODE,
+    key: ChainKey.SDIODE,
     name: 'DIODE',
     coin: CoinKey.SDIODE,
     id: 13,
@@ -742,6 +809,53 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: ['https://api.s0.b.hmny.io'],
+    },
+  },
+  // 123 Fuse Sparknet
+  {
+    key: ChainKey.SPARK,
+    name: 'SPARK',
+    coin: CoinKey.SPARK,
+    id: 123,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(123),
+      blockExplorerUrls: [
+        'https://docs.fuse.io/general/fuse-network-blockchain/fuse-testnet',
+      ],
+      chainName: 'Fuse Mainnet',
+
+      nativeCurrency: {
+        name: 'Spark',
+        symbol: 'SPARK',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.fusespark.io'],
+    },
+  },
+  // 41 Telos EVM Testnet
+  {
+    key: ChainKey.TLOST,
+    name: 'Telos Testnet',
+    coin: CoinKey.TLOS,
+    id: 41,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+    faucetUrls: ['https://app.telos.net/testnet/developers'],
+
+    metamask: {
+      chainId: prefixChainId(41),
+      blockExplorerUrls: ['https://telos.net'],
+      chainName: 'Telos EVM Mainnet',
+
+      nativeCurrency: {
+        name: 'Telos',
+        symbol: 'TLOS',
+        decimals: 18,
+      },
+      rpcUrls: ['https://testnet.telos.net/evm'],
     },
   },
 

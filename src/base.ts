@@ -15,6 +15,9 @@ export enum CoinKey {
   UBQ = 'UBQ',
   META = 'META',
   DIODE = 'DIODE',
+  CELO = 'CELO',
+  FUSE = 'FUSE',
+  TLOS = 'TLOS',
 
   // Stable coins
   USDT = 'USDT',
@@ -24,6 +27,7 @@ export enum CoinKey {
   TEST = 'TEST',
   KAL = 'KAL',
   SDIODE = 'SDIODE',
+  SPARK = 'SPARK',
 
   // Other tokens
   WBTC = 'WBTC',
@@ -54,6 +58,9 @@ export enum ChainKey {
   UBQ = 'ubq',
   META = 'meta',
   DIODE = 'diode',
+  CELO = 'celo',
+  FUSE = 'fuse',
+  TLOS = 'tlos',
 
   // Testnets
   ROP = 'rop',
@@ -68,6 +75,8 @@ export enum ChainKey {
   BSCT = 'bsct',
   HECT = 'hect',
   ONET = 'onet',
+  SPARK = 'spark',
+  TLOST = 'tlost',
 }
 
 export enum ChainId {
