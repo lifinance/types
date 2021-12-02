@@ -528,6 +528,50 @@ export const supportedChains: Array<Chain> = [
       rpcUrls: ['https://mainnet.telos.net/evm'],
     },
   },
+  // 25 Cronos Mainnet Beta
+  {
+    key: ChainKey.CRO,
+    name: 'Cronos',
+    coin: CoinKey.CRO,
+    id: 25,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(25),
+      blockExplorerUrls: ['https://cronos.crypto.org/explorer'],
+      chainName: 'Cronos',
+
+      nativeCurrency: {
+        name: 'Crypto.org Coin',
+        symbol: 'CRO',
+        decimals: 18,
+      },
+      rpcUrls: ['https://evm-cronos.crypto.org'],
+    },
+  },
+  // 288 Boba Network
+  {
+    key: ChainKey.BOB,
+    name: 'Boba',
+    coin: CoinKey.ETH,
+    id: 288,
+    visible: false,
+    tokenlistUrl: '', // TODO: find token list url
+
+    metamask: {
+      chainId: prefixChainId(288),
+      blockExplorerUrls: ['https://blockexplorer.boba.network/'],
+      chainName: 'Boba',
+
+      nativeCurrency: {
+        name: 'ETH',
+        symbol: 'ETH',
+        decimals: 18,
+      },
+      rpcUrls: ['https://mainnet.boba.network/'],
+    },
+  },
 
   // TESTNETS
   // 3 - Ropsten

@@ -18,6 +18,7 @@ export enum CoinKey {
   CELO = 'CELO',
   FUSE = 'FUSE',
   TLOS = 'TLOS',
+  CRO = 'CRO',
 
   // Stable coins
   USDT = 'USDT',
@@ -61,6 +62,8 @@ export enum ChainKey {
   CELO = 'celo',
   FUSE = 'fuse',
   TLOS = 'tlos',
+  CRO = 'cro',
+  BOB = 'boba',
 
   // Testnets
   ROP = 'rop',
