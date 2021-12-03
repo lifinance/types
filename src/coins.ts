@@ -55,7 +55,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.OPT]: {
-        id: '0x4200000000000000000000000000000000000006',
+        id: '0x0000000000000000000000000000000000000000',
         symbol: CoinKey.ETH,
         decimals: 18,
         chainId: ChainId.OPT,
@@ -1352,7 +1352,7 @@ export const defaultCoins: Array<Coin> = [
       [ChainKey.OPT]: {
         id: '0x4200000000000000000000000000000000000006',
         symbol: 'WETH',
-        decimals: 8,
+        decimals: 18,
         chainId: ChainId.OPT,
         chainKey: ChainKey.OPT,
         key: CoinKey.WETH,
@@ -1748,7 +1748,7 @@ export const wrappedTokens: { [ChainKey: string]: Token } = {
     // https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006
     id: '0x4200000000000000000000000000000000000006',
     symbol: 'WETH',
-    decimals: 8,
+    decimals: 18,
     chainId: ChainId.OPT,
     chainKey: ChainKey.OPT,
     key: CoinKey.WETH,
