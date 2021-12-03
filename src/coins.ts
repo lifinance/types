@@ -55,7 +55,7 @@ export const defaultCoins: Array<Coin> = [
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
       [ChainKey.OPT]: {
-        id: '0x0000000000000000000000000000000000000000',
+        id: '0x4200000000000000000000000000000000000006',
         symbol: CoinKey.ETH,
         decimals: 18,
         chainId: ChainId.OPT,
