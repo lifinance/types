@@ -536,7 +536,7 @@ export const supportedChains: Array<Chain> = [
 
     metamask: {
       chainId: prefixChainId(25),
-      blockExplorerUrls: ['https://cronos.crypto.org/explorer'],
+      blockExplorerUrls: ['https://cronos.crypto.org/explorer/'],
       chainName: 'Cronos',
 
       nativeCurrency: {
