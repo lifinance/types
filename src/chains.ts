@@ -358,11 +358,10 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.EXP,
     id: 2,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(2),
-      blockExplorerUrls: ['https://expanse.tech'],
+      blockExplorerUrls: ['https://expanse.tech/'],
       chainName: 'Expanse Network',
 
       nativeCurrency: {
@@ -380,11 +379,10 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.TCH,
     id: 7,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(7),
-      blockExplorerUrls: ['https://thaichain.io'],
+      blockExplorerUrls: ['https://thaichain.io/'],
       chainName: 'ThaiChain',
 
       nativeCurrency: {
@@ -402,11 +400,10 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.UBQ,
     id: 8,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(8),
-      blockExplorerUrls: ['https://ubiqscan.io'],
+      blockExplorerUrls: ['https://ubiqscan.io/'],
       chainName: 'Ubiq',
 
       nativeCurrency: {
@@ -419,16 +416,15 @@ export const supportedChains: Array<Chain> = [
   },
   // 11 - Metadium Mainnet
   {
-    key: ChainKey.META,
+    key: ChainKey.MET,
     name: 'Metadium Mainnet',
     coin: CoinKey.META,
     id: 11,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(11),
-      blockExplorerUrls: ['https://metadium.com'],
+      blockExplorerUrls: ['https://metadium.com/'],
       chainName: 'Metadium Mainnet',
 
       nativeCurrency: {
@@ -441,16 +437,15 @@ export const supportedChains: Array<Chain> = [
   },
   // 15 - Diode Prenet
   {
-    key: ChainKey.DIODE,
+    key: ChainKey.DIO,
     name: 'DIODE',
     coin: CoinKey.DIODE,
     id: 15,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(15),
-      blockExplorerUrls: ['https://diode.io/prenet'],
+      blockExplorerUrls: ['https://diode.io/prenet/'],
       chainName: 'Diode Prenet',
 
       nativeCurrency: {
@@ -463,7 +458,7 @@ export const supportedChains: Array<Chain> = [
   },
   // 42220 Celo Mainnet
   {
-    key: ChainKey.CELO,
+    key: ChainKey.CEL,
     name: 'CELO',
     coin: CoinKey.CELO,
     id: 42220,
@@ -487,7 +482,7 @@ export const supportedChains: Array<Chain> = [
   },
   // 122 Fuse Mainnet
   {
-    key: ChainKey.FUSE,
+    key: ChainKey.FUS,
     name: 'FUSE',
     coin: CoinKey.FUSE,
     id: 122,
@@ -510,7 +505,7 @@ export const supportedChains: Array<Chain> = [
   },
   // 40 Telos EVM Mainnet
   {
-    key: ChainKey.TLOS,
+    key: ChainKey.TLO,
     name: 'Telos',
     coin: CoinKey.TLOS,
     id: 40,
@@ -520,7 +515,7 @@ export const supportedChains: Array<Chain> = [
 
     metamask: {
       chainId: prefixChainId(40),
-      blockExplorerUrls: ['https://telos.net'],
+      blockExplorerUrls: ['https://telos.net/'],
       chainName: 'Telos EVM Mainnet',
 
       nativeCurrency: {
@@ -538,7 +533,6 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.CRO,
     id: 25,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(25),
@@ -560,7 +554,6 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 288,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(288),
@@ -655,16 +648,15 @@ export const supportedChains: Array<Chain> = [
   },
   // 12 - Metadium Testnet
   {
-    key: ChainKey.KAL,
+    key: ChainKey.METT,
     name: 'Metadium Testnet',
     coin: CoinKey.KAL,
     id: 12,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(12),
-      blockExplorerUrls: ['https://metadium.com'],
+      blockExplorerUrls: ['https://metadium.com/'],
       chainName: 'Metadium Testnet',
 
       nativeCurrency: {
@@ -677,16 +669,15 @@ export const supportedChains: Array<Chain> = [
   },
   // 13 - Diode Testnet Staging
   {
-    key: ChainKey.SDIODE,
+    key: ChainKey.DIOT,
     name: 'DIODE',
     coin: CoinKey.SDIODE,
     id: 13,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(13),
-      blockExplorerUrls: ['https://diode.io/staging'],
+      blockExplorerUrls: ['https://diode.io/staging/'],
       chainName: 'Diode Testnet Staging',
 
       nativeCurrency: {
@@ -860,17 +851,16 @@ export const supportedChains: Array<Chain> = [
   },
   // 123 Fuse Sparknet
   {
-    key: ChainKey.SPARK,
+    key: ChainKey.FUST,
     name: 'SPARK',
     coin: CoinKey.SPARK,
     id: 123,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
 
     metamask: {
       chainId: prefixChainId(123),
       blockExplorerUrls: [
-        'https://docs.fuse.io/general/fuse-network-blockchain/fuse-testnet',
+        'https://docs.fuse.io/general/fuse-network-blockchain/fuse-testnet/',
       ],
       chainName: 'Fuse Mainnet',
 
@@ -884,17 +874,16 @@ export const supportedChains: Array<Chain> = [
   },
   // 41 Telos EVM Testnet
   {
-    key: ChainKey.TLOST,
+    key: ChainKey.TLOT,
     name: 'Telos Testnet',
     coin: CoinKey.TLOS,
     id: 41,
     visible: false,
-    tokenlistUrl: '', // TODO: find token list url
     faucetUrls: ['https://app.telos.net/testnet/developers'],
 
     metamask: {
       chainId: prefixChainId(41),
-      blockExplorerUrls: ['https://telos.net'],
+      blockExplorerUrls: ['https://telos.net/'],
       chainName: 'Telos EVM Mainnet',
 
       nativeCurrency: {

@@ -57,11 +57,11 @@ export enum ChainKey {
   EXP = 'exp',
   TCH = 'tch',
   UBQ = 'ubq',
-  META = 'meta',
-  DIODE = 'diode',
-  CELO = 'celo',
-  FUSE = 'fuse',
-  TLOS = 'tlos',
+  MET = 'meta',
+  DIO = 'diode',
+  CEL = 'celo',
+  FUS = 'fuse',
+  TLO = 'tlos',
   CRO = 'cro',
   BOB = 'boba',
 
@@ -69,8 +69,8 @@ export enum ChainKey {
   ROP = 'rop',
   RIN = 'rin',
   GOR = 'gor',
-  KAL = 'kal',
-  SDIODE = 'sdiode',
+  METT = 'mett',
+  DIOT = 'diodet',
   KOV = 'kov',
   MUM = 'mum',
   ARBT = 'arbt',
@@ -78,8 +78,8 @@ export enum ChainKey {
   BSCT = 'bsct',
   HECT = 'hect',
   ONET = 'onet',
-  SPARK = 'spark',
-  TLOST = 'tlost',
+  FUST = 'fust',
+  TLOT = 'tlost',
 }
 
 export enum ChainId {
@@ -96,11 +96,23 @@ export enum ChainId {
   ONE = 1666600000,
   FSN = 32659,
   MOR = 1285,
+  EXP = 2,
+  TCH = 7,
+  UBQ = 8,
+  MET = 11,
+  DIO = 15,
+  CEL = 42220,
+  FUS = 122,
+  TLO = 40,
+  CRO = 25,
+  BOB = 288,
 
   // Testnets
   ROP = 3,
   RIN = 4,
   GOR = 5,
+  METT = 12,
+  DIOT = 13,
   KOV = 42,
   MUM = 80001,
   ARBT = 421611,
@@ -108,6 +120,8 @@ export enum ChainId {
   BSCT = 97,
   HECT = 256,
   ONET = 1666700000,
+  FUST = 123,
+  TLOT = 41,
 }
 
 export interface Token {
