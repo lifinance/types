@@ -149,3 +149,21 @@ export interface Coin {
     [ChainKey: string]: Token
   }
 }
+
+export interface ExchangeDefinition {
+  tool: string
+  chains: number[]
+}
+
+export interface BridgeDefinition {
+  tool: string
+  fromChainId: number
+  fromToken: Token
+  toChainId: number
+  toToken: Token
+  maximumTransfer: string
+  minimumTransfer: string
+  swapFeeRate: string
+  swapFeeMinimum: string
+  swapFeeMaximum: string
+}
