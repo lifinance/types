@@ -14,12 +14,14 @@
     "test:cov": "jest --coverage --no-cache --runInBand",
     "addscope": "node tools/packagejson name @lifinance/types",
     "pre-commit": "lint-staged",
+    "pre-push": "yarn build && yarn test",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
     "prettier:fix": "prettier --write ./src/.",
     "use:npmReadme": "mv 'README.md' 'git.README.md' && mv 'npm.README.md' 'README.md'",
     "use:gitReadme": "mv 'README.md' 'npm.README.md' && mv 'git.README.md' 'README.md'",
     "prepublishOnly": "run-s build use:npmReadme && pinst --enable",
-    "postpublish": "npm run use:gitReadme && pinst --enable"
+    "postpublish": "npm run use:gitReadme && pinst --enable",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
