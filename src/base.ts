@@ -151,12 +151,17 @@ export interface Coin {
 }
 
 export interface ExchangeDefinition {
-  tool: string
+  tool: ExchangeTool | string
   chains: number[]
 }
 
+export enum ExchangeTool {
+  oneinch = '1inch',
+  paraswap = 'paraswap',
+}
+
 export interface BridgeDefinition {
-  tool: string
+  tool: BridgeTool
   fromChainId: number
   fromToken: Token
   toChainId: number
@@ -166,4 +171,12 @@ export interface BridgeDefinition {
   swapFeeRate: string
   swapFeeMinimum: string
   swapFeeMaximum: string
+}
+
+export enum BridgeTool {
+  nxtp = 'nxtp',
+  hop = 'hop',
+  anyswap = 'anyswap',
+  cbridge = 'cbridge',
+  horizon = 'horizon',
 }
