@@ -6,7 +6,7 @@ export interface Chain {
   name: string
   coin: CoinKey
   id: number
-  visible: boolean
+  mainnet: boolean
   tokenlistUrl?: string
   faucetUrls?: string[]
   metamask: AddEthereumChainParameter
@@ -36,7 +36,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Ethereum',
     coin: CoinKey.ETH,
     id: 1,
-    visible: true,
+    mainnet: true,
     tokenlistUrl: 'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
 
     metamask: {
@@ -59,7 +59,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Polygon',
     coin: CoinKey.MATIC,
     id: 137,
-    visible: true,
+    mainnet: true,
     tokenlistUrl:
       'https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/polygon-matic'],
@@ -86,7 +86,7 @@ export const supportedChains: Array<Chain> = [
     name: 'BSC',
     coin: CoinKey.BNB,
     id: 56,
-    visible: true,
+    mainnet: true,
     tokenlistUrl:
       'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
     faucetUrls: ['https://stakely.io/faucet/bsc-chain-bnb'],
@@ -114,7 +114,7 @@ export const supportedChains: Array<Chain> = [
     name: 'xDai',
     coin: CoinKey.DAI,
     id: 100,
-    visible: true,
+    mainnet: true,
     tokenlistUrl: 'https://tokens.honeyswap.org/',
     faucetUrls: ['https://stakely.io/faucet/xdai-chain'],
 
@@ -142,7 +142,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Fantom',
     coin: CoinKey.FTM,
     id: 250,
-    visible: true,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
     faucetUrls: [
@@ -169,7 +169,7 @@ export const supportedChains: Array<Chain> = [
     name: 'OKExCHain',
     coin: CoinKey.OKT,
     id: 66,
-    visible: true,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
 
@@ -192,7 +192,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Avalanche',
     coin: CoinKey.AVAX,
     id: 43114,
-    visible: true,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/avalanche.json',
 
@@ -215,7 +215,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Arbitrum One',
     coin: CoinKey.ETH,
     id: 42161,
-    visible: true,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/arbitrum.json',
     faucetUrls: ['https://bridge.arbitrum.io/'],
@@ -238,7 +238,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Huobi ECO Chain Mainnet',
     coin: CoinKey.HT,
     id: 128,
-    visible: true,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/heco.json',
 
@@ -260,7 +260,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Optimistic Ethereum',
     coin: CoinKey.ETH,
     id: 10,
-    visible: true,
+    mainnet: true,
     tokenlistUrl: 'https://static.optimism.io/optimism.tokenlist.json',
 
     faucetUrls: ['https://gateway.optimism.io/'],
@@ -284,7 +284,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Fusion Mainnet',
     coin: CoinKey.FSN,
     id: 32659,
-    visible: false,
+    mainnet: true,
 
     // https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche
     metamask: {
@@ -307,7 +307,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Harmony',
     coin: CoinKey.ONE,
     id: 1666600000,
-    visible: false,
+    mainnet: true,
     tokenlistUrl:
       'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/harmony-one'],
@@ -333,7 +333,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Moonriver',
     coin: CoinKey.MOVR,
     id: 1285,
-    visible: false,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
 
@@ -357,7 +357,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Expanse Network',
     coin: CoinKey.EXP,
     id: 2,
-    visible: false,
+    mainnet: true,
 
     metamask: {
       chainId: prefixChainId(2),
@@ -378,7 +378,7 @@ export const supportedChains: Array<Chain> = [
     name: 'ThaiChain',
     coin: CoinKey.TCH,
     id: 7,
-    visible: false,
+    mainnet: true,
 
     metamask: {
       chainId: prefixChainId(7),
@@ -399,7 +399,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Ubiq',
     coin: CoinKey.UBQ,
     id: 8,
-    visible: false,
+    mainnet: true,
 
     metamask: {
       chainId: prefixChainId(8),
@@ -420,7 +420,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Metadium Mainnet',
     coin: CoinKey.META,
     id: 11,
-    visible: false,
+    mainnet: true,
 
     metamask: {
       chainId: prefixChainId(11),
@@ -441,7 +441,7 @@ export const supportedChains: Array<Chain> = [
     name: 'DIODE',
     coin: CoinKey.DIODE,
     id: 15,
-    visible: false,
+    mainnet: true,
 
     metamask: {
       chainId: prefixChainId(15),
@@ -462,7 +462,7 @@ export const supportedChains: Array<Chain> = [
     name: 'CELO',
     coin: CoinKey.CELO,
     id: 42220,
-    visible: false,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
     faucetUrls: [
@@ -489,7 +489,7 @@ export const supportedChains: Array<Chain> = [
     name: 'FUSE',
     coin: CoinKey.FUSE,
     id: 122,
-    visible: false,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
 
@@ -512,7 +512,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Telos',
     coin: CoinKey.TLOS,
     id: 40,
-    visible: false,
+    mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/telos.json',
 
@@ -535,7 +535,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Cronos',
     coin: CoinKey.CRO,
     id: 25,
-    visible: false,
+    mainnet: true,
 
     metamask: {
       chainId: prefixChainId(25),
@@ -556,7 +556,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Boba',
     coin: CoinKey.ETH,
     id: 288,
-    visible: false,
+    mainnet: true,
 
     metamask: {
       chainId: prefixChainId(288),
@@ -579,7 +579,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Ropsten',
     coin: CoinKey.ETH,
     id: 3,
-    visible: false,
+    mainnet: false,
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: [
@@ -607,7 +607,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Rinkeby',
     coin: CoinKey.ETH,
     id: 4,
-    visible: false,
+    mainnet: false,
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://faucet.rinkeby.io/'],
@@ -632,7 +632,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Goerli',
     coin: CoinKey.ETH,
     id: 5,
-    visible: false,
+    mainnet: false,
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://goerli-faucet.slock.it/'],
@@ -655,7 +655,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Metadium Testnet',
     coin: CoinKey.KAL,
     id: 12,
-    visible: false,
+    mainnet: false,
 
     metamask: {
       chainId: prefixChainId(12),
@@ -676,7 +676,7 @@ export const supportedChains: Array<Chain> = [
     name: 'DIODE',
     coin: CoinKey.SDIODE,
     id: 13,
-    visible: false,
+    mainnet: false,
 
     metamask: {
       chainId: prefixChainId(13),
@@ -697,7 +697,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Kovan',
     coin: CoinKey.ETH,
     id: 42,
-    visible: false,
+    mainnet: false,
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: [
@@ -723,7 +723,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Polygon Testnet',
     coin: CoinKey.MATIC,
     id: 80001,
-    visible: false,
+    mainnet: false,
     tokenlistUrl:
       'https://raw.githubusercontent.com/elkfinance/tokens/main/mumbai.tokenlist.json',
     faucetUrls: ['https://faucet.matic.network/'],
@@ -746,7 +746,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Arbitrum Testnet',
     coin: CoinKey.ETH,
     id: 421611,
-    visible: false,
+    mainnet: false,
     faucetUrls: ['https://bridge.arbitrum.io/'],
 
     metamask: {
@@ -767,7 +767,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Optimism Testnet',
     coin: CoinKey.ETH,
     id: 69,
-    visible: false,
+    mainnet: false,
     faucetUrls: ['https://gateway.optimism.io/'],
 
     metamask: {
@@ -788,7 +788,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Binance Smart Chain Testnet',
     coin: CoinKey.BNB,
     id: 97,
-    visible: false,
+    mainnet: false,
     faucetUrls: ['https://testnet.binance.org/faucet-smart'],
 
     metamask: {
@@ -810,7 +810,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Huobi ECO Chain Testnet',
     coin: 'HTT' as CoinKey,
     id: 256,
-    visible: false,
+    mainnet: false,
     faucetUrls: ['https://scan-testnet.hecochain.com/faucet'],
 
     metamask: {
@@ -834,7 +834,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Harmony Testnet',
     coin: CoinKey.ONE,
     id: 1666700000,
-    visible: false,
+    mainnet: false,
     // https://docs.harmony.one/home/developers/wallets/metamask/connect-metamask-to-the-harmony-chain
     metamask: {
       chainId: prefixChainId(1666700000),
@@ -858,7 +858,7 @@ export const supportedChains: Array<Chain> = [
     name: 'SPARK',
     coin: CoinKey.SPARK,
     id: 123,
-    visible: false,
+    mainnet: false,
 
     metamask: {
       chainId: prefixChainId(123),
@@ -881,7 +881,7 @@ export const supportedChains: Array<Chain> = [
     name: 'Telos Testnet',
     coin: CoinKey.TLOS,
     id: 41,
-    visible: false,
+    mainnet: false,
     faucetUrls: ['https://app.telos.net/testnet/developers'],
 
     metamask: {
