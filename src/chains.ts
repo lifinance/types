@@ -465,7 +465,10 @@ export const supportedChains: Array<Chain> = [
     visible: false,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
-    faucetUrls: ['https://free-online-app.com/faucet-for-eth-evm-chains/'],
+    faucetUrls: [
+      'https://stakely.io/faucet/celo-platform',
+      'https://free-online-app.com/faucet-for-eth-evm-chains/',
+    ],
 
     metamask: {
       chainId: prefixChainId(42220),
@@ -897,7 +900,6 @@ export const supportedChains: Array<Chain> = [
 
   // https://faucet.buni.finance/
   // solana faucet: https://stakely.io/faucet/solana-sol
-  // celo faucet: https://stakely.io/faucet/celo-platform
   // kucoin faucet: https://stakely.io/faucet/kucoin-kcc-kcs
   // Velas faucet: https://stakely.io/faucet/velas-vlx
 ]
