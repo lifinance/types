@@ -10,6 +10,15 @@ export enum CoinKey {
   ONE = 'ONE',
   FSN = 'FSN',
   MOVR = 'MOVR',
+  EXP = 'EXP',
+  TCH = 'TCH',
+  UBQ = 'UBQ',
+  META = 'META',
+  DIODE = 'DIODE',
+  CELO = 'CELO',
+  FUSE = 'FUSE',
+  TLOS = 'TLOS',
+  CRO = 'CRO',
 
   // Stable coins
   USDT = 'USDT',
@@ -17,6 +26,9 @@ export enum CoinKey {
 
   // Testnet
   TEST = 'TEST',
+  KAL = 'KAL',
+  SDIODE = 'SDIODE',
+  SPARK = 'SPARK',
 
   // Other tokens
   WBTC = 'WBTC',
@@ -42,11 +54,23 @@ export enum ChainKey {
   ONE = 'one',
   FSN = 'fsn',
   MOR = 'mor',
+  EXP = 'exp',
+  TCH = 'tch',
+  UBQ = 'ubq',
+  MET = 'met',
+  DIO = 'dio',
+  CEL = 'cel',
+  FUS = 'fus',
+  TLO = 'tlo',
+  CRO = 'cro',
+  BOB = 'bob',
 
   // Testnets
   ROP = 'rop',
   RIN = 'rin',
   GOR = 'gor',
+  METT = 'mett',
+  DIOT = 'diot',
   KOV = 'kov',
   MUM = 'mum',
   ARBT = 'arbt',
@@ -54,6 +78,8 @@ export enum ChainKey {
   BSCT = 'bsct',
   HECT = 'hect',
   ONET = 'onet',
+  FUST = 'fust',
+  TLOT = 'tlot',
 }
 
 export enum ChainId {
@@ -70,11 +96,23 @@ export enum ChainId {
   ONE = 1666600000,
   FSN = 32659,
   MOR = 1285,
+  EXP = 2,
+  TCH = 7,
+  UBQ = 8,
+  MET = 11,
+  DIO = 15,
+  CEL = 42220,
+  FUS = 122,
+  TLO = 40,
+  CRO = 25,
+  BOB = 288,
 
   // Testnets
   ROP = 3,
   RIN = 4,
   GOR = 5,
+  METT = 12,
+  DIOT = 13,
   KOV = 42,
   MUM = 80001,
   ARBT = 421611,
@@ -82,6 +120,8 @@ export enum ChainId {
   BSCT = 97,
   HECT = 256,
   ONET = 1666700000,
+  FUST = 123,
+  TLOT = 41,
 }
 
 export interface Token {
