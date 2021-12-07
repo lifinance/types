@@ -131,6 +131,28 @@ export const defaultCoins: Array<Coin> = [
         logoURI:
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },
+      [ChainKey.HEC]: {
+        id: '0x64ff637fb478863b7468bc97d30a5bf3a428a1fd',
+        symbol: CoinKey.ETH,
+        decimals: 18,
+        chainId: ChainId.HEC,
+        chainKey: ChainKey.HEC,
+        key: CoinKey.ETH,
+        name: CoinKey.ETH,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+      },
+      [ChainKey.OKT]: {
+        id: '0xef71ca2ee68f45b9ad6f72fbdb33d707b872315c',
+        symbol: CoinKey.ETH,
+        decimals: 18,
+        chainId: ChainId.OKT,
+        chainKey: ChainKey.OKT,
+        key: CoinKey.ETH,
+        name: CoinKey.ETH,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+      },
 
       // Testnets
       [ChainKey.ROP]: {
@@ -475,6 +497,17 @@ export const defaultCoins: Array<Coin> = [
         decimals: 18,
         chainId: ChainId.ARB,
         chainKey: ChainKey.ARB,
+        key: CoinKey.DAI,
+        name: CoinKey.DAI,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
+      },
+      [ChainKey.OKT]: {
+        id: '0x21cde7e32a6caf4742d00d44b07279e7596d26b9',
+        symbol: CoinKey.DAI,
+        decimals: 18,
+        chainId: ChainId.OKT,
+        chainKey: ChainKey.OKT,
         key: CoinKey.DAI,
         name: CoinKey.DAI,
         logoURI:
@@ -1261,6 +1294,28 @@ export const defaultCoins: Array<Coin> = [
         logoURI:
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
       },
+      [ChainKey.MOR]: {
+        id: '0xe6a991ffa8cfe62b0bf6bf72959a3d4f11b2e0f5',
+        symbol: CoinKey.WBTC,
+        decimals: 8,
+        chainId: ChainId.MOR,
+        chainKey: ChainKey.MOR,
+        key: CoinKey.WBTC,
+        name: CoinKey.WBTC,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
+      },
+      [ChainKey.OKT]: {
+        id: '0x506f731f7656e2fb34b587b912808f2a7ab640bd',
+        symbol: CoinKey.WBTC,
+        decimals: 18,
+        chainId: ChainId.OKT,
+        chainKey: ChainKey.OKT,
+        key: CoinKey.WBTC,
+        name: CoinKey.WBTC,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
+      },
     },
   },
 
@@ -1356,7 +1411,31 @@ export const defaultCoins: Array<Coin> = [
         chainId: ChainId.OPT,
         chainKey: ChainKey.OPT,
         key: CoinKey.WETH,
-        name: 'Wrapped ETH',
+        name: CoinKey.WETH,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+      },
+
+      [ChainKey.MOR]: {
+        id: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
+        symbol: 'WETH',
+        decimals: 18,
+        chainId: ChainId.MOR,
+        chainKey: ChainKey.MOR,
+        key: CoinKey.WETH,
+        name: CoinKey.WETH,
+        logoURI:
+          'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+      },
+
+      [ChainKey.HEC]: {
+        id: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
+        symbol: 'WETH',
+        decimals: 18,
+        chainId: ChainId.MOR,
+        chainKey: ChainKey.MOR,
+        key: CoinKey.WETH,
+        name: CoinKey.WETH,
         logoURI:
           'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
       },

@@ -462,14 +462,32 @@ export const supportedExchanges: Array<Exchange> = [
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
       findWrappedGasOnChain(ChainKey.MOR),
-      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.MOR),
-      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.MOR),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.MOR),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.MOR),
       findDefaultCoinOnChain(CoinKey.USDC, ChainKey.MOR),
       findDefaultCoinOnChain(CoinKey.USDT, ChainKey.MOR),
       findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.MOR),
-      // FRAX
-      // MIM
-      // aROME
+      {
+        id: '0x1a93b23281cc1cde4c4741353f3064709a16197d',
+        symbol: 'FRAX',
+        decimals: 18,
+        chainId: ChainId.MOR,
+        chainKey: ChainKey.MOR,
+      } as Token,
+      {
+        id: '0x0cae51e1032e8461f4806e26332c030e34de3adb',
+        symbol: 'MIM',
+        decimals: 18,
+        chainId: ChainId.MOR,
+        chainKey: ChainKey.MOR,
+      } as Token,
+      {
+        id: '0x3d2d044e8c6dad46b4f7896418d3d4dfaad902be',
+        symbol: 'aROME',
+        decimals: 9,
+        chainId: ChainId.MOR,
+        chainKey: ChainKey.MOR,
+      } as Token,
     ],
   },
 
@@ -488,12 +506,24 @@ export const supportedExchanges: Array<Exchange> = [
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
       findWrappedGasOnChain(ChainKey.HEC),
-      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.HEC),
-      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.HEC),
-      // findDefaultCoinOnChain(CoinKey.DAI, ChainKey.HEC),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.HEC),
       findDefaultCoinOnChain(CoinKey.USDC, ChainKey.HEC),
       findDefaultCoinOnChain(CoinKey.USDT, ChainKey.HEC),
       findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.HEC),
+      {
+        id: '0x66a79d23e58475d2738179ca52cd0b41d73f0bea',
+        symbol: 'HBTC',
+        decimals: 18,
+        chainId: ChainId.HEC,
+        chainKey: ChainKey.HEC,
+      } as Token,
+      {
+        id: '0x3d760a45d0887dfd89a2f5385a236b29cb46ed2a',
+        symbol: 'DAIHECO',
+        decimals: 18,
+        chainId: ChainId.HEC,
+        chainKey: ChainKey.HEC,
+      } as Token,
     ],
   },
 
@@ -512,9 +542,9 @@ export const supportedExchanges: Array<Exchange> = [
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
       findWrappedGasOnChain(ChainKey.OKT),
-      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.OKT),
-      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.OKT),
-      // findDefaultCoinOnChain(CoinKey.DAI, ChainKey.OKT),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.OKT),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.OKT),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.OKT),
       findDefaultCoinOnChain(CoinKey.USDC, ChainKey.OKT),
       findDefaultCoinOnChain(CoinKey.USDT, ChainKey.OKT),
       findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.OKT),
