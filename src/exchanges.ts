@@ -1,6 +1,5 @@
 import {
   ChainId,
-  ChainKey,
   CoinKey,
   findDefaultCoinOnChain,
   findWrappedGasOnChain,
@@ -36,11 +35,11 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.ETH),
+      findWrappedGasOnChain(ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.ETH),
     ],
   },
   {
@@ -57,18 +56,18 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.ETH),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.ETH),
+      findWrappedGasOnChain(ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.ETH),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.ETH),
       {
         address: '0x383518188c0c6d7730d91b2c03a03c837814a899',
         symbol: 'OHM',
         decimals: 9,
         chainId: ChainId.ETH,
       } as Token,
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.ETH),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.ETH),
     ],
   },
 
@@ -87,12 +86,12 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.POL),
+      findWrappedGasOnChain(ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.POL),
       {
         address: '0x831753dd7087cac61ab5644b308642cc1c33dc13',
         symbol: 'QUICK',
@@ -114,8 +113,8 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xae81bbc68f315fbbf7617eb881349af83b1e95241f616966e1e0583ecd0793fe',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.POL),
+      findWrappedGasOnChain(ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.POL),
       {
         address: '0xb371248dd0f9e4061ccf8850e9223ca48aa7ca4b',
         symbol: 'HNY',
@@ -138,13 +137,13 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.POL),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.POL),
+      findWrappedGasOnChain(ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.POL),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.POL),
     ],
   },
 
@@ -163,7 +162,7 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.BSC),
+      findWrappedGasOnChain(ChainId.BSC),
       {
         address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
         symbol: 'BUSD',
@@ -198,11 +197,11 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.BSC),
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.BSC),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.BSC),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.BSC),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.BSC),
+      findWrappedGasOnChain(ChainId.BSC),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.BSC),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.BSC),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.BSC),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.BSC),
       {
         address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
         symbol: 'BUSD',
@@ -215,7 +214,7 @@ export const supportedExchanges: Array<Exchange> = [
         decimals: 18,
         chainId: ChainId.BSC,
       } as Token,
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.BSC),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.BSC),
     ],
   },
 
@@ -233,9 +232,9 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x3f88503e8580ab941773b59034fb4b2a63e86dbc031b3633a925533ad3ed2b93',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.DAI),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.DAI),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.DAI),
+      findWrappedGasOnChain(ChainId.DAI),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.DAI),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.DAI),
       {
         address: '0x71850b7e9ee3f13ab46d67167341e4bdc905eef9',
         symbol: 'HNY',
@@ -258,12 +257,12 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.DAI),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.DAI),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.DAI),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.DAI),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.DAI),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.DAI),
+      findWrappedGasOnChain(ChainId.DAI),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.DAI),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.DAI),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.DAI),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.DAI),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.DAI),
     ],
   },
 
@@ -281,10 +280,10 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xcdf2deca40a0bd56de8e3ce5c7df6727e5b1bf2ac96f283fa9c4b3e6b42ea9d2',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.FTM),
+      findWrappedGasOnChain(ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.FTM),
     ],
   }, // https://github.com/SpookySwap/spookyswap-sdk/blob/master/src/constants.ts
   {
@@ -301,12 +300,12 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.FTM),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.FTM),
+      findWrappedGasOnChain(ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.FTM),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.FTM),
     ],
   },
   // 1666600000 - Harmony Mainnet Shard 0
@@ -323,7 +322,7 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x162f79e638367cd45a118c778971dfd8d96c625d2798d3b71994b035cfe9b6dc',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.ONE),
+      findWrappedGasOnChain(ChainId.ONE),
       {
         address: '0xE176EBE47d621b984a73036B9DA5d834411ef734',
         symbol: 'BUSD',
@@ -351,13 +350,13 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.ONE),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.ONE),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.ONE),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.ONE),
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.ONE),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.ONE),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.ONE),
+      findWrappedGasOnChain(ChainId.ONE),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.ONE),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.ONE),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.ONE),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.ONE),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.ONE),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.ONE),
     ],
   }, // https://github.com/sushiswap/sushiswap-sdk/blob/canary/src/constants/addresses.ts
 
@@ -375,13 +374,13 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.AVA),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.AVA),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.AVA),
-      findDefaultCoinOnChain(CoinKey.DAI, ChainKey.AVA),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.AVA),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.AVA),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.AVA),
+      findWrappedGasOnChain(ChainId.AVA),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.AVA),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.AVA),
+      findDefaultCoinOnChain(CoinKey.DAI, ChainId.AVA),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.AVA),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.AVA),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.AVA),
     ],
   },
 
@@ -399,11 +398,11 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.ARB),
-      findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.ARB),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.ARB),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.ARB),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.ARB),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.ARB),
+      findDefaultCoinOnChain(CoinKey.WBTC, ChainId.ARB),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.ARB),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.ARB),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.ARB),
       {
         address: '0x3e6648c5a70a150a88bce65f4ad4d506fe15d2af',
         symbol: 'SPELL',
@@ -427,11 +426,11 @@ export const supportedExchanges: Array<Exchange> = [
   //   factoryAddress: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
   //   initCodeHash: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
   //   baseTokens: [
-  //     findWrappedGasOnChain(ChainKey.OPT),
-  //     findDefaultCoinOnChain(CoinKey.DAI, ChainKey.OPT),
-  //     findDefaultCoinOnChain(CoinKey.USDC, ChainKey.OPT),
-  //     findDefaultCoinOnChain(CoinKey.USDT, ChainKey.OPT),
-  //     findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.OPT),
+  //     findWrappedGasOnChain(ChainId.OPT),
+  //     findDefaultCoinOnChain(CoinKey.DAI, ChainId.OPT),
+  //     findDefaultCoinOnChain(CoinKey.USDC, ChainId.OPT),
+  //     findDefaultCoinOnChain(CoinKey.USDT, ChainId.OPT),
+  //     findDefaultCoinOnChain(CoinKey.WBTC, ChainId.OPT),
   //   ]
   // },
 
@@ -449,12 +448,12 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.MOR),
-      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.MOR),
-      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.MOR),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.MOR),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.MOR),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.MOR),
+      findWrappedGasOnChain(ChainId.MOR),
+      // findDefaultCoinOnChain(CoinKey.WETH, ChainId.MOR),
+      // findDefaultCoinOnChain(CoinKey.WBTC, ChainId.MOR),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.MOR),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.MOR),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.MOR),
       // FRAX
       // MIM
       // aROME
@@ -475,13 +474,13 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.HEC),
-      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.HEC),
-      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.HEC),
-      // findDefaultCoinOnChain(CoinKey.DAI, ChainKey.HEC),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.HEC),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.HEC),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.HEC),
+      findWrappedGasOnChain(ChainId.HEC),
+      // findDefaultCoinOnChain(CoinKey.WETH, ChainId.HEC),
+      // findDefaultCoinOnChain(CoinKey.WBTC, ChainId.HEC),
+      // findDefaultCoinOnChain(CoinKey.DAI, ChainId.HEC),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.HEC),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.HEC),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.HEC),
     ],
   },
 
@@ -499,13 +498,13 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findWrappedGasOnChain(ChainKey.OKT),
-      // findDefaultCoinOnChain(CoinKey.WETH, ChainKey.OKT),
-      // findDefaultCoinOnChain(CoinKey.WBTC, ChainKey.OKT),
-      // findDefaultCoinOnChain(CoinKey.DAI, ChainKey.OKT),
-      findDefaultCoinOnChain(CoinKey.USDC, ChainKey.OKT),
-      findDefaultCoinOnChain(CoinKey.USDT, ChainKey.OKT),
-      findDefaultCoinOnChain(CoinKey.SUSHI, ChainKey.OKT),
+      findWrappedGasOnChain(ChainId.OKT),
+      // findDefaultCoinOnChain(CoinKey.WETH, ChainId.OKT),
+      // findDefaultCoinOnChain(CoinKey.WBTC, ChainId.OKT),
+      // findDefaultCoinOnChain(CoinKey.DAI, ChainId.OKT),
+      findDefaultCoinOnChain(CoinKey.USDC, ChainId.OKT),
+      findDefaultCoinOnChain(CoinKey.USDT, ChainId.OKT),
+      findDefaultCoinOnChain(CoinKey.SUSHI, ChainId.OKT),
     ],
   },
 
@@ -524,8 +523,8 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
     baseTokens: [
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.ROP),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.ROP),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.ROP),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.ROP),
     ],
   },
 
@@ -556,8 +555,8 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
     baseTokens: [
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.RIN),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.RIN),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.RIN),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.RIN),
     ],
   },
 
@@ -588,8 +587,8 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
     baseTokens: [
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.GOR),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.GOR),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.GOR),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.GOR),
     ],
   },
 
@@ -621,8 +620,8 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
     baseTokens: [
-      findDefaultCoinOnChain(CoinKey.ETH, ChainKey.KOV),
-      findDefaultCoinOnChain(CoinKey.WETH, ChainKey.KOV),
+      findDefaultCoinOnChain(CoinKey.ETH, ChainId.KOV),
+      findDefaultCoinOnChain(CoinKey.WETH, ChainId.KOV),
     ],
   },
 
@@ -672,7 +671,7 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
-    baseTokens: [findWrappedGasOnChain(ChainKey.ONET)],
+    baseTokens: [findWrappedGasOnChain(ChainId.ONET)],
   },
 ]
 

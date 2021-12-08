@@ -145,7 +145,7 @@ export interface Coin {
   logoURI: string
   verified: boolean
   chains: {
-    [ChainKey: string]: Token
+    [ChainId: string]: Token
   }
 }
 
