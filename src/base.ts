@@ -125,15 +125,14 @@ export enum ChainId {
 }
 
 export interface Token {
-  id: string
+  address: string
   symbol: string
   decimals: number
   chainId: number
   name: string
-  chainKey: ChainKey
-  key: CoinKey
+  coinKey?: CoinKey
   priceUSD?: string
-  logoURI: string
+  logoURI?: string
 }
 
 export interface TokenAmount extends Token {
