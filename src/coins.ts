@@ -1008,10 +1008,7 @@ export const findDefaultCoin = (coinKey: CoinKey): Coin => {
   }
   return coin
 }
-export const findDefaultCoinOnChain = (
-  coinKey: CoinKey,
-  chainId: ChainId
-): Token => {
+export const findDefaultToken = (coinKey: CoinKey, chainId: ChainId): Token => {
   const coin = findDefaultCoin(coinKey)
   const token = coin.chains[chainId]
   if (!token) {
