@@ -51,6 +51,7 @@ export interface Estimate {
 export type Status =
   | 'NOT_STARTED'
   | 'ACTION_REQUIRED'
+  | 'CHAIN_SWITCH_REQUIRED'
   | 'PENDING'
   | 'FAILED'
   | 'DONE'
