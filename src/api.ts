@@ -15,6 +15,8 @@ export interface RouteOptions {
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
   encryptionSupport?: boolean // (default : false)
+  integrator?: string // custom string developer who integrate LiFi can set
+  referrer?: string // integrators can set a wallet address as referrer to track them
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
 }
@@ -53,6 +55,8 @@ export interface Route {
   containsSwitchChain?: boolean // Features required for route execution
   containsEncryption?: boolean // Features required for route execution
   infiniteApproval?: boolean // Features used for route execution
+  integrator?: string
+  referrer?: string
 
   steps: Step[]
 }
