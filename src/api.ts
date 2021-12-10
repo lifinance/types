@@ -1,4 +1,3 @@
-import { providers } from 'ethers'
 import { Token, Chain, Step, BridgeDefinition, ExchangeDefinition } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
@@ -55,8 +54,6 @@ export interface Route {
   containsSwitchChain?: boolean // Features required for route execution
   containsEncryption?: boolean // Features required for route execution
   infiniteApproval?: boolean // Features used for route execution
-  integrator?: string
-  referrer?: string
 
   steps: Step[]
 }
@@ -78,10 +75,6 @@ export interface PossibilitiesResponse {
   exchanges: ExchangeDefinition[]
 }
 
-export interface StepTransactionResponse {
-  tx: providers.TransactionRequest
-}
-
 export declare class LifiAPI {
   getRoutes(request: RoutesRequest): Promise<RoutesResponse>
 
@@ -91,5 +84,5 @@ export declare class LifiAPI {
 
   updateRoute(route: Route): Promise<Route>
 
-  getStepTransaction(step: Step): Promise<StepTransactionResponse>
+  getStepTransaction(step: Step): Promise<Step>
 }
