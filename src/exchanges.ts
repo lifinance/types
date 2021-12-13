@@ -480,7 +480,6 @@ export const supportedExchanges: Array<Exchange> = [
     chainId: ChainId.MOR,
     logoURI: '...',
     webUrl: 'https://app.solarbeam.io/exchange/swap',
-    graph: 'https://api.thegraph.com/subgraphs/name/solarbeamio/dexcandles',
     tokenlistUrl:
       'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
     routerAddress: '0xAA30eF758139ae4a7f798112902Bf6d65612045f',
