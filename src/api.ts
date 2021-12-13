@@ -1,7 +1,13 @@
 import { providers } from 'ethers'
-import { Token, Chain, Step } from '.'
+import { Token, Chain, Step, BridgeDefinition, ExchangeDefinition } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
+
+export interface AllowDenyPrefer {
+  allow?: string[] // (default: [all])
+  deny?: string[] // (default: [])
+  prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
+}
 
 export interface RouteOptions {
   order?: Order // (default : BEST_VALUE)
@@ -9,16 +15,8 @@ export interface RouteOptions {
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
   encryptionSupport?: boolean // (default : false)
-  bridges?: {
-    allow?: string[] // (default: [all]) // eg. ['nxtp'] to allow only nxtp
-    deny?: string[] // (default: [])
-    prefer?: string[] // (default: [])
-  }
-  exchanges?: {
-    allow?: string[] // (default: [all])
-    deny?: string[] // (default: [])
-    prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
-  }
+  bridges?: AllowDenyPrefer
+  exchanges?: AllowDenyPrefer
 }
 
 export interface RoutesRequest {
@@ -65,22 +63,15 @@ export interface RoutesResponse {
 
 export interface PossibilitiesRequest {
   chains?: number[] // (default: [all]) // eg. [1, 56, 100]
-  bridges?: {
-    allow?: string[] // (default: [all]) // eg. ['nxtp'] to allow only nxtp
-    deny?: string[] // (default: [])
-    prefer?: string[] // (default: [])
-  }
-  exchanges?: {
-    allow?: string[] // (default: [all])
-    deny?: string[] // (default: [])
-    prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
-  }
+  bridges?: AllowDenyPrefer
+  exchanges?: AllowDenyPrefer
 }
 
 export interface PossibilitiesResponse {
   chains: Chain[]
   tokens: Token[]
-  // TODO: add available bridges/exchanges
+  bridges: BridgeDefinition[]
+  exchanges: ExchangeDefinition[]
 }
 
 export interface StepTransactionResponse {
