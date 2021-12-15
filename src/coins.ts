@@ -934,7 +934,7 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
   },
   [ChainId.MOR]: {
-    address: '0xf50225a84382c74cbdea10b0c176f71fc3de0c4d',
+    address: '0x98878b06940ae243284ca214f92bb71a2b032b8a',
     symbol: 'WMOVR',
     decimals: 18,
     chainId: ChainId.MOR,
