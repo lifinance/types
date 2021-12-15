@@ -1,4 +1,3 @@
-import { providers } from 'ethers'
 import { Token, Chain, Step, BridgeDefinition, ExchangeDefinition } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
@@ -15,6 +14,8 @@ export interface RouteOptions {
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
   encryptionSupport?: boolean // (default : false)
+  integrator?: string // custom string developer who integrate LiFi can set
+  referrer?: string // integrators can set a wallet address as referrer to track them
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
 }
@@ -74,10 +75,6 @@ export interface PossibilitiesResponse {
   exchanges: ExchangeDefinition[]
 }
 
-export interface StepTransactionResponse {
-  tx: providers.TransactionRequest
-}
-
 export declare class LifiAPI {
   getRoutes(request: RoutesRequest): Promise<RoutesResponse>
 
@@ -87,5 +84,5 @@ export declare class LifiAPI {
 
   updateRoute(route: Route): Promise<Route>
 
-  getStepTransaction(step: Step): Promise<StepTransactionResponse>
+  getStepTransaction(step: Step): Promise<Step>
 }

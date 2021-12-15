@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { providers } from 'ethers'
 import { Token } from './base'
 
 export interface FeeCost {
@@ -95,9 +96,12 @@ export interface StepBase {
   id: string
   type: StepType
   tool: StepTool
+  integrator?: string
+  referrer?: string
   action: Action
   estimate?: Estimate
   execution?: Execution
+  transactionRequest?: providers.TransactionRequest
 }
 
 export interface SwapStep extends StepBase {
