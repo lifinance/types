@@ -68,6 +68,14 @@ const basicCoins: BasicCoin[] = [
         address: '0x6983d1e6def3690c4d616b13597a09e6193ea013',
         decimals: 18,
       },
+      [ChainId.HEC]: {
+        address: '0x64ff637fb478863b7468bc97d30a5bf3a428a1fd',
+        decimals: 18,
+      },
+      [ChainId.OKT]: {
+        address: '0xef71ca2ee68f45b9ad6f72fbdb33d707b872315c',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -217,6 +225,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.ARB]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
+        decimals: 18,
+      },
+      [ChainId.OKT]: {
+        address: '0x21cde7e32a6caf4742d00d44b07279e7596d26b9',
         decimals: 18,
       },
 
@@ -582,6 +594,14 @@ const basicCoins: BasicCoin[] = [
         address: '0x3095c7557bcb296ccc6e363de01b760ba031f2d9',
         decimals: 8,
       },
+      [ChainId.MOR]: {
+        address: '0xe6a991ffa8cfe62b0bf6bf72959a3d4f11b2e0f5',
+        decimals: 8,
+      },
+      [ChainId.OKT]: {
+        address: '0x506f731f7656e2fb34b587b912808f2a7ab640bd',
+        decimals: 18,
+      },
     },
   },
 
@@ -623,6 +643,15 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.OPT]: {
         address: '0x4200000000000000000000000000000000000006',
+        decimals: 8,
+      },
+      [ChainId.MOR]: {
+        address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
+        decimals: 18,
+      },
+
+      [ChainId.HEC]: {
+        address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
         decimals: 18,
       },
 
@@ -905,7 +934,7 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
   },
   [ChainId.MOR]: {
-    address: '0xf50225a84382c74cbdea10b0c176f71fc3de0c4d',
+    address: '0x98878b06940ae243284ca214f92bb71a2b032b8a',
     symbol: 'WMOVR',
     decimals: 18,
     chainId: ChainId.MOR,

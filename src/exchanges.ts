@@ -449,14 +449,58 @@ export const supportedExchanges: Array<Exchange> = [
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
       findWrappedGasOnChain(ChainId.MOR),
-      // findDefaultToken(CoinKey.WETH, ChainId.MOR),
-      // findDefaultToken(CoinKey.WBTC, ChainId.MOR),
+      findDefaultToken(CoinKey.WETH, ChainId.MOR),
+      findDefaultToken(CoinKey.WBTC, ChainId.MOR),
       findDefaultToken(CoinKey.USDC, ChainId.MOR),
       findDefaultToken(CoinKey.USDT, ChainId.MOR),
       findDefaultToken(CoinKey.SUSHI, ChainId.MOR),
-      // FRAX
-      // MIM
-      // aROME
+      {
+        address: '0x1a93b23281cc1cde4c4741353f3064709a16197d',
+        symbol: 'FRAX',
+        decimals: 18,
+        chainId: ChainId.MOR,
+      } as Token,
+      {
+        address: '0x0cae51e1032e8461f4806e26332c030e34de3adb',
+        symbol: 'MIM',
+        decimals: 18,
+        chainId: ChainId.MOR,
+      } as Token,
+      {
+        address: '0x3d2d044e8c6dad46b4f7896418d3d4dfaad902be',
+        symbol: 'aROME',
+        decimals: 9,
+        chainId: ChainId.MOR,
+      } as Token,
+    ],
+  },
+  {
+    key: 'solarbeam-mor',
+    name: 'Solarbeam',
+    chainId: ChainId.MOR,
+    logoURI: '...',
+    webUrl: 'https://app.solarbeam.io/exchange/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
+    routerAddress: '0xAA30eF758139ae4a7f798112902Bf6d65612045f',
+    factoryAddress: '0x049581aEB6Fe262727f290165C29BDAB065a1B68',
+    initCodeHash:
+      '0x9a100ded5f254443fbd264cb7e87831e398a8b642e061670a9bc35ba27293dbf',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.MOR),
+      findDefaultToken(CoinKey.USDC, ChainId.MOR),
+      {
+        address: '0x1a93b23281cc1cde4c4741353f3064709a16197d',
+        symbol: 'FRAX',
+        decimals: 18,
+        chainId: ChainId.MOR,
+      } as Token,
+      {
+        address: '0x6bd193ee6d2104f14f94e2ca6efefae561a4334b',
+        symbol: 'SOLAR',
+        decimals: 18,
+        chainId: ChainId.MOR,
+      } as Token,
     ],
   },
 
@@ -475,12 +519,22 @@ export const supportedExchanges: Array<Exchange> = [
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
       findWrappedGasOnChain(ChainId.HEC),
-      // findDefaultToken(CoinKey.WETH, ChainId.HEC),
-      // findDefaultToken(CoinKey.WBTC, ChainId.HEC),
-      // findDefaultToken(CoinKey.DAI, ChainId.HEC),
+      findDefaultToken(CoinKey.ETH, ChainId.HEC),
       findDefaultToken(CoinKey.USDC, ChainId.HEC),
       findDefaultToken(CoinKey.USDT, ChainId.HEC),
       findDefaultToken(CoinKey.SUSHI, ChainId.HEC),
+      {
+        address: '0x66a79d23e58475d2738179ca52cd0b41d73f0bea',
+        symbol: 'HBTC',
+        decimals: 18,
+        chainId: ChainId.HEC,
+      } as Token,
+      {
+        address: '0x3d760a45d0887dfd89a2f5385a236b29cb46ed2a',
+        symbol: 'DAIHECO',
+        decimals: 18,
+        chainId: ChainId.HEC,
+      } as Token,
     ],
   },
 
@@ -499,9 +553,9 @@ export const supportedExchanges: Array<Exchange> = [
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
       findWrappedGasOnChain(ChainId.OKT),
-      // findDefaultToken(CoinKey.WETH, ChainId.OKT),
-      // findDefaultToken(CoinKey.WBTC, ChainId.OKT),
-      // findDefaultToken(CoinKey.DAI, ChainId.OKT),
+      findDefaultToken(CoinKey.ETH, ChainId.OKT),
+      findDefaultToken(CoinKey.WBTC, ChainId.OKT),
+      findDefaultToken(CoinKey.DAI, ChainId.OKT),
       findDefaultToken(CoinKey.USDC, ChainId.OKT),
       findDefaultToken(CoinKey.USDT, ChainId.OKT),
       findDefaultToken(CoinKey.SUSHI, ChainId.OKT),
