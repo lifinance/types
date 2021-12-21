@@ -75,6 +75,11 @@ export interface PossibilitiesResponse {
   exchanges: ExchangeDefinition[]
 }
 
+export interface GetTokenRequest {
+  chainId: number
+  address: string
+}
+
 export declare class LifiAPI {
   getRoutes(request: RoutesRequest): Promise<RoutesResponse>
 
@@ -85,4 +90,6 @@ export declare class LifiAPI {
   updateRoute(route: Route): Promise<Route>
 
   getStepTransaction(step: Step): Promise<Step>
+
+  getToken(request: GetTokenRequest): Promise<Token>
 }
