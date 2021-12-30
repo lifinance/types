@@ -1,4 +1,5 @@
 import { BridgeTool } from './bridges'
+import { ExchangeTools } from './exchanges'
 
 export enum CoinKey {
   ETH = 'ETH',
@@ -152,13 +153,8 @@ export interface Coin {
 }
 
 export interface ExchangeDefinition {
-  tool: ExchangeTool | string
+  tool: ExchangeTools
   chains: number[]
-}
-
-export enum ExchangeTool {
-  oneinch = '1inch',
-  paraswap = 'paraswap',
 }
 
 export interface BridgeDefinition {

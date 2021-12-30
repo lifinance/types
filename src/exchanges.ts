@@ -6,8 +6,54 @@ import {
   Token,
 } from '.'
 
+export enum ExchangeTool {
+  oneinch = '1inch',
+  paraswap = 'paraswap',
+  openocean = 'openocean',
+  matcha = 'matcha',
+}
+export type ExchangeTools = ExchangeTool | string
+
+export interface ExchangeAggregator {
+  key: ExchangeTool
+  name: string
+  logoURI: string
+  webUrl: string
+}
+
+export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
+  {
+    key: ExchangeTool.oneinch,
+    name: '1inch',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oneinch.png',
+    webUrl: 'https://app.1inch.io/',
+  },
+  {
+    key: ExchangeTool.paraswap,
+    name: 'paraswap',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/paraswap.png',
+    webUrl: 'https://paraswap.io/',
+  },
+  {
+    key: ExchangeTool.openocean,
+    name: 'OpenOcean',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/openocean.png',
+    webUrl: 'https://openocean.finance/classic',
+  },
+  {
+    key: ExchangeTool.matcha,
+    name: 'Matcha',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/matcha.png',
+    webUrl: 'https://matcha.xyz/markets/',
+  },
+]
+
 export interface Exchange {
-  key: string
+  key: ExchangeTools
   name: string
   chainId: number
   logoURI: string
@@ -26,7 +72,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'uniswap-eth',
     name: 'UniswapV2',
     chainId: ChainId.ETH,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
     webUrl: 'https://app.uniswap.org/#/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
     tokenlistUrl: 'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
@@ -46,7 +93,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-eth',
     name: 'SushiSwap',
     chainId: ChainId.ETH,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
     tokenlistUrl:
@@ -76,7 +124,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'quickswap-pol',
     name: 'Quickswap',
     chainId: ChainId.POL,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/quick.png',
     webUrl: 'https://quickswap.exchange/',
     graph: 'https://api.thegraph.com/subgraphs/name/sameepsi/quickswap06',
     tokenlistUrl:
@@ -104,7 +153,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'honeyswap-pol',
     name: 'Honeyswap',
     chainId: ChainId.POL,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/honey.png',
     webUrl: 'https://app.honeyswap.org/',
     graph: 'https://api.thegraph.com/subgraphs/name/1hive/honeyswap-polygon',
     tokenlistUrl: 'https://tokens.honeyswap.org/',
@@ -127,7 +177,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-pol',
     name: 'SushiSwap',
     chainId: ChainId.POL,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/matic-exchange',
     tokenlistUrl:
@@ -152,7 +203,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'pancakeswap-bsc',
     name: 'Pancake',
     chainId: ChainId.BSC,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/pancake.png',
     webUrl: 'https://exchange.pancakeswap.finance/',
     graph: 'https://api.thegraph.com/subgraphs/name/bscnodes/pancakeswap',
     tokenlistUrl:
@@ -187,7 +239,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-bsc',
     name: 'SushiSwap',
     chainId: ChainId.BSC,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/bsc-exchange',
     tokenlistUrl:
@@ -223,7 +276,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'honeyswap-dai',
     name: 'Honeyswap',
     chainId: ChainId.DAI,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/honey.png',
     webUrl: 'https://app.honeyswap.org/',
     graph: 'https://api.thegraph.com/subgraphs/name/1hive/honeyswap-xdai',
     tokenlistUrl: 'https://tokens.honeyswap.org/',
@@ -247,7 +301,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-dai',
     name: 'SushiSwap',
     chainId: ChainId.DAI,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/xdai-exchange',
     tokenlistUrl:
@@ -271,7 +326,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'spookyswap-ftm',
     name: 'SpookySwap',
     chainId: ChainId.FTM,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/spooky.png',
     webUrl: 'https://spookyswap.finance/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
@@ -290,7 +346,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-ftm',
     name: 'SushiSwap',
     chainId: ChainId.FTM,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/fantom-exchange',
     tokenlistUrl:
@@ -313,7 +370,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'viperswap-one',
     name: 'ViperSwap',
     chainId: ChainId.ONE,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/viper.png',
     webUrl: 'https://viper.exchange/#/swap',
     tokenlistUrl:
       'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
@@ -341,7 +399,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-one',
     name: 'SushiSwap',
     chainId: ChainId.ONE,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/harmony.json',
@@ -365,7 +424,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-ava',
     name: 'SushiSwap',
     chainId: ChainId.AVA,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/avalanche.json',
@@ -389,7 +449,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-arb',
     name: 'SushiSwap',
     chainId: ChainId.ARB,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/arbitrum.json',
@@ -418,7 +479,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   key: 'uniswap-opt',
   //   name: 'UniswapV3',
   //   chainId: 10,
-  //   logoURI: '...',
+  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
   //   webUrl: 'https://app.uniswap.org/#/swap',
   //   graph: '',
   //   tokenlistUrl: 'https://static.optimism.io/optimism.tokenlist.json',
@@ -439,7 +500,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-mor',
     name: 'SushiSwap',
     chainId: ChainId.MOR,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
@@ -478,7 +540,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'solarbeam-mor',
     name: 'Solarbeam',
     chainId: ChainId.MOR,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/solarbeam.png',
     webUrl: 'https://app.solarbeam.io/exchange/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
@@ -509,7 +572,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-hec',
     name: 'SushiSwap',
     chainId: ChainId.HEC,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/heco.json',
@@ -543,7 +607,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-okt',
     name: 'SushiSwap',
     chainId: ChainId.OKT,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
@@ -568,7 +633,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'uniswap-rop',
     name: 'Uniswap',
     chainId: ChainId.ROP,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
     webUrl: 'https://app.uniswap.org/',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
@@ -587,7 +653,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   key: 'sushiswap-rop',
   //   name: 'SushiSwap',
   //   chainId: ChainId.ROP,
-  //   logoURI: '...',
+  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
   //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/ropsten.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
@@ -600,7 +666,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'uniswap-rin',
     name: 'Uniswap',
     chainId: ChainId.RIN,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
     webUrl: 'https://app.uniswap.org/',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
@@ -619,7 +686,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   key: 'sushiswap-rin',
   //   name: 'SushiSwap',
   //   chainId: ChainId.RIN,
-  //   logoURI: '...',
+  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
   //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/rinkeby.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
@@ -632,7 +699,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'uniswap-gor',
     name: 'Uniswap',
     chainId: ChainId.GOR,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
     webUrl: 'https://app.uniswap.org/',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
@@ -651,7 +719,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   key: 'sushiswap-gor',
   //   name: 'SushiSwap',
   //   chainId: ChainId.GOR,
-  //   logoURI: '...',
+  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
   //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/goerli.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
@@ -665,7 +733,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'uniswap-kov',
     name: 'Uniswap',
     chainId: ChainId.KOV,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
     webUrl: 'https://app.uniswap.org/',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
@@ -684,7 +753,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   key: 'sushiswap-kov',
   //   name: 'SushiSwap',
   //   chainId: ChainId.KOV,
-  //   logoURI: '...',
+  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
   //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/kovan.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
@@ -700,7 +769,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-onet',
     name: 'SushiSwap',
     chainId: ChainId.ONET,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/harmony-testnet.json',
@@ -717,7 +787,8 @@ export const supportedExchanges: Array<Exchange> = [
     key: 'sushiswap-bsct',
     name: 'SushiSwap',
     chainId: ChainId.BSCT,
-    logoURI: '...',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/harmony-testnet.json',
