@@ -7,6 +7,7 @@ export interface Chain {
   coin: CoinKey
   id: number
   mainnet: boolean
+  logoURI?: string
   tokenlistUrl?: string
   faucetUrls?: string[]
   metamask: AddEthereumChainParameter
@@ -37,6 +38,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 1,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum.png',
     tokenlistUrl: 'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
 
     metamask: {
@@ -60,6 +63,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.MATIC,
     id: 137,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/polygon.png',
     tokenlistUrl:
       'https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/polygon-matic'],
@@ -87,6 +92,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.BNB,
     id: 56,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/bsc.png',
     tokenlistUrl:
       'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
     faucetUrls: ['https://stakely.io/faucet/bsc-chain-bnb'],
@@ -115,6 +122,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.DAI,
     id: 100,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/xdai.png',
     tokenlistUrl: 'https://tokens.honeyswap.org/',
     faucetUrls: ['https://stakely.io/faucet/xdai-chain'],
 
@@ -143,6 +152,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.FTM,
     id: 250,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fantom.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
     faucetUrls: [
@@ -170,6 +181,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.OKT,
     id: 66,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/okex.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
 
@@ -193,6 +206,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.AVAX,
     id: 43114,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/avalanche.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/avalanche.json',
 
@@ -216,6 +231,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 42161,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/arbitrum.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/arbitrum.json',
     faucetUrls: ['https://bridge.arbitrum.io/'],
@@ -239,6 +256,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.HT,
     id: 128,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/heco.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/heco.json',
 
@@ -261,6 +280,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 10,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/optimism.png',
     tokenlistUrl: 'https://static.optimism.io/optimism.tokenlist.json',
 
     faucetUrls: ['https://gateway.optimism.io/'],
@@ -284,6 +305,8 @@ export const supportedChains: Array<Chain> = [
     name: 'Fusion Mainnet',
     coin: CoinKey.FSN,
     id: 32659,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fusion.png',
     mainnet: true,
 
     // https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche
@@ -308,6 +331,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ONE,
     id: 1666600000,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/harmony.png',
     tokenlistUrl:
       'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/harmony-one'],
@@ -334,6 +359,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.MOVR,
     id: 1285,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonriver.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
 
@@ -580,6 +607,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 3,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_ropsten.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: [
@@ -608,6 +637,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 4,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_rinkeby.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://faucet.rinkeby.io/'],
@@ -633,6 +664,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 5,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_goerli.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://goerli-faucet.slock.it/'],
@@ -724,6 +757,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.MATIC,
     id: 80001,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/polygon_test.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/elkfinance/tokens/main/mumbai.tokenlist.json',
     faucetUrls: ['https://faucet.matic.network/'],
@@ -747,6 +782,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 421611,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/arbitrum_test.png',
     faucetUrls: ['https://bridge.arbitrum.io/'],
 
     metamask: {
@@ -789,6 +826,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.BNB,
     id: 97,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/bsc_test.png',
     faucetUrls: ['https://testnet.binance.org/faucet-smart'],
 
     metamask: {
@@ -835,6 +874,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ONE,
     id: 1666700000,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/harmony_test.png',
     // https://docs.harmony.one/home/developers/wallets/metamask/connect-metamask-to-the-harmony-chain
     metamask: {
       chainId: prefixChainId(1666700000),
