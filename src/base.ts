@@ -1,3 +1,5 @@
+import { BridgeTool } from './bridges'
+
 export enum CoinKey {
   ETH = 'ETH',
   MATIC = 'MATIC',
@@ -170,12 +172,4 @@ export interface BridgeDefinition {
   swapFeeRate: string
   swapFeeMinimum: string
   swapFeeMaximum: string
-}
-
-export enum BridgeTool {
-  nxtp = 'nxtp',
-  hop = 'hop',
-  anyswap = 'anyswap',
-  cbridge = 'cbridge',
-  horizon = 'horizon',
 }
