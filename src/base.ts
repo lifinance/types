@@ -140,7 +140,7 @@ export interface Token {
 
 export interface TokenAmount extends Token {
   amount: string
-  blockNumber: number
+  blockNumber?: number
 }
 
 export interface Coin {
