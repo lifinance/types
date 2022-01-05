@@ -82,7 +82,10 @@ export const supportedChains: Array<Chain> = [
         symbol: 'MATIC',
         decimals: 18,
       },
-      rpcUrls: ['https://rpc-mainnet.maticvigil.com/'],
+      rpcUrls: [
+        'https://polygon-rpc.com/',
+        'https://rpc-mainnet.maticvigil.com/',
+      ],
     },
   },
   // 56 - Binance Smart Chain
@@ -138,9 +141,9 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: [
+        'https://xdai.poanetwork.dev/',
         'https://rpc.xdaichain.com/',
         'https://dai.poa.network/',
-        'https://xdai.poanetwork.dev/',
         'https://xdai.1hive.org/',
       ],
     },
