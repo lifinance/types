@@ -57,6 +57,7 @@ export type Status =
   | 'FAILED'
   | 'DONE'
   | 'RESUME'
+  | 'CANCELLED'
 
 type AcceptableMessages = string | any
 export type ProcessMessage =
