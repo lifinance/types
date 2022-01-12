@@ -601,6 +601,111 @@ export const supportedChains: Array<Chain> = [
       rpcUrls: ['https://mainnet.boba.network/'],
     },
   },
+  // 27 ShibaChain
+  {
+    key: ChainKey.SHI,
+    name: 'Shiba',
+    coin: CoinKey.SHIB,
+    id: 27,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(27),
+      blockExplorerUrls: ['https://exp.shibachain.net/'],
+      chainName: 'Shiba',
+
+      nativeCurrency: {
+        name: 'SHIB',
+        symbol: 'SHIB',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.shibachain.net'],
+    },
+  },
+  // 29 Genesis L1
+  {
+    key: ChainKey.GL1,
+    name: 'Genesis L1',
+    coin: CoinKey.L1,
+    id: 29,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(29),
+      blockExplorerUrls: ['https://explorer.genesisl1.org/'],
+      chainName: 'Genesis L1',
+
+      nativeCurrency: {
+        name: 'L1',
+        symbol: 'L1',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.genesisl1.org'],
+    },
+  },
+  // 30 RSK Mainnet
+  {
+    key: ChainKey.RSK,
+    name: 'RSK Mainnet',
+    coin: CoinKey.RBTC,
+    id: 30,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(30),
+      blockExplorerUrls: ['https://explorer.rsk.co/'],
+      chainName: 'RSK Mainnet',
+
+      nativeCurrency: {
+        name: 'RBTC',
+        symbol: 'RBTC',
+        decimals: 18,
+      },
+      rpcUrls: ['https://public-node.rsk.co'],
+    },
+  },
+  // 35 TBWG Chain
+  {
+    key: ChainKey.TBW,
+    name: 'TBWG',
+    coin: CoinKey.TBG,
+    id: 35,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(35),
+      blockExplorerUrls: ['https://tbwg.io/'],
+      chainName: 'TBWG',
+
+      nativeCurrency: {
+        name: 'TBG',
+        symbol: 'TBG',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.tbwg.io'],
+    },
+  },
+  // 106 Velas EVM Mainnet
+  {
+    key: ChainKey.VEL,
+    name: 'Velas',
+    coin: CoinKey.VLX,
+    id: 106,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(106),
+      blockExplorerUrls: ['https://evmexplorer.velas.com/'],
+      chainName: 'Velas',
+
+      nativeCurrency: {
+        name: 'VLX',
+        symbol: 'VLX',
+        decimals: 18,
+      },
+      rpcUrls: ['https://evmexplorer.velas.com/rpc'],
+    },
+  },
 
   // TESTNETS
   // 3 - Ropsten
@@ -939,6 +1044,27 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: ['https://testnet.telos.net/evm'],
+    },
+  },
+  // 31 RSK Testnet
+  {
+    key: ChainKey.RSKT,
+    name: 'RSK Testnet',
+    coin: CoinKey.TRBTC,
+    id: 31,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(31),
+      blockExplorerUrls: ['https://rsk.co/'],
+      chainName: 'RSK Testnet',
+
+      nativeCurrency: {
+        name: 'tRBTC',
+        symbol: 'TRBTC',
+        decimals: 18,
+      },
+      rpcUrls: ['https://public-node.testnet.rsk.co'],
     },
   },
 

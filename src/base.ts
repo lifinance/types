@@ -22,6 +22,11 @@ export enum CoinKey {
   FUSE = 'FUSE',
   TLOS = 'TLOS',
   CRO = 'CRO',
+  SHIB = 'SHIB',
+  L1 = 'L1',
+  RBTC = 'RBTC',
+  TBG = 'TBG',
+  VLX = 'VLX',
 
   // Stable coins
   USDT = 'USDT',
@@ -32,6 +37,7 @@ export enum CoinKey {
   KAL = 'KAL',
   SDIODE = 'SDIODE',
   SPARK = 'SPARK',
+  TRBTC = 'TRBTC',
 
   // Other tokens
   WBTC = 'WBTC',
@@ -67,6 +73,11 @@ export enum ChainKey {
   TLO = 'tlo',
   CRO = 'cro',
   BOB = 'bob',
+  SHI = 'shi',
+  GL1 = 'gl1',
+  RSK = 'rsk',
+  TBW = 'tbw',
+  VEL = 'vel',
 
   // Testnets
   ROP = 'rop',
@@ -83,6 +94,7 @@ export enum ChainKey {
   ONET = 'onet',
   FUST = 'fust',
   TLOT = 'tlot',
+  RSKT = 'rskt',
 }
 
 export enum ChainId {
@@ -109,6 +121,11 @@ export enum ChainId {
   TLO = 40,
   CRO = 25,
   BOB = 288,
+  SHI = 27,
+  GL1 = 29,
+  RSK = 30,
+  TBW = 35,
+  VEL = 106,
 
   // Testnets
   ROP = 3,
@@ -125,6 +142,7 @@ export enum ChainId {
   ONET = 1666700000,
   FUST = 123,
   TLOT = 41,
+  RSKT = 31,
 }
 
 export interface Token {
