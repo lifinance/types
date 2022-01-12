@@ -706,6 +706,27 @@ export const supportedChains: Array<Chain> = [
       rpcUrls: ['https://evmexplorer.velas.com/rpc'],
     },
   },
+  // 1284 Moonbeam
+  {
+    key: ChainKey.MOO,
+    name: 'Moonbeam',
+    coin: CoinKey.GLMR,
+    id: 1284,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(1284),
+      blockExplorerUrls: ['https://blockscout.moonbeam.network/'],
+      chainName: 'Moonbeam',
+
+      nativeCurrency: {
+        name: 'GLMR',
+        symbol: 'GLMR',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.api.moonbeam.network'],
+    },
+  },
 
   // TESTNETS
   // 3 - Ropsten

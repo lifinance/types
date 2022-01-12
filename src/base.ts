@@ -27,6 +27,7 @@ export enum CoinKey {
   RBTC = 'RBTC',
   TBG = 'TBG',
   VLX = 'VLX',
+  GLMR = 'GLMR',
 
   // Stable coins
   USDT = 'USDT',
@@ -78,6 +79,7 @@ export enum ChainKey {
   RSK = 'rsk',
   TBW = 'tbw',
   VEL = 'vel',
+  MOO = 'moo',
 
   // Testnets
   ROP = 'rop',
@@ -126,6 +128,7 @@ export enum ChainId {
   RSK = 30,
   TBW = 35,
   VEL = 106,
+  MOO = 1284,
 
   // Testnets
   ROP = 3,
