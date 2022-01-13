@@ -75,4 +75,7 @@ export const supportedBridges: Array<Bridge> = [
     docsUrl: 'https://docs.harmony.one/home/general/horizon-bridge',
     explorerUrl: 'https://bridge.harmony.one/explorer',
   },
+  // TODO: for cronos chain, we should confirm if these bridges are available to integrate
+  // https://bridge.evodefi.com/
+  // https://app.relaychain.com/#/
 ]
