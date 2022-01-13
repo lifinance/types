@@ -494,6 +494,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xc946daf81b08146b1c7a8da2a851ddf2b3eaaf85',
         decimals: 18,
       },
+      [ChainId.CRO]: {
+        address: '0xc21223249ca28397b4b6541dffaecc539bff0c59',
+        decimals: 6,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -807,6 +811,19 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.BSC]: {
         address: '0xb0e1fc65c1a741b4662b813eb787d369b8614af1',
+        decimals: 18,
+      },
+    },
+  },
+  // > CRO
+  {
+    key: CoinKey.CRO,
+    name: CoinKey.CRO,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png',
+    verified: true,
+    chains: {
+      [ChainId.CRO]: {
+        address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
     },

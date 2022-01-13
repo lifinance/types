@@ -627,6 +627,33 @@ export const supportedExchanges: Array<Exchange> = [
     ],
   },
 
+  // 25 - Cronos Mainnet Beta
+  {
+    key: 'cronaswap-cro',
+    name: 'CronaSwap',
+    chainId: ChainId.CRO,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/cronaswap.png',
+    webUrl: 'https://app.cronaswap.org/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/cronaswap-default.tokenlist.json',
+    routerAddress: '0xcd7d16fB918511BF7269eC4f48d61D79Fb26f918',
+    factoryAddress: '0x73A48f8f521EB31c55c0e1274dB0898dE599Cb11',
+    initCodeHash:
+      '0xc93158cffa5b575e32566e81e847754ce517f8fa988d3e25cf346d916216e06f',
+    baseTokens: [
+      findDefaultToken(CoinKey.CRO, ChainId.CRO),
+      findDefaultToken(CoinKey.USDC, ChainId.CRO),
+      {
+        address: '0xadbd1231fb360047525BEdF962581F3eee7b49fe',
+        symbol: 'CRONA',
+        decimals: 18,
+        chainId: ChainId.CRO,
+      } as Token,
+    ],
+  },
+  // TODO: For cronos chain, we will add KyberSwap in the near future
+
   // TESTNETS
   // 3 - Ropsten
   {
