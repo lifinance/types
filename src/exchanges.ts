@@ -741,6 +741,39 @@ export const supportedExchanges: Array<Exchange> = [
       } as Token,
     ],
   },
+  {
+    key: 'sushiswap-cel',
+    name: 'SushiSwap',
+    chainId: ChainId.CEL,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
+    webUrl: 'https://app.sushi.com/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
+    routerAddress: '0x1421bDe4B10e8dd459b3BCb598810B1337D56842',
+    factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    initCodeHash:
+      '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+    baseTokens: [
+      findDefaultToken(CoinKey.CELO, ChainId.CEL),
+      findDefaultToken(CoinKey.USDC, ChainId.CEL),
+      findDefaultToken(CoinKey.WBTC, ChainId.CEL),
+      findDefaultToken(CoinKey.WETH, ChainId.CEL),
+      findDefaultToken(CoinKey.SUSHI, ChainId.CEL),
+      {
+        address: '0x765de816845861e75a25fca122bb6898b8b1282a',
+        symbol: 'cUSD',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+      {
+        address: '0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73',
+        symbol: 'cEUR',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+    ],
+  },
 
   // TESTNETS
   // 3 - Ropsten
