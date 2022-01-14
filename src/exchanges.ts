@@ -710,6 +710,38 @@ export const supportedExchanges: Array<Exchange> = [
     ],
   },
 
+  // 42220 Celo Mainnet
+  {
+    key: 'ubeswap-cel',
+    name: 'UbeSwap',
+    chainId: ChainId.CEL,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/ubeswap.png',
+    webUrl: 'https://app.ubeswap.org/#/swap',
+    graph: 'https://api.thegraph.com/subgraphs/name/ubeswap/ubeswap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/Ubeswap/default-token-list/master/ubeswap.token-list.json',
+    routerAddress: '0xE3D8bd6Aed4F159bc8000a9cD47CffDb95F96121',
+    factoryAddress: '0x62d5b84bE28a183aBB507E125B384122D2C25fAE',
+    initCodeHash:
+      '0xb3b8ff62960acea3a88039ebcf80699f15786f1b17cebd82802f7375827a339c',
+    baseTokens: [
+      findDefaultToken(CoinKey.CELO, ChainId.CEL),
+      {
+        address: '0x918146359264c492bd6934071c6bd31c854edbc3',
+        symbol: 'mCUSD',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+      {
+        address: '0xe273ad7ee11dcfaa87383ad5977ee1504ac07568',
+        symbol: 'mCEUR',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+    ],
+  },
+
   // TESTNETS
   // 3 - Ropsten
   {

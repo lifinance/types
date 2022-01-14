@@ -864,6 +864,19 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+  // > CEL
+  {
+    key: CoinKey.CELO,
+    name: CoinKey.CELO,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5567.png',
+    verified: true,
+    chains: {
+      [ChainId.CEL]: {
+        address: '0x471ece3750da237f93b8e339c536989b8978a438',
+        decimals: 18,
+      },
+    },
+  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
