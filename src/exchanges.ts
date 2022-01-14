@@ -645,14 +645,70 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.CRO, ChainId.CRO),
       findDefaultToken(CoinKey.USDC, ChainId.CRO),
       {
-        address: '0xadbd1231fb360047525BEdF962581F3eee7b49fe',
+        address: '0xadbd1231fb360047525bedf962581f3eee7b49fe',
         symbol: 'CRONA',
         decimals: 18,
         chainId: ChainId.CRO,
       } as Token,
     ],
   },
-  // TODO: For cronos chain, we will add KyberSwap in the near future
+  // TODO: For cronos chain, we will add KyberSwap in the near future, they're still in development
+
+  // 1284 - Moonbeam
+  // TODO: For Moonbeam chain, we will add StellaSwap in the near future, they're still in development
+
+  // 122 - Fuse Mainnet
+  {
+    key: 'fuseswap-fus',
+    name: 'FuseSwap',
+    chainId: ChainId.FUS,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/fuseswap.png',
+    webUrl: 'https://app.fuse.fi/#/swap',
+    graph: 'https://api.thegraph.com/subgraphs/name/fuseio/fuseswap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/fuseio/fuseswap-default-token-list/master/build/fuseswap-default.tokenlist.json',
+    routerAddress: '',
+    factoryAddress: '',
+    initCodeHash: '',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.FUS),
+      findDefaultToken(CoinKey.FUSE, ChainId.FUS),
+      findDefaultToken(CoinKey.USDC, ChainId.FUS),
+      findDefaultToken(CoinKey.USDT, ChainId.FUS),
+      findDefaultToken(CoinKey.WBTC, ChainId.FUS),
+      findDefaultToken(CoinKey.WETH, ChainId.FUS),
+      {
+        address: '0x249be57637d8b013ad64785404b24aebae9b098b',
+        symbol: 'fUSD',
+        decimals: 18,
+        chainId: ChainId.FUS,
+      } as Token,
+    ],
+  },
+  {
+    key: 'sushiswap-fus',
+    name: 'SushiSwap',
+    chainId: ChainId.FUS,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
+    webUrl: 'https://app.sushi.com/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
+    routerAddress: '0xF4d73326C13a4Fc5FD7A064217e12780e9Bd62c3',
+    factoryAddress: '0x43eA90e2b786728520e4f930d2A71a477BF2737C',
+    initCodeHash:
+      '0x1901958ef8b470f2c0a3875a79ee0bd303866d85102c0f1ea820d317024d50b5',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.FUS),
+      findDefaultToken(CoinKey.USDC, ChainId.FUS),
+      findDefaultToken(CoinKey.USDT, ChainId.FUS),
+      findDefaultToken(CoinKey.WBTC, ChainId.FUS),
+      findDefaultToken(CoinKey.WETH, ChainId.FUS),
+      findDefaultToken(CoinKey.DAI, ChainId.FUS),
+      findDefaultToken(CoinKey.SUSHI, ChainId.FUS),
+    ],
+  },
 
   // TESTNETS
   // 3 - Ropsten

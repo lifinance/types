@@ -231,6 +231,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x21cde7e32a6caf4742d00d44b07279e7596d26b9',
         decimals: 18,
       },
+      [ChainId.FUS]: {
+        address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -422,6 +426,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xa71edc38d189767582c38a3145b5873052c3e47a',
         decimals: 18,
       },
+      [ChainId.FUS]: {
+        address: '0xfadbbf8ce7d5b7041be672561bba99f79c532e10',
+        decimals: 6,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -496,6 +504,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.CRO]: {
         address: '0xc21223249ca28397b4b6541dffaecc539bff0c59',
+        decimals: 6,
+      },
+      [ChainId.FUS]: {
+        address: '0x620fd5fa44be6af63715ef4e65ddfa0387ad13f5',
         decimals: 6,
       },
 
@@ -606,6 +618,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x506f731f7656e2fb34b587b912808f2a7ab640bd',
         decimals: 18,
       },
+      [ChainId.FUS]: {
+        address: '0x33284f95ccb7b948d9d352e1439561cf83d8d00d',
+        decimals: 8,
+      },
     },
   },
 
@@ -653,9 +669,12 @@ const basicCoins: BasicCoin[] = [
         address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
         decimals: 18,
       },
-
       [ChainId.HEC]: {
         address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
+        decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0xa722c13135930332eb3d749b2f0906559d2c5b99',
         decimals: 18,
       },
 
@@ -730,6 +749,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.HEC]: {
         address: '0x52e00b2da5bd7940ffe26b609a42f957f31118d5',
+        decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0x90708b20ccc1eb95a4fa7c8b18fd2C22a0ff9e78',
         decimals: 18,
       },
     },
@@ -823,6 +846,19 @@ const basicCoins: BasicCoin[] = [
     verified: true,
     chains: {
       [ChainId.CRO]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
+  // > FUS
+  {
+    key: CoinKey.FUSE,
+    name: CoinKey.FUSE,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5634.png',
+    verified: true,
+    chains: {
+      [ChainId.FUS]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
@@ -978,6 +1014,15 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'wHT',
     logoURI:
       'https://static.debank.com/image/heco_token/logo_url/heco/c399dcddde07e1944c4dd8f922832b53.png',
+  },
+  [ChainId.FUS]: {
+    address: '0x0be9e53fd7edac9f859882afdda116645287c629',
+    symbol: 'WFUSE',
+    decimals: 18,
+    chainId: ChainId.FUS,
+    coinKey: 'WFUSE' as CoinKey,
+    name: 'Wrapped Fuse',
+    logoURI: 'https://fuselogo.s3.eu-central-1.amazonaws.com/wfuse.png',
   },
 
   // Testnets
