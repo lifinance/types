@@ -235,6 +235,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
         decimals: 18,
       },
+      [ChainId.MOO]: {
+        address: '0xc234a67a4f840e61ade794be47de455361b52413',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -362,6 +366,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.MOO]: {
+        address: '0x1d4c2a246311bb9f827f4c768e277ff5787b7d7e',
+        decimals: 18,
+      },
     },
   },
 
@@ -428,6 +436,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.FUS]: {
         address: '0xfadbbf8ce7d5b7041be672561bba99f79c532e10',
+        decimals: 6,
+      },
+      [ChainId.MOO]: {
+        address: '0x8e70cd5b4ff3f62659049e74b6649c6603a0e594',
         decimals: 6,
       },
 
@@ -512,6 +524,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.CEL]: {
         address: '0xef4229c8c3250c675f21bcefa42f58efbff6002a',
+        decimals: 6,
+      },
+      [ChainId.MOO]: {
+        address: '0x8f552a71efe5eefc207bf75485b356a0b3f01ec9',
         decimals: 6,
       },
 
@@ -630,6 +646,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b',
         decimals: 8,
       },
+      [ChainId.MOO]: {
+        address: '0x1dc78acda13a8bc4408b207c9e48cdbc096d95e0',
+        decimals: 8,
+      },
     },
   },
 
@@ -687,6 +707,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.CEL]: {
         address: '0x122013fd7df1c6f636a5bb8f03108e876548b455',
+        decimals: 18,
+      },
+      [ChainId.MOO]: {
+        address: '0x30d2a9f5fdf90ace8c17952cbb4ee48a55d916a7',
         decimals: 18,
       },
 
@@ -893,6 +917,19 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+  // > GLMR
+  {
+    key: CoinKey.GLMR,
+    name: CoinKey.GLMR,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/6836.png',
+    verified: true,
+    chains: {
+      [ChainId.MOO]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
@@ -1052,6 +1089,16 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     coinKey: 'WFUSE' as CoinKey,
     name: 'Wrapped Fuse',
     logoURI: 'https://fuselogo.s3.eu-central-1.amazonaws.com/wfuse.png',
+  },
+  [ChainId.MOO]: {
+    address: '0xacc15dc74880c9944775448304b263d191c6077f',
+    symbol: 'WGLMR',
+    decimals: 18,
+    chainId: ChainId.MOO,
+    coinKey: 'WGLMR' as CoinKey,
+    name: 'Wrapped GLMR',
+    logoURI:
+      'https://static.debank.com/image/mobm_token/logo_url/0xacc15dc74880c9944775448304b263d191c6077f/a8442077d76b258297181c3e6eb8c9cc.png',
   },
 
   // Testnets
