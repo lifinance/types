@@ -588,6 +588,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.CRO,
     id: 25,
     mainnet: true,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/cronaswap-default.tokenlist.json',
 
     metamask: {
       chainId: prefixChainId(25),
@@ -726,6 +728,27 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: ['https://evmexplorer.velas.com/rpc'],
+    },
+  },
+  // 1088 Metis Andromeda Mainnet
+  {
+    key: ChainKey.MAM,
+    name: 'Metis',
+    coin: CoinKey.METIS,
+    id: 1088,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(1088),
+      blockExplorerUrls: ['https://andromeda-explorer.metis.io/'],
+      chainName: 'Metis',
+
+      nativeCurrency: {
+        name: 'METIS',
+        symbol: 'METIS',
+        decimals: 18,
+      },
+      rpcUrls: ['https://andromeda.metis.io/?owner=1088'],
     },
   },
 

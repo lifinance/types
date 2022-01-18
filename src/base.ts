@@ -28,6 +28,7 @@ export enum CoinKey {
   TBG = 'TBG',
   VLX = 'VLX',
   GLMR = 'GLMR',
+  METIS = 'METIS',
 
   // Stable coins
   USDT = 'USDT',
@@ -80,6 +81,7 @@ export enum ChainKey {
   TBW = 'tbw',
   VEL = 'vel',
   MOO = 'moo',
+  MAM = 'mam',
 
   // Testnets
   ROP = 'rop',
@@ -129,6 +131,7 @@ export enum ChainId {
   TBW = 35,
   VEL = 106,
   MOO = 1284,
+  MAM = 1088,
 
   // Testnets
   ROP = 3,
