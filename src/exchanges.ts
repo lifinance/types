@@ -775,6 +775,42 @@ export const supportedExchanges: Array<Exchange> = [
     ],
   },
 
+  // 1088 Metis Andromeda Mainnet
+  {
+    key: 'standard-mam',
+    name: 'Standard',
+    chainId: ChainId.MAM,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/standard.png',
+    webUrl: 'https://apps.standard.tech/trade',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
+    routerAddress: '',
+    factoryAddress: '',
+    initCodeHash: '',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.MAM),
+      {
+        address: '0xc12cac7090baa48ec750cceec57c80768f6ee58e',
+        symbol: 'STND',
+        decimals: 18,
+        chainId: ChainId.MAM,
+      } as Token,
+      {
+        address: '0xea32a96608495e54156ae48931a7c20f0dcc1a21',
+        symbol: 'm.USDC',
+        decimals: 6,
+        chainId: ChainId.MAM,
+      } as Token,
+      {
+        address: '0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc',
+        symbol: 'm.USDT',
+        decimals: 6,
+        chainId: ChainId.MAM,
+      } as Token,
+    ],
+  },
+
   // TESTNETS
   // 3 - Ropsten
   {

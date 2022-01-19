@@ -78,4 +78,6 @@ export const supportedBridges: Array<Bridge> = [
   // TODO: for cronos chain, we should confirm if these bridges are available to integrate
   // https://bridge.evodefi.com/
   // https://app.relaychain.com/#/
+  // TODO: for metis network, we should confirm this bridge as well
+  // https://bridge.metis.io/home
 ]

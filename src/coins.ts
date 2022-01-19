@@ -930,6 +930,19 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+  // > METIS
+  {
+    key: CoinKey.METIS,
+    name: CoinKey.METIS,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png',
+    verified: true,
+    chains: {
+      [ChainId.MAM]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
@@ -1099,6 +1112,15 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'Wrapped GLMR',
     logoURI:
       'https://static.debank.com/image/mobm_token/logo_url/0xacc15dc74880c9944775448304b263d191c6077f/a8442077d76b258297181c3e6eb8c9cc.png',
+  },
+  [ChainId.MAM]: {
+    address: '0x75cb093E4D61d2A2e65D8e0BBb01DE8d89b53481',
+    symbol: 'WMETIS',
+    decimals: 18,
+    chainId: ChainId.MAM,
+    coinKey: 'WMETIS' as CoinKey,
+    name: 'Wrapped Metis',
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png',
   },
 
   // Testnets
