@@ -668,6 +668,7 @@ export const supportedExchanges: Array<Exchange> = [
     graph: 'https://api.thegraph.com/subgraphs/name/fuseio/fuseswap',
     tokenlistUrl:
       'https://raw.githubusercontent.com/fuseio/fuseswap-default-token-list/master/build/fuseswap-default.tokenlist.json',
+    // we should add router address, factory address and init code hash
     routerAddress: '',
     factoryAddress: '',
     initCodeHash: '',

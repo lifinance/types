@@ -1058,10 +1058,8 @@ export const supportedChains: Array<Chain> = [
 
     metamask: {
       chainId: prefixChainId(123),
-      blockExplorerUrls: [
-        'https://docs.fuse.io/general/fuse-network-blockchain/fuse-testnet/',
-      ],
-      chainName: 'Fuse Mainnet',
+      blockExplorerUrls: ['https://explorer.fusespark.io/'],
+      chainName: 'Fuse Sparknet',
 
       nativeCurrency: {
         name: 'Spark',
