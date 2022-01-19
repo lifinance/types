@@ -118,15 +118,15 @@ export const supportedChains: Array<Chain> = [
       ],
     },
   },
-  // 100 - xDai
+  // 100 - Gnosis
   {
     key: ChainKey.DAI,
-    name: 'xDai',
+    name: 'Gnosis',
     coin: CoinKey.DAI,
     id: 100,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/xdai.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/gnosis.png',
     tokenlistUrl: 'https://tokens.honeyswap.org/',
     faucetUrls: ['https://stakely.io/faucet/xdai-chain'],
 
@@ -134,7 +134,7 @@ export const supportedChains: Array<Chain> = [
     metamask: {
       chainId: prefixChainId(100),
       blockExplorerUrls: ['https://blockscout.com/xdai/mainnet/'],
-      chainName: 'xDAI Chain',
+      chainName: 'Gnosis Chain',
       nativeCurrency: {
         name: 'xDai',
         symbol: 'xDai',

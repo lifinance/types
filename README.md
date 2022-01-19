@@ -1,12 +1,19 @@
 # Li.Finance - Types
 Types for lifi projects
 
+### Summary
+This package contains all common types for the [LiFi SDK](https://github.com/lifinance/sdk).
+Learn more about LiFi on (https://li.finance).
+
+
+Check out the [Changelog](./CHANGELOG.md) to see what changed in the last releases.
+
 ### Install dependencies
 
-Install dependencies with npm:
+Install dependencies with yarn:
 
 ```bash
-npm i
+yarn install
 ```
 
 ### Test
@@ -14,7 +21,7 @@ npm i
 Test your code with Jest framework:
 
 ```bash
-npm run test
+yarn test
 ```
 
 **Note:** Example TypeScript Package uses [husky](https://typicode.github.io/husky/), [pinst](https://github.com/typicode/pinst) and [commitlint](https://commitlint.js.org/) to automatically execute test and [lint commit message](https://www.conventionalcommits.org/) before every commit.
@@ -24,14 +31,24 @@ npm run test
 Build production (distribution) files in your **dist** folder:
 
 ```bash
-npm run build
+yarn build
 ```
 
 
-### Publish
-In order to update the package, you need to add a tag for this.
+### Release
+In order to release a new version of the package you have to run 
 
-Example:
+```bash
+yarn release
 ```
-git push origin v0.0.1
+
+This will 
+* bump the version number according to the types of the last commits (i.e. if it is a major, minor or bug fix release)
+* create a new git tag
+* update the CHANGELOG.md
+
+Afterwards, all you have to do is run 
+
+```bash
+git push && git push --tags
 ```

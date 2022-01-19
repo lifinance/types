@@ -271,7 +271,7 @@ export const supportedExchanges: Array<Exchange> = [
     ],
   },
 
-  // 100 - xDai
+  // 100 - Gnosis
   {
     key: 'honeyswap-dai',
     name: 'Honeyswap',
