@@ -785,6 +785,7 @@ export const supportedExchanges: Array<Exchange> = [
     webUrl: 'https://apps.standard.tech/trade',
     tokenlistUrl:
       'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
+    // we should add router address, factory address and init code hash
     routerAddress: '',
     factoryAddress: '',
     initCodeHash: '',

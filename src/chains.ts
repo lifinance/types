@@ -737,6 +737,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.METIS,
     id: 1088,
     mainnet: true,
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
 
     metamask: {
       chainId: prefixChainId(1088),
