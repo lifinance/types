@@ -388,6 +388,10 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.GLMR,
     id: 1284,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonbeam.png',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
 
     metamask: {
       chainId: prefixChainId(1284),
@@ -410,6 +414,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.EXP,
     id: 2,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/expanse.png',
 
     metamask: {
       chainId: prefixChainId(2),
@@ -515,6 +521,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.CELO,
     id: 42220,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/celo.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
     faucetUrls: [
@@ -542,6 +550,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.FUSE,
     id: 122,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fuse.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
 
@@ -588,6 +598,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.CRO,
     id: 25,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/cronos.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/cronaswap-default.tokenlist.json',
 
@@ -611,6 +623,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 288,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/boba.png',
 
     metamask: {
       chainId: prefixChainId(288),
@@ -737,6 +751,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.METIS,
     id: 1088,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/metis.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
 
