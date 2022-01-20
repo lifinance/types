@@ -69,6 +69,7 @@ export interface Process {
   doneAt?: number
   failedAt?: number
   errorMessage?: any
+  htmlErrorMessage?: any
   errorCode?: any
   message: ProcessMessage
   status: Status
