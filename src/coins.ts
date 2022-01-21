@@ -804,7 +804,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
       },
       [ChainId.FUS]: {
-        address: '0x90708b20ccc1eb95a4fa7c8b18fd2C22a0ff9e78',
+        address: '0x90708b20ccc1eb95a4fa7c8b18fd2c22a0ff9e78',
         decimals: 18,
       },
       [ChainId.CEL]: {
