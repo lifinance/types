@@ -636,7 +636,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/cronaswap.png',
     webUrl: 'https://app.cronaswap.org/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/cronaswap-default.tokenlist.json',
+      'https://raw.githubusercontent.com/cronaswap/default-token-list/main/assets/tokens/cronos.json',
     routerAddress: '0xcd7d16fB918511BF7269eC4f48d61D79Fb26f918',
     factoryAddress: '0x73A48f8f521EB31c55c0e1274dB0898dE599Cb11',
     initCodeHash:

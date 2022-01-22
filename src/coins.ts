@@ -231,8 +231,16 @@ const basicCoins: BasicCoin[] = [
         address: '0x21cde7e32a6caf4742d00d44b07279e7596d26b9',
         decimals: 18,
       },
+      [ChainId.CRO]: {
+        address: '0xf2001b145b43032aaf5ee2884e456ccd805f677d',
+        decimals: 18,
+      },
       [ChainId.FUS]: {
         address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
+        decimals: 18,
+      },
+      [ChainId.CEL]: {
+        address: '0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd',
         decimals: 18,
       },
       [ChainId.MOO]: {
@@ -430,12 +438,20 @@ const basicCoins: BasicCoin[] = [
         address: '0x382bb369d343125bfb2117af9c149795c6c65c50',
         decimals: 18,
       },
+      [ChainId.CRO]: {
+        address: '0x66e428c3f67a68878562e79a0234c1f83c208770',
+        decimals: 6,
+      },
       [ChainId.HEC]: {
         address: '0xa71edc38d189767582c38a3145b5873052c3e47a',
         decimals: 18,
       },
       [ChainId.FUS]: {
         address: '0xfadbbf8ce7d5b7041be672561bba99f79c532e10',
+        decimals: 6,
+      },
+      [ChainId.CEL]: {
+        address: '0x88eec49252c8cbc039dcdb394c0c2ba2f1637ea0',
         decimals: 6,
       },
       [ChainId.MOO]: {
@@ -638,6 +654,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x506f731f7656e2fb34b587b912808f2a7ab640bd',
         decimals: 18,
       },
+      [ChainId.CRO]: {
+        address: '0x062e66477faf219f25d27dced647bf57c3107d52',
+        decimals: 8,
+      },
       [ChainId.FUS]: {
         address: '0x33284f95ccb7b948d9d352e1439561cf83d8d00d',
         decimals: 8,
@@ -699,6 +719,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.HEC]: {
         address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
+        decimals: 18,
+      },
+      [ChainId.CRO]: {
+        address: '0xe44fd7fcb2b1581822d0c862b68222998a0c299a',
         decimals: 18,
       },
       [ChainId.FUS]: {
@@ -788,7 +812,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
       },
       [ChainId.FUS]: {
-        address: '0x90708b20ccc1eb95a4fa7c8b18fd2C22a0ff9e78',
+        address: '0x90708b20ccc1eb95a4fa7c8b18fd2c22a0ff9e78',
         decimals: 18,
       },
       [ChainId.CEL]: {
@@ -1093,6 +1117,16 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'wHT',
     logoURI:
       'https://static.debank.com/image/heco_token/logo_url/heco/c399dcddde07e1944c4dd8f922832b53.png',
+  },
+  [ChainId.CRO]: {
+    address: '0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23',
+    symbol: 'WCRO',
+    decimals: 18,
+    chainId: ChainId.CRO,
+    coinKey: 'WCRO' as CoinKey,
+    name: 'WCRO',
+    logoURI:
+      'https://raw.githubusercontent.com/cronaswap/default-token-list/main/assets/tokens/cronos/0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23/logo.png',
   },
   [ChainId.FUS]: {
     address: '0x0be9e53fd7edac9f859882afdda116645287c629',
