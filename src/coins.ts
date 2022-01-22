@@ -239,6 +239,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
         decimals: 18,
       },
+      [ChainId.CEL]: {
+        address: '0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd',
+        decimals: 18,
+      },
       [ChainId.MOO]: {
         address: '0xc234a67a4f840e61ade794be47de455361b52413',
         decimals: 18,
@@ -444,6 +448,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.FUS]: {
         address: '0xfadbbf8ce7d5b7041be672561bba99f79c532e10',
+        decimals: 6,
+      },
+      [ChainId.CEL]: {
+        address: '0x88eec49252c8cbc039dcdb394c0c2ba2f1637ea0',
         decimals: 6,
       },
       [ChainId.MOO]: {
