@@ -657,36 +657,36 @@ export const supportedExchanges: Array<Exchange> = [
   // 1284 - Moonbeam
   // TODO: For Moonbeam chain, we will add StellaSwap in the near future, they're still in development
 
-  // 122 - Fuse Mainnet
-  {
-    key: 'fuseswap-fus',
-    name: 'FuseSwap',
-    chainId: ChainId.FUS,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/fuseswap.png',
-    webUrl: 'https://app.fuse.fi/#/swap',
-    graph: 'https://api.thegraph.com/subgraphs/name/fuseio/fuseswap',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/fuseio/fuseswap-default-token-list/master/build/fuseswap-default.tokenlist.json',
-    // we should add router address, factory address and init code hash
-    routerAddress: '',
-    factoryAddress: '',
-    initCodeHash: '',
-    baseTokens: [
-      findWrappedGasOnChain(ChainId.FUS),
-      findDefaultToken(CoinKey.FUSE, ChainId.FUS),
-      findDefaultToken(CoinKey.USDC, ChainId.FUS),
-      findDefaultToken(CoinKey.USDT, ChainId.FUS),
-      findDefaultToken(CoinKey.WBTC, ChainId.FUS),
-      findDefaultToken(CoinKey.WETH, ChainId.FUS),
-      {
-        address: '0x249be57637d8b013ad64785404b24aebae9b098b',
-        symbol: 'fUSD',
-        decimals: 18,
-        chainId: ChainId.FUS,
-      } as Token,
-    ],
-  },
+  // 122 - Fuse Mainnet // TODO: incomplete
+  // {
+  //   key: 'fuseswap-fus',
+  //   name: 'FuseSwap',
+  //   chainId: ChainId.FUS,
+  //   logoURI:
+  //     'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/fuseswap.png',
+  //   webUrl: 'https://app.fuse.fi/#/swap',
+  //   graph: 'https://api.thegraph.com/subgraphs/name/fuseio/fuseswap',
+  //   tokenlistUrl:
+  //     'https://raw.githubusercontent.com/fuseio/fuseswap-default-token-list/master/build/fuseswap-default.tokenlist.json',
+  //   // we should add router address, factory address and init code hash
+  //   routerAddress: '',
+  //   factoryAddress: '',
+  //   initCodeHash: '',
+  //   baseTokens: [
+  //     findWrappedGasOnChain(ChainId.FUS),
+  //     findDefaultToken(CoinKey.FUSE, ChainId.FUS),
+  //     findDefaultToken(CoinKey.USDC, ChainId.FUS),
+  //     findDefaultToken(CoinKey.USDT, ChainId.FUS),
+  //     findDefaultToken(CoinKey.WBTC, ChainId.FUS),
+  //     findDefaultToken(CoinKey.WETH, ChainId.FUS),
+  //     {
+  //       address: '0x249be57637d8b013ad64785404b24aebae9b098b',
+  //       symbol: 'fUSD',
+  //       decimals: 18,
+  //       chainId: ChainId.FUS,
+  //     } as Token,
+  //   ],
+  // },
   {
     key: 'sushiswap-fus',
     name: 'SushiSwap',
@@ -776,42 +776,42 @@ export const supportedExchanges: Array<Exchange> = [
     ],
   },
 
-  // 1088 Metis Andromeda Mainnet
-  {
-    key: 'standard-mam',
-    name: 'Standard',
-    chainId: ChainId.MAM,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/standard.png',
-    webUrl: 'https://apps.standard.tech/trade',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
-    // we should add router address, factory address and init code hash
-    routerAddress: '',
-    factoryAddress: '',
-    initCodeHash: '',
-    baseTokens: [
-      findWrappedGasOnChain(ChainId.MAM),
-      {
-        address: '0xc12cac7090baa48ec750cceec57c80768f6ee58e',
-        symbol: 'STND',
-        decimals: 18,
-        chainId: ChainId.MAM,
-      } as Token,
-      {
-        address: '0xea32a96608495e54156ae48931a7c20f0dcc1a21',
-        symbol: 'm.USDC',
-        decimals: 6,
-        chainId: ChainId.MAM,
-      } as Token,
-      {
-        address: '0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc',
-        symbol: 'm.USDT',
-        decimals: 6,
-        chainId: ChainId.MAM,
-      } as Token,
-    ],
-  },
+  // 1088 Metis Andromeda Mainnet // TODO: incomplete
+  // {
+  //   key: 'standard-mam',
+  //   name: 'Standard',
+  //   chainId: ChainId.MAM,
+  //   logoURI:
+  //     'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/standard.png',
+  //   webUrl: 'https://apps.standard.tech/trade',
+  //   tokenlistUrl:
+  //     'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
+  //   // we should add router address, factory address and init code hash
+  //   routerAddress: '',
+  //   factoryAddress: '',
+  //   initCodeHash: '',
+  //   baseTokens: [
+  //     findWrappedGasOnChain(ChainId.MAM),
+  //     {
+  //       address: '0xc12cac7090baa48ec750cceec57c80768f6ee58e',
+  //       symbol: 'STND',
+  //       decimals: 18,
+  //       chainId: ChainId.MAM,
+  //     } as Token,
+  //     {
+  //       address: '0xea32a96608495e54156ae48931a7c20f0dcc1a21',
+  //       symbol: 'm.USDC',
+  //       decimals: 6,
+  //       chainId: ChainId.MAM,
+  //     } as Token,
+  //     {
+  //       address: '0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc',
+  //       symbol: 'm.USDT',
+  //       decimals: 6,
+  //       chainId: ChainId.MAM,
+  //     } as Token,
+  //   ],
+  // },
 
   // TESTNETS
   // 3 - Ropsten
