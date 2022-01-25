@@ -80,6 +80,13 @@ export interface GetTokenRequest {
   address: string
 }
 
+export interface GetStatusRequest {
+  hash: string
+  bidge: string
+  fromChain: number
+  toChain: number
+}
+
 export declare class LifiAPI {
   getRoutes(request: RoutesRequest): Promise<RoutesResponse>
 
@@ -92,4 +99,6 @@ export declare class LifiAPI {
   getStepTransaction(step: Step): Promise<Step>
 
   getToken(request: GetTokenRequest): Promise<Token>
+
+  getStatus(request: GetStatusRequest): Promise<string>
 }
