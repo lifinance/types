@@ -82,17 +82,17 @@ export interface GetTokenRequest {
 
 export interface GetStatusRequest {
   hash: string
-  bidge: string
+  bridge: string
   fromChain: number
   toChain: number
 }
 
 export interface StatusResponse {
   sending: {
-    [k: string]: any
+    txHash: string
   }
   receiving?: {
-    [k: string]: any
+    txHash: string
   }
   status: StatusMessage
 }
