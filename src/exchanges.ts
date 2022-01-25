@@ -813,6 +813,43 @@ export const supportedExchanges: Array<Exchange> = [
     ],
   },
 
+  // 288 Boba Network
+  // TODO: For boba network, we will add OolongSwap in the near future
+  {
+    key: 'oolongswap-bob',
+    name: 'OolongSwap',
+    chainId: ChainId.BOB,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oolongswap.png',
+    webUrl: 'https://oolongswap.com/#/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/OolongSwap/boba-community-token-list/main/build/boba.tokenlist.json',
+    routerAddress: '0x17C83E2B96ACfb5190d63F5E46d93c107eC0b514',
+    factoryAddress: '0x7DDaF116889D655D1c486bEB95017a8211265d29',
+    initCodeHash:
+      '0x1db9efb13a1398e31bb71895c392fa1217130f78dc65080174491adcec5da9b9',
+    baseTokens: [
+      findDefaultToken(CoinKey.ETH, ChainId.BOB),
+      findWrappedGasOnChain(ChainId.BOB),
+      findDefaultToken(CoinKey.WBTC, ChainId.BOB),
+      findDefaultToken(CoinKey.DAI, ChainId.BOB),
+      findDefaultToken(CoinKey.USDC, ChainId.BOB),
+      findDefaultToken(CoinKey.USDT, ChainId.BOB),
+      {
+        address: '0xa18bf3994c0cc6e3b63ac420308e5383f53120d7',
+        symbol: 'BOBA',
+        decimals: 18,
+        chainId: ChainId.BOB,
+      } as Token,
+      {
+        address: '0x5008f837883ea9a07271a1b5eb0658404f5a9610',
+        symbol: 'OLO',
+        decimals: 18,
+        chainId: ChainId.BOB,
+      } as Token,
+    ],
+  },
+
   // TESTNETS
   // 3 - Ropsten
   {

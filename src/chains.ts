@@ -390,8 +390,8 @@ export const supportedChains: Array<Chain> = [
     mainnet: true,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonbeam.png',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
+    // tokenlistUrl:
+    //   'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
 
     metamask: {
       chainId: prefixChainId(1284),
@@ -625,6 +625,8 @@ export const supportedChains: Array<Chain> = [
     mainnet: true,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/boba.png',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/OolongSwap/boba-community-token-list/main/build/boba.tokenlist.json',
 
     metamask: {
       chainId: prefixChainId(288),

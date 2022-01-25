@@ -76,6 +76,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xef71ca2ee68f45b9ad6f72fbdb33d707b872315c',
         decimals: 18,
       },
+      [ChainId.BOB]: {
+        address: '0x4200000000000000000000000000000000000006',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -245,6 +249,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.MOO]: {
         address: '0xc234a67a4f840e61ade794be47de455361b52413',
+        decimals: 18,
+      },
+      [ChainId.BOB]: {
+        address: '0xf74195bb8a5cf652411867c5c2c5b8c2a402be35',
         decimals: 18,
       },
 
@@ -458,6 +466,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x8e70cd5b4ff3f62659049e74b6649c6603a0e594',
         decimals: 6,
       },
+      [ChainId.BOB]: {
+        address: '0x5de1677344d3cb0d7d465c10b72a8f60699c062d',
+        decimals: 6,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -544,6 +556,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.MOO]: {
         address: '0x8f552a71efe5eefc207bf75485b356a0b3f01ec9',
+        decimals: 6,
+      },
+      [ChainId.BOB]: {
+        address: '0x66a2a913e447d6b4bf33efbec43aaef87890fbbc',
         decimals: 6,
       },
 
@@ -670,6 +686,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x1dc78acda13a8bc4408b207c9e48cdbc096d95e0',
         decimals: 8,
       },
+      [ChainId.BOB]: {
+        address: '0xdc0486f8bf31df57a952bcd3c1d3e166e3d9ec8b',
+        decimals: 8,
+      },
     },
   },
 
@@ -735,6 +755,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.MOO]: {
         address: '0x30d2a9f5fdf90ace8c17952cbb4ee48a55d916a7',
+        decimals: 18,
+      },
+      [ChainId.BOB]: {
+        address: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
         decimals: 18,
       },
 
@@ -1155,6 +1179,16 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     coinKey: 'WMETIS' as CoinKey,
     name: 'Wrapped Metis',
     logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png',
+  },
+  [ChainId.BOB]: {
+    address: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.BOB,
+    coinKey: CoinKey.WETH,
+    name: 'Wrapped ETH',
+    logoURI:
+      'https://static.debank.com/image/boba_token/logo_url/0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000/b1947b38a90e559eb950453965714be4.png',
   },
 
   // Testnets
