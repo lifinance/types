@@ -87,6 +87,18 @@ export interface GetStatusRequest {
   toChain: number
 }
 
+export interface StatusResponse {
+  sending: {
+    [k: string]: any
+  }
+  receiving?: {
+    [k: string]: any
+  }
+  status: StatusMessage
+}
+
+export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
+
 export declare class LifiAPI {
   getRoutes(request: RoutesRequest): Promise<RoutesResponse>
 
@@ -100,5 +112,5 @@ export declare class LifiAPI {
 
   getToken(request: GetTokenRequest): Promise<Token>
 
-  getStatus(request: GetStatusRequest): Promise<string>
+  getStatus(request: GetStatusRequest): Promise<StatusResponse>
 }
