@@ -557,7 +557,7 @@ export const supportedChains: Array<Chain> = [
 
     metamask: {
       chainId: prefixChainId(122),
-      blockExplorerUrls: ['https://fuse.io/'],
+      blockExplorerUrls: ['https://explorer.fuse.io/'],
       chainName: 'Fuse Mainnet',
 
       nativeCurrency: {
