@@ -814,7 +814,6 @@ export const supportedExchanges: Array<Exchange> = [
   // },
 
   // 288 Boba Network
-  // TODO: For boba network, we will add OolongSwap in the near future
   {
     key: 'oolongswap-bob',
     name: 'OolongSwap',
