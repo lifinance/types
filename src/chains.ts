@@ -141,7 +141,7 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: [
-        'https://xdai.poanetwork.dev/',
+        'https://rpc.gnosischain.com/',
         'https://rpc.xdaichain.com/',
         'https://dai.poa.network/',
         'https://xdai.1hive.org/',
