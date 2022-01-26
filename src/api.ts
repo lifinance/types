@@ -104,10 +104,10 @@ export interface QuoteRequest {
 }
 
 export interface GetStatusRequest {
-  hash: string
+  txHash: string
   bridge: string
-  fromChain: number
-  toChain: number
+  fromChain: number | string
+  toChain: number | string
 }
 
 export interface StatusResponse {
