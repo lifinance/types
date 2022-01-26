@@ -80,6 +80,29 @@ export interface GetTokenRequest {
   address: string
 }
 
+export interface QuoteRequest {
+  fromChain: number | string
+  fromToken: string
+  fromAddress: string
+  fromAmount: string
+
+  toChain: number | string
+  toToken: string
+  // toAddress?: string // TODO: add bridge support first
+
+  order?: Order
+  slippage?: number | string
+  integrator?: string
+  referrer?: string
+
+  allowBridges?: string[]
+  denyBridges?: string[]
+  preferBridges?: string[]
+  allowExchanges?: string[]
+  denyExchanges?: string[]
+  preferExchanges?: string[]
+}
+
 export interface GetStatusRequest {
   hash: string
   bridge: string
@@ -111,6 +134,8 @@ export declare class LifiAPI {
   getStepTransaction(step: Step): Promise<Step>
 
   getToken(request: GetTokenRequest): Promise<Token>
+
+  getQuote(request: QuoteRequest): Promise<Step>
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
 }
