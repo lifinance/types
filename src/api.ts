@@ -76,8 +76,8 @@ export interface PossibilitiesResponse {
 }
 
 export interface GetTokenRequest {
-  chainId: number
-  address: string
+  chain: number | string
+  token: string
 }
 
 export interface QuoteRequest {
