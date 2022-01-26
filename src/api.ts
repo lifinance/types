@@ -81,7 +81,7 @@ export interface GetTokenRequest {
 }
 
 export interface GetStatusRequest {
-  hash: string
+  txHash: string
   bridge: string
   fromChain: number
   toChain: number
