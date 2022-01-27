@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.5](https://github.com/lifinance/types/compare/v0.9.4...v0.9.5) (2022-01-26)
+
+
+### Features
+
+* add  status endpoint ([#20](https://github.com/lifinance/types/issues/20)) ([7c22d40](https://github.com/lifinance/types/commit/7c22d4015bfade43e51cde3ec0604d0cd2e408cd))
+* **Process:** add htmlErrorMessage field ([#18](https://github.com/lifinance/types/issues/18)) ([580964d](https://github.com/lifinance/types/commit/580964d462d62f8dfb9cd2f1b61247444d6ab836))
+* rename xDai to Gnosis ([#16](https://github.com/lifinance/types/issues/16)) ([ed1db72](https://github.com/lifinance/types/commit/ed1db72a31b9e8b85f14f366d09c564b4b16e233))
+
 ### [0.9.4](https://github.com/lifinance/types/compare/v0.9.3...v0.9.4) (2022-01-11)
 
 
