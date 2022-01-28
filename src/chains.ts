@@ -625,6 +625,7 @@ export const supportedChains: Array<Chain> = [
     mainnet: true,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/boba.png',
+    // TODO: we should update token list url to latest one
     tokenlistUrl:
       'https://raw.githubusercontent.com/OolongSwap/boba-community-token-list/main/build/boba.tokenlist.json',
 
