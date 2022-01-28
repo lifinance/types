@@ -1,7 +1,7 @@
 export enum BridgeTool {
-  nxtp = 'nxtp',
+  connext = 'connext',
   hop = 'hop',
-  anyswap = 'anyswap',
+  multichain = 'multichain',
   cbridge = 'cbridge',
   horizon = 'horizon',
 }
@@ -19,7 +19,7 @@ export interface Bridge {
 
 export const supportedBridges: Array<Bridge> = [
   {
-    key: BridgeTool.nxtp,
+    key: BridgeTool.connext,
     name: 'Connext',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/connext.png',
@@ -42,8 +42,8 @@ export const supportedBridges: Array<Bridge> = [
     explorerUrl: 'https://explorer.hop.exchange/mainnet/',
   },
   {
-    key: BridgeTool.anyswap,
-    name: 'Multichain (AnySwap)',
+    key: BridgeTool.multichain,
+    name: 'Multichain',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/anyswap.png',
     bridgeUrl: 'https://app.multichain.org/',
@@ -54,7 +54,7 @@ export const supportedBridges: Array<Bridge> = [
   },
   {
     key: BridgeTool.cbridge,
-    name: 'cBRIDGE',
+    name: 'cBridge',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/cbridge.png',
     bridgeUrl: 'https://cbridge.celer.network/',
