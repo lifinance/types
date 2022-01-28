@@ -1,4 +1,11 @@
-import { Token, Chain, Step, BridgeDefinition, ExchangeDefinition } from '.'
+import {
+  Token,
+  Chain,
+  Step,
+  BridgeDefinition,
+  ExchangeDefinition,
+  ChainId,
+} from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
 
@@ -102,7 +109,6 @@ export interface QuoteRequest {
   denyExchanges?: string[]
   preferExchanges?: string[]
 }
-
 export interface GetStatusRequest {
   txHash: string
   bridge: string
@@ -110,13 +116,18 @@ export interface GetStatusRequest {
   toChain: number | string
 }
 
+export interface TransactionInfo {
+  txHash: string
+  txLink: string
+  amount: string
+  token: string
+  chainId: ChainId
+}
+
 export interface StatusResponse {
-  sending: {
-    txHash: string
-  }
-  receiving?: {
-    txHash: string
-  }
+  sending: TransactionInfo
+  receiving?: TransactionInfo
+  tool: string
   status: StatusMessage
 }
 
