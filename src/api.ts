@@ -118,16 +118,16 @@ export interface GetStatusRequest {
 
 export interface TransactionInfo {
   txHash: string
-  txLink: string
-  amount: string
-  token: Token
-  chainId: ChainId
+  txLink?: string
+  amount?: string
+  token?: Token
+  chainId?: ChainId
 }
 
 export interface StatusResponse {
   sending: TransactionInfo
   receiving?: TransactionInfo
-  tool: string
+  tool?: string
   status: StatusMessage
 }
 
