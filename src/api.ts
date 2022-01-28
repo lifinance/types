@@ -120,7 +120,7 @@ export interface TransactionInfo {
   txHash: string
   txLink: string
   amount: string
-  token: string
+  token: Token
   chainId: ChainId
 }
 
