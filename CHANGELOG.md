@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.7](https://github.com/lifinance/types/compare/v0.9.6...v0.9.7) (2022-01-28)
+
+
+### Features
+
+* update tool names and add dodo ([#22](https://github.com/lifinance/types/issues/22)) ([f3fb9e3](https://github.com/lifinance/types/commit/f3fb9e396a5ab117bd4f042c6adba1c977ae411e))
+
 ### [0.9.6](https://github.com/lifinance/types/compare/v0.9.5...v0.9.6) (2022-01-28)
 
 
