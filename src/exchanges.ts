@@ -10,7 +10,8 @@ export enum ExchangeTool {
   oneinch = '1inch',
   paraswap = 'paraswap',
   openocean = 'openocean',
-  matcha = 'matcha',
+  zerox = '0x',
+  dodo = 'dodo',
 }
 export type ExchangeTools = ExchangeTool | string
 
@@ -31,7 +32,7 @@ export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
   },
   {
     key: ExchangeTool.paraswap,
-    name: 'paraswap',
+    name: 'ParaSwap',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/paraswap.png',
     webUrl: 'https://paraswap.io/',
@@ -44,11 +45,18 @@ export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
     webUrl: 'https://openocean.finance/classic',
   },
   {
-    key: ExchangeTool.matcha,
-    name: 'Matcha',
+    key: ExchangeTool.zerox,
+    name: '0x',
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/matcha.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/zerox.png',
     webUrl: 'https://matcha.xyz/markets/',
+  },
+  {
+    key: ExchangeTool.dodo,
+    name: 'DODO',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/dodo.png',
+    webUrl: 'https://app.dodoex.io/',
   },
 ]
 
