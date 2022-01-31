@@ -388,7 +388,14 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x162f79e638367cd45a118c778971dfd8d96c625d2798d3b71994b035cfe9b6dc',
     baseTokens: [
+      findDefaultToken(CoinKey.ONE, ChainId.ONE),
       findWrappedGasOnChain(ChainId.ONE),
+      {
+        address: '0xEf977d2f931C1978Db5F6747666fa1eACB0d0339',
+        symbol: '1DAI',
+        decimals: 18,
+        chainId: ChainId.ONE,
+      } as Token,
       {
         address: '0xE176EBE47d621b984a73036B9DA5d834411ef734',
         symbol: 'BUSD',
@@ -396,9 +403,21 @@ export const supportedExchanges: Array<Exchange> = [
         chainId: ChainId.ONE,
       } as Token,
       {
+        address: '0x985458E523dB3d53125813eD68c274899e9DfAb4',
+        symbol: '1USDC',
+        decimals: 6,
+        chainId: ChainId.ONE,
+      } as Token,
+      {
         address: '0xEa589E93Ff18b1a1F1e9BaC7EF3E86Ab62addc79',
         symbol: 'VIPER',
         decimals: 18,
+        chainId: ChainId.ONE,
+      } as Token,
+      {
+        address: '0x0dc78c79B4eB080eaD5C1d16559225a46b580694',
+        symbol: 'WAGMI',
+        decimals: 9,
         chainId: ChainId.ONE,
       } as Token,
     ],
