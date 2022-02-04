@@ -144,7 +144,6 @@ export const supportedChains: Array<Chain> = [
         'https://rpc.gnosischain.com/',
         'https://rpc.xdaichain.com/',
         'https://dai.poa.network/',
-        'https://xdai.1hive.org/',
       ],
     },
   },
