@@ -104,6 +104,7 @@ export interface StepBase {
   estimate?: Estimate
   execution?: Execution
   transactionRequest?: providers.TransactionRequest
+  estimatedExecutionDuration?: number // in seconds
 }
 
 export interface SwapStep extends StepBase {
