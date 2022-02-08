@@ -45,6 +45,8 @@ export interface Estimate {
   feeCosts?: FeeCost[]
   gasCosts?: GasCost[]
 
+  executionDuration: number // estimated duration in seconds
+
   data?: any // differs by tool
 }
 
