@@ -76,6 +76,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xef71ca2ee68f45b9ad6f72fbdb33d707b872315c',
         decimals: 18,
       },
+      [ChainId.BOB]: {
+        address: '0x4200000000000000000000000000000000000006',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -231,6 +235,26 @@ const basicCoins: BasicCoin[] = [
         address: '0x21cde7e32a6caf4742d00d44b07279e7596d26b9',
         decimals: 18,
       },
+      [ChainId.CRO]: {
+        address: '0xf2001b145b43032aaf5ee2884e456ccd805f677d',
+        decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
+        decimals: 18,
+      },
+      [ChainId.CEL]: {
+        address: '0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd',
+        decimals: 18,
+      },
+      [ChainId.MOO]: {
+        address: '0xc234a67a4f840e61ade794be47de455361b52413',
+        decimals: 18,
+      },
+      [ChainId.BOB]: {
+        address: '0xf74195bb8a5cf652411867c5c2c5b8c2a402be35',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -358,6 +382,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.MOO]: {
+        address: '0x1d4c2a246311bb9f827f4c768e277ff5787b7d7e',
+        decimals: 18,
+      },
     },
   },
 
@@ -418,9 +446,29 @@ const basicCoins: BasicCoin[] = [
         address: '0x382bb369d343125bfb2117af9c149795c6c65c50',
         decimals: 18,
       },
+      [ChainId.CRO]: {
+        address: '0x66e428c3f67a68878562e79a0234c1f83c208770',
+        decimals: 6,
+      },
       [ChainId.HEC]: {
         address: '0xa71edc38d189767582c38a3145b5873052c3e47a',
         decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0xfadbbf8ce7d5b7041be672561bba99f79c532e10',
+        decimals: 6,
+      },
+      [ChainId.CEL]: {
+        address: '0x88eec49252c8cbc039dcdb394c0c2ba2f1637ea0',
+        decimals: 6,
+      },
+      [ChainId.MOO]: {
+        address: '0x8e70cd5b4ff3f62659049e74b6649c6603a0e594',
+        decimals: 6,
+      },
+      [ChainId.BOB]: {
+        address: '0x5de1677344d3cb0d7d465c10b72a8f60699c062d',
+        decimals: 6,
       },
 
       // Testnets
@@ -493,6 +541,26 @@ const basicCoins: BasicCoin[] = [
       [ChainId.OKT]: {
         address: '0xc946daf81b08146b1c7a8da2a851ddf2b3eaaf85',
         decimals: 18,
+      },
+      [ChainId.CRO]: {
+        address: '0xc21223249ca28397b4b6541dffaecc539bff0c59',
+        decimals: 6,
+      },
+      [ChainId.FUS]: {
+        address: '0x620fd5fa44be6af63715ef4e65ddfa0387ad13f5',
+        decimals: 6,
+      },
+      [ChainId.CEL]: {
+        address: '0xef4229c8c3250c675f21bcefa42f58efbff6002a',
+        decimals: 6,
+      },
+      [ChainId.MOO]: {
+        address: '0x8f552a71efe5eefc207bf75485b356a0b3f01ec9',
+        decimals: 6,
+      },
+      [ChainId.BOB]: {
+        address: '0x66a2a913e447d6b4bf33efbec43aaef87890fbbc',
+        decimals: 6,
       },
 
       // Testnets
@@ -602,6 +670,26 @@ const basicCoins: BasicCoin[] = [
         address: '0x506f731f7656e2fb34b587b912808f2a7ab640bd',
         decimals: 18,
       },
+      [ChainId.CRO]: {
+        address: '0x062e66477faf219f25d27dced647bf57c3107d52',
+        decimals: 8,
+      },
+      [ChainId.FUS]: {
+        address: '0x33284f95ccb7b948d9d352e1439561cf83d8d00d',
+        decimals: 8,
+      },
+      [ChainId.CEL]: {
+        address: '0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b',
+        decimals: 8,
+      },
+      [ChainId.MOO]: {
+        address: '0x1dc78acda13a8bc4408b207c9e48cdbc096d95e0',
+        decimals: 8,
+      },
+      [ChainId.BOB]: {
+        address: '0xdc0486f8bf31df57a952bcd3c1d3e166e3d9ec8b',
+        decimals: 8,
+      },
     },
   },
 
@@ -649,9 +737,28 @@ const basicCoins: BasicCoin[] = [
         address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
         decimals: 18,
       },
-
       [ChainId.HEC]: {
         address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
+        decimals: 18,
+      },
+      [ChainId.CRO]: {
+        address: '0xe44fd7fcb2b1581822d0c862b68222998a0c299a',
+        decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0xa722c13135930332eb3d749b2f0906559d2c5b99',
+        decimals: 18,
+      },
+      [ChainId.CEL]: {
+        address: '0x122013fd7df1c6f636a5bb8f03108e876548b455',
+        decimals: 18,
+      },
+      [ChainId.MOO]: {
+        address: '0x30d2a9f5fdf90ace8c17952cbb4ee48a55d916a7',
+        decimals: 18,
+      },
+      [ChainId.BOB]: {
+        address: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
         decimals: 18,
       },
 
@@ -726,6 +833,14 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.HEC]: {
         address: '0x52e00b2da5bd7940ffe26b609a42f957f31118d5',
+        decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0x90708b20ccc1eb95a4fa7c8b18fd2c22a0ff9e78',
+        decimals: 18,
+      },
+      [ChainId.CEL]: {
+        address: '0x29dfce9c22003a4999930382fd00f9fd6133acd1',
         decimals: 18,
       },
     },
@@ -807,6 +922,71 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.BSC]: {
         address: '0xb0e1fc65c1a741b4662b813eb787d369b8614af1',
+        decimals: 18,
+      },
+    },
+  },
+  // > CRO
+  {
+    key: CoinKey.CRO,
+    name: CoinKey.CRO,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png',
+    verified: true,
+    chains: {
+      [ChainId.CRO]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
+  // > FUS
+  {
+    key: CoinKey.FUSE,
+    name: CoinKey.FUSE,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5634.png',
+    verified: true,
+    chains: {
+      [ChainId.FUS]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
+  // > CEL
+  {
+    key: CoinKey.CELO,
+    name: CoinKey.CELO,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5567.png',
+    verified: true,
+    chains: {
+      [ChainId.CEL]: {
+        address: '0x471ece3750da237f93b8e339c536989b8978a438',
+        decimals: 18,
+      },
+    },
+  },
+  // > GLMR
+  {
+    key: CoinKey.GLMR,
+    name: CoinKey.GLMR,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/6836.png',
+    verified: true,
+    chains: {
+      [ChainId.MOO]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
+  // > METIS
+  {
+    key: CoinKey.METIS,
+    name: CoinKey.METIS,
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png',
+    verified: true,
+    chains: {
+      [ChainId.MAM]: {
+        address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
     },
@@ -961,6 +1141,54 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'wHT',
     logoURI:
       'https://static.debank.com/image/heco_token/logo_url/heco/c399dcddde07e1944c4dd8f922832b53.png',
+  },
+  [ChainId.CRO]: {
+    address: '0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23',
+    symbol: 'WCRO',
+    decimals: 18,
+    chainId: ChainId.CRO,
+    coinKey: 'WCRO' as CoinKey,
+    name: 'WCRO',
+    logoURI:
+      'https://raw.githubusercontent.com/cronaswap/default-token-list/main/assets/tokens/cronos/0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23/logo.png',
+  },
+  [ChainId.FUS]: {
+    address: '0x0be9e53fd7edac9f859882afdda116645287c629',
+    symbol: 'WFUSE',
+    decimals: 18,
+    chainId: ChainId.FUS,
+    coinKey: 'WFUSE' as CoinKey,
+    name: 'Wrapped Fuse',
+    logoURI: 'https://fuselogo.s3.eu-central-1.amazonaws.com/wfuse.png',
+  },
+  [ChainId.MOO]: {
+    address: '0xacc15dc74880c9944775448304b263d191c6077f',
+    symbol: 'WGLMR',
+    decimals: 18,
+    chainId: ChainId.MOO,
+    coinKey: 'WGLMR' as CoinKey,
+    name: 'Wrapped GLMR',
+    logoURI:
+      'https://static.debank.com/image/mobm_token/logo_url/0xacc15dc74880c9944775448304b263d191c6077f/a8442077d76b258297181c3e6eb8c9cc.png',
+  },
+  [ChainId.MAM]: {
+    address: '0x75cb093E4D61d2A2e65D8e0BBb01DE8d89b53481',
+    symbol: 'WMETIS',
+    decimals: 18,
+    chainId: ChainId.MAM,
+    coinKey: 'WMETIS' as CoinKey,
+    name: 'Wrapped Metis',
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png',
+  },
+  [ChainId.BOB]: {
+    address: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.BOB,
+    coinKey: CoinKey.WETH,
+    name: 'Wrapped ETH',
+    logoURI:
+      'https://static.debank.com/image/boba_token/logo_url/0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000/b1947b38a90e559eb950453965714be4.png',
   },
 
   // Testnets

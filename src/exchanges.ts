@@ -388,7 +388,14 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x162f79e638367cd45a118c778971dfd8d96c625d2798d3b71994b035cfe9b6dc',
     baseTokens: [
+      findDefaultToken(CoinKey.ONE, ChainId.ONE),
       findWrappedGasOnChain(ChainId.ONE),
+      {
+        address: '0xEf977d2f931C1978Db5F6747666fa1eACB0d0339',
+        symbol: '1DAI',
+        decimals: 18,
+        chainId: ChainId.ONE,
+      } as Token,
       {
         address: '0xE176EBE47d621b984a73036B9DA5d834411ef734',
         symbol: 'BUSD',
@@ -396,9 +403,21 @@ export const supportedExchanges: Array<Exchange> = [
         chainId: ChainId.ONE,
       } as Token,
       {
+        address: '0x985458E523dB3d53125813eD68c274899e9DfAb4',
+        symbol: '1USDC',
+        decimals: 6,
+        chainId: ChainId.ONE,
+      } as Token,
+      {
         address: '0xEa589E93Ff18b1a1F1e9BaC7EF3E86Ab62addc79',
         symbol: 'VIPER',
         decimals: 18,
+        chainId: ChainId.ONE,
+      } as Token,
+      {
+        address: '0x0dc78c79B4eB080eaD5C1d16559225a46b580694',
+        symbol: 'WAGMI',
+        decimals: 9,
         chainId: ChainId.ONE,
       } as Token,
     ],
@@ -632,6 +651,228 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.USDC, ChainId.OKT),
       findDefaultToken(CoinKey.USDT, ChainId.OKT),
       findDefaultToken(CoinKey.SUSHI, ChainId.OKT),
+    ],
+  },
+
+  // 25 - Cronos Mainnet Beta
+  {
+    key: 'cronaswap-cro',
+    name: 'CronaSwap',
+    chainId: ChainId.CRO,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/cronaswap.png',
+    webUrl: 'https://app.cronaswap.org/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/cronaswap/default-token-list/main/assets/tokens/cronos.json',
+    routerAddress: '0xcd7d16fB918511BF7269eC4f48d61D79Fb26f918',
+    factoryAddress: '0x73A48f8f521EB31c55c0e1274dB0898dE599Cb11',
+    initCodeHash:
+      '0xc93158cffa5b575e32566e81e847754ce517f8fa988d3e25cf346d916216e06f',
+    baseTokens: [
+      findDefaultToken(CoinKey.CRO, ChainId.CRO),
+      findDefaultToken(CoinKey.USDC, ChainId.CRO),
+      {
+        address: '0xadbd1231fb360047525bedf962581f3eee7b49fe',
+        symbol: 'CRONA',
+        decimals: 18,
+        chainId: ChainId.CRO,
+      } as Token,
+    ],
+  },
+  // TODO: For cronos chain, we will add KyberSwap in the near future, they're still in development
+
+  // 1284 - Moonbeam
+  // TODO: For Moonbeam chain, we will add StellaSwap in the near future, they're still in development
+
+  // 122 - Fuse Mainnet // TODO: incomplete
+  // {
+  //   key: 'fuseswap-fus',
+  //   name: 'FuseSwap',
+  //   chainId: ChainId.FUS,
+  //   logoURI:
+  //     'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/fuseswap.png',
+  //   webUrl: 'https://app.fuse.fi/#/swap',
+  //   graph: 'https://api.thegraph.com/subgraphs/name/fuseio/fuseswap',
+  //   tokenlistUrl:
+  //     'https://raw.githubusercontent.com/fuseio/fuseswap-default-token-list/master/build/fuseswap-default.tokenlist.json',
+  //   // we should add router address, factory address and init code hash
+  //   routerAddress: '',
+  //   factoryAddress: '',
+  //   initCodeHash: '',
+  //   baseTokens: [
+  //     findWrappedGasOnChain(ChainId.FUS),
+  //     findDefaultToken(CoinKey.FUSE, ChainId.FUS),
+  //     findDefaultToken(CoinKey.USDC, ChainId.FUS),
+  //     findDefaultToken(CoinKey.USDT, ChainId.FUS),
+  //     findDefaultToken(CoinKey.WBTC, ChainId.FUS),
+  //     findDefaultToken(CoinKey.WETH, ChainId.FUS),
+  //     {
+  //       address: '0x249be57637d8b013ad64785404b24aebae9b098b',
+  //       symbol: 'fUSD',
+  //       decimals: 18,
+  //       chainId: ChainId.FUS,
+  //     } as Token,
+  //   ],
+  // },
+  {
+    key: 'sushiswap-fus',
+    name: 'SushiSwap',
+    chainId: ChainId.FUS,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
+    webUrl: 'https://app.sushi.com/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
+    routerAddress: '0xF4d73326C13a4Fc5FD7A064217e12780e9Bd62c3',
+    factoryAddress: '0x43eA90e2b786728520e4f930d2A71a477BF2737C',
+    initCodeHash:
+      '0x1901958ef8b470f2c0a3875a79ee0bd303866d85102c0f1ea820d317024d50b5',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.FUS),
+      findDefaultToken(CoinKey.USDC, ChainId.FUS),
+      findDefaultToken(CoinKey.USDT, ChainId.FUS),
+      findDefaultToken(CoinKey.WBTC, ChainId.FUS),
+      findDefaultToken(CoinKey.WETH, ChainId.FUS),
+      findDefaultToken(CoinKey.DAI, ChainId.FUS),
+      findDefaultToken(CoinKey.SUSHI, ChainId.FUS),
+    ],
+  },
+
+  // 42220 Celo Mainnet
+  {
+    key: 'ubeswap-cel',
+    name: 'UbeSwap',
+    chainId: ChainId.CEL,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/ubeswap.png',
+    webUrl: 'https://app.ubeswap.org/#/swap',
+    graph: 'https://api.thegraph.com/subgraphs/name/ubeswap/ubeswap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/Ubeswap/default-token-list/master/ubeswap.token-list.json',
+    routerAddress: '0xE3D8bd6Aed4F159bc8000a9cD47CffDb95F96121',
+    factoryAddress: '0x62d5b84bE28a183aBB507E125B384122D2C25fAE',
+    initCodeHash:
+      '0xb3b8ff62960acea3a88039ebcf80699f15786f1b17cebd82802f7375827a339c',
+    baseTokens: [
+      findDefaultToken(CoinKey.CELO, ChainId.CEL),
+      {
+        address: '0x918146359264c492bd6934071c6bd31c854edbc3',
+        symbol: 'mCUSD',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+      {
+        address: '0xe273ad7ee11dcfaa87383ad5977ee1504ac07568',
+        symbol: 'mCEUR',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+    ],
+  },
+  {
+    key: 'sushiswap-cel',
+    name: 'SushiSwap',
+    chainId: ChainId.CEL,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
+    webUrl: 'https://app.sushi.com/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
+    routerAddress: '0x1421bDe4B10e8dd459b3BCb598810B1337D56842',
+    factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    initCodeHash:
+      '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+    baseTokens: [
+      findDefaultToken(CoinKey.CELO, ChainId.CEL),
+      findDefaultToken(CoinKey.USDC, ChainId.CEL),
+      findDefaultToken(CoinKey.WBTC, ChainId.CEL),
+      findDefaultToken(CoinKey.WETH, ChainId.CEL),
+      findDefaultToken(CoinKey.SUSHI, ChainId.CEL),
+      {
+        address: '0x765de816845861e75a25fca122bb6898b8b1282a',
+        symbol: 'cUSD',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+      {
+        address: '0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73',
+        symbol: 'cEUR',
+        decimals: 18,
+        chainId: ChainId.CEL,
+      } as Token,
+    ],
+  },
+
+  // 1088 Metis Andromeda Mainnet // TODO: incomplete
+  // {
+  //   key: 'standard-mam',
+  //   name: 'Standard',
+  //   chainId: ChainId.MAM,
+  //   logoURI:
+  //     'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/standard.png',
+  //   webUrl: 'https://apps.standard.tech/trade',
+  //   tokenlistUrl:
+  //     'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
+  //   // we should add router address, factory address and init code hash
+  //   routerAddress: '',
+  //   factoryAddress: '',
+  //   initCodeHash: '',
+  //   baseTokens: [
+  //     findWrappedGasOnChain(ChainId.MAM),
+  //     {
+  //       address: '0xc12cac7090baa48ec750cceec57c80768f6ee58e',
+  //       symbol: 'STND',
+  //       decimals: 18,
+  //       chainId: ChainId.MAM,
+  //     } as Token,
+  //     {
+  //       address: '0xea32a96608495e54156ae48931a7c20f0dcc1a21',
+  //       symbol: 'm.USDC',
+  //       decimals: 6,
+  //       chainId: ChainId.MAM,
+  //     } as Token,
+  //     {
+  //       address: '0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc',
+  //       symbol: 'm.USDT',
+  //       decimals: 6,
+  //       chainId: ChainId.MAM,
+  //     } as Token,
+  //   ],
+  // },
+
+  // 288 Boba Network
+  {
+    key: 'oolongswap-bob',
+    name: 'OolongSwap',
+    chainId: ChainId.BOB,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oolongswap.png',
+    webUrl: 'https://oolongswap.com/#/swap',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/OolongSwap/boba-community-token-list/main/build/boba.tokenlist.json',
+    routerAddress: '0x17C83E2B96ACfb5190d63F5E46d93c107eC0b514',
+    factoryAddress: '0x7DDaF116889D655D1c486bEB95017a8211265d29',
+    initCodeHash:
+      '0x1db9efb13a1398e31bb71895c392fa1217130f78dc65080174491adcec5da9b9',
+    baseTokens: [
+      findDefaultToken(CoinKey.ETH, ChainId.BOB),
+      findWrappedGasOnChain(ChainId.BOB),
+      findDefaultToken(CoinKey.WBTC, ChainId.BOB),
+      findDefaultToken(CoinKey.DAI, ChainId.BOB),
+      findDefaultToken(CoinKey.USDC, ChainId.BOB),
+      findDefaultToken(CoinKey.USDT, ChainId.BOB),
+      {
+        address: '0xa18bf3994c0cc6e3b63ac420308e5383f53120d7',
+        symbol: 'BOBA',
+        decimals: 18,
+        chainId: ChainId.BOB,
+      } as Token,
+      {
+        address: '0x5008f837883ea9a07271a1b5eb0658404f5a9610',
+        symbol: 'OLO',
+        decimals: 18,
+        chainId: ChainId.BOB,
+      } as Token,
     ],
   },
 

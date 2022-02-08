@@ -380,6 +380,32 @@ export const supportedChains: Array<Chain> = [
     },
   },
 
+  // 1284 Moonbeam
+  {
+    key: ChainKey.MOO,
+    name: 'Moonbeam',
+    coin: CoinKey.GLMR,
+    id: 1284,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonbeam.png',
+    // tokenlistUrl:
+    //   'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
+
+    metamask: {
+      chainId: prefixChainId(1284),
+      blockExplorerUrls: ['https://blockscout.moonbeam.network/'],
+      chainName: 'Moonbeam',
+
+      nativeCurrency: {
+        name: 'GLMR',
+        symbol: 'GLMR',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.api.moonbeam.network'],
+    },
+  },
+
   // 2 - Expanse Network
   {
     key: ChainKey.EXP,
@@ -387,6 +413,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.EXP,
     id: 2,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/expanse.png',
 
     metamask: {
       chainId: prefixChainId(2),
@@ -492,6 +520,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.CELO,
     id: 42220,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/celo.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
     faucetUrls: [
@@ -519,12 +549,14 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.FUSE,
     id: 122,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fuse.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
 
     metamask: {
       chainId: prefixChainId(122),
-      blockExplorerUrls: ['https://fuse.io/'],
+      blockExplorerUrls: ['https://explorer.fuse.io/'],
       chainName: 'Fuse Mainnet',
 
       nativeCurrency: {
@@ -565,6 +597,10 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.CRO,
     id: 25,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/cronos.png',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/cronaswap-default.tokenlist.json',
 
     metamask: {
       chainId: prefixChainId(25),
@@ -586,6 +622,11 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 288,
     mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/boba.png',
+    // TODO: we should update token list url to latest one
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/OolongSwap/boba-community-token-list/main/build/boba.tokenlist.json',
 
     metamask: {
       chainId: prefixChainId(288),
@@ -598,6 +639,136 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: ['https://mainnet.boba.network/'],
+    },
+  },
+  // 27 ShibaChain
+  {
+    key: ChainKey.SHI,
+    name: 'Shiba',
+    coin: CoinKey.SHIB,
+    id: 27,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(27),
+      blockExplorerUrls: ['https://exp.shibachain.net/'],
+      chainName: 'Shiba',
+
+      nativeCurrency: {
+        name: 'SHIB',
+        symbol: 'SHIB',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.shibachain.net'],
+    },
+  },
+  // 29 Genesis L1
+  {
+    key: ChainKey.GL1,
+    name: 'Genesis L1',
+    coin: CoinKey.L1,
+    id: 29,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(29),
+      blockExplorerUrls: ['https://explorer.genesisl1.org/'],
+      chainName: 'Genesis L1',
+
+      nativeCurrency: {
+        name: 'L1',
+        symbol: 'L1',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.genesisl1.org'],
+    },
+  },
+  // 30 RSK Mainnet
+  {
+    key: ChainKey.RSK,
+    name: 'RSK Mainnet',
+    coin: CoinKey.RBTC,
+    id: 30,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(30),
+      blockExplorerUrls: ['https://explorer.rsk.co/'],
+      chainName: 'RSK Mainnet',
+
+      nativeCurrency: {
+        name: 'RBTC',
+        symbol: 'RBTC',
+        decimals: 18,
+      },
+      rpcUrls: ['https://public-node.rsk.co'],
+    },
+  },
+  // 35 TBWG Chain
+  {
+    key: ChainKey.TBW,
+    name: 'TBWG',
+    coin: CoinKey.TBG,
+    id: 35,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(35),
+      blockExplorerUrls: ['https://tbwg.io/'],
+      chainName: 'TBWG',
+
+      nativeCurrency: {
+        name: 'TBG',
+        symbol: 'TBG',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.tbwg.io'],
+    },
+  },
+  // 106 Velas EVM Mainnet
+  {
+    key: ChainKey.VEL,
+    name: 'Velas',
+    coin: CoinKey.VLX,
+    id: 106,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(106),
+      blockExplorerUrls: ['https://evmexplorer.velas.com/'],
+      chainName: 'Velas',
+
+      nativeCurrency: {
+        name: 'VLX',
+        symbol: 'VLX',
+        decimals: 18,
+      },
+      rpcUrls: ['https://evmexplorer.velas.com/rpc'],
+    },
+  },
+  // 1088 Metis Andromeda Mainnet
+  {
+    key: ChainKey.MAM,
+    name: 'Metis',
+    coin: CoinKey.METIS,
+    id: 1088,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/metis.png',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
+
+    metamask: {
+      chainId: prefixChainId(1088),
+      blockExplorerUrls: ['https://andromeda-explorer.metis.io/'],
+      chainName: 'Metis',
+
+      nativeCurrency: {
+        name: 'METIS',
+        symbol: 'METIS',
+        decimals: 18,
+      },
+      rpcUrls: ['https://andromeda.metis.io/?owner=1088'],
     },
   },
 
@@ -905,10 +1076,8 @@ export const supportedChains: Array<Chain> = [
 
     metamask: {
       chainId: prefixChainId(123),
-      blockExplorerUrls: [
-        'https://docs.fuse.io/general/fuse-network-blockchain/fuse-testnet/',
-      ],
-      chainName: 'Fuse Mainnet',
+      blockExplorerUrls: ['https://explorer.fusespark.io/'],
+      chainName: 'Fuse Sparknet',
 
       nativeCurrency: {
         name: 'Spark',
@@ -938,6 +1107,27 @@ export const supportedChains: Array<Chain> = [
         decimals: 18,
       },
       rpcUrls: ['https://testnet.telos.net/evm'],
+    },
+  },
+  // 31 RSK Testnet
+  {
+    key: ChainKey.RSKT,
+    name: 'RSK Testnet',
+    coin: CoinKey.TRBTC,
+    id: 31,
+    mainnet: true,
+
+    metamask: {
+      chainId: prefixChainId(31),
+      blockExplorerUrls: ['https://rsk.co/'],
+      chainName: 'RSK Testnet',
+
+      nativeCurrency: {
+        name: 'tRBTC',
+        symbol: 'TRBTC',
+        decimals: 18,
+      },
+      rpcUrls: ['https://public-node.testnet.rsk.co'],
     },
   },
 
