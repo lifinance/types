@@ -1,6 +1,6 @@
 {
   "name": "@lifinance/types",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Types for lifi projects",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
