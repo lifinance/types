@@ -682,6 +682,63 @@ export const supportedExchanges: Array<Exchange> = [
   // TODO: For cronos chain, we will add KyberSwap in the near future, they're still in development
 
   // 1284 - Moonbeam
+  // Max: We should be able to get the initCodeHash from the factory contract and use some big pools as default tokens
+  // {
+  //   key: 'stellaswap-moo',
+  //   name: 'StellaSwap',
+  //   chainId: ChainId.MOO,
+  //   logoURI:
+  //     'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/stellaswap.png',
+  //   webUrl: 'https://app.stellaswap.com/',
+  //   tokenlistUrl:
+  //     'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
+  //   routerAddress: '0xd0A01ec574D1fC6652eDF79cb2F880fd47D34Ab1',
+  //   factoryAddress: '0x68A384D826D3678f78BB9FB1533c7E9577dACc0E',
+  //   initCodeHash: '',
+  //   baseTokens: [
+  //   ],
+  // },
+  {
+    key: 'beamswap-moo',
+    name: 'BeamSwap',
+    chainId: ChainId.MOO,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/beamswap.png',
+    webUrl: 'https://app.beamswap.io/',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
+    routerAddress: '0x96b244391D98B62D19aE89b1A4dCcf0fc56970C7',
+    factoryAddress: '0x985BcA32293A7A496300a48081947321177a86FD',
+    initCodeHash:
+      '0xe31da4209ffcce713230a74b5287fa8ec84797c9e77e1f7cfeccea015cdc97ea',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.MOO),
+      findDefaultToken(CoinKey.BNB, ChainId.MOO),
+      findDefaultToken(CoinKey.ETH, ChainId.MOO),
+      {
+        chainId: 1284,
+        address: '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73',
+        symbol: 'USDT',
+        name: 'USDT Token',
+        decimals: 6,
+      },
+      {
+        chainId: 1284,
+        address: '0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F',
+        symbol: 'BUSD',
+        name: 'BUSD Token',
+        decimals: 18,
+      },
+      {
+        chainId: 1284,
+        address: '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b',
+        symbol: 'USDC',
+        name: 'USDC Token',
+        decimals: 6,
+      },
+    ],
+  },
+
   // TODO: For Moonbeam chain, we will add StellaSwap in the near future, they're still in development
 
   // 122 - Fuse Mainnet // TODO: incomplete
@@ -754,7 +811,7 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xb3b8ff62960acea3a88039ebcf80699f15786f1b17cebd82802f7375827a339c',
     baseTokens: [
-      findDefaultToken(CoinKey.CELO, ChainId.CEL),
+      findWrappedGasOnChain(ChainId.CEL),
       {
         address: '0x918146359264c492bd6934071c6bd31c854edbc3',
         symbol: 'mCUSD',
@@ -783,7 +840,7 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [
-      findDefaultToken(CoinKey.CELO, ChainId.CEL),
+      findWrappedGasOnChain(ChainId.CEL),
       findDefaultToken(CoinKey.USDC, ChainId.CEL),
       findDefaultToken(CoinKey.WBTC, ChainId.CEL),
       findDefaultToken(CoinKey.WETH, ChainId.CEL),

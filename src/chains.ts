@@ -389,8 +389,8 @@ export const supportedChains: Array<Chain> = [
     mainnet: true,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonbeam.png',
-    // tokenlistUrl:
-    //   'https://raw.githubusercontent.com/solarbeamio/solarbeam-tokenlist/main/solarbeam.tokenlist.json',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
 
     metamask: {
       chainId: prefixChainId(1284),

@@ -77,7 +77,11 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
       },
       [ChainId.BOB]: {
-        address: '0x4200000000000000000000000000000000000006',
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+      [ChainId.MOO]: {
+        address: '0xfa9343c3897324496a05fc75abed6bac29f8a40f',
         decimals: 18,
       },
 
@@ -173,6 +177,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.ONE]: {
         address: '0xb1f6e61e1e113625593a22fa6aa94f8052bc39e0',
+        decimals: 18,
+      },
+      [ChainId.MOO]: {
+        address: '0xc9baa8cfdde8e328787e29b4b078abf2dadc2055',
         decimals: 18,
       },
 
@@ -960,7 +968,8 @@ const basicCoins: BasicCoin[] = [
     verified: true,
     chains: {
       [ChainId.CEL]: {
-        address: '0x471ece3750da237f93b8e339c536989b8978a438',
+        // is the same as '0x471ece3750da237f93b8e339c536989b8978a438'
+        address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
     },
@@ -1189,6 +1198,15 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'Wrapped ETH',
     logoURI:
       'https://static.debank.com/image/boba_token/logo_url/0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000/b1947b38a90e559eb950453965714be4.png',
+  },
+  [ChainId.CEL]: {
+    address: '0x471ece3750da237f93b8e339c536989b8978a438',
+    symbol: 'CELO',
+    decimals: 18,
+    chainId: ChainId.CEL,
+    coinKey: CoinKey.CELO,
+    name: 'Celo native asset',
+    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5567.png',
   },
 
   // Testnets
