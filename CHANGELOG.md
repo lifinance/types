@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.2](https://github.com/lifinance/types/compare/v0.10.1...v0.10.2) (2022-02-11)
+
+
+### Bug Fixes
+
+* some types for new chains ([57d33cb](https://github.com/lifinance/types/commit/57d33cb9bf169dd9434c37b4673c435fc054ac19))
+
 ### [0.10.1](https://github.com/lifinance/types/compare/v0.10.0...v0.10.1) (2022-02-08)
 
 
