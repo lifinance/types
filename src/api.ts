@@ -87,7 +87,16 @@ export interface GetTokenRequest {
   token: string
 }
 
-export interface QuoteRequest {
+interface ToolConfiguration {
+  allowBridges?: string[]
+  denyBridges?: string[]
+  preferBridges?: string[]
+  allowExchanges?: string[]
+  denyExchanges?: string[]
+  preferExchanges?: string[]
+}
+
+export interface QuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
@@ -101,14 +110,26 @@ export interface QuoteRequest {
   slippage?: number | string
   integrator?: string
   referrer?: string
-
-  allowBridges?: string[]
-  denyBridges?: string[]
-  preferBridges?: string[]
-  allowExchanges?: string[]
-  denyExchanges?: string[]
-  preferExchanges?: string[]
 }
+
+export interface ConnectionsRequest extends ToolConfiguration {
+  fromChain?: number | string
+  fromToken?: string
+  toChain?: number | string
+  toToken?: string
+}
+
+export interface Connection {
+  fromChainId: number
+  toChainId: number
+  fromTokens: Token[]
+  toTokens: Token[]
+}
+
+export interface ConnectionsResponse {
+  connections: Connection[]
+}
+
 export interface GetStatusRequest {
   txHash: string
   bridge: string
@@ -149,4 +170,6 @@ export declare class LifiAPI {
   getQuote(request: QuoteRequest): Promise<Step>
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
+
+  getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
 }
