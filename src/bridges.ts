@@ -4,6 +4,7 @@ export enum BridgeTool {
   multichain = 'multichain',
   cbridge = 'cbridge',
   horizon = 'horizon',
+  hyphen = 'hyphen',
 }
 
 export interface Bridge {
@@ -74,6 +75,16 @@ export const supportedBridges: Array<Bridge> = [
     supportUrl: 'https://bridge.harmony.one/help',
     docsUrl: 'https://docs.harmony.one/home/general/horizon-bridge',
     explorerUrl: 'https://bridge.harmony.one/explorer',
+  },
+  {
+    key: BridgeTool.hyphen,
+    name: 'Hyphen',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hyphen.png',
+    bridgeUrl: 'https://hyphen.biconomy.io/',
+    discordUrl: 'https://discord.com/invite/HKHxgyEExQ',
+    docsUrl:
+      'https://docs.biconomy.io/products/hyphen-instant-cross-chain-transfers',
   },
   // for cronos chain, we should confirm if these bridges are available to integrate
   // https://bridge.evodefi.com/
