@@ -434,10 +434,6 @@ const basicCoins: BasicCoin[] = [
         address: '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9',
         decimals: 6,
       },
-      [ChainId.OPT]: {
-        address: '0x94b008aa00579c1307b0ef2c499ad98a8ce58e58',
-        decimals: 6,
-      },
       [ChainId.ONE]: {
         address: '0x3c2b8be99c50593081eaa2a724f0b8285f5aba8f',
         decimals: 6,
@@ -787,6 +783,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
         decimals: 18,
       },
+      [ChainId.MUM]: {
+        address: '0xa6fa4fb5f76172d178d61b04b0ecd319c5d1c0aa',
+        decimals: 18,
+      },
     },
   },
 
@@ -1013,7 +1013,7 @@ export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
 
   for (const [chainId, token] of Object.entries(coin.chains)) {
     defaultCoin.chains[chainId] = {
-      address: token.address,
+      address: token.address.toLowerCase(),
       decimals: token.decimals,
       symbol: coin.key,
       chainId: parseInt(chainId), // Object.entries, Object.keys etc. only return keys as strings. Therefore we have to parse them here

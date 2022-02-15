@@ -90,8 +90,8 @@ export const supportedBridges: Array<Bridge> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hypen.png',
     bridgeUrl: 'https://hyphen.biconomy.io/',
-    // discordUrl: '',
-    // supportUrl: '',
+    discordUrl: 'https://discord.com/invite/HKHxgyEExQ',
+    supportUrl: 'https://discord.com/invite/HKHxgyEExQ',
     docsUrl:
       'https://docs.biconomy.io/products/hyphen-instant-cross-chain-transfers',
     // explorerUrl: '',
