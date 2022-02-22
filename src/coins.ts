@@ -133,7 +133,7 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.BSC]: {
         address: '0xcc42724c6683b7e57334c4e856f4c9965ed682bd',
-        decimals: 8,
+        decimals: 18,
       },
       [ChainId.POL]: {
         address: '0x0000000000000000000000000000000000000000',
