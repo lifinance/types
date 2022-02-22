@@ -171,5 +171,5 @@ export declare class LifiAPI {
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
 
-  getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
+  // getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
 }
