@@ -13,6 +13,7 @@ export enum ExchangeTool {
   zerox = '0x',
   dodo = 'dodo',
 }
+
 export type ExchangeTools = ExchangeTool | string
 
 export interface ExchangeAggregator {
@@ -373,6 +374,28 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.SUSHI, ChainId.FTM),
     ],
   },
+  {
+    key: 'spiritswap',
+    name: 'SpiritSwap',
+    chainId: ChainId.FTM,
+    logoURI:
+      'https://github.com/Layer3Org/spiritswap-tokens-list-icon/blob/master/token-list/images/inspirit.png?raw=true',
+    webUrl: 'https://app.spiritswap.finance/#/',
+    tokenlistUrl:
+      'https://gist.githubusercontent.com/mathiasmoeller/493b1ed01c2a789b2e785e51a2808412/raw/b157b697c72e8f3a6d5ef4851ceeb59bd4b64cd6/spiritswap_tokenlist.json',
+    routerAddress: '0x16327E3FbDaCA3bcF7E38F5Af2599D2DDc33aE52',
+    factoryAddress: '0xEF45d134b73241eDa7703fa787148D9C9F4950b0',
+    initCodeHash:
+      '0xe242e798f6cee26a9cb0bbf24653bf066e5356ffeac160907fe2cc108e238617',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.FTM),
+      findDefaultToken(CoinKey.WBTC, ChainId.FTM),
+      findDefaultToken(CoinKey.WETH, ChainId.FTM),
+      findDefaultToken(CoinKey.USDC, ChainId.FTM),
+      findDefaultToken(CoinKey.DAI, ChainId.FTM),
+    ],
+  },
+
   // 1666600000 - Harmony Mainnet Shard 0
   {
     key: 'viperswap-one',
