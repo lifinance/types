@@ -88,7 +88,7 @@ export const supportedBridges: Array<Bridge> = [
     key: BridgeTool.hyphen,
     name: 'Hyphen',
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hypen.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hyphen.png',
     bridgeUrl: 'https://hyphen.biconomy.io/',
     discordUrl: 'https://discord.com/invite/HKHxgyEExQ',
     supportUrl: 'https://discord.com/invite/HKHxgyEExQ',
