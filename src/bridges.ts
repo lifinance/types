@@ -4,6 +4,11 @@ export enum BridgeTool {
   multichain = 'multichain',
   cbridge = 'cbridge',
   horizon = 'horizon',
+  hyphen = 'hyphen',
+  polygon = 'polygon',
+  arbitrum = 'arbitrum',
+  avalanche = 'avalanche',
+  optimism = 'optimism',
 }
 
 export interface Bridge {
@@ -15,6 +20,7 @@ export interface Bridge {
   supportUrl?: string
   docsUrl?: string
   explorerUrl?: string
+  analyticsUrl?: string
 }
 
 export const supportedBridges: Array<Bridge> = [
@@ -29,6 +35,7 @@ export const supportedBridges: Array<Bridge> = [
       'https://www.notion.so/connext/Connext-NXTP-Support-19a357ebabdd4e888cfcd138fe3e4644',
     docsUrl: 'https://docs.connext.network/',
     explorerUrl: 'https://connextscan.io/',
+    analyticsUrl: 'https://connextscan.io/',
   },
   {
     key: BridgeTool.hop,
@@ -40,6 +47,7 @@ export const supportedBridges: Array<Bridge> = [
     supportUrl: 'https://help.hop.exchange/hc/en-us',
     docsUrl: 'https://docs.hop.exchange/',
     explorerUrl: 'https://explorer.hop.exchange/mainnet/',
+    analyticsUrl: 'https://explorer.hop.exchange/mainnet/',
   },
   {
     key: BridgeTool.multichain,
@@ -62,7 +70,7 @@ export const supportedBridges: Array<Bridge> = [
     supportUrl: 'https://form.typeform.com/to/Q4LMjUaK',
     docsUrl: 'https://cbridge-docs.celer.network/',
     // explorerUrl: '',
-    // analyticsUrl: 'https://cbridge-analytics.celer.network/',
+    analyticsUrl: 'https://cbridge-analytics.celer.network/',
   },
   {
     key: BridgeTool.horizon,
@@ -74,7 +82,82 @@ export const supportedBridges: Array<Bridge> = [
     supportUrl: 'https://bridge.harmony.one/help',
     docsUrl: 'https://docs.harmony.one/home/general/horizon-bridge',
     explorerUrl: 'https://bridge.harmony.one/explorer',
+    // analyticsUrl: '',
   },
+  {
+    key: BridgeTool.hyphen,
+    name: 'Hyphen',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hypen.png',
+    bridgeUrl: 'https://hyphen.biconomy.io/',
+    discordUrl: 'https://discord.com/invite/HKHxgyEExQ',
+    supportUrl: 'https://discord.com/invite/HKHxgyEExQ',
+    docsUrl:
+      'https://docs.biconomy.io/products/hyphen-instant-cross-chain-transfers',
+    // explorerUrl: '',
+    analyticsUrl: 'https://hyphen-info.biconomy.io/',
+  },
+  {
+    key: BridgeTool.polygon,
+    name: 'Polygon Bridge (PoS)',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/polygon.png',
+    bridgeUrl: 'https://wallet.polygon.technology/bridge',
+    // discordUrl: '',
+    supportUrl: 'https://forum.matic.network/',
+    docsUrl:
+      'https://docs.polygon.technology/docs/develop/ethereum-polygon/pos/getting-started',
+    // explorerUrl: '',
+    // analyticsUrl: '',
+  },
+  {
+    key: BridgeTool.arbitrum,
+    name: 'Arbitrum One Bridge',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/arbitrum.png',
+    bridgeUrl: 'https://bridge.arbitrum.io/',
+    discordUrl: 'https://discord.gg/ZpZuw7p',
+    supportUrl: 'https://discord.gg/ZpZuw7p',
+    docsUrl: 'https://developer.offchainlabs.com/docs/bridging_assets',
+    // explorerUrl: '',
+  },
+  {
+    key: BridgeTool.avalanche,
+    name: 'AVAX Bridge',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/avalanche.png',
+    bridgeUrl: 'https://bridge.avax.network/',
+    discordUrl: 'https://chat.avalabs.org/',
+    supportUrl: 'https://docs.avax.network/learn/avalanche-bridge-faq/',
+    docsUrl: 'https://docs.avax.network/learn/avalanche-bridge-faq/',
+    // explorerUrl: '',
+    // analyticsUrl: '',
+  },
+  {
+    key: BridgeTool.optimism,
+    name: 'Optimism Gateway',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/optimism.png',
+    bridgeUrl: 'https://gateway.optimism.io/',
+    discordUrl: 'https://discord.com/invite/jrnFEvq',
+    supportUrl: 'https://discord.com/invite/jrnFEvq',
+    docsUrl: 'https://community.optimism.io/docs/developers/bridge/basics/',
+    // explorerUrl: '',
+    // analyticsUrl: '',
+  },
+  // {
+  //   key: BridgeTool.,
+  //   name: '',
+  //   logoURI:
+  //     'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/.png',
+  //   bridgeUrl: '',
+  //   discordUrl: '',
+  //   supportUrl: '',
+  //   docsUrl: '',
+  //   explorerUrl: '',
+  //   analyticsUrl: '',
+  // },
+
   // for cronos chain, we should confirm if these bridges are available to integrate
   // https://bridge.evodefi.com/
   // https://app.relaychain.com/#/
