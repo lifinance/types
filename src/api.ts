@@ -177,5 +177,5 @@ export declare class LifiAPI {
 
   getChains(): ChainsResponse
 
-  // getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
+  getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
 }
