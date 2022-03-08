@@ -38,8 +38,10 @@ export interface Action {
 // ESTIMATE
 export interface Estimate {
   fromAmount: string
+  fromAmountUSD?: string
   toAmount: string
   toAmountMin: string
+  toAmountUSD?: string
   approvalAddress: string
 
   feeCosts?: FeeCost[]
