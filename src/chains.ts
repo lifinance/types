@@ -376,7 +376,7 @@ export const supportedChains: Array<Chain> = [
         symbol: 'MOVR',
         decimals: 18,
       },
-      rpcUrls: ['https://rpc.moonriver.moonbeam.network'],
+      rpcUrls: ['https://rpc.api.moonriver.moonbeam.network'],
     },
   },
 
