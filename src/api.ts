@@ -152,6 +152,10 @@ export interface StatusResponse {
   status: StatusMessage
 }
 
+export interface ChainsResponse {
+  chains: Chain[]
+}
+
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
 
 export declare class LifiAPI {
@@ -170,6 +174,8 @@ export declare class LifiAPI {
   getQuote(request: QuoteRequest): Promise<Step>
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
+
+  getChains(): ChainsResponse
 
   // getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
 }
