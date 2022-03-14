@@ -87,6 +87,7 @@ export interface Execution {
   process: Array<Process>
   fromAmount?: string
   toAmount?: string
+  toToken?: Token
 }
 
 export const emptyExecution: Execution = {
