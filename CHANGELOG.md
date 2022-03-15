@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.12](https://github.com/lifinance/types/compare/v0.10.11...v0.10.12) (2022-03-15)
+
+
+### Features
+
+* add toToken to Execution ([#34](https://github.com/lifinance/types/issues/34)) ([0b73108](https://github.com/lifinance/types/commit/0b73108607710deeebf333bffc2dfebf7e7f8383))
+
 ### [0.10.11](https://github.com/lifinance/types/compare/v0.10.10...v0.10.11) (2022-03-09)
 
 
