@@ -968,6 +968,8 @@ const basicCoins: BasicCoin[] = [
     verified: true,
     chains: {
       [ChainId.CEL]: {
+        // The CELO token is not a native token (0x000...).
+        // Instead it is this ERC20 token: https://explorer.celo.org/token/0x471EcE3750Da237f93B8E339c536989b8978a438
         address: '0x471ece3750da237f93b8e339c536989b8978a438',
         decimals: 18,
       },
