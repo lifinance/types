@@ -968,8 +968,7 @@ const basicCoins: BasicCoin[] = [
     verified: true,
     chains: {
       [ChainId.CEL]: {
-        // is the same as '0x471ece3750da237f93b8e339c536989b8978a438'
-        address: '0x0000000000000000000000000000000000000000',
+        address: '0x471ece3750da237f93b8e339c536989b8978a438',
         decimals: 18,
       },
     },
