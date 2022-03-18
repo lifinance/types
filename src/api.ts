@@ -143,6 +143,8 @@ export interface TransactionInfo {
   amount?: string
   token?: Token
   chainId?: ChainId
+  gasPrice?: string
+  gasUsed?: string
 }
 
 export interface StatusResponse {
