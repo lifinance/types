@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* extend StatusResponse to include gasPrice and gasUsed ([8eddc63](https://github.com/lifinance/types/commit/8eddc6342bfb3faafe7e160fd45bd4552e32ba40))
+* extend TransactionInfo to include gasPrice and gasUsed ([8eddc63](https://github.com/lifinance/types/commit/8eddc6342bfb3faafe7e160fd45bd4552e32ba40))
 
 ### [0.10.13](https://github.com/lifinance/types/compare/v0.10.12...v0.10.13) (2022-03-17)
 
