@@ -350,7 +350,7 @@ export const supportedChains: Array<Chain> = [
         symbol: 'ONE',
         decimals: 18,
       },
-      rpcUrls: ['https://api.harmony.one'],
+      rpcUrls: ['https://api.s0.t.hmny.io'],
     },
   },
 
