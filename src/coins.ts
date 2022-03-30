@@ -735,7 +735,7 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.OPT]: {
         address: '0x4200000000000000000000000000000000000006',
-        decimals: 8,
+        decimals: 18,
       },
       [ChainId.MOR]: {
         address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c',
