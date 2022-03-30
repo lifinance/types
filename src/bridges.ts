@@ -3,7 +3,6 @@ export enum BridgeTool {
   hop = 'hop',
   multichain = 'multichain',
   cbridge = 'cbridge',
-  horizon = 'horizon',
   hyphen = 'hyphen',
   polygon = 'polygon',
   arbitrum = 'arbitrum',
@@ -71,18 +70,6 @@ export const supportedBridges: Array<Bridge> = [
     docsUrl: 'https://cbridge-docs.celer.network/',
     // explorerUrl: '',
     analyticsUrl: 'https://cbridge-analytics.celer.network/',
-  },
-  {
-    key: BridgeTool.horizon,
-    name: 'Horizon',
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/horizon.png',
-    bridgeUrl: 'https://bridge.harmony.one/',
-    discordUrl: 'https://harmony.one/discord',
-    supportUrl: 'https://bridge.harmony.one/help',
-    docsUrl: 'https://docs.harmony.one/home/general/horizon-bridge',
-    explorerUrl: 'https://bridge.harmony.one/explorer',
-    // analyticsUrl: '',
   },
   {
     key: BridgeTool.hyphen,
