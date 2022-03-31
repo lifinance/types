@@ -771,6 +771,30 @@ export const supportedChains: Array<Chain> = [
       rpcUrls: ['https://andromeda.metis.io/?owner=1088'],
     },
   },
+  // 1313161554 Aurora Mainnet
+  {
+    key: ChainKey.AUR,
+    name: 'Aurora Mainnet',
+    coin: CoinKey.ETH,
+    id: 1313161554,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/aurora.png',
+    tokenlistUrl: 'https://aurora.dev/tokens.json',
+
+    metamask: {
+      chainId: prefixChainId(1313161554),
+      blockExplorerUrls: ['https://aurorascan.dev/'],
+      chainName: 'Aurora',
+
+      nativeCurrency: {
+        name: 'ETH',
+        symbol: 'ETH',
+        decimals: 18,
+      },
+      rpcUrls: ['https://mainnet.aurora.dev'],
+    },
+  },
 
   // TESTNETS
   // 3 - Ropsten
