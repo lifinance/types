@@ -1,10 +1,5 @@
 import {
-  Token,
-  Chain,
-  Step,
-  BridgeDefinition,
-  ExchangeDefinition,
-  ChainId,
+  BridgeDefinition, Chain, ChainId, ExchangeDefinition, Step, Token
 } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
@@ -69,7 +64,7 @@ export interface RoutesResponse {
   routes: Route[]
 }
 
-type PossibilityTopic = 'chains' | 'tokens' | 'bridges' | 'exchanges'
+export type PossibilityTopic = 'chains' | 'tokens' | 'bridges' | 'exchanges'
 
 export interface PossibilitiesRequest {
   chains?: number[] // (default: [all]) // eg. [1, 56, 100]
