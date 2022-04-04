@@ -84,6 +84,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xfa9343c3897324496a05fc75abed6bac29f8a40f',
         decimals: 18,
       },
+      [ChainId.AUR]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {

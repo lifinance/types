@@ -82,6 +82,7 @@ export enum ChainKey {
   VEL = 'vel',
   MOO = 'moo',
   MAM = 'mam',
+  AUR = 'aur',
 
   // Testnets
   ROP = 'rop',
@@ -132,6 +133,7 @@ export enum ChainId {
   VEL = 106,
   MOO = 1284,
   MAM = 1088,
+  AUR = 1313161554,
 
   // Testnets
   ROP = 3,
