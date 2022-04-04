@@ -69,17 +69,20 @@ export interface RoutesResponse {
   routes: Route[]
 }
 
+type PossibilityTopic = 'chains' | 'tokens' | 'bridges' | 'exchanges'
+
 export interface PossibilitiesRequest {
   chains?: number[] // (default: [all]) // eg. [1, 56, 100]
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
+  include?: PossibilityTopic[]
 }
 
 export interface PossibilitiesResponse {
-  chains: Chain[]
-  tokens: Token[]
-  bridges: BridgeDefinition[]
-  exchanges: ExchangeDefinition[]
+  chains?: Chain[]
+  tokens?: Token[]
+  bridges?: BridgeDefinition[]
+  exchanges?: ExchangeDefinition[]
 }
 
 export interface GetTokenRequest {
