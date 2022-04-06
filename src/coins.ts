@@ -44,11 +44,6 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
-      [ChainId.OKT]: {
-        // guessed from debank api
-        address: '0xef71ca2ee68f45b9ad6f72fbdb33d707b872315c',
-        decimals: 18,
-      },
       [ChainId.ARB]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,

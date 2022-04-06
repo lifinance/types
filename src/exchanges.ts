@@ -676,6 +676,43 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.SUSHI, ChainId.OKT),
     ],
   },
+  {
+    key: 'jswap-okt',
+    name: 'JSwap',
+    chainId: ChainId.OKT,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/jswap.png',
+    webUrl: 'https://app.jswap.finance/#/swap',
+    tokenlistUrl:
+      'https://resources.jswap.finance/token-list/oec/extended.tokenlist.json',
+    routerAddress: '0x069A306A638ac9d3a68a6BD8BE898774C073DCb3',
+    factoryAddress: '0xd654CbF99F2907F06c88399AE123606121247D5C',
+    initCodeHash:
+      '0xf6608394468275c0df88a8568e9fbf7295a0aebddd5ae966ce6dbf5bb4ee68a0',
+    baseTokens: [
+      findDefaultToken(CoinKey.OKT, ChainId.OKT),
+      findDefaultToken(CoinKey.ETH, ChainId.OKT),
+      findDefaultToken(CoinKey.USDT, ChainId.OKT),
+      {
+        address: '0x54e4622dc504176b3bb432dccaf504569699a7ff',
+        symbol: 'BTCK',
+        decimals: 18,
+        chainId: ChainId.OKT,
+      } as Token,
+      {
+        address: '0xdf54b6c6195ea4d948d03bfd818d365cf175cfc2',
+        symbol: 'OKB',
+        decimals: 18,
+        chainId: ChainId.OKT,
+      } as Token,
+      {
+        address: '0x5fac926bf1e638944bb16fb5b787b5ba4bc85b0a',
+        symbol: 'JF',
+        decimals: 18,
+        chainId: ChainId.OKT,
+      } as Token,
+    ],
+  },
 
   // 25 - Cronos Mainnet Beta
   {
