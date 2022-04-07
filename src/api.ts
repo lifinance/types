@@ -1,5 +1,10 @@
 import {
-  BridgeDefinition, Chain, ChainId, ExchangeDefinition, Step, Token
+  BridgeDefinition,
+  Chain,
+  ChainId,
+  ExchangeDefinition,
+  Step,
+  Token,
 } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
