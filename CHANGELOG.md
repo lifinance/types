@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.4](https://github.com/lifinance/types/compare/v0.11.1...v0.11.4) (2022-04-07)
+
+
+### Features
+
+* add multicall address to Chain type ([#45](https://github.com/lifinance/types/issues/45)) ([cfe5dcc](https://github.com/lifinance/types/commit/cfe5dcca9bef03b54f0bd716b189686505d16bcf))
+
+
+### Bug Fixes
+
+* fix sushiswap token lists ([#44](https://github.com/lifinance/types/issues/44)) ([03fd5a1](https://github.com/lifinance/types/commit/03fd5a1d9365abe1450c827656cbc30a9e372289))
+
 ### [0.11.2](https://github.com/lifinance/types/compare/v0.11.1...v0.11.2) (2022-04-07)
 
 
