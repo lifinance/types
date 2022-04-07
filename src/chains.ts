@@ -1,5 +1,6 @@
 import { BigNumber } from 'ethers'
-import { ChainKey, CoinKey } from './base'
+import { ChainId, ChainKey, CoinKey } from './base'
+import { multicallAddresses } from './multicall'
 
 export interface Chain {
   key: ChainKey
@@ -11,6 +12,7 @@ export interface Chain {
   tokenlistUrl?: string
   faucetUrls?: string[]
   metamask: AddEthereumChainParameter
+  multicallAddress?: string
 }
 
 export interface AddEthereumChainParameter {
@@ -41,6 +43,7 @@ export const supportedChains: Array<Chain> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum.png',
     tokenlistUrl: 'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
+    multicallAddress: multicallAddresses[ChainId.ETH],
 
     metamask: {
       chainId: prefixChainId(1),
@@ -68,6 +71,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/polygon-matic'],
+    multicallAddress: multicallAddresses[ChainId.POL],
 
     // https://docs.matic.network/docs/develop/metamask/config-matic/
     metamask: {
@@ -100,6 +104,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
     faucetUrls: ['https://stakely.io/faucet/bsc-chain-bnb'],
+    multicallAddress: multicallAddresses[ChainId.BSC],
 
     // https://docs.binance.org/smart-chain/wallet/metamask.html
     metamask: {
@@ -129,6 +134,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/gnosis.png',
     tokenlistUrl: 'https://tokens.honeyswap.org/',
     faucetUrls: ['https://stakely.io/faucet/xdai-chain'],
+    multicallAddress: multicallAddresses[ChainId.DAI],
 
     // https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup
     metamask: {
@@ -162,6 +168,7 @@ export const supportedChains: Array<Chain> = [
       'https://stakely.io/faucet/fantom-blockchain-ftm',
       'https://docs.spookyswap.finance/getting-started/how-to-get-fantom-gas',
     ],
+    multicallAddress: multicallAddresses[ChainId.FTM],
 
     // https://docs.fantom.foundation/tutorials/set-up-metamask
     metamask: {
@@ -187,6 +194,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/okex.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
+    multicallAddress: multicallAddresses[ChainId.OKT],
 
     // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start-for-mainnet.html
     metamask: {
@@ -212,6 +220,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/avalanche.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/avalanche.json',
+    multicallAddress: multicallAddresses[ChainId.AVA],
 
     // https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche
     metamask: {
@@ -238,6 +247,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/arbitrum.json',
     faucetUrls: ['https://bridge.arbitrum.io/'],
+    multicallAddress: multicallAddresses[ChainId.ARB],
 
     metamask: {
       chainId: prefixChainId(42161),
@@ -262,6 +272,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/heco.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/heco.json',
+    multicallAddress: multicallAddresses[ChainId.HEC],
 
     metamask: {
       chainId: prefixChainId(128),
@@ -285,8 +296,8 @@ export const supportedChains: Array<Chain> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/optimism.png',
     tokenlistUrl: 'https://static.optimism.io/optimism.tokenlist.json',
-
     faucetUrls: ['https://gateway.optimism.io/'],
+    multicallAddress: multicallAddresses[ChainId.OPT],
 
     metamask: {
       chainId: prefixChainId(10),
@@ -310,6 +321,7 @@ export const supportedChains: Array<Chain> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fusion.png',
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.FSN],
 
     // https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche
     metamask: {
@@ -338,6 +350,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/harmony-one'],
+    multicallAddress: multicallAddresses[ChainId.ONE],
 
     // https://docs.harmony.one/home/developers/wallets/metamask/connect-metamask-to-the-harmony-chain
     metamask: {
@@ -365,6 +378,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonriver.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
+    multicallAddress: multicallAddresses[ChainId.MOR],
 
     metamask: {
       chainId: prefixChainId(1285),
@@ -391,6 +405,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonbeam.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
+    multicallAddress: multicallAddresses[ChainId.MOO],
 
     metamask: {
       chainId: prefixChainId(1284),
@@ -415,6 +430,7 @@ export const supportedChains: Array<Chain> = [
     mainnet: true,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/expanse.png',
+    multicallAddress: multicallAddresses[ChainId.EXP],
 
     metamask: {
       chainId: prefixChainId(2),
@@ -436,6 +452,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.TCH,
     id: 7,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.TCH],
 
     metamask: {
       chainId: prefixChainId(7),
@@ -457,6 +474,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.UBQ,
     id: 8,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.UBQ],
 
     metamask: {
       chainId: prefixChainId(8),
@@ -478,6 +496,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.META,
     id: 11,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.MET],
 
     metamask: {
       chainId: prefixChainId(11),
@@ -499,6 +518,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.DIODE,
     id: 15,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.DIO],
 
     metamask: {
       chainId: prefixChainId(15),
@@ -528,6 +548,7 @@ export const supportedChains: Array<Chain> = [
       'https://stakely.io/faucet/celo-platform',
       'https://free-online-app.com/faucet-for-eth-evm-chains/',
     ],
+    multicallAddress: multicallAddresses[ChainId.CEL],
 
     metamask: {
       chainId: prefixChainId(42220),
@@ -553,6 +574,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fuse.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
+    multicallAddress: multicallAddresses[ChainId.FUS],
 
     metamask: {
       chainId: prefixChainId(122),
@@ -576,6 +598,7 @@ export const supportedChains: Array<Chain> = [
     mainnet: true,
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/telos.json',
+    multicallAddress: multicallAddresses[ChainId.TLO],
 
     metamask: {
       chainId: prefixChainId(40),
@@ -601,6 +624,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/cronos.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/cronaswap-default.tokenlist.json',
+    multicallAddress: multicallAddresses[ChainId.CRO],
 
     metamask: {
       chainId: prefixChainId(25),
@@ -627,6 +651,7 @@ export const supportedChains: Array<Chain> = [
     // TODO: we should update token list url to latest one
     tokenlistUrl:
       'https://raw.githubusercontent.com/OolongSwap/boba-community-token-list/main/build/boba.tokenlist.json',
+    multicallAddress: multicallAddresses[ChainId.BOB],
 
     metamask: {
       chainId: prefixChainId(288),
@@ -648,6 +673,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.SHIB,
     id: 27,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.SHI],
 
     metamask: {
       chainId: prefixChainId(27),
@@ -669,6 +695,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.L1,
     id: 29,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.GL1],
 
     metamask: {
       chainId: prefixChainId(29),
@@ -690,6 +717,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.RBTC,
     id: 30,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.RSK],
 
     metamask: {
       chainId: prefixChainId(30),
@@ -711,6 +739,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.TBG,
     id: 35,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.TBW],
 
     metamask: {
       chainId: prefixChainId(35),
@@ -732,6 +761,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.VLX,
     id: 106,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.VEL],
 
     metamask: {
       chainId: prefixChainId(106),
@@ -757,6 +787,7 @@ export const supportedChains: Array<Chain> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/metis.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/digitalnativeinc/default-token-list/dnf/tokens/metis.json',
+    multicallAddress: multicallAddresses[ChainId.MAM],
 
     metamask: {
       chainId: prefixChainId(1088),
@@ -781,6 +812,7 @@ export const supportedChains: Array<Chain> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/aurora.png',
     tokenlistUrl: 'https://aurora.dev/tokens.json',
+    multicallAddress: multicallAddresses[ChainId.AUR],
 
     metamask: {
       chainId: prefixChainId(1313161554),
@@ -812,6 +844,7 @@ export const supportedChains: Array<Chain> = [
       'https://faucet.ropsten.be/',
       'https://app.compound.finance/', // https://teller.gitbook.io/teller-1/testing-guide/getting-testnet-tokens-ropsten-1
     ],
+    multicallAddress: multicallAddresses[ChainId.ROP],
 
     metamask: {
       chainId: prefixChainId(3),
@@ -839,6 +872,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://faucet.rinkeby.io/'],
+    multicallAddress: multicallAddresses[ChainId.RIN],
 
     metamask: {
       chainId: prefixChainId(4),
@@ -866,6 +900,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: ['https://goerli-faucet.slock.it/'],
+    multicallAddress: multicallAddresses[ChainId.GOR],
 
     metamask: {
       chainId: prefixChainId(5),
@@ -886,6 +921,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.KAL,
     id: 12,
     mainnet: false,
+    multicallAddress: multicallAddresses[ChainId.METT],
 
     metamask: {
       chainId: prefixChainId(12),
@@ -907,6 +943,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.SDIODE,
     id: 13,
     mainnet: false,
+    multicallAddress: multicallAddresses[ChainId.DIOT],
 
     metamask: {
       chainId: prefixChainId(13),
@@ -934,6 +971,7 @@ export const supportedChains: Array<Chain> = [
       'https://ethdrop.dev/',
       'https://gitter.im/kovan-testnet/faucet',
     ],
+    multicallAddress: multicallAddresses[ChainId.KOV],
 
     metamask: {
       chainId: prefixChainId(42),
@@ -959,6 +997,7 @@ export const supportedChains: Array<Chain> = [
     tokenlistUrl:
       'https://raw.githubusercontent.com/elkfinance/tokens/main/mumbai.tokenlist.json',
     faucetUrls: ['https://faucet.matic.network/'],
+    multicallAddress: multicallAddresses[ChainId.MUM],
 
     metamask: {
       chainId: prefixChainId(80001),
@@ -982,6 +1021,7 @@ export const supportedChains: Array<Chain> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/arbitrum_test.png',
     faucetUrls: ['https://bridge.arbitrum.io/'],
+    multicallAddress: multicallAddresses[ChainId.ARBT],
 
     metamask: {
       chainId: prefixChainId(421611),
@@ -1003,6 +1043,7 @@ export const supportedChains: Array<Chain> = [
     id: 69,
     mainnet: false,
     faucetUrls: ['https://gateway.optimism.io/'],
+    multicallAddress: multicallAddresses[ChainId.OPTT],
 
     metamask: {
       chainId: prefixChainId(69),
@@ -1026,6 +1067,7 @@ export const supportedChains: Array<Chain> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/bsc_test.png',
     faucetUrls: ['https://testnet.binance.org/faucet-smart'],
+    multicallAddress: multicallAddresses[ChainId.BSCT],
 
     metamask: {
       chainId: prefixChainId(97),
@@ -1048,6 +1090,7 @@ export const supportedChains: Array<Chain> = [
     id: 256,
     mainnet: false,
     faucetUrls: ['https://scan-testnet.hecochain.com/faucet'],
+    multicallAddress: multicallAddresses[ChainId.HECT],
 
     metamask: {
       chainId: prefixChainId(256),
@@ -1074,6 +1117,8 @@ export const supportedChains: Array<Chain> = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/harmony_test.png',
     // https://docs.harmony.one/home/developers/wallets/metamask/connect-metamask-to-the-harmony-chain
+    multicallAddress: multicallAddresses[ChainId.ONET],
+
     metamask: {
       chainId: prefixChainId(1666700000),
       blockExplorerUrls: [
@@ -1097,6 +1142,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.SPARK,
     id: 123,
     mainnet: false,
+    multicallAddress: multicallAddresses[ChainId.FUST],
 
     metamask: {
       chainId: prefixChainId(123),
@@ -1119,6 +1165,7 @@ export const supportedChains: Array<Chain> = [
     id: 41,
     mainnet: false,
     faucetUrls: ['https://app.telos.net/testnet/developers'],
+    multicallAddress: multicallAddresses[ChainId.TLOT],
 
     metamask: {
       chainId: prefixChainId(41),
@@ -1140,6 +1187,7 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.TRBTC,
     id: 31,
     mainnet: true,
+    multicallAddress: multicallAddresses[ChainId.RSKT],
 
     metamask: {
       chainId: prefixChainId(31),
