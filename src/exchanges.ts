@@ -191,7 +191,7 @@ export const supportedExchanges: Array<Exchange> = [
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/matic-exchange',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/matic.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/polygon.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -253,7 +253,7 @@ export const supportedExchanges: Array<Exchange> = [
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/bsc-exchange',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/bsc.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/bsc.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -315,7 +315,7 @@ export const supportedExchanges: Array<Exchange> = [
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/xdai-exchange',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/xdai.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/xdai.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -360,7 +360,7 @@ export const supportedExchanges: Array<Exchange> = [
     webUrl: 'https://app.sushi.com/swap',
     graph: 'https://api.thegraph.com/subgraphs/name/sushiswap/fantom-exchange',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fantom.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/fantom.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -453,7 +453,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/harmony.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/harmony.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -478,7 +478,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/avalanche.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/avalanche.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -503,7 +503,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/arbitrum.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/arbitrum.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -554,7 +554,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/moonriver.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -626,7 +626,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/heco.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/heco.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -661,7 +661,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/okex.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -802,7 +802,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/fuse.json',
     routerAddress: '0xF4d73326C13a4Fc5FD7A064217e12780e9Bd62c3',
     factoryAddress: '0x43eA90e2b786728520e4f930d2A71a477BF2737C',
     initCodeHash:
@@ -857,7 +857,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/celo.json',
     routerAddress: '0x1421bDe4B10e8dd459b3BCb598810B1337D56842',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -984,7 +984,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   chainId: ChainId.ROP,
   //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
-  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/ropsten.json',
+  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/ropsten.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
   //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
@@ -1017,7 +1017,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   chainId: ChainId.RIN,
   //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
-  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/rinkeby.json',
+  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/rinkeby.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
   //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
@@ -1050,7 +1050,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   chainId: ChainId.GOR,
   //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
-  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/goerli.json',
+  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/goerli.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
   //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
@@ -1084,7 +1084,7 @@ export const supportedExchanges: Array<Exchange> = [
   //   chainId: ChainId.KOV,
   //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
-  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/kovan.json',
+  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/kovan.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
   //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
@@ -1102,7 +1102,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/harmony-testnet.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/harmony-testnet.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
@@ -1120,7 +1120,7 @@ export const supportedExchanges: Array<Exchange> = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
     webUrl: 'https://app.sushi.com/swap',
     tokenlistUrl:
-      'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/harmony-testnet.json',
+      'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/harmony-testnet.json',
     routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
