@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.5](https://github.com/lifinance/types/compare/v0.11.4...v0.11.5) (2022-04-13)
+
+
+### Features
+
+* add optimism multicall ([#46](https://github.com/lifinance/types/issues/46)) ([0d0bb02](https://github.com/lifinance/types/commit/0d0bb024fb49c3be1863a980112ac1b0e625929c))
+
 ### [0.11.4](https://github.com/lifinance/types/compare/v0.11.1...v0.11.4) (2022-04-07)
 
 
