@@ -14,7 +14,7 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.AVA]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
   [ChainId.ARB]: '0x80C7DD17B01855a6D2347444a0FCC36136a314de',
   [ChainId.HEC]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
-  // [ChainId.OPT]: NOT FOUND
+  [ChainId.OPT]: '0x142e2feac30d7fc3b61f9ee85fccad8e560154cc',
   [ChainId.ONE]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
   [ChainId.FSN]: '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F',
   [ChainId.MOR]: '0x270f2F35bED92B7A59eA5F08F6B3fd34c8D9D9b5',
