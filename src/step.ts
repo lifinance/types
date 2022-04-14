@@ -45,7 +45,7 @@ export interface Estimate {
   approvalAddress: string
 
   feeCosts?: FeeCost[]
-  gasCosts?: GasCost[]
+  gasCosts?: GasCost[] // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
 
   executionDuration: number // estimated duration in seconds
 
