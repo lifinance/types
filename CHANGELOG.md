@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.11.6](https://github.com/lifinance/types/compare/v0.11.5...v0.11.6) (2022-04-14)
 
+
 ### Features
 
 * add JSwap on OKEX chain ([#43](https://github.com/lifinance/types/issues/43)) ([3400375](https://github.com/lifinance/types/commit/3400375f8bd6eabe3b792083569db78b40b0b6a9))
