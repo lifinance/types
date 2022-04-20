@@ -5,6 +5,8 @@ import {
   ExchangeDefinition,
   Step,
   Token,
+  ExchangeTools,
+  BridgeTool,
 } from '.'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
@@ -161,6 +163,20 @@ export interface ChainsResponse {
   chains: Chain[]
 }
 
+export type ExternalExchange = {
+  tool: ExchangeTools
+  chains: number[]
+}
+export type ExternalBridge = {
+  tool: BridgeTool
+  chains: number[]
+}
+
+export type ToolsResponse = {
+  exchanges: ExternalExchange[]
+  bridges: ExternalBridge[]
+}
+
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
 
 export declare class LifiAPI {
@@ -179,6 +195,8 @@ export declare class LifiAPI {
   getQuote(request: QuoteRequest): Promise<Step>
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
+
+  getTools(): Promise<ToolsResponse>
 
   getChains(): ChainsResponse
 
