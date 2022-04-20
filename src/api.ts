@@ -169,7 +169,8 @@ export type ExternalExchange = {
 }
 export type ExternalBridge = {
   tool: BridgeTool
-  chains: number[]
+  fromChains: number[]
+  toChains: number[]
 }
 
 export type ToolsResponse = {
