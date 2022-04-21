@@ -5,9 +5,9 @@ import {
   ExchangeDefinition,
   Step,
   Token,
-  ExchangeTools,
-  BridgeTool,
 } from '.'
+import { Bridge } from './bridges'
+import { Exchange, ExchangeAggregator } from './exchanges'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
 
@@ -163,19 +163,9 @@ export interface ChainsResponse {
   chains: Chain[]
 }
 
-export type ExternalExchange = {
-  tool: ExchangeTools
-  chains: number[]
-}
-export type ExternalBridge = {
-  tool: BridgeTool
-  fromChains: number[]
-  toChains: number[]
-}
-
 export type ToolsResponse = {
-  exchanges: ExternalExchange[]
-  bridges: ExternalBridge[]
+  exchanges: Pick<Exchange, 'key' | 'name'>[]
+  bridges: Pick<Bridge, 'key' | 'name'>[]
 }
 
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
@@ -197,7 +187,7 @@ export declare class LifiAPI {
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
 
-  getTools(): Promise<ToolsResponse>
+  getTools(): ToolsResponse
 
   getChains(): ChainsResponse
 
