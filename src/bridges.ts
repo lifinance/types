@@ -8,6 +8,7 @@ export enum BridgeTool {
   arbitrum = 'arbitrum',
   avalanche = 'avalanche',
   optimism = 'optimism',
+  across = 'across',
 }
 
 export interface Bridge {
@@ -131,6 +132,16 @@ export const supportedBridges: Array<Bridge> = [
     docsUrl: 'https://community.optimism.io/docs/developers/bridge/basics/',
     // explorerUrl: '',
     // analyticsUrl: '',
+  },
+  {
+    key: BridgeTool.across,
+    name: 'AcrossV2',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/acrossv2.png',
+    bridgeUrl: 'https://across.to/',
+    discordUrl: 'https://discord.gg/t4SZySkn',
+    supportUrl: 'https://discord.gg/t4SZySkn',
+    docsUrl: 'https://docs.across.to/',
   },
   // {
   //   key: BridgeTool.,
