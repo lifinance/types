@@ -965,6 +965,8 @@ export const supportedChains: Array<Chain> = [
     coin: CoinKey.ETH,
     id: 42,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_kovan.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: [

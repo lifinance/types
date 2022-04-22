@@ -9,6 +9,7 @@ export enum BridgeTool {
   avalanche = 'avalanche',
   optimism = 'optimism',
   across = 'across',
+  amarok = 'amarok',
 }
 
 export interface Bridge {
@@ -29,7 +30,7 @@ export const supportedBridges: Array<Bridge> = [
     name: 'Connext',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/connext.png',
-    bridgeUrl: 'https://xpollinate.io/',
+    bridgeUrl: 'https://bridge.connext.network/',
     discordUrl: 'https://chat.connext.network/',
     supportUrl:
       'https://www.notion.so/connext/Connext-NXTP-Support-19a357ebabdd4e888cfcd138fe3e4644',
@@ -142,6 +143,18 @@ export const supportedBridges: Array<Bridge> = [
     discordUrl: 'https://discord.gg/t4SZySkn',
     supportUrl: 'https://discord.gg/t4SZySkn',
     docsUrl: 'https://docs.across.to/',
+  },
+  {
+    key: BridgeTool.amarok,
+    name: 'Connext - Amarok',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/connext.png',
+    // bridgeUrl: 'https://bridge.connext.network/',
+    discordUrl: 'https://chat.connext.network/',
+    // supportUrl: '',
+    docsUrl: 'https://docs.connext.network/',
+    // explorerUrl: 'https://connextscan.io/',
+    // analyticsUrl: 'https://connextscan.io/',
   },
   // {
   //   key: BridgeTool.,
