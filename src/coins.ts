@@ -1274,6 +1274,17 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'WRAPPED ONE',
     logoURI: 'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/tokens/WONE.png',
   },
+  [ChainId.ARBT]: {
+    // https://testnet.arbiscan.io/token/0x207ed1742cc0bebd03e50e855d3a14e41f93a461
+    address: '0x207ed1742cc0bebd03e50e855d3a14e41f93a461',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.ARBT,
+    coinKey: CoinKey.WETH,
+    name: 'WETH',
+    logoURI:
+      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
 }
 
 export const findDefaultCoin = (coinKey: CoinKey): Coin => {
