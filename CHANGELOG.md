@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.7](https://github.com/lifinance/types/compare/v0.11.6...v0.11.7) (2022-04-26)
+
+
+### Features
+
+* add wrapped gas for ARBT ([#50](https://github.com/lifinance/types/issues/50)) ([2c2d5f8](https://github.com/lifinance/types/commit/2c2d5f848aeb30d2f817bb10bc7ba51a45267e40))
+* update CHANGELOG.md ([6b5323b](https://github.com/lifinance/types/commit/6b5323ba4c45623cca9ff72374d0e442848fe4a6))
+* update CHANGELOG.md ([b44c835](https://github.com/lifinance/types/commit/b44c83526831917e0e3a99b4b9a3f80787fa4608))
+
 ### [0.11.6](https://github.com/lifinance/types/compare/v0.11.5...v0.11.6) (2022-04-14)
 
 
