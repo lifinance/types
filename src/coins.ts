@@ -1275,8 +1275,8 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     logoURI: 'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/tokens/WONE.png',
   },
   [ChainId.ARBT]: {
-    // https://testnet.arbiscan.io/token/0x207ed1742cc0bebd03e50e855d3a14e41f93a461
-    address: '0x207ed1742cc0bebd03e50e855d3a14e41f93a461',
+    // https://testnet.arbiscan.io/token/0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681
+    address: '0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681',
     symbol: 'WETH',
     decimals: 18,
     chainId: ChainId.ARBT,
