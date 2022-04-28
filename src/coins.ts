@@ -558,7 +558,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 6,
       },
       [ChainId.MOO]: {
-        address: '0x8f552a71efe5eefc207bf75485b356a0b3f01ec9',
+        address: '0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b',
         decimals: 6,
       },
       [ChainId.BOB]: {

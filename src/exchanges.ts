@@ -742,22 +742,35 @@ export const supportedExchanges: Array<Exchange> = [
   // TODO: For cronos chain, we will add KyberSwap in the near future, they're still in development
 
   // 1284 - Moonbeam
-  // Max: We should be able to get the initCodeHash from the factory contract and use some big pools as default tokens
-  // {
-  //   key: 'stellaswap-moo',
-  //   name: 'StellaSwap',
-  //   chainId: ChainId.MOO,
-  //   logoURI:
-  //     'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/stellaswap.png',
-  //   webUrl: 'https://app.stellaswap.com/',
-  //   tokenlistUrl:
-  //     'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
-  //   routerAddress: '0xd0A01ec574D1fC6652eDF79cb2F880fd47D34Ab1',
-  //   factoryAddress: '0x68A384D826D3678f78BB9FB1533c7E9577dACc0E',
-  //   initCodeHash: '',
-  //   baseTokens: [
-  //   ],
-  // },
+  {
+    key: 'stellaswap-moo',
+    name: 'StellaSwap',
+    chainId: ChainId.MOO,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/stellaswap.png',
+    webUrl: 'https://app.stellaswap.com/',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/tokens/stellaswap.json',
+    routerAddress: '0xd0A01ec574D1fC6652eDF79cb2F880fd47D34Ab1',
+    factoryAddress: '0x68A384D826D3678f78BB9FB1533c7E9577dACc0E',
+    initCodeHash:
+      '0x48a6ca3d52d0d0a6c53a83cc3c8688dd46ea4cb786b169ee959b95ad30f61643',
+    baseTokens: [
+      findDefaultToken(CoinKey.USDC, ChainId.MOO),
+      {
+        address: '0x0E358838ce72d5e61E0018a2ffaC4bEC5F4c88d2',
+        symbol: 'STELLA',
+        decimals: 18,
+        chainId: ChainId.MOO,
+      } as Token,
+      {
+        address: '0xAcc15dC74880C9944775448304B263D191c6077F',
+        symbol: 'WGLMR',
+        decimals: 18,
+        chainId: ChainId.MOO,
+      } as Token,
+    ],
+  },
   {
     key: 'beamswap-moo',
     name: 'BeamSwap',
@@ -798,8 +811,6 @@ export const supportedExchanges: Array<Exchange> = [
       },
     ],
   },
-
-  // TODO: For Moonbeam chain, we will add StellaSwap in the near future, they're still in development
 
   // 122 - Fuse Mainnet // TODO: incomplete
   // {
