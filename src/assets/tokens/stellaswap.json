@@ -1,11 +1,7 @@
 {
   "name": "StellaSwap Tokenlist",
   "logoURI": "https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/stellaswap.png",
-  "keywords": [
-    "audited",
-    "verified",
-    "special tokens"
-  ],
+  "keywords": ["audited", "verified", "special tokens"],
   "tags": {
     "type": {
       "name": "Li.Fi",
