@@ -756,11 +756,16 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x48a6ca3d52d0d0a6c53a83cc3c8688dd46ea4cb786b169ee959b95ad30f61643',
     baseTokens: [
-      findDefaultToken(CoinKey.USDC, ChainId.MOO),
       {
         address: '0x0E358838ce72d5e61E0018a2ffaC4bEC5F4c88d2',
         symbol: 'STELLA',
         decimals: 18,
+        chainId: ChainId.MOO,
+      } as Token,
+      {
+        address: '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b',
+        symbol: 'USDC',
+        decimals: 6,
         chainId: ChainId.MOO,
       } as Token,
       {
