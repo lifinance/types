@@ -83,6 +83,9 @@ export enum ChainKey {
   MOO = 'moo',
   MAM = 'mam',
   AUR = 'aur',
+  TER = 'TER',
+  OAS = 'OAS',
+  SOL = 'SOL',
 
   // Testnets
   ROP = 'rop',
@@ -100,6 +103,9 @@ export enum ChainKey {
   FUST = 'fust',
   TLOT = 'tlot',
   RSKT = 'rskt',
+  SOLT = 'solt',
+  OAST = 'solt',
+  TERT = 'solt',
 }
 
 export enum ChainId {
@@ -134,6 +140,9 @@ export enum ChainId {
   MOO = 1284,
   MAM = 1088,
   AUR = 1313161554,
+  SOL = 1151111081099710,
+  TER = 1161011141099710,
+  OAS = 111971151099710,
 
   // Testnets
   ROP = 3,
@@ -151,6 +160,9 @@ export enum ChainId {
   FUST = 123,
   TLOT = 41,
   RSKT = 31,
+  SOLT = 11511110811610111,
+  TERT = 11610111411610111,
+  OAST = 1119711511610111,
 }
 
 export interface Token {

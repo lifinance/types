@@ -9,6 +9,7 @@ export enum BridgeTool {
   avalanche = 'avalanche',
   optimism = 'optimism',
   across = 'across',
+  portal = 'portal',
 }
 
 export interface Bridge {
