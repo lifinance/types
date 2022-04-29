@@ -163,6 +163,10 @@ export interface ChainsResponse {
   chains: Chain[]
 }
 
+export interface ToolsRequest {
+  chains?: ChainId[]
+}
+
 export type ToolsResponse = {
   exchanges: Pick<Exchange | ExchangeAggregator, 'key' | 'name' | 'logoURI'>[]
   bridges: Pick<Bridge, 'key' | 'name' | 'logoURI'>[]
@@ -187,7 +191,7 @@ export declare class LifiAPI {
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
 
-  getTools(): ToolsResponse
+  getTools(request: ToolsRequest): ToolsResponse
 
   getChains(): ChainsResponse
 
