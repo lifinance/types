@@ -83,9 +83,9 @@ export enum ChainKey {
   MOO = 'moo',
   MAM = 'mam',
   AUR = 'aur',
-  TER = 'TER',
-  OAS = 'OAS',
-  SOL = 'SOL',
+  TER = 'sol',
+  OAS = 'sol',
+  SOL = 'sol',
 
   // Testnets
   ROP = 'rop',
