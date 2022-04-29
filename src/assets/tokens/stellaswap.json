@@ -136,7 +136,7 @@
       "symbol": "ceBUSD",
       "name": "Celer BUSD",
       "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/assets/main/tokenlist/0xCb4A7569a61300C50Cf80A2be16329AD9F5F8F9e/logo.png"
+      "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0xCb4A7569a61300C50Cf80A2be16329AD9F5F8F9e/logo.png"
     },
     {
       "chainId": 1284,
