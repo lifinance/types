@@ -164,8 +164,8 @@ export interface ChainsResponse {
 }
 
 export type ToolsResponse = {
-  exchanges: Pick<ExchangeDefinition, 'tool'>[]
-  bridges: Pick<BridgeDefinition, 'tool'>[]
+  exchanges: Pick<Exchange | ExchangeAggregator, 'key' | 'name' | 'logoURI'>[]
+  bridges: Pick<Bridge, 'key' | 'name' | 'logoURI'>[]
 }
 
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
