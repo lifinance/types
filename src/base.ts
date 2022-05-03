@@ -140,9 +140,9 @@ export enum ChainId {
   MOO = 1284,
   MAM = 1088,
   AUR = 1313161554,
-  SOL = 1151111081099710,
-  TER = 1161011141099710,
-  OAS = 111971151099710,
+  SOL = 1151111081099710, // this id is made up by the LiFi team!
+  TER = 1161011141099710, // this id is made up by the LiFi team!
+  OAS = 111971151099710, // this id is made up by the LiFi team!
 
   // Testnets
   ROP = 3,
@@ -160,9 +160,9 @@ export enum ChainId {
   FUST = 123,
   TLOT = 41,
   RSKT = 31,
-  SOLT = 11511110811610111,
-  TERT = 11610111411610111,
-  OAST = 1119711511610111,
+  SOLT = 11511110811610111, // this id is made up by the LiFi team!
+  TERT = 11610111411610111, // this id is made up by the LiFi team!
+  OAST = 1119711511610111, // this id is made up by the LiFi team!
 }
 
 export interface Token {
