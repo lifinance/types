@@ -6,6 +6,8 @@ import {
   Step,
   Token,
 } from '.'
+import { Bridge } from './bridges'
+import { Exchange, ExchangeAggregator } from './exchanges'
 
 export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
 
@@ -107,7 +109,7 @@ export interface QuoteRequest extends ToolConfiguration {
 
   toChain: number | string
   toToken: string
-  // toAddress?: string // TODO: add bridge support first
+  toAddress?: string
 
   order?: Order
   slippage?: number | string
@@ -161,6 +163,15 @@ export interface ChainsResponse {
   chains: Chain[]
 }
 
+export interface ToolsRequest {
+  chains?: ChainId[]
+}
+
+export type ToolsResponse = {
+  exchanges: Pick<Exchange | ExchangeAggregator, 'key' | 'name' | 'logoURI'>[]
+  bridges: Pick<Bridge, 'key' | 'name' | 'logoURI'>[]
+}
+
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
 
 export declare class LifiAPI {
@@ -179,6 +190,8 @@ export declare class LifiAPI {
   getQuote(request: QuoteRequest): Promise<Step>
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
+
+  getTools(request: ToolsRequest): ToolsResponse
 
   getChains(): ChainsResponse
 
