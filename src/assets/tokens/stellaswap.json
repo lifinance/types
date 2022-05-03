@@ -38,7 +38,7 @@
       "chainId": 1284,
       "address": "0x765277EebeCA2e31912C9946eAe1021199B39C61",
       "symbol": "DAI",
-      "name": "anyDAI",
+      "name": "anyDAI | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x765277EebeCA2e31912C9946eAe1021199B39C61/logo.png"
     },
@@ -46,7 +46,7 @@
       "chainId": 1284,
       "address": "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f",
       "symbol": "ETH",
-      "name": "anyETH",
+      "name": "anyETH | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0xfA9343C3897324496A05fC75abeD6bAC29f8A40f/logo.png"
     },
@@ -54,7 +54,7 @@
       "chainId": 1284,
       "address": "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",
       "symbol": "USDC",
-      "name": "anyUSDC",
+      "name": "anyUSDC | Multichain",
       "decimals": 6,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b/logo.png"
     },
@@ -62,7 +62,7 @@
       "chainId": 1284,
       "address": "0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73",
       "symbol": "USDT",
-      "name": "anyUSDT",
+      "name": "anyUSDT | Multichain",
       "decimals": 6,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73/logo.png"
     },
@@ -70,7 +70,7 @@
       "chainId": 1284,
       "address": "0x922D641a426DcFFaeF11680e5358F34d97d112E1",
       "symbol": "WBTC",
-      "name": "anyWBTC",
+      "name": "anyWBTC | Multichain",
       "decimals": 8,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x922D641a426DcFFaeF11680e5358F34d97d112E1/logo.png"
     },
@@ -78,7 +78,7 @@
       "chainId": 1284,
       "address": "0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F",
       "symbol": "BUSD",
-      "name": "anyBUSD",
+      "name": "anyBUSD | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F/logo.png"
     },
@@ -86,7 +86,7 @@
       "chainId": 1284,
       "address": "0xc9BAA8cfdDe8E328787E29b4B078abf2DaDc2055",
       "symbol": "BNB",
-      "name": "anyBNB",
+      "name": "anyBNB | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0xc9BAA8cfdDe8E328787E29b4B078abf2DaDc2055/logo.png"
     },
@@ -94,7 +94,7 @@
       "chainId": 1284,
       "address": "0x3405A1bd46B85c5C029483FbECf2F3E611026e45",
       "symbol": "MATIC",
-      "name": "anyMATIC",
+      "name": "anyMATIC | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x3405A1bd46B85c5C029483FbECf2F3E611026e45/logo.png"
     },
@@ -102,7 +102,7 @@
       "chainId": 1284,
       "address": "0xC19281F22A075E0F10351cd5D6Ea9f0AC63d4327",
       "symbol": "FTM",
-      "name": "anyFTM",
+      "name": "anyFTM | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0xC19281F22A075E0F10351cd5D6Ea9f0AC63d4327/logo.png"
     },
@@ -110,7 +110,7 @@
       "chainId": 1284,
       "address": "0x4792C1EcB969B036eb51330c63bD27899A13D84e",
       "symbol": "AVAX",
-      "name": "anyAVAX",
+      "name": "anyAVAX | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x4792C1EcB969B036eb51330c63bD27899A13D84e/logo.png"
     },
@@ -136,21 +136,13 @@
       "symbol": "ceBUSD",
       "name": "Celer BUSD",
       "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/assets/main/tokenlist/0xCb4A7569a61300C50Cf80A2be16329AD9F5F8F9e/logo.png"
-    },
-    {
-      "chainId": 1284,
-      "address": "0xCb4A7569a61300C50Cf80A2be16329AD9F5F8F9e",
-      "symbol": "ceBUSD",
-      "name": "Celer BUSD",
-      "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0xCb4A7569a61300C50Cf80A2be16329AD9F5F8F9e/logo.png"
     },
     {
       "chainId": 1284,
       "address": "0x27292cf0016E5dF1d8b37306B2A98588aCbD6fCA",
       "symbol": "ATOM",
-      "name": "axATOM",
+      "name": "axATOM | Axelar",
       "decimals": 6,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x27292cf0016E5dF1d8b37306B2A98588aCbD6fCA/logo.png"
     },
@@ -158,7 +150,7 @@
       "chainId": 1284,
       "address": "0x085416975fe14C2A731a97eC38B9bF8135231F62",
       "symbol": "UST",
-      "name": "axUST",
+      "name": "axUST | Axelar",
       "decimals": 6,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x085416975fe14C2A731a97eC38B9bF8135231F62/logo.png"
     },
@@ -166,7 +158,7 @@
       "chainId": 1284,
       "address": "0x3D632d9e1a60a0880Dd45E61f279D919b5748377",
       "symbol": "ApeCoin",
-      "name": "anyAPE",
+      "name": "anyAPE | Multichain",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x3D632d9e1a60a0880Dd45E61f279D919b5748377/logo.png"
     },
@@ -174,7 +166,7 @@
       "chainId": 1284,
       "address": "0x31DAB3430f3081dfF3Ccd80F17AD98583437B213",
       "symbol": "LUNA",
-      "name": "axLUNA",
+      "name": "axLUNA | Axelar",
       "decimals": 6,
       "logoURI": "https://raw.githubusercontent.com/stellaswap/assets/main/tokenlist/0x31DAB3430f3081dfF3Ccd80F17AD98583437B213/logo.png"
     }
