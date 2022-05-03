@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.8](https://github.com/lifinance/types/compare/v0.11.7...v0.11.8) (2022-05-03)
+
+
+### Features
+
+* added required types for LF-672 ([#48](https://github.com/lifinance/types/issues/48)) ([9ff0c74](https://github.com/lifinance/types/commit/9ff0c74b0b1556448ab063d29879120ea5a1a8f9))
+* added supporting types for LF-608 ([#53](https://github.com/lifinance/types/issues/53)) ([48454c5](https://github.com/lifinance/types/commit/48454c53bdac399a12ae2190931cdc9bffc1dc31))
+
 ### [0.11.7](https://github.com/lifinance/types/compare/v0.11.6...v0.11.7) (2022-04-26)
 
 
