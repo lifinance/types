@@ -107,7 +107,7 @@ export interface QuoteRequest extends ToolConfiguration {
 
   toChain: number | string
   toToken: string
-  // toAddress?: string // TODO: add bridge support first
+  toAddress?: string
 
   order?: Order
   slippage?: number | string
