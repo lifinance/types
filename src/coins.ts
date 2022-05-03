@@ -591,15 +591,22 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.TEST,
     name: CoinKey.TEST,
-    logoURI: 'https://xpollinate.io/icon192.png',
+    logoURI: 'https://connextscan.io/logos/logo_white.png',
     verified: false,
     chains: {
-      [ChainId.ROP]: {
-        address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
+      // New Amarok Token
+      [ChainId.KOV]: {
+        address: '0xb5aabb55385bfbe31d627e2a717a7b189dda4f8f',
         decimals: 18,
       },
       [ChainId.RIN]: {
-        address: '0x9ac2c46d7acc21c881154d57c0dc1c55a3139198',
+        address: '0xb7b1d3cc52e658922b2af00c5729001cea98142c',
+        decimals: 18,
+      },
+
+      // Old NXTP Token
+      [ChainId.ROP]: {
+        address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
         decimals: 18,
       },
       [ChainId.GOR]: {

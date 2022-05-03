@@ -1024,10 +1024,7 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
-    baseTokens: [
-      findDefaultToken(CoinKey.ETH, ChainId.ROP),
-      findDefaultToken(CoinKey.WETH, ChainId.ROP),
-    ],
+    baseTokens: [findWrappedGasOnChain(ChainId.ROP)],
   },
 
   // TODO: sushiswap does not work properly
@@ -1057,10 +1054,7 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
-    baseTokens: [
-      findDefaultToken(CoinKey.ETH, ChainId.RIN),
-      findDefaultToken(CoinKey.WETH, ChainId.RIN),
-    ],
+    baseTokens: [findWrappedGasOnChain(ChainId.RIN)],
   },
 
   // TODO: sushiswap does not work properly
@@ -1090,10 +1084,7 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
-    baseTokens: [
-      findDefaultToken(CoinKey.ETH, ChainId.GOR),
-      findDefaultToken(CoinKey.WETH, ChainId.GOR),
-    ],
+    baseTokens: [findWrappedGasOnChain(ChainId.GOR)],
   },
 
   // TODO: sushiswap does not work properly
@@ -1124,10 +1115,7 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
     initCodeHash:
       '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
-    baseTokens: [
-      findDefaultToken(CoinKey.ETH, ChainId.KOV),
-      findDefaultToken(CoinKey.WETH, ChainId.KOV),
-    ],
+    baseTokens: [findWrappedGasOnChain(ChainId.KOV)],
   },
 
   // TODO: sushiswap does not work properly
@@ -1160,7 +1148,7 @@ export const supportedExchanges: Array<Exchange> = [
     factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     initCodeHash:
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
-    baseTokens: [],
+    baseTokens: [findWrappedGasOnChain(ChainId.ONET)],
   },
 
   // 97 - Binance Smart Chain TESTNET
