@@ -63,6 +63,7 @@ export type Status =
   | 'DONE'
   | 'RESUME'
   | 'CANCELLED'
+
 type AcceptableMessages = string | any
 export type ProcessMessage =
   | AcceptableMessages
@@ -70,6 +71,7 @@ export type ProcessMessage =
       message: AcceptableMessages
       footer: AcceptableMessages
     }
+
 export type ProcessType =
   | 'TOKEN_ALLOWANCE'
   | 'SWITCH_CHAIN'
