@@ -172,6 +172,14 @@ export type ToolsResponse = {
   bridges: Pick<Bridge, 'key' | 'name' | 'logoURI'>[]
 }
 
+export type TokensRequest = {
+  chains?: ChainId[]
+}
+
+export type TokensResponse = {
+  tokens: { [chainId: number]: Token[] }
+}
+
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
 
 export declare class LifiAPI {
@@ -186,6 +194,8 @@ export declare class LifiAPI {
   getStepTransaction(step: Step): Promise<Step>
 
   getToken(request: GetTokenRequest): Promise<Token>
+
+  getTokens(request: TokensRequest): TokensResponse
 
   getQuote(request: QuoteRequest): Promise<Step>
 
