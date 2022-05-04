@@ -53,7 +53,7 @@ export interface Estimate {
 }
 
 // EXECUTION
-export declare type Status =
+export type Status =
   | 'NOT_STARTED'
   | 'STARTED'
   | 'ACTION_REQUIRED'
@@ -63,8 +63,8 @@ export declare type Status =
   | 'DONE'
   | 'RESUME'
   | 'CANCELLED'
-declare type AcceptableMessages = string | any
-export declare type ProcessMessage =
+type AcceptableMessages = string | any
+export type ProcessMessage =
   | AcceptableMessages
   | {
       message: AcceptableMessages
