@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/lifinance/types/compare/v0.11.9...v0.12.0) (2022-05-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* add process types (#55)
+
+### Features
+
+* add process types ([#55](https://github.com/lifinance/types/issues/55)) ([9c52305](https://github.com/lifinance/types/commit/9c5230546c4d57eae62b7ef0e368657fa43f169d))
+
 ### [0.11.9](https://github.com/lifinance/types/compare/v0.11.8...v0.11.9) (2022-05-04)
 
 
