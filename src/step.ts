@@ -55,6 +55,7 @@ export interface Estimate {
 // EXECUTION
 export type Status =
   | 'NOT_STARTED'
+  | 'STARTED'
   | 'ACTION_REQUIRED'
   | 'CHAIN_SWITCH_REQUIRED'
   | 'PENDING'
@@ -66,7 +67,18 @@ export type Status =
 type AcceptableMessages = string | any
 export type ProcessMessage =
   | AcceptableMessages
-  | { message: AcceptableMessages; footer: AcceptableMessages }
+  | {
+      message: AcceptableMessages
+      footer: AcceptableMessages
+    }
+
+export type ProcessType =
+  | 'TOKEN_ALLOWANCE'
+  | 'SWITCH_CHAIN'
+  | 'SWAP'
+  | 'CROSS_CHAIN'
+  | 'RECEIVING_CHAIN'
+  | 'TRANSACTION'
 
 export interface Process {
   startedAt: number
@@ -77,6 +89,9 @@ export interface Process {
   errorCode?: any
   message: ProcessMessage
   status: Status
+  type: ProcessType
+  txHash?: string
+  txLink?: string
 
   // additional information
   [key: string]: any
