@@ -78,6 +78,7 @@ export type ProcessType =
   | 'SWAP'
   | 'CROSS_CHAIN'
   | 'RECEIVING_CHAIN'
+  | 'TRANSACTION'
 
 export interface Process {
   startedAt: number
