@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.9](https://github.com/lifinance/types/compare/v0.11.8...v0.11.9) (2022-05-04)
+
+
+### Features
+
+* **api:** add getTokens endpoint ([#54](https://github.com/lifinance/types/issues/54)) ([0f4895b](https://github.com/lifinance/types/commit/0f4895b9800163df926a86f08d7a9848731dbb20))
+
 ### [0.11.8](https://github.com/lifinance/types/compare/v0.11.7...v0.11.8) (2022-05-03)
 
 
