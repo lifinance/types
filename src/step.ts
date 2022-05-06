@@ -64,14 +64,6 @@ export type Status =
   | 'RESUME'
   | 'CANCELLED'
 
-type AcceptableMessages = string | any
-export type ProcessMessage =
-  | AcceptableMessages
-  | {
-      message: AcceptableMessages
-      footer: AcceptableMessages
-    }
-
 export type ProcessType =
   | 'TOKEN_ALLOWANCE'
   | 'SWITCH_CHAIN'
@@ -84,14 +76,16 @@ export interface Process {
   startedAt: number
   doneAt?: number
   failedAt?: number
-  errorMessage?: any
-  htmlErrorMessage?: any
-  errorCode?: any
-  message: ProcessMessage
-  status: Status
   type: ProcessType
+  status: Status
+  message?: string
   txHash?: string
   txLink?: string
+  error?: {
+    code: string | number
+    message: string
+    htmlMessage?: string
+  }
 
   // additional information
   [key: string]: any
