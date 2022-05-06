@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { providers } from 'ethers'
 import { Token } from './base'
+import { Bridge } from './bridges'
+import { Exchange, ExchangeAggregator } from './exchanges'
 
 export interface FeeCost {
   name: string
@@ -103,6 +105,10 @@ export interface StepBase {
   id: string
   type: StepType
   tool: StepTool
+  toolDetails: Pick<
+    ExchangeAggregator | Exchange | Bridge,
+    'key' | 'name' | 'logoURI'
+  >
   integrator?: string
   referrer?: string
   action: Action
