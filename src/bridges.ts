@@ -9,6 +9,7 @@ export enum BridgeTool {
   avalanche = 'avalanche',
   optimism = 'optimism',
   across = 'across',
+  portal = 'portal',
 }
 
 export interface Bridge {
@@ -142,6 +143,16 @@ export const supportedBridges: Array<Bridge> = [
     discordUrl: 'https://discord.gg/t4SZySkn',
     supportUrl: 'https://discord.gg/t4SZySkn',
     docsUrl: 'https://docs.across.to/',
+  },
+  {
+    key: BridgeTool.portal,
+    name: 'Wormhole Portal',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/wormhole_portal.png',
+    bridgeUrl: 'https://portalbridge.com/',
+    discordUrl: 'https://discord.com/invite/wormholecrypto',
+    supportUrl: 'https://discord.com/invite/wormholecrypto',
+    docsUrl: 'https://docs.wormholenetwork.com/wormhole/',
   },
   // {
   //   key: BridgeTool.,
