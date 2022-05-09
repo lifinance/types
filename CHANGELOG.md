@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1](https://github.com/lifinance/types/compare/v0.13.0...v0.13.1) (2022-05-09)
+
+
+### Features
+
+* supporting types for LF-770 ([#57](https://github.com/lifinance/types/issues/57)) ([4b36e61](https://github.com/lifinance/types/commit/4b36e61db70f137623f761a9047fa2301cb5f736))
+* supporting types for portal bridge ([#58](https://github.com/lifinance/types/issues/58)) ([0b813e3](https://github.com/lifinance/types/commit/0b813e3846c1b32c418e4c01cf3f8577aa8baf2b))
+
 ## [0.13.0](https://github.com/lifinance/types/compare/v0.12.1...v0.13.0) (2022-05-06)
 
 
