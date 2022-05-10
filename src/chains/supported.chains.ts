@@ -1,38 +1,16 @@
-import { BigNumber } from 'ethers'
-import { ChainId, ChainKey, CoinKey } from './base'
-import { multicallAddresses } from './multicall'
+/*
+    This file is for legacy compatibility only.
+    Data regarding supported chains *should* be fetched from the API.
+    This file is only used to provide legacy compatibility for existing tools.
+*/
 
-export interface Chain {
-  key: ChainKey
-  name: string
-  coin: CoinKey
-  id: number
-  mainnet: boolean
-  logoURI?: string
-  tokenlistUrl?: string
-  faucetUrls?: string[]
-  metamask: AddEthereumChainParameter
-  multicallAddress?: string
-}
-
-export interface AddEthereumChainParameter {
-  chainId: string
-  blockExplorerUrls: string[]
-  chainName: string
-  nativeCurrency: {
-    name: string
-    symbol: string
-    decimals: number
-  }
-  rpcUrls: string[]
-}
-
-export const prefixChainId = (chainId: number): string => {
-  return '0x' + BigNumber.from(chainId)._hex.split('0x')[1].replace(/\b0+/g, '')
-}
+import { EVMChain, prefixChainId } from './EVMChain'
+import { SolanaChain } from './SolanaChain'
+import { ChainId, ChainKey, CoinKey } from '../base'
+import { multicallAddresses } from '../multicall'
 
 // chainNames aligned with https://github.com/ethereum-lists/chains/tree/master/_data/chains
-export const supportedChains: Array<Chain> = [
+export const supportedEVMChains: EVMChain[] = [
   // 1 - Ethereum
   {
     key: ChainKey.ETH,
@@ -1202,25 +1180,20 @@ export const supportedChains: Array<Chain> = [
       rpcUrls: ['https://public-node.testnet.rsk.co'],
     },
   },
-
   // https://faucet.buni.finance/
   // solana faucet: https://stakely.io/faucet/solana-sol
   // kucoin faucet: https://stakely.io/faucet/kucoin-kcc-kcs
   // Velas faucet: https://stakely.io/faucet/velas-vlx
 ]
 
-export const getChainByKey = (chainKey: ChainKey): Chain => {
-  const chain = supportedChains.find((chain) => chain.key === chainKey)
-  if (!chain) {
-    throw new Error('Invalid chainKey')
-  }
-  return chain
-}
-
-export const getChainById = (chainId: number): Chain => {
-  const chain = supportedChains.find((chain) => chain.id === chainId)
-  if (!chain) {
-    throw new Error('Invalid chainId')
-  }
-  return chain
-}
+export const supportedSolanaChains: SolanaChain[] = [
+  {
+    key: ChainKey.SOL,
+    name: 'Solana',
+    coin: CoinKey.SOL,
+    id: ChainId.SOL,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/solana.png',
+  },
+]
