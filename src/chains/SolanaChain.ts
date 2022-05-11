@@ -1,3 +1,3 @@
-import { Chain } from './Chain'
+import { _Chain } from './Chain'
 
-export type SolanaChain = Chain
+export type SolanaChain = _Chain

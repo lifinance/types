@@ -1,15 +1,16 @@
 import { ChainKey } from '../base'
-import { Chain } from './Chain'
+import { Chain } from './EVMChain'
 import { EVMChain } from './EVMChain'
 import { SolanaChain } from './SolanaChain'
 import { supportedEVMChains, supportedSolanaChains } from './supported.chains'
 
 const supportedChains: Chain[] = [
-  ...supportedSolanaChains,
+  // This will be added in the future
+  // ...supportedSolanaChains,
   ...supportedEVMChains,
 ]
 
-export const getChainByKey = (chainKey: ChainKey): EVMChain | SolanaChain => {
+export const getChainByKey = (chainKey: ChainKey): Chain => {
   const chain = supportedChains.find((c) => c.key === chainKey)
   if (!chain) {
     throw new Error('Invalid chainKey')
@@ -17,7 +18,7 @@ export const getChainByKey = (chainKey: ChainKey): EVMChain | SolanaChain => {
   return chain
 }
 
-export const getChainById = (chainId: number): EVMChain | SolanaChain => {
+export const getChainById = (chainId: number): Chain => {
   const chain = supportedChains.find((c) => c.id === chainId)
   if (!chain) {
     throw new Error('Invalid chainId')
