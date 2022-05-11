@@ -1197,3 +1197,8 @@ export const supportedSolanaChains: SolanaChain[] = [
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/solana.png',
   },
 ]
+
+// This assignment is required to avoid breaking
+// changes with the new non EVM support types release
+// This will be removed in the future
+export const supportedChains = supportedEVMChains
