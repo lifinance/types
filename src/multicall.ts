@@ -14,7 +14,7 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.AVA]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
   [ChainId.ARB]: '0x80C7DD17B01855a6D2347444a0FCC36136a314de',
   [ChainId.HEC]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
-  [ChainId.OPT]: '0x142e2feac30d7fc3b61f9ee85fccad8e560154cc',
+  [ChainId.OPT]: '0x2DC0E2aa608532Da689e89e237dF582B783E552C',
   [ChainId.ONE]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
   [ChainId.FSN]: '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F',
   [ChainId.MOR]: '0x270f2F35bED92B7A59eA5F08F6B3fd34c8D9D9b5',
@@ -29,7 +29,7 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.CRO]: '0x5e954f5972EC6BFc7dECd75779F10d848230345F',
   // [ChainId.BOB]: '0xfb91c019D9F12A0f9c23B4762fa64A34F8daDb4A',
   // [ChainId.SHI]: '', // TODO
-  // [ChainId.GL1]: '', // TODO
+  // [ChainId.GL1]: '', // TODOth
   // [ChainId.RSK]: '', // TODO
   // [ChainId.TBW]: '', // TODO
   // [ChainId.VEL]: '', // TODO
