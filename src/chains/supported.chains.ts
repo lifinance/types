@@ -1,41 +1,21 @@
-import { BigNumber } from 'ethers'
-import { ChainId, ChainKey, CoinKey } from './base'
-import { multicallAddresses } from './multicall'
+/*
+    This file is for legacy compatibility only.
+    Data regarding supported chains *should* be fetched from the API.
+    This file is only used to provide legacy compatibility for existing tools.
+*/
 
-export interface Chain {
-  key: ChainKey
-  name: string
-  coin: CoinKey
-  id: number
-  mainnet: boolean
-  logoURI?: string
-  tokenlistUrl?: string
-  faucetUrls?: string[]
-  metamask: AddEthereumChainParameter
-  multicallAddress?: string
-}
-
-export interface AddEthereumChainParameter {
-  chainId: string
-  blockExplorerUrls: string[]
-  chainName: string
-  nativeCurrency: {
-    name: string
-    symbol: string
-    decimals: number
-  }
-  rpcUrls: string[]
-}
-
-export const prefixChainId = (chainId: number): string => {
-  return '0x' + BigNumber.from(chainId)._hex.split('0x')[1].replace(/\b0+/g, '')
-}
+import { EVMChain, prefixChainId } from './EVMChain'
+import { SolanaChain } from './SolanaChain'
+import { ChainId, ChainKey, CoinKey } from '../base'
+import { multicallAddresses } from '../multicall'
+import { ChainType } from './Chain'
 
 // chainNames aligned with https://github.com/ethereum-lists/chains/tree/master/_data/chains
-export const supportedChains: Array<Chain> = [
+export const supportedEVMChains: EVMChain[] = [
   // 1 - Ethereum
   {
     key: ChainKey.ETH,
+    chainType: ChainType.EVM,
     name: 'Ethereum',
     coin: CoinKey.ETH,
     id: 1,
@@ -62,6 +42,7 @@ export const supportedChains: Array<Chain> = [
   // 137 - Polygon
   {
     key: ChainKey.POL,
+    chainType: ChainType.EVM,
     name: 'Polygon',
     coin: CoinKey.MATIC,
     id: 137,
@@ -95,6 +76,7 @@ export const supportedChains: Array<Chain> = [
   // 56 - Binance Smart Chain
   {
     key: ChainKey.BSC,
+    chainType: ChainType.EVM,
     name: 'BSC',
     coin: CoinKey.BNB,
     id: 56,
@@ -126,6 +108,7 @@ export const supportedChains: Array<Chain> = [
   // 100 - Gnosis
   {
     key: ChainKey.DAI,
+    chainType: ChainType.EVM,
     name: 'Gnosis',
     coin: CoinKey.DAI,
     id: 100,
@@ -156,6 +139,7 @@ export const supportedChains: Array<Chain> = [
   // 250 - Fantom
   {
     key: ChainKey.FTM,
+    chainType: ChainType.EVM,
     name: 'Fantom',
     coin: CoinKey.FTM,
     id: 250,
@@ -186,6 +170,7 @@ export const supportedChains: Array<Chain> = [
   // 66 - OKExCHain
   {
     key: ChainKey.OKT,
+    chainType: ChainType.EVM,
     name: 'OKExCHain',
     coin: CoinKey.OKT,
     id: 66,
@@ -212,6 +197,7 @@ export const supportedChains: Array<Chain> = [
   // 43114 - Avalanche
   {
     key: ChainKey.AVA,
+    chainType: ChainType.EVM,
     name: 'Avalanche',
     coin: CoinKey.AVAX,
     id: 43114,
@@ -238,6 +224,7 @@ export const supportedChains: Array<Chain> = [
   // 42161 - Arbitrum One
   {
     key: ChainKey.ARB,
+    chainType: ChainType.EVM,
     name: 'Arbitrum One',
     coin: CoinKey.ETH,
     id: 42161,
@@ -264,6 +251,7 @@ export const supportedChains: Array<Chain> = [
   // 128 - Huobi ECO Chain Mainnet
   {
     key: ChainKey.HEC,
+    chainType: ChainType.EVM,
     name: 'Huobi ECO Chain Mainnet',
     coin: CoinKey.HT,
     id: 128,
@@ -289,6 +277,7 @@ export const supportedChains: Array<Chain> = [
   // 10 - Optimistic Ethereum
   {
     key: ChainKey.OPT,
+    chainType: ChainType.EVM,
     name: 'Optimistic Ethereum',
     coin: CoinKey.ETH,
     id: 10,
@@ -315,6 +304,7 @@ export const supportedChains: Array<Chain> = [
   // 32659 - Fusion (anyswap)
   {
     key: ChainKey.FSN,
+    chainType: ChainType.EVM,
     name: 'Fusion Mainnet',
     coin: CoinKey.FSN,
     id: 32659,
@@ -341,6 +331,7 @@ export const supportedChains: Array<Chain> = [
   // 1666600000 - Harmony Mainnet Shard 0
   {
     key: ChainKey.ONE,
+    chainType: ChainType.EVM,
     name: 'Harmony',
     coin: CoinKey.ONE,
     id: 1666600000,
@@ -370,6 +361,7 @@ export const supportedChains: Array<Chain> = [
   // 1285 - Moonriver
   {
     key: ChainKey.MOR,
+    chainType: ChainType.EVM,
     name: 'Moonriver',
     coin: CoinKey.MOVR,
     id: 1285,
@@ -397,6 +389,7 @@ export const supportedChains: Array<Chain> = [
   // 1284 Moonbeam
   {
     key: ChainKey.MOO,
+    chainType: ChainType.EVM,
     name: 'Moonbeam',
     coin: CoinKey.GLMR,
     id: 1284,
@@ -424,6 +417,7 @@ export const supportedChains: Array<Chain> = [
   // 2 - Expanse Network
   {
     key: ChainKey.EXP,
+    chainType: ChainType.EVM,
     name: 'Expanse Network',
     coin: CoinKey.EXP,
     id: 2,
@@ -448,6 +442,7 @@ export const supportedChains: Array<Chain> = [
   // 7 - ThaiChain
   {
     key: ChainKey.TCH,
+    chainType: ChainType.EVM,
     name: 'ThaiChain',
     coin: CoinKey.TCH,
     id: 7,
@@ -470,6 +465,7 @@ export const supportedChains: Array<Chain> = [
   // 8 - Ubiq
   {
     key: ChainKey.UBQ,
+    chainType: ChainType.EVM,
     name: 'Ubiq',
     coin: CoinKey.UBQ,
     id: 8,
@@ -492,6 +488,7 @@ export const supportedChains: Array<Chain> = [
   // 11 - Metadium Mainnet
   {
     key: ChainKey.MET,
+    chainType: ChainType.EVM,
     name: 'Metadium Mainnet',
     coin: CoinKey.META,
     id: 11,
@@ -514,6 +511,7 @@ export const supportedChains: Array<Chain> = [
   // 15 - Diode Prenet
   {
     key: ChainKey.DIO,
+    chainType: ChainType.EVM,
     name: 'DIODE',
     coin: CoinKey.DIODE,
     id: 15,
@@ -536,6 +534,7 @@ export const supportedChains: Array<Chain> = [
   // 42220 Celo Mainnet
   {
     key: ChainKey.CEL,
+    chainType: ChainType.EVM,
     name: 'CELO',
     coin: CoinKey.CELO,
     id: 42220,
@@ -566,6 +565,7 @@ export const supportedChains: Array<Chain> = [
   // 122 Fuse Mainnet
   {
     key: ChainKey.FUS,
+    chainType: ChainType.EVM,
     name: 'FUSE',
     coin: CoinKey.FUSE,
     id: 122,
@@ -592,6 +592,7 @@ export const supportedChains: Array<Chain> = [
   // 40 Telos EVM Mainnet
   {
     key: ChainKey.TLO,
+    chainType: ChainType.EVM,
     name: 'Telos',
     coin: CoinKey.TLOS,
     id: 40,
@@ -616,6 +617,7 @@ export const supportedChains: Array<Chain> = [
   // 25 Cronos Mainnet Beta
   {
     key: ChainKey.CRO,
+    chainType: ChainType.EVM,
     name: 'Cronos',
     coin: CoinKey.CRO,
     id: 25,
@@ -642,6 +644,7 @@ export const supportedChains: Array<Chain> = [
   // 288 Boba Network
   {
     key: ChainKey.BOB,
+    chainType: ChainType.EVM,
     name: 'Boba',
     coin: CoinKey.ETH,
     id: 288,
@@ -669,6 +672,7 @@ export const supportedChains: Array<Chain> = [
   // 27 ShibaChain
   {
     key: ChainKey.SHI,
+    chainType: ChainType.EVM,
     name: 'Shiba',
     coin: CoinKey.SHIB,
     id: 27,
@@ -691,6 +695,7 @@ export const supportedChains: Array<Chain> = [
   // 29 Genesis L1
   {
     key: ChainKey.GL1,
+    chainType: ChainType.EVM,
     name: 'Genesis L1',
     coin: CoinKey.L1,
     id: 29,
@@ -713,6 +718,7 @@ export const supportedChains: Array<Chain> = [
   // 30 RSK Mainnet
   {
     key: ChainKey.RSK,
+    chainType: ChainType.EVM,
     name: 'RSK Mainnet',
     coin: CoinKey.RBTC,
     id: 30,
@@ -735,6 +741,7 @@ export const supportedChains: Array<Chain> = [
   // 35 TBWG Chain
   {
     key: ChainKey.TBW,
+    chainType: ChainType.EVM,
     name: 'TBWG',
     coin: CoinKey.TBG,
     id: 35,
@@ -757,6 +764,7 @@ export const supportedChains: Array<Chain> = [
   // 106 Velas EVM Mainnet
   {
     key: ChainKey.VEL,
+    chainType: ChainType.EVM,
     name: 'Velas',
     coin: CoinKey.VLX,
     id: 106,
@@ -779,6 +787,7 @@ export const supportedChains: Array<Chain> = [
   // 1088 Metis Andromeda Mainnet
   {
     key: ChainKey.MAM,
+    chainType: ChainType.EVM,
     name: 'Metis',
     coin: CoinKey.METIS,
     id: 1088,
@@ -805,6 +814,7 @@ export const supportedChains: Array<Chain> = [
   // 1313161554 Aurora Mainnet
   {
     key: ChainKey.AUR,
+    chainType: ChainType.EVM,
     name: 'Aurora Mainnet',
     coin: CoinKey.ETH,
     id: 1313161554,
@@ -832,6 +842,7 @@ export const supportedChains: Array<Chain> = [
   // 3 - Ropsten
   {
     key: ChainKey.ROP,
+    chainType: ChainType.EVM,
     name: 'Ropsten',
     coin: CoinKey.ETH,
     id: 3,
@@ -863,6 +874,7 @@ export const supportedChains: Array<Chain> = [
   // 4 - Rinkeby
   {
     key: ChainKey.RIN,
+    chainType: ChainType.EVM,
     name: 'Rinkeby',
     coin: CoinKey.ETH,
     id: 4,
@@ -891,6 +903,7 @@ export const supportedChains: Array<Chain> = [
   // 5 - Goerli
   {
     key: ChainKey.GOR,
+    chainType: ChainType.EVM,
     name: 'Goerli',
     coin: CoinKey.ETH,
     id: 5,
@@ -917,6 +930,7 @@ export const supportedChains: Array<Chain> = [
   // 12 - Metadium Testnet
   {
     key: ChainKey.METT,
+    chainType: ChainType.EVM,
     name: 'Metadium Testnet',
     coin: CoinKey.KAL,
     id: 12,
@@ -939,6 +953,7 @@ export const supportedChains: Array<Chain> = [
   // 13 - Diode Testnet Staging
   {
     key: ChainKey.DIOT,
+    chainType: ChainType.EVM,
     name: 'DIODE',
     coin: CoinKey.SDIODE,
     id: 13,
@@ -961,6 +976,7 @@ export const supportedChains: Array<Chain> = [
   // 42 - Kovan
   {
     key: ChainKey.KOV,
+    chainType: ChainType.EVM,
     name: 'Kovan',
     coin: CoinKey.ETH,
     id: 42,
@@ -988,6 +1004,7 @@ export const supportedChains: Array<Chain> = [
   // 80001 - Mumbai Polygon Testnet
   {
     key: ChainKey.MUM,
+    chainType: ChainType.EVM,
     name: 'Polygon Testnet',
     coin: CoinKey.MATIC,
     id: 80001,
@@ -1014,6 +1031,7 @@ export const supportedChains: Array<Chain> = [
   // 421611 - Arbitrum Testnet
   {
     key: ChainKey.ARBT,
+    chainType: ChainType.EVM,
     name: 'Arbitrum Testnet',
     coin: CoinKey.ETH,
     id: 421611,
@@ -1038,6 +1056,7 @@ export const supportedChains: Array<Chain> = [
   // 69 - Optimistic Ethereum (Kovan)
   {
     key: ChainKey.OPTT,
+    chainType: ChainType.EVM,
     name: 'Optimism Testnet',
     coin: CoinKey.ETH,
     id: 69,
@@ -1060,6 +1079,7 @@ export const supportedChains: Array<Chain> = [
   // 97 - Binance Smart Chain Testnet
   {
     key: ChainKey.BSCT,
+    chainType: ChainType.EVM,
     name: 'Binance Smart Chain Testnet',
     coin: CoinKey.BNB,
     id: 97,
@@ -1085,6 +1105,7 @@ export const supportedChains: Array<Chain> = [
   // 256 - Huobi ECO Chain Testnet
   {
     key: ChainKey.HECT,
+    chainType: ChainType.EVM,
     name: 'Huobi ECO Chain Testnet',
     coin: 'HTT' as CoinKey,
     id: 256,
@@ -1110,6 +1131,7 @@ export const supportedChains: Array<Chain> = [
   // 1666700000 - Harmony Testnet 0
   {
     key: ChainKey.ONET,
+    chainType: ChainType.EVM,
     name: 'Harmony Testnet',
     coin: CoinKey.ONE,
     id: 1666700000,
@@ -1138,6 +1160,7 @@ export const supportedChains: Array<Chain> = [
   // 123 Fuse Sparknet
   {
     key: ChainKey.FUST,
+    chainType: ChainType.EVM,
     name: 'SPARK',
     coin: CoinKey.SPARK,
     id: 123,
@@ -1160,6 +1183,7 @@ export const supportedChains: Array<Chain> = [
   // 41 Telos EVM Testnet
   {
     key: ChainKey.TLOT,
+    chainType: ChainType.EVM,
     name: 'Telos Testnet',
     coin: CoinKey.TLOS,
     id: 41,
@@ -1183,6 +1207,7 @@ export const supportedChains: Array<Chain> = [
   // 31 RSK Testnet
   {
     key: ChainKey.RSKT,
+    chainType: ChainType.EVM,
     name: 'RSK Testnet',
     coin: CoinKey.TRBTC,
     id: 31,
@@ -1202,25 +1227,26 @@ export const supportedChains: Array<Chain> = [
       rpcUrls: ['https://public-node.testnet.rsk.co'],
     },
   },
-
   // https://faucet.buni.finance/
   // solana faucet: https://stakely.io/faucet/solana-sol
   // kucoin faucet: https://stakely.io/faucet/kucoin-kcc-kcs
   // Velas faucet: https://stakely.io/faucet/velas-vlx
 ]
 
-export const getChainByKey = (chainKey: ChainKey): Chain => {
-  const chain = supportedChains.find((chain) => chain.key === chainKey)
-  if (!chain) {
-    throw new Error('Invalid chainKey')
-  }
-  return chain
-}
+export const supportedSolanaChains: SolanaChain[] = [
+  {
+    key: ChainKey.SOL,
+    chainType: ChainType.Solana,
+    name: 'Solana',
+    coin: CoinKey.SOL,
+    id: ChainId.SOL,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/solana.png',
+  },
+]
 
-export const getChainById = (chainId: number): Chain => {
-  const chain = supportedChains.find((chain) => chain.id === chainId)
-  if (!chain) {
-    throw new Error('Invalid chainId')
-  }
-  return chain
-}
+// This assignment is required to avoid breaking
+// changes with the new non EVM support types release
+// This will be removed in the future
+export const supportedChains = supportedEVMChains

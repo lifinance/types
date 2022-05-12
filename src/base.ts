@@ -29,6 +29,7 @@ export enum CoinKey {
   VLX = 'VLX',
   GLMR = 'GLMR',
   METIS = 'METIS',
+  SOL = 'SOL',
 
   // Stable coins
   USDT = 'USDT',
