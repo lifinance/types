@@ -4,7 +4,7 @@ import {
   ChainId,
   ExchangeDefinition,
   Step,
-  Token,
+  Token
 } from '.'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
@@ -178,6 +178,10 @@ export type TokensRequest = {
 
 export type TokensResponse = {
   tokens: { [chainId: number]: Token[] }
+}
+
+export type RequestOptions = {
+  signal?: AbortSignal
 }
 
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
