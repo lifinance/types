@@ -6,6 +6,10 @@ import {
   Token,
 } from '.'
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export enum ExchangeTool {
   oneinch = '1inch',
   paraswap = 'paraswap',
@@ -14,46 +18,54 @@ export enum ExchangeTool {
   dodo = 'dodo',
 }
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export type ExchangeTools = ExchangeTool | string
 
 export interface ExchangeAggregator {
-  key: ExchangeTool
+  key: string
   name: string
   logoURI: string
   webUrl: string
 }
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
   {
-    key: ExchangeTool.oneinch,
+    key: ExchangeTool.oneinch as string,
     name: '1inch',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oneinch.png',
     webUrl: 'https://app.1inch.io/',
   },
   {
-    key: ExchangeTool.paraswap,
+    key: ExchangeTool.paraswap as string,
     name: 'ParaSwap',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/paraswap.png',
     webUrl: 'https://paraswap.io/',
   },
   {
-    key: ExchangeTool.openocean,
+    key: ExchangeTool.openocean as string,
     name: 'OpenOcean',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/openocean.png',
     webUrl: 'https://openocean.finance/classic',
   },
   {
-    key: ExchangeTool.zerox,
+    key: ExchangeTool.zerox as string,
     name: '0x',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/zerox.png',
     webUrl: 'https://matcha.xyz/markets/',
   },
   {
-    key: ExchangeTool.dodo,
+    key: ExchangeTool.dodo as string,
     name: 'DODO',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/dodo.png',
@@ -62,7 +74,7 @@ export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
 ]
 
 export interface Exchange {
-  key: ExchangeTools
+  key: string
   name: string
   chainId: number
   logoURI: string
@@ -72,9 +84,13 @@ export interface Exchange {
   routerAddress: string
   factoryAddress: string
   initCodeHash: string
-  baseTokens: Array<Token>
+  baseTokens: readonly Token[]
 }
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export const supportedExchanges: Array<Exchange> = [
   // 1 - Ethereum
   {
@@ -1182,6 +1198,10 @@ export const supportedExchanges: Array<Exchange> = [
   },
 ]
 
+/**
+ * @deprecated
+ * Available exchanges should be queried from the API
+ */
 export const getExchangeByKey = (key: string): Exchange => {
   const exchange = supportedExchanges.find((exchange) => exchange.key === key)
   if (!exchange) {
