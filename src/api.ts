@@ -4,7 +4,7 @@ import {
   ChainId,
   ExchangeDefinition,
   Step,
-  Token
+  Token,
 } from '.'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
@@ -184,6 +184,14 @@ export type RequestOptions = {
   signal?: AbortSignal
 }
 
+export type TokenPricesRequest = { address: string; chainId: number }[]
+
+export type TokenPricesResponse = {
+  tokens: { address: string; chainId: number; priceUSD: number }[]
+  unknownTokens: { address: string; chainId: number }[]
+  failedToFetchPrice: { address: string; chainId: number }[]
+}
+
 export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
 
 export declare class LifiAPI {
@@ -208,6 +216,8 @@ export declare class LifiAPI {
   getTools(request: ToolsRequest): ToolsResponse
 
   getChains(): ChainsResponse
+
+  getTokenPrices(request: TokenPricesRequest): Promise<TokenPricesResponse>
 
   getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
 }
