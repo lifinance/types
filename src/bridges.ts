@@ -17,7 +17,7 @@ export enum BridgeTool {
 }
 
 export interface Bridge {
-  key: string
+  key: BridgeTool
   name: string
   logoURI: string
   bridgeUrl?: string
@@ -34,7 +34,7 @@ export interface Bridge {
  */
 export const supportedBridges: Array<Bridge> = [
   {
-    key: BridgeTool.connext as string,
+    key: BridgeTool.connext,
     name: 'Connext',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/connext.png',
@@ -47,7 +47,7 @@ export const supportedBridges: Array<Bridge> = [
     analyticsUrl: 'https://connextscan.io/',
   },
   {
-    key: BridgeTool.hop as string,
+    key: BridgeTool.hop,
     name: 'Hop',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hop.png',
@@ -59,7 +59,7 @@ export const supportedBridges: Array<Bridge> = [
     analyticsUrl: 'https://explorer.hop.exchange/mainnet/',
   },
   {
-    key: BridgeTool.multichain as string,
+    key: BridgeTool.multichain,
     name: 'Multichain',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/anyswap.png',
@@ -70,7 +70,7 @@ export const supportedBridges: Array<Bridge> = [
     explorerUrl: 'https://anyswap.net/',
   },
   {
-    key: BridgeTool.cbridge as string,
+    key: BridgeTool.cbridge,
     name: 'cBridge',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/cbridge.png',
@@ -82,7 +82,7 @@ export const supportedBridges: Array<Bridge> = [
     analyticsUrl: 'https://cbridge-analytics.celer.network/',
   },
   {
-    key: BridgeTool.hyphen as string,
+    key: BridgeTool.hyphen,
     name: 'Hyphen',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/hyphen.png',
@@ -95,7 +95,7 @@ export const supportedBridges: Array<Bridge> = [
     analyticsUrl: 'https://hyphen-info.biconomy.io/',
   },
   {
-    key: BridgeTool.polygon as string,
+    key: BridgeTool.polygon,
     name: 'Polygon Bridge (PoS)',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/polygon.png',
@@ -108,7 +108,7 @@ export const supportedBridges: Array<Bridge> = [
     // analyticsUrl: '',
   },
   {
-    key: BridgeTool.arbitrum as string,
+    key: BridgeTool.arbitrum,
     name: 'Arbitrum One Bridge',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/arbitrum.png',
@@ -119,7 +119,7 @@ export const supportedBridges: Array<Bridge> = [
     // explorerUrl: '',
   },
   {
-    key: BridgeTool.avalanche as string,
+    key: BridgeTool.avalanche,
     name: 'AVAX Bridge',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/avalanche.png',
@@ -131,7 +131,7 @@ export const supportedBridges: Array<Bridge> = [
     // analyticsUrl: '',
   },
   {
-    key: BridgeTool.optimism as string,
+    key: BridgeTool.optimism,
     name: 'Optimism Gateway',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/optimism.png',
@@ -143,7 +143,7 @@ export const supportedBridges: Array<Bridge> = [
     // analyticsUrl: '',
   },
   {
-    key: BridgeTool.across as string,
+    key: BridgeTool.across,
     name: 'AcrossV2',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/acrossv2.png',
@@ -153,7 +153,7 @@ export const supportedBridges: Array<Bridge> = [
     docsUrl: 'https://docs.across.to/',
   },
   {
-    key: BridgeTool.portal as string,
+    key: BridgeTool.portal,
     name: 'Wormhole Portal',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/wormhole_portal.png',

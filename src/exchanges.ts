@@ -25,7 +25,7 @@ export enum ExchangeTool {
 export type ExchangeTools = ExchangeTool | string
 
 export interface ExchangeAggregator {
-  key: string
+  key: ExchangeTool
   name: string
   logoURI: string
   webUrl: string
@@ -37,35 +37,35 @@ export interface ExchangeAggregator {
  */
 export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
   {
-    key: ExchangeTool.oneinch as string,
+    key: ExchangeTool.oneinch,
     name: '1inch',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/oneinch.png',
     webUrl: 'https://app.1inch.io/',
   },
   {
-    key: ExchangeTool.paraswap as string,
+    key: ExchangeTool.paraswap,
     name: 'ParaSwap',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/paraswap.png',
     webUrl: 'https://paraswap.io/',
   },
   {
-    key: ExchangeTool.openocean as string,
+    key: ExchangeTool.openocean,
     name: 'OpenOcean',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/openocean.png',
     webUrl: 'https://openocean.finance/classic',
   },
   {
-    key: ExchangeTool.zerox as string,
+    key: ExchangeTool.zerox,
     name: '0x',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/zerox.png',
     webUrl: 'https://matcha.xyz/markets/',
   },
   {
-    key: ExchangeTool.dodo as string,
+    key: ExchangeTool.dodo,
     name: 'DODO',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/dodo.png',
@@ -74,7 +74,7 @@ export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
 ]
 
 export interface Exchange {
-  key: string
+  key: ExchangeTools
   name: string
   chainId: number
   logoURI: string
