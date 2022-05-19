@@ -4,7 +4,7 @@ import {
   ChainId,
   ExchangeDefinition,
   Step,
-  Token
+  Token,
 } from '.'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
