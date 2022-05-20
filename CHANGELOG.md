@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.1](https://github.com/lifinance/types/compare/v0.14.0...v0.14.1) (2022-05-20)
+
+
+### Features
+
+* new ordering possibilities ([#64](https://github.com/lifinance/types/issues/64)) ([ea2f336](https://github.com/lifinance/types/commit/ea2f3369c25049f5de0fe10abd11682b1e4f30ad))
+
 ## [0.14.0](https://github.com/lifinance/types/compare/v0.13.2...v0.14.0) (2022-05-13)
 
 
