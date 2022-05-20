@@ -4,12 +4,12 @@ import {
   ChainId,
   ExchangeDefinition,
   Step,
-  Token
+  Token,
 } from '.'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
 
-export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
+export type Order = 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
 
 export interface AllowDenyPrefer {
   allow?: string[] // (default: [all])
@@ -18,7 +18,7 @@ export interface AllowDenyPrefer {
 }
 
 export interface RouteOptions {
-  order?: Order // (default : BEST_VALUE)
+  order?: Order // (default : RECOMMENDED)
   slippage?: number // (default : 0.03)
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains

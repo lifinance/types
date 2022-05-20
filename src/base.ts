@@ -161,8 +161,8 @@ export enum ChainId {
   FUST = 123,
   TLOT = 41,
   RSKT = 31,
-  SOLT = 11511110811610111, // this id is made up by the LiFi team!
-  TERT = 11610111411610111, // this id is made up by the LiFi team!
+  SOLT = 1151111081161011, // this id is made up by the LiFi team!
+  TERT = 1161011141161011, // this id is made up by the LiFi team!
   OAST = 1119711511610111, // this id is made up by the LiFi team!
 }
 
