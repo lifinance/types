@@ -9,7 +9,7 @@ import {
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
 
-export type Order = 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST' // FAST, LESS_INTERACTIONS, SECURITY, ....
+export type Order = 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
 
 export interface AllowDenyPrefer {
   allow?: string[] // (default: [all])
