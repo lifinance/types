@@ -84,9 +84,10 @@ export enum ChainKey {
   MOO = 'moo',
   MAM = 'mam',
   AUR = 'aur',
-  TER = 'sol',
-  OAS = 'sol',
+  TER = 'ter',
+  OAS = 'oas',
   SOL = 'sol',
+  EVM = 'evm',
 
   // Testnets
   ROP = 'rop',
@@ -105,8 +106,12 @@ export enum ChainKey {
   TLOT = 'tlot',
   RSKT = 'rskt',
   SOLT = 'solt',
-  OAST = 'solt',
-  TERT = 'solt',
+  OAST = 'oast',
+  TERT = 'tert',
+  AVAT = 'avat',
+  EVMT = 'evmt',
+  MORT = 'mort',
+  FTMT = 'ftmt',
 }
 
 export enum ChainId {
@@ -144,6 +149,7 @@ export enum ChainId {
   SOL = 1151111081099710, // this id is made up by the LiFi team!
   TER = 1161011141099710, // this id is made up by the LiFi team!
   OAS = 111971151099710, // this id is made up by the LiFi team!
+  EVM = 9001,
 
   // Testnets
   ROP = 3,
@@ -164,6 +170,10 @@ export enum ChainId {
   SOLT = 1151111081161011, // this id is made up by the LiFi team!
   TERT = 1161011141161011, // this id is made up by the LiFi team!
   OAST = 1119711511610111, // this id is made up by the LiFi team!
+  AVAT = 43113,
+  EVMT = 9000,
+  MORT = 1287,
+  FTMT = 4002,
 }
 
 export interface Token {

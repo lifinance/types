@@ -837,6 +837,8 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://mainnet.aurora.dev'],
     },
   },
+  // TODO: Add
+  // EVM = 9001,
 
   // TESTNETS
   // 3 - Ropsten
@@ -981,6 +983,8 @@ export const supportedEVMChains: EVMChain[] = [
     coin: CoinKey.ETH,
     id: 42,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_kovan.png',
     tokenlistUrl:
       'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
     faucetUrls: [
@@ -1061,6 +1065,8 @@ export const supportedEVMChains: EVMChain[] = [
     coin: CoinKey.ETH,
     id: 69,
     mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/optimism_test.png',
     faucetUrls: ['https://gateway.optimism.io/'],
     multicallAddress: multicallAddresses[ChainId.OPTT],
 
@@ -1227,8 +1233,38 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://public-node.testnet.rsk.co'],
     },
   },
+  // 43113 - Avalanche Fuji Testnet
+  {
+    key: ChainKey.AVAT,
+    chainType: ChainType.EVM,
+    name: 'Avalanche Fuji Testnet',
+    coin: CoinKey.AVAX,
+    id: 43113,
+    mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/avalanche_test.png',
+    multicallAddress: multicallAddresses[ChainId.AVAT],
+    faucetUrls: ['https://faucet.avax-test.network/'],
+
+    // https://github.com/ethereum-lists/chains/blob/master/_data/chains/eip155-43113.json
+    metamask: {
+      chainId: prefixChainId(43113),
+      blockExplorerUrls: ['https://testnet.snowtrace.io'],
+      chainName: 'Avalanche Fuji Testnet',
+      nativeCurrency: {
+        name: 'AVAX',
+        symbol: 'AVAX',
+        decimals: 18,
+      },
+      rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
+    },
+  },
+  // TODO: Add
+  // EVMT = 9000,
+  // MORT = 1287,
+  // FTMT = 4002,
+
   // https://faucet.buni.finance/
-  // solana faucet: https://stakely.io/faucet/solana-sol
   // kucoin faucet: https://stakely.io/faucet/kucoin-kcc-kcs
   // Velas faucet: https://stakely.io/faucet/velas-vlx
 ]
@@ -1243,6 +1279,7 @@ export const supportedSolanaChains: SolanaChain[] = [
     mainnet: true,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/solana.png',
+    faucetUrls: ['https://stakely.io/faucet/solana-sol'],
   },
 ]
 

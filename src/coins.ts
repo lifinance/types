@@ -786,6 +786,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xa6fa4fb5f76172d178d61b04b0ecd319c5d1c0aa',
         decimals: 18,
       },
+      [ChainId.OPTT]: {
+        address: '0x4200000000000000000000000000000000000006',
+        decimals: 18,
+      },
     },
   },
 
@@ -1284,6 +1288,28 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'WETH',
     logoURI:
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
+  [ChainId.OPTT]: {
+    // https://kovan-optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006
+    address: '0x4200000000000000000000000000000000000006',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.OPTT,
+    coinKey: CoinKey.WETH,
+    name: 'WETH',
+    logoURI:
+      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
+  [ChainId.BSCT]: {
+    // https://testnet.bscscan.com/token/0xae13d989dac2f0debff460ac112a837c89baa7cd
+    address: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+    symbol: 'WBNB',
+    decimals: 18,
+    chainId: ChainId.BSCT,
+    coinKey: 'WBNB' as CoinKey,
+    name: 'WBNB',
+    logoURI:
+      'https://zapper.fi/images/networks/binance-smart-chain/0x0000000000000000000000000000000000000000.png',
   },
 }
 
