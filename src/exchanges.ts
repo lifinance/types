@@ -6,6 +6,10 @@ import {
   Token,
 } from '.'
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export enum ExchangeTool {
   oneinch = '1inch',
   paraswap = 'paraswap',
@@ -14,6 +18,10 @@ export enum ExchangeTool {
   dodo = 'dodo',
 }
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export type ExchangeTools = ExchangeTool | string
 
 export interface ExchangeAggregator {
@@ -23,6 +31,10 @@ export interface ExchangeAggregator {
   webUrl: string
 }
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
   {
     key: ExchangeTool.oneinch,
@@ -72,9 +84,13 @@ export interface Exchange {
   routerAddress: string
   factoryAddress: string
   initCodeHash: string
-  baseTokens: Array<Token>
+  baseTokens: readonly Token[]
 }
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export const supportedExchanges: Array<Exchange> = [
   // 1 - Ethereum
   {
@@ -1182,6 +1198,10 @@ export const supportedExchanges: Array<Exchange> = [
   },
 ]
 
+/**
+ * @deprecated
+ * Available exchanges should be queried from the API
+ */
 export const getExchangeByKey = (key: string): Exchange => {
   const exchange = supportedExchanges.find((exchange) => exchange.key === key)
   if (!exchange) {
