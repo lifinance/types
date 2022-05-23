@@ -9,7 +9,7 @@ import {
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
 
-export type Order = 'BEST_VALUE' | 'BEST_FEE' | 'BEST_FEE_GAS' // FAST, LESS_INTERACTIONS, SECURITY, ....
+export type Order = 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
 
 export interface AllowDenyPrefer {
   allow?: string[] // (default: [all])
@@ -18,11 +18,10 @@ export interface AllowDenyPrefer {
 }
 
 export interface RouteOptions {
-  order?: Order // (default : BEST_VALUE)
+  order?: Order // (default : RECOMMENDED)
   slippage?: number // (default : 0.03)
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
-  encryptionSupport?: boolean // (default : false)
   integrator?: string // custom string developer who integrate LiFi can set
   referrer?: string // integrators can set a wallet address as referrer to track them
   bridges?: AllowDenyPrefer
@@ -61,7 +60,6 @@ export interface Route {
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
   containsSwitchChain?: boolean // Features required for route execution
-  containsEncryption?: boolean // Features required for route execution
   infiniteApproval?: boolean // Features used for route execution
 
   steps: Step[]
