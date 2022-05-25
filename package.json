@@ -1,7 +1,7 @@
 {
   "name": "@lifinance/types",
   "version": "0.14.3",
-  "description": "Types for lifi projects",
+  "description": "Types for the LI.FI stack",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -36,7 +36,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Michael Pautov <michael.pautov@gmail.com>",
+  "author": "LI.FI <github@li.finanace>",
   "license": "MIT",
   "homepage": "https://github.com/lifinance/types",
   "repository": {
