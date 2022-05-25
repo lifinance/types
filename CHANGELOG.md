@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.5](https://github.com/lifinance/types/compare/v0.14.3...v0.14.5) (2022-05-25)
+
+
+### Features
+
+* update testnets and multicall ([#65](https://github.com/lifinance/types/issues/65)) ([b5390a3](https://github.com/lifinance/types/commit/b5390a3ce3a39708ea9238da47907e224a5d257c))
+
 ### [0.14.4](https://github.com/lifinance/types/compare/v0.14.3...v0.14.4) (2022-05-25)
 
 
