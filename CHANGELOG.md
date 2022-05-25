@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.3](https://github.com/lifinance/types/compare/v0.14.2...v0.14.3) (2022-05-23)
+
+
+### Bug Fixes
+
+* re-added npm.README.md ([52ceace](https://github.com/lifinance/types/commit/52ceace0724f30140dcb07739e6203b8cfd978c2))
+
+### [0.14.2](https://github.com/lifinance/types/compare/v0.14.1...v0.14.2) (2022-05-23)
+
+
+### Bug Fixes
+
+* **deprecation:** marked methods and constants as deprecated (LF-766) ([#62](https://github.com/lifinance/types/issues/62)) ([3ac61a3](https://github.com/lifinance/types/commit/3ac61a3226e11991201297514e54febc01926f9b))
+* removed cbridge encryption support ([#66](https://github.com/lifinance/types/issues/66)) ([a79e6fa](https://github.com/lifinance/types/commit/a79e6fa57c02b7b3b01dfe44129553cf8b98928b))
+
 ### [0.14.1](https://github.com/lifinance/types/compare/v0.14.0...v0.14.1) (2022-05-20)
 
 

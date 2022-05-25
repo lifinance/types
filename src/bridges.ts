@@ -1,3 +1,7 @@
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export enum BridgeTool {
   connext = 'connext',
   hop = 'hop',
@@ -24,6 +28,10 @@ export interface Bridge {
   analyticsUrl?: string
 }
 
+/**
+ * @deprecated
+ * These values are now obtainable from the LiFi API
+ */
 export const supportedBridges: Array<Bridge> = [
   {
     key: BridgeTool.connext,

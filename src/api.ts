@@ -22,7 +22,6 @@ export interface RouteOptions {
   slippage?: number // (default : 0.03)
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
-  encryptionSupport?: boolean // (default : false)
   integrator?: string // custom string developer who integrate LiFi can set
   referrer?: string // integrators can set a wallet address as referrer to track them
   bridges?: AllowDenyPrefer
@@ -61,7 +60,6 @@ export interface Route {
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
   containsSwitchChain?: boolean // Features required for route execution
-  containsEncryption?: boolean // Features required for route execution
   infiniteApproval?: boolean // Features used for route execution
 
   steps: Step[]
