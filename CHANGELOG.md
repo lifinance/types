@@ -2,12 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.14.6](https://github.com/lifinance/types/compare/v0.14.5...v0.14.6) (2022-05-26)
+### [0.14.6](https://github.com/lifinance/types/compare/v0.14.5...v0.14.6) (2022-05-25)
 
 
 ### Bug Fixes
 
-* make getTokens api to async method ([#68](https://github.com/lifinance/types/issues/68)) ([90570b5](https://github.com/lifinance/types/commit/90570b56f1a5a2fe7e515da796957f9cd057c48c))
+* update getTokens method in LifiAPI class ([#68](https://github.com/lifinance/types/issues/68)) ([90570b5](https://github.com/lifinance/types/commit/90570b56f1a5a2fe7e515da796957f9cd057c48c))
 
 ### [0.14.5](https://github.com/lifinance/types/compare/v0.14.3...v0.14.5) (2022-05-25)
 
