@@ -197,7 +197,7 @@ export declare class LifiAPI {
 
   getToken(request: GetTokenRequest): Promise<Token>
 
-  getTokens(request: TokensRequest): TokensResponse
+  getTokens(request: TokensRequest): Promise<TokensResponse>
 
   getQuote(request: QuoteRequest): Promise<Step>
 
