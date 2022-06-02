@@ -185,7 +185,7 @@ export const supportedEVMChains: EVMChain[] = [
     metamask: {
       chainId: prefixChainId(66),
       blockExplorerUrls: ['https://www.oklink.com/en/okc/'],
-      chainName: 'OKC Mainnet',
+      chainName: 'OKXChain Mainnet',
       nativeCurrency: {
         name: 'OKT',
         symbol: 'OKT',
