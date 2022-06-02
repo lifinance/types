@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.8](https://github.com/lifinance/types/compare/v0.14.6...v0.14.8) (2022-06-02)
+
+
+### Features
+
+* added tags to Route ([#70](https://github.com/lifinance/types/issues/70)) ([1ce70b0](https://github.com/lifinance/types/commit/1ce70b0da3bcc338461d3e50b939e9d034c39fca))
+
+
+### Bug Fixes
+
+* add padding to okex logo ([36abfc4](https://github.com/lifinance/types/commit/36abfc45fe6299961dd152140e7d269ae3d6062c))
+* add padding to okex logo ([1c26d55](https://github.com/lifinance/types/commit/1c26d553cb04f6977ef54c4bb6162685c8383ff8))
+* update OKX name and icon ([#69](https://github.com/lifinance/types/issues/69)) ([1ae44c0](https://github.com/lifinance/types/commit/1ae44c086ee6a814efb93957af8821bcebd151d8))
+
 ### [0.14.7](https://github.com/lifinance/types/compare/v0.14.6...v0.14.7) (2022-06-02)
 
 
