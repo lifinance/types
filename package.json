@@ -47,7 +47,7 @@
     "url": "https://github.com/lifinance/types"
   },
   "dependencies": {
-    "ethers": "^5.6.5"
+    "ethers": "^5.6.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",

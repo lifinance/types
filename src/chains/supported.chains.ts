@@ -167,11 +167,11 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://rpc.ftm.tools/', 'https://rpcapi.fantom.network'],
     },
   },
-  // 66 - OKExCHain
+  // 66 - OKXChain
   {
     key: ChainKey.OKT,
     chainType: ChainType.EVM,
-    name: 'OKExCHain',
+    name: 'OKXChain',
     coin: CoinKey.OKT,
     id: 66,
     mainnet: true,
@@ -181,11 +181,11 @@ export const supportedEVMChains: EVMChain[] = [
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
     multicallAddress: multicallAddresses[ChainId.OKT],
 
-    // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start-for-mainnet.html
+    // https://okc-docs.readthedocs.io/en/latest/developers/quick-start-for-mainnet.html
     metamask: {
       chainId: prefixChainId(66),
-      blockExplorerUrls: ['https://www.oklink.com/okexchain/'],
-      chainName: 'OKExChain Mainnet',
+      blockExplorerUrls: ['https://www.oklink.com/en/okc/'],
+      chainName: 'OKXChain Mainnet',
       nativeCurrency: {
         name: 'OKT',
         symbol: 'OKT',
