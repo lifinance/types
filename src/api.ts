@@ -63,6 +63,8 @@ export interface Route {
   infiniteApproval?: boolean // Features used for route execution
 
   steps: Step[]
+
+  tags?: Order[]
 }
 
 export interface RoutesResponse {
