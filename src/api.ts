@@ -152,11 +152,73 @@ export interface TransactionInfo {
   gasUsed?: string
 }
 
-export interface StatusResponse {
+const _StatusMessage = [
+  // The transaction was not found -- likely not mined yet
+  'NOT_FOUND',
+  // A third party service is not available
+  'NOT_AVAILABLE',
+  // The given transaction information is invalid
+  'INVALID',
+  // The transfer is pending
+  'PENDING',
+  // The transfer is done
+  'DONE',
+  // The transfer failed
+  'FAILED',
+] as const
+export type StatusMessage = typeof _StatusMessage[number]
+
+const _SubstatusPending = [
+  // The bridge is waiting for additional confirmations
+  'WAIT_SOURCE_CONFIRMATIONS',
+  // The off-chain logic is in progress, waiting for the destination tx to be mined
+  'WAIT_DESTINATION_TRANSACTION',
+  // The bridge API / subgraph is temporarily unavailable
+  'BRIDGE_NOT_AVAILABLE',
+  // The RPC for source/destination chain is temporarily unavailable
+  'CHAIN_NOT_AVAILABLE',
+  // The transfer cannot be completed, a refund is required
+  'NOT_PROCESSABLE_REFUND_NEEDED',
+  // We cannot determine the status of the transfer
+  'UNKNOWN_ERROR',
+] as const
+export type SubstatusPending = typeof _SubstatusPending[number]
+
+const _SubstatusDone = [
+  // The transfer was successful
+  'COMPLETED',
+  // The transfer is complete but the token is unknown
+  'RECEIVED_UNKNOWN_TOKEN',
+  // The transfer was partially successful
+  // This can happen for specific bridges like Across
+  // which may provide alternative tokens in case of low liquidity
+  'PARTIAL',
+  // The transfer was not successful but it has been refunded
+  'REFUNDED',
+] as const
+
+export type SubstatusDone = typeof _SubstatusDone[number]
+export type Substatus = SubstatusPending | SubstatusDone
+
+export const isSubstatusPending = (
+  substatus: Substatus
+): substatus is SubstatusPending =>
+  _SubstatusPending.includes(substatus as SubstatusPending)
+export const isSubstatusDone = (
+  substatus: Substatus
+): substatus is SubstatusDone =>
+  _SubstatusDone.includes(substatus as SubstatusDone)
+
+export interface StatusInformation {
+  status: StatusMessage
+  substatus?: Substatus
+  substatusMessage?: string
+}
+
+export interface StatusResponse extends StatusInformation {
   sending: TransactionInfo
   receiving?: TransactionInfo
   tool?: string
-  status: StatusMessage
 }
 
 export interface ChainsResponse {
@@ -183,8 +245,6 @@ export type TokensResponse = {
 export type RequestOptions = {
   signal?: AbortSignal
 }
-
-export type StatusMessage = 'NOT_FOUND' | 'PENDING' | 'DONE' | 'FAILED'
 
 export declare class LifiAPI {
   getRoutes(request: RoutesRequest): Promise<RoutesResponse>
