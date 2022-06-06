@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.9](https://github.com/lifinance/types/compare/v0.14.8...v0.14.9) (2022-06-06)
+
+
+### Features
+
+* added substatus to status messages ([#71](https://github.com/lifinance/types/issues/71)) ([25982c8](https://github.com/lifinance/types/commit/25982c89bbc9fe705d211f9a5bde961b65f166d4))
+
 ### [0.14.8](https://github.com/lifinance/types/compare/v0.14.6...v0.14.8) (2022-06-02)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@lifinance/types",
-  "version": "0.14.8",
+  "version": "0.14.9",
   "description": "Types for the LI.FI stack",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
