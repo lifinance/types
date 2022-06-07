@@ -156,8 +156,6 @@ const _StatusMessage = [
   // The transaction was not found -- likely not mined yet
   'NOT_FOUND',
   // A third party service is not available
-  'NOT_AVAILABLE',
-  // The given transaction information is invalid
   'INVALID',
   // The transfer is pending
   'PENDING',
