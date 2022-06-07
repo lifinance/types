@@ -9,7 +9,8 @@ import {
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
 
-export type Order = 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
+export const _Order = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
+export type Order = typeof _Order[number]
 
 export interface AllowDenyPrefer {
   allow?: string[] // (default: [all])
