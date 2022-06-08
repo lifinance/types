@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.12](https://github.com/lifinance/types/compare/v0.14.11...v0.14.12) (2022-06-08)
+
+
+### Bug Fixes
+
+* rename _Order ([b627ac7](https://github.com/lifinance/types/commit/b627ac785dc6d31d3172d93369d8e1dada74bb25))
+
 ### [0.14.11](https://github.com/lifinance/types/compare/v0.14.9...v0.14.11) (2022-06-08)
 
 
