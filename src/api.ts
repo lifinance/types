@@ -186,8 +186,6 @@ export type SubstatusPending = typeof _SubstatusPending[number]
 const _SubstatusDone = [
   // The transfer was successful
   'COMPLETED',
-  // The transfer is complete but the token is unknown
-  'RECEIVED_UNKNOWN_TOKEN',
   // The transfer was partially successful
   // This can happen for specific bridges like Across
   // which may provide alternative tokens in case of low liquidity
