@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.11](https://github.com/lifinance/types/compare/v0.14.9...v0.14.11) (2022-06-08)
+
+
+### Features
+
+* extend order type ([#73](https://github.com/lifinance/types/issues/73)) ([e49f64b](https://github.com/lifinance/types/commit/e49f64b7e10f130f155767f24ee59bf3ac243035))
+
+
+### Bug Fixes
+
+* removed substatus type RECEIVED_UNKNOWN_TOKEN ([#74](https://github.com/lifinance/types/issues/74)) ([41b49ed](https://github.com/lifinance/types/commit/41b49ede290e19c7f17d88563f1d7db954c173d6))
+* removed unused NOT_AVAILABLE status ([#72](https://github.com/lifinance/types/issues/72)) ([3c570e2](https://github.com/lifinance/types/commit/3c570e2047a12f4c7b74ac920f7a1240c0ab91fc))
+
 ### [0.14.10](https://github.com/lifinance/types/compare/v0.14.9...v0.14.10) (2022-06-07)
 
 
