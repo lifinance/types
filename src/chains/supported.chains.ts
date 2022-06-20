@@ -293,8 +293,8 @@ export const supportedEVMChains: EVMChain[] = [
       blockExplorerUrls: ['https://optimistic.etherscan.io/'],
       chainName: 'Optimism',
       nativeCurrency: {
-        name: 'OETH',
-        symbol: 'OETH',
+        name: 'ETH',
+        symbol: 'ETH',
         decimals: 18,
       },
       rpcUrls: ['https://mainnet.optimism.io/'],
