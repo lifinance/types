@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.13](https://github.com/lifinance/types/compare/v0.14.11...v0.14.13) (2022-06-22)
+
+
+### Features
+
+* added substatus 'REFUND_IN_PROGRESS' ([#77](https://github.com/lifinance/types/issues/77)) ([56b0ef1](https://github.com/lifinance/types/commit/56b0ef172177c7a86fe290b0e507e5859ddec577))
+* stargate logo ([#75](https://github.com/lifinance/types/issues/75)) ([710c9f2](https://github.com/lifinance/types/commit/710c9f2aff5b6f414c0c3ac64a38515aec0d8c66))
+
+
+### Bug Fixes
+
+* rename _Order ([b627ac7](https://github.com/lifinance/types/commit/b627ac785dc6d31d3172d93369d8e1dada74bb25))
+
 ### [0.14.12](https://github.com/lifinance/types/compare/v0.14.11...v0.14.12) (2022-06-08)
 
 
