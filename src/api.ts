@@ -178,6 +178,8 @@ const _SubstatusPending = [
   'CHAIN_NOT_AVAILABLE',
   // The transfer cannot be completed, a refund is required
   'NOT_PROCESSABLE_REFUND_NEEDED',
+  // A refund has been requested and is in progress
+  'REFUND_IN_PROGRESS',
   // We cannot determine the status of the transfer
   'UNKNOWN_ERROR',
 ] as const
