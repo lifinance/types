@@ -14,6 +14,7 @@ export enum BridgeTool {
   optimism = 'optimism',
   across = 'across',
   portal = 'portal',
+  stargate = 'stargate',
 }
 
 export interface Bridge {
@@ -161,6 +162,16 @@ export const supportedBridges: Array<Bridge> = [
     discordUrl: 'https://discord.com/invite/wormholecrypto',
     supportUrl: 'https://discord.com/invite/wormholecrypto',
     docsUrl: 'https://docs.wormholenetwork.com/wormhole/',
+  },
+  {
+    key: BridgeTool.stargate,
+    name: 'Stargate',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/5685c638772f533edad80fcb210b4bb89e30a50f/src/assets/icons/bridges/stargate.png',
+    bridgeUrl: 'https://stargate.finance/',
+    discordUrl: 'https://discord.com/invite/TyjeQ45',
+    supportUrl: 'https://discord.com/invite/TyjeQ45',
+    docsUrl: 'https://stargateprotocol.gitbook.io/stargate/',
   },
   // {
   //   key: BridgeTool.,
