@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.16](https://github.com/lifinance/types/compare/v0.14.14...v0.14.16) (2022-07-05)
+
+
+### Features
+
+* added ToolError ([#78](https://github.com/lifinance/types/issues/78)) ([e2960ba](https://github.com/lifinance/types/commit/e2960ba955afdc4e7464cba1c4ca0286b6fb5b55))
+* **api:** make `getTools` async ([1457c33](https://github.com/lifinance/types/commit/1457c335578a0ef3bccfc4a76a42e016a9344237))
+
 ### [0.14.15](https://github.com/lifinance/types/compare/v0.14.12...v0.14.15) (2022-07-05)
 
 
