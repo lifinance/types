@@ -6,6 +6,7 @@ import {
   Step,
   Token,
 } from '.'
+import { ToolError } from './apiErrors'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
 
@@ -70,6 +71,7 @@ export interface Route {
 
 export interface RoutesResponse {
   routes: Route[]
+  errors: ToolError[]
 }
 
 export type PossibilityTopic = 'chains' | 'tokens' | 'bridges' | 'exchanges'
