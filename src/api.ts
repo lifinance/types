@@ -264,7 +264,7 @@ export declare class LifiAPI {
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
 
-  getTools(request: ToolsRequest): ToolsResponse
+  getTools(request: ToolsRequest): Promise<ToolsResponse>
 
   getChains(): ChainsResponse
 
