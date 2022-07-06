@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.18](https://github.com/lifinance/types/compare/v0.14.17...v0.14.18) (2022-07-06)
+
+
+### Bug Fixes
+
+* **coins:** update names and symbols or tokens ([#80](https://github.com/lifinance/types/issues/80)) ([6f773e5](https://github.com/lifinance/types/commit/6f773e5bef863d7dd2ed238ac6fb32779d340424))
+
 ### [0.14.17](https://github.com/lifinance/types/compare/v0.14.16...v0.14.17) (2022-07-06)
 
 
