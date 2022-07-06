@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.17](https://github.com/lifinance/types/compare/v0.14.16...v0.14.17) (2022-07-06)
+
+
+### Bug Fixes
+
+* the native token on Gnosis is called XDAI, not DAI ([#79](https://github.com/lifinance/types/issues/79)) ([20e35d1](https://github.com/lifinance/types/commit/20e35d123b24726247999b43ec03da1152940d7a))
+
 ### [0.14.16](https://github.com/lifinance/types/compare/v0.14.14...v0.14.16) (2022-07-05)
 
 
