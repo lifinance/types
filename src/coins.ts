@@ -3,11 +3,13 @@ import { ChainId, Coin, CoinKey, Token } from './base'
 type BasicToken = {
   address: string
   decimals: number
+  name?: string
+  symbol?: string
 }
 
 type BasicCoin = {
   key: CoinKey
-  name: CoinKey
+  name: string
   logoURI: string
   verified: boolean
   chains: {
@@ -39,6 +41,8 @@ const basicCoins: BasicCoin[] = [
       [ChainId.DAI]: {
         address: '0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1',
         decimals: 18,
+        symbol: 'WETH',
+        name: 'Wrapped Ether on xDai',
       },
       [ChainId.OPT]: {
         address: '0x0000000000000000000000000000000000000000',
@@ -55,6 +59,8 @@ const basicCoins: BasicCoin[] = [
       [ChainId.AVA]: {
         address: '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab',
         decimals: 18,
+        symbol: 'WETH.e',
+        name: 'Wrapped Ether',
       },
       // [ChainId.ARB]: { // WETH
       //   address: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1',
@@ -66,10 +72,13 @@ const basicCoins: BasicCoin[] = [
       [ChainId.HEC]: {
         address: '0x64ff637fb478863b7468bc97d30a5bf3a428a1fd',
         decimals: 18,
+        name: 'Heco-Peg ETH Token',
       },
       [ChainId.OKT]: {
         address: '0xef71ca2ee68f45b9ad6f72fbdb33d707b872315c',
         decimals: 18,
+        symbol: 'ETHK',
+        name: 'ETHK',
       },
       [ChainId.BOB]: {
         address: '0x0000000000000000000000000000000000000000',
@@ -82,6 +91,8 @@ const basicCoins: BasicCoin[] = [
       [ChainId.AUR]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
+        symbol: 'AETH',
+        name: 'AETH',
       },
 
       // Testnets
@@ -129,10 +140,12 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0',
         decimals: 18,
+        name: 'Matic Token',
       },
       [ChainId.BSC]: {
         address: '0xcc42724c6683b7e57334c4e856f4c9965ed682bd',
         decimals: 18,
+        name: 'Matic Token',
       },
       [ChainId.POL]: {
         address: '0x0000000000000000000000000000000000000000',
@@ -141,6 +154,7 @@ const basicCoins: BasicCoin[] = [
       [ChainId.DAI]: {
         address: '0x7122d7661c4564b7c6cd4878b06766489a6028a2',
         decimals: 18,
+        name: 'Matic Token on xDai',
       },
 
       // Testnet
@@ -173,10 +187,13 @@ const basicCoins: BasicCoin[] = [
       [ChainId.DAI]: {
         address: '0xca8d20f3e0144a72c6b5d576e9bd3fd8557e2b04',
         decimals: 18,
+        symbol: 'WBNB',
+        name: 'Wrapped BNB on xDai',
       },
       [ChainId.ONE]: {
         address: '0xb1f6e61e1e113625593a22fa6aa94f8052bc39e0',
         decimals: 18,
+        symbol: 'bscBNB',
       },
       [ChainId.MOO]: {
         address: '0xc9baa8cfdde8e328787e29b4b078abf2dadc2055',
@@ -197,7 +214,7 @@ const basicCoins: BasicCoin[] = [
   // > DAI
   {
     key: CoinKey.DAI,
-    name: CoinKey.DAI,
+    name: 'xDai',
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
     verified: true,
@@ -205,14 +222,18 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0x6b175474e89094c44da98b954eedeac495271d0f',
         decimals: 18,
+        name: 'Dai Stablecoin',
       },
       [ChainId.BSC]: {
         address: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
         decimals: 18,
+        name: 'Dai Token',
       },
       [ChainId.POL]: {
         address: '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063',
         decimals: 18,
+        name: '(PoS) Dai Stablecoin',
+        symbol: 'DAI',
       },
       [ChainId.DAI]: {
         address: '0x0000000000000000000000000000000000000000',
@@ -221,18 +242,25 @@ const basicCoins: BasicCoin[] = [
       [ChainId.OPT]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
         decimals: 18,
+        name: 'Dai Stablecoin',
       },
       [ChainId.FTM]: {
         address: '0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e',
         decimals: 18,
+        symbol: 'DAI',
+        name: 'Dai Stablecoin',
       },
       [ChainId.ONE]: {
         address: '0xef977d2f931c1978db5f6747666fa1eacb0d0339',
         decimals: 18,
+        symbol: '1DAI',
+        name: 'Dai Stablecoin',
       },
       [ChainId.AVA]: {
         address: '0xd586e7f844cea2f87f50152665bcbc2c279d8d70',
         decimals: 18,
+        symbol: 'DAI.e',
+        name: 'Dai Stablecoin',
       },
       [ChainId.ARB]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
@@ -241,26 +269,36 @@ const basicCoins: BasicCoin[] = [
       [ChainId.OKT]: {
         address: '0x21cde7e32a6caf4742d00d44b07279e7596d26b9',
         decimals: 18,
+        symbol: 'DAIK',
+        name: 'DAIK',
       },
       [ChainId.CRO]: {
         address: '0xf2001b145b43032aaf5ee2884e456ccd805f677d',
         decimals: 18,
+        name: 'Dai Stablecoin',
       },
       [ChainId.FUS]: {
         address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
         decimals: 18,
+        symbol: 'DAI',
+        name: 'Dai Stablecoin on Fuse',
       },
       [ChainId.CEL]: {
         address: '0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd',
         decimals: 18,
+        symbol: 'DAI',
+        name: 'Dai Stablecoin',
       },
       [ChainId.MOO]: {
         address: '0xc234a67a4f840e61ade794be47de455361b52413',
         decimals: 18,
+        name: 'Dai Stablecoin',
       },
       [ChainId.BOB]: {
         address: '0xf74195bb8a5cf652411867c5c2c5b8c2a402be35',
         decimals: 18,
+        symbol: 'DAI',
+        name: 'Dai Stablecoin',
       },
 
       // Testnets
@@ -356,6 +394,7 @@ const basicCoins: BasicCoin[] = [
       [ChainId.BSC]: {
         address: '0x03ff0ff224f904be3118461335064bb48df47938',
         decimals: 18,
+        name: 'Harmony ONE',
       },
 
       // Testnet
@@ -440,6 +479,8 @@ const basicCoins: BasicCoin[] = [
       [ChainId.AVA]: {
         address: '0xc7198437980c041c805a1edcba50c1ce5db95118',
         decimals: 6,
+        symbol: 'USDT.e',
+        name: 'Tether USD',
       },
       [ChainId.MOR]: {
         address: '0xb44a9b6905af7c801311e8f4e76932ee959c663c',
@@ -532,6 +573,8 @@ const basicCoins: BasicCoin[] = [
       [ChainId.AVA]: {
         address: '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664',
         decimals: 6,
+        symbol: 'USDC.e',
+        name: 'USD Coin',
       },
       [ChainId.MOR]: {
         address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d',
@@ -715,10 +758,14 @@ const basicCoins: BasicCoin[] = [
       [ChainId.DAI]: {
         address: '0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1',
         decimals: 18,
+        symbol: 'WETH',
+        name: 'Wrapped Ether on xDai',
       },
       [ChainId.POL]: {
         address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
         decimals: 18,
+        symbol: 'WETH',
+        name: 'Wrapped Ether',
       },
       [ChainId.FTM]: {
         address: '0x74b23882a30290451a17c44f4f05243b6b58c76d',
@@ -727,6 +774,8 @@ const basicCoins: BasicCoin[] = [
       [ChainId.AVA]: {
         address: '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab',
         decimals: 18,
+        symbol: 'WETH.e',
+        name: 'Wrapped Ether',
       },
       [ChainId.ARB]: {
         address: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1',
@@ -1019,10 +1068,9 @@ export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
     defaultCoin.chains[chainId] = {
       address: token.address.toLowerCase(),
       decimals: token.decimals,
-      symbol: coin.key,
-      chainId: parseInt(chainId), // Object.entries, Object.keys etc. only return keys as strings. Therefore we have to parse them here
-      coinKey: coin.key,
-      name: coin.key,
+      symbol: token.symbol ?? coin.key,
+      chainId: parseInt(chainId), // Object.entries, Object.keys etc. only return keys as strings. Therefore, we have to parse them here
+      name: token.name ?? coin.key,
       logoURI: coin.logoURI,
     }
   }
