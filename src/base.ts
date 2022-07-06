@@ -5,7 +5,7 @@ export enum CoinKey {
   ETH = 'ETH',
   MATIC = 'MATIC',
   BNB = 'BNB',
-  DAI = 'DAI',
+  DAI = 'XDAI',
   FTM = 'FTM',
   OKT = 'OKT',
   AVAX = 'AVAX',
