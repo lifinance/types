@@ -274,11 +274,11 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://http-mainnet.hecochain.com'],
     },
   },
-  // 10 - Optimistic Ethereum
+  // 10 - Optimism
   {
     key: ChainKey.OPT,
     chainType: ChainType.EVM,
-    name: 'Optimistic Ethereum',
+    name: 'Optimism',
     coin: CoinKey.ETH,
     id: 10,
     mainnet: true,
@@ -291,10 +291,10 @@ export const supportedEVMChains: EVMChain[] = [
     metamask: {
       chainId: prefixChainId(10),
       blockExplorerUrls: ['https://optimistic.etherscan.io/'],
-      chainName: 'Optimistic Ethereum',
+      chainName: 'Optimism',
       nativeCurrency: {
-        name: 'OETH',
-        symbol: 'OETH',
+        name: 'ETH',
+        symbol: 'ETH',
         decimals: 18,
       },
       rpcUrls: ['https://mainnet.optimism.io/'],
