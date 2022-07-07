@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.19](https://github.com/lifinance/types/compare/v0.14.18...v0.14.19) (2022-07-07)
+
+
+### Bug Fixes
+
+* **coin:** add coin keys again ([#81](https://github.com/lifinance/types/issues/81)) ([4fc2b9f](https://github.com/lifinance/types/commit/4fc2b9fdc24eb7f4800dfeb69dd13ef10f853f07))
+
 ### [0.14.18](https://github.com/lifinance/types/compare/v0.14.17...v0.14.18) (2022-07-06)
 
 
