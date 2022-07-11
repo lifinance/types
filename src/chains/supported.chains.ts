@@ -837,8 +837,30 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://mainnet.aurora.dev'],
     },
   },
-  // TODO: Add
   // EVM = 9001,
+  {
+    key: ChainKey.EVM,
+    chainType: ChainType.EVM,
+    name: 'Evmos',
+    coin: CoinKey.EVM,
+    id: 9001,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/evmos.png',
+    multicallAddress: multicallAddresses[ChainId.EVM],
+
+    metamask: {
+      chainId: prefixChainId(9001),
+      blockExplorerUrls: ['https://evm.evmos.org'],
+      chainName: 'Evmos',
+      nativeCurrency: {
+        name: 'EVM',
+        symbol: 'EVM',
+        decimals: 18,
+      },
+      rpcUrls: ['https://eth.bd.evmos.org:8545'],
+    },
+  },
 
   // TESTNETS
   // 3 - Ropsten
