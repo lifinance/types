@@ -1,9 +1,9 @@
 ### Installation
 
 ```
-npm install --save @lifinance/types
+npm install --save @lifi/types
 ```
 
 ### Summary
 
-This package contains type definitions for lifinance projects (https://github.com/lifinance).
+This package contains type definitions for LI.FI projects (https://github.com/lifinance).

@@ -8,7 +8,7 @@ import {
 
 /**
  * @deprecated
- * These values are now obtainable from the LiFi API
+ * These values are now obtainable from the LI.FI API
  */
 export enum ExchangeTool {
   oneinch = '1inch',
@@ -20,7 +20,7 @@ export enum ExchangeTool {
 
 /**
  * @deprecated
- * These values are now obtainable from the LiFi API
+ * These values are now obtainable from the LI.FI API
  */
 export type ExchangeTools = ExchangeTool | string
 
@@ -33,7 +33,7 @@ export interface ExchangeAggregator {
 
 /**
  * @deprecated
- * These values are now obtainable from the LiFi API
+ * These values are now obtainable from the LI.FI API
  */
 export const supportedExchangeAggregators: Array<ExchangeAggregator> = [
   {
@@ -89,7 +89,7 @@ export interface Exchange {
 
 /**
  * @deprecated
- * These values are now obtainable from the LiFi API
+ * These values are now obtainable from the LI.FI API
  */
 export const supportedExchanges: Array<Exchange> = [
   // 1 - Ethereum

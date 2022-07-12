@@ -1,5 +1,5 @@
 {
-  "name": "@lifinance/types",
+  "name": "@lifi/types",
   "version": "0.14.20",
   "description": "Types for the LI.FI stack",
   "main": "./dist/index.js",
@@ -12,7 +12,7 @@
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @lifinance/types",
+    "addscope": "node tools/packagejson name @lifi/types",
     "pre-commit": "lint-staged",
     "pre-push": "yarn build && yarn test",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
@@ -47,29 +47,29 @@
     "url": "https://github.com/lifinance/types"
   },
   "dependencies": {
-    "ethers": "^5.6.6"
+    "ethers": "^5.6.9"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
-    "@types/jest": "^27.5.1",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
-    "eslint": "^8.15.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/jest": "^28.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
-    "jest": "^28.1.0",
-    "lint-staged": ">=12.4.1",
+    "jest": "^28.1.2",
+    "lint-staged": ">=13.0.3",
     "npm-run-all": "^4.1.5",
     "pinst": "^3.0.0",
-    "prettier": "^2.6.2",
-    "standard-version": "^9.3.2",
-    "ts-jest": "^28.0.2",
-    "ts-loader": "^9.3.0",
-    "typescript": "^4.6.4",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2"
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^28.0.5",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   },
   "directories": {
     "test": "test"
