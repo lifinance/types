@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/lifinance/types/compare/v1.0.0...v1.0.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* github package scope ([1c05268](https://github.com/lifinance/types/commit/1c05268218595bfc91b2440a10bb1c8a78f23f23))
+
 ## [1.0.0](https://github.com/lifinance/types/compare/v0.14.20...v1.0.0) (2022-07-12)
 
 
