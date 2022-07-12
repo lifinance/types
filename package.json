@@ -37,7 +37,7 @@
     "access": "public"
   },
   "author": "LI.FI <github@li.finanace>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "homepage": "https://github.com/lifinance/types",
   "repository": {
     "type": "git",
