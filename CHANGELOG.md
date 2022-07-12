@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/lifinance/types/compare/v0.14.20...v1.0.0) (2022-07-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* move to a new @lifi scope (#83)
+
+### Features
+
+* move to a new [@lifi](https://github.com/lifi) scope ([#83](https://github.com/lifinance/types/issues/83)) ([ba1a3c1](https://github.com/lifinance/types/commit/ba1a3c14eb54fbc5e3ff9070137891fa5d12a262))
+
 ### [0.14.20](https://github.com/lifinance/types/compare/v0.14.19...v0.14.20) (2022-07-12)
 
 
