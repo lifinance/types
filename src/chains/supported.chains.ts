@@ -851,7 +851,7 @@ export const supportedEVMChains: EVMChain[] = [
 
     metamask: {
       chainId: prefixChainId(9001),
-      blockExplorerUrls: ['https://evm.evmos.org'],
+      blockExplorerUrls: ['https://evm.evmos.org/'],
       chainName: 'Evmos',
       nativeCurrency: {
         name: 'EVM',
