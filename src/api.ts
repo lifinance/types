@@ -24,7 +24,7 @@ export interface RouteOptions {
   slippage?: number // (default : 0.03)
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
-  integrator?: string // custom string developer who integrate LiFi can set
+  integrator?: string // custom string developer who integrate LI.FI can set
   referrer?: string // integrators can set a wallet address as referrer to track them
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer

@@ -1,9 +1,9 @@
-# Li.Finance - Types
-Types for lifi projects
+# LI.FI - Types
+Types for LI.FI projects
 
 ### Summary
-This package contains all common types for the [LiFi SDK](https://github.com/lifinance/sdk).
-Learn more about LiFi on (https://li.finance).
+This package contains all common types for the [LI.FI SDK](https://github.com/lifinance/sdk).
+Learn more about LI.FI on (https://li.fi).
 
 
 Check out the [Changelog](./CHANGELOG.md) to see what changed in the last releases.
