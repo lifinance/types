@@ -520,6 +520,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x5de1677344d3cb0d7d465c10b72a8f60699c062d',
         decimals: 6,
       },
+      [ChainId.EVM]: {
+        address: '0x7FF4a56B32ee13D7D4D405887E0eA37d61Ed919e',
+        decimals: 6,
+      },
 
       // Testnets
       [ChainId.ROP]: {
