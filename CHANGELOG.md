@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.20](https://github.com/lifinance/types/compare/v0.14.19...v0.14.20) (2022-07-12)
+
+
+### Features
+
+* add evmos on chain list ([#82](https://github.com/lifinance/types/issues/82)) ([c86e989](https://github.com/lifinance/types/commit/c86e9897e22c25173f9a7f7205beca7f220f9c45))
+
 ### [0.14.19](https://github.com/lifinance/types/compare/v0.14.18...v0.14.19) (2022-07-07)
 
 
