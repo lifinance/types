@@ -1,6 +1,6 @@
 /**
  * @deprecated
- * These values are now obtainable from the LiFi API
+ * These values are now obtainable from the LI.FI API
  */
 export enum BridgeTool {
   connext = 'connext',
@@ -31,7 +31,7 @@ export interface Bridge {
 
 /**
  * @deprecated
- * These values are now obtainable from the LiFi API
+ * These values are now obtainable from the LI.FI API
  */
 export const supportedBridges: Array<Bridge> = [
   {

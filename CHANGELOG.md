@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/lifinance/types/compare/v1.0.0...v1.0.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* github package scope ([1c05268](https://github.com/lifinance/types/commit/1c05268218595bfc91b2440a10bb1c8a78f23f23))
+
+## [1.0.0](https://github.com/lifinance/types/compare/v0.14.20...v1.0.0) (2022-07-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* move to a new @lifi scope (#83)
+
+### Features
+
+* move to a new [@lifi](https://github.com/lifi) scope ([#83](https://github.com/lifinance/types/issues/83)) ([ba1a3c1](https://github.com/lifinance/types/commit/ba1a3c14eb54fbc5e3ff9070137891fa5d12a262))
+
+### [0.14.20](https://github.com/lifinance/types/compare/v0.14.19...v0.14.20) (2022-07-12)
+
+
+### Features
+
+* add evmos on chain list ([#82](https://github.com/lifinance/types/issues/82)) ([c86e989](https://github.com/lifinance/types/commit/c86e9897e22c25173f9a7f7205beca7f220f9c45))
+
+### [0.14.19](https://github.com/lifinance/types/compare/v0.14.18...v0.14.19) (2022-07-07)
+
+
+### Bug Fixes
+
+* **coin:** add coin keys again ([#81](https://github.com/lifinance/types/issues/81)) ([4fc2b9f](https://github.com/lifinance/types/commit/4fc2b9fdc24eb7f4800dfeb69dd13ef10f853f07))
+
 ### [0.14.18](https://github.com/lifinance/types/compare/v0.14.17...v0.14.18) (2022-07-06)
 
 

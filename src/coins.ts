@@ -300,6 +300,12 @@ const basicCoins: BasicCoin[] = [
         symbol: 'DAI',
         name: 'Dai Stablecoin',
       },
+      [ChainId.EVM]: {
+        address: '0x461d52769884ca6235B685EF2040F47d30C94EB5',
+        decimals: 18,
+        symbol: 'DAI',
+        name: 'Dai Stablecoin',
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -514,6 +520,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x5de1677344d3cb0d7d465c10b72a8f60699c062d',
         decimals: 6,
       },
+      [ChainId.EVM]: {
+        address: '0x7FF4a56B32ee13D7D4D405887E0eA37d61Ed919e',
+        decimals: 6,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -606,6 +616,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.BOB]: {
         address: '0x66a2a913e447d6b4bf33efbec43aaef87890fbbc',
+        decimals: 6,
+      },
+      [ChainId.EVM]: {
+        address: '0x51e44FfaD5C2B122C8b635671FCC8139dc636E82',
         decimals: 6,
       },
 
@@ -736,6 +750,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xdc0486f8bf31df57a952bcd3c1d3e166e3d9ec8b',
         decimals: 8,
       },
+      [ChainId.EVM]: {
+        address: '0xF80699Dc594e00aE7bA200c7533a07C1604A106D',
+        decimals: 8,
+      },
     },
   },
 
@@ -811,6 +829,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.BOB]: {
         address: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
+        decimals: 18,
+      },
+      [ChainId.EVM]: {
+        address: '0x5842C5532b61aCF3227679a8b1BD0242a41752f2',
         decimals: 18,
       },
 
@@ -1070,6 +1092,7 @@ export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
       decimals: token.decimals,
       symbol: token.symbol ?? coin.key,
       chainId: parseInt(chainId), // Object.entries, Object.keys etc. only return keys as strings. Therefore, we have to parse them here
+      coinKey: coin.key,
       name: token.name ?? coin.key,
       logoURI: coin.logoURI,
       coinKey: coin.key,

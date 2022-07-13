@@ -274,11 +274,11 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://http-mainnet.hecochain.com'],
     },
   },
-  // 10 - Optimistic Ethereum
+  // 10 - Optimism
   {
     key: ChainKey.OPT,
     chainType: ChainType.EVM,
-    name: 'Optimistic Ethereum',
+    name: 'Optimism',
     coin: CoinKey.ETH,
     id: 10,
     mainnet: true,
@@ -291,10 +291,10 @@ export const supportedEVMChains: EVMChain[] = [
     metamask: {
       chainId: prefixChainId(10),
       blockExplorerUrls: ['https://optimistic.etherscan.io/'],
-      chainName: 'Optimistic Ethereum',
+      chainName: 'Optimism',
       nativeCurrency: {
-        name: 'OETH',
-        symbol: 'OETH',
+        name: 'ETH',
+        symbol: 'ETH',
         decimals: 18,
       },
       rpcUrls: ['https://mainnet.optimism.io/'],
@@ -837,8 +837,30 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://mainnet.aurora.dev'],
     },
   },
-  // TODO: Add
   // EVM = 9001,
+  {
+    key: ChainKey.EVM,
+    chainType: ChainType.EVM,
+    name: 'Evmos',
+    coin: CoinKey.EVM,
+    id: 9001,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/evmos.png',
+    multicallAddress: multicallAddresses[ChainId.EVM],
+
+    metamask: {
+      chainId: prefixChainId(9001),
+      blockExplorerUrls: ['https://evm.evmos.org/'],
+      chainName: 'Evmos',
+      nativeCurrency: {
+        name: 'EVM',
+        symbol: 'EVM',
+        decimals: 18,
+      },
+      rpcUrls: ['https://eth.bd.evmos.org:8545'],
+    },
+  },
 
   // TESTNETS
   // 3 - Ropsten
