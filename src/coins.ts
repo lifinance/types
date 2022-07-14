@@ -1283,6 +1283,16 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'Celo native asset',
     logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5567.png',
   },
+  [ChainId.EVM]: {
+    address: '0xd4949664cd82660aae99bedc034a0dea8a0bd517',
+    symbol: 'WEVMOS',
+    decimals: 18,
+    chainId: ChainId.EVM,
+    coinKey: 'WEVMOS' as CoinKey,
+    name: 'Wrapped Evmos',
+    logoURI:
+      'https://raw.githubusercontent.com/cronus-finance/token-list/main/assets/evmos/0xD4949664cD82660AaE99bEdc034a0deA8A0bd517/logo.png',
+  },
 
   // Testnets
   [ChainId.ROP]: {
