@@ -1095,7 +1095,6 @@ export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
       coinKey: coin.key,
       name: token.name ?? coin.key,
       logoURI: coin.logoURI,
-      coinKey: coin.key,
     }
   }
 

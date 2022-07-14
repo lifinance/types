@@ -161,6 +161,12 @@ export interface CustomStep extends StepBase {
   type: 'custom'
   action: Action
   estimate: Estimate
+  destinationCallInfo: {
+    toContractAddress: string
+    toContractCallData: string
+    toFallbackAddress: string
+    callDataGasLimit: string
+  }
 }
 
 export function isCustomStep(step: Step): step is CustomStep {
