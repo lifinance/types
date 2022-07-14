@@ -1075,6 +1075,20 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+  // > EVM
+  {
+    key: CoinKey.EVM,
+    name: 'Evmos',
+    logoURI:
+      'https://raw.githubusercontent.com/cronus-finance/token-list/main/assets/evmos/0xD4949664cD82660AaE99bEdc034a0deA8A0bd517/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.EVM]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
