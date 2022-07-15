@@ -847,6 +847,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x5842C5532b61aCF3227679a8b1BD0242a41752f2',
         decimals: 18,
       },
+      [ChainId.AUR]: {
+        address: '0xC9BdeEd33CD01541e1eeD10f90519d2C06Fe3feB',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -1101,6 +1105,20 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+  // > AURORA
+  {
+    key: CoinKey.AETH,
+    name: 'AETH',
+    logoURI:
+      'https://static.debank.com/image/aurora_token/logo_url/aurora/d61441782d4a08a7479d54aea211679e.png',
+    verified: true,
+    chains: {
+      [ChainId.AUR]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
@@ -1318,6 +1336,16 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'Wrapped Evmos',
     logoURI:
       'https://raw.githubusercontent.com/cronus-finance/token-list/main/assets/evmos/0xD4949664cD82660AaE99bEdc034a0deA8A0bd517/logo.png',
+  },
+  [ChainId.AUR]: {
+    address: '0x0000000000000000000000000000000000000000',
+    symbol: 'AETH',
+    decimals: 18,
+    chainId: ChainId.AUR,
+    coinKey: 'AETH' as CoinKey,
+    name: 'AETH',
+    logoURI:
+      'https://static.debank.com/image/aurora_token/logo_url/aurora/d61441782d4a08a7479d54aea211679e.png',
   },
 
   // Testnets
