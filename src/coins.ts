@@ -524,6 +524,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x7FF4a56B32ee13D7D4D405887E0eA37d61Ed919e',
         decimals: 6,
       },
+      [ChainId.AUR]: {
+        address: '0x4988a896b1227218e4A686fdE5EabdcAbd91571f',
+        decimals: 6,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -620,6 +624,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.EVM]: {
         address: '0x51e44FfaD5C2B122C8b635671FCC8139dc636E82',
+        decimals: 6,
+      },
+      [ChainId.AUR]: {
+        address: '0xB12BFcA5A55806AaF64E99521918A4bf0fC40802',
         decimals: 6,
       },
 
@@ -752,6 +760,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.EVM]: {
         address: '0xF80699Dc594e00aE7bA200c7533a07C1604A106D',
+        decimals: 8,
+      },
+      [ChainId.AUR]: {
+        address: '0xF4eB217Ba2454613b15dBdea6e5f22276410e89e',
         decimals: 8,
       },
     },
