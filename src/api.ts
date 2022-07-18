@@ -95,7 +95,7 @@ export interface GetTokenRequest {
   token: string
 }
 
-interface ToolConfiguration {
+export interface ToolConfiguration {
   allowBridges?: string[]
   denyBridges?: string[]
   preferBridges?: string[]
@@ -120,7 +120,7 @@ export interface QuoteRequest extends ToolConfiguration {
   referrer?: string
 }
 
-export interface QuoteContractCallRequest extends ToolConfiguration {
+export interface ContractCallQuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
@@ -133,14 +133,14 @@ export interface QuoteContractCallRequest extends ToolConfiguration {
   toContractGasLimit: string
   toApprovalAddress?: string
   toFallbackAddress?: string
+  contractOutputsToken?: string
 
-  order?: Order
   slippage?: number | string
   integrator?: string
   referrer?: string
 }
 
-export interface QuoteContractCallsRequest extends ToolConfiguration {
+export interface ContractCallQuotesRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
@@ -307,9 +307,9 @@ export declare class LifiAPI {
 
   getQuote(request: QuoteRequest): Promise<Step>
 
-  getQuoteContractCall(request: QuoteContractCallRequest): Promise<Step>
+  getContractCallQuote(request: ContractCallQuoteRequest): Promise<Step>
 
-  getQuoteContractCalls(request: QuoteContractCallsRequest): Promise<Step>
+  getContractCallQuotes(request: ContractCallQuotesRequest): Promise<Step>
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
 
