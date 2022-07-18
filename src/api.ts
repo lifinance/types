@@ -133,6 +133,7 @@ export interface QuoteContractCallRequest extends ToolConfiguration {
   toContractGasLimit: string
   toApprovalAddress?: string
   toFallbackAddress?: string
+  contractOutputsToken?: string
 
   order?: Order
   slippage?: number | string
