@@ -1107,7 +1107,7 @@ const basicCoins: BasicCoin[] = [
   },
   // > AURORA
   {
-    key: CoinKey.AETH,
+    key: CoinKey.ETH,
     name: 'AETH',
     logoURI:
       'https://static.debank.com/image/aurora_token/logo_url/aurora/d61441782d4a08a7479d54aea211679e.png',
