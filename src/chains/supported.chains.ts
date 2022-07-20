@@ -815,7 +815,7 @@ export const supportedEVMChains: EVMChain[] = [
   {
     key: ChainKey.AUR,
     chainType: ChainType.EVM,
-    name: 'Aurora Mainnet',
+    name: 'Aurora',
     coin: CoinKey.ETH,
     id: 1313161554,
     mainnet: true,
