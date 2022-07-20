@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/lifinance/types/compare/v1.0.1...v1.1.0) (2022-07-14)
+
+
+### Features
+
+* **evmos:** add wrapped and native gas token on Evmos ([#86](https://github.com/lifinance/types/issues/86)) ([0f7eff8](https://github.com/lifinance/types/commit/0f7eff874e7dce1446bfb0b4dacb18b91cb9475f))
+
+
+### Bug Fixes
+
+* publishing script ([d5e85eb](https://github.com/lifinance/types/commit/d5e85ebfd4de7695082736049bbc0b76a4ed02a2))
+
 ### [1.0.1](https://github.com/lifinance/types/compare/v1.0.0...v1.0.1) (2022-07-12)
 
 
