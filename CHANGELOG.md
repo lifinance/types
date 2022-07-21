@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/lifinance/types/compare/v1.1.1...v1.2.0) (2022-07-21)
+
+
+### Features
+
+* add custom step and contract call endpoints ([#85](https://github.com/lifinance/types/issues/85)) ([bd49fae](https://github.com/lifinance/types/commit/bd49faefc924d7a06818ab6cb3589db633c58e9c))
+
 ### [1.1.1](https://github.com/lifinance/types/compare/v1.1.0...v1.1.1) (2022-07-21)
 
 
