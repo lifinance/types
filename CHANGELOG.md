@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/lifinance/types/compare/v1.1.0...v1.1.1) (2022-07-21)
+
+
+### Bug Fixes
+
+* remove .DS_Store files ([ccd0112](https://github.com/lifinance/types/commit/ccd01122f15f099e17eb3253a87c008f65c991ba))
+
 ## [1.1.0](https://github.com/lifinance/types/compare/v1.0.1...v1.1.0) (2022-07-14)
 
 
