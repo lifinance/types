@@ -107,7 +107,7 @@ export const emptyExecution: Execution = {
 }
 
 // STEP
-export type StepType = 'swap' | 'cross' | 'lifi'
+export type StepType = 'swap' | 'cross' | 'lifi' | 'custom'
 export type StepTool = string
 
 export interface StepBase {
@@ -157,4 +157,20 @@ export function isLifiStep(step: Step): step is LifiStep {
   return step.type === 'lifi'
 }
 
-export type Step = SwapStep | CrossStep | LifiStep
+export interface CustomStep extends StepBase {
+  type: 'custom'
+  action: Action
+  estimate: Estimate
+  destinationCallInfo: {
+    toContractAddress: string
+    toContractCallData: string
+    toFallbackAddress: string
+    callDataGasLimit: string
+  }
+}
+
+export function isCustomStep(step: Step): step is CustomStep {
+  return step.type === 'custom'
+}
+
+export type Step = SwapStep | CrossStep | LifiStep | CustomStep

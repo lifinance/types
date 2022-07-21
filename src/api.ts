@@ -95,7 +95,7 @@ export interface GetTokenRequest {
   token: string
 }
 
-interface ToolConfiguration {
+export interface ToolConfiguration {
   allowBridges?: string[]
   denyBridges?: string[]
   preferBridges?: string[]
@@ -113,6 +113,49 @@ export interface QuoteRequest extends ToolConfiguration {
   toChain: number | string
   toToken: string
   toAddress?: string
+
+  order?: Order
+  slippage?: number | string
+  integrator?: string
+  referrer?: string
+}
+
+export interface ContractCallQuoteRequest extends ToolConfiguration {
+  fromChain: number | string
+  fromToken: string
+  fromAddress: string
+
+  toChain: number | string
+  toToken: string
+  toAmount: string
+  toContractAddress: string
+  toContractCallData: string
+  toContractGasLimit: string
+  toApprovalAddress?: string
+  toFallbackAddress?: string
+  contractOutputsToken?: string
+
+  slippage?: number | string
+  integrator?: string
+  referrer?: string
+}
+
+export interface ContractCallQuotesRequest extends ToolConfiguration {
+  fromChain: number | string
+  fromToken: string
+  fromAddress: string
+
+  toChain: number | string
+  toFallbackAddress?: string
+  toContractCalls: {
+    sendingAmount: string
+    sendingToken: string
+    receivingToken: string
+    contractAddress: string
+    approvalAddress?: string
+    callData: string
+    gasLimit: string
+  }[]
 
   order?: Order
   slippage?: number | string
@@ -263,6 +306,10 @@ export declare class LifiAPI {
   getTokens(request: TokensRequest): Promise<TokensResponse>
 
   getQuote(request: QuoteRequest): Promise<Step>
+
+  getContractCallQuote(request: ContractCallQuoteRequest): Promise<Step>
+
+  getContractCallQuotes(request: ContractCallQuotesRequest): Promise<Step>
 
   getStatus(request: GetStatusRequest): Promise<StatusResponse>
 
