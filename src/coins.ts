@@ -1105,20 +1105,6 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
-  // > AURORA
-  {
-    key: CoinKey.ETH,
-    name: 'AETH',
-    logoURI:
-      'https://static.debank.com/image/aurora_token/logo_url/aurora/d61441782d4a08a7479d54aea211679e.png',
-    verified: true,
-    chains: {
-      [ChainId.AUR]: {
-        address: '0x0000000000000000000000000000000000000000',
-        decimals: 18,
-      },
-    },
-  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
