@@ -28,7 +28,7 @@ export interface RouteOptions {
   referrer?: string // integrators can set a wallet address as referrer to track them
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
-  fee?: number // 3 = take 3% integrator fee (requires verified integrator to be set)
+  fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
 }
 
 export interface RoutesRequest {
@@ -119,7 +119,7 @@ export interface QuoteRequest extends ToolConfiguration {
   slippage?: number | string
   integrator?: string
   referrer?: string
-  fee?: number
+  fee?: number | string
 }
 
 export interface ContractCallQuoteRequest extends ToolConfiguration {
@@ -140,6 +140,7 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
   slippage?: number | string
   integrator?: string
   referrer?: string
+  fee?: number | string
 }
 
 export interface ContractCallQuotesRequest extends ToolConfiguration {
