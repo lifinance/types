@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/lifinance/types/compare/v1.2.1...v1.3.0) (2022-07-28)
+
+
+### Features
+
+* add fee parameter to quote and route requests ([#88](https://github.com/lifinance/types/issues/88)) ([cea2166](https://github.com/lifinance/types/commit/cea216696ee0c68c41baec8235937ab19ff6ac07))
+
 ### [1.2.1](https://github.com/lifinance/types/compare/v1.2.0...v1.2.1) (2022-07-21)
 
 
