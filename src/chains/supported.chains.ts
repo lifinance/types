@@ -4,11 +4,11 @@
     This file is only used to provide legacy compatibility for existing tools.
 */
 
-import { EVMChain, prefixChainId } from './EVMChain'
-import { SolanaChain } from './SolanaChain'
 import { ChainId, ChainKey, CoinKey } from '../base'
 import { multicallAddresses } from '../multicall'
 import { ChainType } from './Chain'
+import { EVMChain, prefixChainId } from './EVMChain'
+import { SolanaChain } from './SolanaChain'
 
 // chainNames aligned with https://github.com/ethereum-lists/chains/tree/master/_data/chains
 export const supportedEVMChains: EVMChain[] = [
@@ -21,7 +21,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 1,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum.svg',
     tokenlistUrl: 'https://gateway.ipfs.io/ipns/tokens.uniswap.org',
     multicallAddress: multicallAddresses[ChainId.ETH],
 
@@ -48,7 +48,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 137,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/polygon.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/polygon.svg',
     tokenlistUrl:
       'https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/polygon-matic'],
@@ -82,7 +82,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 56,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/bsc.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/bsc.svg',
     tokenlistUrl:
       'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
     faucetUrls: ['https://stakely.io/faucet/bsc-chain-bnb'],
@@ -114,7 +114,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 100,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/gnosis.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/gnosis.svg',
     tokenlistUrl: 'https://tokens.honeyswap.org/',
     faucetUrls: ['https://stakely.io/faucet/xdai-chain'],
     multicallAddress: multicallAddresses[ChainId.DAI],
@@ -145,7 +145,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 250,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fantom.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fantom.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
     faucetUrls: [
@@ -176,7 +176,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 66,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/okex.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/okex.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
     multicallAddress: multicallAddresses[ChainId.OKT],
@@ -203,7 +203,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 43114,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/avalanche.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/avalanche.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/avalanche.json',
     multicallAddress: multicallAddresses[ChainId.AVA],
@@ -230,7 +230,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 42161,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/arbitrum.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/arbitrum.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/arbitrum.json',
     faucetUrls: ['https://bridge.arbitrum.io/'],
@@ -283,7 +283,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 10,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/optimism.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/optimism.svg',
     tokenlistUrl: 'https://static.optimism.io/optimism.tokenlist.json',
     faucetUrls: ['https://gateway.optimism.io/'],
     multicallAddress: multicallAddresses[ChainId.OPT],
@@ -337,7 +337,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 1666600000,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/harmony.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/harmony.svg',
     tokenlistUrl:
       'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/lists/venomswap-default.tokenlist.json',
     faucetUrls: ['https://stakely.io/faucet/harmony-one'],
@@ -367,7 +367,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 1285,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonriver.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonriver.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/moonriver.json',
     multicallAddress: multicallAddresses[ChainId.MOR],
@@ -395,7 +395,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 1284,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonbeam.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/moonbeam.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
     multicallAddress: multicallAddresses[ChainId.MOO],
@@ -540,7 +540,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 42220,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/celo.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/celo.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/celo.json',
     faucetUrls: [
@@ -571,7 +571,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 122,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fuse.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/fuse.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/fuse.json',
     multicallAddress: multicallAddresses[ChainId.FUS],
@@ -623,7 +623,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 25,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/cronos.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/cronos.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/cronaswap-default.tokenlist.json',
     multicallAddress: multicallAddresses[ChainId.CRO],
@@ -846,7 +846,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 9001,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/evmos.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/evmos.svg',
     multicallAddress: multicallAddresses[ChainId.EVM],
 
     metamask: {
@@ -1300,7 +1300,7 @@ export const supportedSolanaChains: SolanaChain[] = [
     id: ChainId.SOL,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/solana.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/solana.svg',
     faucetUrls: ['https://stakely.io/faucet/solana-sol'],
   },
 ]
