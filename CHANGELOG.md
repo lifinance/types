@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/lifinance/types/compare/v1.3.0...v1.4.0) (2022-08-08)
+
+
+### Features
+
+* add new svg chain icons ([#90](https://github.com/lifinance/types/issues/90)) ([34ffbdd](https://github.com/lifinance/types/commit/34ffbddeb31d4cf352fba5430ea71df74d793d96))
+* add voltage exchange icon ([24cde33](https://github.com/lifinance/types/commit/24cde33e57a436c93c6a9da9265ad0c97b0b561e))
+
 ## [1.3.0](https://github.com/lifinance/types/compare/v1.2.1...v1.3.0) (2022-07-28)
 
 
