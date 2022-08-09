@@ -176,7 +176,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 66,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/okex.svg',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/okx.svg',
     tokenlistUrl:
       'https://raw.githubusercontent.com/sushiswap/default-token-list/master/tokens/okex.json',
     multicallAddress: multicallAddresses[ChainId.OKT],
