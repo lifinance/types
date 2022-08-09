@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/lifinance/types/compare/v1.4.0...v1.4.1) (2022-08-09)
+
+
+### Bug Fixes
+
+* okx icon ([#91](https://github.com/lifinance/types/issues/91)) ([d356e19](https://github.com/lifinance/types/commit/d356e1983fb4fef604fd92e3bb87cf908d24fa8a))
+
 ## [1.4.0](https://github.com/lifinance/types/compare/v1.3.0...v1.4.0) (2022-08-08)
 
 
