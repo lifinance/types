@@ -145,7 +145,7 @@ export const supportedBridges: Array<Bridge> = [
   },
   {
     key: BridgeTool.across,
-    name: 'AcrossV2',
+    name: 'Across',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/acrossv2.png',
     bridgeUrl: 'https://across.to/',
