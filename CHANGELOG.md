@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/lifinance/types/compare/v1.4.1...v1.5.0) (2022-08-10)
+
+
+### Features
+
+* **bridges:** rename AcrossV2 in Across ([#92](https://github.com/lifinance/types/issues/92)) ([5bd7e7a](https://github.com/lifinance/types/commit/5bd7e7ac045b2a93b0e6e7803c2ddfa087385a27))
+
 ### [1.4.1](https://github.com/lifinance/types/compare/v1.4.0...v1.4.1) (2022-08-09)
 
 
