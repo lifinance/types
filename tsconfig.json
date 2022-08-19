@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "strict": true,
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true /* Generates corresponding '.d.ts' file. */,
