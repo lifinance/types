@@ -1104,6 +1104,31 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://kovan.optimism.io'],
     },
   },
+  // 420 - Optimistic Ethereum (Kovan)
+  {
+    key: ChainKey.OPTG,
+    chainType: ChainType.EVM,
+    name: 'Optimistic Ethereum Testnet Goerli',
+    coin: CoinKey.ETH,
+    id: 420,
+    mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/optimism_test.png',
+    faucetUrls: ['https://gateway.optimism.io/'],
+    multicallAddress: multicallAddresses[ChainId.OPTG],
+
+    metamask: {
+      chainId: prefixChainId(69),
+      blockExplorerUrls: ['https://blockscout.com/optimism/goerli/'],
+      chainName: 'Optimistic Ethereum Testnet Goerli',
+      nativeCurrency: {
+        name: 'tETH',
+        symbol: 'tETH',
+        decimals: 18,
+      },
+      rpcUrls: ['https://goerli.optimism.io/'],
+    },
+  },
   // 97 - Binance Smart Chain Testnet
   {
     key: ChainKey.BSCT,
