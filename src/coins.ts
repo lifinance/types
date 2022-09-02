@@ -124,6 +124,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.OPTG]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
       [ChainId.ARBT]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
@@ -877,6 +881,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x4200000000000000000000000000000000000006',
         decimals: 18,
       },
+      [ChainId.OPTG]: {
+        address: '0x4200000000000000000000000000000000000006',
+        decimals: 18,
+      },
     },
   },
 
@@ -1416,6 +1424,17 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     symbol: 'WETH',
     decimals: 18,
     chainId: ChainId.OPTT,
+    coinKey: CoinKey.WETH,
+    name: 'WETH',
+    logoURI:
+      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
+  [ChainId.OPTG]: {
+    // https://blockscout.com/optimism/goerli/address/0x4200000000000000000000000000000000000006
+    address: '0x4200000000000000000000000000000000000006',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.OPTG,
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
