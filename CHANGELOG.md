@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/lifinance/types/compare/v1.5.1...v1.6.0) (2022-09-02)
+
+
+### Features
+
+* add gasInformation to execution object ([#89](https://github.com/lifinance/types/issues/89)) ([a0e30e9](https://github.com/lifinance/types/commit/a0e30e96497b58d02b980efcff1578e8aeb424c3))
+* add optimism goerli ([#94](https://github.com/lifinance/types/issues/94)) ([899089a](https://github.com/lifinance/types/commit/899089acd3572678614a898f958abcbde00d2bd9))
+
 ### [1.5.1](https://github.com/lifinance/types/compare/v1.5.0...v1.5.1) (2022-08-19)
 
 ## [1.5.0](https://github.com/lifinance/types/compare/v1.4.1...v1.5.0) (2022-08-10)
