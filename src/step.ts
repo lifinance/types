@@ -99,6 +99,8 @@ export interface Execution {
   fromAmount?: string
   toAmount?: string
   toToken?: Token
+  gasUsed?: string
+  gasPrice?: string
 }
 
 export const emptyExecution: Execution = {
