@@ -411,6 +411,29 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.DAI, ChainId.FTM),
     ],
   },
+  {
+    key: 'soulswap-ftm',
+    name: 'SoulSwap',
+    chainId: ChainId.FTM,
+    webUrl: 'https://app.soulswap.finance/',
+    logoURI:
+      'https://raw.githubusercontent.com/soulswapfinance/assets/prod/blockchains/fantom/assets/0xe2fb177009FF39F52C0134E8007FA0e4BaAcBd07/logo.png',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/soulswapfinance/default-token-list/master/soulswap.tokenlist.json',
+    routerAddress: '0x6b3d631B87FE27aF29efeC61d2ab8CE4d621cCBF',
+    factoryAddress: '0x1120e150dA9def6Fe930f4fEDeD18ef57c0CA7eF',
+    initCodeHash:
+      '0xf3dcc3c6c6e34d3981dd429ac942301b9ebdd05de1be17f646b55476c44dc951',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.FTM),
+      {
+        address: '0xe2fb177009FF39F52C0134E8007FA0e4BaAcBd07',
+        symbol: 'SOUL',
+        decimals: 18,
+        chainId: ChainId.FTM,
+      } as Token,
+    ],
+  },
 
   // 1666600000 - Harmony Mainnet Shard 0
   {
