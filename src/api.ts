@@ -266,6 +266,7 @@ export interface StatusResponse extends StatusInformation {
   sending: TransactionInfo
   receiving?: TransactionInfo
   tool?: string
+  bridgeExplorerLink?: string
 }
 
 export interface ChainsResponse {
