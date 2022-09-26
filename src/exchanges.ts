@@ -752,6 +752,33 @@ export const supportedExchanges: Array<Exchange> = [
       } as Token,
     ],
   },
+  {
+    key: 'okcswap-okt',
+    name: 'OKCSwap',
+    chainId: ChainId.OKT,
+    webUrl: 'https://www.okx.com/okc/swap',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/okx.png',
+    tokenlistUrl: 'https://www.okx.com/okc/openapi/swap/tokens',
+    routerAddress: '0xc97b81B8a38b9146010Df85f1Ac714aFE1554343',
+    factoryAddress: '0x7b9F0a56cA7D20A44f603C03C6f45Db95b31e539',
+    initCodeHash:
+      '0x00c49b7a1b728b8f0185f09df0b8487b8f4fd0fc3b133cb58039e67a16acb657',
+    baseTokens: [
+      {
+        address: '0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15',
+        symbol: 'WOKT',
+        decimals: 18,
+        chainId: ChainId.OKT,
+      } as Token,
+      {
+        address: '0x382bB369d343125BfB2117af9c149795C6C65C50',
+        symbol: CoinKey.USDT,
+        decimals: 18,
+        chainId: ChainId.OKT,
+      } as Token,
+    ],
+  },
 
   // 25 - Cronos Mainnet Beta
   {
