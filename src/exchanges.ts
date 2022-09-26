@@ -345,6 +345,29 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.SUSHI, ChainId.DAI),
     ],
   },
+  {
+    key: 'swapr-dai',
+    name: 'Swapr',
+    chainId: ChainId.DAI,
+    webUrl: 'https://swapr.eth.limo/',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/swapr.png',
+    tokenlistUrl:
+      'https://gist.githubusercontent.com/mathiasmoeller/03525afe098af3d45b9aff1f8a04acd9/raw/76d9b818659fe1fe90c8f0f0edc36f23160d4dc1/swapr-token-list.json',
+    routerAddress: '0xE43e60736b1cb4a75ad25240E2f9a62Bff65c0C0',
+    factoryAddress: '0x5D48C95AdfFD4B40c1AAADc4e08fc44117E02179',
+    initCodeHash:
+      '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.DAI),
+      {
+        address: '0x532801ed6f82fffd2dab70a19fc2d7b2772c4f4b',
+        symbol: 'SWPR',
+        decimals: 18,
+        chainId: ChainId.DAI,
+      } as Token,
+    ],
+  },
 
   // 250 - Fantom
   {
@@ -747,6 +770,33 @@ export const supportedExchanges: Array<Exchange> = [
       {
         address: '0x5fac926bf1e638944bb16fb5b787b5ba4bc85b0a',
         symbol: 'JF',
+        decimals: 18,
+        chainId: ChainId.OKT,
+      } as Token,
+    ],
+  },
+  {
+    key: 'okcswap-okt',
+    name: 'OKCSwap',
+    chainId: ChainId.OKT,
+    webUrl: 'https://www.okx.com/okc/swap',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/okx.png',
+    tokenlistUrl: 'https://www.okx.com/okc/openapi/swap/tokens',
+    routerAddress: '0xc97b81B8a38b9146010Df85f1Ac714aFE1554343',
+    factoryAddress: '0x7b9F0a56cA7D20A44f603C03C6f45Db95b31e539',
+    initCodeHash:
+      '0x00c49b7a1b728b8f0185f09df0b8487b8f4fd0fc3b133cb58039e67a16acb657',
+    baseTokens: [
+      {
+        address: '0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15',
+        symbol: 'WOKT',
+        decimals: 18,
+        chainId: ChainId.OKT,
+      } as Token,
+      {
+        address: '0x382bB369d343125BfB2117af9c149795C6C65C50',
+        symbol: CoinKey.USDT,
         decimals: 18,
         chainId: ChainId.OKT,
       } as Token,
