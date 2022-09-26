@@ -770,6 +770,8 @@ export const supportedEVMChains: EVMChain[] = [
     id: 106,
     mainnet: true,
     multicallAddress: multicallAddresses[ChainId.VEL],
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/velas.png',
 
     metamask: {
       chainId: prefixChainId(106),
