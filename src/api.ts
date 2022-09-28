@@ -1,3 +1,4 @@
+import { TransactionRequest } from '@ethersproject/providers'
 import {
   BridgeDefinition,
   Chain,
@@ -294,6 +295,32 @@ export type RequestOptions = {
   signal?: AbortSignal
 }
 
+export interface Integrator {
+  integratorId: string
+  feeBalances: FeeBalance[]
+}
+
+export type FeeBalance = {
+  chainId: ChainId
+  tokenBalances: TokenBalance[]
+}
+
+export type TokenBalance = {
+  token: Token
+  amount: string
+  amountUsd: string
+}
+
+export interface IntegratorWithdrawalRequest {
+  address: string
+  chainId: string
+  tokens: string[] | undefined
+}
+
+export interface IntegratorWithdrawalTransactionResponse {
+  transactionRequest: TransactionRequest
+}
+
 export declare class LifiAPI {
   getRoutes(request: RoutesRequest): Promise<RoutesResponse>
 
@@ -322,4 +349,10 @@ export declare class LifiAPI {
   getChains(): ChainsResponse
 
   getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
+
+  getIntegratorData(integratorAddress: string): Promise<Integrator>
+
+  getIntegratorWithdrawalTransaction(
+    request: IntegratorWithdrawalRequest
+  ): Promise<IntegratorWithdrawalTransactionResponse>
 }
