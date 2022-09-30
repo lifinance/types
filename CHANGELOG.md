@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/lifinance/types/compare/v1.7.0...v1.8.0) (2022-09-30)
+
+
+### Features
+
+* add Swapr on Gnosis and OKCSwap on OKT ([#97](https://github.com/lifinance/types/issues/97)) ([9abab9b](https://github.com/lifinance/types/commit/9abab9bbe500355de07b61bf8cdb7100e868cf76))
+* add Wagyu Dex on Velas ([#98](https://github.com/lifinance/types/issues/98)) ([d3201a2](https://github.com/lifinance/types/commit/d3201a2c8eaf4a385d79333c3b0ce4923ac58ead))
+
 ## [1.7.0](https://github.com/lifinance/types/compare/v1.6.0...v1.7.0) (2022-09-13)
 
 
