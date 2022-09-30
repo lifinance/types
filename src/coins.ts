@@ -94,6 +94,11 @@ const basicCoins: BasicCoin[] = [
         symbol: 'AETH',
         name: 'AETH',
       },
+      // https://evmexplorer.velas.com/token/0x85219708c49aa701871Ad330A94EA0f41dFf24Ca
+      [ChainId.VEL]: {
+        address: '0x85219708c49aa701871ad330a94ea0f41dff24ca',
+        decimals: 18,
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -160,6 +165,11 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
         name: 'Matic Token on xDai',
       },
+      // https://evmexplorer.velas.com/token/0x6ab0B8C1a35F9F4Ce107cCBd05049CB1Dbd99Ec5/
+      [ChainId.VEL]: {
+        address: '0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5',
+        decimals: 18,
+      },
 
       // Testnet
       [ChainId.MUM]: {
@@ -201,6 +211,11 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.MOO]: {
         address: '0xc9baa8cfdde8e328787e29b4b078abf2dadc2055',
+        decimals: 18,
+      },
+      // https://evmexplorer.velas.com/token/0x2B8e9cD44C9e09D936149549a8d207c918ecB5C4
+      [ChainId.VEL]: {
+        address: '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4',
         decimals: 18,
       },
 
@@ -308,6 +323,12 @@ const basicCoins: BasicCoin[] = [
         address: '0x461d52769884ca6235B685EF2040F47d30C94EB5',
         decimals: 18,
         symbol: 'DAI',
+        name: 'Dai Stablecoin',
+      },
+      // https://evmexplorer.velas.com/token/0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D
+      [ChainId.VEL]: {
+        address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d',
+        decimals: 18,
         name: 'Dai Stablecoin',
       },
 
@@ -532,6 +553,12 @@ const basicCoins: BasicCoin[] = [
         address: '0x4988a896b1227218e4A686fdE5EabdcAbd91571f',
         decimals: 6,
       },
+      // https://evmexplorer.velas.com/token/0x01445C31581c354b7338AC35693AB2001B50b9aE
+      [ChainId.VEL]: {
+        address: '0x01445c31581c354b7338ac35693ab2001b50b9ae',
+        decimals: 6,
+        name: 'Multichain USDT',
+      },
 
       // Testnets
       [ChainId.ROP]: {
@@ -633,6 +660,12 @@ const basicCoins: BasicCoin[] = [
       [ChainId.AUR]: {
         address: '0xB12BFcA5A55806AaF64E99521918A4bf0fC40802',
         decimals: 6,
+      },
+      // https://evmexplorer.velas.com/token/0xe2C120f188eBd5389F71Cf4d9C16d05b62A58993
+      [ChainId.VEL]: {
+        address: '0xe2c120f188ebd5389f71cf4d9c16d05b62a58993',
+        decimals: 6,
+        name: 'Multichain USDC',
       },
 
       // Testnets
@@ -1113,6 +1146,20 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+  // > VEL
+  {
+    key: CoinKey.VLX,
+    name: 'Velas',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/tokens/vlx.png',
+    verified: true,
+    chains: {
+      [ChainId.VEL]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+    },
+  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
@@ -1340,6 +1387,16 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'AETH',
     logoURI:
       'https://static.debank.com/image/aurora_token/logo_url/aurora/d61441782d4a08a7479d54aea211679e.png',
+  },
+  [ChainId.VEL]: {
+    address: '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126',
+    symbol: 'WVLX',
+    decimals: 18,
+    chainId: ChainId.VEL,
+    coinKey: 'WVLX' as CoinKey,
+    name: 'Wrapped VLX',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/tokens/vlx.png',
   },
 
   // Testnets

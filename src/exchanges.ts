@@ -1269,6 +1269,42 @@ export const supportedExchanges: Array<Exchange> = [
       '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
     baseTokens: [findWrappedGasOnChain(ChainId.ONET)],
   },
+
+  // 106 Velas
+  {
+    key: 'wagyuswap-vel',
+    name: 'Wagyuswap',
+    chainId: ChainId.VEL,
+    webUrl: 'https://exchange.wagyuswap.app',
+    tokenlistUrl:
+      'https://github.com/wagyuswapapp/wagyu-frontend/blob/wagyu/src/config/constants/tokenLists/pancake-default.tokenlist.json',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/wagyu.png',
+    routerAddress: '0x3D1c58B6d4501E34DF37Cf0f664A58059a188F00',
+    factoryAddress: '0x69f3212344A38b35844cCe4864C2af9c717F35e3',
+    initCodeHash:
+      '0x3f7eace9f1c10ecce400030e19a86fd03c98c3770ce239a9cdef3b33fb40e933',
+    baseTokens: [
+      {
+        address: '0xabf26902fd7b624e0db40d31171ea9dddf078351',
+        symbol: 'WAG',
+        decimals: 18,
+        chainId: ChainId.VEL,
+      } as Token,
+      {
+        symbol: 'WVLX',
+        address: '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126',
+        decimals: 18,
+        chainId: ChainId.VEL,
+      } as Token,
+      {
+        symbol: 'ASTRO',
+        address: '0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27',
+        decimals: 18,
+        chainId: ChainId.VEL,
+      } as Token,
+    ],
+  },
 ]
 
 /**
