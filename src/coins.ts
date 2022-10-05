@@ -873,7 +873,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
       },
       [ChainId.MOO]: {
-        address: '0x30d2a9f5fdf90ace8c17952cbb4ee48a55d916a7',
+        address: '0xfA9343C3897324496A05fC75abeD6bAC29f8A40f',
         decimals: 18,
       },
       [ChainId.BOB]: {
