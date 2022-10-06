@@ -309,7 +309,7 @@ const basicCoins: BasicCoin[] = [
         name: 'Dai Stablecoin',
       },
       [ChainId.MOO]: {
-        address: '0xc234a67a4f840e61ade794be47de455361b52413',
+        address: '0x765277eebeca2e31912c9946eae1021199b39c61',
         decimals: 18,
         name: 'Dai Stablecoin',
       },
@@ -538,7 +538,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 6,
       },
       [ChainId.MOO]: {
-        address: '0x8e70cd5b4ff3f62659049e74b6649c6603a0e594',
+        address: '0xefaeee334f0fd1712f9a8cc375f427d9cdd40d73',
         decimals: 6,
       },
       [ChainId.BOB]: {
@@ -646,7 +646,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 6,
       },
       [ChainId.MOO]: {
-        address: '0x8f552a71efe5eefc207bf75485b356a0b3f01ec9',
+        address: '0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b',
         decimals: 6,
       },
       [ChainId.BOB]: {
@@ -788,7 +788,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 8,
       },
       [ChainId.MOO]: {
-        address: '0x1dc78acda13a8bc4408b207c9e48cdbc096d95e0',
+        address: '0x922d641a426dcffaef11680e5358f34d97d112e1',
         decimals: 8,
       },
       [ChainId.BOB]: {
@@ -873,7 +873,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
       },
       [ChainId.MOO]: {
-        address: '0x30d2a9f5fdf90ace8c17952cbb4ee48a55d916a7',
+        address: '0xfA9343C3897324496A05fC75abeD6bAC29f8A40f',
         decimals: 18,
       },
       [ChainId.BOB]: {
