@@ -772,6 +772,7 @@ export const supportedEVMChains: EVMChain[] = [
     multicallAddress: multicallAddresses[ChainId.VEL],
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/velas.png',
+    faucetUrls: ['https://stakely.io/faucet/velas-vlx'],
 
     metamask: {
       chainId: prefixChainId(106),
@@ -786,6 +787,7 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://evmexplorer.velas.com/rpc'],
     },
   },
+
   // 1088 Metis Andromeda Mainnet
   {
     key: ChainKey.MAM,
@@ -1081,6 +1083,30 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://rinkeby.arbitrum.io/rpc'],
     },
   },
+  {
+    key: ChainKey.ARBG,
+    chainType: ChainType.EVM,
+    name: 'Arbitrum Görli',
+    coin: CoinKey.ETH,
+    id: 421613,
+    mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/arbitrum_test.png',
+    faucetUrls: ['https://bridge.arbitrum.io/'],
+    multicallAddress: multicallAddresses[ChainId.ARBG],
+
+    metamask: {
+      chainId: prefixChainId(421613),
+      blockExplorerUrls: ['https://goerli-rollup-explorer.arbitrum.io'],
+      chainName: 'Arbitrum Görli',
+      nativeCurrency: {
+        name: 'AGOR',
+        symbol: 'AGOR',
+        decimals: 18,
+      },
+      rpcUrls: ['https://goerli-rollup.arbitrum.io/rpc/	'],
+    },
+  },
   // 69 - Optimistic Ethereum (Kovan)
   {
     key: ChainKey.OPTT,
@@ -1315,7 +1341,6 @@ export const supportedEVMChains: EVMChain[] = [
 
   // https://faucet.buni.finance/
   // kucoin faucet: https://stakely.io/faucet/kucoin-kcc-kcs
-  // Velas faucet: https://stakely.io/faucet/velas-vlx
 ]
 
 export const supportedSolanaChains: SolanaChain[] = [

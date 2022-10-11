@@ -34,6 +34,7 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.VEL]: '0x6ede559F2Bd951777470595761672091CCD21Ac6',
 
   // TODO
+  // [ChainId.ARN]: '', // TODO
   // [ChainId.EXP]: '', // TODO
   // [ChainId.TCH]: '', // TODO
   // [ChainId.UBQ]: '', // TODO
@@ -61,6 +62,7 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.MORT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.FTMT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.RSKT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  [ChainId.ARBG]: '0xcA11bde05977b3631167028862bE2a173976CA11',
 
   // TODO
   // [ChainId.METT]: '', // TODO
@@ -68,7 +70,6 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   // [ChainId.HECT]: '', // TODO
   // [ChainId.FUST]: '', // TODO
   // [ChainId.TLOT]: '', // TODO
-  // [ChainId.ARBG]: '0xcA11bde05977b3631167028862bE2a173976CA11',
 
   // none EVM
   // [ChainId.SOL]: '', // NOT NEEDED

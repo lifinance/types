@@ -89,6 +89,7 @@ export enum ChainKey {
   OAS = 'oas',
   SOL = 'sol',
   EVM = 'evm',
+  ARN = 'arn',
 
   // Testnets
   ROP = 'rop',
@@ -99,6 +100,7 @@ export enum ChainKey {
   KOV = 'kov',
   MUM = 'mum',
   ARBT = 'arbt',
+  ARBG = 'arbg',
   OPTT = 'optt',
   OPTG = 'optg',
   BSCT = 'bsct',
@@ -152,6 +154,7 @@ export enum ChainId {
   TER = 1161011141099710, // this id is made up by the LI.FI team!
   OAS = 111971151099710, // this id is made up by the LI.FI team!
   EVM = 9001,
+  ARN = 42170,
 
   // Testnets
   ROP = 3,
@@ -162,6 +165,7 @@ export enum ChainId {
   KOV = 42,
   MUM = 80001,
   ARBT = 421611,
+  ARBG = 421613,
   OPTT = 69,
   OPTG = 420,
   BSCT = 97,
