@@ -312,9 +312,9 @@ export type TokenBalance = {
 }
 
 export interface IntegratorWithdrawalRequest {
-  address: string
-  chainId: string
-  tokens: string[] | undefined
+  integratorId: string
+  chainId: ChainId
+  tokens?: string[]
 }
 
 export interface IntegratorWithdrawalTransactionResponse {
