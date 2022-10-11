@@ -5,6 +5,7 @@ import { ChainId } from '.'
 // - https://github.com/sushiswap/sushiswap-sdk/blob/canary/src/constants/addresses.ts#L323
 // - https://github.com/joshstevens19/ethereum-multicall#multicall-contracts
 // '0xcA11bde05977b3631167028862bE2a173976CA11' is a Multicall3 contract
+// export const multicallAddresses: Record<ChainId, string> = {
 export const multicallAddresses: { [ChainId: number]: string } = {
   // Mainnet
   [ChainId.ETH]: '0xcA11bde05977b3631167028862bE2a173976CA11', // '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696',
@@ -28,17 +29,19 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.MAM]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.AUR]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.EVM]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  [ChainId.MET]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  [ChainId.RSK]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  [ChainId.VEL]: '0x6ede559F2Bd951777470595761672091CCD21Ac6',
+
+  // TODO
   // [ChainId.EXP]: '', // TODO
   // [ChainId.TCH]: '', // TODO
   // [ChainId.UBQ]: '', // TODO
-  // [ChainId.MET]: '', // TODO
   // [ChainId.DIO]: '', // TODO
   // [ChainId.TLO]: '', // TODO
   // [ChainId.SHI]: '', // TODO
   // [ChainId.GL1]: '', // TODO
-  // [ChainId.RSK]: '', // TODO
   // [ChainId.TBW]: '', // TODO
-  // [ChainId.VEL]: '', // TODO
   // [ChainId.PALM]: '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F',
   // [ChainId.TELOS]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
 
@@ -57,10 +60,21 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.EVMT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.MORT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.FTMT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  [ChainId.RSKT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+
+  // TODO
   // [ChainId.METT]: '', // TODO
   // [ChainId.DIOT]: '', // TODO
   // [ChainId.HECT]: '', // TODO
   // [ChainId.FUST]: '', // TODO
   // [ChainId.TLOT]: '', // TODO
-  // [ChainId.RSKT]: '', // TODO
+  // [ChainId.ARBG]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+
+  // none EVM
+  // [ChainId.SOL]: '', // NOT NEEDED
+  // [ChainId.TER]: '', // NOT NEEDED
+  // [ChainId.OAS]: '', // NOT NEEDED
+  // [ChainId.SOLT]: '', // NOT NEEDED
+  // [ChainId.TERT]: '', // NOT NEEDED
+  // [ChainId.OAST]: '', // NOT NEEDED
 }
