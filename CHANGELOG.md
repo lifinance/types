@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/lifinance/types/compare/v1.9.1...v1.10.0) (2022-10-21)
+
+
+### Features
+
+* add gnosis bridge logo ([#101](https://github.com/lifinance/types/issues/101)) ([47c322e](https://github.com/lifinance/types/commit/47c322e3c10a92a7c3bccd73461ae5a1da61e415))
+
 ## [1.8.0](https://github.com/lifinance/types/compare/v1.7.0...v1.8.0) (2022-09-30)
 
 
