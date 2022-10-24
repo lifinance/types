@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/lifinance/types/compare/v1.10.0...v1.10.1) (2022-10-24)
+
+
+### Bug Fixes
+
+* adjust Arbitrum One name ([#102](https://github.com/lifinance/types/issues/102)) ([530ba68](https://github.com/lifinance/types/commit/530ba68e415c2c6e279aa60749ffaf1cbd579ef1))
+
 ## [1.10.0](https://github.com/lifinance/types/compare/v1.9.1...v1.10.0) (2022-10-21)
 
 
