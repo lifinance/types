@@ -221,11 +221,11 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
     },
   },
-  // 42161 - Arbitrum One
+  // 42161 - Arbitrum
   {
     key: ChainKey.ARB,
     chainType: ChainType.EVM,
-    name: 'Arbitrum One',
+    name: 'Arbitrum',
     coin: CoinKey.ETH,
     id: 42161,
     mainnet: true,
@@ -239,7 +239,7 @@ export const supportedEVMChains: EVMChain[] = [
     metamask: {
       chainId: prefixChainId(42161),
       blockExplorerUrls: ['https://arbiscan.io/'],
-      chainName: 'Arbitrum One',
+      chainName: 'Arbitrum',
       nativeCurrency: {
         name: 'AETH',
         symbol: 'AETH',

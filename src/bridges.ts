@@ -110,7 +110,7 @@ export const supportedBridges: Array<Bridge> = [
   },
   {
     key: BridgeTool.arbitrum,
-    name: 'Arbitrum One Bridge',
+    name: 'Arbitrum Bridge',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/bridges/arbitrum.png',
     bridgeUrl: 'https://bridge.arbitrum.io/',
