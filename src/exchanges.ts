@@ -556,7 +556,7 @@ export const supportedExchanges: Array<Exchange> = [
     ],
   },
 
-  // 42161 - Arbitrum One
+  // 42161 - Arbitrum
   {
     key: 'sushiswap-arb',
     name: 'SushiSwap',
