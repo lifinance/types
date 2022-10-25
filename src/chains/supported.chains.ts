@@ -858,8 +858,8 @@ export const supportedEVMChains: EVMChain[] = [
       blockExplorerUrls: ['https://evm.evmos.org/'],
       chainName: 'Evmos',
       nativeCurrency: {
-        name: 'EVM',
-        symbol: 'EVM',
+        name: 'EVMOS',
+        symbol: 'EVMOS',
         decimals: 18,
       },
       rpcUrls: ['https://eth.bd.evmos.org:8545'],
