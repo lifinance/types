@@ -270,8 +270,12 @@ export interface StatusResponse extends StatusInformation {
   bridgeExplorerLink?: string
 }
 
+interface ExtendedChain extends Chain {
+  nativeToken: Token
+}
+
 export interface ChainsResponse {
-  chains: Chain[]
+  chains: ExtendedChain[]
 }
 
 export interface ToolsRequest {
@@ -346,7 +350,7 @@ export declare class LifiAPI {
 
   getTools(request: ToolsRequest): Promise<ToolsResponse>
 
-  getChains(): ChainsResponse
+  getChains(): Promise<ChainsResponse>
 
   getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
 
