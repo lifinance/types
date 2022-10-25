@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/lifinance/types/compare/v1.10.1...v1.11.0) (2022-10-25)
+
+
+### Features
+
+* **api:** include nativeToken in chains response ([#104](https://github.com/lifinance/types/issues/104)) ([caf6262](https://github.com/lifinance/types/commit/caf6262ca634e063d832f0495710cb5b54a8f3ae))
+
+
+### Bug Fixes
+
+* **EVMOS:** fix name of native evmos coin ([#103](https://github.com/lifinance/types/issues/103)) ([60490c0](https://github.com/lifinance/types/commit/60490c000e3fea06eca415e1c53619ff46ba1208))
+
 ### [1.10.1](https://github.com/lifinance/types/compare/v1.10.0...v1.10.1) (2022-10-24)
 
 
