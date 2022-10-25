@@ -270,7 +270,7 @@ export interface StatusResponse extends StatusInformation {
   bridgeExplorerLink?: string
 }
 
-interface ExtendedChain extends Chain {
+export interface ExtendedChain extends Chain {
   nativeToken: Token
 }
 
