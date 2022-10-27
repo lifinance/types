@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/lifinance/types/compare/v1.11.1...v1.12.0) (2022-10-27)
+
+
+### Features
+
+* **omni:** add logo for omni bridge ([#105](https://github.com/lifinance/types/issues/105)) ([64ed097](https://github.com/lifinance/types/commit/64ed097fead9ccbcd6cd60dbf9df2ffdada6cec9))
+
 ### [1.11.1](https://github.com/lifinance/types/compare/v1.11.0...v1.11.1) (2022-10-25)
 
 
