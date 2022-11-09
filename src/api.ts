@@ -283,8 +283,21 @@ export interface ToolsRequest {
 }
 
 export type ToolsResponse = {
-  exchanges: Pick<Exchange | ExchangeAggregator, 'key' | 'name' | 'logoURI'>[]
-  bridges: Pick<Bridge, 'key' | 'name' | 'logoURI'>[]
+  exchanges: {
+    key: string
+    name: string
+    logoURI: string
+    supportedChains: ChainId[]
+  }[]
+  bridges: {
+    key: string
+    name: string
+    logoURI: string
+    supportedChains: {
+      fromChainId: ChainId
+      toChainId: ChainId
+    }[]
+  }[]
 }
 
 export type TokensRequest = {
@@ -323,40 +336,4 @@ export interface IntegratorWithdrawalRequest {
 
 export interface IntegratorWithdrawalTransactionResponse {
   transactionRequest: TransactionRequest
-}
-
-export declare class LifiAPI {
-  getRoutes(request: RoutesRequest): Promise<RoutesResponse>
-
-  getPossibilities(
-    request?: PossibilitiesRequest
-  ): Promise<PossibilitiesResponse>
-
-  updateRoute(route: Route): Promise<Route>
-
-  getStepTransaction(step: Step): Promise<Step>
-
-  getToken(request: GetTokenRequest): Promise<Token>
-
-  getTokens(request: TokensRequest): Promise<TokensResponse>
-
-  getQuote(request: QuoteRequest): Promise<Step>
-
-  getContractCallQuote(request: ContractCallQuoteRequest): Promise<Step>
-
-  getContractCallQuotes(request: ContractCallQuotesRequest): Promise<Step>
-
-  getStatus(request: GetStatusRequest): Promise<StatusResponse>
-
-  getTools(request: ToolsRequest): Promise<ToolsResponse>
-
-  getChains(): Promise<ChainsResponse>
-
-  getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
-
-  getIntegratorData(integratorAddress: string): Promise<Integrator>
-
-  getIntegratorWithdrawalTransaction(
-    request: IntegratorWithdrawalRequest
-  ): Promise<IntegratorWithdrawalTransactionResponse>
 }
