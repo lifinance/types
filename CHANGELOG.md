@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/lifinance/types/compare/v1.13.0...v1.14.0) (2022-11-09)
+
+
+### Features
+
+* add support for token symbols in /routes ([#107](https://github.com/lifinance/types/issues/107)) ([b149aa0](https://github.com/lifinance/types/commit/b149aa0f43b3a9e78beb7b2e536979bbb6766ade))
+
 ## [1.13.0](https://github.com/lifinance/types/compare/v1.12.0...v1.13.0) (2022-11-09)
 
 
