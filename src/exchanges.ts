@@ -555,6 +555,25 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.SUSHI, ChainId.AVA),
     ],
   },
+  {
+    key: 'pangolin-ava',
+    name: 'Pangolin',
+    chainId: ChainId.AVA,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/pangolin.png',
+    webUrl: 'https://pangolin.exchange/',
+    tokenlistUrl:
+      'https://raw.githubusercontent.com/pangolindex/tokenlists/main/pangolin.tokenlist.json',
+    routerAddress: '0xE54Ca86531e17Ef3616d22Ca28b0D458b6C89106',
+    factoryAddress: '0xefa94DE7a4656D787667C749f7E1223D71E9FD88',
+    initCodeHash:
+      '0x40231f6b438bce0797c9ada29b718a87ea0a5cea3fe9a771abdd76bd41a3e545',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.AVA),
+      findDefaultToken(CoinKey.USDC, ChainId.AVA),
+      findDefaultToken(CoinKey.USDT, ChainId.AVA),
+    ],
+  },
 
   // 42161 - Arbitrum
   {
