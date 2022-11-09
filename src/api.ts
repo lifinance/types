@@ -15,11 +15,11 @@ export type Order = typeof Orders[number]
 export interface RoutesRequest {
   fromChainId: number
   fromAmount: string
-  fromToken: string
+  fromTokenAddress: string
   fromAddress?: string
 
   toChainId: number
-  toToken: string
+  toTokenAddress: string
   toAddress?: string
 
   options?: RouteOptions
