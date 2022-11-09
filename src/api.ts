@@ -1,23 +1,28 @@
 import { TransactionRequest } from '@ethersproject/providers'
 import {
   BridgeDefinition,
-  Chain,
   ChainId,
   ExchangeDefinition,
   Step,
   Token,
+  Chain,
 } from '.'
 import { ToolError } from './apiErrors'
-import { Bridge } from './bridges'
-import { Exchange, ExchangeAggregator } from './exchanges'
 
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
 export type Order = typeof Orders[number]
 
-export interface AllowDenyPrefer {
-  allow?: string[] // (default: [all])
-  deny?: string[] // (default: [])
-  prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
+export interface RoutesRequest {
+  fromChainId: number
+  fromAmount: string
+  fromTokenAddress: string
+  fromAddress?: string
+
+  toChainId: number
+  toTokenAddress: string
+  toAddress?: string
+
+  options?: RouteOptions
 }
 
 export interface RouteOptions {
@@ -32,17 +37,28 @@ export interface RouteOptions {
   fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
 }
 
-export interface RoutesRequest {
-  fromChainId: number
-  fromAmount: string
-  fromTokenAddress: string
-  fromAddress?: string
+export type ToolsResponse = {
+  exchanges: {
+    key: string
+    name: string
+    logoURI: string
+    supportedChains: ChainId[]
+  }[]
+  bridges: {
+    key: string
+    name: string
+    logoURI: string
+    supportedChains: {
+      fromChainId: ChainId
+      toChainId: ChainId
+    }[]
+  }[]
+}
 
-  toChainId: number
-  toTokenAddress: string
-  toAddress?: string
-
-  options?: RouteOptions
+export interface AllowDenyPrefer {
+  allow?: string[] // (default: [all])
+  deny?: string[] // (default: [])
+  prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
 }
 
 export interface Route {
@@ -282,11 +298,6 @@ export interface ToolsRequest {
   chains?: ChainId[]
 }
 
-export type ToolsResponse = {
-  exchanges: Pick<Exchange | ExchangeAggregator, 'key' | 'name' | 'logoURI'>[]
-  bridges: Pick<Bridge, 'key' | 'name' | 'logoURI'>[]
-}
-
 export type TokensRequest = {
   chains?: ChainId[]
 }
@@ -323,40 +334,4 @@ export interface IntegratorWithdrawalRequest {
 
 export interface IntegratorWithdrawalTransactionResponse {
   transactionRequest: TransactionRequest
-}
-
-export declare class LifiAPI {
-  getRoutes(request: RoutesRequest): Promise<RoutesResponse>
-
-  getPossibilities(
-    request?: PossibilitiesRequest
-  ): Promise<PossibilitiesResponse>
-
-  updateRoute(route: Route): Promise<Route>
-
-  getStepTransaction(step: Step): Promise<Step>
-
-  getToken(request: GetTokenRequest): Promise<Token>
-
-  getTokens(request: TokensRequest): Promise<TokensResponse>
-
-  getQuote(request: QuoteRequest): Promise<Step>
-
-  getContractCallQuote(request: ContractCallQuoteRequest): Promise<Step>
-
-  getContractCallQuotes(request: ContractCallQuotesRequest): Promise<Step>
-
-  getStatus(request: GetStatusRequest): Promise<StatusResponse>
-
-  getTools(request: ToolsRequest): Promise<ToolsResponse>
-
-  getChains(): Promise<ChainsResponse>
-
-  getConnections(request: ConnectionsRequest): Promise<ConnectionsResponse>
-
-  getIntegratorData(integratorAddress: string): Promise<Integrator>
-
-  getIntegratorWithdrawalTransaction(
-    request: IntegratorWithdrawalRequest
-  ): Promise<IntegratorWithdrawalTransactionResponse>
 }
