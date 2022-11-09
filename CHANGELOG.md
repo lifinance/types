@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/lifinance/types/compare/v1.14.1...v1.15.0) (2022-11-09)
+
+
+### Features
+
+* add Pangolin DEX on AVA ([#110](https://github.com/lifinance/types/issues/110)) ([6f85bf1](https://github.com/lifinance/types/commit/6f85bf19f7be34e9866840134d0bb18a11cef1ec))
+
 ### [1.14.1](https://github.com/lifinance/types/compare/v1.14.0...v1.14.1) (2022-11-09)
 
 
