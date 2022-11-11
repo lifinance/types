@@ -218,7 +218,7 @@ export interface TransactionInfo {
   gasUsed?: string
   gasToken?: Token
   gasAmount?: string
-  gasAmountUsd?: string
+  gasAmountUSD?: string
 }
 
 const _StatusMessage = [
