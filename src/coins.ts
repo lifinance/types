@@ -34,6 +34,11 @@ const basicCoins: BasicCoin[] = [
         address: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
         decimals: 18,
       },
+      [ChainId.SOL]: {
+        address: '7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs',
+        decimals: 8,
+        name: 'Wrapped SOL (Wormhole)',
+      },
       [ChainId.POL]: {
         address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
         decimals: 18,
@@ -151,6 +156,11 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
         name: 'Matic Token',
       },
+      [ChainId.SOL]: {
+        address: 'Gz7VkD4MacbEB6yC5XD3HcumEiYx2EtDYYrfikGsvopG',
+        decimals: 8,
+        name: 'Wrapped Matic (Wormhole)',
+      },
       [ChainId.BSC]: {
         address: '0xcc42724c6683b7e57334c4e856f4c9965ed682bd',
         decimals: 18,
@@ -189,6 +199,11 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0xb8c77482e45f1f44de1745f52c74426c631bdd52',
         decimals: 18,
+      },
+      [ChainId.SOL]: {
+        address: '9gP2kCy3wA1ctvYWQk75guqXuHfrEomqydHLtcTCqiLa',
+        decimals: 8,
+        name: 'Wrapped BNB (Wormhole)',
       },
       [ChainId.BSC]: {
         address: '0x0000000000000000000000000000000000000000',
@@ -242,6 +257,11 @@ const basicCoins: BasicCoin[] = [
         address: '0x6b175474e89094c44da98b954eedeac495271d0f',
         decimals: 18,
         name: 'Dai Stablecoin',
+      },
+      [ChainId.SOL]: {
+        address: 'EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o',
+        decimals: 8,
+        name: 'Dai Stablecoin (Wormhole)',
       },
       [ChainId.BSC]: {
         address: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
@@ -367,6 +387,11 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.SOL]: {
+        address: '8gC27rQF4NEDYfyf5aS8ZmQJUum5gufowKGYRRba4ENN',
+        decimals: 8,
+        name: 'Fantom Token (Wormhole)',
+      },
     },
   },
   // > OKT
@@ -394,6 +419,11 @@ const basicCoins: BasicCoin[] = [
       [ChainId.AVA]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
+      },
+      [ChainId.SOL]: {
+        address: 'KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE',
+        decimals: 8,
+        name: 'Avalanche (Wormhole)',
       },
     },
   },
@@ -478,6 +508,11 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
         decimals: 6,
+      },
+      [ChainId.SOL]: {
+        address: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
+        decimals: 6,
+        name: 'USDT',
       },
       [ChainId.BSC]: {
         address: '0x55d398326f99059ff775485246999027b3197955',
@@ -586,6 +621,11 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
         decimals: 6,
+      },
+      [ChainId.SOL]: {
+        address: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+        decimals: 6,
+        name: 'USD Coin',
       },
       [ChainId.BSC]: {
         address: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
@@ -739,6 +779,11 @@ const basicCoins: BasicCoin[] = [
         address: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
         decimals: 8,
       },
+      [ChainId.SOL]: {
+        address: 'qfnqNqs3nCAHjnyCgLRDbBtq4p2MtHZxw8YjSyYhPoL',
+        decimals: 8,
+        name: 'Wrapped BTC (Wormhole)',
+      },
       [ChainId.POL]: {
         address: '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
         decimals: 8,
@@ -817,6 +862,11 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
         decimals: 18,
+      },
+      [ChainId.SOL]: {
+        address: 'AaAEw2VCw1XzgvKB8Rj2DyK2ZVau9fbt2bE8hZFWsMyE',
+        decimals: 9,
+        name: 'Allbridge from Ethereum',
       },
       [ChainId.BSC]: {
         address: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
@@ -932,6 +982,10 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
         decimals: 18,
+      },
+      [ChainId.SOL]: {
+        address: 'ChVzxWRmrTeSgwd3Ui3UumcN8KX7VK3WaD4KGeSKpypj',
+        decimals: 8,
       },
       [ChainId.POL]: {
         address: '0x0b3f868e0be5597d5db7feb59e1cadbb0fdda50a',
@@ -1104,6 +1158,11 @@ const basicCoins: BasicCoin[] = [
         address: '0x471ece3750da237f93b8e339c536989b8978a438',
         decimals: 18,
       },
+      [ChainId.SOL]: {
+        address: 'GNCjk3FmPPgZTkbQRSxr6nCvLtYMbXKMnRxg8BgJs62e',
+        decimals: 9,
+        name: 'Allbridge from Celo',
+      },
     },
   },
   // > GLMR
@@ -1162,6 +1221,59 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+  // > Solana
+  {
+    key: CoinKey.SOL,
+    name: CoinKey.SOL,
+    logoURI: 'https://assets.coingecko.com/coins/images/4128/small/solana.png',
+    verified: true,
+    chains: {
+      [ChainId.SOL]: {
+        address: 'So11111111111111111111111111111111111111112',
+        decimals: 9,
+        name: 'Wrapped SOL',
+      },
+      [ChainId.ETH]: {
+        address: '0xD31a59c85aE9D8edEFeC411D448f90841571b89c',
+        decimals: 9,
+        name: 'Wrapped SOL (Wormhole)',
+      },
+      [ChainId.POL]: {
+        address: '0xd93f7E271cB87c23AaA73edC008A79646d1F9912',
+        decimals: 9,
+        name: 'Wrapped SOL (Wormhole)',
+      },
+      [ChainId.FTM]: {
+        address: '0xd99021C2A33e4Cf243010539c9e9b7c52E0236c1',
+        decimals: 9,
+        name: 'Token Wrapped SOL (Wormhole)',
+      },
+      [ChainId.AVA]: {
+        address: '0xFE6B19286885a4F7F55AdAD09C3Cd1f906D2478F',
+        decimals: 9,
+        symbol: 'WSOL',
+        name: 'Wrapped SOL (Wormhole)',
+      },
+      [ChainId.AUR]: {
+        address: '0x3370C8961A1697F22B49c99669C1d98fE63d031D',
+        decimals: 9,
+        symbol: 'WSOL',
+        name: 'Token Wrapped SOL (Wormhole)',
+      },
+      [ChainId.CEL]: {
+        address: '0x4581E64115d46CcdeE65Be2336bEc86c9BA54C01',
+        decimals: 9,
+        symbol: 'WSOL',
+        name: 'Token Wrapped SOL (Wormhole)',
+      },
+
+      // Testnet
+      [ChainId.SOL]: {
+        address: 'So11111111111111111111111111111111111111112',
+        decimals: 9,
+      },
+    },
+  },
 ]
 
 export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
@@ -1200,6 +1312,15 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'WETH',
     logoURI:
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
+  [ChainId.SOL]: {
+    address: 'So11111111111111111111111111111111111111112',
+    symbol: 'SOL',
+    decimals: 9,
+    chainId: ChainId.SOL,
+    coinKey: CoinKey.SOL,
+    name: 'Wrapped SOL',
+    logoURI: 'https://assets.coingecko.com/coins/images/4128/small/solana.png',
   },
   [ChainId.BSC]: {
     // https://bscscan.com/token/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c
