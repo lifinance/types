@@ -1225,8 +1225,7 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.SOL,
     name: CoinKey.SOL,
-    logoURI:
-      'https://assets.coingecko.com/coins/images/4128/small/solana.png?1640133422',
+    logoURI: 'https://assets.coingecko.com/coins/images/4128/small/solana.png',
     verified: true,
     chains: {
       [ChainId.SOL]: {
