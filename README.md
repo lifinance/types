@@ -23,6 +23,17 @@ or
 npm install --save @lifi/types
 ```
 
+### How to make a release
+
+1. PR with changes
+2. Merge PR
+3. Checkout main
+4. Pull
+5. yarn release
+6. Make sure everything looks good (e.g. in CHANGELOG.md)
+7. git push --follow-tags
+8. Done
+
 ### Summary
 
 This package contains type definitions for LI.FI projects (https://github.com/lifinance).
