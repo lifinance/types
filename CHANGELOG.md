@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/lifinance/types/compare/v1.16.0...v1.17.0) (2022-11-17)
+
+
+### Features
+
+* add solana tokens to coins ([#112](https://github.com/lifinance/types/issues/112)) ([c848cdc](https://github.com/lifinance/types/commit/c848cdc6ff8b9b247e19ad46f6ff40c082e034e9))
+
 ## [1.16.0](https://github.com/lifinance/types/compare/v1.15.0...v1.16.0) (2022-11-11)
 
 
