@@ -1159,8 +1159,6 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
       },
       [ChainId.SOL]: {
-        // The CELO token is not a native token (0x000...).
-        // Instead it is this ERC20 token: https://explorer.celo.org/token/0x471EcE3750Da237f93B8E339c536989b8978a438
         address: 'GNCjk3FmPPgZTkbQRSxr6nCvLtYMbXKMnRxg8BgJs62e',
         decimals: 9,
         name: 'Allbridge from Celo',
@@ -1323,8 +1321,7 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     chainId: ChainId.SOL,
     coinKey: CoinKey.SOL,
     name: 'Wrapped SOL',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/4128/small/solana.png?1640133422',
+    logoURI: 'https://assets.coingecko.com/coins/images/4128/small/solana.png',
   },
   [ChainId.BSC]: {
     // https://bscscan.com/token/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c
