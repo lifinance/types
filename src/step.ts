@@ -14,7 +14,7 @@ export interface FeeCost {
 }
 
 export interface GasCost {
-  type: 'SUM' | 'APPROVE' | 'SEND'
+  type: 'SUM' | 'APPROVE' | 'SEND' | 'FEE'
   price?: string // suggested current standard price for chain
   estimate?: string // estimate how much gas will be needed
   limit?: string // suggested gas limit (estimate +25%)
