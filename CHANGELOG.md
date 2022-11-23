@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/lifinance/types/compare/v1.17.1...v1.18.0) (2022-11-23)
+
+
+### Features
+
+* add execution gas info and substatus ([#115](https://github.com/lifinance/types/issues/115)) ([ac32647](https://github.com/lifinance/types/commit/ac326472ad25f28486ba0b901b747d0559707742))
+
 ### [1.17.1](https://github.com/lifinance/types/compare/v1.17.0...v1.17.1) (2022-11-22)
 
 ## [1.17.0](https://github.com/lifinance/types/compare/v1.16.0...v1.17.0) (2022-11-17)
