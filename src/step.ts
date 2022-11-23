@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { providers } from 'ethers'
+import { Substatus } from '.'
 import { Token } from './base'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
@@ -80,6 +81,7 @@ export interface Process {
   failedAt?: number
   type: ProcessType
   status: Status
+  substatus?: Substatus
   message?: string
   txHash?: string
   txLink?: string
@@ -99,8 +101,11 @@ export interface Execution {
   fromAmount?: string
   toAmount?: string
   toToken?: Token
-  gasUsed?: string
   gasPrice?: string
+  gasUsed?: string
+  gasToken?: Token
+  gasAmount?: string
+  gasAmountUSD?: string
 }
 
 export const emptyExecution: Execution = {
