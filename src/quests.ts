@@ -24,3 +24,7 @@ export type GetQuestStatusResponse = {
 export type GetQuestsStatusResponse = {
   quests: QuestStatus[]
 }
+
+export type GetAllQuestsResponse = {
+  quests: BaseQuest[]
+}
