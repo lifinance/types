@@ -1354,6 +1354,21 @@ export const supportedSolanaChains: SolanaChain[] = [
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/solana.svg',
     faucetUrls: ['https://stakely.io/faucet/solana-sol'],
+    metamask: {
+      chainId: ChainId.SOL.toString(),
+      blockExplorerUrls: [
+        'https://explorer.solana.com/',
+        'https://solscan.io/',
+        'https://solana.fm/',
+      ],
+      chainName: 'Solana',
+      nativeCurrency: {
+        name: 'SOL',
+        symbol: 'SOL',
+        decimals: 9,
+      },
+      rpcUrls: ['https://api.mainnet-beta.solana.com'],
+    },
   },
 ]
 
