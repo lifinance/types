@@ -8,6 +8,7 @@ const supportedChains: Chain[] = [
   // This will be added in the future
   // ...supportedSolanaChains,
   ...supportedEVMChains,
+  ...supportedSolanaChains,
 ]
 
 export const getChainByKey = (chainKey: ChainKey): Chain => {
