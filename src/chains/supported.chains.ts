@@ -1375,4 +1375,4 @@ export const supportedSolanaChains: SolanaChain[] = [
 // This assignment is required to avoid breaking
 // changes with the new non EVM support types release
 // This will be removed in the future
-export const supportedChains = supportedEVMChains
+export const supportedChains = [...supportedEVMChains, ...supportedSolanaChains]
