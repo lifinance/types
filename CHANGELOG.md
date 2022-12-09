@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](https://github.com/lifinance/types/compare/v1.8.0...v1.19.0) (2022-12-09)
+
+
+### Features
+
+* add arbitrum goerli ([a6cc01d](https://github.com/lifinance/types/commit/a6cc01d7573fd39630d7cbbb60ff23dfd693f952))
+* add execution gas info and substatus ([#115](https://github.com/lifinance/types/issues/115)) ([ac32647](https://github.com/lifinance/types/commit/ac326472ad25f28486ba0b901b747d0559707742))
+* add gas info in tx info ([#111](https://github.com/lifinance/types/issues/111)) ([d56277d](https://github.com/lifinance/types/commit/d56277dd22ad19fded6e0aa2a7d5ee2c67861f19))
+* add gnosis bridge logo ([#101](https://github.com/lifinance/types/issues/101)) ([47c322e](https://github.com/lifinance/types/commit/47c322e3c10a92a7c3bccd73461ae5a1da61e415))
+* add Pangolin DEX on AVA ([#110](https://github.com/lifinance/types/issues/110)) ([6f85bf1](https://github.com/lifinance/types/commit/6f85bf19f7be34e9866840134d0bb18a11cef1ec))
+* add solana tokens to coins ([#112](https://github.com/lifinance/types/issues/112)) ([c848cdc](https://github.com/lifinance/types/commit/c848cdc6ff8b9b247e19ad46f6ff40c082e034e9))
+* add support for token symbols in /routes ([#107](https://github.com/lifinance/types/issues/107)) ([b149aa0](https://github.com/lifinance/types/commit/b149aa0f43b3a9e78beb7b2e536979bbb6766ade))
+* **api:** include nativeToken in chains response ([#104](https://github.com/lifinance/types/issues/104)) ([caf6262](https://github.com/lifinance/types/commit/caf6262ca634e063d832f0495710cb5b54a8f3ae))
+* extend interface with integrator fee methods ([#99](https://github.com/lifinance/types/issues/99)) ([75f107f](https://github.com/lifinance/types/commit/75f107fc06dfbb9312f9026a68676d499c2a188b))
+* moved lifiApi class to the backend ([#106](https://github.com/lifinance/types/issues/106)) ([b416a9c](https://github.com/lifinance/types/commit/b416a9c716423465faa26ae7aca6f652ba5c9587))
+* **omni:** add logo for omni bridge ([#105](https://github.com/lifinance/types/issues/105)) ([64ed097](https://github.com/lifinance/types/commit/64ed097fead9ccbcd6cd60dbf9df2ffdada6cec9))
+* update multicall addresses ([c2f9c3c](https://github.com/lifinance/types/commit/c2f9c3c4156471ee791aa5730baae595d25fddcc))
+
+
+### Bug Fixes
+
+* a lifi step should always have includedSteps ([#118](https://github.com/lifinance/types/issues/118)) ([e0b662b](https://github.com/lifinance/types/commit/e0b662b240f7ce5f5a5de8fc533a339f31e1ef76))
+* adjust Arbitrum One name ([#102](https://github.com/lifinance/types/issues/102)) ([530ba68](https://github.com/lifinance/types/commit/530ba68e415c2c6e279aa60749ffaf1cbd579ef1))
+* align integrator withdrawal endpoint ([4de24fb](https://github.com/lifinance/types/commit/4de24fb25795d44053dfa27e09b5716fdf63ea57))
+* **EVMOS:** fix name of native evmos coin ([#103](https://github.com/lifinance/types/issues/103)) ([60490c0](https://github.com/lifinance/types/commit/60490c000e3fea06eca415e1c53619ff46ba1208))
+* export ExtendedChain ([73f3cc5](https://github.com/lifinance/types/commit/73f3cc5007973aad48cdb59b4f93542e8cc2541d))
+* replaced nomad versions of tokens with multichain ([#100](https://github.com/lifinance/types/issues/100)) ([e5b2726](https://github.com/lifinance/types/commit/e5b2726e5cb66e56e8716dab667342b4642dc1ca))
+* revert changes in /routes ([#109](https://github.com/lifinance/types/issues/109)) ([5fd4234](https://github.com/lifinance/types/commit/5fd4234ccab68ad8558180a3923d6e363eb5ce1d))
+* update solana supported chains to include network information ([#117](https://github.com/lifinance/types/issues/117)) ([f3bb532](https://github.com/lifinance/types/commit/f3bb5329f4c034521170b05d64286b4fd2cd3a0c))
+
 ## [1.18.0](https://github.com/lifinance/types/compare/v1.17.1...v1.18.0) (2022-11-23)
 
 
