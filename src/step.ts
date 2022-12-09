@@ -161,7 +161,9 @@ export interface LifiStep extends StepBase {
 }
 
 export function isLifiStep(step: Step): step is LifiStep {
-  return step.type === 'lifi'
+  return (
+    step.type === 'lifi' && step.includedSteps && step.includedSteps.length > 0
+  )
 }
 
 export interface CustomStep extends StepBase {
