@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/lifinance/types/compare/v1.19.0...v1.20.0) (2022-12-21)
+
+
+### Features
+
+* add types for quests ([#116](https://github.com/lifinance/types/issues/116)) ([ce923d3](https://github.com/lifinance/types/commit/ce923d311ce3921c736ae75e3316fb66415b98b4))
+
 ## [1.19.0](https://github.com/lifinance/types/compare/v1.8.0...v1.19.0) (2022-12-09)
 
 
