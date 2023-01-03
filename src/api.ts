@@ -12,9 +12,8 @@ import { ToolError } from './apiErrors'
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
 export type Order = typeof Orders[number]
 
-export interface RoutesRequest {
+interface RoutesRequestBase {
   fromChainId: number
-  fromAmount: string
   fromTokenAddress: string
   fromAddress?: string
 
@@ -24,6 +23,13 @@ export interface RoutesRequest {
 
   options?: RouteOptions
 }
+interface RoutesRequestFromAmount extends RoutesRequestBase {
+  FromAmount: string
+}
+interface RoutesRequestToAmount extends RoutesRequestBase {
+  toAmount: string
+}
+export type RoutesRequest = RoutesRequestFromAmount | RoutesRequestToAmount
 
 export interface RouteOptions {
   order?: Order // (default : RECOMMENDED)
@@ -122,11 +128,10 @@ export interface ToolConfiguration {
   preferExchanges?: string[]
 }
 
-export interface QuoteRequest extends ToolConfiguration {
+interface QuoteRequestBase extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
-  fromAmount: string
 
   toChain: number | string
   toToken: string
@@ -138,6 +143,13 @@ export interface QuoteRequest extends ToolConfiguration {
   referrer?: string
   fee?: number | string
 }
+interface QuoteRequestFromAmount extends QuoteRequestBase {
+  FromAmount: string
+}
+interface QuoteRequestToAmount extends QuoteRequestBase {
+  toAmount: string
+}
+export type QuoteRequest = QuoteRequestFromAmount | QuoteRequestToAmount
 
 export interface ContractCallQuoteRequest extends ToolConfiguration {
   fromChain: number | string
