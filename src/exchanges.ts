@@ -222,6 +222,23 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.SUSHI, ChainId.POL),
     ],
   },
+  {
+    key: 'lif3swap-pol',
+    name: 'Lif3 Swap',
+    chainId: ChainId.POL,
+    webUrl: 'https://lif3.com/',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/lif3.png',
+    tokenlistUrl: 'https://assets.lif3.com/swap/polygon/tokens.json',
+    routerAddress: '0x67dC2703D306F72E94DbB0cE0aa0CB86149EAc70',
+    factoryAddress: '0x3FB1E7D5d9C974141A5B6E5fa4edab0a7Aa15C6A',
+    initCodeHash:
+      '0x57cf36086932d62d26c562d18d87afe373f166c06011dc35be0783e29c6eb4eb',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.POL),
+      findDefaultToken(CoinKey.USDC, ChainId.POL),
+    ],
+  },
 
   // 56 - Binance Smart Chain
   {
@@ -293,6 +310,23 @@ export const supportedExchanges: Array<Exchange> = [
         chainId: ChainId.BSC,
       } as Token,
       findDefaultToken(CoinKey.SUSHI, ChainId.BSC),
+    ],
+  },
+  {
+    key: 'lif3swap-bsc',
+    name: 'Lif3 Swap',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/lif3.png',
+    chainId: ChainId.BSC,
+    webUrl: 'https://lif3.com/',
+    tokenlistUrl: 'https://assets.lif3.com/swap/bnb/tokens.json',
+    routerAddress: '0x1956005bA9690B7A00b09c78769675C0cE1457AF',
+    factoryAddress: '0x3FB1E7D5d9C974141A5B6E5fa4edab0a7Aa15C6A',
+    initCodeHash:
+      '0x57cf36086932d62d26c562d18d87afe373f166c06011dc35be0783e29c6eb4eb',
+    baseTokens: [
+      findWrappedGasOnChain(ChainId.BSC),
+      findDefaultToken(CoinKey.USDC, ChainId.BSC),
     ],
   },
 
