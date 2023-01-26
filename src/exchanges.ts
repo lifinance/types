@@ -225,7 +225,7 @@ export const supportedExchanges: Array<Exchange> = [
   {
     key: 'lif3swap-pol',
     name: 'Lif3 Swap',
-    chainId: 137,
+    chainId: ChainId.POL,
     webUrl: 'https://lif3.com/',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/lif3.png',
@@ -235,18 +235,8 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x57cf36086932d62d26c562d18d87afe373f166c06011dc35be0783e29c6eb4eb',
     baseTokens: [
-      {
-        address: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
-        symbol: 'WMATIC',
-        chainId: ChainId.POL,
-        decimals: 18,
-      } as Token,
-      {
-        address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
-        symbol: 'USDC',
-        chainId: ChainId.POL,
-        decimals: 6,
-      } as Token,
+      findWrappedGasOnChain(ChainId.POL),
+      findDefaultToken(CoinKey.USDC, ChainId.POL),
     ],
   },
 
@@ -327,7 +317,7 @@ export const supportedExchanges: Array<Exchange> = [
     name: 'Lif3 Swap',
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/lif3.png',
-    chainId: 56,
+    chainId: ChainId.BSC,
     webUrl: 'https://lif3.com/',
     tokenlistUrl: 'https://assets.lif3.com/swap/bnb/tokens.json',
     routerAddress: '0x1956005bA9690B7A00b09c78769675C0cE1457AF',
@@ -335,18 +325,8 @@ export const supportedExchanges: Array<Exchange> = [
     initCodeHash:
       '0x57cf36086932d62d26c562d18d87afe373f166c06011dc35be0783e29c6eb4eb',
     baseTokens: [
-      {
-        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-        symbol: 'WBNB',
-        chainId: ChainId.BSC,
-        decimals: 18,
-      } as Token,
-      {
-        address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
-        symbol: 'USDC',
-        chainId: ChainId.BSC,
-        decimals: 18,
-      } as Token,
+      findWrappedGasOnChain(ChainId.BSC),
+      findDefaultToken(CoinKey.USDC, ChainId.BSC),
     ],
   },
 
