@@ -222,6 +222,33 @@ export const supportedExchanges: Array<Exchange> = [
       findDefaultToken(CoinKey.SUSHI, ChainId.POL),
     ],
   },
+  {
+    key: 'lif3swap-pol',
+    name: 'Lif3 Swap',
+    chainId: 137,
+    webUrl: 'https://lif3.com/',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/lif3.png',
+    tokenlistUrl: 'https://assets.lif3.com/swap/polygon/tokens.json',
+    routerAddress: '0x67dC2703D306F72E94DbB0cE0aa0CB86149EAc70',
+    factoryAddress: '0x3FB1E7D5d9C974141A5B6E5fa4edab0a7Aa15C6A',
+    initCodeHash:
+      '0x57cf36086932d62d26c562d18d87afe373f166c06011dc35be0783e29c6eb4eb',
+    baseTokens: [
+      {
+        address: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+        symbol: 'WMATIC',
+        chainId: ChainId.POL,
+        decimals: 18,
+      } as Token,
+      {
+        address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+        symbol: 'USDC',
+        chainId: ChainId.POL,
+        decimals: 6,
+      } as Token,
+    ],
+  },
 
   // 56 - Binance Smart Chain
   {
@@ -293,6 +320,33 @@ export const supportedExchanges: Array<Exchange> = [
         chainId: ChainId.BSC,
       } as Token,
       findDefaultToken(CoinKey.SUSHI, ChainId.BSC),
+    ],
+  },
+  {
+    key: 'lif3swap-bsc',
+    name: 'Lif3 Swap',
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/lif3.png',
+    chainId: 56,
+    webUrl: 'https://lif3.com/',
+    tokenlistUrl: 'https://assets.lif3.com/swap/bnb/tokens.json',
+    routerAddress: '0x1956005bA9690B7A00b09c78769675C0cE1457AF',
+    factoryAddress: '0x3FB1E7D5d9C974141A5B6E5fa4edab0a7Aa15C6A',
+    initCodeHash:
+      '0x57cf36086932d62d26c562d18d87afe373f166c06011dc35be0783e29c6eb4eb',
+    baseTokens: [
+      {
+        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        symbol: 'WBNB',
+        chainId: ChainId.BSC,
+        decimals: 18,
+      } as Token,
+      {
+        address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+        symbol: 'USDC',
+        chainId: ChainId.BSC,
+        decimals: 18,
+      } as Token,
     ],
   },
 
