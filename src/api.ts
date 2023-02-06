@@ -1,11 +1,11 @@
 import { TransactionRequest } from '@ethersproject/providers'
 import {
   BridgeDefinition,
+  Chain,
   ChainId,
   ExchangeDefinition,
   Step,
   Token,
-  Chain,
 } from '.'
 import { ToolError } from './apiErrors'
 
@@ -31,6 +31,7 @@ export interface RouteOptions {
   infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
   integrator?: string // custom string developer who integrate LI.FI can set
+  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
   referrer?: string // integrators can set a wallet address as referrer to track them
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
@@ -137,6 +138,7 @@ export interface QuoteRequest extends ToolConfiguration {
   integrator?: string
   referrer?: string
   fee?: number | string
+  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
 }
 
 export interface ContractCallQuoteRequest extends ToolConfiguration {
@@ -158,6 +160,7 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
   integrator?: string
   referrer?: string
   fee?: number | string
+  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
 }
 
 export interface ContractCallQuotesRequest extends ToolConfiguration {
