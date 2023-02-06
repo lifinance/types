@@ -207,8 +207,8 @@ export interface ConnectionsResponse {
 export interface GetStatusRequest {
   txHash: string
   bridge?: string
-  fromChain?: number | string
-  toChain?: number | string
+  fromChain: number | string
+  toChain: number | string
 }
 
 export interface TransactionInfo {
