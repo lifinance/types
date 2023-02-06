@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.22.0](https://github.com/lifinance/types/compare/v1.21.0...v1.22.0) (2023-02-06)
+
+
+### Features
+
+* add opt allowDestCall flag to /routes,/quote ([#122](https://github.com/lifinance/types/issues/122)) ([a899bf2](https://github.com/lifinance/types/commit/a899bf2fee112de6fff002ee0c737f3325f71efa))
+* make properties of Interface GetStatusRequest optional ([f2be836](https://github.com/lifinance/types/commit/f2be8362c4cad7227dba9ff4d4d9d885b9de4bc5))
+
 ## [1.21.0](https://github.com/lifinance/types/compare/v1.20.0...v1.21.0) (2023-01-26)
 
 
