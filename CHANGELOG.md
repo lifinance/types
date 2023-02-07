@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.2](https://github.com/lifinance/types/compare/v1.22.1...v1.22.2) (2023-02-07)
+
+
+### Bug Fixes
+
+* rename XDAI token to DAI on most chains ([#125](https://github.com/lifinance/types/issues/125)) ([32a17b9](https://github.com/lifinance/types/commit/32a17b93cc9abd2b764bb03e9c7c1a06522bbf36))
+
 ### [1.22.1](https://github.com/lifinance/types/compare/v1.22.0...v1.22.1) (2023-02-06)
 
 ## [1.22.0](https://github.com/lifinance/types/compare/v1.21.0...v1.22.0) (2023-02-06)
