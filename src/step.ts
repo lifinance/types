@@ -40,6 +40,7 @@ export interface Action {
 
 // ESTIMATE
 export interface Estimate {
+  tool: string
   fromAmount: string
   fromAmountUSD?: string
   toAmount: string
@@ -51,8 +52,6 @@ export interface Estimate {
   gasCosts?: GasCost[] // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
 
   executionDuration: number // estimated duration in seconds
-
-  data?: any // differs by tool
 }
 
 // EXECUTION
@@ -166,16 +165,18 @@ export function isLifiStep(step: Step): step is LifiStep {
   )
 }
 
+export interface DestinationCallInfo {
+  toContractAddress: string
+  toContractCallData: string
+  toFallbackAddress: string
+  callDataGasLimit: string
+}
+
 export interface CustomStep extends StepBase {
   type: 'custom'
   action: Action
   estimate: Estimate
-  destinationCallInfo: {
-    toContractAddress: string
-    toContractCallData: string
-    toFallbackAddress: string
-    callDataGasLimit: string
-  }
+  destinationCallInfo: DestinationCallInfo
 }
 
 export function isCustomStep(step: Step): step is CustomStep {
