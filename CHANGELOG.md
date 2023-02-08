@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/lifinance/types/compare/v1.22.2...v1.23.0) (2023-02-08)
+
+
+### Features
+
+* add wantInsurance flag to RoutesContext ([#126](https://github.com/lifinance/types/issues/126)) ([cfa6f76](https://github.com/lifinance/types/commit/cfa6f769756be18a821af1e4577c6f28c83db2d3))
+
 ### [1.22.2](https://github.com/lifinance/types/compare/v1.22.1...v1.22.2) (2023-02-07)
 
 
