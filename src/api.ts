@@ -36,6 +36,7 @@ export interface RouteOptions {
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
   fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
+  wantInsurance?: boolean // whether the user want to insure their tx
 }
 
 export type ToolsResponse = {
