@@ -139,6 +139,7 @@ export interface QuoteRequest extends ToolConfiguration {
   integrator?: string
   referrer?: string
   fee?: number | string
+  insurance?: boolean // indicates whether the user wants a quote with bridge insurance
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
 }
 
