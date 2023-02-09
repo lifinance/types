@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.24.0](https://github.com/lifinance/types/compare/v1.23.0...v1.24.0) (2023-02-09)
+
+
+### Features
+
+* insurance option in quoteRequest ([#128](https://github.com/lifinance/types/issues/128)) ([4a9a064](https://github.com/lifinance/types/commit/4a9a064c2c3d92f55d97b700669e2be491e7ab41))
+
 ## [1.23.0](https://github.com/lifinance/types/compare/v1.22.2...v1.23.0) (2023-02-08)
 
 
