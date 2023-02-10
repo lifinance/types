@@ -4,6 +4,7 @@ import {
   Chain,
   ChainId,
   ExchangeDefinition,
+  LifiStep,
   Step,
   Token,
 } from '.'
@@ -84,7 +85,7 @@ export interface Route {
   containsSwitchChain?: boolean // Features required for route execution
   infiniteApproval?: boolean // Features used for route execution
 
-  steps: Step[]
+  steps: LifiStep[]
 
   tags?: Order[]
 }
