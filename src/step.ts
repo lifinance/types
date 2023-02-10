@@ -172,11 +172,12 @@ export interface DestinationCallInfo {
   callDataGasLimit: string
 }
 
+export type CallAction = Action & DestinationCallInfo
+
 export interface CustomStep extends StepBase {
   type: 'custom'
-  action: Action
+  action: CallAction
   estimate: Estimate
-  destinationCallInfo: DestinationCallInfo
 }
 
 export function isCustomStep(step: Step): step is CustomStep {
