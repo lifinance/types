@@ -15,6 +15,7 @@ export type Order = typeof Orders[number]
 export interface RoutesRequest {
   fromChainId: number
   fromAmount: string
+
   fromTokenAddress: string
   fromAddress?: string
 
@@ -23,6 +24,7 @@ export interface RoutesRequest {
   toAddress?: string
 
   options?: RouteOptions
+  convertAmountToGas?: string
 }
 
 export interface RouteOptions {
@@ -141,6 +143,7 @@ export interface QuoteRequest extends ToolConfiguration {
   fee?: number | string
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
+  convertAmountToGas?: string // the amount of token to convert to gas
 }
 
 export interface ContractCallQuoteRequest extends ToolConfiguration {
