@@ -1,6 +1,6 @@
 {
   "name": "@lifi/types",
-  "version": "1.24.0",
+  "version": "2.0.0",
   "description": "Types for the LI.FI stack",
   "main": "./dist/cjs/index.js",
   "module": "./dist/index.js",

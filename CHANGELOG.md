@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/lifinance/types/compare/v1.19.0...v2.0.0) (2023-02-13)
+
+
+### Features
+
+* add lif3swap dex on POL and BSC ([#120](https://github.com/lifinance/types/issues/120)) ([b213e28](https://github.com/lifinance/types/commit/b213e281ce777465180b11a0585ad71f98404df7))
+* add opt allowDestCall flag to /routes,/quote ([#122](https://github.com/lifinance/types/issues/122)) ([a899bf2](https://github.com/lifinance/types/commit/a899bf2fee112de6fff002ee0c737f3325f71efa))
+* add types for quests ([#116](https://github.com/lifinance/types/issues/116)) ([ce923d3](https://github.com/lifinance/types/commit/ce923d311ce3921c736ae75e3316fb66415b98b4))
+* add wantInsurance flag to RoutesContext ([#126](https://github.com/lifinance/types/issues/126)) ([cfa6f76](https://github.com/lifinance/types/commit/cfa6f769756be18a821af1e4577c6f28c83db2d3))
+* added flag for variable price impact ([#127](https://github.com/lifinance/types/issues/127)) ([7adf21b](https://github.com/lifinance/types/commit/7adf21baa809c388421b10dad51d18731829372e))
+* added protocol step type + routes can only contain lifi steps ([#130](https://github.com/lifinance/types/issues/130)) ([cedfeec](https://github.com/lifinance/types/commit/cedfeec618b243700bc44e305e29057dceaefc38))
+* insurance option in quoteRequest ([#128](https://github.com/lifinance/types/issues/128)) ([4a9a064](https://github.com/lifinance/types/commit/4a9a064c2c3d92f55d97b700669e2be491e7ab41))
+* make properties of Interface GetStatusRequest optional ([f2be836](https://github.com/lifinance/types/commit/f2be8362c4cad7227dba9ff4d4d9d885b9de4bc5))
+* trusted gas parameter for routes and quote request ([#129](https://github.com/lifinance/types/issues/129)) ([927adaa](https://github.com/lifinance/types/commit/927adaa83129a6422718d65a26f39ae0d4d90dfc))
+
+
+### Bug Fixes
+
+* rename XDAI token to DAI on most chains ([#125](https://github.com/lifinance/types/issues/125)) ([32a17b9](https://github.com/lifinance/types/commit/32a17b93cc9abd2b764bb03e9c7c1a06522bbf36))
+
 ## [1.24.0](https://github.com/lifinance/types/compare/v1.23.0...v1.24.0) (2023-02-09)
 
 
