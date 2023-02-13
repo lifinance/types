@@ -248,7 +248,7 @@ const basicCoins: BasicCoin[] = [
   // > DAI
   {
     key: CoinKey.DAI,
-    name: 'xDai',
+    name: 'Dai Stablecoin',
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
     verified: true,
@@ -256,7 +256,6 @@ const basicCoins: BasicCoin[] = [
       [ChainId.ETH]: {
         address: '0x6b175474e89094c44da98b954eedeac495271d0f',
         decimals: 18,
-        name: 'Dai Stablecoin',
       },
       [ChainId.SOL]: {
         address: 'EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o',
@@ -272,34 +271,30 @@ const basicCoins: BasicCoin[] = [
         address: '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063',
         decimals: 18,
         name: '(PoS) Dai Stablecoin',
-        symbol: 'DAI',
       },
       [ChainId.DAI]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
+        symbol: 'xDAI',
+        name: 'xDai Native Token',
       },
       [ChainId.OPT]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
         decimals: 18,
-        name: 'Dai Stablecoin',
       },
       [ChainId.FTM]: {
         address: '0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e',
         decimals: 18,
-        symbol: 'DAI',
-        name: 'Dai Stablecoin',
       },
       [ChainId.ONE]: {
         address: '0xef977d2f931c1978db5f6747666fa1eacb0d0339',
         decimals: 18,
         symbol: '1DAI',
-        name: 'Dai Stablecoin',
       },
       [ChainId.AVA]: {
         address: '0xd586e7f844cea2f87f50152665bcbc2c279d8d70',
         decimals: 18,
         symbol: 'DAI.e',
-        name: 'Dai Stablecoin',
       },
       [ChainId.ARB]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
@@ -309,47 +304,36 @@ const basicCoins: BasicCoin[] = [
         address: '0x21cde7e32a6caf4742d00d44b07279e7596d26b9',
         decimals: 18,
         symbol: 'DAIK',
-        name: 'DAIK',
       },
       [ChainId.CRO]: {
         address: '0xf2001b145b43032aaf5ee2884e456ccd805f677d',
         decimals: 18,
-        name: 'Dai Stablecoin',
       },
       [ChainId.FUS]: {
         address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
         decimals: 18,
-        symbol: 'DAI',
         name: 'Dai Stablecoin on Fuse',
       },
       [ChainId.CEL]: {
         address: '0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd',
         decimals: 18,
-        symbol: 'DAI',
-        name: 'Dai Stablecoin',
       },
       [ChainId.MOO]: {
         address: '0x765277eebeca2e31912c9946eae1021199b39c61',
         decimals: 18,
-        name: 'Dai Stablecoin',
       },
       [ChainId.BOB]: {
         address: '0xf74195bb8a5cf652411867c5c2c5b8c2a402be35',
         decimals: 18,
-        symbol: 'DAI',
-        name: 'Dai Stablecoin',
       },
       [ChainId.EVM]: {
         address: '0x461d52769884ca6235B685EF2040F47d30C94EB5',
         decimals: 18,
-        symbol: 'DAI',
-        name: 'Dai Stablecoin',
       },
       // https://evmexplorer.velas.com/token/0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D
       [ChainId.VEL]: {
         address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d',
         decimals: 18,
-        name: 'Dai Stablecoin',
       },
 
       // Testnets
