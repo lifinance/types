@@ -4,6 +4,7 @@ import {
   Chain,
   ChainId,
   ExchangeDefinition,
+  LifiStep,
   Step,
   Token,
 } from '.'
@@ -39,6 +40,7 @@ export interface RouteOptions {
   exchanges?: AllowDenyPrefer
   fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
   insurance?: boolean // whether the user want to insure their tx
+  hideRoutesWithGTEPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
 export type ToolsResponse = {
@@ -86,7 +88,7 @@ export interface Route {
   containsSwitchChain?: boolean // Features required for route execution
   infiniteApproval?: boolean // Features used for route execution
 
-  steps: Step[]
+  steps: LifiStep[]
 
   tags?: Order[]
 }
@@ -144,6 +146,7 @@ export interface QuoteRequest extends ToolConfiguration {
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
   convertAmountToGas?: string // the amount of token to convert to gas
+  hideRoutesWithGTEPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
 export interface ContractCallQuoteRequest extends ToolConfiguration {
@@ -166,6 +169,7 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
   referrer?: string
   fee?: number | string
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
+  hideRoutesWithGTEPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
 export interface ContractCallQuotesRequest extends ToolConfiguration {

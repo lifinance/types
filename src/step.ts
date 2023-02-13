@@ -114,7 +114,7 @@ export const emptyExecution: Execution = {
 }
 
 // STEP
-export type StepType = 'swap' | 'cross' | 'lifi' | 'custom'
+export type StepType = 'swap' | 'cross' | 'lifi' | 'custom' | 'protocol'
 export type StepTool = string
 
 export interface StepBase {
@@ -145,6 +145,12 @@ export function isSwapStep(step: Step): step is SwapStep {
 
 export interface CrossStep extends StepBase {
   type: 'cross'
+  action: Action
+  estimate: Estimate
+}
+
+export interface ProtocolStep extends StepBase {
+  type: 'protocol'
   action: Action
   estimate: Estimate
 }
@@ -182,4 +188,8 @@ export function isCustomStep(step: Step): step is CustomStep {
   return step.type === 'custom'
 }
 
-export type Step = SwapStep | CrossStep | LifiStep | CustomStep
+export function isProtocolStep(step: Step): step is ProtocolStep {
+  return step.type === 'protocol'
+}
+
+export type Step = SwapStep | CrossStep | LifiStep | CustomStep | ProtocolStep
