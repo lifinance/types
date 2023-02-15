@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/lifinance/types/compare/v2.0.0...v2.0.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* rename flag for max price impact ([#131](https://github.com/lifinance/types/issues/131)) ([f633d3a](https://github.com/lifinance/types/commit/f633d3a44ca30b631bca076715022df4ee59bedd))
+
 ## [2.0.0](https://github.com/lifinance/types/compare/v1.19.0...v2.0.0) (2023-02-13)
 
 
