@@ -5,7 +5,6 @@ import {
   ChainId,
   ExchangeDefinition,
   LifiStep,
-  Step,
   Token,
 } from '.'
 import { ToolError } from './apiErrors'

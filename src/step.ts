@@ -158,19 +158,6 @@ export function isCrossStep(step: Step): step is CrossStep {
   return step.type === 'cross'
 }
 
-export interface LifiStep extends StepBase {
-  type: 'lifi'
-  action: Action
-  estimate: Estimate
-  includedSteps: Step[]
-}
-
-export function isLifiStep(step: Step): step is LifiStep {
-  return (
-    step.type === 'lifi' && step.includedSteps && step.includedSteps.length > 0
-  )
-}
-
 export interface DestinationCallInfo {
   toContractAddress: string
   toContractCallData: string
@@ -194,4 +181,5 @@ export function isProtocolStep(step: Step): step is ProtocolStep {
   return step.type === 'protocol'
 }
 
-export type Step = SwapStep | CrossStep | LifiStep | CustomStep | ProtocolStep
+export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
+export type LifiStep = Omit<Step, 'type'> & { includedSteps: Step[] } & { type: 'lifi' }
