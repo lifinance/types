@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/lifinance/types/compare/v2.0.1...v2.0.2) (2023-02-16)
+
+
+### Bug Fixes
+
+* remove allowDestCallFalg from /routes ([#133](https://github.com/lifinance/types/issues/133)) ([0524e79](https://github.com/lifinance/types/commit/0524e790b5813fef7dc438fa6ddfdf70480652cf))
+
 ### [2.0.1](https://github.com/lifinance/types/compare/v2.0.0...v2.0.1) (2023-02-15)
 
 
