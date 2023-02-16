@@ -24,7 +24,7 @@ export interface RoutesRequest {
   toAddress?: string
 
   options?: RouteOptions
-  convertAmountToGas?: string
+  fromAmountForGas?: string
 }
 
 export interface RouteOptions {
@@ -144,7 +144,7 @@ export interface QuoteRequest extends ToolConfiguration {
   fee?: number | string
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
-  convertAmountToGas?: string // the amount of token to convert to gas
+  fromAmountForGas?: string // the amount of token to convert to gas
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
