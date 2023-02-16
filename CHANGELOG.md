@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/lifinance/types/compare/v2.0.1...v2.0.3) (2023-02-16)
+
+
+### Bug Fixes
+
+* remove allowDestCallFalg from /routes ([#133](https://github.com/lifinance/types/issues/133)) ([0524e79](https://github.com/lifinance/types/commit/0524e790b5813fef7dc438fa6ddfdf70480652cf))
+* renamed trusted gas param ([#135](https://github.com/lifinance/types/issues/135)) ([98a811a](https://github.com/lifinance/types/commit/98a811a154928389f2f014fbb14a332428ca130c))
+
 ### [2.0.2](https://github.com/lifinance/types/compare/v2.0.1...v2.0.2) (2023-02-16)
 
 
