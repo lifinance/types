@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/lifinance/types/compare/v2.0.3...v2.0.4) (2023-02-16)
+
+
+### Bug Fixes
+
+* revert changes ([#134](https://github.com/lifinance/types/issues/134)) ([32a6a7c](https://github.com/lifinance/types/commit/32a6a7c973d2febdeef6c6ce621e1b9b37398357))
+
+### [2.0.3](https://github.com/lifinance/types/compare/v2.0.1...v2.0.3) (2023-02-16)
+
+
+### Bug Fixes
+
+* remove allowDestCallFalg from /routes ([#133](https://github.com/lifinance/types/issues/133)) ([0524e79](https://github.com/lifinance/types/commit/0524e790b5813fef7dc438fa6ddfdf70480652cf))
+* renamed trusted gas param ([#135](https://github.com/lifinance/types/issues/135)) ([98a811a](https://github.com/lifinance/types/commit/98a811a154928389f2f014fbb14a332428ca130c))
+
+### [2.0.2](https://github.com/lifinance/types/compare/v2.0.1...v2.0.2) (2023-02-16)
+
+
+### Bug Fixes
+
+* remove allowDestCallFalg from /routes ([#133](https://github.com/lifinance/types/issues/133)) ([0524e79](https://github.com/lifinance/types/commit/0524e790b5813fef7dc438fa6ddfdf70480652cf))
+
+### [2.0.1](https://github.com/lifinance/types/compare/v2.0.0...v2.0.1) (2023-02-15)
+
+
+### Bug Fixes
+
+* rename flag for max price impact ([#131](https://github.com/lifinance/types/issues/131)) ([f633d3a](https://github.com/lifinance/types/commit/f633d3a44ca30b631bca076715022df4ee59bedd))
+
 ## [2.0.0](https://github.com/lifinance/types/compare/v1.19.0...v2.0.0) (2023-02-13)
 
 
