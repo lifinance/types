@@ -142,6 +142,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.ARBG]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
       [ChainId.CZKT]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
@@ -412,6 +416,10 @@ const basicCoins: BasicCoin[] = [
         address: 'KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE',
         decimals: 8,
         name: 'Avalanche (Wormhole)',
+      },
+      [ChainId.AVAT]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
       },
     },
   },
@@ -1595,6 +1603,17 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     logoURI:
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
   },
+  [ChainId.ARBG]: {
+    // https://goerli.arbiscan.io/token/0x42da9eE191833756c618778145A86E6709f70C9b
+    address: '0x42da9eE191833756c618778145A86E6709f70C9b',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.ARBG,
+    coinKey: CoinKey.WETH,
+    name: 'WETH',
+    logoURI:
+      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
   [ChainId.OPTT]: {
     // https://kovan-optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006
     address: '0x4200000000000000000000000000000000000006',
@@ -1638,6 +1657,16 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'WETH',
     logoURI:
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
+  [ChainId.AVAT]: {
+    // https://testnet.snowtrace.io/token/0xd00ae08403B9bbb9124bB305C09058E32C39A48c
+    address: '0xd00ae08403B9bbb9124bB305C09058E32C39A48c',
+    symbol: 'WAVAX',
+    decimals: 18,
+    chainId: ChainId.AVA,
+    coinKey: 'WAVAX' as CoinKey,
+    name: 'Wrapped AVAX',
+    logoURI: '',
   },
 }
 
