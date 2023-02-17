@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/lifinance/types/compare/v2.0.4...v2.1.0) (2023-02-17)
+
+
+### Features
+
+* add ConsenSys zkEVM Testnet ([ac5f315](https://github.com/lifinance/types/commit/ac5f31562db6f521e6b83cf73ee54e5b48f5680c))
+
 ### [2.0.4](https://github.com/lifinance/types/compare/v2.0.3...v2.0.4) (2023-02-16)
 
 
