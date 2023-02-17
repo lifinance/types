@@ -10,7 +10,7 @@ import {
 import { ToolError } from './apiErrors'
 
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
-export type Order = typeof Orders[number]
+export type Order = (typeof Orders)[number]
 
 export interface RoutesRequest {
   fromChainId: number
@@ -244,7 +244,7 @@ const _StatusMessage = [
   // The transfer failed
   'FAILED',
 ] as const
-export type StatusMessage = typeof _StatusMessage[number]
+export type StatusMessage = (typeof _StatusMessage)[number]
 
 const _SubstatusPending = [
   // The bridge is waiting for additional confirmations
@@ -262,7 +262,7 @@ const _SubstatusPending = [
   // We cannot determine the status of the transfer
   'UNKNOWN_ERROR',
 ] as const
-export type SubstatusPending = typeof _SubstatusPending[number]
+export type SubstatusPending = (typeof _SubstatusPending)[number]
 
 const _SubstatusDone = [
   // The transfer was successful
@@ -275,7 +275,7 @@ const _SubstatusDone = [
   'REFUNDED',
 ] as const
 
-export type SubstatusDone = typeof _SubstatusDone[number]
+export type SubstatusDone = (typeof _SubstatusDone)[number]
 export type Substatus = SubstatusPending | SubstatusDone
 
 export const isSubstatusPending = (

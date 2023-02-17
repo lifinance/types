@@ -1334,6 +1334,31 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
     },
   },
+  // 59140 - ConsenSys zkEVM Testnet
+  {
+    key: ChainKey.CZKT,
+    chainType: ChainType.EVM,
+    name: 'ConsenSys zkEVM Testnet',
+    coin: CoinKey.ETH,
+    id: 59140,
+    mainnet: false,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/consensys_skevm_test.png',
+    // multicallAddress: multicallAddresses[ChainId.CZKT], // Not deployed yet
+    faucetUrls: ['https://goerli.zkevm.consensys.net/'],
+
+    metamask: {
+      chainId: prefixChainId(59140),
+      blockExplorerUrls: ['https://explorer.goerli.zkevm.consensys.net'],
+      chainName: 'ConsenSys zkEVM Testnet',
+      nativeCurrency: {
+        name: 'crETH',
+        symbol: 'crETH',
+        decimals: 18,
+      },
+      rpcUrls: [],
+    },
+  },
   // TODO: Add
   // EVMT = 9000,
   // MORT = 1287,

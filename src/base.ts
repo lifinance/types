@@ -116,6 +116,7 @@ export enum ChainKey {
   EVMT = 'evmt',
   MORT = 'mort',
   FTMT = 'ftmt',
+  CZKT = 'czkt',
 }
 
 export enum ChainId {
@@ -181,6 +182,7 @@ export enum ChainId {
   EVMT = 9000,
   MORT = 1287,
   FTMT = 4002,
+  CZKT = 59140,
 }
 
 export interface Token {
