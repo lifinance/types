@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/lifinance/types/compare/v2.1.0...v2.1.1) (2023-02-17)
+
+
+### Bug Fixes
+
+* add CZKT default tokens ([df967ac](https://github.com/lifinance/types/commit/df967ac4fb3ee89a701d89950f50b438cc67b656))
+
 ## [2.1.0](https://github.com/lifinance/types/compare/v2.0.4...v2.1.0) (2023-02-17)
 
 
