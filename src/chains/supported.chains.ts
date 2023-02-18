@@ -1343,7 +1343,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 59140,
     mainnet: false,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/consensys_skevm_test.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/consensys_zkevm_test.png',
     // multicallAddress: multicallAddresses[ChainId.CZKT], // Not deployed yet
     faucetUrls: ['https://goerli.zkevm.consensys.net/'],
 
