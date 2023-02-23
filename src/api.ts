@@ -99,6 +99,10 @@ export interface RoutesResponse {
 
 export type PossibilityTopic = 'chains' | 'tokens' | 'bridges' | 'exchanges'
 
+/**
+ * We don't want to support this endpoint anymore in the future. /chains, /tools, /connections, and /tokens should be used instead
+ * @deprecated
+ */
 export interface PossibilitiesRequest {
   chains?: number[] // (default: [all]) // eg. [1, 56, 100]
   bridges?: AllowDenyPrefer
@@ -106,6 +110,10 @@ export interface PossibilitiesRequest {
   include?: PossibilityTopic[]
 }
 
+/**
+ * Should not be accessed via the types package anymore
+ * @deprecated
+ */
 export interface PossibilitiesResponse {
   chains?: Chain[]
   tokens?: Token[]
