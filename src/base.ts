@@ -216,6 +216,10 @@ export interface ExchangeDefinition {
   chains: number[]
 }
 
+/**
+ * Should not be accessed via the types package anymore
+ * @deprecated
+ */
 export interface BridgeDefinition {
   tool: BridgeTool
   fromChainId: number
