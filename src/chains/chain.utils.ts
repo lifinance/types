@@ -1,7 +1,5 @@
 import { ChainKey } from '../base'
 import { Chain } from './EVMChain'
-import { EVMChain } from './EVMChain'
-import { SolanaChain } from './SolanaChain'
 import { supportedEVMChains, supportedSolanaChains } from './supported.chains'
 
 const supportedChains: Chain[] = [
