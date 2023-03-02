@@ -358,26 +358,31 @@ export interface IntegratorWithdrawalTransactionResponse {
   transactionRequest: TransactionRequest
 }
 
-const _GasStatusState = ['PENDING', 'DONE', 'NOT_FOUND'] as const
-type GasStatusState = (typeof _GasStatusState)[number]
+const _LIFuelState = ['PENDING', 'DONE', 'NOT_FOUND'] as const
+type LIFuelState = (typeof _LIFuelState)[number]
 // Response to the status API for trusted gas
-export type GasStatusResponse = {
-  status: GasStatusState
+export type LIFuelStatusResponse = {
+  status: LIFuelState
   sending?: TransactionInfo
   receiving?: TransactionInfo
 }
 
-export type GasSuggestionRequest = {
+export type GasRecommendationRequest = {
   chainId: ChainId
   fromChain?: ChainId
   fromToken?: string
 }
 
-export type GasStatusRequest = {
+export type RefetchSourceLIFuelRequest = {
+  txHash: string
+  chainId: ChainId
+}
+
+export type LIFuelStatusRequest = {
   txHash: string
 }
 
-export type RefetchSourceGasRequest = {
+export type RefetchLIFuelRequest = {
   txHash: string
   chainId: ChainId
 }
