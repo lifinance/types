@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/lifinance/types/compare/v2.1.1...v2.2.0) (2023-03-02)
+
+
+### Features
+
+* add gas suggestion and status types, lifuel icon ([#137](https://github.com/lifinance/types/issues/137)) ([94ae5f2](https://github.com/lifinance/types/commit/94ae5f2a5358e08e2096dddfe79cbad23c94eaff))
+* add protocol icons ([97cf747](https://github.com/lifinance/types/commit/97cf747d3cf8c4704e15dc23ecfd019cd0ed7bd2))
+* deprecate the possibilities endpoint ([#136](https://github.com/lifinance/types/issues/136)) ([53fa193](https://github.com/lifinance/types/commit/53fa193334fc0f929325c3e8f9b3f2c07a52edb7))
+
+
+### Bug Fixes
+
+* rename gasUp to getGas ([b2dfda9](https://github.com/lifinance/types/commit/b2dfda984e923c74275c99498e6d5818b7447a91))
+* typo ([62981c6](https://github.com/lifinance/types/commit/62981c60254cbe4342129fad88029e5870d30321))
+
 ### [2.1.1](https://github.com/lifinance/types/compare/v2.1.0...v2.1.1) (2023-02-17)
 
 
