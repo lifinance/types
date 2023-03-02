@@ -357,3 +357,46 @@ export interface IntegratorWithdrawalRequest {
 export interface IntegratorWithdrawalTransactionResponse {
   transactionRequest: TransactionRequest
 }
+
+const _LIFuelState = ['PENDING', 'DONE', 'NOT_FOUND'] as const
+type LIFuelState = (typeof _LIFuelState)[number]
+// Response to the status API for trusted gas
+export type LIFuelStatusResponse = {
+  status: LIFuelState
+  sending?: TransactionInfo
+  receiving?: TransactionInfo
+}
+
+export type GasRecommendationRequest = {
+  chainId: ChainId
+  fromChain?: ChainId
+  fromToken?: string
+}
+
+export type RefetchSourceLIFuelRequest = {
+  txHash: string
+  chainId: ChainId
+}
+
+export type LIFuelStatusRequest = {
+  txHash: string
+}
+
+export type RefetchLIFuelRequest = {
+  txHash: string
+  chainId: ChainId
+}
+
+export type GasRecommendationResponse = {
+  available: boolean // whether we can support that
+  recommended?: TokenBalance
+  limit?: TokenBalance // Maximum of gas the user can transfer
+  serviceFee?: TokenBalance // LI.FI fee for providing the service
+
+  // information about what the user has to pay to get the recommended gas amount
+  fromToken?: Token
+  fromAmount?: string
+
+  // if available is false
+  message?: string // reason why the gas feature is not available (e.g. missing liquidity)
+}
