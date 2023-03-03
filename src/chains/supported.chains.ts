@@ -131,8 +131,8 @@ export const supportedEVMChains: EVMChain[] = [
       },
       rpcUrls: [
         'https://rpc.gnosischain.com/',
-        'https://rpc.xdaichain.com/',
-        'https://dai.poa.network/',
+        'https://rpc.ankr.com/gnosis',
+        'https://xdai-rpc.gateway.pokt.network',
       ],
     },
   },
