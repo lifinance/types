@@ -47,7 +47,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1',
         decimals: 18,
         symbol: 'WETH',
-        name: 'Wrapped Ether on xDai',
+        name: 'Wrapped Ether',
       },
       [ChainId.OPT]: {
         address: '0x0000000000000000000000000000000000000000',
@@ -181,7 +181,7 @@ const basicCoins: BasicCoin[] = [
       [ChainId.DAI]: {
         address: '0x7122d7661c4564b7c6cd4878b06766489a6028a2',
         decimals: 18,
-        name: 'Matic Token on xDai',
+        name: 'Matic Token',
       },
       // https://evmexplorer.velas.com/token/0x6ab0B8C1a35F9F4Ce107cCBd05049CB1Dbd99Ec5/
       [ChainId.VEL]: {
@@ -225,7 +225,7 @@ const basicCoins: BasicCoin[] = [
         address: '0xca8d20f3e0144a72c6b5d576e9bd3fd8557e2b04',
         decimals: 18,
         symbol: 'WBNB',
-        name: 'Wrapped BNB on xDai',
+        name: 'Wrapped BNB',
       },
       [ChainId.ONE]: {
         address: '0xb1f6e61e1e113625593a22fa6aa94f8052bc39e0',
@@ -256,7 +256,7 @@ const basicCoins: BasicCoin[] = [
   // > DAI
   {
     key: CoinKey.DAI,
-    name: 'Dai Stablecoin',
+    name: 'DAI Stablecoin',
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
     verified: true,
@@ -268,23 +268,22 @@ const basicCoins: BasicCoin[] = [
       [ChainId.SOL]: {
         address: 'EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o',
         decimals: 8,
-        name: 'Dai Stablecoin (Wormhole)',
+        name: 'DAI Stablecoin (Wormhole)',
       },
       [ChainId.BSC]: {
         address: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
         decimals: 18,
-        name: 'Dai Token',
       },
       [ChainId.POL]: {
         address: '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063',
         decimals: 18,
-        name: '(PoS) Dai Stablecoin',
+        name: '(PoS) DAI Stablecoin',
       },
       [ChainId.DAI]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
         symbol: 'xDAI',
-        name: 'xDai Native Token',
+        name: 'xDAI Native Token',
       },
       [ChainId.OPT]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
@@ -320,7 +319,7 @@ const basicCoins: BasicCoin[] = [
       [ChainId.FUS]: {
         address: '0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba',
         decimals: 18,
-        name: 'Dai Stablecoin on Fuse',
+        name: 'DAI Stablecoin',
       },
       [ChainId.CEL]: {
         address: '0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd',
@@ -877,7 +876,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1',
         decimals: 18,
         symbol: 'WETH',
-        name: 'Wrapped Ether on xDai',
+        name: 'Wrapped Ether',
       },
       [ChainId.POL]: {
         address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
