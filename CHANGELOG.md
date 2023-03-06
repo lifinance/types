@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/lifinance/types/compare/v2.2.1...v2.3.0) (2023-03-06)
+
+
+### Features
+
+* move NOT_PROCESSABLE_REFUND_NEEDED to FAILED ([#138](https://github.com/lifinance/types/issues/138)) ([82a1a26](https://github.com/lifinance/types/commit/82a1a261792ad861873ec07631e1903f2ff25f01))
+
+
+### Bug Fixes
+
+* improve DAI token names ([9c7f35a](https://github.com/lifinance/types/commit/9c7f35ac39563faedffcacf55686b19e26d3c75d))
+* replace outdated gnosis chain rpcs ([376d743](https://github.com/lifinance/types/commit/376d743bb6db24f55acebd1c1eadfd5daad426f0))
+
 ### [2.2.1](https://github.com/lifinance/types/compare/v2.2.0...v2.2.1) (2023-03-02)
 
 ## [2.2.0](https://github.com/lifinance/types/compare/v2.1.1...v2.2.0) (2023-03-02)
