@@ -10,7 +10,7 @@ import {
 import { ToolError } from './apiErrors'
 
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
-export type Order = typeof Orders[number]
+export type Order = (typeof Orders)[number]
 
 export interface RoutesRequest {
   fromChainId: number
@@ -99,6 +99,10 @@ export interface RoutesResponse {
 
 export type PossibilityTopic = 'chains' | 'tokens' | 'bridges' | 'exchanges'
 
+/**
+ * We don't want to support this endpoint anymore in the future. /chains, /tools, /connections, and /tokens should be used instead
+ * @deprecated
+ */
 export interface PossibilitiesRequest {
   chains?: number[] // (default: [all]) // eg. [1, 56, 100]
   bridges?: AllowDenyPrefer
@@ -106,6 +110,10 @@ export interface PossibilitiesRequest {
   include?: PossibilityTopic[]
 }
 
+/**
+ * Should not be accessed via the types package anymore
+ * @deprecated
+ */
 export interface PossibilitiesResponse {
   chains?: Chain[]
   tokens?: Token[]
@@ -244,7 +252,7 @@ const _StatusMessage = [
   // The transfer failed
   'FAILED',
 ] as const
-export type StatusMessage = typeof _StatusMessage[number]
+export type StatusMessage = (typeof _StatusMessage)[number]
 
 const _SubstatusPending = [
   // The bridge is waiting for additional confirmations
@@ -255,14 +263,12 @@ const _SubstatusPending = [
   'BRIDGE_NOT_AVAILABLE',
   // The RPC for source/destination chain is temporarily unavailable
   'CHAIN_NOT_AVAILABLE',
-  // The transfer cannot be completed, a refund is required
-  'NOT_PROCESSABLE_REFUND_NEEDED',
   // A refund has been requested and is in progress
   'REFUND_IN_PROGRESS',
   // We cannot determine the status of the transfer
   'UNKNOWN_ERROR',
 ] as const
-export type SubstatusPending = typeof _SubstatusPending[number]
+export type SubstatusPending = (typeof _SubstatusPending)[number]
 
 const _SubstatusDone = [
   // The transfer was successful
@@ -274,9 +280,15 @@ const _SubstatusDone = [
   // The transfer was not successful but it has been refunded
   'REFUNDED',
 ] as const
+export type SubstatusDone = (typeof _SubstatusDone)[number]
 
-export type SubstatusDone = typeof _SubstatusDone[number]
-export type Substatus = SubstatusPending | SubstatusDone
+const _SubstatusFailed = [
+  // The transfer cannot be completed, a refund is required
+  'NOT_PROCESSABLE_REFUND_NEEDED',
+] as const
+
+export type SubstatusFailed = (typeof _SubstatusFailed)[number]
+export type Substatus = SubstatusPending | SubstatusDone | SubstatusFailed
 
 export const isSubstatusPending = (
   substatus: Substatus
@@ -286,6 +298,10 @@ export const isSubstatusDone = (
   substatus: Substatus
 ): substatus is SubstatusDone =>
   _SubstatusDone.includes(substatus as SubstatusDone)
+export const isSubstatusFailed = (
+  substatus: Substatus
+): substatus is SubstatusFailed =>
+  _SubstatusFailed.includes(substatus as SubstatusFailed)
 
 export interface StatusInformation {
   status: StatusMessage
@@ -348,4 +364,47 @@ export interface IntegratorWithdrawalRequest {
 
 export interface IntegratorWithdrawalTransactionResponse {
   transactionRequest: TransactionRequest
+}
+
+const _LIFuelState = ['PENDING', 'DONE', 'NOT_FOUND'] as const
+type LIFuelState = (typeof _LIFuelState)[number]
+// Response to the status API for trusted gas
+export type LIFuelStatusResponse = {
+  status: LIFuelState
+  sending?: TransactionInfo
+  receiving?: TransactionInfo
+}
+
+export type GasRecommendationRequest = {
+  chainId: ChainId
+  fromChain?: ChainId
+  fromToken?: string
+}
+
+export type RefetchSourceLIFuelRequest = {
+  txHash: string
+  chainId: ChainId
+}
+
+export type LIFuelStatusRequest = {
+  txHash: string
+}
+
+export type RefetchLIFuelRequest = {
+  txHash: string
+  chainId: ChainId
+}
+
+export type GasRecommendationResponse = {
+  available: boolean // whether we can support that
+  recommended?: TokenBalance
+  limit?: TokenBalance // Maximum of gas the user can transfer
+  serviceFee?: TokenBalance // LI.FI fee for providing the service
+
+  // information about what the user has to pay to get the recommended gas amount
+  fromToken?: Token
+  fromAmount?: string
+
+  // if available is false
+  message?: string // reason why the gas feature is not available (e.g. missing liquidity)
 }

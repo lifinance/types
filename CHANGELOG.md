@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/lifinance/types/compare/v2.2.1...v2.3.0) (2023-03-06)
+
+
+### Features
+
+* move NOT_PROCESSABLE_REFUND_NEEDED to FAILED ([#138](https://github.com/lifinance/types/issues/138)) ([82a1a26](https://github.com/lifinance/types/commit/82a1a261792ad861873ec07631e1903f2ff25f01))
+
+
+### Bug Fixes
+
+* improve DAI token names ([9c7f35a](https://github.com/lifinance/types/commit/9c7f35ac39563faedffcacf55686b19e26d3c75d))
+* replace outdated gnosis chain rpcs ([376d743](https://github.com/lifinance/types/commit/376d743bb6db24f55acebd1c1eadfd5daad426f0))
+
+### [2.2.1](https://github.com/lifinance/types/compare/v2.2.0...v2.2.1) (2023-03-02)
+
+## [2.2.0](https://github.com/lifinance/types/compare/v2.1.1...v2.2.0) (2023-03-02)
+
+
+### Features
+
+* add gas suggestion and status types, lifuel icon ([#137](https://github.com/lifinance/types/issues/137)) ([94ae5f2](https://github.com/lifinance/types/commit/94ae5f2a5358e08e2096dddfe79cbad23c94eaff))
+* add protocol icons ([97cf747](https://github.com/lifinance/types/commit/97cf747d3cf8c4704e15dc23ecfd019cd0ed7bd2))
+* deprecate the possibilities endpoint ([#136](https://github.com/lifinance/types/issues/136)) ([53fa193](https://github.com/lifinance/types/commit/53fa193334fc0f929325c3e8f9b3f2c07a52edb7))
+
+
+### Bug Fixes
+
+* rename gasUp to getGas ([b2dfda9](https://github.com/lifinance/types/commit/b2dfda984e923c74275c99498e6d5818b7447a91))
+* typo ([62981c6](https://github.com/lifinance/types/commit/62981c60254cbe4342129fad88029e5870d30321))
+
+### [2.1.1](https://github.com/lifinance/types/compare/v2.1.0...v2.1.1) (2023-02-17)
+
+
+### Bug Fixes
+
+* add CZKT default tokens ([df967ac](https://github.com/lifinance/types/commit/df967ac4fb3ee89a701d89950f50b438cc67b656))
+
+## [2.1.0](https://github.com/lifinance/types/compare/v2.0.4...v2.1.0) (2023-02-17)
+
+
+### Features
+
+* add ConsenSys zkEVM Testnet ([ac5f315](https://github.com/lifinance/types/commit/ac5f31562db6f521e6b83cf73ee54e5b48f5680c))
+
 ### [2.0.4](https://github.com/lifinance/types/compare/v2.0.3...v2.0.4) (2023-02-16)
 
 
