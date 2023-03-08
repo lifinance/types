@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/lifinance/types/compare/v2.3.0...v2.4.0) (2023-03-08)
+
+
+### Features
+
+* partial GetStatusRequest properties -- fromChain and toChain ([132ac7a](https://github.com/lifinance/types/commit/132ac7a3e594b8e272110bccf6c70e00f27e0079))
+
 ## [2.3.0](https://github.com/lifinance/types/compare/v2.2.1...v2.3.0) (2023-03-06)
 
 
