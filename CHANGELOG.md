@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.4.1](https://github.com/lifinance/types/compare/v2.4.0...v2.4.1) (2023-03-10)
+
+
+### Bug Fixes
+
+* block explorer and rpc urls ([7d805e2](https://github.com/lifinance/types/commit/7d805e2edb9470603f95210789c0fdbf2e585b31))
+
 ## [2.4.0](https://github.com/lifinance/types/compare/v2.3.0...v2.4.0) (2023-03-08)
 
 
