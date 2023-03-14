@@ -66,9 +66,19 @@ export interface AllowDenyPrefer {
   prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
 }
 
+export enum InsuranceState {
+  INSURED = 'INSURED',
+  INSURABLE = 'INSURABLE',
+  NOT_INSURABLE = 'NOT_INSURABLE',
+}
+
+export interface Insurance {
+  state: InsuranceState
+  feeAmountUsd: number
+}
 export interface Route {
   id: string
-
+  insurance: Insurance
   fromChainId: number
   fromAmountUSD: string
   fromAmount: string
