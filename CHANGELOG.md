@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.1](https://github.com/lifinance/types/compare/v2.5.0...v2.5.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* update insurance feeAmountUsd type to string ([#141](https://github.com/lifinance/types/issues/141)) ([e1ec826](https://github.com/lifinance/types/commit/e1ec8267eefa77d1e0cd8e25ae6f888dffc99b4b))
+
 ## [2.5.0](https://github.com/lifinance/types/compare/v2.4.1...v2.5.0) (2023-03-14)
 
 
