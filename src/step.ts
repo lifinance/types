@@ -159,8 +159,19 @@ export function isCrossStep(step: Step): step is CrossStep {
   return step.type === 'cross'
 }
 
+enum InsuranceState {
+  INSURED = 'INSURED',
+  NOT_INSURABLE = 'NOT_INSURABLE',
+  INSURABLE = 'INSURABLE',
+}
+interface Insurance {
+  state: InsuranceState
+  feeAmountUsd: number // 0, or real amount
+}
+
 export interface LifiStep extends StepBase {
   type: 'lifi'
+  insurance: Insurance
   action: Action
   estimate: Estimate
   includedSteps: Step[]
