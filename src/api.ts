@@ -74,7 +74,7 @@ export enum InsuranceState {
 
 export interface Insurance {
   state: InsuranceState
-  feeAmountUsd: number
+  feeAmountUsd: string
 }
 export interface Route {
   id: string
