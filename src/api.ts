@@ -66,11 +66,12 @@ export interface AllowDenyPrefer {
   prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
 }
 
-export enum InsuranceState {
-  INSURED = 'INSURED',
-  INSURABLE = 'INSURABLE',
-  NOT_INSURABLE = 'NOT_INSURABLE',
-}
+export const _InsuranceState = [
+  'INSURED',
+  'INSURABLE',
+  'NOT_INSURABLE',
+] as const
+export type InsuranceState = (typeof _InsuranceState)[number]
 
 export interface Insurance {
   state: InsuranceState
