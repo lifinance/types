@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.2](https://github.com/lifinance/types/compare/v2.5.1...v2.5.2) (2023-03-16)
+
+
+### Bug Fixes
+
+* set to two decimals ([#142](https://github.com/lifinance/types/issues/142)) ([ef2fe3f](https://github.com/lifinance/types/commit/ef2fe3f41f0258d1358908b10bc8ef0d40c36f80))
+
 ### [2.5.1](https://github.com/lifinance/types/compare/v2.5.0...v2.5.1) (2023-03-14)
 
 
