@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.6](https://github.com/lifinance/types/compare/v2.5.5...v2.5.6) (2023-03-17)
+
+### [2.5.5](https://github.com/lifinance/types/compare/v2.5.4...v2.5.5) (2023-03-17)
+
+### [2.5.4](https://github.com/lifinance/types/compare/v2.5.2...v2.5.4) (2023-03-17)
+
+
+### Bug Fixes
+
+* make insurance on route optional ([#143](https://github.com/lifinance/types/issues/143)) ([0eb8f1b](https://github.com/lifinance/types/commit/0eb8f1bca49f960f8f79d37fac4c94a5c14505a4))
+
+### [2.5.3](https://github.com/lifinance/types/compare/v2.5.2...v2.5.3) (2023-03-17)
+
+
+### Bug Fixes
+
+* make insurance on route optional ([#143](https://github.com/lifinance/types/issues/143)) ([0eb8f1b](https://github.com/lifinance/types/commit/0eb8f1bca49f960f8f79d37fac4c94a5c14505a4))
+
+### [2.5.2](https://github.com/lifinance/types/compare/v2.5.1...v2.5.2) (2023-03-16)
+
+
+### Bug Fixes
+
+* set to two decimals ([#142](https://github.com/lifinance/types/issues/142)) ([ef2fe3f](https://github.com/lifinance/types/commit/ef2fe3f41f0258d1358908b10bc8ef0d40c36f80))
+
+### [2.5.1](https://github.com/lifinance/types/compare/v2.5.0...v2.5.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* update insurance feeAmountUsd type to string ([#141](https://github.com/lifinance/types/issues/141)) ([e1ec826](https://github.com/lifinance/types/commit/e1ec8267eefa77d1e0cd8e25ae6f888dffc99b4b))
+
+## [2.5.0](https://github.com/lifinance/types/compare/v2.4.1...v2.5.0) (2023-03-14)
+
+
+### Features
+
+* add insurance to route ([#140](https://github.com/lifinance/types/issues/140)) ([f909c51](https://github.com/lifinance/types/commit/f909c510a3448826aa4125ed5792107eae4a7b46))
+
+### [2.4.1](https://github.com/lifinance/types/compare/v2.4.0...v2.4.1) (2023-03-10)
+
+
+### Bug Fixes
+
+* block explorer and rpc urls ([7d805e2](https://github.com/lifinance/types/commit/7d805e2edb9470603f95210789c0fdbf2e585b31))
+
 ## [2.4.0](https://github.com/lifinance/types/compare/v2.3.0...v2.4.0) (2023-03-08)
 
 

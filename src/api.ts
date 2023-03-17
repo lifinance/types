@@ -66,9 +66,20 @@ export interface AllowDenyPrefer {
   prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
 }
 
+export const _InsuranceState = [
+  'INSURED',
+  'INSURABLE',
+  'NOT_INSURABLE',
+] as const
+export type InsuranceState = (typeof _InsuranceState)[number]
+
+export interface Insurance {
+  state: InsuranceState
+  feeAmountUsd: string
+}
 export interface Route {
   id: string
-
+  insurance: Insurance
   fromChainId: number
   fromAmountUSD: string
   fromAmount: string
