@@ -79,7 +79,7 @@ export interface Insurance {
 }
 export interface Route {
   id: string
-  insurance?: Insurance
+  insurance: Insurance
   fromChainId: number
   fromAmountUSD: string
   fromAmount: string
