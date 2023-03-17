@@ -50,8 +50,15 @@ export interface AllowDenyPrefer {
     deny?: string[];
     prefer?: string[];
 }
+export declare const _InsuranceState: readonly ["INSURED", "INSURABLE", "NOT_INSURABLE"];
+export type InsuranceState = (typeof _InsuranceState)[number];
+export interface Insurance {
+    state: InsuranceState;
+    feeAmountUsd: string;
+}
 export interface Route {
     id: string;
+    insurance: Insurance;
     fromChainId: number;
     fromAmountUSD: string;
     fromAmount: string;
@@ -206,7 +213,7 @@ export type SubstatusDone = (typeof _SubstatusDone)[number];
 declare const _SubstatusFailed: readonly ["NOT_PROCESSABLE_REFUND_NEEDED"];
 export type SubstatusFailed = (typeof _SubstatusFailed)[number];
 export type Substatus = SubstatusPending | SubstatusDone | SubstatusFailed;
-export declare const isSubstatusPending: (substatus: Substatus) => substatus is "WAIT_SOURCE_CONFIRMATIONS" | "WAIT_DESTINATION_TRANSACTION" | "BRIDGE_NOT_AVAILABLE" | "CHAIN_NOT_AVAILABLE" | "REFUND_IN_PROGRESS" | "UNKNOWN_ERROR";
+export declare const isSubstatusPending: (substatus: Substatus) => substatus is "UNKNOWN_ERROR" | "WAIT_SOURCE_CONFIRMATIONS" | "WAIT_DESTINATION_TRANSACTION" | "BRIDGE_NOT_AVAILABLE" | "CHAIN_NOT_AVAILABLE" | "REFUND_IN_PROGRESS";
 export declare const isSubstatusDone: (substatus: Substatus) => substatus is "COMPLETED" | "PARTIAL" | "REFUNDED";
 export declare const isSubstatusFailed: (substatus: Substatus) => substatus is "NOT_PROCESSABLE_REFUND_NEEDED";
 export interface StatusInformation {

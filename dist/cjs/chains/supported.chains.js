@@ -844,7 +844,7 @@ exports.supportedEVMChains = [
                 symbol: 'ETH',
                 decimals: 18,
             },
-            rpcUrls: ['https://goerli.infura.io/v3/d1caeba320f94122ba8f791f50122c4c'],
+            rpcUrls: ['https://rpc.ankr.com/eth_goerli'],
         },
     },
     // 12 - Metadium Testnet
@@ -975,7 +975,7 @@ exports.supportedEVMChains = [
         multicallAddress: multicall_1.multicallAddresses[base_1.ChainId.ARBG],
         metamask: {
             chainId: (0, EVMChain_1.prefixChainId)(421613),
-            blockExplorerUrls: ['https://goerli-rollup-explorer.arbitrum.io'],
+            blockExplorerUrls: ['https://goerli-rollup-explorer.arbitrum.io/'],
             chainName: 'Arbitrum Görli',
             nativeCurrency: {
                 name: 'AGOR',
@@ -1073,10 +1073,7 @@ exports.supportedEVMChains = [
                 symbol: 'HT',
                 decimals: 18,
             },
-            rpcUrls: [
-                'https://http-testnet.hecochain.com',
-                'wss://ws-testnet.hecochain.com',
-            ],
+            rpcUrls: ['https://http-testnet.hecochain.com'],
         },
     },
     // 1666700000 - Harmony Testnet 0
@@ -1183,7 +1180,7 @@ exports.supportedEVMChains = [
         // https://github.com/ethereum-lists/chains/blob/master/_data/chains/eip155-43113.json
         metamask: {
             chainId: (0, EVMChain_1.prefixChainId)(43113),
-            blockExplorerUrls: ['https://testnet.snowtrace.io'],
+            blockExplorerUrls: ['https://testnet.snowtrace.io/'],
             chainName: 'Avalanche Fuji Testnet',
             nativeCurrency: {
                 name: 'AVAX',
@@ -1206,7 +1203,7 @@ exports.supportedEVMChains = [
         faucetUrls: ['https://goerli.zkevm.consensys.net/'],
         metamask: {
             chainId: (0, EVMChain_1.prefixChainId)(59140),
-            blockExplorerUrls: ['https://explorer.goerli.zkevm.consensys.net'],
+            blockExplorerUrls: ['https://explorer.goerli.zkevm.consensys.net/'],
             chainName: 'ConsenSys zkEVM Testnet',
             nativeCurrency: {
                 name: 'crETH',

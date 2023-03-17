@@ -841,7 +841,7 @@ export const supportedEVMChains = [
                 symbol: 'ETH',
                 decimals: 18,
             },
-            rpcUrls: ['https://goerli.infura.io/v3/d1caeba320f94122ba8f791f50122c4c'],
+            rpcUrls: ['https://rpc.ankr.com/eth_goerli'],
         },
     },
     // 12 - Metadium Testnet
@@ -972,7 +972,7 @@ export const supportedEVMChains = [
         multicallAddress: multicallAddresses[ChainId.ARBG],
         metamask: {
             chainId: prefixChainId(421613),
-            blockExplorerUrls: ['https://goerli-rollup-explorer.arbitrum.io'],
+            blockExplorerUrls: ['https://goerli-rollup-explorer.arbitrum.io/'],
             chainName: 'Arbitrum Görli',
             nativeCurrency: {
                 name: 'AGOR',
@@ -1070,10 +1070,7 @@ export const supportedEVMChains = [
                 symbol: 'HT',
                 decimals: 18,
             },
-            rpcUrls: [
-                'https://http-testnet.hecochain.com',
-                'wss://ws-testnet.hecochain.com',
-            ],
+            rpcUrls: ['https://http-testnet.hecochain.com'],
         },
     },
     // 1666700000 - Harmony Testnet 0
@@ -1180,7 +1177,7 @@ export const supportedEVMChains = [
         // https://github.com/ethereum-lists/chains/blob/master/_data/chains/eip155-43113.json
         metamask: {
             chainId: prefixChainId(43113),
-            blockExplorerUrls: ['https://testnet.snowtrace.io'],
+            blockExplorerUrls: ['https://testnet.snowtrace.io/'],
             chainName: 'Avalanche Fuji Testnet',
             nativeCurrency: {
                 name: 'AVAX',
@@ -1203,7 +1200,7 @@ export const supportedEVMChains = [
         faucetUrls: ['https://goerli.zkevm.consensys.net/'],
         metamask: {
             chainId: prefixChainId(59140),
-            blockExplorerUrls: ['https://explorer.goerli.zkevm.consensys.net'],
+            blockExplorerUrls: ['https://explorer.goerli.zkevm.consensys.net/'],
             chainName: 'ConsenSys zkEVM Testnet',
             nativeCurrency: {
                 name: 'crETH',

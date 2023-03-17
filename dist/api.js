@@ -1,4 +1,9 @@
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'];
+export const _InsuranceState = [
+    'INSURED',
+    'INSURABLE',
+    'NOT_INSURABLE',
+];
 const _StatusMessage = [
     // The transaction was not found -- likely not mined yet
     'NOT_FOUND',

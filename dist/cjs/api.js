@@ -1,7 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isSubstatusFailed = exports.isSubstatusDone = exports.isSubstatusPending = exports.Orders = void 0;
+exports.isSubstatusFailed = exports.isSubstatusDone = exports.isSubstatusPending = exports._InsuranceState = exports.Orders = void 0;
 exports.Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'];
+exports._InsuranceState = [
+    'INSURED',
+    'INSURABLE',
+    'NOT_INSURABLE',
+];
 const _StatusMessage = [
     // The transaction was not found -- likely not mined yet
     'NOT_FOUND',
