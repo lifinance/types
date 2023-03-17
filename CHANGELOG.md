@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.3](https://github.com/lifinance/types/compare/v2.5.2...v2.5.3) (2023-03-17)
+
+
+### Bug Fixes
+
+* make insurance on route optional ([f526874](https://github.com/lifinance/types/commit/f526874aa0fab83e2dfb697e45380bdbbbfc7f8b))
+
 ### [2.5.2](https://github.com/lifinance/types/compare/v2.5.1...v2.5.2) (2023-03-16)
 
 
