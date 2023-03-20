@@ -12,6 +12,7 @@ export interface FeeCost {
   token: Token
   amount: string
   amountUSD?: string
+  included: boolean
 }
 
 export interface GasCost {
