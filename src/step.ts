@@ -17,7 +17,7 @@ export interface FeeCost {
 
 export interface GasCost {
   type: 'SUM' | 'APPROVE' | 'SEND' | 'FEE'
-  price?: string // suggested current standard price for chain
+  price: string // suggested current standard price for chain
   estimate?: string // estimate how much gas will be needed
   limit?: string // suggested gas limit (estimate +25%)
   amount: string // estimate * price = amount of tokens that will be needed
@@ -183,4 +183,6 @@ export function isProtocolStep(step: Step): step is ProtocolStep {
 }
 
 export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
-export type LifiStep = Omit<Step, 'type'> & { includedSteps: Step[] } & { type: 'lifi' }
+export type LifiStep = Omit<Step, 'type'> & { includedSteps: Step[] } & {
+  type: 'lifi'
+}
