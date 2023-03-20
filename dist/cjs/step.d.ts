@@ -14,7 +14,7 @@ export interface FeeCost {
 }
 export interface GasCost {
     type: 'SUM' | 'APPROVE' | 'SEND' | 'FEE';
-    price?: string;
+    price: string;
     estimate?: string;
     limit?: string;
     amount: string;
