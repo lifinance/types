@@ -17,7 +17,7 @@ export interface FeeCost {
 
 export interface GasCost {
   type: 'SUM' | 'APPROVE' | 'SEND' | 'FEE'
-  price?: string // suggested current standard price for chain
+  price: string // suggested current standard price for chain
   estimate?: string // estimate how much gas will be needed
   limit?: string // suggested gas limit (estimate +25%)
   amount: string // estimate * price = amount of tokens that will be needed
@@ -41,6 +41,7 @@ export interface Action {
 
 // ESTIMATE
 export interface Estimate {
+  tool: string
   fromAmount: string
   fromAmountUSD?: string
   toAmount: string
@@ -52,8 +53,6 @@ export interface Estimate {
   gasCosts?: GasCost[] // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
 
   executionDuration: number // estimated duration in seconds
-
-  data?: any // differs by tool
 }
 
 // EXECUTION
@@ -160,29 +159,19 @@ export function isCrossStep(step: Step): step is CrossStep {
   return step.type === 'cross'
 }
 
-export interface LifiStep extends StepBase {
-  type: 'lifi'
-  action: Action
-  estimate: Estimate
-  includedSteps: Step[]
+export interface DestinationCallInfo {
+  toContractAddress: string
+  toContractCallData: string
+  toFallbackAddress: string
+  callDataGasLimit: string
 }
 
-export function isLifiStep(step: Step): step is LifiStep {
-  return (
-    step.type === 'lifi' && step.includedSteps && step.includedSteps.length > 0
-  )
-}
+export type CallAction = Action & DestinationCallInfo
 
 export interface CustomStep extends StepBase {
   type: 'custom'
-  action: Action
+  action: CallAction
   estimate: Estimate
-  destinationCallInfo: {
-    toContractAddress: string
-    toContractCallData: string
-    toFallbackAddress: string
-    callDataGasLimit: string
-  }
 }
 
 export function isCustomStep(step: Step): step is CustomStep {
@@ -193,4 +182,7 @@ export function isProtocolStep(step: Step): step is ProtocolStep {
   return step.type === 'protocol'
 }
 
-export type Step = SwapStep | CrossStep | LifiStep | CustomStep | ProtocolStep
+export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
+export type LifiStep = Omit<Step, 'type'> & { includedSteps: Step[] } & {
+  type: 'lifi'
+}

@@ -603,6 +603,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x07de306ff27a2b630b1141956844eb1552b956b5',
         decimals: 6,
       },
+      [ChainId.GOR]: {
+        address: '0x509ee0d083ddf8ac028f2a56731412edd63223b9',
+        decimals: 6,
+      },
     },
   },
   // USDC
