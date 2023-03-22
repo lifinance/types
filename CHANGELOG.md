@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.1](https://github.com/lifinance/types/compare/v2.6.0...v2.6.1) (2023-03-22)
+
+
+### Bug Fixes
+
+* rendered gasCosts properties non-optional ([#149](https://github.com/lifinance/types/issues/149)) ([02414a2](https://github.com/lifinance/types/commit/02414a2470127b198095716a153388726b7283eb))
+
 ## [2.6.0](https://github.com/lifinance/types/compare/v2.5.7...v2.6.0) (2023-03-22)
 
 
