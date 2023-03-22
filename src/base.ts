@@ -223,9 +223,9 @@ export interface ExchangeDefinition {
 export interface BridgeDefinition {
   tool: BridgeTool
   fromChainId: number
-  fromToken: Token
+  fromTokenAddress: string
   toChainId: number
-  toToken: Token
+  toTokenAddress: string
   maximumTransfer: string
   minimumTransfer: string
   swapFeeRate: string
