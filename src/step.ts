@@ -7,7 +7,7 @@ import { Exchange, ExchangeAggregator } from './exchanges'
 
 export interface FeeCost {
   name: string
-  description?: string
+  description: string
   percentage: string
   token: Token
   amount: string
@@ -48,7 +48,7 @@ export interface Estimate {
   toAmountUSD?: string
   approvalAddress: string
 
-  feeCosts: FeeCost[]
+  feeCosts?: FeeCost[]
   gasCosts?: GasCost[] // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
 
   executionDuration: number // estimated duration in seconds
