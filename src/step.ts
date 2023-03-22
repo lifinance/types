@@ -18,10 +18,10 @@ export interface FeeCost {
 export interface GasCost {
   type: 'SUM' | 'APPROVE' | 'SEND' | 'FEE'
   price: string // suggested current standard price for chain
-  estimate?: string // estimate how much gas will be needed
-  limit?: string // suggested gas limit (estimate +25%)
+  estimate: string // estimate how much gas will be needed
+  limit: string // suggested gas limit (estimate +25%)
   amount: string // estimate * price = amount of tokens that will be needed
-  amountUSD?: string // usd value of token amount
+  amountUSD: string // usd value of token amount
   token: Token // the used gas token
 }
 
