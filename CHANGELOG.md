@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/lifinance/types/compare/v3.0.0...v3.1.0) (2023-03-24)
+
+
+### Features
+
+* add allbridge icon ([#150](https://github.com/lifinance/types/issues/150)) ([880f74b](https://github.com/lifinance/types/commit/880f74be7ef92cfbc7bb80fec16b3e6504277c47))
+
 ## [3.0.0](https://github.com/lifinance/types/compare/v2.6.1...v3.0.0) (2023-03-23)
 
 
