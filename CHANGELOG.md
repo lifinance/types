@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [3.0.0](https://github.com/lifinance/types/compare/v2.6.1...v3.0.0) (2023-03-23)
 
+### [2.6.2](https://github.com/lifinance/types/compare/v2.6.1...v2.6.2) (2023-03-24)
 
 ### ⚠ BREAKING CHANGES
 
