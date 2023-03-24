@@ -7,7 +7,7 @@ import { Exchange, ExchangeAggregator } from './exchanges'
 
 export interface FeeCost {
   name: string
-  description?: string
+  description: string
   percentage: string
   token: Token
   amount: string

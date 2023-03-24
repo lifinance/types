@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/lifinance/types/compare/v3.0.0...v3.1.0) (2023-03-24)
+
+
+### Features
+
+* add allbridge icon ([#150](https://github.com/lifinance/types/issues/150)) ([880f74b](https://github.com/lifinance/types/commit/880f74be7ef92cfbc7bb80fec16b3e6504277c47))
+
+## [3.0.0](https://github.com/lifinance/types/compare/v2.6.1...v3.0.0) (2023-03-23)
+
 ### [2.6.2](https://github.com/lifinance/types/compare/v2.6.1...v2.6.2) (2023-03-24)
+
+### ⚠ BREAKING CHANGES
+
+* make feeCosts mandatory
+
+### Bug Fixes
+
+* make description mandatory ([b279da3](https://github.com/lifinance/types/commit/b279da3f5d577ca349c70e93bc22d73ed7c20eb2))
+* make feeCosts mandatory ([fe637a9](https://github.com/lifinance/types/commit/fe637a98aba93c3eeb1d9d36555e24549352fbe3))
 
 ### [2.6.1](https://github.com/lifinance/types/compare/v2.6.0...v2.6.1) (2023-03-22)
 
