@@ -733,7 +733,7 @@ const basicCoins: BasicCoin[] = [
     },
   },
 
-  // USDC
+  // BUSD
   {
     key: CoinKey.BUSD,
     name: CoinKey.BUSD,
