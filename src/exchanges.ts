@@ -3,7 +3,7 @@ import {
   CoinKey,
   findDefaultToken,
   findWrappedGasOnChain,
-  Token,
+  BaseToken,
 } from '.'
 
 /**
@@ -84,7 +84,7 @@ export interface Exchange {
   routerAddress: string
   factoryAddress: string
   initCodeHash: string
-  baseTokens: readonly Token[]
+  baseTokens: readonly BaseToken[]
 }
 
 /**
@@ -139,7 +139,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'OHM',
         decimals: 9,
         chainId: ChainId.ETH,
-      } as Token,
+      } as BaseToken,
       findDefaultToken(CoinKey.SUSHI, ChainId.ETH),
     ],
   },
@@ -171,7 +171,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'QUICK',
         decimals: 18,
         chainId: ChainId.POL,
-      } as Token,
+      } as BaseToken,
     ],
   }, // https://github.com/QuickSwap/QuickSwap-sdk/blob/master/src/constants.ts
   {
@@ -195,7 +195,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'HNY',
         decimals: 18,
         chainId: ChainId.POL,
-      } as Token,
+      } as BaseToken,
     ],
   },
   {
@@ -262,19 +262,19 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'BUSD',
         decimals: 18,
         chainId: ChainId.BSC,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
         symbol: 'CAKE',
         decimals: 18,
         chainId: ChainId.BSC,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
         symbol: 'BTCB',
         decimals: 18,
         chainId: ChainId.BSC,
-      } as Token,
+      } as BaseToken,
     ],
   }, // https://github.com/pancakeswap/pancake-swap-sdk/blob/master/src/constants.ts
   {
@@ -302,13 +302,13 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'BUSD',
         decimals: 18,
         chainId: ChainId.BSC,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
         symbol: 'BTCB',
         decimals: 18,
         chainId: ChainId.BSC,
-      } as Token,
+      } as BaseToken,
       findDefaultToken(CoinKey.SUSHI, ChainId.BSC),
     ],
   },
@@ -353,7 +353,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'HNY',
         decimals: 18,
         chainId: ChainId.DAI,
-      } as Token,
+      } as BaseToken,
     ],
   }, // https://github.com/1Hive/honeyswap-sdk/blob/master/src/constants.ts
   {
@@ -399,7 +399,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'SWPR',
         decimals: 18,
         chainId: ChainId.DAI,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -488,7 +488,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'SOUL',
         decimals: 18,
         chainId: ChainId.FTM,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -514,31 +514,31 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: '1DAI',
         decimals: 18,
         chainId: ChainId.ONE,
-      } as Token,
+      } as BaseToken,
       {
         address: '0xE176EBE47d621b984a73036B9DA5d834411ef734',
         symbol: 'BUSD',
         decimals: 18,
         chainId: ChainId.ONE,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x985458E523dB3d53125813eD68c274899e9DfAb4',
         symbol: '1USDC',
         decimals: 6,
         chainId: ChainId.ONE,
-      } as Token,
+      } as BaseToken,
       {
         address: '0xEa589E93Ff18b1a1F1e9BaC7EF3E86Ab62addc79',
         symbol: 'VIPER',
         decimals: 18,
         chainId: ChainId.ONE,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x0dc78c79B4eB080eaD5C1d16559225a46b580694',
         symbol: 'WAGMI',
         decimals: 9,
         chainId: ChainId.ONE,
-      } as Token,
+      } as BaseToken,
     ],
   }, // https://github.com/VenomProtocol/venomswap-sdk/blob/main/src/constants.ts
   {
@@ -634,7 +634,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'SPELL',
         decimals: 18,
         chainId: ChainId.ARB,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -686,19 +686,19 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'FRAX',
         decimals: 18,
         chainId: ChainId.MOR,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x0cae51e1032e8461f4806e26332c030e34de3adb',
         symbol: 'MIM',
         decimals: 18,
         chainId: ChainId.MOR,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x3d2d044e8c6dad46b4f7896418d3d4dfaad902be',
         symbol: 'aROME',
         decimals: 9,
         chainId: ChainId.MOR,
-      } as Token,
+      } as BaseToken,
     ],
   },
   {
@@ -722,13 +722,13 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'FRAX',
         decimals: 18,
         chainId: ChainId.MOR,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x6bd193ee6d2104f14f94e2ca6efefae561a4334b',
         symbol: 'SOLAR',
         decimals: 18,
         chainId: ChainId.MOR,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -757,13 +757,13 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'HBTC',
         decimals: 18,
         chainId: ChainId.HEC,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x3d760a45d0887dfd89a2f5385a236b29cb46ed2a',
         symbol: 'DAIHECO',
         decimals: 18,
         chainId: ChainId.HEC,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -813,19 +813,19 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'BTCK',
         decimals: 18,
         chainId: ChainId.OKT,
-      } as Token,
+      } as BaseToken,
       {
         address: '0xdf54b6c6195ea4d948d03bfd818d365cf175cfc2',
         symbol: 'OKB',
         decimals: 18,
         chainId: ChainId.OKT,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x5fac926bf1e638944bb16fb5b787b5ba4bc85b0a',
         symbol: 'JF',
         decimals: 18,
         chainId: ChainId.OKT,
-      } as Token,
+      } as BaseToken,
     ],
   },
   {
@@ -846,13 +846,13 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'WOKT',
         decimals: 18,
         chainId: ChainId.OKT,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x382bB369d343125BfB2117af9c149795C6C65C50',
         symbol: CoinKey.USDT,
         decimals: 18,
         chainId: ChainId.OKT,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -878,7 +878,7 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'CRONA',
         decimals: 18,
         chainId: ChainId.CRO,
-      } as Token,
+      } as BaseToken,
     ],
   },
   // TODO: For cronos chain, we will add KyberSwap in the near future, they're still in development
@@ -903,19 +903,19 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'STELLA',
         decimals: 18,
         chainId: ChainId.MOO,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b',
         symbol: 'USDC',
         decimals: 6,
         chainId: ChainId.MOO,
-      } as Token,
+      } as BaseToken,
       {
         address: '0xAcc15dC74880C9944775448304B263D191c6077F',
         symbol: 'WGLMR',
         decimals: 18,
         chainId: ChainId.MOO,
-      } as Token,
+      } as BaseToken,
     ],
   },
   {
@@ -986,7 +986,7 @@ export const supportedExchanges: Array<Exchange> = [
   //       symbol: 'fUSD',
   //       decimals: 18,
   //       chainId: ChainId.FUS,
-  //     } as Token,
+  //     } as BaseToken,
   //   ],
   // },
   {
@@ -1035,13 +1035,13 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'mCUSD',
         decimals: 18,
         chainId: ChainId.CEL,
-      } as Token,
+      } as BaseToken,
       {
         address: '0xe273ad7ee11dcfaa87383ad5977ee1504ac07568',
         symbol: 'mCEUR',
         decimals: 18,
         chainId: ChainId.CEL,
-      } as Token,
+      } as BaseToken,
     ],
   },
   {
@@ -1068,13 +1068,13 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'cUSD',
         decimals: 18,
         chainId: ChainId.CEL,
-      } as Token,
+      } as BaseToken,
       {
         address: '0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73',
         symbol: 'cEUR',
         decimals: 18,
         chainId: ChainId.CEL,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -1099,19 +1099,19 @@ export const supportedExchanges: Array<Exchange> = [
   //       symbol: 'STND',
   //       decimals: 18,
   //       chainId: ChainId.MAM,
-  //     } as Token,
+  //     } as BaseToken,
   //     {
   //       address: '0xea32a96608495e54156ae48931a7c20f0dcc1a21',
   //       symbol: 'm.USDC',
   //       decimals: 6,
   //       chainId: ChainId.MAM,
-  //     } as Token,
+  //     } as BaseToken,
   //     {
   //       address: '0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc',
   //       symbol: 'm.USDT',
   //       decimals: 6,
   //       chainId: ChainId.MAM,
-  //     } as Token,
+  //     } as BaseToken,
   //   ],
   // },
 
@@ -1141,13 +1141,13 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'BOBA',
         decimals: 18,
         chainId: ChainId.BOB,
-      } as Token,
+      } as BaseToken,
       {
         address: '0x5008f837883ea9a07271a1b5eb0658404f5a9610',
         symbol: 'OLO',
         decimals: 18,
         chainId: ChainId.BOB,
-      } as Token,
+      } as BaseToken,
     ],
   },
 
@@ -1343,19 +1343,19 @@ export const supportedExchanges: Array<Exchange> = [
         symbol: 'WAG',
         decimals: 18,
         chainId: ChainId.VEL,
-      } as Token,
+      } as BaseToken,
       {
         symbol: 'WVLX',
         address: '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126',
         decimals: 18,
         chainId: ChainId.VEL,
-      } as Token,
+      } as BaseToken,
       {
         symbol: 'ASTRO',
         address: '0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27',
         decimals: 18,
         chainId: ChainId.VEL,
-      } as Token,
+      } as BaseToken,
     ],
   },
 ]

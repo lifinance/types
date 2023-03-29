@@ -186,15 +186,18 @@ export enum ChainId {
   CZKT = 59140,
 }
 
-export interface Token {
+export interface BaseToken {
   address: string
   symbol: string
   decimals: number
   chainId: number
   name: string
   coinKey?: CoinKey
-  priceUSD?: string
   logoURI?: string
+}
+
+export interface Token extends BaseToken {
+  priceUSD: string
 }
 
 export interface TokenAmount extends Token {
@@ -208,7 +211,7 @@ export interface Coin {
   logoURI: string
   verified: boolean
   chains: {
-    [ChainId: string]: Token
+    [ChainId: string]: BaseToken
   }
 }
 
@@ -224,9 +227,9 @@ export interface ExchangeDefinition {
 export interface BridgeDefinition {
   tool: BridgeTool
   fromChainId: number
-  fromToken: Token
+  fromToken: BaseToken
   toChainId: number
-  toToken: Token
+  toToken: BaseToken
   maximumTransfer: string
   minimumTransfer: string
   swapFeeRate: string
