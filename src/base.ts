@@ -187,16 +187,18 @@ export enum ChainId {
 }
 
 export interface BaseToken {
+  chainId: number
   address: string
+}
+export interface StaticToken extends BaseToken {
   symbol: string
   decimals: number
-  chainId: number
   name: string
   coinKey?: CoinKey
   logoURI?: string
 }
 
-export interface Token extends BaseToken {
+export interface Token extends StaticToken {
   priceUSD: string
 }
 
@@ -211,7 +213,7 @@ export interface Coin {
   logoURI: string
   verified: boolean
   chains: {
-    [ChainId: string]: BaseToken
+    [ChainId: string]: StaticToken
   }
 }
 
