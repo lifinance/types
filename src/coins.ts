@@ -749,8 +749,12 @@ const basicCoins: BasicCoin[] = [
         address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
         decimals: 18,
       },
+      [ChainId.OPT]: {
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
+        decimals: 18,
+      },
       [ChainId.POL]: {
-        address: '0xdAb529f40E671A1D4bF91361c21bf9f0C9712ab7',
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
         decimals: 18,
       },
       [ChainId.AVA]: {
