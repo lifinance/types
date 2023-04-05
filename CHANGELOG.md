@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/lifinance/types/compare/v3.1.1...v3.2.0) (2023-04-05)
+
+
+### Features
+
+* add BUSD tokens ([#152](https://github.com/lifinance/types/issues/152)) ([fb96b21](https://github.com/lifinance/types/commit/fb96b217809fab3627dd8ce9eb6c1374481a0f94))
+
 ### [3.1.1](https://github.com/lifinance/types/compare/v3.1.0...v3.1.1) (2023-03-24)
 
 ## [3.1.0](https://github.com/lifinance/types/compare/v3.0.0...v3.1.0) (2023-03-24)
