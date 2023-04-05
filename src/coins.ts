@@ -733,6 +733,53 @@ const basicCoins: BasicCoin[] = [
     },
   },
 
+  // BUSD
+  {
+    key: CoinKey.BUSD,
+    name: CoinKey.BUSD,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/binance/assets/BUSD-BD1/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.ETH]: {
+        address: '0x4Fabb145d64652a948d72533023f6E7A623C7C53',
+        decimals: 18,
+      },
+      [ChainId.BSC]: {
+        address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+        decimals: 18,
+      },
+      [ChainId.OPT]: {
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
+        decimals: 18,
+      },
+      [ChainId.POL]: {
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
+        decimals: 18,
+      },
+      [ChainId.AVA]: {
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
+        decimals: 18,
+      },
+      [ChainId.SOL]: {
+        address: '33fsBLA8djQm82RpHmE3SuVrPGtZBWNYExsEUeKX1HXX',
+        decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0x6a5F6A8121592BeCd6747a38d67451B310F7f156',
+        decimals: 18,
+      },
+      [ChainId.VEL]: {
+        address: '0xc111c29a988ae0c0087d97b33c6e6766808a3bd3',
+        decimals: 18,
+      },
+      [ChainId.ONE]: {
+        address: '0xe176ebe47d621b984a73036b9da5d834411ef734',
+        decimals: 18,
+      },
+    },
+  },
+
   // TEST COIN
   {
     key: CoinKey.TEST,
