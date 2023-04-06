@@ -867,67 +867,6 @@ export const supportedEVMChains: EVMChain[] = [
   },
 
   // TESTNETS
-  // 3 - Ropsten
-  {
-    key: ChainKey.ROP,
-    chainType: ChainType.EVM,
-    name: 'Ropsten',
-    coin: CoinKey.ETH,
-    id: 3,
-    mainnet: false,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_ropsten.png',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    faucetUrls: [
-      'https://faucet.ropsten.be/',
-      'https://app.compound.finance/', // https://teller.gitbook.io/teller-1/testing-guide/getting-testnet-tokens-ropsten-1
-    ],
-    multicallAddress: multicallAddresses[ChainId.ROP],
-
-    metamask: {
-      chainId: prefixChainId(3),
-      blockExplorerUrls: ['https://ropsten.etherscan.io/'],
-      chainName: 'Ethereum Testnet Ropsten',
-      nativeCurrency: {
-        name: 'ETH',
-        symbol: 'ETH',
-        decimals: 18,
-      },
-      rpcUrls: [
-        'https://ropsten.infura.io/v3/d1caeba320f94122ba8f791f50122c4c',
-      ],
-    },
-  },
-  // 4 - Rinkeby
-  {
-    key: ChainKey.RIN,
-    chainType: ChainType.EVM,
-    name: 'Rinkeby',
-    coin: CoinKey.ETH,
-    id: 4,
-    mainnet: false,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_rinkeby.png',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    faucetUrls: ['https://faucet.rinkeby.io/'],
-    multicallAddress: multicallAddresses[ChainId.RIN],
-
-    metamask: {
-      chainId: prefixChainId(4),
-      blockExplorerUrls: ['https://rinkeby.etherscan.io/'],
-      chainName: 'Ethereum Testnet Rinkeby',
-      nativeCurrency: {
-        name: 'ETH',
-        symbol: 'ETH',
-        decimals: 18,
-      },
-      rpcUrls: [
-        'https://rinkeby.infura.io/v3/d1caeba320f94122ba8f791f50122c4c',
-      ],
-    },
-  },
   // 5 - Goerli
   {
     key: ChainKey.GOR,
@@ -1001,36 +940,6 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://staging.diode.io:8443/'],
     },
   },
-  // 42 - Kovan
-  {
-    key: ChainKey.KOV,
-    chainType: ChainType.EVM,
-    name: 'Kovan',
-    coin: CoinKey.ETH,
-    id: 42,
-    mainnet: false,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/ethereum_kovan.png',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    faucetUrls: [
-      'https://ethdrop.dev/',
-      'https://gitter.im/kovan-testnet/faucet',
-    ],
-    multicallAddress: multicallAddresses[ChainId.KOV],
-
-    metamask: {
-      chainId: prefixChainId(42),
-      blockExplorerUrls: ['https://kovan.etherscan.io/'],
-      chainName: 'Ethereum Testnet Kovan',
-      nativeCurrency: {
-        name: 'ETH',
-        symbol: 'ETH',
-        decimals: 18,
-      },
-      rpcUrls: ['https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'],
-    },
-  },
   // 80001 - Mumbai Polygon Testnet
   {
     key: ChainKey.MUM,
@@ -1058,31 +967,6 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://rpc-mumbai.matic.today'],
     },
   },
-  // 421611 - Arbitrum Testnet
-  {
-    key: ChainKey.ARBT,
-    chainType: ChainType.EVM,
-    name: 'Arbitrum Testnet',
-    coin: CoinKey.ETH,
-    id: 421611,
-    mainnet: false,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/arbitrum_test.png',
-    faucetUrls: ['https://bridge.arbitrum.io/'],
-    multicallAddress: multicallAddresses[ChainId.ARBT],
-
-    metamask: {
-      chainId: prefixChainId(421611),
-      blockExplorerUrls: ['https://rinkeby-explorer.arbitrum.io/#/'],
-      chainName: 'Arbitrum Testnet Rinkeby',
-      nativeCurrency: {
-        name: 'ARETH',
-        symbol: 'ARETH',
-        decimals: 18,
-      },
-      rpcUrls: ['https://rinkeby.arbitrum.io/rpc'],
-    },
-  },
   {
     key: ChainKey.ARBG,
     chainType: ChainType.EVM,
@@ -1107,32 +991,7 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://goerli-rollup.arbitrum.io/rpc/	'],
     },
   },
-  // 69 - Optimistic Ethereum (Kovan)
-  {
-    key: ChainKey.OPTT,
-    chainType: ChainType.EVM,
-    name: 'Optimism Testnet',
-    coin: CoinKey.ETH,
-    id: 69,
-    mainnet: false,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/optimism_test.png',
-    faucetUrls: ['https://gateway.optimism.io/'],
-    multicallAddress: multicallAddresses[ChainId.OPTT],
-
-    metamask: {
-      chainId: prefixChainId(69),
-      blockExplorerUrls: ['https://kovan-optimistic.etherscan.io/'],
-      chainName: 'Optimistic Ethereum Testnet Kovan',
-      nativeCurrency: {
-        name: 'tETH',
-        symbol: 'tETH',
-        decimals: 18,
-      },
-      rpcUrls: ['https://kovan.optimism.io'],
-    },
-  },
-  // 420 - Optimistic Ethereum (Kovan)
+  // 420 - Optimistic Ethereum (Goerli)
   {
     key: ChainKey.OPTG,
     chainType: ChainType.EVM,
