@@ -1331,23 +1331,23 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
     },
   },
-  // 59140 - ConsenSys zkEVM Testnet
+  // 59140 - Linea (formerly ConsenSys zkEVM) Testnet
   {
-    key: ChainKey.CZKT,
+    key: ChainKey.LNA,
     chainType: ChainType.EVM,
-    name: 'ConsenSys zkEVM Testnet',
+    name: 'Linea Testnet',
     coin: CoinKey.ETH,
     id: 59140,
     mainnet: false,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/consensys_zkevm_test.png',
-    // multicallAddress: multicallAddresses[ChainId.CZKT], // Not deployed yet
-    faucetUrls: ['https://goerli.zkevm.consensys.net/'],
+    // multicallAddress: multicallAddresses[ChainId.LNA], // Not deployed yet
+    faucetUrls: ['https://faucetlink.to/goerli'],
 
     metamask: {
       chainId: prefixChainId(59140),
-      blockExplorerUrls: ['https://explorer.goerli.zkevm.consensys.net/'],
-      chainName: 'ConsenSys zkEVM Testnet',
+      blockExplorerUrls: ['https://explorer.goerli.linea.build/'],
+      chainName: 'Linea Testnet',
       nativeCurrency: {
         name: 'crETH',
         symbol: 'crETH',
