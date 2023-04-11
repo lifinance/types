@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.1](https://github.com/lifinance/types/compare/v3.2.0...v3.2.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* step types cleanup ([#155](https://github.com/lifinance/types/issues/155)) ([8d3caed](https://github.com/lifinance/types/commit/8d3caedc417bdcc3e4fedba575f1438092be8f23))
+
 ## [3.2.0](https://github.com/lifinance/types/compare/v3.1.1...v3.2.0) (2023-04-05)
 
 
