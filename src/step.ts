@@ -114,7 +114,14 @@ export const emptyExecution: Execution = {
 }
 
 // STEP
-export type StepType = 'swap' | 'cross' | 'lifi' | 'custom' | 'protocol'
+export const _StepType = [
+  'lifi',
+  'swap',
+  'cross',
+  'protocol',
+  'custom',
+] as const
+export type StepType = (typeof _StepType)[number]
 export type StepTool = string
 
 export interface StepBase {
@@ -133,14 +140,19 @@ export interface StepBase {
   transactionRequest?: providers.TransactionRequest
 }
 
+export interface DestinationCallInfo {
+  toContractAddress: string
+  toContractCallData: string
+  toFallbackAddress: string
+  callDataGasLimit: string
+}
+
+export type CallAction = Action & DestinationCallInfo
+
 export interface SwapStep extends StepBase {
   type: 'swap'
   action: Action
   estimate: Estimate
-}
-
-export function isSwapStep(step: Step): step is SwapStep {
-  return step.type === 'swap'
 }
 
 export interface CrossStep extends StepBase {
@@ -155,34 +167,31 @@ export interface ProtocolStep extends StepBase {
   estimate: Estimate
 }
 
-export function isCrossStep(step: Step): step is CrossStep {
-  return step.type === 'cross'
-}
-
-export interface DestinationCallInfo {
-  toContractAddress: string
-  toContractCallData: string
-  toFallbackAddress: string
-  callDataGasLimit: string
-}
-
-export type CallAction = Action & DestinationCallInfo
-
 export interface CustomStep extends StepBase {
   type: 'custom'
   action: CallAction
   estimate: Estimate
 }
 
-export function isCustomStep(step: Step): step is CustomStep {
-  return step.type === 'custom'
+export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
+
+export interface LifiStep extends Omit<Step, 'type'> {
+  type: 'lifi'
+  includedSteps: Step[]
+}
+
+export function isSwapStep(step: Step): step is SwapStep {
+  return step.type === 'swap'
+}
+
+export function isCrossStep(step: Step): step is CrossStep {
+  return step.type === 'cross'
 }
 
 export function isProtocolStep(step: Step): step is ProtocolStep {
   return step.type === 'protocol'
 }
 
-export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
-export type LifiStep = Omit<Step, 'type'> & { includedSteps: Step[] } & {
-  type: 'lifi'
+export function isCustomStep(step: Step): step is CustomStep {
+  return step.type === 'custom'
 }
