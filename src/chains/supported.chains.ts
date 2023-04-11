@@ -1333,7 +1333,7 @@ export const supportedEVMChains: EVMChain[] = [
   },
   // 59140 - Linea (formerly ConsenSys zkEVM) Testnet
   {
-    key: ChainKey.LNA,
+    key: ChainKey.LNAT,
     chainType: ChainType.EVM,
     name: 'Linea Testnet',
     coin: CoinKey.ETH,
@@ -1341,7 +1341,7 @@ export const supportedEVMChains: EVMChain[] = [
     mainnet: false,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/consensys_zkevm_test.png',
-    // multicallAddress: multicallAddresses[ChainId.LNA], // Not deployed yet
+    // multicallAddress: multicallAddresses[ChainId.LNAT], // Not deployed yet
     faucetUrls: ['https://faucetlink.to/goerli'],
 
     metamask: {
@@ -1353,7 +1353,7 @@ export const supportedEVMChains: EVMChain[] = [
         symbol: 'crETH',
         decimals: 18,
       },
-      rpcUrls: [],
+      rpcUrls: ['https://rpc.goerli.linea.build'],
     },
   },
   // TODO: Add

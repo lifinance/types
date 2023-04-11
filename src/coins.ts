@@ -146,7 +146,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
-      [ChainId.LNA]: {
+      [ChainId.LNAT]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
@@ -724,7 +724,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x6d4dd09982853f08d9966ac3ca4eb5885f16f2b2',
         decimals: 6,
       },
-      [ChainId.LNA]: {
+      [ChainId.LNAT]: {
         address: '0x964FF70695da981027c81020B1c58d833D49A640',
         decimals: 6,
         name: 'Linea USD Coin',
@@ -1019,7 +1019,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x4200000000000000000000000000000000000006',
         decimals: 18,
       },
-      [ChainId.LNA]: {
+      [ChainId.LNAT]: {
         address: '0x2C1b868d6596a18e32E61B901E4060C872647b6C',
         decimals: 18,
       },
@@ -1320,12 +1320,6 @@ const basicCoins: BasicCoin[] = [
         decimals: 9,
         symbol: 'WSOL',
         name: 'Token Wrapped SOL (Wormhole)',
-      },
-
-      // Testnet
-      [ChainId.SOL]: {
-        address: 'So11111111111111111111111111111111111111112',
-        decimals: 9,
       },
     },
   },
@@ -1697,12 +1691,12 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     logoURI:
       'https://zapper.fi/images/networks/binance-smart-chain/0x0000000000000000000000000000000000000000.png',
   },
-  [ChainId.LNA]: {
+  [ChainId.LNAT]: {
     // https://explorer.prealpha.zkevm.consensys.net/address/0x2C1b868d6596a18e32E61B901E4060C872647b6C
     address: '0x2C1b868d6596a18e32E61B901E4060C872647b6C',
     symbol: 'WETH',
     decimals: 18,
-    chainId: ChainId.LNA,
+    chainId: ChainId.LNAT,
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
