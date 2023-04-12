@@ -187,7 +187,7 @@ export enum ChainId {
 }
 
 export interface BaseToken {
-  chainId: number
+  chainId: ChainId
   address: string
 }
 export interface StaticToken extends BaseToken {
