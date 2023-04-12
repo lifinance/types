@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.2](https://github.com/lifinance/types/compare/v3.2.1...v3.2.2) (2023-04-12)
+
+
+### Bug Fixes
+
+* rename CZKT to LNA (Linea) ([#156](https://github.com/lifinance/types/issues/156)) ([b414277](https://github.com/lifinance/types/commit/b414277a37ebeefa37871f2e766915d9d75dd65b))
+
 ### [3.2.1](https://github.com/lifinance/types/compare/v3.2.0...v3.2.1) (2023-04-11)
 
 
