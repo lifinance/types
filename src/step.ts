@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { providers } from 'ethers'
 import { Substatus } from '.'
-import { Token } from './base'
+import { StaticToken, Token } from './base'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
 
@@ -9,7 +9,7 @@ export interface FeeCost {
   name: string
   description: string
   percentage: string
-  token: Token
+  token: StaticToken
   amount: string
   amountUSD?: string
   included: boolean
@@ -22,7 +22,7 @@ export interface GasCost {
   limit: string // suggested gas limit (estimate +25%)
   amount: string // estimate * price = amount of tokens that will be needed
   amountUSD: string // usd value of token amount
-  token: Token // the used gas token
+  token: StaticToken // the used gas token
 }
 
 // ACTION
