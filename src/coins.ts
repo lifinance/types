@@ -815,6 +815,10 @@ const basicCoins: BasicCoin[] = [
         address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
         decimals: 18,
       },
+      [ChainId.LNAT]: {
+        address: '0xb706319d37b945727e71ae0d4353699d19112576',
+        decimals: 18,
+      },
     },
   },
 
