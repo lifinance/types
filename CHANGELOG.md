@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.3](https://github.com/lifinance/types/compare/v3.2.2...v3.2.3) (2023-04-13)
+
+
+### Bug Fixes
+
+* add Linea Test token ([#157](https://github.com/lifinance/types/issues/157)) ([c448503](https://github.com/lifinance/types/commit/c448503bd84db9aefc8b1d4275950764fbff03a9))
+
 ### [3.2.2](https://github.com/lifinance/types/compare/v3.2.1...v3.2.2) (2023-04-12)
 
 
