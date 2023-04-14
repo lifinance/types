@@ -837,11 +837,11 @@ const basicCoins: BasicCoin[] = [
         address: '0xeDb95D8037f769B72AAab41deeC92903A98C9E16',
         decimals: 18,
       },
-      [ChainId.ARBT]: {
+      [ChainId.ARBG]: {
         address: '0xDC805eAaaBd6F68904cA706C221c72F8a8a68F9f',
         decimals: 18,
       },
-      [ChainId.OPTT]: {
+      [ChainId.OPTG]: {
         address: '0x68Db1c8d85C09d546097C65ec7DCBFF4D6497CbF',
         decimals: 18,
       },
