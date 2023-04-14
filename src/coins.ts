@@ -820,8 +820,8 @@ const basicCoins: BasicCoin[] = [
 
   // LINEA TEST COIN
   {
-    key: CoinKey.LNATEST,
-    name: CoinKey.LNATEST,
+    key: CoinKey.CXTT,
+    name: CoinKey.CXTT,
     logoURI: 'https://xpollinate.io/icon192.png',
     verified: false,
     chains: {
@@ -831,6 +831,18 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.LNAT]: {
         address: '0xb706319d37b945727e71ae0d4353699d19112576',
+        decimals: 18,
+      },
+      [ChainId.MUM]: {
+        address: '0xeDb95D8037f769B72AAab41deeC92903A98C9E16',
+        decimals: 18,
+      },
+      [ChainId.ARBT]: {
+        address: '0xDC805eAaaBd6F68904cA706C221c72F8a8a68F9f',
+        decimals: 18,
+      },
+      [ChainId.OPTT]: {
+        address: '0x68Db1c8d85C09d546097C65ec7DCBFF4D6497CbF',
         decimals: 18,
       },
     },

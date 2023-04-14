@@ -43,7 +43,7 @@ export enum CoinKey {
   SDIODE = 'SDIODE',
   SPARK = 'SPARK',
   TRBTC = 'TRBTC',
-  LNATEST = 'LNATEST', // Linea test token
+  CXTT = 'CXTT', // Connext Test token
 
   // Other tokens
   WBTC = 'WBTC',
