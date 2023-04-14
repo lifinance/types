@@ -146,7 +146,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
-      [ChainId.CZKT]: {
+      [ChainId.LNAT]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
@@ -724,12 +724,59 @@ const basicCoins: BasicCoin[] = [
         address: '0x6d4dd09982853f08d9966ac3ca4eb5885f16f2b2',
         decimals: 6,
       },
-      [ChainId.CZKT]: {
+      [ChainId.LNAT]: {
         address: '0x964FF70695da981027c81020B1c58d833D49A640',
         decimals: 6,
-        name: 'ConsenSys USD Coin',
+        name: 'Linea USD Coin',
       },
       // 42, 0xb7a4f3e9097c08da09517b5ab877f7a917224ede, 6
+    },
+  },
+
+  // BUSD
+  {
+    key: CoinKey.BUSD,
+    name: CoinKey.BUSD,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/binance/assets/BUSD-BD1/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.ETH]: {
+        address: '0x4Fabb145d64652a948d72533023f6E7A623C7C53',
+        decimals: 18,
+      },
+      [ChainId.BSC]: {
+        address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+        decimals: 18,
+      },
+      [ChainId.OPT]: {
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
+        decimals: 18,
+      },
+      [ChainId.POL]: {
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
+        decimals: 18,
+      },
+      [ChainId.AVA]: {
+        address: '0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39',
+        decimals: 18,
+      },
+      [ChainId.SOL]: {
+        address: '33fsBLA8djQm82RpHmE3SuVrPGtZBWNYExsEUeKX1HXX',
+        decimals: 18,
+      },
+      [ChainId.FUS]: {
+        address: '0x6a5F6A8121592BeCd6747a38d67451B310F7f156',
+        decimals: 18,
+      },
+      [ChainId.VEL]: {
+        address: '0xc111c29a988ae0c0087d97b33c6e6766808a3bd3',
+        decimals: 18,
+      },
+      [ChainId.ONE]: {
+        address: '0xe176ebe47d621b984a73036b9da5d834411ef734',
+        decimals: 18,
+      },
     },
   },
 
@@ -766,6 +813,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.OPTT]: {
         address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
+        decimals: 18,
+      },
+      [ChainId.LNAT]: {
+        address: '0xb706319d37b945727e71ae0d4353699d19112576',
         decimals: 18,
       },
     },
@@ -972,7 +1023,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x4200000000000000000000000000000000000006',
         decimals: 18,
       },
-      [ChainId.CZKT]: {
+      [ChainId.LNAT]: {
         address: '0x2C1b868d6596a18e32E61B901E4060C872647b6C',
         decimals: 18,
       },
@@ -1273,12 +1324,6 @@ const basicCoins: BasicCoin[] = [
         decimals: 9,
         symbol: 'WSOL',
         name: 'Token Wrapped SOL (Wormhole)',
-      },
-
-      // Testnet
-      [ChainId.SOL]: {
-        address: 'So11111111111111111111111111111111111111112',
-        decimals: 9,
       },
     },
   },
@@ -1650,12 +1695,12 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     logoURI:
       'https://zapper.fi/images/networks/binance-smart-chain/0x0000000000000000000000000000000000000000.png',
   },
-  [ChainId.CZKT]: {
+  [ChainId.LNAT]: {
     // https://explorer.prealpha.zkevm.consensys.net/address/0x2C1b868d6596a18e32E61B901E4060C872647b6C
     address: '0x2C1b868d6596a18e32E61B901E4060C872647b6C',
     symbol: 'WETH',
     decimals: 18,
-    chainId: ChainId.CZKT,
+    chainId: ChainId.LNAT,
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
