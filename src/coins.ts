@@ -815,8 +815,34 @@ const basicCoins: BasicCoin[] = [
         address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
         decimals: 18,
       },
+    },
+  },
+
+  // LINEA TEST COIN
+  {
+    key: CoinKey.CXTT,
+    name: CoinKey.CXTT,
+    logoURI: 'https://xpollinate.io/icon192.png',
+    verified: false,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1',
+        decimals: 18,
+      },
       [ChainId.LNAT]: {
         address: '0xb706319d37b945727e71ae0d4353699d19112576',
+        decimals: 18,
+      },
+      [ChainId.MUM]: {
+        address: '0xeDb95D8037f769B72AAab41deeC92903A98C9E16',
+        decimals: 18,
+      },
+      [ChainId.ARBG]: {
+        address: '0xDC805eAaaBd6F68904cA706C221c72F8a8a68F9f',
+        decimals: 18,
+      },
+      [ChainId.OPTG]: {
+        address: '0x68Db1c8d85C09d546097C65ec7DCBFF4D6497CbF',
         decimals: 18,
       },
     },
