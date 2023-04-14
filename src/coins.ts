@@ -815,6 +815,20 @@ const basicCoins: BasicCoin[] = [
         address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
         decimals: 18,
       },
+    },
+  },
+
+  // LINEA TEST COIN
+  {
+    key: CoinKey.LNATEST,
+    name: CoinKey.LNATEST,
+    logoURI: 'https://xpollinate.io/icon192.png',
+    verified: false,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1',
+        decimals: 18,
+      },
       [ChainId.LNAT]: {
         address: '0xb706319d37b945727e71ae0d4353699d19112576',
         decimals: 18,
