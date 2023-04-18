@@ -194,6 +194,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.LNAT]: {
+        address: '0xa55C7E1274bE5db2275a0BDd055f81e8263b7954',
+        decimals: 18,
+      },
     },
   },
   // > BNB
@@ -249,6 +253,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.ONET]: {
         address: '0xbef55684b382bae72051813a898d17282066c007',
+        decimals: 18,
+      },
+      [ChainId.LNAT]: {
+        address: '0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4',
         decimals: 18,
       },
     },
@@ -418,6 +426,12 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.AVAT]: {
         address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+
+      // Testnets
+      [ChainId.LNAT]: {
+        address: '0x265B25e22bcd7f10a5bD6E6410F10537Cc7567e8',
         decimals: 18,
       },
     },
@@ -777,6 +791,12 @@ const basicCoins: BasicCoin[] = [
         address: '0xe176ebe47d621b984a73036b9da5d834411ef734',
         decimals: 18,
       },
+
+      // testnets
+      [ChainId.LNAT]: {
+        address: '0x7d43AABC515C356145049227CeE54B608342c0ad',
+        decimals: 18,
+      },
     },
   },
 
@@ -818,7 +838,7 @@ const basicCoins: BasicCoin[] = [
     },
   },
 
-  // LINEA TEST COIN
+  // Connext testnet coins
   {
     key: CoinKey.CXTT,
     name: CoinKey.CXTT,
