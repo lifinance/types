@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.6](https://github.com/lifinance/types/compare/v3.2.5...v3.2.6) (2023-04-18)
+
+
+### Bug Fixes
+
+* add cBridge supported coins to coins list ([#161](https://github.com/lifinance/types/issues/161)) ([3fe0558](https://github.com/lifinance/types/commit/3fe0558aceb15ed7831a05b7a43f4ee1a3e400c2))
+* restore consensys zkevm testnet logo ([16bbaf6](https://github.com/lifinance/types/commit/16bbaf643961f48a1115ed47f6f0213e654275d8))
+
 ### [3.2.5](https://github.com/lifinance/types/compare/v3.2.4...v3.2.5) (2023-04-14)
 
 
