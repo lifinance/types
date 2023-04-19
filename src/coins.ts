@@ -793,6 +793,10 @@ const basicCoins: BasicCoin[] = [
       },
 
       // testnets
+      [ChainId.BSCT]: {
+        address: '0xeB3Eb991D39Dac92616da64b7c6D5af5cCFf1627',
+        decimals: 18,
+      },
       [ChainId.LNAT]: {
         address: '0x7d43AABC515C356145049227CeE54B608342c0ad',
         decimals: 18,
