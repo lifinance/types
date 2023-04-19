@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.7](https://github.com/lifinance/types/compare/v3.2.6...v3.2.7) (2023-04-19)
+
+
+### Bug Fixes
+
+* add BUSD to BSCT ([#162](https://github.com/lifinance/types/issues/162)) ([08bb821](https://github.com/lifinance/types/commit/08bb821f4751633197d37bd97e1e5563e27d3f75))
+
 ### [3.2.6](https://github.com/lifinance/types/compare/v3.2.5...v3.2.6) (2023-04-18)
 
 
