@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.7](https://github.com/lifinance/types/compare/v3.2.6...v3.2.7) (2023-04-19)
+
+
+### Bug Fixes
+
+* add BUSD to BSCT ([#162](https://github.com/lifinance/types/issues/162)) ([08bb821](https://github.com/lifinance/types/commit/08bb821f4751633197d37bd97e1e5563e27d3f75))
+
+### [3.2.6](https://github.com/lifinance/types/compare/v3.2.5...v3.2.6) (2023-04-18)
+
+
+### Bug Fixes
+
+* add cBridge supported coins to coins list ([#161](https://github.com/lifinance/types/issues/161)) ([3fe0558](https://github.com/lifinance/types/commit/3fe0558aceb15ed7831a05b7a43f4ee1a3e400c2))
+* restore consensys zkevm testnet logo ([16bbaf6](https://github.com/lifinance/types/commit/16bbaf643961f48a1115ed47f6f0213e654275d8))
+
+### [3.2.5](https://github.com/lifinance/types/compare/v3.2.4...v3.2.5) (2023-04-14)
+
+
+### Bug Fixes
+
+* add cross chain Linea test tokens ([#158](https://github.com/lifinance/types/issues/158)) ([29d5bae](https://github.com/lifinance/types/commit/29d5bae8dd8387903375cdf6f0346f755f34f414))
+
 ### [3.2.4](https://github.com/lifinance/types/compare/v3.2.3...v3.2.4) (2023-04-13)
 
 ### [3.2.3](https://github.com/lifinance/types/compare/v3.2.2...v3.2.3) (2023-04-13)

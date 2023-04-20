@@ -194,6 +194,10 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.LNAT]: {
+        address: '0xa55C7E1274bE5db2275a0BDd055f81e8263b7954',
+        decimals: 18,
+      },
     },
   },
   // > BNB
@@ -249,6 +253,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.ONET]: {
         address: '0xbef55684b382bae72051813a898d17282066c007',
+        decimals: 18,
+      },
+      [ChainId.LNAT]: {
+        address: '0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4',
         decimals: 18,
       },
     },
@@ -418,6 +426,12 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.AVAT]: {
         address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+
+      // Testnets
+      [ChainId.LNAT]: {
+        address: '0x265B25e22bcd7f10a5bD6E6410F10537Cc7567e8',
         decimals: 18,
       },
     },
@@ -777,6 +791,16 @@ const basicCoins: BasicCoin[] = [
         address: '0xe176ebe47d621b984a73036b9da5d834411ef734',
         decimals: 18,
       },
+
+      // testnets
+      [ChainId.BSCT]: {
+        address: '0xeB3Eb991D39Dac92616da64b7c6D5af5cCFf1627',
+        decimals: 18,
+      },
+      [ChainId.LNAT]: {
+        address: '0x7d43AABC515C356145049227CeE54B608342c0ad',
+        decimals: 18,
+      },
     },
   },
 
@@ -815,8 +839,34 @@ const basicCoins: BasicCoin[] = [
         address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
         decimals: 18,
       },
+    },
+  },
+
+  // Connext testnet coins
+  {
+    key: CoinKey.CXTT,
+    name: CoinKey.CXTT,
+    logoURI: 'https://xpollinate.io/icon192.png',
+    verified: false,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1',
+        decimals: 18,
+      },
       [ChainId.LNAT]: {
         address: '0xb706319d37b945727e71ae0d4353699d19112576',
+        decimals: 18,
+      },
+      [ChainId.MUM]: {
+        address: '0xeDb95D8037f769B72AAab41deeC92903A98C9E16',
+        decimals: 18,
+      },
+      [ChainId.ARBG]: {
+        address: '0xDC805eAaaBd6F68904cA706C221c72F8a8a68F9f',
+        decimals: 18,
+      },
+      [ChainId.OPTG]: {
+        address: '0x68Db1c8d85C09d546097C65ec7DCBFF4D6497CbF',
         decimals: 18,
       },
     },

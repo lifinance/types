@@ -43,6 +43,7 @@ export enum CoinKey {
   SDIODE = 'SDIODE',
   SPARK = 'SPARK',
   TRBTC = 'TRBTC',
+  CXTT = 'CXTT', // Connext Test token
 
   // Other tokens
   WBTC = 'WBTC',
