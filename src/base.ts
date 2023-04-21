@@ -35,6 +35,7 @@ export enum CoinKey {
   // Stable coins
   USDT = 'USDT',
   USDC = 'USDC',
+  cbtUSDC = 'cbtUSDC', // cBridge testnet USDC
   BUSD = 'BUSD',
 
   // Testnet
