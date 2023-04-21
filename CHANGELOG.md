@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.8](https://github.com/lifinance/types/compare/v3.2.7...v3.2.8) (2023-04-21)
+
+
+### Bug Fixes
+
+* add cbridge testnet USDC ([#163](https://github.com/lifinance/types/issues/163)) ([f039d8d](https://github.com/lifinance/types/commit/f039d8d19e1a70c66531cae501143e6c03a6f530))
+
 ### [3.2.7](https://github.com/lifinance/types/compare/v3.2.6...v3.2.7) (2023-04-19)
 
 
