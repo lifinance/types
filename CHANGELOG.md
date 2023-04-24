@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/lifinance/types/compare/v3.2.8...v4.0.0) (2023-04-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* continue removing old testnets references (#164)
+
+### Features
+
+* continue removing old testnets references ([#164](https://github.com/lifinance/types/issues/164)) ([1dc005b](https://github.com/lifinance/types/commit/1dc005b5e16be567f572aee6f89d6125eb95a16a))
+
 ### [3.2.8](https://github.com/lifinance/types/compare/v3.2.7...v3.2.8) (2023-04-21)
 
 
