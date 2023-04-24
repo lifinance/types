@@ -1152,72 +1152,6 @@ export const supportedExchanges: Array<Exchange> = [
   },
 
   // TESTNETS
-  // 3 - Ropsten
-  {
-    key: 'uniswap-rop',
-    name: 'Uniswap',
-    chainId: ChainId.ROP,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
-    webUrl: 'https://app.uniswap.org/',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    routerAddress: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
-    factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
-    initCodeHash:
-      '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
-    baseTokens: [
-      findDefaultToken(CoinKey.ETH, ChainId.ROP),
-      findDefaultToken(CoinKey.WETH, ChainId.ROP),
-    ],
-  },
-
-  // TODO: sushiswap does not work properly
-  // {
-  //   key: 'sushiswap-rop',
-  //   name: 'SushiSwap',
-  //   chainId: ChainId.ROP,
-  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
-  //   webUrl: 'https://app.sushi.com/swap',
-  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/ropsten.json',
-  //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
-  //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
-  //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
-  // },
-
-  // 4 - Rinkeby
-  {
-    key: 'uniswap-rin',
-    name: 'Uniswap',
-    chainId: ChainId.RIN,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
-    webUrl: 'https://app.uniswap.org/',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    routerAddress: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
-    factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
-    initCodeHash:
-      '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
-    baseTokens: [
-      findDefaultToken(CoinKey.ETH, ChainId.RIN),
-      findDefaultToken(CoinKey.WETH, ChainId.RIN),
-    ],
-  },
-
-  // TODO: sushiswap does not work properly
-  // {
-  //   key: 'sushiswap-rin',
-  //   name: 'SushiSwap',
-  //   chainId: ChainId.RIN,
-  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
-  //   webUrl: 'https://app.sushi.com/swap',
-  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/rinkeby.json',
-  //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
-  //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
-  //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
-  // },
-
   // 5 - Goerli
   {
     key: 'uniswap-gor',
@@ -1246,40 +1180,6 @@ export const supportedExchanges: Array<Exchange> = [
   //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
   //   webUrl: 'https://app.sushi.com/swap',
   //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/goerli.json',
-  //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
-  //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
-  //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
-  //   baseTokens: [],
-  // },
-
-  // 42 - Kovan
-  {
-    key: 'uniswap-kov',
-    name: 'Uniswap',
-    chainId: ChainId.KOV,
-    logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/uniswap.png',
-    webUrl: 'https://app.uniswap.org/',
-    tokenlistUrl:
-      'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json',
-    routerAddress: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
-    factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
-    initCodeHash:
-      '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
-    baseTokens: [
-      findDefaultToken(CoinKey.ETH, ChainId.KOV),
-      findDefaultToken(CoinKey.WETH, ChainId.KOV),
-    ],
-  },
-
-  // TODO: sushiswap does not work properly
-  // {
-  //   key: 'sushiswap-kov',
-  //   name: 'SushiSwap',
-  //   chainId: ChainId.KOV,
-  //   logoURI: 'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/exchanges/sushi.png',
-  //   webUrl: 'https://app.sushi.com/swap',
-  //   tokenlistUrl: 'https://raw.githubusercontent.com/sushiswap/list/master/lists/token-lists/default-token-list/tokens/kovan.json',
   //   routerAddress: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
   //   factoryAddress: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   //   initCodeHash: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
