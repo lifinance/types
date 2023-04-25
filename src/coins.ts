@@ -1,4 +1,4 @@
-import { ChainId, Coin, CoinKey, Token } from './base'
+import { StaticToken, ChainId, Coin, CoinKey, BaseToken } from './base'
 
 type BasicToken = {
   address: string
@@ -1343,7 +1343,7 @@ export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
 })
 
 // Wrapped version of gas on chain
-export const wrappedTokens: { [ChainId: string]: Token } = {
+export const wrappedTokens: { [ChainId: string]: StaticToken } = {
   [ChainId.ETH]: {
     // https://ww7.etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
     address: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
@@ -1659,7 +1659,10 @@ export const findDefaultCoin = (coinKey: CoinKey): Coin => {
   }
   return coin
 }
-export const findDefaultToken = (coinKey: CoinKey, chainId: ChainId): Token => {
+export const findDefaultToken = (
+  coinKey: CoinKey,
+  chainId: ChainId
+): StaticToken => {
   const coin = findDefaultCoin(coinKey)
   const token = coin.chains[chainId]
   if (!token) {
@@ -1668,7 +1671,7 @@ export const findDefaultToken = (coinKey: CoinKey, chainId: ChainId): Token => {
   return token
 }
 
-export const findWrappedGasOnChain = (chainId: ChainId): Token => {
+export const findWrappedGasOnChain = (chainId: ChainId): StaticToken => {
   const token = wrappedTokens[chainId]
   if (!token) {
     throw new Error(`Wrapped Gas Token not defined for chain ${chainId}.`)
@@ -1679,11 +1682,11 @@ export const findWrappedGasOnChain = (chainId: ChainId): Token => {
 export const findTokenByChainIdAndAddress = (
   chainId: number,
   tokenAddress: string
-): Token | null => {
-  let token: Token | null = null
+): StaticToken | null => {
+  let token: StaticToken | null = null
 
   defaultCoins.forEach((coin) => {
-    Object.values(coin.chains).forEach((coinToken: Token) => {
+    Object.values(coin.chains).forEach((coinToken: StaticToken) => {
       if (coinToken.chainId === chainId && coinToken.address === tokenAddress) {
         token = coinToken
       }
