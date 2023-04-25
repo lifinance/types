@@ -106,19 +106,7 @@ const basicCoins: BasicCoin[] = [
       },
 
       // Testnets
-      [ChainId.ROP]: {
-        address: '0x0000000000000000000000000000000000000000',
-        decimals: 18,
-      },
-      [ChainId.RIN]: {
-        address: '0x0000000000000000000000000000000000000000',
-        decimals: 18,
-      },
       [ChainId.GOR]: {
-        address: '0x0000000000000000000000000000000000000000',
-        decimals: 18,
-      },
-      [ChainId.KOV]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
@@ -130,15 +118,7 @@ const basicCoins: BasicCoin[] = [
         address: '0xd66c6b4f0be8ce5b39d52e0fd1344c389929b378',
         decimals: 18,
       },
-      [ChainId.OPTT]: {
-        address: '0x0000000000000000000000000000000000000000',
-        decimals: 18,
-      },
       [ChainId.OPTG]: {
-        address: '0x0000000000000000000000000000000000000000',
-        decimals: 18,
-      },
-      [ChainId.ARBT]: {
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
@@ -352,20 +332,8 @@ const basicCoins: BasicCoin[] = [
       },
 
       // Testnets
-      [ChainId.ROP]: {
-        address: '0x31f42841c2db5173425b5223809cf3a38fede360', // on para 0xad6d458402f60fd3bd25163575031acdce07538d, on faucet 0xf80a32a835f79d7787e8a8ee5721d0feafd78108
-        decimals: 18,
-      },
-      [ChainId.RIN]: {
-        address: '0x5592ec0cfb4dbc12d3ab100b257153436a1f0fea',
-        decimals: 18,
-      },
       [ChainId.GOR]: {
         address: '0xdc31ee1784292379fbb2964b3b9c4124d8f89c60', // other: 0xc61ba16e864efbd06a9fe30aab39d18b8f63710a'
-        decimals: 18,
-      },
-      [ChainId.KOV]: {
-        address: '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa', // other: 0xc61ba16e864efbd06a9fe30aab39d18b8f63710a'
         decimals: 18,
       },
       [ChainId.MUM]: {
@@ -605,18 +573,6 @@ const basicCoins: BasicCoin[] = [
       },
 
       // Testnets
-      [ChainId.ROP]: {
-        address: '0x110a13fc3efe6a245b50102d2d79b3e76125ae83',
-        decimals: 6,
-      },
-      [ChainId.RIN]: {
-        address: '0xd9ba894e0097f8cc2bbc9d24d308b98e36dc6d02',
-        decimals: 6,
-      },
-      [ChainId.KOV]: {
-        address: '0x07de306ff27a2b630b1141956844eb1552b956b5',
-        decimals: 6,
-      },
       [ChainId.GOR]: {
         address: '0x509ee0d083ddf8ac028f2a56731412edd63223b9',
         decimals: 6,
@@ -722,14 +678,6 @@ const basicCoins: BasicCoin[] = [
       },
 
       // Testnets
-      [ChainId.ROP]: {
-        address: '0x07865c6e87b9f70255377e024ace6630c1eaa37f',
-        decimals: 6,
-      },
-      [ChainId.RIN]: {
-        address: '0x4dbcdf9b62e891a7cec5a2568c3f4faf9e8abe2b',
-        decimals: 6,
-      },
       [ChainId.GOR]: {
         address: '0xd87ba7a50b2e7e660f678a895e4b72e7cb4ccd9c',
         decimals: 6,
@@ -811,14 +759,6 @@ const basicCoins: BasicCoin[] = [
     logoURI: 'https://xpollinate.io/icon192.png',
     verified: false,
     chains: {
-      [ChainId.ROP]: {
-        address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
-        decimals: 18,
-      },
-      [ChainId.RIN]: {
-        address: '0x9ac2c46d7acc21c881154d57c0dc1c55a3139198',
-        decimals: 18,
-      },
       [ChainId.GOR]: {
         address: '0x8a1cad3703e0beae0e0237369b4fcd04228d1682',
         decimals: 18,
@@ -827,16 +767,8 @@ const basicCoins: BasicCoin[] = [
         address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
         decimals: 18,
       },
-      [ChainId.ARBT]: {
-        address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
-        decimals: 18,
-      },
       [ChainId.BSCT]: {
         address: '0xd86bcb7d85163fbc81756bb9cc22225d6abccadb',
-        decimals: 18,
-      },
-      [ChainId.OPTT]: {
-        address: '0xe71678794fff8846bff855f716b0ce9d9a78e844',
         decimals: 18,
       },
     },
@@ -1045,28 +977,12 @@ const basicCoins: BasicCoin[] = [
       },
 
       // Testnets
-      [ChainId.ROP]: {
-        address: '0xc778417e063141139fce010982780140aa0cd5ab',
-        decimals: 18,
-      },
-      [ChainId.RIN]: {
-        address: '0xc778417e063141139fce010982780140aa0cd5ab',
-        decimals: 18,
-      },
       [ChainId.GOR]: {
         address: '0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6',
         decimals: 18,
       },
-      [ChainId.KOV]: {
-        address: '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
-        decimals: 18,
-      },
       [ChainId.MUM]: {
         address: '0xa6fa4fb5f76172d178d61b04b0ecd319c5d1c0aa',
-        decimals: 18,
-      },
-      [ChainId.OPTT]: {
-        address: '0x4200000000000000000000000000000000000006',
         decimals: 18,
       },
       [ChainId.OPTG]: {
@@ -1626,45 +1542,12 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
   },
 
   // Testnets
-  [ChainId.ROP]: {
-    // https://ropsten.etherscan.io/token/0xc778417e063141139fce010982780140aa0cd5ab
-    address: '0xc778417e063141139fce010982780140aa0cd5ab',
-    symbol: 'WETH',
-    decimals: 18,
-    chainId: ChainId.ROP,
-    coinKey: CoinKey.WETH,
-    name: 'WETH',
-    logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
-  },
-  [ChainId.RIN]: {
-    // https://rinkeby.etherscan.io/token/0xc778417e063141139fce010982780140aa0cd5ab
-    address: '0xc778417e063141139fce010982780140aa0cd5ab',
-    symbol: 'WETH',
-    decimals: 18,
-    chainId: ChainId.RIN,
-    coinKey: CoinKey.WETH,
-    name: 'WETH',
-    logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
-  },
   [ChainId.GOR]: {
     // https://goerli.etherscan.io/token/0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6
     address: '0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6',
     symbol: 'WETH',
     decimals: 18,
     chainId: ChainId.GOR,
-    coinKey: CoinKey.WETH,
-    name: 'WETH',
-    logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
-  },
-  [ChainId.KOV]: {
-    // https://kovan.etherscan.io/address/0xd0a1e359811322d97991e03f863a0c30c2cf029c
-    address: '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
-    symbol: 'WETH',
-    decimals: 18,
-    chainId: ChainId.KOV,
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
@@ -1690,34 +1573,12 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     name: 'WRAPPED ONE',
     logoURI: 'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/tokens/WONE.png',
   },
-  [ChainId.ARBT]: {
-    // https://testnet.arbiscan.io/token/0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681
-    address: '0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681',
-    symbol: 'WETH',
-    decimals: 18,
-    chainId: ChainId.ARBT,
-    coinKey: CoinKey.WETH,
-    name: 'WETH',
-    logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
-  },
   [ChainId.ARBG]: {
     // https://goerli.arbiscan.io/token/0x42da9eE191833756c618778145A86E6709f70C9b
     address: '0x42da9eE191833756c618778145A86E6709f70C9b',
     symbol: 'WETH',
     decimals: 18,
     chainId: ChainId.ARBG,
-    coinKey: CoinKey.WETH,
-    name: 'WETH',
-    logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
-  },
-  [ChainId.OPTT]: {
-    // https://kovan-optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006
-    address: '0x4200000000000000000000000000000000000006',
-    symbol: 'WETH',
-    decimals: 18,
-    chainId: ChainId.OPTT,
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
