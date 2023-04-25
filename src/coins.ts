@@ -579,6 +579,29 @@ const basicCoins: BasicCoin[] = [
       },
     },
   },
+
+  // cBridge USDC testtoken
+  {
+    key: CoinKey.cbtUSDC,
+    name: CoinKey.cbtUSDC,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.MUM]: {
+        address: '0x6de33698e9e9b787e09d3bd7771ef63557e148bb',
+        decimals: 6,
+      },
+      [ChainId.AVA]: {
+        address: '0x2979a1cb90EEB9e75d7fB4f9813FCC40E4a7fD8b',
+        decimals: 6,
+      },
+      [ChainId.BSCT]: {
+        address: '0x317F8d18FB16E49a958Becd0EA72f8E153d25654',
+        decimals: 6,
+      },
+    },
+  },
   // USDC
   {
     key: CoinKey.USDC,
