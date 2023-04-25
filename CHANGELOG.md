@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/lifinance/types/compare/v4.0.0...v5.0.0) (2023-04-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* introduce Base and StaticToken and make priceUSD in Token required (#153)
+
+### Features
+
+* introduce Base and StaticToken and make priceUSD in Token required ([#153](https://github.com/lifinance/types/issues/153)) ([85b9ab1](https://github.com/lifinance/types/commit/85b9ab10570c9a3cce8ab076fa7b77fb339fc492))
+
 ## [4.0.0](https://github.com/lifinance/types/compare/v3.2.8...v4.0.0) (2023-04-24)
 
 
