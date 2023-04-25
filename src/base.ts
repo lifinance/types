@@ -35,6 +35,7 @@ export enum CoinKey {
   // Stable coins
   USDT = 'USDT',
   USDC = 'USDC',
+  cbtUSDC = 'cbtUSDC', // cBridge testnet USDC
   BUSD = 'BUSD',
 
   // Testnet
@@ -94,16 +95,11 @@ export enum ChainKey {
   ARN = 'arn',
 
   // Testnets
-  ROP = 'rop',
-  RIN = 'rin',
   GOR = 'gor',
   METT = 'mett',
   DIOT = 'diot',
-  KOV = 'kov',
   MUM = 'mum',
-  ARBT = 'arbt',
   ARBG = 'arbg',
-  OPTT = 'optt',
   OPTG = 'optg',
   BSCT = 'bsct',
   HECT = 'hect',
@@ -160,16 +156,11 @@ export enum ChainId {
   ARN = 42170,
 
   // Testnets
-  ROP = 3,
-  RIN = 4,
   GOR = 5,
   METT = 12,
   DIOT = 13,
-  KOV = 42,
   MUM = 80001,
-  ARBT = 421611,
   ARBG = 421613,
-  OPTT = 69,
   OPTG = 420,
   BSCT = 97,
   HECT = 256,
