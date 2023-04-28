@@ -241,10 +241,10 @@ export interface GetStatusRequest {
 export interface BaseTransactionInfo {
   txHash: string
   chainId: ChainId
+  txLink: string
 }
 
 export interface ExtendedTransactionInfo extends BaseTransactionInfo {
-  txLink: string
   amount: string
   amountUSD: string
   token: Token
@@ -327,6 +327,7 @@ export interface StatusInformation {
   status: StatusMessage
   substatus?: Substatus
   substatusMessage?: string
+  sending: BaseTransactionInfo
 }
 
 export interface StatusResponse extends StatusInformation {
