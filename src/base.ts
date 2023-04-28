@@ -93,6 +93,8 @@ export enum ChainKey {
   SOL = 'sol',
   EVM = 'evm',
   ARN = 'arn',
+  ERA = 'era',
+  PZE = 'pze',
 
   // Testnets
   GOR = 'gor',
@@ -154,6 +156,8 @@ export enum ChainId {
   OAS = 111971151099710, // this id is made up by the LI.FI team!
   EVM = 9001,
   ARN = 42170,
+  ERA = 324,
+  PZE = 1101,
 
   // Testnets
   GOR = 5,

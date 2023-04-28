@@ -866,6 +866,55 @@ export const supportedEVMChains: EVMChain[] = [
     },
   },
 
+  // 324 - zksync ERA
+  {
+    key: ChainKey.ERA,
+    chainType: ChainType.EVM,
+    name: 'zkSync Era',
+    coin: CoinKey.ETH,
+    id: 324,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/zksync.png',
+
+    metamask: {
+      chainId: prefixChainId(324),
+      blockExplorerUrls: ['https://zkscan.io/'],
+      chainName: 'ZKSYNC Erа',
+      nativeCurrency: {
+        name: 'ETH',
+        symbol: 'ETH',
+        decimals: 18,
+      },
+      rpcUrls: ['https://mainnet.era.zksync.io'],
+    },
+  },
+
+  // 1101 - Polygon zkEVM
+  {
+    key: ChainKey.PZE,
+    chainType: ChainType.EVM,
+    name: 'Polygon zkEVM',
+    coin: CoinKey.ETH,
+    id: 1101,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/zkevm.png',
+    multicallAddress: multicallAddresses[ChainId.PZE],
+
+    metamask: {
+      chainId: prefixChainId(1101),
+      blockExplorerUrls: ['https://zkevm.polygonscan.com'],
+      chainName: 'POLYGONZKEVM',
+      nativeCurrency: {
+        name: 'ETH',
+        symbol: 'ETH',
+        decimals: 18,
+      },
+      rpcUrls: ['https://polygon-rpc.com/zkevm'],
+    },
+  },
+
   // TESTNETS
   // 5 - Goerli
   {

@@ -57,6 +57,14 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.ERA]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+      [ChainId.PZE]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
       [ChainId.FTM]: {
         address: '0x74b23882a30290451a17c44f4f05243b6b58c76d',
         decimals: 18,
@@ -275,6 +283,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.OPT]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
+        decimals: 18,
+      },
+      [ChainId.ERA]: {
+        address: '0x4bef76b6b7f2823c6c1f4fcfeacd85c24548ad7e',
         decimals: 18,
       },
       [ChainId.FTM]: {
@@ -633,6 +645,14 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.OPT]: {
         address: '0x7f5c764cbc14f9669b88837ca1490cca17c31607',
+        decimals: 6,
+      },
+      [ChainId.ERA]: {
+        address: '0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4',
+        decimals: 6,
+      },
+      [ChainId.PZE]: {
+        address: '0xa8ce8aee21bc2a48a5ef670afcc9274c7bbbc035',
         decimals: 6,
       },
       [ChainId.FTM]: {
@@ -1407,6 +1427,28 @@ export const wrappedTokens: { [ChainId: string]: Token } = {
     name: 'Wrapped ETH',
     logoURI:
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
+  [ChainId.ERA]: {
+    // https://explorer.zksync.io/address/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91
+    address: '0x5aea5775959fbc2557cc8789bc1bf90a239d9a91',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.ERA,
+    coinKey: CoinKey.WETH,
+    name: 'Wrapped Ether',
+    logoURI:
+      'https://static.debank.com/image/era_token/logo_url/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91/61844453e63cf81301f845d7864236f6.png',
+  },
+  [ChainId.PZE]: {
+    // https://zkevm.polygonscan.com/token/0x4f9a0e7fd2bf6067db6994cf12e4495df938e6e9
+    address: '0x5aea5775959fbc2557cc8789bc1bf90a239d9a91',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.PZE,
+    coinKey: CoinKey.WETH,
+    name: 'Wrapped Ether',
+    logoURI:
+      'https://static.debank.com/image/pze_token/logo_url/0x4f9a0e7fd2bf6067db6994cf12e4495df938e6e9/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.FTM]: {
     //
