@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/lifinance/types/compare/v5.0.0...v5.1.0) (2023-04-28)
+
+
+### Features
+
+* add circle logo ([7f68249](https://github.com/lifinance/types/commit/7f68249aa10f301d6ad1805c49690f1628b5ed7e))
+
+
+### Bug Fixes
+
+* more explicit type for GasRecommendationResponse ([#165](https://github.com/lifinance/types/issues/165)) ([9fc5756](https://github.com/lifinance/types/commit/9fc57560356ecc977785b6dccce3b060523c32e3))
+
 ## [5.0.0](https://github.com/lifinance/types/compare/v4.0.0...v5.0.0) (2023-04-25)
 
 
