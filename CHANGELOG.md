@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/lifinance/types/compare/v5.1.0...v5.2.0) (2023-04-28)
+
+
+### Features
+
+* add Polygon zkEVM and zkSync Era ([#167](https://github.com/lifinance/types/issues/167)) ([922dc70](https://github.com/lifinance/types/commit/922dc70c92a085391a2fc5e5c8b4407d487a4a2f))
+
 ## [5.1.0](https://github.com/lifinance/types/compare/v5.0.0...v5.1.0) (2023-04-28)
 
 
