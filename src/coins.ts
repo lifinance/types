@@ -592,6 +592,77 @@ const basicCoins: BasicCoin[] = [
     },
   },
 
+  // cBridge CELER testtoken
+  {
+    key: CoinKey.cbtCELR,
+    name: CoinKey.cbtCELR,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x5D3c0F4cA5EE99f8E8F59Ff9A5fAb04F6a7e007f',
+        decimals: 18,
+      },
+      [ChainId.BSCT]: {
+        address: '0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4',
+        decimals: 18,
+      },
+    },
+  },
+
+  // cBridge USDT testtoken
+  {
+    key: CoinKey.cbtUSDT,
+    name: CoinKey.cbtUSDT,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0xf4b2cbc3ba04c478f0dc824f4806ac39982dce73',
+        decimals: 6,
+      },
+      [ChainId.BSCT]: {
+        address: '0x7d43AABC515C356145049227CeE54B608342c0ad',
+        decimals: 6,
+      },
+    },
+  },
+  // cBridge WUSDT testtoken
+  {
+    key: CoinKey.cbtWUSDT,
+    name: CoinKey.cbtWUSDT,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x9D39Fc627A6d9d9F8C831c16995b209548cc3401',
+        decimals: 6,
+      },
+      [ChainId.BSCT]: {
+        address: '0xC826C23327098cd8A37f140114F2173A8F62DD29',
+        decimals: 6,
+      },
+    },
+  },
+
+  // cBridge WUSDC testtoken
+  {
+    key: CoinKey.cbtWUSDC,
+    name: CoinKey.cbtWUSDC,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x4a63Afc71427807586dA190Bb0D3adB461fF9589',
+        decimals: 6,
+      },
+    },
+  },
+
   // cBridge USDC testtoken
   {
     key: CoinKey.cbtUSDC,
@@ -610,6 +681,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.BSCT]: {
         address: '0x317F8d18FB16E49a958Becd0EA72f8E153d25654',
+        decimals: 6,
+      },
+      [ChainId.GOR]: {
+        address: '0xCbE56b00d173A26a5978cE90Db2E33622fD95A28',
         decimals: 6,
       },
     },
