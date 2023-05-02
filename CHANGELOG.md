@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.1](https://github.com/lifinance/types/compare/v5.2.0...v5.2.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* add cbridge tokens ([#168](https://github.com/lifinance/types/issues/168)) ([6702984](https://github.com/lifinance/types/commit/67029845bc68b2b1a083ecfe26268c478b8d3d61))
+
 ## [5.2.0](https://github.com/lifinance/types/compare/v5.1.0...v5.2.0) (2023-04-28)
 
 
