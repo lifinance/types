@@ -675,7 +675,7 @@ const basicCoins: BasicCoin[] = [
         address: '0x6de33698e9e9b787e09d3bd7771ef63557e148bb',
         decimals: 6,
       },
-      [ChainId.AVA]: {
+      [ChainId.AVAT]: {
         address: '0x2979a1cb90EEB9e75d7fB4f9813FCC40E4a7fD8b',
         decimals: 6,
       },
