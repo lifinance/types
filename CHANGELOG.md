@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.2](https://github.com/lifinance/types/compare/v5.2.1...v5.2.2) (2023-05-02)
+
+
+### Bug Fixes
+
+* change AVA -> AVAT ([#169](https://github.com/lifinance/types/issues/169)) ([6b4e151](https://github.com/lifinance/types/commit/6b4e151026e96a9f2a9f80bd8ac1d10776828208))
+
 ### [5.2.1](https://github.com/lifinance/types/compare/v5.2.0...v5.2.1) (2023-05-02)
 
 
