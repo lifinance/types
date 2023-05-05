@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.3.0](https://github.com/lifinance/types/compare/v5.2.2...v5.3.0) (2023-05-05)
+
+
+### Features
+
+* add stargate testnet tokens ([#170](https://github.com/lifinance/types/issues/170)) ([20566ad](https://github.com/lifinance/types/commit/20566ad2e3b4485c25f715b26f7e95a4d5222e81))
+
 ### [5.2.2](https://github.com/lifinance/types/compare/v5.2.1...v5.2.2) (2023-05-02)
 
 
