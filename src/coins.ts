@@ -592,6 +592,118 @@ const basicCoins: BasicCoin[] = [
     },
   },
 
+  // ======= STARGATE TESTNET TOKENS =======
+  // stargate USDC testtoken
+  {
+    key: CoinKey.sgUSDC,
+    name: CoinKey.sgUSDC,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0xDf0360Ad8C5ccf25095Aa97ee5F2785c8d848620',
+        decimals: 6,
+      },
+      [ChainId.MUM]: {
+        address: '0x742DfA5Aa70a8212857966D491D67B09Ce7D6ec7',
+        decimals: 6,
+      },
+      [ChainId.ARBG]: {
+        address: '0x6aad876244e7a1ad44ec4824ce813729e5b6c291',
+        decimals: 6,
+      },
+    },
+  },
+
+  // stargate BUSD testtoken
+  {
+    key: CoinKey.sgBUSD,
+    name: CoinKey.sgBUSD,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.BSCT]: {
+        address: '0x1010Bb1b9Dff29e6233E7947e045e0ba58f6E92e',
+        decimals: 6,
+      },
+    },
+  },
+
+  // stargate USDT testtoken
+  {
+    key: CoinKey.sgUSDT,
+    name: CoinKey.sgUSDT,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x5bcc22abec37337630c0e0dd41d64fd86caee951',
+        decimals: 6,
+      },
+      [ChainId.MUM]: {
+        address: '0x6fc340be8e378c2ff56476409ef48da9a3b781a0',
+        decimals: 6,
+      },
+      [ChainId.BSCT]: {
+        address: '0xf49e250aeb5abdf660d643583adfd0be41464efd',
+        decimals: 6,
+      },
+      [ChainId.ARBG]: {
+        address: '0x533046f316590c19d99c74ee661c6d541b64471c',
+        decimals: 6,
+      },
+    },
+  },
+
+  // stargate USDT testtoken
+  {
+    key: CoinKey.sgMETIS,
+    name: CoinKey.sgMETIS,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x9874a71b976daa037741d18b86bc6b2f9957fc8a',
+        decimals: 18,
+      },
+      [ChainId.BSCT]: {
+        address: '0x8362af3426e6c7a77438f29bdc81c8f27cd541ab',
+        decimals: 18,
+      },
+    },
+  },
+
+  // stargate WOO testtoken
+  {
+    key: CoinKey.sgWOO,
+    name: CoinKey.sgWOO,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0xc9ba30be110864264577ad091c47f986318b213e',
+        decimals: 18,
+      },
+      [ChainId.MUM]: {
+        address: '0xb9C468f4308f3f937B4Fc79946244459bBC3cf65',
+        decimals: 18,
+      },
+      [ChainId.BSCT]: {
+        address: '0x6df6db769dd1c845596f7e65a1c86c98d6147cc3',
+        decimals: 18,
+      },
+      [ChainId.ARBG]: {
+        address: '0xac9da6d889e82d08de63f5752f91b151ffe059fb',
+        decimals: 18,
+      },
+    },
+  },
+
   // cBridge CELER testtoken
   {
     key: CoinKey.cbtCELR,

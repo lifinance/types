@@ -50,6 +50,13 @@ export enum CoinKey {
   TRBTC = 'TRBTC',
   CXTT = 'CXTT', // Connext Test token
 
+  // stargate testnet tokens
+  sgMETIS = 'sgMETIS', // sgMETIS test token
+  sgWOO = 'sgWOO', // sgWOO test token
+  sgUSDT = 'sgUSDT', // sgUSDT test token
+  sgBUSD = 'sgBUSD', // sgBUSD test token
+  sgUSDC = 'sgUSDC', // sgUSDC test token
+
   // Other tokens
   WBTC = 'WBTC',
   WETH = 'WETH',
