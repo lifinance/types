@@ -103,9 +103,26 @@ export interface Route {
   tags?: Order[]
 }
 
+export type ErroredPaths = { [subpath: string]: ToolError[] }
+
+export type ErroredRoute = {
+  overallPath: string
+  subpaths: ErroredPaths
+}
+
+export type FilteredResult = {
+  overallPath: string
+  reason: string
+}
+
+export type UnavailableRoutes = {
+  filteredOut: FilteredResult[]
+  failed: ErroredRoute[]
+}
+
 export interface RoutesResponse {
   routes: Route[]
-  errors: ToolError[]
+  unavailableRoutes: UnavailableRoutes
 }
 
 export type PossibilityTopic = 'chains' | 'tokens' | 'bridges' | 'exchanges'
