@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/lifinance/types/compare/v5.3.0...v6.0.0) (2023-05-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **explainableFailures:** added supporting types
+
+### Features
+
+* error reporting ([8120a4e](https://github.com/lifinance/types/commit/8120a4efe26c19d7fdc95ac9d72b91d1dc988fbc))
+* **explainableFailures:** added supporting types ([50310b9](https://github.com/lifinance/types/commit/50310b93e3f55e3185b7234821fbf19efb5dd8d4))
+
 ## [5.3.0](https://github.com/lifinance/types/compare/v5.2.2...v5.3.0) (2023-05-05)
 
 
