@@ -323,18 +323,24 @@ export const isSubstatusFailed = (
 ): substatus is SubstatusFailed =>
   _SubstatusFailed.includes(substatus as SubstatusFailed)
 
-export interface StatusInformation {
+export interface BaseStatusData {
   status: StatusMessage
   substatus?: Substatus
   substatusMessage?: string
-  sending: BaseTransactionInfo
 }
 
-export interface StatusResponse extends StatusInformation {
+export interface StatusData extends BaseStatusData {
+  tool: string
+  sending: BaseTransactionInfo
+  receiving: PendingReceivingInfo
+}
+
+export type StatusResponse = FullStatusData | StatusData
+
+export interface FullStatusData extends StatusData {
   transactionId: string
   sending: ExtendedTransactionInfo
   receiving: PendingReceivingInfo | ExtendedTransactionInfo
-  tool: string
   lifiExplorerLink: string
   fromAddress: string
   toAddress: string
