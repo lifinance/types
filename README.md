@@ -1,3 +1,12 @@
+<div align="center">
+
+[![license](https://img.shields.io/badge/license-Apache%202-blue)](/LICENSE.md)
+[![npm latest package](https://img.shields.io/npm/v/@lifi/types/latest.svg)](https://www.npmjs.com/package/@lifi/types)
+[![npm downloads](https://img.shields.io/npm/dm/@lifi/types.svg)](https://www.npmjs.com/package/@lifi/types)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/lifiprotocol.svg?label=follow+LI.FI)](https://twitter.com/lifiprotocol)
+
+</div>
+
 # LI.FI - Types
 
 Types for the LI.FI stack.

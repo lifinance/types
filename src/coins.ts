@@ -57,6 +57,14 @@ const basicCoins: BasicCoin[] = [
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
       },
+      [ChainId.ERA]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
+      [ChainId.PZE]: {
+        address: '0x0000000000000000000000000000000000000000',
+        decimals: 18,
+      },
       [ChainId.FTM]: {
         address: '0x74b23882a30290451a17c44f4f05243b6b58c76d',
         decimals: 18,
@@ -275,6 +283,10 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.OPT]: {
         address: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
+        decimals: 18,
+      },
+      [ChainId.ERA]: {
+        address: '0x4bef76b6b7f2823c6c1f4fcfeacd85c24548ad7e',
         decimals: 18,
       },
       [ChainId.FTM]: {
@@ -580,6 +592,189 @@ const basicCoins: BasicCoin[] = [
     },
   },
 
+  // ======= STARGATE TESTNET TOKENS =======
+  // stargate USDC testtoken
+  {
+    key: CoinKey.sgUSDC,
+    name: CoinKey.sgUSDC,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0xDf0360Ad8C5ccf25095Aa97ee5F2785c8d848620',
+        decimals: 6,
+      },
+      [ChainId.MUM]: {
+        address: '0x742DfA5Aa70a8212857966D491D67B09Ce7D6ec7',
+        decimals: 6,
+      },
+      [ChainId.ARBG]: {
+        address: '0x6aad876244e7a1ad44ec4824ce813729e5b6c291',
+        decimals: 6,
+      },
+    },
+  },
+
+  // stargate BUSD testtoken
+  {
+    key: CoinKey.sgBUSD,
+    name: CoinKey.sgBUSD,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.BSCT]: {
+        address: '0x1010Bb1b9Dff29e6233E7947e045e0ba58f6E92e',
+        decimals: 6,
+      },
+    },
+  },
+
+  // stargate USDT testtoken
+  {
+    key: CoinKey.sgUSDT,
+    name: CoinKey.sgUSDT,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x5bcc22abec37337630c0e0dd41d64fd86caee951',
+        decimals: 6,
+      },
+      [ChainId.MUM]: {
+        address: '0x6fc340be8e378c2ff56476409ef48da9a3b781a0',
+        decimals: 6,
+      },
+      [ChainId.BSCT]: {
+        address: '0xf49e250aeb5abdf660d643583adfd0be41464efd',
+        decimals: 6,
+      },
+      [ChainId.ARBG]: {
+        address: '0x533046f316590c19d99c74ee661c6d541b64471c',
+        decimals: 6,
+      },
+    },
+  },
+
+  // stargate USDT testtoken
+  {
+    key: CoinKey.sgMETIS,
+    name: CoinKey.sgMETIS,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x9874a71b976daa037741d18b86bc6b2f9957fc8a',
+        decimals: 18,
+      },
+      [ChainId.BSCT]: {
+        address: '0x8362af3426e6c7a77438f29bdc81c8f27cd541ab',
+        decimals: 18,
+      },
+    },
+  },
+
+  // stargate WOO testtoken
+  {
+    key: CoinKey.sgWOO,
+    name: CoinKey.sgWOO,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0xc9ba30be110864264577ad091c47f986318b213e',
+        decimals: 18,
+      },
+      [ChainId.MUM]: {
+        address: '0xb9C468f4308f3f937B4Fc79946244459bBC3cf65',
+        decimals: 18,
+      },
+      [ChainId.BSCT]: {
+        address: '0x6df6db769dd1c845596f7e65a1c86c98d6147cc3',
+        decimals: 18,
+      },
+      [ChainId.ARBG]: {
+        address: '0xac9da6d889e82d08de63f5752f91b151ffe059fb',
+        decimals: 18,
+      },
+    },
+  },
+
+  // cBridge CELER testtoken
+  {
+    key: CoinKey.cbtCELR,
+    name: CoinKey.cbtCELR,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x5D3c0F4cA5EE99f8E8F59Ff9A5fAb04F6a7e007f',
+        decimals: 18,
+      },
+      [ChainId.BSCT]: {
+        address: '0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4',
+        decimals: 18,
+      },
+    },
+  },
+
+  // cBridge USDT testtoken
+  {
+    key: CoinKey.cbtUSDT,
+    name: CoinKey.cbtUSDT,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0xf4b2cbc3ba04c478f0dc824f4806ac39982dce73',
+        decimals: 6,
+      },
+      [ChainId.BSCT]: {
+        address: '0x7d43AABC515C356145049227CeE54B608342c0ad',
+        decimals: 6,
+      },
+    },
+  },
+  // cBridge WUSDT testtoken
+  {
+    key: CoinKey.cbtWUSDT,
+    name: CoinKey.cbtWUSDT,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x9D39Fc627A6d9d9F8C831c16995b209548cc3401',
+        decimals: 6,
+      },
+      [ChainId.BSCT]: {
+        address: '0xC826C23327098cd8A37f140114F2173A8F62DD29',
+        decimals: 6,
+      },
+    },
+  },
+
+  // cBridge WUSDC testtoken
+  {
+    key: CoinKey.cbtWUSDC,
+    name: CoinKey.cbtWUSDC,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.GOR]: {
+        address: '0x4a63Afc71427807586dA190Bb0D3adB461fF9589',
+        decimals: 6,
+      },
+    },
+  },
+
   // cBridge USDC testtoken
   {
     key: CoinKey.cbtUSDC,
@@ -592,12 +787,16 @@ const basicCoins: BasicCoin[] = [
         address: '0x6de33698e9e9b787e09d3bd7771ef63557e148bb',
         decimals: 6,
       },
-      [ChainId.AVA]: {
+      [ChainId.AVAT]: {
         address: '0x2979a1cb90EEB9e75d7fB4f9813FCC40E4a7fD8b',
         decimals: 6,
       },
       [ChainId.BSCT]: {
         address: '0x317F8d18FB16E49a958Becd0EA72f8E153d25654',
+        decimals: 6,
+      },
+      [ChainId.GOR]: {
+        address: '0xCbE56b00d173A26a5978cE90Db2E33622fD95A28',
         decimals: 6,
       },
     },
@@ -633,6 +832,14 @@ const basicCoins: BasicCoin[] = [
       },
       [ChainId.OPT]: {
         address: '0x7f5c764cbc14f9669b88837ca1490cca17c31607',
+        decimals: 6,
+      },
+      [ChainId.ERA]: {
+        address: '0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4',
+        decimals: 6,
+      },
+      [ChainId.PZE]: {
+        address: '0xa8ce8aee21bc2a48a5ef670afcc9274c7bbbc035',
         decimals: 6,
       },
       [ChainId.FTM]: {
@@ -1407,6 +1614,28 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     name: 'Wrapped ETH',
     logoURI:
       'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+  },
+  [ChainId.ERA]: {
+    // https://explorer.zksync.io/address/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91
+    address: '0x5aea5775959fbc2557cc8789bc1bf90a239d9a91',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.ERA,
+    coinKey: CoinKey.WETH,
+    name: 'Wrapped Ether',
+    logoURI:
+      'https://static.debank.com/image/era_token/logo_url/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91/61844453e63cf81301f845d7864236f6.png',
+  },
+  [ChainId.PZE]: {
+    // https://zkevm.polygonscan.com/token/0x4f9a0e7fd2bf6067db6994cf12e4495df938e6e9
+    address: '0x5aea5775959fbc2557cc8789bc1bf90a239d9a91',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: ChainId.PZE,
+    coinKey: CoinKey.WETH,
+    name: 'Wrapped Ether',
+    logoURI:
+      'https://static.debank.com/image/pze_token/logo_url/0x4f9a0e7fd2bf6067db6994cf12e4495df938e6e9/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.FTM]: {
     //

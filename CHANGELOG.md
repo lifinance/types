@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.3.0](https://github.com/lifinance/types/compare/v5.2.2...v5.3.0) (2023-05-05)
+
+
+### Features
+
+* add stargate testnet tokens ([#170](https://github.com/lifinance/types/issues/170)) ([20566ad](https://github.com/lifinance/types/commit/20566ad2e3b4485c25f715b26f7e95a4d5222e81))
+
+### [5.2.2](https://github.com/lifinance/types/compare/v5.2.1...v5.2.2) (2023-05-02)
+
+
+### Bug Fixes
+
+* change AVA -> AVAT ([#169](https://github.com/lifinance/types/issues/169)) ([6b4e151](https://github.com/lifinance/types/commit/6b4e151026e96a9f2a9f80bd8ac1d10776828208))
+
+### [5.2.1](https://github.com/lifinance/types/compare/v5.2.0...v5.2.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* add cbridge tokens ([#168](https://github.com/lifinance/types/issues/168)) ([6702984](https://github.com/lifinance/types/commit/67029845bc68b2b1a083ecfe26268c478b8d3d61))
+
+## [5.2.0](https://github.com/lifinance/types/compare/v5.1.0...v5.2.0) (2023-04-28)
+
+
+### Features
+
+* add Polygon zkEVM and zkSync Era ([#167](https://github.com/lifinance/types/issues/167)) ([922dc70](https://github.com/lifinance/types/commit/922dc70c92a085391a2fc5e5c8b4407d487a4a2f))
+
+## [5.1.0](https://github.com/lifinance/types/compare/v5.0.0...v5.1.0) (2023-04-28)
+
+
+### Features
+
+* add circle logo ([7f68249](https://github.com/lifinance/types/commit/7f68249aa10f301d6ad1805c49690f1628b5ed7e))
+
+
+### Bug Fixes
+
+* more explicit type for GasRecommendationResponse ([#165](https://github.com/lifinance/types/issues/165)) ([9fc5756](https://github.com/lifinance/types/commit/9fc57560356ecc977785b6dccce3b060523c32e3))
+
 ## [5.0.0](https://github.com/lifinance/types/compare/v4.0.0...v5.0.0) (2023-04-25)
 
 

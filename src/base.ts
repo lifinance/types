@@ -36,6 +36,10 @@ export enum CoinKey {
   USDT = 'USDT',
   USDC = 'USDC',
   cbtUSDC = 'cbtUSDC', // cBridge testnet USDC
+  cbtUSDT = 'cbtUSDT', // cBridge testnet USDT
+  cbtWUSDT = 'cbtWUSDT', // cBridge testnet wrapped USDT
+  cbtWUSDC = 'cbtWUSDC', // cBridge testnet wrapped USDC
+  cbtCELR = 'cbtCELR', // cBridge testnet CELR
   BUSD = 'BUSD',
 
   // Testnet
@@ -45,6 +49,13 @@ export enum CoinKey {
   SPARK = 'SPARK',
   TRBTC = 'TRBTC',
   CXTT = 'CXTT', // Connext Test token
+
+  // stargate testnet tokens
+  sgMETIS = 'sgMETIS', // sgMETIS test token
+  sgWOO = 'sgWOO', // sgWOO test token
+  sgUSDT = 'sgUSDT', // sgUSDT test token
+  sgBUSD = 'sgBUSD', // sgBUSD test token
+  sgUSDC = 'sgUSDC', // sgUSDC test token
 
   // Other tokens
   WBTC = 'WBTC',
@@ -93,6 +104,8 @@ export enum ChainKey {
   SOL = 'sol',
   EVM = 'evm',
   ARN = 'arn',
+  ERA = 'era',
+  PZE = 'pze',
 
   // Testnets
   GOR = 'gor',
@@ -154,6 +167,8 @@ export enum ChainId {
   OAS = 111971151099710, // this id is made up by the LI.FI team!
   EVM = 9001,
   ARN = 42170,
+  ERA = 324,
+  PZE = 1101,
 
   // Testnets
   GOR = 5,
