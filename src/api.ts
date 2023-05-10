@@ -244,15 +244,15 @@ export interface BaseTransactionInfo {
 }
 
 export interface ExtendedTransactionInfo extends BaseTransactionInfo {
-  amount: string
-  amountUSD: string
-  token: Token
+  amount?: string
+  amountUSD?: string
+  token?: Token
   gasPrice: string
   gasUsed: string
   gasToken: Token
   gasAmount: string
   gasAmountUSD: string
-  timestamp: number
+  timestamp?: number
 }
 
 export interface PendingReceivingInfo {
