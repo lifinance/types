@@ -254,17 +254,26 @@ export interface GetStatusRequest {
   toChain?: number | string
 }
 
-export interface TransactionInfo {
+export interface BaseTransactionInfo {
   txHash: string
-  txLink?: string
+  chainId: ChainId
+  txLink: string
+}
+
+export interface ExtendedTransactionInfo extends BaseTransactionInfo {
   amount?: string
+  amountUSD?: string
   token?: Token
-  chainId?: ChainId
-  gasPrice?: string
-  gasUsed?: string
-  gasToken?: Token
-  gasAmount?: string
-  gasAmountUSD?: string
+  gasPrice: string
+  gasUsed: string
+  gasToken: Token
+  gasAmount: string
+  gasAmountUSD: string
+  timestamp?: number
+}
+
+export interface PendingReceivingInfo {
+  chainId: ChainId
 }
 
 const _StatusMessage = [
@@ -330,16 +339,27 @@ export const isSubstatusFailed = (
 ): substatus is SubstatusFailed =>
   _SubstatusFailed.includes(substatus as SubstatusFailed)
 
-export interface StatusInformation {
+export interface BaseStatusData {
   status: StatusMessage
   substatus?: Substatus
   substatusMessage?: string
 }
 
-export interface StatusResponse extends StatusInformation {
-  sending: TransactionInfo
-  receiving?: TransactionInfo
-  tool?: string
+export interface StatusData extends BaseStatusData {
+  tool: string
+  sending: BaseTransactionInfo
+  receiving: PendingReceivingInfo
+}
+
+export type StatusResponse = FullStatusData | StatusData
+
+export interface FullStatusData extends StatusData {
+  transactionId: string
+  sending: ExtendedTransactionInfo
+  receiving: PendingReceivingInfo | ExtendedTransactionInfo
+  lifiExplorerLink: string
+  fromAddress: string
+  toAddress: string
   bridgeExplorerLink?: string
 }
 
@@ -398,8 +418,8 @@ type LIFuelState = (typeof _LIFuelState)[number]
 // Response to the status API for trusted gas
 export type LIFuelStatusResponse = {
   status: LIFuelState
-  sending?: TransactionInfo
-  receiving?: TransactionInfo
+  sending?: ExtendedTransactionInfo
+  receiving?: PendingReceivingInfo | ExtendedTransactionInfo
 }
 
 export type GasRecommendationRequest = {
