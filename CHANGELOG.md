@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/lifinance/types/compare/v5.3.0...v7.0.0) (2023-06-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* new types for status endpoint (#166)
+
+### Features
+
+* add vvs finance logo png ([8dd8990](https://github.com/lifinance/types/commit/8dd89901f905768aa12f8bca75ffa4a7e43169c2))
+* error reporting ([#171](https://github.com/lifinance/types/issues/171)) ([97eae77](https://github.com/lifinance/types/commit/97eae7777f0efd0fdbb442f47e0ba6d43d19be4a))
+* new types for status endpoint ([#166](https://github.com/lifinance/types/issues/166)) ([b7262e2](https://github.com/lifinance/types/commit/b7262e2bd531bcfb84fcc756e1cd96ad79a261b9))
+
 ## [6.0.0](https://github.com/lifinance/types/compare/v5.3.0...v6.0.0) (2023-05-09)
 
 
