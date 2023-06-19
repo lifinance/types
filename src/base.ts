@@ -41,6 +41,7 @@ export enum CoinKey {
   cbtWUSDC = 'cbtWUSDC', // cBridge testnet wrapped USDC
   cbtCELR = 'cbtCELR', // cBridge testnet CELR
   BUSD = 'BUSD',
+  USDCe = 'USDCe',
 
   // Testnet
   TEST = 'TEST',

@@ -804,7 +804,7 @@ const basicCoins: BasicCoin[] = [
   // USDC
   {
     key: CoinKey.USDC,
-    name: CoinKey.USDC,
+    name: 'USD Coin',
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
     verified: true,
@@ -847,7 +847,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 6,
       },
       [ChainId.ARB]: {
-        address: '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8',
+        address: '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
         decimals: 6,
       },
       [ChainId.ONE]: {
@@ -855,10 +855,8 @@ const basicCoins: BasicCoin[] = [
         decimals: 6,
       },
       [ChainId.AVA]: {
-        address: '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664',
+        address: '0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e',
         decimals: 6,
-        symbol: 'USDC.e',
-        name: 'USD Coin',
       },
       [ChainId.MOR]: {
         address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d',
@@ -924,7 +922,29 @@ const basicCoins: BasicCoin[] = [
       // 42, 0xb7a4f3e9097c08da09517b5ab877f7a917224ede, 6
     },
   },
-
+  // USDC.e
+  // Represents the USD Coin (USDC) bridged from Ethereum (as opposed to the 'native' USDC issued by Circle)
+  {
+    key: CoinKey.USDCe,
+    name: CoinKey.USDCe,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
+    verified: true,
+    chains: {
+      [ChainId.ARB]: {
+        address: '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8',
+        decimals: 6,
+        name: 'Bridged USD Coin',
+        symbol: 'USDC.e',
+      },
+      [ChainId.AVA]: {
+        address: '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664',
+        decimals: 6,
+        name: 'Bridged USD Coin',
+        symbol: 'USDC.e',
+      },
+    },
+  },
   // BUSD
   {
     key: CoinKey.BUSD,
