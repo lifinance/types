@@ -85,7 +85,7 @@ export interface Process {
   message?: string
   txHash?: string
   txLink?: string
-  multisigInternalTxHash?: string;
+  multisigTxHash?: string;
   error?: {
     code: string | number
     message: string
