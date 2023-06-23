@@ -66,7 +66,6 @@ export type Status =
   | 'DONE'
   | 'RESUME'
   | 'CANCELLED'
-  | "SAFE_SIGNING_PENDING"
 
 export type ProcessType =
   | 'TOKEN_ALLOWANCE'
@@ -86,7 +85,7 @@ export interface Process {
   message?: string
   txHash?: string
   txLink?: string
-  multiSigInternalTxHash?: string
+  multisigInternalTxHash?: string;
   error?: {
     code: string | number
     message: string
