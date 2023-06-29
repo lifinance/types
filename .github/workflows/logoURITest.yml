@@ -4,9 +4,12 @@ on:
   push:
     paths:
       - 'src/coins.ts'
+  pull_request:
+    paths:
+      - 'src/coins.ts'
 jobs:
   test:
-    runs-on: runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js

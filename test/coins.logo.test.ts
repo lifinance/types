@@ -1,6 +1,8 @@
 import axios from "axios"
 import { defaultCoins } from "../src"
 
+jest.setTimeout(20_000)
+
 describe('Coin logo test', () => {
     test.each(defaultCoins)(
         'that the links for logoURI are working', async (coin) => {
