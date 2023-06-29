@@ -1,4 +1,4 @@
-import { StaticToken, ChainId, Coin, CoinKey, BaseToken } from './base'
+import { StaticToken, ChainId, Coin, CoinKey } from './base'
 
 type BasicToken = {
   address: string
