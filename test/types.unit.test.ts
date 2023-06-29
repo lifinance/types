@@ -1,5 +1,5 @@
-import { ChainId, ChainKey, getChainByKey, getChainById, supportedEVMChains, findDefaultToken, findWrappedGasOnChain } from '../src'
-
+import { ChainId, ChainKey, getChainByKey, getChainById, supportedEVMChains, findDefaultToken, findWrappedGasOnChain, CoinKey } from '../src'
+import { findTokenByChainIdAndAddress } from '../src/coins';
 test('getChainById', () => {
   expect(getChainById(ChainId.ETH)).toBeDefined()
 })
@@ -46,4 +46,22 @@ test('native token defined for all chains', () => {
       throw new Error(`Failed to load wrapped gas token for ${chain.name}(${chain.id})`)
     }
   }
+})
+
+describe('findTokenByChainIdAndAddress', () => {
+  describe('token has no name override', () => {
+    it('returns a token with the coin name', () => {
+      expect(
+        findTokenByChainIdAndAddress(ChainId.LNAT, '0xb706319d37b945727e71ae0d4353699d19112576')!.name
+      ).toEqual(CoinKey.CXTT)
+    })
+  })
+
+  describe("token has a name override", () => {
+    it('returns a token with the overrode name', () => {
+      expect(
+        findTokenByChainIdAndAddress(ChainId.GOR, '0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1')!.name
+      ).toEqual('Goerli CXTT')
+    })
+  })
 })
