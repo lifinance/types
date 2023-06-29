@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.1](https://github.com/lifinance/types/compare/v8.0.0...v8.0.1) (2023-06-29)
+
+
+### Bug Fixes
+
+* logo URLs ([#175](https://github.com/lifinance/types/issues/175)) ([9b625d5](https://github.com/lifinance/types/commit/9b625d53d3ac87349d47c042e386132ca767230f))
+* removed status type ([4055ae4](https://github.com/lifinance/types/commit/4055ae4e4e56707a35fbdfb7fa31df942e7084f5))
+* renamed multisig property ([3a5fe96](https://github.com/lifinance/types/commit/3a5fe96496ca92776e2cd758f916d424757d45f3))
+* updating types for safe integration ([189a375](https://github.com/lifinance/types/commit/189a375dc0b20b6aba16eff6aef5ed54a91e3c82))
+
 ## [8.0.0](https://github.com/lifinance/types/compare/v5.3.0...v8.0.0) (2023-06-19)
 
 
