@@ -144,7 +144,8 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.MATIC,
     name: CoinKey.MATIC,
-    logoURI: 'https://etherscan.io/token/images/matictoken_28.png',
+    logoURI:
+      'https://static.debank.com/image/matic_token/logo_url/matic/6f5a6b6f0732a7a235131bd7804d357c.png',
     verified: true,
     chains: {
       [ChainId.ETH]: {
@@ -1362,7 +1363,8 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.CELR,
     name: CoinKey.CELR,
-    logoURI: 'https://etherscan.io/token/images/celer_28.png',
+    logoURI:
+      'https://static.debank.com/image/bsc_token/logo_url/0x1f9f6a696c6fd109cd3956f45dc709d2b3902163/1eb9c8f251098ea22a2cb30a877da86a.png',
     verified: true,
     chains: {
       [ChainId.ETH]: {
