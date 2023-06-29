@@ -434,7 +434,8 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.ONE,
     name: CoinKey.ONE,
-    logoURI: 'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/tokens/WONE.png',
+    logoURI:
+      'https://assets.coingecko.com/coins/images/18183/small/wonelogo.png',
     verified: true,
     chains: {
       [ChainId.ONE]: {
@@ -1006,7 +1007,8 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.TEST,
     name: CoinKey.TEST,
-    logoURI: 'https://xpollinate.io/icon192.png',
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
     verified: false,
     chains: {
       [ChainId.GOR]: {
@@ -1028,7 +1030,8 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.CXTT,
     name: CoinKey.CXTT,
-    logoURI: 'https://xpollinate.io/icon192.png',
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
     verified: false,
     chains: {
       [ChainId.GOR]: {
@@ -1359,8 +1362,7 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.CELR,
     name: CoinKey.CELR,
-    logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4f9254c83eb525f9fcf346490bbb3ed28a81c667/logo.png',
+    logoURI: 'https://etherscan.io/token/images/celer_28.png',
     verified: true,
     chains: {
       [ChainId.ETH]: {
@@ -1580,7 +1582,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/eth_token/logo_url/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.SOL]: {
     address: 'So11111111111111111111111111111111111111112',
@@ -1600,7 +1602,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: 'WBNB' as CoinKey,
     name: 'WBNB',
     logoURI:
-      'https://zapper.fi/images/networks/binance-smart-chain/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/coin/logo_url/bnb/9784283a36f23a58982fc964574ea530.png',
   },
   [ChainId.POL]: {
     // https://polygonscan.com/token/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270
@@ -1611,7 +1613,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: 'WMATIC' as CoinKey,
     name: 'WMATIC',
     logoURI:
-      'https://zapper.fi/images/networks/polygon/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/matic_token/logo_url/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270/f6e604ba0324726a3d687c618aa4f163.png',
   },
   [ChainId.DAI]: {
     // https://blockscout.com/xdai/mainnet/address/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d
@@ -1622,7 +1624,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: 'WXDAI' as CoinKey,
     name: 'WXDAI',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x6b175474e89094c44da98b954eedeac495271d0f.png',
+      'https://static.debank.com/image/xdai_token/logo_url/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d/3fedab836c5425fc3fc2eb542c34c81a.png',
   },
   [ChainId.OPT]: {
     // https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006
@@ -1633,7 +1635,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: CoinKey.WETH,
     name: 'Wrapped ETH',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/op_token/logo_url/0x4200000000000000000000000000000000000006/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.ERA]: {
     // https://explorer.zksync.io/address/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91
@@ -1666,7 +1668,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: 'wFTM' as CoinKey,
     name: 'wFTM',
     logoURI:
-      'https://assets.spookyswap.finance/coins/0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83.png',
+      'https://static.debank.com/image/ftm_token/logo_url/0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83/2b7d91858f9c62aafc8d7778b9c22f57.png',
   },
   [ChainId.ONE]: {
     address: '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a',
@@ -1675,7 +1677,8 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     chainId: ChainId.ONE,
     coinKey: 'WONE' as CoinKey,
     name: 'WRAPPED ONE',
-    logoURI: 'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/tokens/WONE.png',
+    logoURI:
+      'https://assets.coingecko.com/coins/images/18183/small/wonelogo.png',
   },
   [ChainId.AVA]: {
     address: '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7',
@@ -1684,7 +1687,8 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     chainId: ChainId.AVA,
     coinKey: 'WAVAX' as CoinKey,
     name: 'Wrapped AVAX',
-    logoURI: '',
+    logoURI:
+      'https://static.debank.com/image/avax_token/logo_url/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7/753d82f0137617110f8dec56309b4065.png',
   },
   [ChainId.ARB]: {
     address: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1',
@@ -1694,7 +1698,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/era_token/logo_url/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.MOR]: {
     address: '0x98878b06940ae243284ca214f92bb71a2b032b8a',
@@ -1823,7 +1827,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/era_token/logo_url/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.MUM]: {
     // https://mumbai.polygonscan.com/token/0x9c3c9283d3e44854697cd22d3faa240cfb032889
@@ -1834,7 +1838,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: 'WMATIC' as CoinKey,
     name: 'WMATIC',
     logoURI:
-      'https://zapper.fi/images/networks/polygon/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/matic_token/logo_url/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270/f6e604ba0324726a3d687c618aa4f163.png',
   },
   [ChainId.ONET]: {
     address: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
@@ -1843,7 +1847,8 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     chainId: ChainId.ONET,
     coinKey: 'WONE' as CoinKey,
     name: 'WRAPPED ONE',
-    logoURI: 'https://d1xrz6ki9z98vb.cloudfront.net/venomswap/tokens/WONE.png',
+    logoURI:
+      'https://assets.coingecko.com/coins/images/18183/small/wonelogo.png',
   },
   [ChainId.ARBG]: {
     // https://goerli.arbiscan.io/token/0x42da9eE191833756c618778145A86E6709f70C9b
@@ -1854,7 +1859,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/era_token/logo_url/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.OPTG]: {
     // https://blockscout.com/optimism/goerli/address/0x4200000000000000000000000000000000000006
@@ -1865,7 +1870,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/era_token/logo_url/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.BSCT]: {
     // https://testnet.bscscan.com/token/0xae13d989dac2f0debff460ac112a837c89baa7cd
@@ -1887,7 +1892,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: CoinKey.WETH,
     name: 'WETH',
     logoURI:
-      'https://zapper.fi/images/networks/ethereum/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/era_token/logo_url/0x5aea5775959fbc2557cc8789bc1bf90a239d9a91/61844453e63cf81301f845d7864236f6.png',
   },
   [ChainId.AVAT]: {
     // https://testnet.snowtrace.io/token/0xd00ae08403B9bbb9124bB305C09058E32C39A48c
@@ -1897,7 +1902,8 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     chainId: ChainId.AVA,
     coinKey: 'WAVAX' as CoinKey,
     name: 'Wrapped AVAX',
-    logoURI: '',
+    logoURI:
+      'https://static.debank.com/image/avax_token/logo_url/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7/753d82f0137617110f8dec56309b4065.png',
   },
 }
 
