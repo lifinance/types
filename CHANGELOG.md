@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.2](https://github.com/lifinance/types/compare/v8.0.1...v8.0.2) (2023-06-30)
+
+
+### Bug Fixes
+
+* findTokenByChainIdAndAddress was broken ([#176](https://github.com/lifinance/types/issues/176)) ([04db211](https://github.com/lifinance/types/commit/04db2111a7254014d274352b23e90f57c48b8c7e))
+
 ### [8.0.1](https://github.com/lifinance/types/compare/v8.0.0...v8.0.1) (2023-06-29)
 
 
