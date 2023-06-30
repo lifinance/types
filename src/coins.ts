@@ -1037,6 +1037,7 @@ const basicCoins: BasicCoin[] = [
     chains: {
       [ChainId.GOR]: {
         address: '0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1',
+        name: 'Goerli CXTT',
         decimals: 18,
       },
       [ChainId.LNAT]: {
@@ -1565,7 +1566,7 @@ export const defaultCoins: Array<Coin> = basicCoins.map((coin) => {
       symbol: token.symbol ?? coin.key,
       chainId: parseInt(chainId), // Object.entries, Object.keys etc. only return keys as strings. Therefore, we have to parse them here
       coinKey: coin.key,
-      name: token.name ?? coin.key,
+      name: token.name ?? coin.name ?? coin.key,
       logoURI: coin.logoURI,
     }
   }
@@ -1940,15 +1941,13 @@ export const findTokenByChainIdAndAddress = (
   chainId: number,
   tokenAddress: string
 ): StaticToken | null => {
-  let token: StaticToken | null = null
-
-  defaultCoins.forEach((coin) => {
-    Object.values(coin.chains).forEach((coinToken: StaticToken) => {
-      if (coinToken.chainId === chainId && coinToken.address === tokenAddress) {
-        token = coinToken
-      }
-    })
-  })
-
-  return token
+  return (
+    defaultCoins
+      .flatMap(({ chains }) => Object.values(chains))
+      .find(
+        (token) =>
+          token.chainId === chainId &&
+          tokenAddress.toLowerCase() === token.address.toLowerCase()
+      ) ?? null
+  )
 }
