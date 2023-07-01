@@ -1,20 +1,31 @@
-import axios from "axios"
-import { defaultCoins } from "../src"
+import { expect, test } from '@jest/globals'
+import './matchers'
+import { defaultCoins, wrappedTokens } from "../src"
 
 jest.setTimeout(20_000)
 
 describe('Coin logo test', () => {
-    test.each(defaultCoins)(
-        'that the links for logoURI are working', async (coin) => {
-            const baseURL = coin.logoURI
-            const tokenSpecificURLs = Object.values(coin.chains).flatMap(({ logoURI }) => logoURI ? [logoURI] : [])
-            const failing: string[] = []
-            await Promise.allSettled([...new Set([
-                baseURL,
-                ...tokenSpecificURLs
-            ])]
-            .map(url => axios.get(url).catch(_ => failing.push(url))))
-            expect(failing).toHaveLength(0)
-        }
-    )
+  const allImages : string[] = []
+
+  // default coins
+  allImages.push(
+    ...defaultCoins.map((coin) => {
+      const baseURL = coin.logoURI
+      const tokenSpecificURLs = Object.values(coin.chains).flatMap(({ logoURI }) => logoURI ? [logoURI] : [])
+      return [
+          baseURL,
+          ...tokenSpecificURLs
+      ]
+    }).flat()
+  )
+
+  // wrapped tokens
+  allImages.push(
+    ...Object.values(wrappedTokens).map((token: any) => token.logoURI)
+  )
+
+  test.each([...new Set(allImages)])('that the links for logoURI are working', async (image) => {
+    expect(image).httpsUrl()
+    await expect(image).canGetUrl()
+  })
 })
