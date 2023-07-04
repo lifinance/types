@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.3](https://github.com/lifinance/types/compare/v8.0.2...v8.0.3) (2023-07-04)
+
+
+### Bug Fixes
+
+* remove unused and failing install script ([#177](https://github.com/lifinance/types/issues/177)) ([334b69b](https://github.com/lifinance/types/commit/334b69bd462f60dd36fdc43a54228d08b9a43b8a))
+* set right polygon zkevm WETH address ([67d39bb](https://github.com/lifinance/types/commit/67d39bb60423f96f142d38e3ff2e6466d2f8f0a8))
+* validate chains with custom matchers ([#178](https://github.com/lifinance/types/issues/178)) ([780a6d0](https://github.com/lifinance/types/commit/780a6d0fabb3b07464b63d0fc1132c462d3d63de))
+
 ### [8.0.2](https://github.com/lifinance/types/compare/v8.0.1...v8.0.2) (2023-06-30)
 
 
