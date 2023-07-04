@@ -10,7 +10,6 @@
     "import": "./dist/index.js"
   },
   "scripts": {
-    "install": "node -e \"if (!require('fs').existsSync('./dist')){process.exit(1)}\" || npm run build",
     "watch": "tsc -w -p ./tsconfig.json",
     "build": "node tools/cleanup types && tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
     "clean": "node tools/cleanup",
