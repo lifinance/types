@@ -360,7 +360,8 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.FTM,
     name: CoinKey.FTM,
-    logoURI: 'https://assets.spookyswap.finance/tokens/FTM.png',
+    logoURI:
+      'https://static.debank.com/image/ftm_token/logo_url/ftm/33fdb9c5067e94f3a1b9e78f6fa86984.png',
     verified: true,
     chains: {
       [ChainId.FTM]: {
