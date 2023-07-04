@@ -24,7 +24,7 @@ describe('Coin logo test', () => {
     ...Object.values(wrappedTokens).map((token: any) => token.logoURI)
   )
 
-  test.each([...new Set(allImages)])('that the links for logoURI are working', async (image) => {
+  test.each([...new Set(allImages)])('check that logoURI %s is valid', async (image) => {
     expect(image).httpsUrl()
     await expect(image).canGetUrl()
   })
