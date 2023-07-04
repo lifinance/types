@@ -1,4 +1,7 @@
-import { ChainId, ChainKey, getChainByKey, getChainById, supportedEVMChains, findDefaultToken, findWrappedGasOnChain, CoinKey } from '../src'
+import { expect, test } from '@jest/globals'
+import './matchers'
+
+import { ChainId, ChainKey, getChainByKey, getChainById, supportedEVMChains, findDefaultToken, findWrappedGasOnChain, CoinKey, prefixChainId } from '../src'
 import { findTokenByChainIdAndAddress } from '../src/coins';
 test('getChainById', () => {
   expect(getChainById(ChainId.ETH)).toBeDefined()
@@ -62,6 +65,25 @@ describe('findTokenByChainIdAndAddress', () => {
       expect(
         findTokenByChainIdAndAddress(ChainId.GOR, '0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1')!.name
       ).toEqual('Goerli CXTT')
+    })
+  })
+})
+
+describe('validate chains', () => {
+  supportedEVMChains.forEach(chain => {
+    it(`validate chain ${chain.name}`, () => {
+      // blockExplorerUrls
+      expect(chain.metamask.blockExplorerUrls.length).toBeGreaterThan(0)
+      chain.metamask.blockExplorerUrls.forEach(blockExplorerUrl => {
+        expect(blockExplorerUrl).httpsUrl()
+        expect(blockExplorerUrl).endsWith('/')
+      })
+
+      // chain ids match
+      expect(prefixChainId(chain.id)).toEqual(chain.metamask.chainId)
+
+      // rpcs defined
+      expect(chain.metamask.rpcUrls.length).toBeGreaterThan(0)
     })
   })
 })

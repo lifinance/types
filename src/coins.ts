@@ -360,7 +360,8 @@ const basicCoins: BasicCoin[] = [
   {
     key: CoinKey.FTM,
     name: CoinKey.FTM,
-    logoURI: 'https://assets.spookyswap.finance/tokens/FTM.png',
+    logoURI:
+      'https://static.debank.com/image/ftm_token/logo_url/ftm/33fdb9c5067e94f3a1b9e78f6fa86984.png',
     verified: true,
     chains: {
       [ChainId.FTM]: {
@@ -1884,7 +1885,7 @@ export const wrappedTokens: { [ChainId: string]: StaticToken } = {
     coinKey: 'WBNB' as CoinKey,
     name: 'WBNB',
     logoURI:
-      'https://zapper.fi/images/networks/binance-smart-chain/0x0000000000000000000000000000000000000000.png',
+      'https://static.debank.com/image/coin/logo_url/bnb/9784283a36f23a58982fc964574ea530.png',
   },
   [ChainId.LNAT]: {
     // https://explorer.prealpha.zkevm.consensys.net/address/0x2C1b868d6596a18e32E61B901E4060C872647b6C

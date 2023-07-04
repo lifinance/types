@@ -904,7 +904,7 @@ export const supportedEVMChains: EVMChain[] = [
 
     metamask: {
       chainId: prefixChainId(1101),
-      blockExplorerUrls: ['https://zkevm.polygonscan.com'],
+      blockExplorerUrls: ['https://zkevm.polygonscan.com/'],
       chainName: 'Polygon zkEVM',
       nativeCurrency: {
         name: 'ETH',
@@ -1054,7 +1054,7 @@ export const supportedEVMChains: EVMChain[] = [
     multicallAddress: multicallAddresses[ChainId.OPTG],
 
     metamask: {
-      chainId: prefixChainId(69),
+      chainId: prefixChainId(420),
       blockExplorerUrls: ['https://blockscout.com/optimism/goerli/'],
       chainName: 'Optimistic Ethereum Testnet Goerli',
       nativeCurrency: {
