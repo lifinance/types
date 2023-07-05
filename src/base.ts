@@ -194,10 +194,13 @@ export enum ChainId {
   LNAT = 59140,
 }
 
+export type EVMAddress = string & { __EVMAddress: never }
+
 export interface BaseToken {
   chainId: ChainId
-  address: string
+  address: EVMAddress
 }
+
 export interface StaticToken extends BaseToken {
   symbol: string
   decimals: number

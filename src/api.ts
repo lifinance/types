@@ -3,6 +3,7 @@ import {
   BridgeDefinition,
   Chain,
   ChainId,
+  EVMAddress,
   ExchangeDefinition,
   LifiStep,
   Token,
@@ -16,12 +17,12 @@ export interface RoutesRequest {
   fromChainId: number
   fromAmount: string
 
-  fromTokenAddress: string
-  fromAddress?: string
+  fromTokenAddress: EVMAddress
+  fromAddress?: EVMAddress
 
   toChainId: number
-  toTokenAddress: string
-  toAddress?: string
+  toTokenAddress: EVMAddress
+  toAddress?: EVMAddress
 
   options?: RouteOptions
   fromAmountForGas?: string
@@ -84,14 +85,14 @@ export interface Route {
   fromAmountUSD: string
   fromAmount: string
   fromToken: Token
-  fromAddress?: string
+  fromAddress?: EVMAddress
 
   toChainId: number
   toAmountUSD: string
   toAmount: string
   toAmountMin: string
   toToken: Token
-  toAddress?: string
+  toAddress?: EVMAddress
 
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
@@ -151,7 +152,7 @@ export interface PossibilitiesResponse {
 
 export interface GetTokenRequest {
   chain: number | string
-  token: string
+  token: EVMAddress
 }
 
 export interface ToolConfiguration {
@@ -165,13 +166,13 @@ export interface ToolConfiguration {
 
 export interface QuoteRequest extends ToolConfiguration {
   fromChain: number | string
-  fromToken: string
-  fromAddress: string
+  fromToken: EVMAddress
+  fromAddress: EVMAddress
   fromAmount: string
 
   toChain: number | string
-  toToken: string
-  toAddress?: string
+  toToken: EVMAddress
+  toAddress?: EVMAddress
 
   order?: Order
   slippage?: number | string
@@ -186,18 +187,18 @@ export interface QuoteRequest extends ToolConfiguration {
 
 export interface ContractCallQuoteRequest extends ToolConfiguration {
   fromChain: number | string
-  fromToken: string
-  fromAddress: string
+  fromToken: EVMAddress
+  fromAddress: EVMAddress
 
   toChain: number | string
-  toToken: string
+  toToken: EVMAddress
   toAmount: string
-  toContractAddress: string
+  toContractAddress: EVMAddress
   toContractCallData: string
   toContractGasLimit: string
-  toApprovalAddress?: string
-  toFallbackAddress?: string
-  contractOutputsToken?: string
+  toApprovalAddress?: EVMAddress
+  toFallbackAddress?: EVMAddress
+  contractOutputsToken?: EVMAddress
 
   slippage?: number | string
   integrator?: string
@@ -208,17 +209,17 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
 
 export interface ContractCallQuotesRequest extends ToolConfiguration {
   fromChain: number | string
-  fromToken: string
-  fromAddress: string
+  fromToken: EVMAddress
+  fromAddress: EVMAddress
 
   toChain: number | string
-  toFallbackAddress?: string
+  toFallbackAddress?: EVMAddress
   toContractCalls: {
     sendingAmount: string
-    sendingToken: string
-    receivingToken: string
-    contractAddress: string
-    approvalAddress?: string
+    sendingToken: EVMAddress
+    receivingToken: EVMAddress
+    contractAddress: EVMAddress
+    approvalAddress?: EVMAddress
     callData: string
     gasLimit: string
   }[]
@@ -231,9 +232,9 @@ export interface ContractCallQuotesRequest extends ToolConfiguration {
 
 export interface ConnectionsRequest extends ToolConfiguration {
   fromChain?: number | string
-  fromToken?: string
+  fromToken?: EVMAddress
   toChain?: number | string
-  toToken?: string
+  toToken?: EVMAddress
 }
 
 export interface Connection {
@@ -358,8 +359,8 @@ export interface FullStatusData extends StatusData {
   sending: ExtendedTransactionInfo
   receiving: PendingReceivingInfo | ExtendedTransactionInfo
   lifiExplorerLink: string
-  fromAddress: string
-  toAddress: string
+  fromAddress: EVMAddress
+  toAddress: EVMAddress
   bridgeExplorerLink?: string
 }
 
@@ -406,7 +407,7 @@ export type TokenBalance = {
 export interface IntegratorWithdrawalRequest {
   integratorId: string
   chainId: ChainId
-  tokens?: string[]
+  tokens?: EVMAddress[]
 }
 
 export interface IntegratorWithdrawalTransactionResponse {
@@ -425,7 +426,7 @@ export type LIFuelStatusResponse = {
 export type GasRecommendationRequest = {
   chainId: ChainId
   fromChain?: ChainId
-  fromToken?: string
+  fromToken?: EVMAddress
 }
 
 export type RefetchSourceLIFuelRequest = {

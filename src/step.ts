@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { providers } from 'ethers'
 import { Substatus } from '.'
-import { Token } from './base'
+import { EVMAddress, Token } from './base'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
 
@@ -30,11 +30,11 @@ export interface Action {
   fromChainId: number
   fromAmount: string
   fromToken: Token
-  fromAddress?: string
+  fromAddress?: EVMAddress
 
   toChainId: number
   toToken: Token
-  toAddress?: string
+  toAddress?: EVMAddress
 
   slippage: number
 }
@@ -47,7 +47,7 @@ export interface Estimate {
   toAmount: string
   toAmountMin: string
   toAmountUSD?: string
-  approvalAddress: string
+  approvalAddress: EVMAddress
 
   feeCosts?: FeeCost[]
   gasCosts?: GasCost[] // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
@@ -142,9 +142,9 @@ export interface StepBase {
 }
 
 export interface DestinationCallInfo {
-  toContractAddress: string
+  toContractAddress: EVMAddress
   toContractCallData: string
-  toFallbackAddress: string
+  toFallbackAddress: EVMAddress
   callDataGasLimit: string
 }
 

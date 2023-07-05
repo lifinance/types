@@ -1,6 +1,7 @@
 import {
   ChainId,
   CoinKey,
+  EVMAddress,
   findDefaultToken,
   findWrappedGasOnChain,
   StaticToken,
@@ -936,21 +937,21 @@ export interface Exchange {
       findDefaultToken(CoinKey.ETH, ChainId.MOO),
       {
         chainId: 1284,
-        address: '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73',
+        address: '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73' as EVMAddress,
         symbol: 'USDT',
         name: 'USDT Token',
         decimals: 6,
       },
       {
         chainId: 1284,
-        address: '0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F',
+        address: '0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F' as EVMAddress,
         symbol: 'BUSD',
         name: 'BUSD Token',
         decimals: 18,
       },
       {
         chainId: 1284,
-        address: '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b',
+        address: '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b' as EVMAddress,
         symbol: 'USDC',
         name: 'USDC Token',
         decimals: 6,

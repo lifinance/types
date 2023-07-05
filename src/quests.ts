@@ -1,3 +1,5 @@
+import { EVMAddress } from './base'
+
 export interface BaseQuest {
   id: string
   name: string
@@ -10,11 +12,11 @@ export interface QuestStatus extends BaseQuest {
 
 export type GetQuestStatusRequest = {
   questId: string
-  walletAddress: string
+  walletAddress: EVMAddress
 }
 
 export type GetQuestsStatusRequest = {
-  walletAddress: string
+  walletAddress: EVMAddress
 }
 
 export type GetQuestStatusResponse = {
