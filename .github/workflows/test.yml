@@ -29,14 +29,13 @@ jobs:
           - ubuntu-latest
           - windows-latest
         node: [14.x, 16.x]
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - name: Install modules
-        run: yarn
+      - name: Install dependencies
+        uses: ./.github/actions/yarn-install
       - name: Run tests
         run: yarn test unit.test

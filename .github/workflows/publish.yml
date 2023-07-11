@@ -31,8 +31,8 @@ jobs:
         with:
           node-version: 14
           registry-url: 'https://registry.npmjs.org'
-      - name: Install modules
-        run: npm install
+      - name: Install dependencies
+        uses: ./.github/actions/yarn-install
       - name: Build
         run: npm run build
       - name: Publish to npm
