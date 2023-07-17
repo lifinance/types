@@ -213,8 +213,8 @@ export interface Token extends StaticToken {
 }
 
 export interface TokenAmount extends Token {
-  amount: string
-  blockNumber?: number
+  amount?: bigint
+  blockNumber?: bigint
 }
 
 export interface Coin {
