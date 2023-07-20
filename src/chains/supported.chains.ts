@@ -911,7 +911,7 @@ export const supportedEVMChains: EVMChain[] = [
         symbol: 'ETH',
         decimals: 18,
       },
-      rpcUrls: ['https://polygon-rpc.com/zkevm'],
+      rpcUrls: ['https://zkevm-rpc.com'],
     },
   },
 
