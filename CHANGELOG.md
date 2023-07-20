@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.4](https://github.com/lifinance/types/compare/v8.0.3...v8.0.4) (2023-07-20)
+
+
+### Bug Fixes
+
+* **chains:** update zkEVM rpc ([#181](https://github.com/lifinance/types/issues/181)) ([55b45fa](https://github.com/lifinance/types/commit/55b45fa6f6b76c65f5a9b71da7cbe97c37b828bb))
+
 ### [8.0.3](https://github.com/lifinance/types/compare/v8.0.2...v8.0.3) (2023-07-04)
 
 
