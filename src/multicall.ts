@@ -7,7 +7,7 @@ import { ChainId } from '.'
 // - https://github.com/joshstevens19/ethereum-multicall#multicall-contracts
 // '0xcA11bde05977b3631167028862bE2a173976CA11' is a Multicall3 contract
 // export const multicallAddresses: Record<ChainId, string> = {
-export const multicallAddresses: { [ChainId: number]: string } = {
+export const multicallAddresses: { [ChainId: ChainId]: string } = {
   // Mainnet
   [ChainId.ETH]: '0xcA11bde05977b3631167028862bE2a173976CA11', // '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696',
   [ChainId.POL]: '0xcA11bde05977b3631167028862bE2a173976CA11', // '0x02817C1e3543c2d908a590F5dB6bc97f933dB4BD',
