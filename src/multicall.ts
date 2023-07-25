@@ -1,6 +1,7 @@
 import { ChainId } from '.'
 
 // based on:
+// new nice tool to search for addresses: https://www.multicall3.com/deployments
 // - https://github.com/mds1/multicall#deployments
 // - https://github.com/sushiswap/sushiswap-sdk/blob/canary/src/constants/addresses.ts#L323
 // - https://github.com/joshstevens19/ethereum-multicall#multicall-contracts
@@ -33,10 +34,11 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.RSK]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.VEL]: '0x6ede559F2Bd951777470595761672091CCD21Ac6',
   [ChainId.PZE]: '0xcA11bde05977b3631167028862bE2a173976CA11',
-  // [ChainId.ERA]: '', // not available
+  [ChainId.ERA]: '0xF9cda624FBC7e059355ce98a31693d299FACd963',
+  [ChainId.LNA]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  [ChainId.ARN]: '0xcA11bde05977b3631167028862bE2a173976CA11',
 
   // TODO
-  // [ChainId.ARN]: '', // TODO
   // [ChainId.EXP]: '', // TODO
   // [ChainId.TCH]: '', // TODO
   // [ChainId.UBQ]: '', // TODO
@@ -60,6 +62,7 @@ export const multicallAddresses: { [ChainId: number]: string } = {
   [ChainId.FTMT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.RSKT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
   [ChainId.ARBG]: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  [ChainId.LNAT]: '0xcA11bde05977b3631167028862bE2a173976CA11',
 
   // TODO
   // [ChainId.METT]: '', // TODO
