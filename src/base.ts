@@ -107,6 +107,7 @@ export enum ChainKey {
   ARN = 'arn',
   ERA = 'era',
   PZE = 'pze',
+  LNA = 'lna',
 
   // Testnets
   GOR = 'gor',
@@ -170,6 +171,7 @@ export enum ChainId {
   ARN = 42170,
   ERA = 324,
   PZE = 1101,
+  LNA = 59144,
 
   // Testnets
   GOR = 5,

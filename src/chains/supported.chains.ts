@@ -876,6 +876,7 @@ export const supportedEVMChains: EVMChain[] = [
     mainnet: true,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/zksync.png',
+    multicallAddress: multicallAddresses[ChainId.ERA],
 
     metamask: {
       chainId: prefixChainId(324),
@@ -1249,7 +1250,7 @@ export const supportedEVMChains: EVMChain[] = [
     mainnet: false,
     logoURI:
       'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/linea.svg',
-    // multicallAddress: multicallAddresses[ChainId.LNAT], // Not deployed yet
+    multicallAddress: multicallAddresses[ChainId.LNAT],
     faucetUrls: ['https://faucetlink.to/goerli'],
 
     metamask: {
