@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.1.0](https://github.com/lifinance/types/compare/v8.0.4...v8.1.0) (2023-07-26)
+
+
+### Features
+
+* add LNA and update multicall addresses ([391db05](https://github.com/lifinance/types/commit/391db05cfea042285b762266efa7ad8ed11e3a5f))
+* add LNA and update multicall addresses ([#182](https://github.com/lifinance/types/issues/182)) ([6a4b374](https://github.com/lifinance/types/commit/6a4b374cb43c822e2014e98e24c61e8d88a1f25c))
+
 ### [8.0.4](https://github.com/lifinance/types/compare/v8.0.3...v8.0.4) (2023-07-20)
 
 
