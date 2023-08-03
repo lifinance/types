@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - 'v*'
+      - 'v*-alpha.[0-9]+'
+      - 'v*-beta.[0-9]+'
 
 jobs:
   release:
@@ -36,6 +38,8 @@ jobs:
       - name: Build
         run: npm run build
       - name: Publish to npm
-        run: npm publish --access public
+        run: |
+          npm publish --access public \
+          ${{ contains(github.ref_name, 'alpha') && '--tag alpha' || contains(github.ref_name, 'beta') && '--tag beta' || '' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
