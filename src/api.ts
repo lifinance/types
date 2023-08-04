@@ -1,4 +1,3 @@
-import { TransactionRequest } from '@ethersproject/providers'
 import {
   BridgeDefinition,
   Chain,
@@ -8,6 +7,28 @@ import {
   Token,
 } from '.'
 import { ToolError } from './apiErrors'
+
+export type TransactionRequest = {
+  to?: string
+  from?: string
+  nonce?: number
+
+  gasLimit?: bigint
+  gasPrice?: bigint
+
+  data?: `0x${string}`
+  value?: bigint
+  chainId?: number
+
+  type?: number
+  accessList?: { address: `0x${string}`; storageKeys: `0x${string}`[] }[]
+
+  maxPriorityFeePerGas?: bigint
+  maxFeePerGas?: bigint
+
+  customData?: Record<string, any>
+  ccipReadEnabled?: boolean
+}
 
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
 export type Order = (typeof Orders)[number]

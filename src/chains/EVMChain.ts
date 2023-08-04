@@ -1,4 +1,3 @@
-import { BigNumber } from 'ethers'
 import { _Chain } from './Chain'
 
 export interface EVMChain extends _Chain {
@@ -18,10 +17,6 @@ export interface AddEthereumChainParameter {
     decimals: number
   }
   rpcUrls: string[]
-}
-
-export const prefixChainId = (chainId: number): string => {
-  return '0x' + BigNumber.from(chainId)._hex.split('0x')[1].replace(/\b0+/g, '')
 }
 
 // This type alias is required to avoid breaking

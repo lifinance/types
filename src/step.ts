@@ -1,9 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { providers } from 'ethers'
-import { Substatus } from '.'
+import { Substatus, TransactionRequest } from '.'
 import { Token } from './base'
-import { Bridge } from './bridges'
-import { Exchange, ExchangeAggregator } from './exchanges'
 
 export interface FeeCost {
   name: string
@@ -124,21 +120,23 @@ export const _StepType = [
 ] as const
 export type StepType = (typeof _StepType)[number]
 export type StepTool = string
+export type StepToolDetails = {
+  key: string
+  name: string
+  logoURI: string
+}
 
 export interface StepBase {
   id: string
   type: StepType
   tool: StepTool
-  toolDetails: Pick<
-    ExchangeAggregator | Exchange | Bridge,
-    'key' | 'name' | 'logoURI'
-  >
+  toolDetails: StepToolDetails
   integrator?: string
   referrer?: string
   action: Action
   estimate?: Estimate
   execution?: Execution
-  transactionRequest?: providers.TransactionRequest
+  transactionRequest?: TransactionRequest
 }
 
 export interface DestinationCallInfo {

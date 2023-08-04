@@ -1,6 +1,3 @@
-import { BridgeTool } from './bridges'
-import { ExchangeTools } from './exchanges'
-
 export enum CoinKey {
   ETH = 'ETH',
   MATIC = 'MATIC',
@@ -225,26 +222,4 @@ export interface Coin {
   chains: {
     [ChainId: string]: StaticToken
   }
-}
-
-export interface ExchangeDefinition {
-  tool: ExchangeTools
-  chains: number[]
-}
-
-/**
- * Should not be accessed via the types package anymore
- * @deprecated
- */
-export interface BridgeDefinition {
-  tool: BridgeTool
-  fromChainId: number
-  fromToken: BaseToken
-  toChainId: number
-  toToken: BaseToken
-  maximumTransfer: string
-  minimumTransfer: string
-  swapFeeRate: string
-  swapFeeMinimum: string
-  swapFeeMaximum: string
 }
