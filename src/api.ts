@@ -21,12 +21,12 @@ export type TransactionRequest = {
   gasLimit?: BigIntish
   gasPrice?: BigIntish
 
-  data?: `0x${string}`
+  data?: string
   value?: BigIntish
   chainId?: number
 
   type?: number
-  accessList?: { address: `0x${string}`; storageKeys: `0x${string}`[] }[]
+  accessList?: { address: string; storageKeys: string[] }[]
 
   maxPriorityFeePerGas?: BigIntish
   maxFeePerGas?: BigIntish
