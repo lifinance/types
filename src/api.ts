@@ -299,6 +299,8 @@ const _SubstatusPending = [
   'BRIDGE_NOT_AVAILABLE',
   // The RPC for source/destination chain is temporarily unavailable
   'CHAIN_NOT_AVAILABLE',
+  // The transfer cannot be completed, a refund is required
+  'NOT_PROCESSABLE_REFUND_NEEDED',
   // A refund has been requested and is in progress
   'REFUND_IN_PROGRESS',
   // We cannot determine the status of the transfer
@@ -318,13 +320,7 @@ const _SubstatusDone = [
 ] as const
 export type SubstatusDone = (typeof _SubstatusDone)[number]
 
-const _SubstatusFailed = [
-  // The transfer cannot be completed, a refund is required
-  'NOT_PROCESSABLE_REFUND_NEEDED',
-] as const
-
-export type SubstatusFailed = (typeof _SubstatusFailed)[number]
-export type Substatus = SubstatusPending | SubstatusDone | SubstatusFailed
+export type Substatus = SubstatusPending | SubstatusDone
 
 export const isSubstatusPending = (
   substatus: Substatus
@@ -334,10 +330,6 @@ export const isSubstatusDone = (
   substatus: Substatus
 ): substatus is SubstatusDone =>
   _SubstatusDone.includes(substatus as SubstatusDone)
-export const isSubstatusFailed = (
-  substatus: Substatus
-): substatus is SubstatusFailed =>
-  _SubstatusFailed.includes(substatus as SubstatusFailed)
 
 export interface BaseStatusData {
   status: StatusMessage
