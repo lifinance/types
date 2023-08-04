@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.3.0](https://github.com/lifinance/types/compare/v8.2.0...v8.3.0) (2023-08-04)
+
+
+### Features
+
+* move NOT_PROCESSABLE_REFUND_NEEDED to PENDING ([#185](https://github.com/lifinance/types/issues/185)) ([14ceea0](https://github.com/lifinance/types/commit/14ceea03f7e95466061c46b70998738114812f80))
+
 ## [8.2.0](https://github.com/lifinance/types/compare/v8.0.4...v8.2.0) (2023-07-26)
 
 
