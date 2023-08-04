@@ -8,23 +8,28 @@ import {
 } from '.'
 import { ToolError } from './apiErrors'
 
+/**
+ * Used as a bigint replacement for TransactionRequest because bigint is not serializable
+ */
+export type BigIntish = string
+
 export type TransactionRequest = {
   to?: string
   from?: string
   nonce?: number
 
-  gasLimit?: bigint
-  gasPrice?: bigint
+  gasLimit?: BigIntish
+  gasPrice?: BigIntish
 
   data?: `0x${string}`
-  value?: bigint
+  value?: BigIntish
   chainId?: number
 
   type?: number
   accessList?: { address: `0x${string}`; storageKeys: `0x${string}`[] }[]
 
-  maxPriorityFeePerGas?: bigint
-  maxFeePerGas?: bigint
+  maxPriorityFeePerGas?: BigIntish
+  maxFeePerGas?: BigIntish
 
   customData?: Record<string, any>
   ccipReadEnabled?: boolean
