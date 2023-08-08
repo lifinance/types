@@ -184,6 +184,16 @@ export interface QuoteRequest extends ToolConfiguration {
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
+export interface ContractCall {
+  fromAmount: string
+  fromTokenAddress: string
+  toContractAddress: string
+  toContractCallData: string
+  toContractGasLimit: string
+  toApprovalAddress?: string
+  toTokenAddress?: string
+}
+
 export interface ContractCallQuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
@@ -192,12 +202,10 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
   toChain: number | string
   toToken: string
   toAmount: string
-  toContractAddress: string
-  toContractCallData: string
-  toContractGasLimit: string
-  toApprovalAddress?: string
+
   toFallbackAddress?: string
   contractOutputsToken?: string
+  contractCalls: ContractCall[]
 
   slippage?: number | string
   integrator?: string
