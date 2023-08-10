@@ -54,18 +54,18 @@ export interface RoutesRequest {
 }
 
 export interface RouteOptions {
-  order?: Order // (default : RECOMMENDED)
-  slippage?: number // (default : 0.03)
-  infiniteApproval?: boolean // (default : false)
-  allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
-  integrator?: string // custom string developer who integrate LI.FI can set
-  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
-  referrer?: string // integrators can set a wallet address as referrer to track them
+  integrator?: string // Should contain the identifier of the integrator. Usually, it's dApp/company name.
+  fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
+  insurance?: boolean // Whether the user wants to insure their tx
+  maxPriceImpact?: number // Hide routes with price impact greater than or equal to this value
+  order?: Order // (default: RECOMMENDED) 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
+  slippage?: number // (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%
+  referrer?: string // Integrators can set a wallet address as a referrer to track them
+  infiniteApproval?: boolean // (default: false)
+  allowSwitchChain?: boolean // (default: false) Whether chain switches should be allowed in the routes
+  allowDestinationCall?: boolean // (default: true) destination calls are enabled by default
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
-  fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
-  insurance?: boolean // whether the user want to insure their tx
-  maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
 export type ToolsResponse = {
