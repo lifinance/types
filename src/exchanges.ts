@@ -1,32 +1,14 @@
 import { StaticToken } from '.'
 
-/**
- * @deprecated
- * These values are now obtainable from the LI.FI API
- */
-export enum ExchangeTool {
-  oneinch = '1inch',
-  paraswap = 'paraswap',
-  openocean = 'openocean',
-  zerox = '0x',
-  dodo = 'dodo',
-}
-
-/**
- * @deprecated
- * These values are now obtainable from the LI.FI API
- */
-export type ExchangeTools = ExchangeTool | string
-
 export interface ExchangeAggregator {
-  key: ExchangeTool
+  key: string
   name: string
   logoURI: string
   webUrl: string
 }
 
 export interface Exchange {
-  key: ExchangeTools
+  key: string
   name: string
   chainId: number
   logoURI: string
@@ -40,6 +22,6 @@ export interface Exchange {
 }
 
 export interface ExchangeDefinition {
-  tool: ExchangeTools
+  tool: string
   chains: number[]
 }

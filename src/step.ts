@@ -1,5 +1,5 @@
 import { Substatus, TransactionRequest } from '.'
-import { Token } from './base'
+import { Token } from './tokens/token'
 
 export interface FeeCost {
   name: string

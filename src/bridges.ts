@@ -1,26 +1,7 @@
-import { BaseToken } from './base'
-
-/**
- * @deprecated
- * These values are now obtainable from the LI.FI API
- */
-export enum BridgeTool {
-  connext = 'connext',
-  hop = 'hop',
-  multichain = 'multichain',
-  cbridge = 'cbridge',
-  hyphen = 'hyphen',
-  polygon = 'polygon',
-  arbitrum = 'arbitrum',
-  avalanche = 'avalanche',
-  optimism = 'optimism',
-  across = 'across',
-  portal = 'portal',
-  stargate = 'stargate',
-}
+import { BaseToken } from './tokens/token'
 
 export interface Bridge {
-  key: BridgeTool
+  key: string
   name: string
   logoURI: string
   bridgeUrl?: string
@@ -36,7 +17,7 @@ export interface Bridge {
  * @deprecated
  */
 export interface BridgeDefinition {
-  tool: BridgeTool
+  tool: string
   fromChainId: number
   fromToken: BaseToken
   toChainId: number

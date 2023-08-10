@@ -1,12 +1,9 @@
-import {
-  BridgeDefinition,
-  Chain,
-  ChainId,
-  ExchangeDefinition,
-  LifiStep,
-  Token,
-} from '.'
-import { ToolError } from './apiErrors'
+import { BridgeDefinition } from './bridges'
+import { Chain } from './chains'
+import { ChainId } from './chains/base'
+import { ExchangeDefinition } from './exchanges'
+import { Action, LifiStep } from './step'
+import { Token } from './tokens'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -127,6 +124,16 @@ export interface Route {
   steps: LifiStep[]
 
   tags?: Order[]
+}
+
+export type ToolErrorType = 'NO_QUOTE'
+
+export interface ToolError {
+  errorType: ToolErrorType
+  code: string
+  action: Action
+  tool: string
+  message: string
 }
 
 export type ErroredPaths = { [subpath: string]: ToolError[] }
