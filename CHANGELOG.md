@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.4.0](https://github.com/lifinance/types/compare/v8.3.0...v8.4.0) (2023-08-14)
+
+
+### Features
+
+* add BASE chain ([#186](https://github.com/lifinance/types/issues/186)) ([7726a93](https://github.com/lifinance/types/commit/7726a93c2fa1dbdef53f359229280c26670fe4c1))
+
 ## [8.3.0](https://github.com/lifinance/types/compare/v8.2.0...v8.3.0) (2023-08-04)
 
 
