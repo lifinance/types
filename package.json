@@ -11,8 +11,7 @@
   },
   "scripts": {
     "addscope": "node tools/packagejson name @lifi/types",
-    "build": "node tools/cleanup types && tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
-    "clean": "node tools/cleanup",
+    "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
     "package": "npm run build && npm pack",
     "postpublish": "npm run use:gitReadme && pinst --enable",
