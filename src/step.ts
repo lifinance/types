@@ -1,4 +1,4 @@
-import { Substatus, TransactionRequest } from '.'
+import { Substatus, TransactionRequest } from './api'
 import { Token } from './tokens/token'
 
 export interface FeeCost {

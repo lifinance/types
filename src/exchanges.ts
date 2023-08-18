@@ -1,4 +1,4 @@
-import { StaticToken } from '.'
+import { StaticToken } from './tokens'
 
 export interface ExchangeAggregator {
   key: string
