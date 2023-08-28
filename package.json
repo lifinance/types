@@ -13,12 +13,15 @@
     "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
     "package": "npm run build && npm pack",
-    "pre-commit": "lint-staged",
-    "pre-push": "yarn build",
     "prettier:fix": "prettier --write ./src/.",
     "release": "standard-version -a",
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
-    "release:beta": "standard-version -a --prerelease beta --skip.changelog"
+    "release:beta": "standard-version -a --prerelease beta --skip.changelog",
+    "postinstall": "husky install",
+    "pre-commit": "lint-staged",
+    "pre-push": "yarn build",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -68,7 +71,9 @@
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
+    "pinst": "^3.0.0",
     "prettier": "^3.0.2",
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2"
