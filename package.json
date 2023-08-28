@@ -2,41 +2,6 @@
   "name": "@lifi/types",
   "version": "9.0.0-alpha.10",
   "description": "Types for the LI.FI stack",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "require": "./dist/cjs/index.js",
-    "import": "./dist/index.js"
-  },
-  "scripts": {
-    "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
-    "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
-    "package": "npm run build && npm pack",
-    "prettier:fix": "prettier --write ./src/.",
-    "release": "standard-version -a",
-    "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
-    "release:beta": "standard-version -a --prerelease beta --skip.changelog",
-    "postinstall": "husky install",
-    "pre-commit": "lint-staged",
-    "pre-push": "yarn build",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "yarn run lint:fix",
-      "yarn run prettier:fix"
-    ]
-  },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "LI.FI <github@li.finance>",
-  "license": "Apache-2.0",
   "keywords": [
     "sdk",
     "ethereum",
@@ -56,12 +21,44 @@
     "metamask"
   ],
   "homepage": "https://github.com/lifinance/types",
+  "bugs": {
+    "url": "https://github.com/lifinance/types"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/lifinance/types.git"
   },
-  "bugs": {
-    "url": "https://github.com/lifinance/types"
+  "license": "Apache-2.0",
+  "author": "LI.FI <github@li.finance>",
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/index.js"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
+    "postinstall": "husky install",
+    "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "package": "npm run build && npm pack",
+    "pre-commit": "lint-staged",
+    "pre-push": "yarn build",
+    "prettier:fix": "prettier --write ./src/.",
+    "release": "standard-version -a",
+    "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
+    "release:beta": "standard-version -a --prerelease beta --skip.changelog"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn run lint:fix",
+      "yarn run prettier:fix"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
@@ -78,5 +75,8 @@
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.3",
+  "publishConfig": {
+    "access": "public"
+  }
 }

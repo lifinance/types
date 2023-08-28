@@ -20,8 +20,6 @@ Check out the [Changelog](./CHANGELOG.md) to see what changed in the last releas
 
 ## Installation
 
-Install dependencies with yarn:
-
 ```bash
 yarn add @lifi/types
 ```
@@ -31,7 +29,3 @@ or
 ```bash
 npm install --save @lifi/types
 ```
-
-## Summary
-
-This package contains type definitions for LI.FI projects (https://github.com/lifinance).
