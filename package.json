@@ -10,22 +10,15 @@
     "import": "./dist/index.js"
   },
   "scripts": {
-    "addscope": "node tools/packagejson name @lifi/types",
     "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
     "package": "npm run build && npm pack",
-    "postpublish": "npm run use:gitReadme && pinst --enable",
     "pre-commit": "lint-staged",
     "pre-push": "yarn build",
-    "prepare": "husky install",
-    "prepublishOnly": "run-s build use:npmReadme && pinst --enable",
     "prettier:fix": "prettier --write ./src/.",
     "release": "standard-version -a",
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
-    "release:beta": "standard-version -a --prerelease beta --skip.changelog",
-    "use:gitReadme": "mv 'README.md' 'npm.README.md' && mv 'git.README.md' 'README.md'",
-    "use:npmReadme": "mv 'README.md' 'git.README.md' && mv 'npm.README.md' 'README.md'",
-    "watch": "tsc -w -p ./tsconfig.json"
+    "release:beta": "standard-version -a --prerelease beta --skip.changelog"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -70,18 +63,15 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
-    "eslint": "^8.47.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.0",
-    "npm-run-all": "^4.1.5",
-    "pinst": "^3.0.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
     "standard-version": "^9.5.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
-  "packageManager": "yarn@3.6.2"
+  "packageManager": "yarn@3.6.3"
 }
