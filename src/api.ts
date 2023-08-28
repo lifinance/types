@@ -194,7 +194,7 @@ export interface ContractCall {
   toTokenAddress?: string
 }
 
-export interface ContractCallQuoteRequest extends ToolConfiguration {
+export interface ContractCallsQuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
@@ -214,27 +214,25 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
 }
 
-export interface ContractCallQuotesRequest extends ToolConfiguration {
+/* @deprecated */
+export interface ContractCallQuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
-
   toChain: number | string
+  toToken: string
+  toAmount: string
+  toContractAddress: string
+  toContractCallData: string
+  toContractGasLimit: string
+  toApprovalAddress?: string
   toFallbackAddress?: string
-  toContractCalls: {
-    sendingAmount: string
-    sendingToken: string
-    receivingToken: string
-    contractAddress: string
-    approvalAddress?: string
-    callData: string
-    gasLimit: string
-  }[]
-
-  order?: Order
+  contractOutputsToken?: string
   slippage?: number | string
   integrator?: string
   referrer?: string
+  fee?: number | string
+  allowDestinationCall?: boolean
 }
 
 export interface ConnectionsRequest extends ToolConfiguration {
