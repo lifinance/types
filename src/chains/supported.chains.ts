@@ -938,6 +938,29 @@ export const supportedEVMChains: EVMChain[] = [
       rpcUrls: ['https://mainnet.base.org'],
     },
   },
+  {
+    key: ChainKey.LNA,
+    chainType: ChainType.EVM,
+    name: 'Linea',
+    coin: CoinKey.ETH,
+    id: 59144,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/linea.svg',
+    multicallAddress: multicallAddresses[ChainId.LNA],
+
+    metamask: {
+      chainId: prefixChainId(59144),
+      blockExplorerUrls: ['https://lineascan.build/'],
+      chainName: 'LINEA',
+      nativeCurrency: {
+        name: 'ETH',
+        symbol: 'ETH',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc.linea.build'],
+    },
+  },
 
   // TESTNETS
   // 5 - Goerli
