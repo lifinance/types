@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.5.0](https://github.com/lifinance/types/compare/v8.4.0...v8.5.0) (2023-08-29)
+
+
+### Features
+
+* add Linea ([#187](https://github.com/lifinance/types/issues/187)) ([806597a](https://github.com/lifinance/types/commit/806597a16fabcd7ded9dc04fdaf131c059b719a5))
+
 ## [8.4.0](https://github.com/lifinance/types/compare/v8.3.0...v8.4.0) (2023-08-14)
 
 
