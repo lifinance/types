@@ -880,7 +880,7 @@ export const supportedEVMChains: EVMChain[] = [
 
     metamask: {
       chainId: prefixChainId(324),
-      blockExplorerUrls: ['https://zkscan.io/'],
+      blockExplorerUrls: ['https://explorer.zksync.io/'],
       chainName: 'zkSync Era Mainnet',
       nativeCurrency: {
         name: 'ETH',
