@@ -184,11 +184,41 @@ export interface QuoteRequest extends ToolConfiguration {
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
-export interface ContractCallQuoteRequest extends ToolConfiguration {
+export interface ContractCall {
+  fromAmount: string
+  fromTokenAddress: string
+  toContractAddress: string
+  toContractCallData: string
+  toContractGasLimit: string
+  toApprovalAddress?: string
+  toTokenAddress?: string
+}
+
+export interface ContractCallsQuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
 
+  toChain: number | string
+  toToken: string
+  toAmount: string
+
+  toFallbackAddress?: string
+  contractOutputsToken?: string
+  contractCalls: ContractCall[]
+
+  slippage?: number | string
+  integrator?: string
+  referrer?: string
+  fee?: number | string
+  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
+}
+
+/* @deprecated */
+export interface ContractCallQuoteRequest extends ToolConfiguration {
+  fromChain: number | string
+  fromToken: string
+  fromAddress: string
   toChain: number | string
   toToken: string
   toAmount: string
@@ -198,35 +228,11 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
   toApprovalAddress?: string
   toFallbackAddress?: string
   contractOutputsToken?: string
-
   slippage?: number | string
   integrator?: string
   referrer?: string
   fee?: number | string
-  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
-}
-
-export interface ContractCallQuotesRequest extends ToolConfiguration {
-  fromChain: number | string
-  fromToken: string
-  fromAddress: string
-
-  toChain: number | string
-  toFallbackAddress?: string
-  toContractCalls: {
-    sendingAmount: string
-    sendingToken: string
-    receivingToken: string
-    contractAddress: string
-    approvalAddress?: string
-    callData: string
-    gasLimit: string
-  }[]
-
-  order?: Order
-  slippage?: number | string
-  integrator?: string
-  referrer?: string
+  allowDestinationCall?: boolean
 }
 
 export interface ConnectionsRequest extends ToolConfiguration {
