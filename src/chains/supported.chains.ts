@@ -875,7 +875,7 @@ export const supportedEVMChains: EVMChain[] = [
     id: 324,
     mainnet: true,
     logoURI:
-      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/zksync.png',
+      'https://raw.githubusercontent.com/lifinance/types/main/src/assets/icons/chains/zksync.svg',
     multicallAddress: multicallAddresses[ChainId.ERA],
 
     metamask: {
