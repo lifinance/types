@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.5.1](https://github.com/lifinance/types/compare/v8.5.0...v8.5.1) (2023-08-30)
+
+
+### Bug Fixes
+
+* fix wrong zksync image url ([#190](https://github.com/lifinance/types/issues/190)) ([d715aa0](https://github.com/lifinance/types/commit/d715aa039d981a1164c4bfb5c06aea2f1eca7c95))
+* fix zksync block explorer url ([#189](https://github.com/lifinance/types/issues/189)) ([fcf4983](https://github.com/lifinance/types/commit/fcf4983dd4a939debdbb40c3a26ace88694e0aaa))
+
 ## [8.5.0](https://github.com/lifinance/types/compare/v8.4.0...v8.5.0) (2023-08-29)
 
 
