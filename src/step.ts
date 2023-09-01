@@ -174,7 +174,7 @@ export interface CustomStep extends StepBase {
 
 export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
 
-export interface LifiStep extends Omit<Step, 'type'> {
+export interface LiFiStep extends Omit<Step, 'type'> {
   type: 'lifi'
   includedSteps: Step[]
 }

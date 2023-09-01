@@ -2,7 +2,7 @@ import { BridgeDefinition } from './bridges'
 import { Chain } from './chains'
 import { ChainId } from './chains/base'
 import { ExchangeDefinition } from './exchanges'
-import { Action, LifiStep } from './step'
+import { Action, LiFiStep } from './step'
 import { Token } from './tokens'
 
 /**
@@ -121,7 +121,7 @@ export interface Route {
   containsSwitchChain?: boolean // Features required for route execution
   infiniteApproval?: boolean // Features used for route execution
 
-  steps: LifiStep[]
+  steps: LiFiStep[]
 
   tags?: Order[]
 }
