@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.6.1](https://github.com/lifinance/types/compare/v8.6.0...v8.6.1) (2023-08-31)
+
+## [8.6.0](https://github.com/lifinance/types/compare/v8.3.0...v8.6.0) (2023-08-30)
+
+
+### Features
+
+* add BASE chain ([#186](https://github.com/lifinance/types/issues/186)) ([7726a93](https://github.com/lifinance/types/commit/7726a93c2fa1dbdef53f359229280c26670fe4c1))
+* add Linea ([#187](https://github.com/lifinance/types/issues/187)) ([806597a](https://github.com/lifinance/types/commit/806597a16fabcd7ded9dc04fdaf131c059b719a5))
+* contractCalls ([#188](https://github.com/lifinance/types/issues/188)) ([d3515da](https://github.com/lifinance/types/commit/d3515da6476a81d39a58ab23b134ac272079d962))
+
+
+### Bug Fixes
+
+* fix wrong zksync image url ([#190](https://github.com/lifinance/types/issues/190)) ([d715aa0](https://github.com/lifinance/types/commit/d715aa039d981a1164c4bfb5c06aea2f1eca7c95))
+* fix zksync block explorer url ([#189](https://github.com/lifinance/types/issues/189)) ([fcf4983](https://github.com/lifinance/types/commit/fcf4983dd4a939debdbb40c3a26ace88694e0aaa))
+
 ### [8.5.1](https://github.com/lifinance/types/compare/v8.5.0...v8.5.1) (2023-08-30)
 
 

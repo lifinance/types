@@ -7,7 +7,7 @@ export interface FeeCost {
   percentage: string
   token: Token
   amount: string
-  amountUSD?: string
+  amountUSD: string
   included: boolean
 }
 
