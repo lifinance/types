@@ -45,7 +45,8 @@
   "typings": "./dist/types/index.d.ts",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "!dist/**/*.tsbuildinfo"
   ],
   "scripts": {
     "build": "yarn run clean && yarn run build:cjs && yarn run build:esm && yarn run build:types",
