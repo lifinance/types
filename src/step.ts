@@ -1,5 +1,5 @@
-import { Substatus, TransactionRequest } from './api'
-import { Token } from './tokens/token'
+import type { Substatus, TransactionRequest } from './api.js'
+import type { Token } from './tokens/index.js'
 
 export interface FeeCost {
   name: string

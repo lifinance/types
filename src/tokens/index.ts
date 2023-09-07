@@ -1,2 +1,2 @@
-export * from './base'
-export * from './token'
+export * from './base.js'
+export * from './token.js'

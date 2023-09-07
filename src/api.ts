@@ -1,9 +1,8 @@
-import { BridgeDefinition } from './bridges'
-import { Chain } from './chains'
-import { ChainId } from './chains/base'
-import { ExchangeDefinition } from './exchanges'
-import { Action, LiFiStep } from './step'
-import { Token } from './tokens'
+import type { BridgeDefinition } from './bridges.js'
+import type { Chain, ChainId } from './chains/index.js'
+import type { ExchangeDefinition } from './exchanges.js'
+import type { Action, LiFiStep } from './step.js'
+import type { Token } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable

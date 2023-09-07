@@ -33,32 +33,39 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
       "default": "./dist/cjs/index.js"
     },
     "./package.json": "./package.json"
   },
   "main": "./dist/cjs/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "typings": "./dist/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
-    "postinstall": "husky install",
+    "build": "yarn run clean && yarn run build:cjs && yarn run build:esm && yarn run build:types",
+    "build:cjs": "tsc --project tsconfig.build.json --module Node16 --moduleResolution Node16 --outDir ./dist/cjs --removeComments --verbatimModuleSyntax false && echo > ./dist/cjs/package.json '{\"type\":\"commonjs\"}'",
+    "build:esm": "tsc --project tsconfig.build.json --outDir ./dist/esm && echo > ./dist/esm/package.json '{\"type\":\"module\",\"sideEffects\":false}'",
+    "build:types": "tsc --project tsconfig.build.json --declarationDir ./dist/types --emitDeclarationOnly --declaration --declarationMap",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo",
     "lint:fix": "eslint --ext .tsx --ext .ts ./src --fix",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable",
     "package": "npm run build && npm pack",
+    "postinstall": "husky install",
+    "postpack": "pinst --enable",
     "pre-commit": "lint-staged",
     "pre-push": "yarn build",
+    "prepublishOnly": "yarn bun scripts/prepublishOnly.ts",
+    "prepack": "pinst --disable",
     "prettier:fix": "prettier --write ./src/.",
     "release": "standard-version -a",
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
-    "release:beta": "standard-version -a --prerelease beta --skip.changelog"
+    "release:beta": "standard-version -a --prerelease beta --skip.changelog",
+    "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -69,15 +76,19 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@types/fs-extra": "^11.0.1",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
+    "bun": "^0.8.1",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "fs-extra": "^11.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "pinst": "^3.0.0",
     "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2"
   },

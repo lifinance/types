@@ -1,4 +1,4 @@
-import { _Chain } from './Chain'
+import type { _Chain } from './Chain.js'
 
 export interface EVMChain extends _Chain {
   // tokenlistUrl is DEPRECATED - will be removed in the next breaking release

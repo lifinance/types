@@ -1,4 +1,4 @@
-import { BaseToken } from './tokens/token'
+import type { BaseToken } from './tokens/token.js'
 
 export interface Bridge {
   key: string

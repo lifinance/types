@@ -1,5 +1,5 @@
-import { ChainId } from '../chains/base'
-import { CoinKey } from './base'
+import { ChainId } from '../chains/base.js'
+import { CoinKey } from './base.js'
 
 export interface BaseToken {
   chainId: ChainId
