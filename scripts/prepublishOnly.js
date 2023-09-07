@@ -1,9 +1,10 @@
-import { outputFileSync, readJsonSync, writeJsonSync } from 'fs-extra'
+import pkg from 'fs-extra'
 import path from 'path'
+import { fileURLToPath } from 'url'
 
-type Exports = {
-  [key: string]: string | { types?: string; import: string; default: string }
-}
+const { outputFileSync, readJsonSync, writeJsonSync } = pkg
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 generatePackageJson()
 
@@ -39,7 +40,7 @@ function generatePackageJson() {
 
   // Generate proxy packages for each export.
   const files_ = [...files]
-  for (const [key, value] of Object.entries(exports_ as Exports)) {
+  for (const [key, value] of Object.entries(exports_)) {
     if (typeof value === 'string') continue
     if (key === '.') continue
     if (!value.default || !value.import)

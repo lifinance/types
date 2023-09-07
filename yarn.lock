@@ -367,7 +367,6 @@ __metadata:
     "@types/fs-extra": ^11.0.1
     "@typescript-eslint/eslint-plugin": ^6.5.0
     "@typescript-eslint/parser": ^6.5.0
-    bun: ^0.8.1
     eslint: ^8.48.0
     eslint-config-prettier: ^9.0.0
     eslint-plugin-prettier: ^5.0.0
@@ -406,48 +405,6 @@ __metadata:
     "@nodelib/fs.scandir": 2.1.5
     fastq: ^1.6.0
   checksum: 190c643f156d8f8f277bf2a6078af1ffde1fd43f498f187c2db24d35b4b4b5785c02c7dc52e356497b9a1b65b13edc996de08de0b961c32844364da02986dc53
-  languageName: node
-  linkType: hard
-
-"@oven/bun-darwin-aarch64@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@oven/bun-darwin-aarch64@npm:0.8.1"
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@oven/bun-darwin-x64-baseline@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@oven/bun-darwin-x64-baseline@npm:0.8.1"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@oven/bun-darwin-x64@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@oven/bun-darwin-x64@npm:0.8.1"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@oven/bun-linux-aarch64@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@oven/bun-linux-aarch64@npm:0.8.1"
-  conditions: os=linux & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@oven/bun-linux-x64-baseline@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@oven/bun-linux-x64-baseline@npm:0.8.1"
-  conditions: os=linux & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@oven/bun-linux-x64@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@oven/bun-linux-x64@npm:0.8.1"
-  conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
@@ -889,37 +846,6 @@ __metadata:
   version: 1.1.2
   resolution: "buffer-from@npm:1.1.2"
   checksum: 0448524a562b37d4d7ed9efd91685a5b77a50672c556ea254ac9a6d30e3403a517d8981f10e565db24e8339413b43c97ca2951f10e399c6125a0d8911f5679bb
-  languageName: node
-  linkType: hard
-
-"bun@npm:^0.8.1":
-  version: 0.8.1
-  resolution: "bun@npm:0.8.1"
-  dependencies:
-    "@oven/bun-darwin-aarch64": 0.8.1
-    "@oven/bun-darwin-x64": 0.8.1
-    "@oven/bun-darwin-x64-baseline": 0.8.1
-    "@oven/bun-linux-aarch64": 0.8.1
-    "@oven/bun-linux-x64": 0.8.1
-    "@oven/bun-linux-x64-baseline": 0.8.1
-  dependenciesMeta:
-    "@oven/bun-darwin-aarch64":
-      optional: true
-    "@oven/bun-darwin-x64":
-      optional: true
-    "@oven/bun-darwin-x64-baseline":
-      optional: true
-    "@oven/bun-linux-aarch64":
-      optional: true
-    "@oven/bun-linux-x64":
-      optional: true
-    "@oven/bun-linux-x64-baseline":
-      optional: true
-  bin:
-    bun: bin/bun
-    bunx: bin/bun
-  checksum: c379cdfcc7393c7a048417722b9a9042baa165cc9cfaef217490b83683a0583a1e2c0f3734bcd41e3718c87924fdf7f750435bf772c4c3bdcb57c7a4f95482ea
-  conditions: (os=darwin | os=linux) & (cpu=arm64 | cpu=x64)
   languageName: node
   linkType: hard
 
