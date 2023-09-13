@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.7.0](https://github.com/lifinance/types/compare/v8.6.1...v8.7.0) (2023-09-13)
+
+
+### Features
+
+* add chainRequest for the /chains endpoint ([#193](https://github.com/lifinance/types/issues/193)) ([0957702](https://github.com/lifinance/types/commit/0957702048ce1f466a6ee82210c36750067c92cd))
+
 ### [8.6.1](https://github.com/lifinance/types/compare/v8.6.0...v8.6.1) (2023-08-31)
 
 ## [8.6.0](https://github.com/lifinance/types/compare/v8.3.0...v8.6.0) (2023-08-30)
