@@ -3,6 +3,7 @@ import {
   BridgeDefinition,
   Chain,
   ChainId,
+  ChainType,
   ExchangeDefinition,
   LifiStep,
   Token,
@@ -240,6 +241,7 @@ export interface ConnectionsRequest extends ToolConfiguration {
   fromToken?: string
   toChain?: number | string
   toToken?: string
+  chainType?: ChainType
 }
 
 export interface Connection {
@@ -369,12 +371,17 @@ export interface ChainsResponse {
   chains: ExtendedChain[]
 }
 
+export interface ChainsRequest {
+  chainType?: ChainType
+}
+
 export interface ToolsRequest {
   chains?: ChainId[]
 }
 
 export type TokensRequest = {
   chains?: ChainId[]
+  chainType?: ChainType
 }
 
 export type TokensResponse = {
