@@ -1,5 +1,5 @@
 import type { BridgeDefinition } from './bridges.js'
-import type { Chain, ChainId } from './chains/index.js'
+import type { Chain, ChainId, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
 import type { Action, LiFiStep } from './step.js'
 import type { Token } from './tokens/index.js'
@@ -57,7 +57,6 @@ export interface RouteOptions {
   order?: Order // (default: RECOMMENDED) 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
   slippage?: number // (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%
   referrer?: string // Integrators can set a wallet address as a referrer to track them
-  infiniteApproval?: boolean // (default: false)
   allowSwitchChain?: boolean // (default: false) Whether chain switches should be allowed in the routes
   allowDestinationCall?: boolean // (default: true) destination calls are enabled by default
   bridges?: AllowDenyPrefer
@@ -118,7 +117,6 @@ export interface Route {
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
   containsSwitchChain?: boolean // Features required for route execution
-  infiniteApproval?: boolean // Features used for route execution
 
   steps: LiFiStep[]
 
@@ -395,6 +393,10 @@ export interface FullStatusData extends StatusData {
 
 export interface ExtendedChain extends Chain {
   nativeToken: Token
+}
+
+export interface ChainsRequest {
+  chainType?: ChainType[]
 }
 
 export interface ChainsResponse {
