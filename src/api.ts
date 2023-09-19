@@ -270,6 +270,7 @@ export interface ConnectionsRequest extends ToolConfiguration {
   fromToken?: string
   toChain?: number | string
   toToken?: string
+  chainType?: ChainType
 }
 
 export interface Connection {
@@ -395,12 +396,12 @@ export interface ExtendedChain extends Chain {
   nativeToken: Token
 }
 
-export interface ChainsRequest {
-  chainType?: ChainType[]
-}
-
 export interface ChainsResponse {
   chains: ExtendedChain[]
+}
+
+export interface ChainsRequest {
+  chainType?: ChainType
 }
 
 export interface ToolsRequest {
@@ -409,6 +410,7 @@ export interface ToolsRequest {
 
 export type TokensRequest = {
   chains?: ChainId[]
+  chainType?: ChainType
 }
 
 export type TokensResponse = {
