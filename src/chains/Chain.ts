@@ -2,7 +2,8 @@ import { ChainKey, CoinKey } from '../base'
 
 export enum ChainType {
   EVM = 'EVM',
-  Solana = 'SOLANA',
+  // Solana virtual machine
+  SVM = 'SVM',
 }
 
 export interface _Chain {
