@@ -3,7 +3,8 @@ import { ChainKey } from './base.js'
 
 export enum ChainType {
   EVM = 'EVM',
-  Solana = 'Solana',
+  // Solana virtual machine
+  SVM = 'SVM',
 }
 
 export interface _Chain {

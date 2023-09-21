@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.1](https://github.com/lifinance/types/compare/v9.0.0...v9.0.1) (2023-09-21)
+
+## [9.0.0](https://github.com/lifinance/types/compare/v8.7.1...v9.0.0) (2023-09-21)
+
+
+### Bug Fixes
+
+* rename chainType Solana to SVM ([#195](https://github.com/lifinance/types/issues/195)) ([6600cc9](https://github.com/lifinance/types/commit/6600cc9047c8ac997372097748ccb43214efb206))
+
+### [8.7.1](https://github.com/lifinance/types/compare/v8.7.0...v8.7.1) (2023-09-20)
+
+
+### Bug Fixes
+
+* use chainTypes instead of chainType for /tokens /chains and /connections ([#194](https://github.com/lifinance/types/issues/194)) ([5071f99](https://github.com/lifinance/types/commit/5071f9987222cc9297538609e18ded8258505111))
+
 ## [8.7.0](https://github.com/lifinance/types/compare/v8.6.1...v8.7.0) (2023-09-13)
 
 
