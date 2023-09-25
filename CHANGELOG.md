@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.2](https://github.com/lifinance/types/compare/v9.0.1...v9.0.2) (2023-09-25)
+
+
+### Bug Fixes
+
+* **actions:** add read permissions ([#196](https://github.com/lifinance/types/issues/196)) ([aea504d](https://github.com/lifinance/types/commit/aea504d3437f9c063a2879cf885fd97e43ef4a8d))
+* **actions:** add write permissions ([2ee95cd](https://github.com/lifinance/types/commit/2ee95cd891a1384227568d8c03706d423799f65d))
+
 ### [9.0.1](https://github.com/lifinance/types/compare/v9.0.0...v9.0.1) (2023-09-21)
 
 ## [9.0.0](https://github.com/lifinance/types/compare/v8.7.1...v9.0.0) (2023-09-21)

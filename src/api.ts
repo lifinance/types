@@ -493,3 +493,8 @@ export type GasRecommendationResponse =
       fromToken?: Token
       fromAmount?: string
     }
+
+export interface WalletAnalytics {
+  walletAddress: string
+  transactions: StatusResponse[]
+}
