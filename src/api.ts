@@ -474,5 +474,4 @@ export interface WalletAnalyticsRequest {
   walletAddress: string
   fromTimestamp: number
   toTimestamp: number
-  integrator?: string
 }
