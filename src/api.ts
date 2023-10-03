@@ -471,7 +471,7 @@ export interface WalletAnalytics {
 }
 
 export interface WalletAnalyticsRequest {
-  wallet_address: string
+  walletAddress: string
   fromTimestamp: number
   toTimestamp: number
   integrator?: string
