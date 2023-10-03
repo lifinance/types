@@ -469,3 +469,10 @@ export interface WalletAnalytics {
   walletAddress: string
   transactions: StatusResponse[]
 }
+
+export interface WalletAnalyticsRequest {
+  wallet_address: string
+  fromTimestamp: number
+  toTimestamp: number
+  integrator?: string
+}
