@@ -3,6 +3,7 @@ import {
   BridgeDefinition,
   Chain,
   ChainId,
+  ChainType,
   ExchangeDefinition,
   LifiStep,
   Token,
@@ -240,6 +241,7 @@ export interface ConnectionsRequest extends ToolConfiguration {
   fromToken?: string
   toChain?: number | string
   toToken?: string
+  chainTypes?: ChainType[]
 }
 
 export interface Connection {
@@ -369,12 +371,17 @@ export interface ChainsResponse {
   chains: ExtendedChain[]
 }
 
+export interface ChainsRequest {
+  chainTypes?: ChainType[]
+}
+
 export interface ToolsRequest {
   chains?: ChainId[]
 }
 
 export type TokensRequest = {
   chains?: ChainId[]
+  chainTypes?: ChainType[]
 }
 
 export type TokensResponse = {
@@ -457,3 +464,14 @@ export type GasRecommendationResponse =
       fromToken?: Token
       fromAmount?: string
     }
+
+export interface WalletAnalytics {
+  walletAddress: string
+  transactions: StatusResponse[]
+}
+
+export interface WalletAnalyticsRequest {
+  walletAddress: string
+  fromTimestamp: number
+  toTimestamp: number
+}

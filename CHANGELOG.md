@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.3](https://github.com/lifinance/types/compare/v9.0.2...v9.0.3) (2023-10-03)
+
+
+### Bug Fixes
+
+* added wallet analytics request type ([#199](https://github.com/lifinance/types/issues/199)) ([b181919](https://github.com/lifinance/types/commit/b181919ee6cd07dd9a27705f1f6a8a2da77d2003))
+
+### [9.0.2](https://github.com/lifinance/types/compare/v9.0.1...v9.0.2) (2023-09-25)
+
+
+### Bug Fixes
+
+* **actions:** add read permissions ([#196](https://github.com/lifinance/types/issues/196)) ([aea504d](https://github.com/lifinance/types/commit/aea504d3437f9c063a2879cf885fd97e43ef4a8d))
+* **actions:** add write permissions ([2ee95cd](https://github.com/lifinance/types/commit/2ee95cd891a1384227568d8c03706d423799f65d))
+
+### [9.0.1](https://github.com/lifinance/types/compare/v9.0.0...v9.0.1) (2023-09-21)
+
+## [9.0.0](https://github.com/lifinance/types/compare/v8.7.1...v9.0.0) (2023-09-21)
+
+
+### Bug Fixes
+
+* rename chainType Solana to SVM ([#195](https://github.com/lifinance/types/issues/195)) ([6600cc9](https://github.com/lifinance/types/commit/6600cc9047c8ac997372097748ccb43214efb206))
+
+### [8.7.1](https://github.com/lifinance/types/compare/v8.7.0...v8.7.1) (2023-09-20)
+
+
+### Bug Fixes
+
+* use chainTypes instead of chainType for /tokens /chains and /connections ([#194](https://github.com/lifinance/types/issues/194)) ([5071f99](https://github.com/lifinance/types/commit/5071f9987222cc9297538609e18ded8258505111))
+
+## [8.7.0](https://github.com/lifinance/types/compare/v8.6.1...v8.7.0) (2023-09-13)
+
+
+### Features
+
+* add chainRequest for the /chains endpoint ([#193](https://github.com/lifinance/types/issues/193)) ([0957702](https://github.com/lifinance/types/commit/0957702048ce1f466a6ee82210c36750067c92cd))
+
 ### [8.6.1](https://github.com/lifinance/types/compare/v8.6.0...v8.6.1) (2023-08-31)
 
 ## [8.6.0](https://github.com/lifinance/types/compare/v8.3.0...v8.6.0) (2023-08-30)
