@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.1.0](https://github.com/lifinance/types/compare/v9.0.3...v9.1.0) (2023-10-04)
+
+
+### Features
+
+* add error codes and types ([#198](https://github.com/lifinance/types/issues/198)) ([56f8c68](https://github.com/lifinance/types/commit/56f8c684c1aa5113fc714f20cb6f246a24c0cef4))
+
+### [9.0.3](https://github.com/lifinance/types/compare/v9.0.2...v9.0.3) (2023-10-03)
+
+
+### Bug Fixes
+
+* added wallet analytics request type ([#199](https://github.com/lifinance/types/issues/199)) ([b181919](https://github.com/lifinance/types/commit/b181919ee6cd07dd9a27705f1f6a8a2da77d2003))
+
 ### [9.0.2](https://github.com/lifinance/types/compare/v9.0.1...v9.0.2) (2023-09-25)
 
 
