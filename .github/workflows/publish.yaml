@@ -6,6 +6,7 @@ on:
       - 'v[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+'
       - 'v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+'
       - 'v[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
 
 jobs:
   release:
@@ -15,7 +16,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Create Release
+      - name: Create release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -30,15 +31,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup .npmrc file to publish to npm
-        uses: actions/setup-node@v3
-        with:
-          node-version: lts/*
-          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Publish to npm
         run: |
           npm publish --access public \
