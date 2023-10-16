@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.2.0](https://github.com/lifinance/types/compare/v8.6.0...v9.2.0) (2023-10-16)
+
+
+### Features
+
+* add chainRequest for the /chains endpoint ([#193](https://github.com/lifinance/types/issues/193)) ([0957702](https://github.com/lifinance/types/commit/0957702048ce1f466a6ee82210c36750067c92cd))
+* add error codes and types ([#198](https://github.com/lifinance/types/issues/198)) ([56f8c68](https://github.com/lifinance/types/commit/56f8c684c1aa5113fc714f20cb6f246a24c0cef4))
+
+
+### Bug Fixes
+
+* **actions:** add read permissions ([#196](https://github.com/lifinance/types/issues/196)) ([aea504d](https://github.com/lifinance/types/commit/aea504d3437f9c063a2879cf885fd97e43ef4a8d))
+* **actions:** add write permissions ([2ee95cd](https://github.com/lifinance/types/commit/2ee95cd891a1384227568d8c03706d423799f65d))
+* added wallet analytics request type ([#199](https://github.com/lifinance/types/issues/199)) ([b181919](https://github.com/lifinance/types/commit/b181919ee6cd07dd9a27705f1f6a8a2da77d2003))
+* do not lowercase token addresses ([#200](https://github.com/lifinance/types/issues/200)) ([9e76bee](https://github.com/lifinance/types/commit/9e76beeb6b38cfdc9386ab89e2bf6cd393a059b1))
+* rename chainType Solana to SVM ([#195](https://github.com/lifinance/types/issues/195)) ([6600cc9](https://github.com/lifinance/types/commit/6600cc9047c8ac997372097748ccb43214efb206))
+* use chainTypes instead of chainType for /tokens /chains and /connections ([#194](https://github.com/lifinance/types/issues/194)) ([5071f99](https://github.com/lifinance/types/commit/5071f9987222cc9297538609e18ded8258505111))
+
 ## [9.1.0](https://github.com/lifinance/types/compare/v9.0.3...v9.1.0) (2023-10-04)
 
 
