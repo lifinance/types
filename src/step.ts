@@ -135,7 +135,6 @@ export interface StepBase {
   referrer?: string
   action: Action
   estimate?: Estimate
-  execution?: Execution
   transactionRequest?: TransactionRequest
 }
 
