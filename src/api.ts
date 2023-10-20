@@ -380,7 +380,7 @@ export interface ToolsRequest {
 }
 
 export type TokensRequest = {
-  chains?: ChainId[]
+  chains?: number[] | string[]
   chainTypes?: ChainType[]
 }
 
