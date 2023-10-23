@@ -3,6 +3,7 @@ import {
   BridgeDefinition,
   Chain,
   ChainId,
+  ChainKey,
   ChainType,
   ExchangeDefinition,
   LifiStep,
@@ -380,7 +381,7 @@ export interface ToolsRequest {
 }
 
 export type TokensRequest = {
-  chains?: number[] | string[]
+  chains?: (ChainId | ChainKey)[]
   chainTypes?: ChainType[]
 }
 
