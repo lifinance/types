@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.2.1](https://github.com/lifinance/types/compare/v9.1.0...v9.2.1) (2023-10-23)
+
+
+### Bug Fixes
+
+* do not lowercase token addresses ([#200](https://github.com/lifinance/types/issues/200)) ([9e76bee](https://github.com/lifinance/types/commit/9e76beeb6b38cfdc9386ab89e2bf6cd393a059b1))
+
 ## [9.2.0](https://github.com/lifinance/types/compare/v8.6.0...v9.2.0) (2023-10-16)
 
 
