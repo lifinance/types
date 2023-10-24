@@ -30,7 +30,7 @@ export interface Action {
   fromChainId: number
   fromAmount: string
   fromToken: Token
-  fromAddress?: string
+  fromAddress: string
 
   toChainId: number
   toToken: Token
