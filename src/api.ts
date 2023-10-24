@@ -32,7 +32,6 @@ export interface RoutesRequest {
 export interface RouteOptions {
   order?: Order // (default : RECOMMENDED)
   slippage?: number // (default : 0.03)
-  infiniteApproval?: boolean // (default : false)
   allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
   integrator?: string // custom string developer who integrate LI.FI can set
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
@@ -98,7 +97,6 @@ export interface Route {
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
   containsSwitchChain?: boolean // Features required for route execution
-  infiniteApproval?: boolean // Features used for route execution
 
   steps: LifiStep[]
 
