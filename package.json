@@ -91,7 +91,7 @@
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2"
   },
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "yarn@4.0.0",
   "publishConfig": {
     "access": "public"
   }
