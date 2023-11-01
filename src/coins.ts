@@ -844,7 +844,7 @@ const basicCoins: BasicCoin[] = [
         decimals: 18,
       },
       [ChainId.POL]: {
-        address: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+        address: '0x3c499c542cef5e3811e1192ce70d8cc03d5c3359',
         decimals: 6,
       },
       [ChainId.DAI]: {
@@ -957,6 +957,12 @@ const basicCoins: BasicCoin[] = [
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png',
     verified: true,
     chains: {
+      [ChainId.POL]: {
+        address: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+        decimals: 6,
+        name: 'Bridged USD Coin',
+        symbol: 'USDC.e',
+      },
       [ChainId.ARB]: {
         address: '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8',
         decimals: 6,
