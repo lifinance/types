@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.3.0](https://github.com/lifinance/types/compare/v9.2.1...v9.3.0) (2023-11-01)
+
+
+### Features
+
+* add kyberswap logo ([#204](https://github.com/lifinance/types/issues/204)) ([0a6b49f](https://github.com/lifinance/types/commit/0a6b49f3348b24953e846c5618a919ded6b02fd5))
+
 ### [9.2.1](https://github.com/lifinance/types/compare/v9.1.0...v9.2.1) (2023-10-23)
 
 
