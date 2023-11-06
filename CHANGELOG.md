@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.3.1](https://github.com/lifinance/types/compare/v9.3.0...v9.3.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* update ToolsRequest chain's type ([fa4a1c9](https://github.com/lifinance/types/commit/fa4a1c9eaf02059ac90dabff13faa475aba28d9d))
+
 ## [9.3.0](https://github.com/lifinance/types/compare/v9.2.1...v9.3.0) (2023-11-01)
 
 
