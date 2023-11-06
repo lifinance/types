@@ -33,16 +33,16 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./src/types/index.d.ts",
-      "import": "./src/esm/index.js",
-      "default": "./src/cjs/index.js"
+      "types": "./src/_types/index.d.ts",
+      "import": "./src/_esm/index.js",
+      "default": "./src/_cjs/index.js"
     },
     "./package.json": "./package.json"
   },
-  "main": "./src/cjs/index.js",
-  "module": "./src/esm/index.js",
-  "types": "./src/types/index.d.ts",
-  "typings": "./src/types/index.d.ts",
+  "main": "./src/_cjs/index.js",
+  "module": "./src/_esm/index.js",
+  "types": "./src/_types/index.d.ts",
+  "typings": "./src/_types/index.d.ts",
   "sideEffects": false,
   "files": [
     "src",
@@ -76,23 +76,23 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.8.0",
-    "@commitlint/config-conventional": "^17.8.0",
-    "@types/fs-extra": "^11.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.8.0",
-    "@typescript-eslint/parser": "^6.8.0",
-    "eslint": "^8.51.0",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@types/fs-extra": "^11.0.3",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "fs-extra": "^11.1.1",
     "husky": "^8.0.3",
-    "lint-staged": "^15.0.1",
+    "lint-staged": "^15.0.2",
     "pinst": "^3.0.0",
     "prettier": "^3.0.3",
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2"
   },
-  "packageManager": "yarn@4.0.0",
+  "packageManager": "yarn@4.0.1",
   "publishConfig": {
     "access": "public"
   },
