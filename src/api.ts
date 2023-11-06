@@ -377,7 +377,7 @@ export interface ChainsRequest {
 }
 
 export interface ToolsRequest {
-  chains?: ChainId[]
+  chains?: (ChainKey | ChainId)[]
 }
 
 export type TokensRequest = {
