@@ -1,5 +1,5 @@
 import type { BridgeDefinition } from './bridges.js'
-import type { Chain, ChainId, ChainType } from './chains/index.js'
+import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
 import type { Action, LiFiStep } from './step.js'
 import type { Token } from './tokens/index.js'
