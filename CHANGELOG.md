@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.3.1](https://github.com/lifinance/types/compare/v9.3.0...v9.3.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* update ToolsRequest chain's type ([fa4a1c9](https://github.com/lifinance/types/commit/fa4a1c9eaf02059ac90dabff13faa475aba28d9d))
+
+## [9.3.0](https://github.com/lifinance/types/compare/v9.2.1...v9.3.0) (2023-11-01)
+
+
+### Features
+
+* add kyberswap logo ([#204](https://github.com/lifinance/types/issues/204)) ([0a6b49f](https://github.com/lifinance/types/commit/0a6b49f3348b24953e846c5618a919ded6b02fd5))
+
+### [9.2.1](https://github.com/lifinance/types/compare/v9.1.0...v9.2.1) (2023-10-23)
+
+
+### Bug Fixes
+
+* do not lowercase token addresses ([#200](https://github.com/lifinance/types/issues/200)) ([9e76bee](https://github.com/lifinance/types/commit/9e76beeb6b38cfdc9386ab89e2bf6cd393a059b1))
+
 ## [9.2.0](https://github.com/lifinance/types/compare/v8.6.0...v9.2.0) (2023-10-16)
 
 
