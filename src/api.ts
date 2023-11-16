@@ -494,13 +494,17 @@ export type GasRecommendationResponse =
       fromAmount?: string
     }
 
-export interface WalletAnalytics {
-  walletAddress: string
-  transactions: StatusResponse[]
+export interface TransactionAnalyticsResponse {
+  transfers: StatusResponse[]
 }
 
-export interface WalletAnalyticsRequest {
-  walletAddress: string
-  fromTimestamp: number
-  toTimestamp: number
+export type TransactionAnalyticsStatus =
+  | Exclude<StatusMessage, 'NOT_FOUND' | 'INVALID'>
+  | 'ALL'
+
+export interface TransactionAnalyticsRequest {
+  wallet: string
+  fromTimestamp?: number
+  toTimestamp?: number
+  status?: TransactionAnalyticsStatus
 }
