@@ -44,11 +44,11 @@ export interface Estimate {
   toAmountMin: string
   toAmountUSD?: string
   approvalAddress: string
-
   feeCosts?: FeeCost[]
-  gasCosts?: GasCost[] // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
-
-  executionDuration: number // estimated duration in seconds
+  // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
+  gasCosts?: GasCost[]
+  // estimated duration in seconds
+  executionDuration: number
 }
 
 // EXECUTION
@@ -98,11 +98,8 @@ export interface Execution {
   fromAmount?: string
   toAmount?: string
   toToken?: Token
-  gasPrice?: string
-  gasUsed?: string
-  gasToken?: Token
-  gasAmount?: string
-  gasAmountUSD?: string
+  feeCosts?: FeeCost[]
+  gasCosts?: GasCost[]
 }
 
 export const emptyExecution: Execution = {
