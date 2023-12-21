@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.0.0](https://github.com/lifinance/types/compare/v9.3.3...v10.0.0) (2023-12-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* extend FullStatusData to include metadata
+
+### Features
+
+* add metadata to FullStatusData ([5ce6c87](https://github.com/lifinance/types/commit/5ce6c87a6c6805b82a9c3aa9abb849b4297aef32))
+
 ### [9.3.3](https://github.com/lifinance/types/compare/v9.3.2...v9.3.3) (2023-12-21)
 
 ### [9.3.2](https://github.com/lifinance/types/compare/v9.3.1...v9.3.2) (2023-12-20)
