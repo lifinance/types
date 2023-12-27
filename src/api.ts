@@ -1,3 +1,4 @@
+import { TransactionRequest } from '@ethersproject/providers'
 import {
   BridgeDefinition,
   Chain,
@@ -9,30 +10,6 @@ import {
   Token,
 } from '.'
 import { ToolError } from './apiErrors'
-
-export type BigIntish = string
-
-export type TransactionRequest = {
-  to?: string
-  from?: string
-  nonce?: BigIntish
-
-  gasLimit?: BigIntish
-  gasPrice?: BigIntish
-
-  data?: string
-  value?: BigIntish
-  chainId?: number
-
-  type?: number
-  accessList?: { address: string; storageKeys: string[] }[]
-
-  maxPriorityFeePerGas?: BigIntish
-  maxFeePerGas?: BigIntish
-
-  customData?: Record<string, any>
-  ccipReadEnabled?: boolean
-}
 
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
 export type Order = (typeof Orders)[number]
@@ -376,9 +353,9 @@ export interface StatusData extends BaseStatusData {
 }
 
 export type StatusResponse = FullStatusData | StatusData
-// interface TransferMetadata {
-//   integrator: string
-// }
+interface TransferMetadata {
+  integrator: string
+}
 
 export interface FullStatusData extends StatusData {
   transactionId: string
@@ -387,7 +364,7 @@ export interface FullStatusData extends StatusData {
   lifiExplorerLink: string
   fromAddress: string
   toAddress: string
-  // metadata: TransferMetadata
+  metadata: TransferMetadata
   bridgeExplorerLink?: string
 }
 
