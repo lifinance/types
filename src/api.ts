@@ -279,6 +279,7 @@ export interface ExtendedTransactionInfo extends BaseTransactionInfo {
   gasAmount: string
   gasAmountUSD: string
   timestamp?: number
+  value?: string
 }
 
 export interface PendingReceivingInfo {
