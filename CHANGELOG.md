@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.0.0-beta.1](https://github.com/lifinance/types/compare/v11.0.0-beta.0...v11.0.0-beta.1) (2024-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **api:** use TransactionRequest on Step (#212)
+
+### Features
+
+* **api:** use TransactionRequest on Step ([#212](https://github.com/lifinance/types/issues/212)) ([39fa8eb](https://github.com/lifinance/types/commit/39fa8eb1fbf7566969979d25e6037210f94fb955))
+
 ## [11.0.0-beta.0](https://github.com/lifinance/types/compare/v10.1.0...v11.0.0-beta.0) (2024-01-03)
 
 
