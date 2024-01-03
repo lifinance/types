@@ -12,7 +12,7 @@ export type BigIntish = string
 export type TransactionRequest = {
   to?: string
   from?: string
-  nonce?: BigIntish
+  nonce?: number
 
   gasLimit?: BigIntish
   gasPrice?: BigIntish
