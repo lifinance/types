@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { providers } from 'ethers'
-import { Substatus } from '.'
+import { Substatus, TransactionRequest } from '.'
 import { Token } from './base'
 import { Bridge } from './bridges'
 import { Exchange, ExchangeAggregator } from './exchanges'
@@ -138,7 +138,7 @@ export interface StepBase {
   action: Action
   estimate?: Estimate
   execution?: Execution
-  transactionRequest?: providers.TransactionRequest
+  transactionRequest?: TransactionRequest
 }
 
 export interface DestinationCallInfo {
