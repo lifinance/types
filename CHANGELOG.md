@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.0.0-beta.0](https://github.com/lifinance/types/compare/v10.1.0...v11.0.0-beta.0) (2024-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace ethers transaction request with custom implementation (#211)
+
+### Features
+
+* replace ethers transaction request with custom implementation ([#211](https://github.com/lifinance/types/issues/211)) ([5ea2253](https://github.com/lifinance/types/commit/5ea2253b2c6fedfcd5c70ee829b78ea4822cf2c4))
+
+## [10.1.0](https://github.com/lifinance/types/compare/v10.0.0...v10.1.0) (2023-12-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace ethers transaction request with custom implementation
+
+### Features
+
+* add value to ExtendedTransactionInfo ([#210](https://github.com/lifinance/types/issues/210)) ([03ed351](https://github.com/lifinance/types/commit/03ed351fb3cbeb8d87d89b05379836d944ede0b2))
+* replace ethers transaction request with custom implementation ([0fee419](https://github.com/lifinance/types/commit/0fee4198d163d9b2f5cb7399878f30770994ba1a))
+
 ## [10.0.0](https://github.com/lifinance/types/compare/v9.3.3...v10.0.0) (2023-12-21)
 
 

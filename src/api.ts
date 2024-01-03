@@ -12,7 +12,7 @@ export type BigIntish = string
 export type TransactionRequest = {
   to?: string
   from?: string
-  nonce?: number
+  nonce?: BigIntish
 
   gasLimit?: BigIntish
   gasPrice?: BigIntish
@@ -307,6 +307,7 @@ export interface ExtendedTransactionInfo extends BaseTransactionInfo {
   gasAmount: string
   gasAmountUSD: string
   timestamp?: number
+  value?: string
 }
 
 export interface PendingReceivingInfo {
