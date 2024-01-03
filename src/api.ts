@@ -377,10 +377,9 @@ export interface StatusData extends BaseStatusData {
 }
 
 export type StatusResponse = FullStatusData | StatusData
-// FIXME: Not used yet
-// interface TransferMetadata {
-//   integrator: string
-// }
+interface TransferMetadata {
+  integrator: string
+}
 
 export interface FullStatusData extends StatusData {
   transactionId: string
@@ -389,7 +388,7 @@ export interface FullStatusData extends StatusData {
   lifiExplorerLink: string
   fromAddress: string
   toAddress: string
-  // metadata: TransferMetadata
+  metadata: TransferMetadata
   bridgeExplorerLink?: string
 }
 
