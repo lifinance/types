@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.0.0-beta.2](https://github.com/lifinance/types/compare/v11.0.0-beta.1...v11.0.0-beta.2) (2024-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* cleanup and complete removal of ether.js (#183)
+
+### Features
+
+* cleanup and complete removal of ether.js ([#183](https://github.com/lifinance/types/issues/183)) ([3633dc8](https://github.com/lifinance/types/commit/3633dc8d8acf50c43a412163328a685a17e49776))
+
 ## [11.0.0-beta.1](https://github.com/lifinance/types/compare/v11.0.0-beta.0...v11.0.0-beta.1) (2024-01-03)
 
 
