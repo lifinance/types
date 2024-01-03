@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Create Release
+      - name: Create release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -33,12 +33,12 @@ jobs:
       - name: Setup .npmrc file to publish to npm
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: lts/*
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Publish to npm
         run: |
           npm publish --access public \

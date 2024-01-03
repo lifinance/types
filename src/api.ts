@@ -1,15 +1,12 @@
-import {
-  BridgeDefinition,
-  Chain,
-  ChainId,
-  ChainKey,
-  ChainType,
-  ExchangeDefinition,
-  LifiStep,
-  Token,
-} from '.'
-import { ToolError } from './apiErrors'
+import type { BridgeDefinition } from './bridges.js'
+import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
+import type { ExchangeDefinition } from './exchanges.js'
+import type { Action, LiFiStep } from './step.js'
+import type { Token } from './tokens/index.js'
 
+/**
+ * Used as a bigint replacement for TransactionRequest because bigint is not serializable
+ */
 export type BigIntish = string
 
 export type TransactionRequest = {
@@ -53,18 +50,17 @@ export interface RoutesRequest {
 }
 
 export interface RouteOptions {
-  order?: Order // (default : RECOMMENDED)
-  slippage?: number // (default : 0.03)
-  infiniteApproval?: boolean // (default : false)
-  allowSwitchChain?: boolean // (default : false) // eg. on mobile wallets and not metamask wallets we can't automatically change chains
-  integrator?: string // custom string developer who integrate LI.FI can set
-  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
-  referrer?: string // integrators can set a wallet address as referrer to track them
+  integrator?: string // Should contain the identifier of the integrator. Usually, it's dApp/company name.
+  fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
+  insurance?: boolean // Whether the user wants to insure their tx
+  maxPriceImpact?: number // Hide routes with price impact greater than or equal to this value
+  order?: Order // (default: RECOMMENDED) 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
+  slippage?: number // (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%
+  referrer?: string // Integrators can set a wallet address as a referrer to track them
+  allowSwitchChain?: boolean // (default: false) Whether chain switches should be allowed in the routes
+  allowDestinationCall?: boolean // (default: true) destination calls are enabled by default
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
-  fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
-  insurance?: boolean // whether the user want to insure their tx
-  maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
 }
 
 export type ToolsResponse = {
@@ -121,11 +117,20 @@ export interface Route {
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
   containsSwitchChain?: boolean // Features required for route execution
-  infiniteApproval?: boolean // Features used for route execution
 
-  steps: LifiStep[]
+  steps: LiFiStep[]
 
   tags?: Order[]
+}
+
+export type ToolErrorType = 'NO_QUOTE'
+
+export interface ToolError {
+  errorType: ToolErrorType
+  code: string
+  action: Action
+  tool: string
+  message: string
 }
 
 export type ErroredPaths = { [subpath: string]: ToolError[] }
@@ -494,13 +499,17 @@ export type GasRecommendationResponse =
       fromAmount?: string
     }
 
-export interface WalletAnalytics {
-  walletAddress: string
-  transactions: StatusResponse[]
+export interface TransactionAnalyticsResponse {
+  transfers: StatusResponse[]
 }
 
-export interface WalletAnalyticsRequest {
-  walletAddress: string
-  fromTimestamp: number
-  toTimestamp: number
+export type TransactionAnalyticsStatus =
+  | Exclude<StatusMessage, 'NOT_FOUND' | 'INVALID'>
+  | 'ALL'
+
+export interface TransactionAnalyticsRequest {
+  wallet: string
+  fromTimestamp?: number
+  toTimestamp?: number
+  status?: TransactionAnalyticsStatus
 }

@@ -1,13 +1,10 @@
 {
+  // This configuration is used for local development and type checking.
+  "extends": "./tsconfig.base.json",
+  "include": ["src"],
+  "exclude": [],
+  "references": [{ "path": "./tsconfig.node.json" }],
   "compilerOptions": {
-    "target": "ES6",
-    "strict": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true /* Generates corresponding '.d.ts' file. */,
-    "outDir": "./dist" /* Redirect output structure to the directory. */
-  },
-  "include": ["src/**/*"]
+    "baseUrl": "."
+  }
 }

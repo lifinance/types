@@ -1,4 +1,5 @@
-import { ChainKey, CoinKey } from '../base'
+import { CoinKey } from '../tokens/base.js'
+import { ChainKey } from './base.js'
 
 export enum ChainType {
   EVM = 'EVM',
