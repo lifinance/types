@@ -31,7 +31,7 @@ export type TransactionRequest = {
   ccipReadEnabled?: boolean
 }
 
-export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
+export const Orders = ['BEST_RETURN', 'FASTEST', 'BALANCED'] as const
 export type Order = (typeof Orders)[number]
 
 export interface RoutesRequest {
@@ -54,7 +54,7 @@ export interface RouteOptions {
   fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
   insurance?: boolean // Whether the user wants to insure their tx
   maxPriceImpact?: number // Hide routes with price impact greater than or equal to this value
-  order?: Order // (default: RECOMMENDED) 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
+  order?: Order // (default: BEST_RETURN) 'BEST_RETURN' | 'FASTEST' | 'BALANCED'
   slippage?: number // (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%
   referrer?: string // Integrators can set a wallet address as a referrer to track them
   allowSwitchChain?: boolean // (default: false) Whether chain switches should be allowed in the routes
