@@ -26,8 +26,16 @@ export enum CoinKey {
   VLX = 'VLX',
   GLMR = 'GLMR',
   METIS = 'METIS',
-  SOL = 'SOL',
   EVM = 'EVM',
+
+  // Solana
+  SOL = 'SOL',
+
+  // UXTO
+  BTC = 'BTC',
+  BCH = 'BCH',
+  LTC = 'LTC',
+  DOGE = 'DOGE',
 
   // Stable coins
   USDT = 'USDT',
@@ -63,4 +71,5 @@ export enum CoinKey {
   MCB = 'MCB',
   CELR = 'CELR',
   IF = 'IF',
+  RUNE = 'RUNE',
 }

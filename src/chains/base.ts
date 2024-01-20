@@ -1,4 +1,5 @@
 export enum ChainKey {
+  // EVM
   ETH = 'eth',
   POL = 'pol',
   BSC = 'bsc',
@@ -30,15 +31,23 @@ export enum ChainKey {
   MOO = 'moo',
   MAM = 'mam',
   AUR = 'aur',
-  TER = 'ter',
-  OAS = 'oas',
-  SOL = 'sol',
   EVM = 'evm',
   ARN = 'arn',
   ERA = 'era',
   PZE = 'pze',
   LNA = 'lna',
   BAS = 'bas',
+
+  // None-EVM
+  SOL = 'sol',
+  TER = 'ter',
+  OAS = 'oas',
+
+  // UXTO
+  BTC = 'btc',
+  BCH = 'bch',
+  LTC = 'ltc',
+  DGE = 'dge',
 
   // Testnets
   GOR = 'gor',
@@ -95,15 +104,23 @@ export enum ChainId {
   MOO = 1284,
   MAM = 1088,
   AUR = 1313161554,
-  SOL = 1151111081099710, // this id is made up by the LI.FI team!
-  TER = 1161011141099710, // this id is made up by the LI.FI team!
-  OAS = 111971151099710, // this id is made up by the LI.FI team!
   EVM = 9001,
   ARN = 42170,
   ERA = 324,
   PZE = 1101,
   LNA = 59144,
   BAS = 8453,
+
+  // None-EVM (IDs are made up by the LI.FI team)
+  SOL = 1151111081099710,
+  TER = 1161011141099710,
+  OAS = 111971151099710,
+
+  // UXTO (IDs are made up by the LI.FI team)
+  BTC = 20000000000001,
+  BCH = 20000000000002,
+  LTC = 20000000000003,
+  DGE = 20000000000004,
 
   // Testnets
   GOR = 5,
@@ -118,12 +135,14 @@ export enum ChainId {
   FUST = 123,
   TLOT = 41,
   RSKT = 31,
-  SOLT = 1151111081161011, // this id is made up by the LI.FI team!
-  TERT = 1161011141161011, // this id is made up by the LI.FI team!
-  OAST = 1119711511610111, // this id is made up by the LI.FI team!
   AVAT = 43113,
   EVMT = 9000,
   MORT = 1287,
   FTMT = 4002,
   LNAT = 59140,
+
+  // None-EVM Testinets (IDs are made up by the LI.FI team)
+  SOLT = 1151111081161011,
+  TERT = 1161011141161011,
+  OAST = 1119711511610111,
 }
