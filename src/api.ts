@@ -381,7 +381,12 @@ export interface StatusData extends BaseStatusData {
   receiving: PendingReceivingInfo
 }
 
-export type StatusResponse = FullStatusData | StatusData
+export interface FailedStatusData {
+  status: 'FAILED'
+  sending: BaseTransactionInfo
+}
+
+export type StatusResponse = FullStatusData | StatusData | FailedStatusData
 interface TransferMetadata {
   integrator: string
 }
