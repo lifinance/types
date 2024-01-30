@@ -123,4 +123,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# ignore lock files of other package managers
+pnpm-lock.yaml
+package-lock.json
+
 .DS_Store
