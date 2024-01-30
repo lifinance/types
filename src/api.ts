@@ -358,7 +358,23 @@ const _SubstatusDone = [
 ] as const
 export type SubstatusDone = (typeof _SubstatusDone)[number]
 
-export type Substatus = SubstatusPending | SubstatusDone
+const _SubstatusFailed = [
+  // The amount in the request exceeds the allowance
+  'INSUFFICIENT_ALLOWANCE',
+  // The token amount is not enough to execute the transfer
+  'INSUFFICIENT_BALANCE',
+  // The gas limit is lower than tx would consume
+  'OUT_OF_GAS',
+  // The requested quote is expired and can’t be processed anymore
+  'EXPIRED',
+  // Slippage conditions were not met
+  'SLIPPAGE_EXCEEDED',
+  // We cannot determine the cause of the failure
+  'UNKNOWN_FAILED_ERROR',
+] as const
+export type SubstatusFailed = (typeof _SubstatusFailed)[number]
+
+export type Substatus = SubstatusPending | SubstatusDone | SubstatusFailed
 
 export const isSubstatusPending = (
   substatus: Substatus
@@ -368,6 +384,10 @@ export const isSubstatusDone = (
   substatus: Substatus
 ): substatus is SubstatusDone =>
   _SubstatusDone.includes(substatus as SubstatusDone)
+export const isSubstatusFailed = (
+  substatus: Substatus
+): substatus is SubstatusFailed =>
+  _SubstatusFailed.includes(substatus as SubstatusFailed)
 
 export interface BaseStatusData {
   status: StatusMessage
@@ -381,7 +401,7 @@ export interface StatusData extends BaseStatusData {
   receiving: PendingReceivingInfo
 }
 
-export interface FailedStatusData {
+export interface FailedStatusData extends BaseStatusData {
   status: 'FAILED'
   sending: BaseTransactionInfo
 }
