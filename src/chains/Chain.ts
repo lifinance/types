@@ -5,6 +5,8 @@ export enum ChainType {
   EVM = 'EVM',
   // Solana virtual machine
   SVM = 'SVM',
+  // Unspent transaction output (e.g. Bitcoin)
+  UTXO = 'UTXO',
 }
 
 export interface _Chain {
