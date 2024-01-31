@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.2.0](https://github.com/lifinance/types/compare/v11.1.0...v11.2.0) (2024-01-31)
+
+
+### Features
+
+* add support for UTXO chains ([#218](https://github.com/lifinance/types/issues/218)) ([48e1a23](https://github.com/lifinance/types/commit/48e1a2319900e4ae8b68061e598d49a87342aa9a))
+
 ## [11.1.0](https://github.com/lifinance/types/compare/v11.0.0...v11.1.0) (2024-01-30)
 
 
