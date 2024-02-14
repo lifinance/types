@@ -538,3 +538,38 @@ export interface TransactionAnalyticsRequest {
   toTimestamp?: number
   status?: TransactionAnalyticsStatus
 }
+
+export interface CreateIntegratorRequest {
+  name: string
+  integratorId: string
+  fee?: number
+  feeType?: IntegratorFeeType
+  defaultWallet?: string
+  chainWallets?: ChainWalletConfiguration
+}
+
+export interface UpdateIntegratorRequest {
+  name?: string
+  fee?: number
+  feeType?: IntegratorFeeType
+  defaultWallet?: string
+  chainWallets?: ChainWalletConfiguration
+}
+
+export type IntegratorResult = {
+  name: string
+  integratorId: string
+  fee: number
+  feeType: IntegratorFeeType
+  defaultWallet?: string
+  chainWallets?: ChainWalletConfiguration
+}
+
+export type ChainWalletConfiguration = {
+  [key in ChainId]?: string
+}
+
+export enum IntegratorFeeType {
+  FIXED = 'FIXED',
+  SHARED = 'SHARED',
+}
