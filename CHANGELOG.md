@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.3.0](https://github.com/lifinance/types/compare/v11.2.0...v11.3.0) (2024-02-16)
+
+
+### Features
+
+* add integrator request types ([#219](https://github.com/lifinance/types/issues/219)) ([7efe0e2](https://github.com/lifinance/types/commit/7efe0e2444d4be54b16164ccf2b7ecd549aecb2f))
+
 ## [11.2.0](https://github.com/lifinance/types/compare/v11.1.0...v11.2.0) (2024-01-31)
 
 
