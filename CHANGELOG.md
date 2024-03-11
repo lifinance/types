@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.4.0](https://github.com/lifinance/types/compare/v11.3.0...v11.4.0) (2024-03-11)
+
+
+### Features
+
+* add Scroll Chain Property ([#220](https://github.com/lifinance/types/issues/220)) ([dfd75ab](https://github.com/lifinance/types/commit/dfd75aba1c62b3ef86e928d70ea344af4b91f246))
+
 ## [11.3.0](https://github.com/lifinance/types/compare/v11.2.0...v11.3.0) (2024-02-16)
 
 
