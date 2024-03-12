@@ -514,7 +514,7 @@ export type GasRecommendationResponse =
       message: string
     }
   | {
-      available: true
+      available: boolean
       recommended: TokenBalance
       limit: TokenBalance // Maximum of gas the user can transfer
       serviceFee: TokenBalance // LI.FI fee for providing the service
