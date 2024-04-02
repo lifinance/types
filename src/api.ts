@@ -506,23 +506,19 @@ export type RefetchLIFuelRequest = {
   chainId: ChainId
 }
 
-export type GasRecommendationResponse =
-  | {
-      // whether we can support that
-      available: false
-      // reason why the gas feature is not available (e.g. missing liquidity)
-      message: string
-    }
-  | {
-      available: true
-      recommended: TokenBalance
-      limit: TokenBalance // Maximum of gas the user can transfer
-      serviceFee: TokenBalance // LI.FI fee for providing the service
+export type GasRecommendationResponse = {
+  // whether we can support that
+  available: boolean
+  // reason why the gas feature is not available (e.g. missing liquidity)
+  message?: string
+  recommended?: TokenBalance
+  limit?: TokenBalance // Maximum of gas the user can transfer
+  serviceFee?: TokenBalance // LI.FI fee for providing the service
 
-      // information about what the user has to pay to get the recommended gas amount
-      fromToken?: Token
-      fromAmount?: string
-    }
+  // information about what the user has to pay to get the recommended gas amount
+  fromToken?: Token
+  fromAmount?: string
+}
 
 export interface TransactionAnalyticsResponse {
   transfers: StatusResponse[]
