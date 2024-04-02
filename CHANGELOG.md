@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.5.0](https://github.com/lifinance/types/compare/v11.4.1...v11.5.0) (2024-04-02)
+
+
+### Features
+
+* gasRecommendation available boolean ([#222](https://github.com/lifinance/types/issues/222)) ([d87ef0f](https://github.com/lifinance/types/commit/d87ef0f4468f89540dff65ddd37ded0b693b07e9))
+
 ### [11.4.1](https://github.com/lifinance/types/compare/v11.4.0...v11.4.1) (2024-03-11)
 
 ## [11.4.0](https://github.com/lifinance/types/compare/v11.3.0...v11.4.0) (2024-03-11)
