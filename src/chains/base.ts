@@ -51,10 +51,8 @@ export enum ChainKey {
   DGE = 'dge',
 
   // Testnets
-  GOR = 'gor',
   METT = 'mett',
   DIOT = 'diot',
-  MUM = 'mum',
   ARBG = 'arbg',
   OPTG = 'optg',
   BSCT = 'bsct',
@@ -126,10 +124,8 @@ export enum ChainId {
   DGE = 20000000000004,
 
   // Testnets
-  GOR = 5,
   METT = 12,
   DIOT = 13,
-  MUM = 80001,
   ARBG = 421613,
   OPTG = 420,
   BSCT = 97,
