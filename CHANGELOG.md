@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.0.0](https://github.com/lifinance/types/compare/v11.5.0...v12.0.0) (2024-04-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove NOT_PROCESSABLE_REFUND_NEEDED substatus (#224)
+* remove GOR and MUM chains support (#223)
+
+### Features
+
+* remove GOR and MUM chains support ([#223](https://github.com/lifinance/types/issues/223)) ([abdc358](https://github.com/lifinance/types/commit/abdc35867dfa6c7f96b7bfede69530d588bbb915))
+* remove NOT_PROCESSABLE_REFUND_NEEDED substatus ([#224](https://github.com/lifinance/types/issues/224)) ([c2ec699](https://github.com/lifinance/types/commit/c2ec6998d870f57a1a72e4dc12f9bd781bd8376b))
+
 ## [11.5.0](https://github.com/lifinance/types/compare/v11.4.1...v11.5.0) (2024-04-02)
 
 
