@@ -38,6 +38,7 @@ export enum ChainKey {
   LNA = 'lna',
   BAS = 'bas',
   SCL = 'scl',
+  MOD = 'mod',
 
   // None-EVM
   SOL = 'sol',
@@ -70,6 +71,7 @@ export enum ChainKey {
   FTMT = 'ftmt',
   LNAT = 'lnat',
   SCLT = 'sclt',
+  MODT = 'modt',
 }
 
 export enum ChainId {
@@ -111,6 +113,7 @@ export enum ChainId {
   LNA = 59144,
   BAS = 8453,
   SCL = 534352,
+  MOD = 34443,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
@@ -140,6 +143,7 @@ export enum ChainId {
   FTMT = 4002,
   LNAT = 59140,
   SCLT = 534351,
+  MODT = 919,
 
   // None-EVM Testnets (IDs are made up by the LI.FI team)
   SOLT = 1151111081161011,
