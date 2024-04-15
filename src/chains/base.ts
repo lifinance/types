@@ -71,7 +71,6 @@ export enum ChainKey {
   FTMT = 'ftmt',
   LNAT = 'lnat',
   SCLT = 'sclt',
-  MODT = 'modt',
 }
 
 export enum ChainId {
@@ -143,7 +142,6 @@ export enum ChainId {
   FTMT = 4002,
   LNAT = 59140,
   SCLT = 534351,
-  MODT = 919,
 
   // None-EVM Testnets (IDs are made up by the LI.FI team)
   SOLT = 1151111081161011,
