@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.1.0](https://github.com/lifinance/types/compare/v12.0.1...v12.1.0) (2024-04-15)
+
+
+### Features
+
+* add mode chain ([a1b0469](https://github.com/lifinance/types/commit/a1b04696b45aed7a9bed511b968c30a18f6b37e7))
+
 ### [12.0.1](https://github.com/lifinance/types/compare/v12.0.0...v12.0.1) (2024-04-12)
 
 ## [12.0.0](https://github.com/lifinance/types/compare/v11.5.0...v12.0.0) (2024-04-11)
