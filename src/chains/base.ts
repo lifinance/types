@@ -38,6 +38,7 @@ export enum ChainKey {
   LNA = 'lna',
   BAS = 'bas',
   SCL = 'scl',
+  MOD = 'mod',
 
   // None-EVM
   SOL = 'sol',
@@ -111,6 +112,7 @@ export enum ChainId {
   LNA = 59144,
   BAS = 8453,
   SCL = 534352,
+  MOD = 34443,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
