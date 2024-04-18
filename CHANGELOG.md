@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.0.0](https://github.com/lifinance/types/compare/v12.0.1...v13.0.0) (2024-04-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove OKT chain support (#228)
+
+### Features
+
+* add mode chain ([#226](https://github.com/lifinance/types/issues/226)) ([8077333](https://github.com/lifinance/types/commit/8077333db28f2a914185436325719580c601439f))
+* remove OKT chain support ([#228](https://github.com/lifinance/types/issues/228)) ([c6f8834](https://github.com/lifinance/types/commit/c6f88343df92d19ef0c051b580126ba4c5006b78))
+
 ### [12.0.1](https://github.com/lifinance/types/compare/v12.0.0...v12.0.1) (2024-04-12)
 
 ## [12.0.0](https://github.com/lifinance/types/compare/v11.5.0...v12.0.0) (2024-04-11)
