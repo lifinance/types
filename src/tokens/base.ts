@@ -4,7 +4,6 @@ export enum CoinKey {
   BNB = 'BNB',
   DAI = 'DAI',
   FTM = 'FTM',
-  OKT = 'OKT',
   AVAX = 'AVAX',
   HT = 'HT',
   ONE = 'ONE',
