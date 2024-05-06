@@ -38,6 +38,7 @@ export enum ChainKey {
   BAS = 'bas',
   SCL = 'scl',
   MOD = 'mod',
+  MNT = 'mnt',
 
   // None-EVM
   SOL = 'sol',
