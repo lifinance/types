@@ -111,6 +111,7 @@ export enum ChainId {
   BAS = 8453,
   SCL = 534352,
   MOD = 34443,
+  MNT = 5000,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
