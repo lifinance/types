@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.1.0](https://github.com/lifinance/types/compare/v13.0.0...v13.1.0) (2024-05-10)
+
+
+### Features
+
+* add chain key ([23e3426](https://github.com/lifinance/types/commit/23e3426268b9919519b4f0fb494e8a0e54dbe491))
+* add Mantle chain ([6ec032f](https://github.com/lifinance/types/commit/6ec032f9a18d1e68780ace4b115b82be898941c3))
+
 ## [13.0.0](https://github.com/lifinance/types/compare/v12.0.1...v13.0.0) (2024-04-18)
 
 
