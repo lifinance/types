@@ -26,6 +26,7 @@ export enum CoinKey {
   GLMR = 'GLMR',
   METIS = 'METIS',
   EVM = 'EVM',
+  MNT = 'MNT',
 
   // Solana
   SOL = 'SOL',
