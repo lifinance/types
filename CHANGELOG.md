@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.2.0](https://github.com/lifinance/types/compare/v13.0.0...v13.2.0) (2024-05-13)
+
+
+### Features
+
+* add Mantle chain ([#230](https://github.com/lifinance/types/issues/230)) ([abb90f1](https://github.com/lifinance/types/commit/abb90f1a7548659de8e34cf2894d2355875f7f68))
+* add native token for Mantle ([#231](https://github.com/lifinance/types/issues/231)) ([5ecab59](https://github.com/lifinance/types/commit/5ecab597e3eec33e5ce78d14e1839e25e3265fcd))
+* add wrapped MNT token ([#232](https://github.com/lifinance/types/issues/232)) ([bd77414](https://github.com/lifinance/types/commit/bd774144b82c8f017cb1e0c0d58c263344b8e4d0))
+
 ## [13.1.0](https://github.com/lifinance/types/compare/v13.0.0...v13.1.0) (2024-05-13)
 
 
