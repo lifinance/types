@@ -72,4 +72,5 @@ export enum CoinKey {
   CELR = 'CELR',
   IF = 'IF',
   RUNE = 'RUNE',
+  WMNT = 'WMNT', // Wrapped MNT Token
 }
