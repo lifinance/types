@@ -13,5 +13,5 @@ export enum ErrorCode {
   UnauthorizedError = 1010,
   ValidationError = 1011,
   RpcFailure = 1012,
-  MalformedSchema = 1013
+  MalformedSchema = 1013,
 }
