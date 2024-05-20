@@ -47,6 +47,7 @@ export enum CoinKey {
   cbtCELR = 'cbtCELR', // cBridge testnet CELR
   BUSD = 'BUSD',
   USDCe = 'USDCe',
+  USDB = 'USDB', // Blast native stablecoin
 
   // Testnet
   TEST = 'TEST',
