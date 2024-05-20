@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.6.0](https://github.com/lifinance/types/compare/v13.5.0...v13.6.0) (2024-05-20)
+
+
+### Features
+
+* add missing USDE on Blast chain ([#236](https://github.com/lifinance/types/issues/236)) ([2a8b0fe](https://github.com/lifinance/types/commit/2a8b0feafeac92ecf42b4ee8025f857bb1c21cb1))
+
 ## [13.5.0](https://github.com/lifinance/types/compare/v13.4.0...v13.5.0) (2024-05-20)
 
 
