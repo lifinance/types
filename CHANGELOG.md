@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.5.0](https://github.com/lifinance/types/compare/v13.4.0...v13.5.0) (2024-05-20)
+
+
+### Features
+
+* add Blast chain ([#235](https://github.com/lifinance/types/issues/235)) ([f078b7c](https://github.com/lifinance/types/commit/f078b7c9e978dbd63e10263289ed757b38378640))
+
 ## [13.4.0](https://github.com/lifinance/types/compare/v13.3.0...v13.4.0) (2024-05-20)
 
 
