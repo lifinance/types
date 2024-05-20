@@ -29,3 +29,21 @@ or
 ```bash
 npm install --save @lifi/types
 ```
+
+## Release
+
+The package uses `standard-version` to generate a changelog based on semantic commit history. The `standard-version` package also handles version numbering.
+
+Once main is up to date with the changes to be released execute the following command on the main branch to invoke `standard-version`:
+
+```bash
+yarn release
+```
+
+Then to release:
+
+```bash
+git push --follow-tags origin main
+```
+
+This will push a newly created git tag to the remote repository, which will trigger a github action which will publish the new version to npm
