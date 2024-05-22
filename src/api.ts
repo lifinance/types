@@ -567,3 +567,17 @@ export enum IntegratorFeeType {
   FIXED = 'FIXED',
   SHARED = 'SHARED',
 }
+
+export type TransferSummary = {
+  id: {
+    toAddress: string
+    sendingChainId?: number
+  }
+  totalReceivedAmount: number
+}
+
+export interface TransferSummariesResponse {
+  token: string
+  receivingChainId: number
+  summaries: TransferSummary[]
+}
