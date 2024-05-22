@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.7.0](https://github.com/lifinance/types/compare/v13.0.0...v13.7.0) (2024-05-22)
+
+
+### Features
+
+* add Blast chain ([#235](https://github.com/lifinance/types/issues/235)) ([f078b7c](https://github.com/lifinance/types/commit/f078b7c9e978dbd63e10263289ed757b38378640))
+* add endpoint interface types for /analytics/transfers/summary (LF-8106) ([279538f](https://github.com/lifinance/types/commit/279538fc5a3e268c597bcd06f797c630b924021a))
+* add Mantle chain ([#230](https://github.com/lifinance/types/issues/230)) ([abb90f1](https://github.com/lifinance/types/commit/abb90f1a7548659de8e34cf2894d2355875f7f68))
+* add missing USDE on Blast chain ([#236](https://github.com/lifinance/types/issues/236)) ([2a8b0fe](https://github.com/lifinance/types/commit/2a8b0feafeac92ecf42b4ee8025f857bb1c21cb1))
+* add native token for Mantle ([#231](https://github.com/lifinance/types/issues/231)) ([5ecab59](https://github.com/lifinance/types/commit/5ecab597e3eec33e5ce78d14e1839e25e3265fcd))
+* add RpcFailure + MalformedSchema error codes ([b646fa1](https://github.com/lifinance/types/commit/b646fa178f056d3ab73d7d460260fdb0bf21f10a))
+* add wrapped MNT token ([#232](https://github.com/lifinance/types/issues/232)) ([bd77414](https://github.com/lifinance/types/commit/bd774144b82c8f017cb1e0c0d58c263344b8e4d0))
+
 ## [13.6.0](https://github.com/lifinance/types/compare/v13.5.0...v13.6.0) (2024-05-20)
 
 
