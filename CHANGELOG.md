@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [13.7.1](https://github.com/lifinance/types/compare/v13.7.0...v13.7.1) (2024-05-24)
+
+
+### Bug Fixes
+
+* update mantle icon ([#239](https://github.com/lifinance/types/issues/239)) ([18e5900](https://github.com/lifinance/types/commit/18e590057fece95e4be0dab238a9623c419fb322))
+
 ## [13.7.0](https://github.com/lifinance/types/compare/v13.0.0...v13.7.0) (2024-05-22)
 
 
