@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.8.0](https://github.com/lifinance/types/compare/v13.7.1...v13.8.0) (2024-05-29)
+
+
+### Features
+
+* add rootstock icon ([#237](https://github.com/lifinance/types/issues/237)) ([e798cbc](https://github.com/lifinance/types/commit/e798cbc6b19e61b9668e3b85e4eb44c8e59bad16))
+
+
+### Bug Fixes
+
+* add mantle.svg ([#240](https://github.com/lifinance/types/issues/240)) ([af81442](https://github.com/lifinance/types/commit/af8144270aaf07adbdbea661c5ca82bc5b54e744))
+
 ### [13.7.1](https://github.com/lifinance/types/compare/v13.7.0...v13.7.1) (2024-05-24)
 
 
