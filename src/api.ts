@@ -270,6 +270,7 @@ export interface ConnectionsRequest extends ToolConfiguration {
   fromToken?: string
   toChain?: number | string
   toToken?: string
+  allowSwitchChain?: boolean // (default: true) the connections that require chain switch (muiltiple signatures) are included by default
   chainTypes?: ChainType[]
 }
 
