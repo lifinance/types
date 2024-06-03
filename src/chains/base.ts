@@ -51,27 +51,6 @@ export enum ChainKey {
   BCH = 'bch',
   LTC = 'ltc',
   DGE = 'dge',
-
-  // Testnets
-  METT = 'mett',
-  DIOT = 'diot',
-  ARBG = 'arbg',
-  OPTG = 'optg',
-  BSCT = 'bsct',
-  HECT = 'hect',
-  ONET = 'onet',
-  FUST = 'fust',
-  TLOT = 'tlot',
-  RSKT = 'rskt',
-  SOLT = 'solt',
-  OAST = 'oast',
-  TERT = 'tert',
-  AVAT = 'avat',
-  EVMT = 'evmt',
-  MORT = 'mort',
-  FTMT = 'ftmt',
-  LNAT = 'lnat',
-  SCLT = 'sclt',
 }
 
 export enum ChainId {
@@ -126,27 +105,4 @@ export enum ChainId {
   BCH = 20000000000002,
   LTC = 20000000000003,
   DGE = 20000000000004,
-
-  // Testnets
-  METT = 12,
-  DIOT = 13,
-  ARBG = 421613,
-  OPTG = 420,
-  BSCT = 97,
-  HECT = 256,
-  ONET = 1666700000,
-  FUST = 123,
-  TLOT = 41,
-  RSKT = 31,
-  AVAT = 43113,
-  EVMT = 9000,
-  MORT = 1287,
-  FTMT = 4002,
-  LNAT = 59140,
-  SCLT = 534351,
-
-  // None-EVM Testnets (IDs are made up by the LI.FI team)
-  SOLT = 1151111081161011,
-  TERT = 1161011141161011,
-  OAST = 1119711511610111,
 }

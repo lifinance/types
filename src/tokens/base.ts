@@ -40,29 +40,9 @@ export enum CoinKey {
   // Stable coins
   USDT = 'USDT',
   USDC = 'USDC',
-  cbtUSDC = 'cbtUSDC', // cBridge testnet USDC
-  cbtUSDT = 'cbtUSDT', // cBridge testnet USDT
-  cbtWUSDT = 'cbtWUSDT', // cBridge testnet wrapped USDT
-  cbtWUSDC = 'cbtWUSDC', // cBridge testnet wrapped USDC
-  cbtCELR = 'cbtCELR', // cBridge testnet CELR
   BUSD = 'BUSD',
   USDCe = 'USDCe',
   USDB = 'USDB', // Blast native stablecoin
-
-  // Testnet
-  TEST = 'TEST',
-  KAL = 'KAL',
-  SDIODE = 'SDIODE',
-  SPARK = 'SPARK',
-  TRBTC = 'TRBTC',
-  CXTT = 'CXTT', // Connext Test token
-
-  // stargate testnet tokens
-  sgMETIS = 'sgMETIS', // sgMETIS test token
-  sgWOO = 'sgWOO', // sgWOO test token
-  sgUSDT = 'sgUSDT', // sgUSDT test token
-  sgBUSD = 'sgBUSD', // sgBUSD test token
-  sgUSDC = 'sgUSDC', // sgUSDC test token
 
   // Other tokens
   WBTC = 'WBTC',
