@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.11.0](https://github.com/lifinance/types/compare/v13.10.0...v13.11.0) (2024-06-03)
+
+
+### Features
+
+* add optional allowSwitchChain param to ConnectionRequest ([#244](https://github.com/lifinance/types/issues/244)) ([90d9d2a](https://github.com/lifinance/types/commit/90d9d2a3d12621d3392c2ebcd7e3a23c8dd69169))
+
 ## [13.10.0](https://github.com/lifinance/types/compare/v13.9.0...v13.10.0) (2024-06-03)
 
 
