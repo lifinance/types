@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.10.0](https://github.com/lifinance/types/compare/v13.9.0...v13.10.0) (2024-06-03)
+
+
+### Features
+
+* remove testnet ([#243](https://github.com/lifinance/types/issues/243)) ([a6d89c0](https://github.com/lifinance/types/commit/a6d89c0b51bf3a0ebe886cc397b01fd2fa16ac02))
+
 ## [13.9.0](https://github.com/lifinance/types/compare/v13.7.1...v13.9.0) (2024-05-30)
 
 
