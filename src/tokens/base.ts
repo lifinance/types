@@ -54,4 +54,5 @@ export enum CoinKey {
   IF = 'IF',
   RUNE = 'RUNE',
   WMNT = 'WMNT', // Wrapped MNT Token
+  frxETH = 'frxETH',
 }
