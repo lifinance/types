@@ -55,4 +55,5 @@ export enum CoinKey {
   RUNE = 'RUNE',
   WMNT = 'WMNT', // Wrapped MNT Token
   frxETH = 'frxETH',
+  WSEI = 'WSEI', // Wrapped SEI Token, native SEI token is not supported
 }
