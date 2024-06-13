@@ -9,6 +9,24 @@ import type { Token } from './tokens/index.js'
  */
 export type BigIntish = string
 
+/**
+ * API Pagination Interfaces
+ */
+export interface PaginationQuery {
+  limit?: number
+  next?: string
+  previous?: string
+}
+
+export interface PaginatedResponse<T> {
+  hasNext?: boolean
+  hasPrevious?: boolean
+  next?: string
+  previous?: string
+  total?: number
+  data: T[]
+}
+
 export type TransactionRequest = {
   to?: string
   from?: string
