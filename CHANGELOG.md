@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.13.0](https://github.com/lifinance/types/compare/v13.12.4...v13.13.0) (2024-06-13)
+
+
+### Features
+
+* add SEI token ([#252](https://github.com/lifinance/types/issues/252)) ([0666a70](https://github.com/lifinance/types/commit/0666a70eff2fe193296f633e883beefcc6a1a2d5))
+
 ### [13.12.4](https://github.com/lifinance/types/compare/v13.12.3...v13.12.4) (2024-06-11)
 
 ### [13.12.3](https://github.com/lifinance/types/compare/v13.12.2...v13.12.3) (2024-06-11)
