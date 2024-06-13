@@ -27,6 +27,7 @@ export enum CoinKey {
   METIS = 'METIS',
   EVM = 'EVM',
   MNT = 'MNT',
+  SEI = 'SEI',
 
   // Solana
   SOL = 'SOL',
@@ -55,5 +56,5 @@ export enum CoinKey {
   RUNE = 'RUNE',
   WMNT = 'WMNT', // Wrapped MNT Token
   frxETH = 'frxETH',
-  WSEI = 'WSEI', // Wrapped SEI Token, native SEI token is not supported
+  WSEI = 'WSEI', // Wrapped SEI Token
 }
