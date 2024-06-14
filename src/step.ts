@@ -52,15 +52,14 @@ export interface Estimate {
 }
 
 // EXECUTION
-export type Status =
-  | 'NOT_STARTED'
+export type ExecutionStatus = 'ACTION_REQUIRED' | 'PENDING' | 'FAILED' | 'DONE'
+
+export type ProcessStatus =
   | 'STARTED'
   | 'ACTION_REQUIRED'
-  | 'CHAIN_SWITCH_REQUIRED'
   | 'PENDING'
   | 'FAILED'
   | 'DONE'
-  | 'RESUME'
   | 'CANCELLED'
 
 export type ProcessType =
@@ -76,7 +75,7 @@ export interface Process {
   doneAt?: number
   failedAt?: number
   type: ProcessType
-  status: Status
+  status: ProcessStatus
   substatus?: Substatus
   message?: string
   txHash?: string
@@ -93,18 +92,13 @@ export interface Process {
 }
 
 export interface Execution {
-  status: Status
+  status: ExecutionStatus
   process: Array<Process>
   fromAmount?: string
   toAmount?: string
   toToken?: Token
   feeCosts?: FeeCost[]
   gasCosts?: GasCost[]
-}
-
-export const emptyExecution: Execution = {
-  status: 'NOT_STARTED',
-  process: [],
 }
 
 // STEP
