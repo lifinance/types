@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.15.0](https://github.com/lifinance/types/compare/v13.13.0...v13.15.0) (2024-06-14)
+
+
+### Features
+
+* add API pagination interfaces ([0bd7bbd](https://github.com/lifinance/types/commit/0bd7bbd0c4ea3aa7e9076c3038ec2d39483ec9ff))
+
 ## [13.14.0](https://github.com/lifinance/types/compare/v13.7.0...v13.14.0) (2024-06-13)
 
 
