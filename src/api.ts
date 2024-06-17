@@ -10,7 +10,7 @@ import type { Token } from './tokens/index.js'
 export type BigIntish = string
 
 /**
- * API Pagination Interfaces
+ * Pagination options for the API
  */
 export interface PaginationQuery {
   limit?: number
@@ -18,6 +18,9 @@ export interface PaginationQuery {
   previous?: string
 }
 
+/**
+ * API response for paginated requests
+ */
 export interface PaginatedResponse<T> {
   hasNext?: boolean
   hasPrevious?: boolean
@@ -596,8 +599,5 @@ export type TransferSummary = {
   totalReceivedAmount: number
 }
 
-export interface TransferSummariesResponse {
-  token: string
-  receivingChainId: number
-  summaries: TransferSummary[]
-}
+export interface TransferSummariesResponse
+  extends PaginatedResponse<TransferSummary> {}
