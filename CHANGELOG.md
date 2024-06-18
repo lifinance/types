@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.16.0](https://github.com/lifinance/types/compare/v13.7.0...v13.16.0) (2024-06-18)
+
+
+### Features
+
+* add API pagination interfaces ([0bd7bbd](https://github.com/lifinance/types/commit/0bd7bbd0c4ea3aa7e9076c3038ec2d39483ec9ff))
+* add optional allowSwitchChain param to ConnectionRequest ([#244](https://github.com/lifinance/types/issues/244)) ([90d9d2a](https://github.com/lifinance/types/commit/90d9d2a3d12621d3392c2ebcd7e3a23c8dd69169))
+* add rootstock icon ([#237](https://github.com/lifinance/types/issues/237)) ([e798cbc](https://github.com/lifinance/types/commit/e798cbc6b19e61b9668e3b85e4eb44c8e59bad16))
+* add SEI token ([#252](https://github.com/lifinance/types/issues/252)) ([0666a70](https://github.com/lifinance/types/commit/0666a70eff2fe193296f633e883beefcc6a1a2d5))
+* enable sei chain ([#247](https://github.com/lifinance/types/issues/247)) ([f22c650](https://github.com/lifinance/types/commit/f22c6509a84c042250127e5efe72e8c5d466c4bc))
+* paginated TransferSummariesResponse: update pagination interface comments ([3011789](https://github.com/lifinance/types/commit/301178952dadafd2a41f5d321bcc5715a92ff904))
+* remove testnet ([#243](https://github.com/lifinance/types/issues/243)) ([a6d89c0](https://github.com/lifinance/types/commit/a6d89c0b51bf3a0ebe886cc397b01fd2fa16ac02))
+
+
+### Bug Fixes
+
+* add mantle.svg ([#240](https://github.com/lifinance/types/issues/240)) ([af81442](https://github.com/lifinance/types/commit/af8144270aaf07adbdbea661c5ca82bc5b54e744))
+* update mantle icon ([#239](https://github.com/lifinance/types/issues/239)) ([18e5900](https://github.com/lifinance/types/commit/18e590057fece95e4be0dab238a9623c419fb322))
+
 ## [13.15.0](https://github.com/lifinance/types/compare/v13.13.0...v13.15.0) (2024-06-14)
 
 
