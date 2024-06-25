@@ -44,6 +44,7 @@ export enum CoinKey {
   BUSD = 'BUSD',
   USDCe = 'USDCe',
   USDB = 'USDB', // Blast native stablecoin
+  FRAX = 'FRAX', // Fraxtal stablecoin
 
   // Other tokens
   WBTC = 'WBTC',
@@ -56,5 +57,6 @@ export enum CoinKey {
   RUNE = 'RUNE',
   WMNT = 'WMNT', // Wrapped MNT Token
   frxETH = 'frxETH',
+  wfrxETH = 'wfrxETH', // Wrapped frxETH Token
   WSEI = 'WSEI', // Wrapped SEI Token
 }

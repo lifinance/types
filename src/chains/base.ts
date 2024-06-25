@@ -41,6 +41,7 @@ export enum ChainKey {
   MNT = 'mnt',
   BLS = 'bls',
   SEI = 'sei',
+  FRA = 'fra',
 
   // None-EVM
   SOL = 'sol',
@@ -96,6 +97,7 @@ export enum ChainId {
   MNT = 5000,
   BLS = 81457,
   SEI = 1329,
+  FRA = 252,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
