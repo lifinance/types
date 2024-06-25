@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.17.0](https://github.com/lifinance/types/compare/v13.16.0...v13.17.0) (2024-06-25)
+
+
+### Features
+
+* add fraxtal chain and tokens ([#256](https://github.com/lifinance/types/issues/256)) ([361324f](https://github.com/lifinance/types/commit/361324ff01b7f2d053680de2ba81a347ae906435))
+
 ## [13.16.0](https://github.com/lifinance/types/compare/v13.7.0...v13.16.0) (2024-06-18)
 
 
