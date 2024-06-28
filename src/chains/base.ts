@@ -48,7 +48,7 @@ export enum ChainKey {
   TER = 'ter',
   OAS = 'oas',
 
-  // UXTO
+  // UTXO
   BTC = 'btc',
   BCH = 'bch',
   LTC = 'ltc',
@@ -104,7 +104,7 @@ export enum ChainId {
   TER = 1161011141099710,
   OAS = 111971151099710,
 
-  // UXTO (IDs are made up by the LI.FI team)
+  // UTXO (IDs are made up by the LI.FI team)
   BTC = 20000000000001,
   BCH = 20000000000002,
   LTC = 20000000000003,

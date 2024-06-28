@@ -32,7 +32,7 @@ export enum CoinKey {
   // Solana
   SOL = 'SOL',
 
-  // UXTO
+  // UTXO
   BTC = 'BTC',
   BCH = 'BCH',
   LTC = 'LTC',
