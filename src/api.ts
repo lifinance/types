@@ -52,6 +52,10 @@ export type TransactionRequest = {
   ccipReadEnabled?: boolean
 }
 
+/**
+ * RECOMMENDED and SAFEST are deprecated as of 28.06.24
+ * https://lifi.atlassian.net/browse/LF-8826
+ */
 export const Orders = ['RECOMMENDED', 'FASTEST', 'CHEAPEST', 'SAFEST'] as const
 export type Order = (typeof Orders)[number]
 
