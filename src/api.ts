@@ -77,7 +77,6 @@ export interface RoutesRequest {
 export interface RouteOptions {
   integrator?: string // Should contain the identifier of the integrator. Usually, it's dApp/company name.
   fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
-  insurance?: boolean // Whether the user wants to insure their tx
   maxPriceImpact?: number // Hide routes with price impact greater than or equal to this value
   order?: Order // (default: RECOMMENDED) 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
   slippage?: number // (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%
@@ -112,20 +111,8 @@ export interface AllowDenyPrefer {
   prefer?: string[] // (default: []) // eg. ['1inch'] to use 1inch if available and fall back to others if not
 }
 
-export const _InsuranceState = [
-  'INSURED',
-  'INSURABLE',
-  'NOT_INSURABLE',
-] as const
-export type InsuranceState = (typeof _InsuranceState)[number]
-
-export interface Insurance {
-  state: InsuranceState
-  feeAmountUsd: string
-}
 export interface Route {
   id: string
-  insurance: Insurance
   fromChainId: number
   fromAmountUSD: string
   fromAmount: string
@@ -233,7 +220,6 @@ export interface QuoteRequest extends ToolConfiguration {
   integrator?: string
   referrer?: string
   fee?: number | string
-  insurance?: boolean // indicates whether the user wants a quote with bridge insurance
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
   fromAmountForGas?: string // the amount of token to convert to gas
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
