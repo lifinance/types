@@ -78,7 +78,7 @@ export interface RouteOptions {
   integrator?: string // Should contain the identifier of the integrator. Usually, it's dApp/company name.
   fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
   maxPriceImpact?: number // Hide routes with price impact greater than or equal to this value
-  order?: Order // (default: CHEAPEST) 'FASTEST' | 'CHEAPEST'
+  order?: Order // (default: RECOMMENDED) 'RECOMMENDED' | 'FASTEST' | 'CHEAPEST' | 'SAFEST'
   slippage?: number // (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%
   referrer?: string // Integrators can set a wallet address as a referrer to track them
   allowSwitchChain?: boolean // (default: false) Whether chain switches should be allowed in the routes

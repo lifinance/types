@@ -2,13 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [13.17.2](https://github.com/lifinance/types/compare/v13.17.1...v13.17.2) (2024-07-04)
-
-
-### Bug Fixes
-
-* utxo typo ([2c642e9](https://github.com/lifinance/types/commit/2c642e9fc59ff877defbd89991dfaca01b8b7455))
-
 ### [13.17.1](https://github.com/lifinance/types/compare/v13.17.0...v13.17.1) (2024-06-28)
 
 ## [13.17.0](https://github.com/lifinance/types/compare/v13.16.0...v13.17.0) (2024-06-25)
