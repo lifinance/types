@@ -248,7 +248,7 @@ export interface QuoteRequest extends ToolConfiguration {
   fee?: number | string
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
   fromAmountForGas?: string // the amount of token to convert to gas
-  maxPriceImpact?: number // hide routes with price impact greater than or equal t this value
+  maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
