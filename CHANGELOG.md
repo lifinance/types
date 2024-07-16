@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [13.18.1](https://github.com/lifinance/types/compare/v13.18.0...v13.18.1) (2024-07-16)
+
+
+### Bug Fixes
+
+* add wSOL to base tokens ([5eb46f6](https://github.com/lifinance/types/commit/5eb46f685cc1bc906682a1ca07637e0cab3f7b54))
+
 ## [13.18.0](https://github.com/lifinance/types/compare/v13.17.1...v13.18.0) (2024-07-10)
 
 
