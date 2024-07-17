@@ -31,7 +31,7 @@ export enum CoinKey {
 
   // Solana
   SOL = 'SOL',
-  WSOL = 'WSOL',
+  WSOL = 'wSOL',
 
   // UTXO
   BTC = 'BTC',
