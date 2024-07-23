@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.0.0](https://github.com/lifinance/types/compare/v13.18.2...v14.0.0) (2024-07-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove unused chains (#261)
+
+### Features
+
+* remove unused chains ([#261](https://github.com/lifinance/types/issues/261)) ([f7aac3a](https://github.com/lifinance/types/commit/f7aac3a62877215d163945ea6daa09d0ea8dcea7))
+
 ### [13.18.2](https://github.com/lifinance/types/compare/v13.18.1...v13.18.2) (2024-07-17)
 
 
