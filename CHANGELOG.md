@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [13.18.2](https://github.com/lifinance/types/compare/v13.18.1...v13.18.2) (2024-07-17)
+
+
+### Bug Fixes
+
+* update wSOL ([4a95a6f](https://github.com/lifinance/types/commit/4a95a6f15fa41440f23d3e0df31d1c7eb0e04cfb))
+
+### [13.18.1](https://github.com/lifinance/types/compare/v13.18.0...v13.18.1) (2024-07-16)
+
+
+### Bug Fixes
+
+* add wSOL to base tokens ([5eb46f6](https://github.com/lifinance/types/commit/5eb46f685cc1bc906682a1ca07637e0cab3f7b54))
+
+## [13.18.0](https://github.com/lifinance/types/compare/v13.17.1...v13.18.0) (2024-07-10)
+
+
+### Features
+
+* remove insurance ([#246](https://github.com/lifinance/types/issues/246)) ([ba2373b](https://github.com/lifinance/types/commit/ba2373bfa05b1a0b0a0df44e01e23beb81d646cf))
+
+
+### Bug Fixes
+
+* utxo typo ([2c642e9](https://github.com/lifinance/types/commit/2c642e9fc59ff877defbd89991dfaca01b8b7455))
+
 ### [13.17.1](https://github.com/lifinance/types/compare/v13.17.0...v13.17.1) (2024-06-28)
 
 ## [13.17.0](https://github.com/lifinance/types/compare/v13.16.0...v13.17.0) (2024-06-25)

@@ -5,23 +5,14 @@ export enum CoinKey {
   DAI = 'DAI',
   FTM = 'FTM',
   AVAX = 'AVAX',
-  HT = 'HT',
   ONE = 'ONE',
   FSN = 'FSN',
   MOVR = 'MOVR',
-  EXP = 'EXP',
-  TCH = 'TCH',
-  UBQ = 'UBQ',
-  META = 'META',
-  DIODE = 'DIODE',
   CELO = 'CELO',
   FUSE = 'FUSE',
   TLOS = 'TLOS',
   CRO = 'CRO',
-  SHIB = 'SHIB',
-  L1 = 'L1',
   RBTC = 'RBTC',
-  TBG = 'TBG',
   VLX = 'VLX',
   GLMR = 'GLMR',
   METIS = 'METIS',
@@ -31,6 +22,7 @@ export enum CoinKey {
 
   // Solana
   SOL = 'SOL',
+  WSOL = 'wSOL',
 
   // UTXO
   BTC = 'BTC',
