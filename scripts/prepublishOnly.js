@@ -41,10 +41,15 @@ function generatePackageJson() {
   // Generate proxy packages for each export.
   const files_ = [...files]
   for (const [key, value] of Object.entries(exports_)) {
-    if (typeof value === 'string') continue
-    if (key === '.') continue
-    if (!value.default || !value.import)
+    if (typeof value === 'string') {
+      continue
+    }
+    if (key === '.') {
+      continue
+    }
+    if (!value.default || !value.import) {
       throw new Error('`default` and `import` are required.')
+    }
 
     outputFileSync(
       `${key}/package.json`,
@@ -52,9 +57,15 @@ function generatePackageJson() {
   ${Object.entries(value)
     .map(([k, v]) => {
       const key = (() => {
-        if (k === 'import') return 'module'
-        if (k === 'default') return 'main'
-        if (k === 'types') return 'types'
+        if (k === 'import') {
+          return 'module'
+        }
+        if (k === 'default') {
+          return 'main'
+        }
+        if (k === 'types') {
+          return 'types'
+        }
         throw new Error('Invalid key')
       })()
       return `"${key}": "${v.replace('./', '../')}"`
