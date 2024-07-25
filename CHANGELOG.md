@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0](https://github.com/lifinance/types/compare/v13.16.0...v15.0.0) (2024-07-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove unused chains (#261)
+
+### Features
+
+* add fraxtal chain and tokens ([#256](https://github.com/lifinance/types/issues/256)) ([361324f](https://github.com/lifinance/types/commit/361324ff01b7f2d053680de2ba81a347ae906435))
+* add minPriceUSD parameter to TokensRequest ([#262](https://github.com/lifinance/types/issues/262)) ([266b026](https://github.com/lifinance/types/commit/266b026c5048a3b8067b4d0153c2fc752c82614f))
+* remove insurance ([#246](https://github.com/lifinance/types/issues/246)) ([ba2373b](https://github.com/lifinance/types/commit/ba2373bfa05b1a0b0a0df44e01e23beb81d646cf))
+* remove unused chains ([#261](https://github.com/lifinance/types/issues/261)) ([f7aac3a](https://github.com/lifinance/types/commit/f7aac3a62877215d163945ea6daa09d0ea8dcea7))
+
+
+### Bug Fixes
+
+* add wSOL to base tokens ([5eb46f6](https://github.com/lifinance/types/commit/5eb46f685cc1bc906682a1ca07637e0cab3f7b54))
+* update wSOL ([4a95a6f](https://github.com/lifinance/types/commit/4a95a6f15fa41440f23d3e0df31d1c7eb0e04cfb))
+* utxo typo ([2c642e9](https://github.com/lifinance/types/commit/2c642e9fc59ff877defbd89991dfaca01b8b7455))
+
 ## [14.0.0](https://github.com/lifinance/types/compare/v13.18.2...v14.0.0) (2024-07-23)
 
 
