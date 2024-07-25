@@ -483,6 +483,7 @@ export interface ToolsRequest {
 export type TokensRequest = {
   chains?: (ChainId | ChainKey)[]
   chainTypes?: ChainType[]
+  minPriceUSD?: number
 }
 
 export type TokensResponse = {
