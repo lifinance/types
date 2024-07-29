@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.1.0](https://github.com/lifinance/types/compare/v15.0.0...v15.1.0) (2024-07-29)
+
+
+### Features
+
+* add taiko chain ([#263](https://github.com/lifinance/types/issues/263)) ([76a0826](https://github.com/lifinance/types/commit/76a082625197ba60260726e7e18b2e3fce607303))
+
 ## [15.0.0](https://github.com/lifinance/types/compare/v13.16.0...v15.0.0) (2024-07-25)
 
 
