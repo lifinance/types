@@ -34,6 +34,7 @@ export enum ChainKey {
   SEI = 'sei',
   FRA = 'fra',
   TAI = 'tai',
+  GRA = 'gra',
 
   // None-EVM
   SOL = 'sol',
@@ -82,6 +83,7 @@ export enum ChainId {
   SEI = 1329,
   FRA = 252,
   TAI = 167000,
+  GRA = 1625,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,

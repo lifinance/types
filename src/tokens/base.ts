@@ -19,6 +19,7 @@ export enum CoinKey {
   EVM = 'EVM',
   MNT = 'MNT',
   SEI = 'SEI',
+  G = 'G',
 
   // Solana
   SOL = 'SOL',
@@ -51,4 +52,5 @@ export enum CoinKey {
   frxETH = 'frxETH',
   wfrxETH = 'wfrxETH', // Wrapped frxETH Token
   WSEI = 'WSEI', // Wrapped SEI Token
+  WG = 'WG', // Wrapped G Token on Gravity chain
 }
