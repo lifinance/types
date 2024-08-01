@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.2.0](https://github.com/lifinance/types/compare/v15.1.0...v15.2.0) (2024-08-01)
+
+
+### Features
+
+* add gravity assets ([684cd2f](https://github.com/lifinance/types/commit/684cd2f249e7ccb6c881cbbc270eacc8ab56c830))
+
 ## [15.1.0](https://github.com/lifinance/types/compare/v15.0.0...v15.1.0) (2024-07-29)
 
 
