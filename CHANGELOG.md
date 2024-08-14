@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.3.0](https://github.com/lifinance/types/compare/v15.1.0...v15.3.0) (2024-08-14)
+
+
+### Features
+
+* add gravity assets ([#264](https://github.com/lifinance/types/issues/264)) ([e9ccbe3](https://github.com/lifinance/types/commit/e9ccbe3f9e4cb1eec7b4b8f94591e54d1f3b1913))
+* add new chain ([#267](https://github.com/lifinance/types/issues/267)) ([5041f55](https://github.com/lifinance/types/commit/5041f55a874c73d1bbf50530752846312c7159fd))
+
 ## [15.1.0](https://github.com/lifinance/types/compare/v15.0.0...v15.1.0) (2024-07-29)
 
 
