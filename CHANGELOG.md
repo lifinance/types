@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.4.0](https://github.com/lifinance/types/compare/v15.3.2...v15.4.0) (2024-08-29)
+
+
+### Features
+
+* add pol coin ([#270](https://github.com/lifinance/types/issues/270)) ([4ca1504](https://github.com/lifinance/types/commit/4ca1504032ff1e129a2065bf9c7a4735dc23e974))
+
 ### [15.3.2](https://github.com/lifinance/types/compare/v15.3.1...v15.3.2) (2024-08-27)
 
 ### [15.3.1](https://github.com/lifinance/types/compare/v15.3.0...v15.3.1) (2024-08-27)
