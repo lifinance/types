@@ -1,6 +1,7 @@
 export enum CoinKey {
   ETH = 'ETH',
   MATIC = 'MATIC',
+  POL = 'POL',
   BNB = 'BNB',
   DAI = 'DAI',
   FTM = 'FTM',
@@ -55,4 +56,5 @@ export enum CoinKey {
   WSEI = 'WSEI', // Wrapped SEI Token
   WG = 'WG', // Wrapped G Token on Gravity chain
   WIMX = 'WIMX', // Wrapped IMX Token
+  WPOL = 'WPOL', // Wrapped POL Token
 }
