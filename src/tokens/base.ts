@@ -22,6 +22,7 @@ export enum CoinKey {
   SEI = 'SEI',
   G = 'G',
   IMX = 'IMX',
+  KLAY = 'KLAY',
 
   // Solana
   SOL = 'SOL',
@@ -57,4 +58,5 @@ export enum CoinKey {
   WG = 'WG', // Wrapped G Token on Gravity chain
   WIMX = 'WIMX', // Wrapped IMX Token
   WPOL = 'WPOL', // Wrapped POL Token
+  WKLAY = 'WKLAY', // Wrapped KLAY Token
 }

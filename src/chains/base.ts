@@ -36,6 +36,7 @@ export enum ChainKey {
   TAI = 'tai',
   GRA = 'gra',
   IMX = 'imx',
+  KLAY = 'klay',
 
   // None-EVM
   SOL = 'sol',
@@ -86,6 +87,7 @@ export enum ChainId {
   TAI = 167000,
   GRA = 1625,
   IMX = 13371,
+  KLAY = 8217,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
