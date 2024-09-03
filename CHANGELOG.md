@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.7.0](https://github.com/lifinance/types/compare/v15.6.0...v15.7.0) (2024-09-03)
+
+
+### Features
+
+* add quote toAmount req interface ([#274](https://github.com/lifinance/types/issues/274)) ([68d2a8f](https://github.com/lifinance/types/commit/68d2a8f1499e6b551deee01cbf084fb6b04cd8fe))
+
 ## [15.6.0](https://github.com/lifinance/types/compare/v15.4.0...v15.6.0) (2024-09-03)
 
 
