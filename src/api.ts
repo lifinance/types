@@ -256,6 +256,25 @@ export interface QuoteRequest extends ToolConfiguration {
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
 }
 
+export interface QuoteToAmountRequest extends ToolConfiguration {
+  fromChain: number | string
+  fromToken: string
+  fromAddress: string
+  toAmount: string
+
+  toChain: number | string
+  toToken: string
+  toAddress?: string
+
+  order?: Order
+  slippage?: number | string
+  integrator?: string
+  referrer?: string
+  fee?: number | string
+  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
+  maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
+}
+
 export interface ContractCall {
   fromAmount: string
   fromTokenAddress: string
