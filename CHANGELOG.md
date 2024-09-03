@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.5.0](https://github.com/lifinance/types/compare/v15.4.0...v15.5.0) (2024-09-03)
+
+
+### Features
+
+* from amount in contract calls ([#272](https://github.com/lifinance/types/issues/272)) ([0cd6f86](https://github.com/lifinance/types/commit/0cd6f86ef7949730c635de425da055a93379a5a7))
+
 ## [15.4.0](https://github.com/lifinance/types/compare/v15.3.2...v15.4.0) (2024-08-29)
 
 
