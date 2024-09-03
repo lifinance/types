@@ -256,6 +256,11 @@ export interface QuoteRequest extends ToolConfiguration {
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
 }
 
+export interface QuoteToAmountRequest
+  extends Omit<QuoteRequest, 'fromAmount' | 'fromAmountForGas' | 'insurance'> {
+  toAmount: string
+}
+
 export interface ContractCall {
   fromAmount: string
   fromTokenAddress: string
