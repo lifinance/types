@@ -63,7 +63,7 @@ export interface TimingStrategyMinWaitTime {
 }
 
 export type TimingStrategyMinWaitTimeString =
-  `minWaitTime,${number},${number},${number}`
+  `minWaitTime-${number}-${number}-${number}`
 
 export type TimingStrategy = TimingStrategyMinWaitTime
 export type TimingStrategyString = TimingStrategyMinWaitTimeString
