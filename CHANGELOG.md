@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.8.0](https://github.com/lifinance/types/compare/v15.7.0...v15.8.0) (2024-09-04)
+
+
+### Features
+
+* add timing parameters ([#271](https://github.com/lifinance/types/issues/271)) ([711deeb](https://github.com/lifinance/types/commit/711deeb12d2e7d9f5c11403c9eb240a895de686e))
+
 ## [15.7.0](https://github.com/lifinance/types/compare/v15.6.0...v15.7.0) (2024-09-03)
 
 
