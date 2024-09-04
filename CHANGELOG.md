@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.7.0](https://github.com/lifinance/types/compare/v15.6.0...v15.7.0) (2024-09-03)
+
+
+### Features
+
+* add quote toAmount req interface ([#274](https://github.com/lifinance/types/issues/274)) ([68d2a8f](https://github.com/lifinance/types/commit/68d2a8f1499e6b551deee01cbf084fb6b04cd8fe))
+
+## [15.6.0](https://github.com/lifinance/types/compare/v15.4.0...v15.6.0) (2024-09-03)
+
+
+### Features
+
+* from amount in contract calls ([#272](https://github.com/lifinance/types/issues/272)) ([0cd6f86](https://github.com/lifinance/types/commit/0cd6f86ef7949730c635de425da055a93379a5a7))
+
+## [15.5.0](https://github.com/lifinance/types/compare/v15.4.0...v15.5.0) (2024-09-03)
+
+
+### Features
+
+* from amount in contract calls ([#272](https://github.com/lifinance/types/issues/272)) ([0cd6f86](https://github.com/lifinance/types/commit/0cd6f86ef7949730c635de425da055a93379a5a7))
+
+## [15.4.0](https://github.com/lifinance/types/compare/v15.3.2...v15.4.0) (2024-08-29)
+
+
+### Features
+
+* add pol coin ([#270](https://github.com/lifinance/types/issues/270)) ([4ca1504](https://github.com/lifinance/types/commit/4ca1504032ff1e129a2065bf9c7a4735dc23e974))
+
+### [15.3.2](https://github.com/lifinance/types/compare/v15.3.1...v15.3.2) (2024-08-27)
+
+### [15.3.1](https://github.com/lifinance/types/compare/v15.3.0...v15.3.1) (2024-08-27)
+
 ## [15.3.0](https://github.com/lifinance/types/compare/v15.1.0...v15.3.0) (2024-08-14)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@lifi/types",
-  "version": "15.4.0-alpha.1",
+  "version": "15.7.0",
   "description": "Types for the LI.FI stack",
   "keywords": [
     "sdk",
@@ -76,7 +76,7 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
+    "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@types/fs-extra": "^11.0.4",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
@@ -100,5 +100,8 @@
     "scripts": {
       "postbump": "git add ."
     }
+  },
+  "dependencies": {
+    "@commitlint/format": "7.6.1"
   }
 }

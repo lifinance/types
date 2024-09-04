@@ -283,6 +283,11 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
 }
 
+export interface QuoteToAmountRequest
+  extends Omit<QuoteRequest, 'fromAmount' | 'fromAmountForGas' | 'insurance'> {
+  toAmount: string
+}
+
 export interface ContractCall {
   fromAmount: string
   fromTokenAddress: string
@@ -293,14 +298,13 @@ export interface ContractCall {
   toTokenAddress?: string
 }
 
-export interface ContractCallsQuoteRequest extends ToolConfiguration {
+type PartialContractCallsQuoteRequest = ToolConfiguration & {
   fromChain: number | string
   fromToken: string
   fromAddress: string
 
   toChain: number | string
   toToken: string
-  toAmount: string
 
   toFallbackAddress?: string
   contractOutputsToken?: string
@@ -312,6 +316,27 @@ export interface ContractCallsQuoteRequest extends ToolConfiguration {
   fee?: number | string
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
 }
+
+export type ContractCallsQuoteRequestToAmount =
+  PartialContractCallsQuoteRequest & {
+    toAmount: string
+  }
+
+export type ContractCallsQuoteRequestFromAmount =
+  PartialContractCallsQuoteRequest & {
+    fromAmount: string
+  }
+
+export type ContractCallsQuoteRequest =
+  | ContractCallsQuoteRequestFromAmount
+  | ContractCallsQuoteRequestToAmount
+export const isContractCallsRequestWithFromAmount = (
+  r: ContractCallsQuoteRequestFromAmount | ContractCallsQuoteRequestToAmount
+): r is ContractCallsQuoteRequestFromAmount => 'fromAmount' in r
+
+export const isContractCallsRequestWithToAmount = (
+  r: ContractCallsQuoteRequestFromAmount | ContractCallsQuoteRequestToAmount
+): r is ContractCallsQuoteRequestToAmount => 'toAmount' in r
 
 /* @deprecated */
 export interface ContractCallQuoteRequest extends ToolConfiguration {
