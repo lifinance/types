@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.9.0](https://github.com/lifinance/types/compare/v15.8.0...v15.9.0) (2024-09-05)
+
+
+### Features
+
+* add klaytn chain ([0a76b5c](https://github.com/lifinance/types/commit/0a76b5c5e3aba4076e0dcbca559d9e6e98382d16))
+* from amount in contract calls ([#272](https://github.com/lifinance/types/issues/272)) ([4788192](https://github.com/lifinance/types/commit/47881922b6366b531219c3712375f13cd8c2cfdf))
+
+
+### Bug Fixes
+
+* icon and chain name for Kaia ([a2c60f5](https://github.com/lifinance/types/commit/a2c60f53522f675b41ea3795e0b42c19a0584c47))
+
 ## [15.8.0](https://github.com/lifinance/types/compare/v15.7.0...v15.8.0) (2024-09-04)
 
 
