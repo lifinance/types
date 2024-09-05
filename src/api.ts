@@ -53,6 +53,32 @@ export type TransactionRequest = {
 }
 
 /**
+ * Timing options
+ */
+export interface TimingStrategyMinWaitTime {
+  strategy: 'minWaitTime'
+  minWaitTimeMs: number
+  startingExpectedResults: number
+  reduceEveryMs: number
+}
+
+export type TimingStrategyMinWaitTimeString =
+  `minWaitTime-${number}-${number}-${number}`
+
+export type TimingStrategy = TimingStrategyMinWaitTime
+export type TimingStrategyString = TimingStrategyMinWaitTimeString
+
+export interface Timing {
+  swapStepTimingStrategies?: TimingStrategy[]
+  routeTimingStrategies?: TimingStrategy[]
+}
+
+export interface TimingStrings {
+  swapStepTimingStrategies?: TimingStrategyString[]
+  routeTimingStrategies?: TimingStrategyString[]
+}
+
+/**
  * RECOMMENDED and SAFEST are deprecated as of 28.06.24
  * https://lifi.atlassian.net/browse/LF-8826
  */
@@ -85,6 +111,7 @@ export interface RouteOptions {
   allowDestinationCall?: boolean // (default: true) destination calls are enabled by default
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
+  timing?: Timing
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
@@ -231,7 +258,7 @@ export interface ToolConfiguration {
   preferExchanges?: string[]
 }
 
-export interface QuoteRequest extends ToolConfiguration {
+export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   fromChain: number | string
   fromToken: string
   fromAddress: string
@@ -254,6 +281,11 @@ export interface QuoteRequest extends ToolConfiguration {
    * @deprecated This property is deprecated and will be removed in future versions.
    */
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
+}
+
+export interface QuoteToAmountRequest
+  extends Omit<QuoteRequest, 'fromAmount' | 'fromAmountForGas' | 'insurance'> {
+  toAmount: string
 }
 
 export interface ContractCall {
