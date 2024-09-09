@@ -1,7 +1,7 @@
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
-import type { Action, LiFiStep } from './step.js'
+import type { Action, LiFiStep, StepToolDetails } from './step.js'
 import type { Token } from './tokens/index.js'
 
 /**
@@ -404,6 +404,7 @@ export interface ExtendedTransactionInfo extends BaseTransactionInfo {
   gasAmountUSD: string
   timestamp?: number
   value?: string
+  includedSteps?: IncludedStep[]
 }
 
 export interface PendingReceivingInfo {
@@ -507,14 +508,16 @@ interface TransferMetadata {
 
 export type IncludedStep = {
   tool: string
-  token: Token
-  amount: string
+  toolDetails: StepToolDetails
+  fromToken: Token
+  fromAmount: string
+  toToken: string
+  toAmount: string
   bridgedAmount?: string
 }
 
 export interface FullStatusData extends StatusData {
   transactionId: string
-  includedSteps?: IncludedStep[]
   sending: ExtendedTransactionInfo
   receiving: PendingReceivingInfo | ExtendedTransactionInfo
   lifiExplorerLink: string
