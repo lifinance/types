@@ -505,8 +505,16 @@ interface TransferMetadata {
   integrator: string
 }
 
+export type IncludedStep = {
+  tool: string
+  token: Token
+  amount: string
+  bridgedAmount?: string
+}
+
 export interface FullStatusData extends StatusData {
   transactionId: string
+  includedSteps?: IncludedStep[]
   sending: ExtendedTransactionInfo
   receiving: PendingReceivingInfo | ExtendedTransactionInfo
   lifiExplorerLink: string
