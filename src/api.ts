@@ -507,13 +507,13 @@ interface TransferMetadata {
 }
 
 export type IncludedStep = {
+  fromAmount: string
+  fromToken: Token
+  toAmount: string
+  toToken: string
+  bridgedAmount?: string
   tool: string
   toolDetails: StepToolDetails
-  fromToken: Token
-  fromAmount: string
-  toToken: string
-  toAmount: string
-  bridgedAmount?: string
 }
 
 export interface FullStatusData extends StatusData {
