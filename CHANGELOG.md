@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.10.2](https://github.com/lifinance/types/compare/v15.10.1...v15.10.2) (2024-09-10)
+
+
+### Bug Fixes
+
+* kai chainkey ([#277](https://github.com/lifinance/types/issues/277)) ([7e652b8](https://github.com/lifinance/types/commit/7e652b82e56ea19f33ba0380ecc68d6a7360cb76))
+
 ### [15.10.1](https://github.com/lifinance/types/compare/v15.8.0...v15.10.1) (2024-09-10)
 
 
