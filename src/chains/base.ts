@@ -36,7 +36,7 @@ export enum ChainKey {
   TAI = 'tai',
   GRA = 'gra',
   IMX = 'imx',
-  KAI = 'KAI',
+  KAI = 'kai',
 
   // None-EVM
   SOL = 'sol',
