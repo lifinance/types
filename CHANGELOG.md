@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.10.1](https://github.com/lifinance/types/compare/v15.8.0...v15.10.1) (2024-09-10)
+
+
+### Features
+
+* add includedSteps array to full status response ([#275](https://github.com/lifinance/types/issues/275)) ([de01d0c](https://github.com/lifinance/types/commit/de01d0ca58eb7e67c20d4e7e4b3a8240bfeda190))
+* add klaytn chain ([#273](https://github.com/lifinance/types/issues/273)) ([107a3ff](https://github.com/lifinance/types/commit/107a3ffad58e25e81a101af9e441d6e263902632))
+
 ## [15.10.0](https://github.com/lifinance/types/compare/v15.8.0...v15.10.0) (2024-09-10)
 
 
