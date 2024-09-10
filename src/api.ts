@@ -510,7 +510,7 @@ export type IncludedStep = {
   fromAmount: string
   fromToken: Token
   toAmount: string
-  toToken: string
+  toToken: Token
   bridgedAmount?: string
   tool: string
   toolDetails: StepToolDetails
