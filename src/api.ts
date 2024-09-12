@@ -276,6 +276,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
   fromAmountForGas?: string // the amount of token to convert to gas
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
+  skipSimulation?: boolean
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
