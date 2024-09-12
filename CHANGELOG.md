@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.11.0](https://github.com/lifinance/types/compare/v15.10.2...v15.11.0) (2024-09-12)
+
+
+### Features
+
+* added diamond address in /chains ([#278](https://github.com/lifinance/types/issues/278)) ([b7af9bb](https://github.com/lifinance/types/commit/b7af9bb1998081d30084effa978dc82ccdf82fd2))
+
 ### [15.10.2](https://github.com/lifinance/types/compare/v15.10.1...v15.10.2) (2024-09-10)
 
 
