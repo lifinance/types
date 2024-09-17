@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.13.0](https://github.com/lifinance/types/compare/v15.12.0...v15.13.0) (2024-09-17)
+
+
+### Features
+
+* add process chain id ([#282](https://github.com/lifinance/types/issues/282)) ([fe5460f](https://github.com/lifinance/types/commit/fe5460f55fc4b5ece46ae8d2a3dcc624188769a5))
+
+
+### Bug Fixes
+
+* update imx logo ([#280](https://github.com/lifinance/types/issues/280)) ([5652ed1](https://github.com/lifinance/types/commit/5652ed1d239b1f5a474977028832789920cafe11))
+
 ## [15.12.0](https://github.com/lifinance/types/compare/v15.11.0...v15.12.0) (2024-09-17)
 
 
