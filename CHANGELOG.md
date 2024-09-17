@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.12.0](https://github.com/lifinance/types/compare/v15.11.0...v15.12.0) (2024-09-17)
+
+
+### Features
+
+* add fromAmount in contract calls ([#266](https://github.com/lifinance/types/issues/266)) ([6c0476e](https://github.com/lifinance/types/commit/6c0476e911acb9648e8e4e15a5c0f15986ca9aa3))
+* add skip simulation flag ([#279](https://github.com/lifinance/types/issues/279)) ([32ea6cc](https://github.com/lifinance/types/commit/32ea6ccbdf11d1d8396a997bdfdb5a61760a8c45))
+
 ## [15.11.0](https://github.com/lifinance/types/compare/v15.10.2...v15.11.0) (2024-09-12)
 
 
