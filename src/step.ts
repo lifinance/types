@@ -70,17 +70,18 @@ export type ProcessType =
   | 'RECEIVING_CHAIN'
   | 'TRANSACTION'
 
-export interface Process {
-  startedAt: number
-  doneAt?: number
-  failedAt?: number
+export type Process = {
   type: ProcessType
   status: ProcessStatus
   substatus?: Substatus
-  message?: string
+  chainId?: number
   txHash?: string
-  txLink?: string
   multisigTxHash?: string
+  txLink?: string
+  startedAt: number
+  doneAt?: number
+  failedAt?: number
+  message?: string
   error?: {
     code: string | number
     message: string
