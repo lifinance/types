@@ -1,6 +1,7 @@
 export enum CoinKey {
   ETH = 'ETH',
   MATIC = 'MATIC',
+  POL = 'POL',
   BNB = 'BNB',
   DAI = 'DAI',
   FTM = 'FTM',
@@ -19,6 +20,9 @@ export enum CoinKey {
   EVM = 'EVM',
   MNT = 'MNT',
   SEI = 'SEI',
+  G = 'G',
+  IMX = 'IMX',
+  KLAY = 'KLAY',
 
   // Solana
   SOL = 'SOL',
@@ -51,4 +55,8 @@ export enum CoinKey {
   frxETH = 'frxETH',
   wfrxETH = 'wfrxETH', // Wrapped frxETH Token
   WSEI = 'WSEI', // Wrapped SEI Token
+  WG = 'WG', // Wrapped G Token on Gravity chain
+  WIMX = 'WIMX', // Wrapped IMX Token
+  WPOL = 'WPOL', // Wrapped POL Token
+  WKLAY = 'WKLAY', // Wrapped KLAY Token
 }
