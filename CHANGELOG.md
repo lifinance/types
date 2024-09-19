@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.14.0](https://github.com/lifinance/types/compare/v15.13.1...v15.14.0) (2024-09-19)
+
+
+### Features
+
+* add alxUSDC token ([#281](https://github.com/lifinance/types/issues/281)) ([0fa6b94](https://github.com/lifinance/types/commit/0fa6b94e6a5d7fc6640b50d55492200dc447d0d7))
+
 ### [15.13.1](https://github.com/lifinance/types/compare/v15.13.0...v15.13.1) (2024-09-19)
 
 ## [15.13.0](https://github.com/lifinance/types/compare/v15.12.0...v15.13.0) (2024-09-17)
