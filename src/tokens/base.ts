@@ -23,6 +23,7 @@ export enum CoinKey {
   G = 'G',
   IMX = 'IMX',
   KLAY = 'KLAY',
+  OKB = 'OKB',
 
   // Solana
   SOL = 'SOL',
@@ -60,4 +61,5 @@ export enum CoinKey {
   WIMX = 'WIMX', // Wrapped IMX Token
   WPOL = 'WPOL', // Wrapped POL Token
   WKLAY = 'WKLAY', // Wrapped KLAY Token
+  WOKB = 'WOKB', // Wrapped OKB Token
 }
