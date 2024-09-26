@@ -277,6 +277,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   fromAmountForGas?: string // the amount of token to convert to gas
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
+  variableInput?: boolean
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
