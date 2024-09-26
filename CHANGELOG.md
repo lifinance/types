@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.15.0](https://github.com/lifinance/types/compare/v15.14.0...v15.15.0) (2024-09-26)
+
+
+### Features
+
+* add variable input flag ([f34c27a](https://github.com/lifinance/types/commit/f34c27ac6bd322dff703573a59789f89a7cd3d64))
+
 ## [15.14.0](https://github.com/lifinance/types/compare/v15.13.1...v15.14.0) (2024-09-19)
 
 
