@@ -42,7 +42,7 @@ export enum CoinKey {
   USDCe = 'USDCe',
   USDB = 'USDB', // Blast native stablecoin
   FRAX = 'FRAX', // Fraxtal stablecoin
-  AXLUSDC = 'axlUSDC', // Axelar Wrapped USDC
+  USDCAXL = 'USDC.axl', // Axelar Wrapped USDC
 
   // Other tokens
   WBTC = 'WBTC',
