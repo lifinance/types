@@ -112,7 +112,7 @@ export interface RouteOptions {
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
   timing?: Timing
-
+  variableInput?: boolean
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
    */
