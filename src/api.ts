@@ -288,7 +288,8 @@ export interface QuoteFromAmountRequest extends PartialQuoteRequest {
   fromAmount: string
 }
 
-export interface QuoteToAmountRequest extends PartialQuoteRequest {
+export interface QuoteToAmountRequest
+  extends Omit<PartialQuoteRequest, 'insurance'> {
   toAmount: string
 }
 
