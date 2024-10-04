@@ -258,11 +258,10 @@ export interface ToolConfiguration {
   preferExchanges?: string[]
 }
 
-export interface QuoteRequest extends ToolConfiguration, TimingStrings {
+export interface PartialQuoteRequest extends ToolConfiguration, TimingStrings {
   fromChain: number | string
   fromToken: string
   fromAddress: string
-  fromAmount: string
 
   toChain: number | string
   toToken: string
@@ -274,7 +273,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   referrer?: string
   fee?: number | string
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
-  fromAmountForGas?: string // the amount of token to convert to gas
+
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
 
@@ -284,10 +283,25 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   insurance?: boolean // indicates whether the user wants a quote with bridge insurance
 }
 
+export interface QuoteFromAmountRequest extends PartialQuoteRequest {
+  fromAmountForGas?: string // the amount of token to convert to gas
+  fromAmount: string
+}
+
 export interface QuoteToAmountRequest
-  extends Omit<QuoteRequest, 'fromAmount' | 'fromAmountForGas' | 'insurance'> {
+  extends Omit<PartialQuoteRequest, 'insurance'> {
   toAmount: string
 }
+
+export type QuoteRequest = QuoteFromAmountRequest | QuoteToAmountRequest
+
+export const isQuoteRequestWithFromAmount = (
+  r: QuoteRequest
+): r is QuoteFromAmountRequest => 'fromAmount' in r
+
+export const isQuoteRequestWithToAmount = (
+  r: QuoteRequest
+): r is QuoteToAmountRequest => 'toAmount' in r
 
 export interface ContractCall {
   fromAmount: string
@@ -331,12 +345,13 @@ export type ContractCallsQuoteRequestFromAmount =
 export type ContractCallsQuoteRequest =
   | ContractCallsQuoteRequestFromAmount
   | ContractCallsQuoteRequestToAmount
+
 export const isContractCallsRequestWithFromAmount = (
-  r: ContractCallsQuoteRequestFromAmount | ContractCallsQuoteRequestToAmount
+  r: ContractCallsQuoteRequest
 ): r is ContractCallsQuoteRequestFromAmount => 'fromAmount' in r
 
 export const isContractCallsRequestWithToAmount = (
-  r: ContractCallsQuoteRequestFromAmount | ContractCallsQuoteRequestToAmount
+  r: ContractCallsQuoteRequest
 ): r is ContractCallsQuoteRequestToAmount => 'toAmount' in r
 
 /* @deprecated */
