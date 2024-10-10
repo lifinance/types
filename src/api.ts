@@ -531,6 +531,8 @@ export interface FullStatusData extends StatusData {
 export interface ExtendedChain extends Chain {
   nativeToken: Token
   diamondAddress: string
+  permit2?: string
+  permit2Proxy?: string
 }
 
 export interface ChainsResponse {
