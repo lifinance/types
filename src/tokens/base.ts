@@ -43,6 +43,7 @@ export enum CoinKey {
   USDB = 'USDB', // Blast native stablecoin
   FRAX = 'FRAX', // Fraxtal stablecoin
   AXLUSDC = 'axlUSDC', // Axelar Wrapped USDC
+  FDUSD = 'FDUSD', // First Digital USD
 
   // Other tokens
   WBTC = 'WBTC',
@@ -62,4 +63,5 @@ export enum CoinKey {
   WPOL = 'WPOL', // Wrapped POL Token
   WKLAY = 'WKLAY', // Wrapped KLAY Token
   WOKB = 'WOKB', // Wrapped OKB Token
+  WBNB = 'WBNB', // Wrapped BNB Token
 }
