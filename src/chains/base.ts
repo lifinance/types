@@ -38,6 +38,7 @@ export enum ChainKey {
   IMX = 'imx',
   KAI = 'kai',
   XLY = 'xly',
+  OPB = 'opb',
 
   // None-EVM
   SOL = 'sol',
@@ -90,6 +91,7 @@ export enum ChainId {
   IMX = 13371,
   KAI = 8217,
   XLY = 196,
+  OPB = 204,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
