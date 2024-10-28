@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.1.1](https://github.com/lifinance/types/compare/v16.1.0...v16.1.1) (2024-10-28)
+
+
+### Bug Fixes
+
+* add bebop logo ([#295](https://github.com/lifinance/types/issues/295)) ([f5eefbf](https://github.com/lifinance/types/commit/f5eefbfc92b291cdf2229ee9e77060ecf27007d2))
+
 ## [16.1.0](https://github.com/lifinance/types/compare/v16.0.0...v16.1.0) (2024-10-28)
 
 
