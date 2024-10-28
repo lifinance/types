@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.0](https://github.com/lifinance/types/compare/v15.16.1...v16.0.0) (2024-10-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove quests from types (#293)
+
+### Features
+
+* remove quests from types ([#293](https://github.com/lifinance/types/issues/293)) ([a9765e5](https://github.com/lifinance/types/commit/a9765e563a18bfb8040ce05bdabefbf4c24d0c82))
+
 ### [15.16.1](https://github.com/lifinance/types/compare/v15.16.0...v15.16.1) (2024-10-10)
 
 ## [15.16.0](https://github.com/lifinance/types/compare/v15.15.1...v15.16.0) (2024-10-10)
