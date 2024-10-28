@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.1.0](https://github.com/lifinance/types/compare/v16.0.0...v16.1.0) (2024-10-28)
+
+
+### Features
+
+* add opbnb chain ([#292](https://github.com/lifinance/types/issues/292)) ([0ee9f10](https://github.com/lifinance/types/commit/0ee9f108231d93c4b002317c0901935dca4b8293))
+
 ## [16.0.0](https://github.com/lifinance/types/compare/v15.16.1...v16.0.0) (2024-10-17)
 
 
