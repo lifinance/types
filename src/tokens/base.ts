@@ -64,4 +64,5 @@ export enum CoinKey {
   WKLAY = 'WKLAY', // Wrapped KLAY Token
   WOKB = 'WOKB', // Wrapped OKB Token
   WBNB = 'WBNB', // Wrapped BNB Token
+  WCRO = 'WCRO', // Wrapped CRO Token
 }
