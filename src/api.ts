@@ -1,7 +1,7 @@
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
-import type { Action, LiFiStep, StepToolDetails } from './step.js'
+import type { Action, Estimate, LiFiStep, StepToolDetails } from './step.js'
 import type { Token } from './tokens/index.js'
 
 /**
@@ -517,8 +517,13 @@ export type IncludedStep = {
   toolDetails: StepToolDetails
 }
 
+export type StatusStepTransaction = {
+  estimate: Estimate
+}
+
 export interface FullStatusData extends StatusData {
   transactionId: string
+  stepTransaction?: StatusStepTransaction
   sending: ExtendedTransactionInfo
   receiving: PendingReceivingInfo | ExtendedTransactionInfo
   lifiExplorerLink: string
