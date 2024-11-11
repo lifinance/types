@@ -250,8 +250,7 @@ export interface GetTokenRequest {
 }
 
 export enum TokenHistoricGranularity {
-  ONE_MIN = '1min',
-  FIVE_MIN = '5min',
+  THIRTY_MIN = '30min',
   HOUR = 'hour',
   DAY = 'day',
   OVER_DAY = '>day',
