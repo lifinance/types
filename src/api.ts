@@ -268,8 +268,7 @@ export interface TokenPriceHistoricResponse {
   tokenAddress: string
   isNativeToken: boolean
   priceUSD: number
-  timestamp: Date
-  timestampMS: number
+  timestamp: number
   granularity: TokenHistoricGranularity
 }
 
