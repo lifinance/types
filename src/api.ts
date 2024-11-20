@@ -249,6 +249,29 @@ export interface GetTokenRequest {
   token: string
 }
 
+export enum TokenHistoricGranularity {
+  THIRTY_MIN = '30min',
+  HOUR = 'hour',
+  DAY = 'day',
+  OVER_DAY = '>day',
+}
+
+export interface GetTokenHistoricRequest {
+  chain: number | string
+  token: string
+  timestamp: number
+  granularity?: TokenHistoricGranularity
+}
+
+export interface TokenPriceHistoricResponse {
+  chainId: number
+  tokenAddress: string
+  isNativeToken: boolean
+  priceUSD: number
+  timestamp: number
+  granularity: TokenHistoricGranularity
+}
+
 export interface ToolConfiguration {
   allowBridges?: string[]
   denyBridges?: string[]
