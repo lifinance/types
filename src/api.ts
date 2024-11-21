@@ -578,7 +578,7 @@ export type TokensRequest = {
 }
 
 export type TokensResponse = {
-  tokens: { [chainId: number]: Token[] }
+  tokens: { [chainId: ChainId]: Token[] }
 }
 
 export type RequestOptions = {
