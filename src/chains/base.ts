@@ -39,6 +39,7 @@ export enum ChainKey {
   KAI = 'kai',
   XLY = 'xly',
   OPB = 'opb',
+  WCC = 'wcc',
 
   // None-EVM
   SOL = 'sol',
@@ -92,6 +93,7 @@ export enum ChainId {
   KAI = 8217,
   XLY = 196,
   OPB = 204,
+  WCC = 480,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
