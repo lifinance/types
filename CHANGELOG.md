@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.3.0](https://github.com/lifinance/types/compare/v16.2.2...v16.3.0) (2024-11-20)
+
+
+### Features
+
+* add types for token historic ([#298](https://github.com/lifinance/types/issues/298)) ([6796e18](https://github.com/lifinance/types/commit/6796e1897e68aa7d1334290ba0ca6e9218e07ca3))
+
+### [16.2.2](https://github.com/lifinance/types/compare/v16.2.1...v16.2.2) (2024-11-15)
+
+### [16.2.1](https://github.com/lifinance/types/compare/v16.2.0...v16.2.1) (2024-11-05)
+
+
+### Bug Fixes
+
+* relay icon ([#297](https://github.com/lifinance/types/issues/297)) ([b496e49](https://github.com/lifinance/types/commit/b496e49f328b924cc8691966803ff4c670174dec))
+
 ## [16.2.0](https://github.com/lifinance/types/compare/v16.1.2...v16.2.0) (2024-11-05)
 
 

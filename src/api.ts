@@ -1,7 +1,7 @@
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
-import type { Action, Estimate, LiFiStep, StepToolDetails } from './step.js'
+import type { Action, FeeCost, LiFiStep, StepToolDetails } from './step.js'
 import type { Token } from './tokens/index.js'
 
 /**
@@ -247,6 +247,29 @@ export interface PossibilitiesResponse {
 export interface GetTokenRequest {
   chain: number | string
   token: string
+}
+
+export enum TokenHistoricGranularity {
+  THIRTY_MIN = '30min',
+  HOUR = 'hour',
+  DAY = 'day',
+  OVER_DAY = '>day',
+}
+
+export interface GetTokenHistoricRequest {
+  chain: number | string
+  token: string
+  timestamp: number
+  granularity?: TokenHistoricGranularity
+}
+
+export interface TokenPriceHistoricResponse {
+  chainId: number
+  tokenAddress: string
+  isNativeToken: boolean
+  priceUSD: number
+  timestamp: number
+  granularity: TokenHistoricGranularity
 }
 
 export interface ToolConfiguration {
@@ -517,15 +540,11 @@ export type IncludedStep = {
   toolDetails: StepToolDetails
 }
 
-export type StatusStepTransaction = {
-  estimate: Estimate
-}
-
 export interface FullStatusData extends StatusData {
   transactionId: string
-  stepTransaction?: StatusStepTransaction
   sending: ExtendedTransactionInfo
   receiving: PendingReceivingInfo | ExtendedTransactionInfo
+  feeCosts: FeeCost[]
   lifiExplorerLink: string
   fromAddress: string
   toAddress: string
