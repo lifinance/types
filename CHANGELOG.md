@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.3.1](https://github.com/lifinance/types/compare/v16.3.0...v16.3.1) (2024-12-04)
+
 ## [16.3.0](https://github.com/lifinance/types/compare/v16.2.2...v16.3.0) (2024-11-20)
 
 
