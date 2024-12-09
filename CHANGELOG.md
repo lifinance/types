@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.4.0](https://github.com/lifinance/types/compare/v16.3.1...v16.4.0) (2024-12-09)
+
+
+### Features
+
+* add world chain ([#301](https://github.com/lifinance/types/issues/301)) ([1422ea2](https://github.com/lifinance/types/commit/1422ea279c7b575183f5178919c03c406a1ca6f2))
+
 ### [16.3.1](https://github.com/lifinance/types/compare/v16.3.0...v16.3.1) (2024-12-04)
 
 ## [16.3.0](https://github.com/lifinance/types/compare/v16.2.2...v16.3.0) (2024-11-20)
