@@ -24,6 +24,7 @@ export enum CoinKey {
   IMX = 'IMX',
   KLAY = 'KLAY',
   OKB = 'OKB',
+  WLD = 'WLD', // World Coin Token
 
   // Solana
   SOL = 'SOL',
