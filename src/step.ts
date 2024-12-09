@@ -57,6 +57,7 @@ export type ExecutionStatus = 'ACTION_REQUIRED' | 'PENDING' | 'FAILED' | 'DONE'
 export type ProcessStatus =
   | 'STARTED'
   | 'ACTION_REQUIRED'
+  | 'PERMIT_REQUIRED'
   | 'PENDING'
   | 'FAILED'
   | 'DONE'
