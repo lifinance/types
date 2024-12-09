@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.4.1](https://github.com/lifinance/types/compare/v16.4.0...v16.4.1) (2024-12-09)
+
+
+### Bug Fixes
+
+* add permit process status ([#303](https://github.com/lifinance/types/issues/303)) ([c1d07a3](https://github.com/lifinance/types/commit/c1d07a30005f5eac53464e8ac4c1f28e67e4e76c))
+
 ## [16.4.0](https://github.com/lifinance/types/compare/v16.3.1...v16.4.0) (2024-12-09)
 
 
