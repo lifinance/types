@@ -25,6 +25,7 @@ export enum CoinKey {
   KLAY = 'KLAY',
   OKB = 'OKB',
   WLD = 'WLD', // World Coin Token
+  LSK = 'LSK', // Lisk Token
 
   // Solana
   SOL = 'SOL',
