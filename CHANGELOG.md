@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.5.0](https://github.com/lifinance/types/compare/v16.4.1...v16.5.0) (2024-12-19)
+
+
+### Features
+
+* add lisk chain ([#304](https://github.com/lifinance/types/issues/304)) ([4014e61](https://github.com/lifinance/types/commit/4014e614c7def0ec7953947fbb9a603356ecaa87))
+
 ### [16.4.1](https://github.com/lifinance/types/compare/v16.4.0...v16.4.1) (2024-12-09)
 
 
