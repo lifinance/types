@@ -41,6 +41,7 @@ export enum ChainKey {
   OPB = 'opb',
   WCC = 'wcc',
   LSK = 'lsk',
+  SON = 'son',
 
   // None-EVM
   SOL = 'sol',
@@ -96,6 +97,7 @@ export enum ChainId {
   OPB = 204,
   WCC = 480,
   LSK = 1135,
+  SON = 146,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,

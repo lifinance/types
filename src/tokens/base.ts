@@ -26,6 +26,7 @@ export enum CoinKey {
   OKB = 'OKB',
   WLD = 'WLD', // World Coin Token
   LSK = 'LSK', // Lisk Token
+  S = 'S', // Sonic Token
 
   // Solana
   SOL = 'SOL',
@@ -67,4 +68,5 @@ export enum CoinKey {
   WOKB = 'WOKB', // Wrapped OKB Token
   WBNB = 'WBNB', // Wrapped BNB Token
   WCRO = 'WCRO', // Wrapped CRO Token
+  wS = 'wS', // Wrapped Sonic Token
 }
