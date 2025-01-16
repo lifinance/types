@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.6.0](https://github.com/lifinance/types/compare/v16.6.0-beta.1...v16.6.0) (2025-01-15)
+
+
+### Features
+
+* update abstract chain icon ([a98a3c9](https://github.com/lifinance/types/commit/a98a3c928fc6955c7a1377d9f79bf3a4baf084e2))
+
 ## [16.5.0](https://github.com/lifinance/types/compare/v16.4.1...v16.5.0) (2024-12-19)
 
 
