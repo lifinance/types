@@ -117,14 +117,11 @@ dist
 .vscode-test
 
 # yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
+.yarn
 .pnp.*
 
 # ignore lock files of other package managers
-pnpm-lock.yaml
+yarn.lock
 package-lock.json
 
 .DS_Store

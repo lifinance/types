@@ -21,7 +21,7 @@ Check out the [Changelog](./CHANGELOG.md) to see what changed in the last releas
 ## Installation
 
 ```bash
-yarn add @lifi/types
+pnpm add @lifi/types
 ```
 
 or
@@ -37,7 +37,7 @@ The package uses `standard-version` to generate a changelog based on semantic co
 Once main is up to date with the changes to be released execute the following command on the main branch to invoke `standard-version`:
 
 ```bash
-yarn release
+pnpm release
 ```
 
 Then to release:
