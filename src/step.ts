@@ -123,15 +123,15 @@ type StepInformationBase = {
   tool: string
   type: string
   action: Action
-  estimate: Estimate //(w/o `data`)
+  estimate: Estimate
 }
 
 export type StepInformation = StepInformationBase & {
   createdAt: Date
   gasLimit: string
   stepId: string
-  transactionId: string // See acceptance criteria
-  intermediateActions: StepInformationBase[] // the actions from the `includedSteps`
+  transactionId: string
+  intermediateActions: StepInformationBase[]
   integrator?: string
   relatedLifiSteps?: string[]
 }
