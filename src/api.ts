@@ -714,3 +714,7 @@ export type TransferSummary = {
 
 export interface TransferSummariesResponse
   extends PaginatedResponse<TransferSummary> {}
+
+export interface GetStepRequest {
+  stepId: string
+}
