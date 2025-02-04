@@ -31,6 +31,9 @@ export enum CoinKey {
   SOL = 'SOL',
   WSOL = 'wSOL',
 
+  // MVM
+  SUI = 'SUI',
+
   // UTXO
   BTC = 'BTC',
   BCH = 'BCH',
