@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.7.0](https://github.com/lifinance/types/compare/v16.5.0...v16.7.0) (2025-02-04)
+
+
+### Features
+
+* add dex and bridge icons ([#309](https://github.com/lifinance/types/issues/309)) ([b964cb8](https://github.com/lifinance/types/commit/b964cb84b62a2dd08fe33b0ad7c1ab9ebb4f7b66))
+* Add new chain abstract ([#308](https://github.com/lifinance/types/issues/308)) ([3edde9e](https://github.com/lifinance/types/commit/3edde9ea2edfe73273a39635f19e78458b26f9f2))
+* add types for step endpoint ([#313](https://github.com/lifinance/types/issues/313)) ([321ee79](https://github.com/lifinance/types/commit/321ee790f651ada94c6ba47a1290cc6518afb3ad))
+* migrate to pnpm ([#310](https://github.com/lifinance/types/issues/310)) ([91128f7](https://github.com/lifinance/types/commit/91128f7a8a81576f72ca21cd057b96313f9815bc))
+
 ## [16.6.0](https://github.com/lifinance/types/compare/v16.6.0-beta.1...v16.6.0) (2025-01-15)
 
 
