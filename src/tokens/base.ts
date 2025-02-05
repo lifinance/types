@@ -26,6 +26,7 @@ export enum CoinKey {
   OKB = 'OKB',
   WLD = 'WLD', // World Coin Token
   LSK = 'LSK', // Lisk Token
+  BERA = 'BERA', // Berachain Token
 
   // Solana
   SOL = 'SOL',
@@ -46,6 +47,7 @@ export enum CoinKey {
   FRAX = 'FRAX', // Fraxtal stablecoin
   AXLUSDC = 'axlUSDC', // Axelar Wrapped USDC
   FDUSD = 'FDUSD', // First Digital USD
+  HONEY = 'HONEY', // Stablecoin on Berachain
 
   // Other tokens
   WBTC = 'WBTC',
@@ -67,4 +69,5 @@ export enum CoinKey {
   WOKB = 'WOKB', // Wrapped OKB Token
   WBNB = 'WBNB', // Wrapped BNB Token
   WCRO = 'WCRO', // Wrapped CRO Token
+  WBERA = 'WBERA', // Wrapped BERA Token
 }
