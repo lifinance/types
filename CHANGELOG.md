@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.8.0](https://github.com/lifinance/types/compare/v16.7.0...v16.8.0) (2025-02-05)
+
+
+### Features
+
+* add MoveVM and SUI types ([#314](https://github.com/lifinance/types/issues/314)) ([f7381eb](https://github.com/lifinance/types/commit/f7381eb2d0d480f7c244e90a0210816327fb8078))
+
 ## [16.7.0](https://github.com/lifinance/types/compare/v16.5.0...v16.7.0) (2025-02-04)
 
 
