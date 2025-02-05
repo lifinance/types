@@ -48,6 +48,9 @@ export enum ChainKey {
   TER = 'ter',
   OAS = 'oas',
 
+  // MVM
+  SUI = 'sui',
+
   // UTXO
   BTC = 'btc',
   BCH = 'bch',
@@ -103,6 +106,9 @@ export enum ChainId {
   SOL = 1151111081099710,
   TER = 1161011141099710,
   OAS = 111971151099710,
+
+  // MVM (IDs are made up by the LI.FI team)
+  SUI = 9270000000000000, // First 16 non-letter hex digits of SUI genesis blob
 
   // UTXO (IDs are made up by the LI.FI team)
   BTC = 20000000000001,
