@@ -107,8 +107,8 @@ export enum ChainId {
   TER = 1161011141099710,
   OAS = 111971151099710,
 
-  // MVM
-  SUI = 30000000000001,
+  // MVM (IDs are made up by the LI.FI team)
+  SUI = 9270000000000000, // First 16 non-letter hex digits of SUI genesis blob
 
   // UTXO (IDs are made up by the LI.FI team)
   BTC = 20000000000001,
