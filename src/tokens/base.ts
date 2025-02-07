@@ -48,6 +48,7 @@ export enum CoinKey {
   AXLUSDC = 'axlUSDC', // Axelar Wrapped USDC
   FDUSD = 'FDUSD', // First Digital USD
   HONEY = 'HONEY', // Stablecoin on Berachain
+  BYUSD = 'BYUSD', // Stablecoin on Berachain
 
   // Other tokens
   WBTC = 'WBTC',
