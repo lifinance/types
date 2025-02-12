@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.9.0](https://github.com/lifinance/types/compare/v16.8.0...v16.9.0) (2025-02-12)
+
+
+### Features
+
+* add bera assets ([#315](https://github.com/lifinance/types/issues/315)) ([f499fbb](https://github.com/lifinance/types/commit/f499fbbf70a8a42c863ea6114ac5cefa05693e14))
+* add token approval endpoint types ([#316](https://github.com/lifinance/types/issues/316)) ([560bef4](https://github.com/lifinance/types/commit/560bef49aba942d074df8494b85bb29927f1efa2))
+* remove sdk specific types ([#311](https://github.com/lifinance/types/issues/311)) ([7445ac4](https://github.com/lifinance/types/commit/7445ac4482c705349d735c5e15a180995bc1c3ee))
+
 ### [16.8.1](https://github.com/lifinance/types/compare/v16.8.0-beta.2...v16.8.1) (2025-02-10)
 
 ## [16.8.0](https://github.com/lifinance/types/compare/v16.7.0...v16.8.0) (2025-02-05)
