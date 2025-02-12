@@ -718,3 +718,30 @@ export interface TransferSummariesResponse
 export interface GetStepRequest {
   stepId: string
 }
+
+export interface GetTokenApprovalRequest {
+  tokenContractAddress: string
+  chainId: string
+  userWalletAddress: string
+  requiredAmount: string
+}
+export interface GetTokenApprovalResponse {
+  isApproved: boolean
+  approvedAmount: string
+  approvalTransaction: {
+    to?: string
+    from?: string
+    nonce?: string
+    gasLimit?: string
+    gasPrice?: string
+    data?: string
+    value?: string
+    chainId?: number
+    type?: number
+    accessList?: { address: string; storageKeys: string[] }[]
+    maxPriorityFeePerGas?: string
+    maxFeePerGas?: string
+    customData?: string
+    ccipReadEnabled?: boolean
+  }
+}
