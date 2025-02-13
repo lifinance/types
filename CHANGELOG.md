@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.9.0](https://github.com/lifinance/types/compare/v16.8.0...v16.9.0) (2025-02-12)
+
+
+### Features
+
+* add bera assets ([#315](https://github.com/lifinance/types/issues/315)) ([f499fbb](https://github.com/lifinance/types/commit/f499fbbf70a8a42c863ea6114ac5cefa05693e14))
+* add token approval endpoint types ([#316](https://github.com/lifinance/types/issues/316)) ([560bef4](https://github.com/lifinance/types/commit/560bef49aba942d074df8494b85bb29927f1efa2))
+* remove sdk specific types ([#311](https://github.com/lifinance/types/issues/311)) ([7445ac4](https://github.com/lifinance/types/commit/7445ac4482c705349d735c5e15a180995bc1c3ee))
+
+### [16.8.1](https://github.com/lifinance/types/compare/v16.8.0-beta.2...v16.8.1) (2025-02-10)
+
+## [16.8.0](https://github.com/lifinance/types/compare/v16.7.0...v16.8.0) (2025-02-05)
+
+
+### Features
+
+* add MoveVM and SUI types ([#314](https://github.com/lifinance/types/issues/314)) ([f7381eb](https://github.com/lifinance/types/commit/f7381eb2d0d480f7c244e90a0210816327fb8078))
+
+## [16.7.0](https://github.com/lifinance/types/compare/v16.5.0...v16.7.0) (2025-02-04)
+
+
+### Features
+
+* add dex and bridge icons ([#309](https://github.com/lifinance/types/issues/309)) ([b964cb8](https://github.com/lifinance/types/commit/b964cb84b62a2dd08fe33b0ad7c1ab9ebb4f7b66))
+* Add new chain abstract ([#308](https://github.com/lifinance/types/issues/308)) ([3edde9e](https://github.com/lifinance/types/commit/3edde9ea2edfe73273a39635f19e78458b26f9f2))
+* add types for step endpoint ([#313](https://github.com/lifinance/types/issues/313)) ([321ee79](https://github.com/lifinance/types/commit/321ee790f651ada94c6ba47a1290cc6518afb3ad))
+* migrate to pnpm ([#310](https://github.com/lifinance/types/issues/310)) ([91128f7](https://github.com/lifinance/types/commit/91128f7a8a81576f72ca21cd057b96313f9815bc))
+
 ## [16.6.0](https://github.com/lifinance/types/compare/v16.6.0-beta.1...v16.6.0) (2025-01-15)
 
 
