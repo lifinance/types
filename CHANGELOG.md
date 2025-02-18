@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [16.9.0](https://github.com/lifinance/types/compare/v16.8.0...v16.9.0) (2025-02-12)
 
+## [17.0.0](https://github.com/lifinance/types/compare/v16.9.0...v17.0.0) (2025-02-18)
+
+### Features
+
+* make `action.slippage` optional ([LF-10825](https://lifi.atlassian.net/browse/LF-10825)) ([d7eea42](https://github.com/lifinance/types/commit/d7eea429a0555e54110e20c108c92f31447a63f4))
+
+
+## [16.9.0](https://github.com/lifinance/types/compare/v16.8.0...v16.9.0) (2025-02-12)
 
 ### Features
 
