@@ -388,7 +388,7 @@ export interface ConnectionsRequest extends ToolConfiguration {
   fromToken?: string
   toChain?: number | string
   toToken?: string
-  allowSwitchChain?: boolean // (default: true) the connections that require chain switch (muiltiple signatures) are included by default
+  allowSwitchChain?: boolean // (default: true) the connections that require chain switch (multiple signatures) are included by default
   allowDestinationCall?: boolean // (default: true) the connections that includes destination calls are included by default
   chainTypes?: ChainType[]
 }
@@ -717,4 +717,31 @@ export interface TransferSummariesResponse
 
 export interface GetStepRequest {
   stepId: string
+}
+
+export interface GetTokenApprovalRequest {
+  tokenContractAddress: string
+  chainId: string
+  userWalletAddress: string
+  requiredAmount: string
+}
+export interface GetTokenApprovalResponse {
+  isApproved: boolean
+  approvedAmount: string
+  approvalTransaction: {
+    to?: string
+    from?: string
+    nonce?: string
+    gasLimit?: string
+    gasPrice?: string
+    data?: string
+    value?: string
+    chainId?: number
+    type?: number
+    accessList?: { address: string; storageKeys: string[] }[]
+    maxPriorityFeePerGas?: string
+    maxFeePerGas?: string
+    customData?: string
+    ccipReadEnabled?: boolean
+  }
 }
