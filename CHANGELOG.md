@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.8.2](https://github.com/lifinance/types/compare/v16.9.0...v16.8.2) (2025-02-19)
+
+
+### Bug Fixes
+
+* update openocean logo ([6dcf72a](https://github.com/lifinance/types/commit/6dcf72a5122e8870157a83e6feffa67be0615bbd))
+
 ## [16.9.0](https://github.com/lifinance/types/compare/v16.8.0...v16.9.0) (2025-02-12)
 
 
