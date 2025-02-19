@@ -67,6 +67,23 @@ export type StepToolDetails = {
   logoURI: string
 }
 
+type StepInformationBase = {
+  tool: string
+  type: string
+  action: Action
+  estimate: Estimate
+}
+
+export type StepInformation = StepInformationBase & {
+  createdAt: Date
+  gasLimit: string
+  stepId: string
+  transactionId: string
+  intermediateActions: StepInformationBase[]
+  integrator?: string
+  relatedLifiSteps?: string[]
+}
+
 export interface StepBase {
   id: string
   type: StepType

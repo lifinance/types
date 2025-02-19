@@ -42,11 +42,15 @@ export enum ChainKey {
   WCC = 'wcc',
   LSK = 'lsk',
   ABS = 'abs',
+  BER = 'ber',
 
   // None-EVM
   SOL = 'sol',
   TER = 'ter',
   OAS = 'oas',
+
+  // MVM
+  SUI = 'sui',
 
   // UTXO
   BTC = 'btc',
@@ -98,11 +102,15 @@ export enum ChainId {
   WCC = 480,
   LSK = 1135,
   ABS = 2741,
+  BER = 80094,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
   TER = 1161011141099710,
   OAS = 111971151099710,
+
+  // MVM (IDs are made up by the LI.FI team)
+  SUI = 9270000000000000, // First 16 non-letter hex digits of SUI genesis blob
 
   // UTXO (IDs are made up by the LI.FI team)
   BTC = 20000000000001,
