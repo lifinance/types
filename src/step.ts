@@ -1,4 +1,4 @@
-import type { TransactionRequest } from './api.js'
+import type { Substatus, TransactionRequest } from './api.js'
 import type { Token } from './tokens/index.js'
 
 export interface FeeCost {
@@ -49,6 +49,58 @@ export interface Estimate {
   gasCosts?: GasCost[]
   // estimated duration in seconds
   executionDuration: number
+}
+
+// EXECUTION
+export type ExecutionStatus = 'ACTION_REQUIRED' | 'PENDING' | 'FAILED' | 'DONE'
+
+export type ProcessStatus =
+  | 'STARTED'
+  | 'ACTION_REQUIRED'
+  | 'PERMIT_REQUIRED'
+  | 'PENDING'
+  | 'FAILED'
+  | 'DONE'
+  | 'CANCELLED'
+
+export type ProcessType =
+  | 'TOKEN_ALLOWANCE'
+  | 'SWITCH_CHAIN'
+  | 'SWAP'
+  | 'CROSS_CHAIN'
+  | 'RECEIVING_CHAIN'
+  | 'TRANSACTION'
+
+export type Process = {
+  type: ProcessType
+  status: ProcessStatus
+  substatus?: Substatus
+  chainId?: number
+  txHash?: string
+  multisigTxHash?: string
+  txLink?: string
+  startedAt: number
+  doneAt?: number
+  failedAt?: number
+  message?: string
+  error?: {
+    code: string | number
+    message: string
+    htmlMessage?: string
+  }
+
+  // additional information
+  [key: string]: any
+}
+
+export interface Execution {
+  status: ExecutionStatus
+  process: Array<Process>
+  fromAmount?: string
+  toAmount?: string
+  toToken?: Token
+  feeCosts?: FeeCost[]
+  gasCosts?: GasCost[]
 }
 
 // STEP
