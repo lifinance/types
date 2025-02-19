@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.9.1](https://github.com/lifinance/types/compare/v16.9.0...v16.9.1) (2025-02-19)
+
+
+### Bug Fixes
+
+* package version ([ebefe61](https://github.com/lifinance/types/commit/ebefe61c529caefe908b50ca83fd08324ea278d0))
+
 ## [16.9.0](https://github.com/lifinance/types/compare/v16.8.0...v16.9.0) (2025-02-12)
 
 
