@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.10.0](https://github.com/lifinance/types/compare/v16.9.1...v16.10.0) (2025-02-21)
+
+## [16.9.0-beta.1](https://github.com/lifinance/types/compare/v16.9.0-beta.0...v16.9.0-beta.1) (2025-02-13)
+
+## [16.9.0-beta.0](https://github.com/lifinance/types/compare/v16.9.0...v16.9.0-beta.0) (2025-02-13)
+
+## [16.7.0-beta.0](https://github.com/lifinance/types/compare/v16.6.0-beta.0...v16.7.0-beta.0) (2025-01-16)
+
+
+### Features
+
+* add sonic chain icon ([bd0bd74](https://github.com/lifinance/types/commit/bd0bd74b6cb9e3365abccf388b1b6af9a9dc58a6))
+
+## [16.6.0-beta.0](https://github.com/lifinance/types/compare/v16.5.0...v16.6.0-beta.0) (2025-01-07)
+
+
+### Features
+
+* add new chain sonic ([5049afa](https://github.com/lifinance/types/commit/5049afa249c23d2f4da382938e4064c5e457eaee))
+
 ### [16.9.1](https://github.com/lifinance/types/compare/v16.9.0...v16.9.1) (2025-02-19)
 
 
