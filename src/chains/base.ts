@@ -43,6 +43,7 @@ export enum ChainKey {
   LSK = 'lsk',
   ABS = 'abs',
   BER = 'ber',
+  SON = 'son',
 
   // None-EVM
   SOL = 'sol',
@@ -103,6 +104,7 @@ export enum ChainId {
   LSK = 1135,
   ABS = 2741,
   BER = 80094,
+  SON = 146,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
