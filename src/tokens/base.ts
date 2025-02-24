@@ -28,6 +28,7 @@ export enum CoinKey {
   LSK = 'LSK', // Lisk Token
   BERA = 'BERA', // Berachain Token
   S = 'S', // Sonic Token
+  APE = 'APE', // ApeCoin
 
   // Solana
   SOL = 'SOL',
@@ -76,4 +77,5 @@ export enum CoinKey {
   WCRO = 'WCRO', // Wrapped CRO Token
   WBERA = 'WBERA', // Wrapped BERA Token
   wS = 'wS', // Wrapped Sonic Token
+  WAPE = 'WAPE', // Wrapped ApeCoin
 }
