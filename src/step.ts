@@ -32,7 +32,7 @@ export interface Action {
   toToken: Token
   toAddress?: string
 
-  slippage: number
+  slippage?: number
 }
 
 // ESTIMATE
