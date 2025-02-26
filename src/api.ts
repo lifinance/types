@@ -772,7 +772,7 @@ export type PermitData<
 > = {
   domain: TypedDataDomain
   types: TypedData
-  values: Record<string, T>
+  values: T
 }
 
 export type Permit =
