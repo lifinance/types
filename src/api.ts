@@ -809,11 +809,13 @@ export type RelayerResponse<T> =
   | { status: 'ok'; data: T }
   | RelayerErrorResponse
 
-export type RelayerQuoteResponse = RelayerResponse<{
+export type RelayerQuoteResponseData = {
   quote: LiFiStep
   permits: Permit[]
   approvals: TransactionRequest[]
-}>
+}
+
+export type RelayerQuoteResponse = RelayerResponse<RelayerQuoteResponseData>
 
 export type RelayRequest = {
   tokenOwner: Address
@@ -822,17 +824,20 @@ export type RelayRequest = {
   callData: Hex
 }
 
-export type RelayResponse = RelayerResponse<{
+export type RelayResponseData = {
   taskId: string
-}>
+}
+export type RelayResponse = RelayerResponse<RelayResponseData>
 
 export type RelayStatusRequest = {
   taskId: Hash
 }
 
-export type RelayStatusResponse = RelayerResponse<{
+export type RelayStatusResponseData = {
   status: 'DONE' | 'PENDING' | 'FAILED'
   message?: string
   metadata: { chainId: number; txHash?: Hash }
   transactionStatus?: StatusResponse
-}>
+}
+
+export type RelayStatusResponse = RelayerResponse<RelayStatusResponseData>
