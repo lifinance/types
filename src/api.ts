@@ -1,3 +1,5 @@
+import type { Address, Hash, Hex, TypedDataDomain } from 'viem'
+import type { TypedData } from 'viem'
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
@@ -725,6 +727,7 @@ export interface GetTokenApprovalRequest {
   userWalletAddress: string
   requiredAmount: string
 }
+
 export interface GetTokenApprovalResponse {
   isApproved: boolean
   approvedAmount: string
@@ -745,3 +748,91 @@ export interface GetTokenApprovalResponse {
     ccipReadEnabled?: boolean
   }
 }
+
+export type PermitBase = {
+  spender: Address
+  nonce: string
+  deadline: string
+}
+
+export type PermitValues = PermitBase & {
+  owner: Address
+  value: string
+}
+
+export type PermitWitnessTransferFromValues = PermitBase & {
+  permitted: {
+    token: Address
+    amount: string
+  }
+}
+
+export type PermitData<
+  T extends PermitValues | PermitWitnessTransferFromValues,
+> = {
+  domain: TypedDataDomain
+  types: TypedData
+  values: Record<string, T>
+}
+
+export type Permit =
+  | {
+      permitType: 'Permit'
+      permitData: PermitData<PermitValues>
+    }
+  | {
+      permitType: 'PermitWitnessTransferFrom'
+      permitData: PermitData<PermitWitnessTransferFromValues>
+    }
+
+export type SignedPermit =
+  | {
+      permitType: 'Permit'
+      permit: PermitValues
+      signature: Hex
+    }
+  | {
+      permitType: 'PermitWitnessTransferFrom'
+      permit: PermitWitnessTransferFromValues
+      signature: Hex
+    }
+
+export type RelayerErrorResponse = {
+  status: 'error'
+  data: {
+    code: number
+    message: string
+  }
+}
+
+export type RelayerResponse<T> =
+  | { status: 'ok'; data: T }
+  | RelayerErrorResponse
+
+export type RelayerQuoteResponse = RelayerResponse<{
+  quote: LiFiStep
+  permits: Permit[]
+  approvals: TransactionRequest[]
+}>
+
+export type RelayRequest = {
+  tokenOwner: Address
+  chainId: number
+  permits: SignedPermit[]
+  callData: Hex
+}
+
+export type RelayResponse = RelayerResponse<{
+  taskId: string
+}>
+
+export type RelayStatusRequest = {
+  taskId: Hash
+}
+
+export type RelayStatusResponse = RelayerResponse<{
+  status: 'DONE' | 'PENDING' | 'FAILED'
+  message?: string
+  metadata: { chainId: number; txHash?: Hash }
+  transactionStatus?: StatusResponse
+}>
