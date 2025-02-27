@@ -749,26 +749,29 @@ export interface GetTokenApprovalResponse {
   }
 }
 
-export type PermitBase = {
+export type PermitBase<T extends bigint | string> = {
   spender: Address
-  nonce: string
-  deadline: string
+  nonce: T
+  deadline: T
 }
 
-export type PermitValues = PermitBase & {
+export type PermitValues<T extends bigint | string> = PermitBase<T> & {
   owner: Address
-  value: string
+  value: T
 }
 
-export type PermitWitnessTransferFromValues = PermitBase & {
-  permitted: {
-    token: Address
-    amount: string
+export type PermitWitnessTransferFromValues<T extends bigint | string> =
+  PermitBase<T> & {
+    permitted: {
+      token: Address
+      amount: T
+    }
   }
-}
 
 export type PermitData<
-  T extends PermitValues | PermitWitnessTransferFromValues,
+  T extends
+    | PermitValues<bigint | string>
+    | PermitWitnessTransferFromValues<bigint | string>,
 > = {
   domain: TypedDataDomain
   types: TypedData
@@ -778,22 +781,22 @@ export type PermitData<
 export type Permit =
   | {
       permitType: 'Permit'
-      permitData: PermitData<PermitValues>
+      permitData: PermitData<PermitValues<string>>
     }
   | {
       permitType: 'PermitWitnessTransferFrom'
-      permitData: PermitData<PermitWitnessTransferFromValues>
+      permitData: PermitData<PermitWitnessTransferFromValues<string>>
     }
 
 export type SignedPermit =
   | {
       permitType: 'Permit'
-      permit: PermitValues
+      permit: PermitValues<bigint>
       signature: Hex
     }
   | {
       permitType: 'PermitWitnessTransferFrom'
-      permit: PermitWitnessTransferFromValues
+      permit: PermitWitnessTransferFromValues<bigint>
       signature: Hex
     }
 
