@@ -7,7 +7,7 @@ export interface EVMChain extends _Chain {
   tokenlistUrl?: string
   metamask: AddEthereumChainParameter
   multicallAddress?: string
-  relayer?: boolean
+  relayerSupported?: boolean
 }
 
 export interface AddEthereumChainParameter {
