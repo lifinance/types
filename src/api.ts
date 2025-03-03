@@ -760,12 +760,14 @@ export type PermitValues<T extends bigint | string> = PermitBase<T> & {
   value: T
 }
 
+export type TokenPermissions<T extends bigint | string> = {
+  token: Address
+  amount: T
+}
+
 export type PermitWitnessTransferFromValues<T extends bigint | string> =
   PermitBase<T> & {
-    permitted: {
-      token: Address
-      amount: T
-    }
+    permitted: TokenPermissions<T>
   }
 
 export type PermitData<
@@ -791,12 +793,12 @@ export type Permit =
 export type SignedPermit =
   | {
       permitType: 'Permit'
-      permit: PermitValues<bigint>
+      permit: PermitValues<bigint | string>
       signature: Hex
     }
   | {
       permitType: 'PermitWitnessTransferFrom'
-      permit: PermitWitnessTransferFromValues<bigint>
+      permit: PermitWitnessTransferFromValues<bigint | string>
       signature: Hex
     }
 
