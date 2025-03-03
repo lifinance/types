@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.2.0](https://github.com/lifinance/types/compare/v17.0.0...v17.2.0) (2025-03-03)
+
+
+### Features
+
+* add relayer types ([#323](https://github.com/lifinance/types/issues/323)) ([c01ef37](https://github.com/lifinance/types/commit/c01ef37e9925ab70ddf56d845dd6f1482f8a3e23))
+* Add unichain chain ([#317](https://github.com/lifinance/types/issues/317)) ([29d07af](https://github.com/lifinance/types/commit/29d07af1f04cdc410735a2baa0ee6fcc537a2d77))
+* remove sdk specific types ([#321](https://github.com/lifinance/types/issues/321)) ([d43c8c1](https://github.com/lifinance/types/commit/d43c8c1b929ec8c94cc252f3cc230f4caa9ed620))
+
 ## [17.1.0](https://github.com/lifinance/types/compare/v16.9.0-beta.5...v17.1.0) (2025-02-28)
 
 
