@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.3.0](https://github.com/lifinance/types/compare/v17.2.0...v17.3.0) (2025-03-03)
+
+
+### Features
+
+* add glacis bridge icon ([#325](https://github.com/lifinance/types/issues/325)) ([b261f1a](https://github.com/lifinance/types/commit/b261f1a492b550312385f9140cec4562a045aabf))
+
 ## [17.2.0](https://github.com/lifinance/types/compare/v17.0.0...v17.2.0) (2025-03-03)
 
 
