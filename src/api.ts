@@ -1,3 +1,5 @@
+import type { Address, Hash, Hex, TypedDataDomain } from 'viem'
+import type { TypedData } from 'viem'
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
@@ -725,6 +727,7 @@ export interface GetTokenApprovalRequest {
   userWalletAddress: string
   requiredAmount: string
 }
+
 export interface GetTokenApprovalResponse {
   isApproved: boolean
   approvedAmount: string
@@ -745,3 +748,101 @@ export interface GetTokenApprovalResponse {
     ccipReadEnabled?: boolean
   }
 }
+
+export type PermitBase<T extends bigint | string> = {
+  spender: Address
+  nonce: T
+  deadline: T
+}
+
+export type PermitValues<T extends bigint | string> = PermitBase<T> & {
+  owner: Address
+  value: T
+}
+
+export type TokenPermissions<T extends bigint | string> = {
+  token: Address
+  amount: T
+}
+
+export type PermitWitnessTransferFromValues<T extends bigint | string> =
+  PermitBase<T> & {
+    permitted: TokenPermissions<T>
+  }
+
+export type PermitData<
+  T extends
+    | PermitValues<bigint | string>
+    | PermitWitnessTransferFromValues<bigint | string>,
+> = {
+  domain: TypedDataDomain
+  types: TypedData
+  values: T
+}
+
+export type Permit =
+  | {
+      permitType: 'Permit'
+      permitData: PermitData<PermitValues<string>>
+    }
+  | {
+      permitType: 'PermitWitnessTransferFrom'
+      permitData: PermitData<PermitWitnessTransferFromValues<string>>
+    }
+
+export type SignedPermit =
+  | {
+      permitType: 'Permit'
+      permit: PermitValues<bigint | string>
+      signature: Hex
+    }
+  | {
+      permitType: 'PermitWitnessTransferFrom'
+      permit: PermitWitnessTransferFromValues<bigint | string>
+      signature: Hex
+    }
+
+export type RelayerErrorResponse = {
+  status: 'error'
+  data: {
+    code: number
+    message: string
+  }
+}
+
+export type RelayerResponse<T> =
+  | { status: 'ok'; data: T }
+  | RelayerErrorResponse
+
+export type RelayerQuoteResponseData = {
+  quote: LiFiStep
+  permits: Permit[]
+  approvals: TransactionRequest[]
+}
+
+export type RelayerQuoteResponse = RelayerResponse<RelayerQuoteResponseData>
+
+export type RelayRequest = {
+  tokenOwner: Address
+  chainId: number
+  permits: SignedPermit[]
+  callData: Hex
+}
+
+export type RelayResponseData = {
+  taskId: string
+}
+export type RelayResponse = RelayerResponse<RelayResponseData>
+
+export type RelayStatusRequest = {
+  taskId: Hash
+}
+
+export type RelayStatusResponseData = {
+  status: 'DONE' | 'PENDING' | 'FAILED'
+  message?: string
+  metadata: { chainId: number; txHash?: Hash }
+  transactionStatus?: StatusResponse
+}
+
+export type RelayStatusResponse = RelayerResponse<RelayStatusResponseData>
