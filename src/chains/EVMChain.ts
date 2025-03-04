@@ -1,10 +1,13 @@
 import type { _Chain } from './Chain.js'
 
 export interface EVMChain extends _Chain {
-  // tokenlistUrl is DEPRECATED - will be removed in the next breaking release
+  /**
+   * @deprecated tokenlistUrl is deprecated and will be removed in the next breaking release
+   */
   tokenlistUrl?: string
   metamask: AddEthereumChainParameter
   multicallAddress?: string
+  relayerSupported?: boolean
 }
 
 export interface AddEthereumChainParameter {
