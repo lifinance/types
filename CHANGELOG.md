@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.5.0](https://github.com/lifinance/types/compare/v17.4.0...v17.5.0) (2025-03-04)
+
+
+### Features
+
+* Add apechain assets ([#318](https://github.com/lifinance/types/issues/318)) ([0e2fd47](https://github.com/lifinance/types/commit/0e2fd47887cb15538832b6b69c171a12e5f86fd4))
+* add soneium chain ([#322](https://github.com/lifinance/types/issues/322)) ([eeb9536](https://github.com/lifinance/types/commit/eeb95364a6877f884266ecd60724f53e7204e599))
+* **chains:** add Ink chain ([#324](https://github.com/lifinance/types/issues/324)) ([cda82ab](https://github.com/lifinance/types/commit/cda82abe9c3a3fc30757e284a14c6eb43205210e))
+
+## [17.4.0](https://github.com/lifinance/types/compare/v17.3.0...v17.4.0) (2025-03-03)
+
+
+### Features
+
+* add relayer flag ([#326](https://github.com/lifinance/types/issues/326)) ([8f7463f](https://github.com/lifinance/types/commit/8f7463f44948fc4b483c559b3e7bd449b04f061d))
+
 ## [17.3.0](https://github.com/lifinance/types/compare/v17.2.0...v17.3.0) (2025-03-03)
 
 
