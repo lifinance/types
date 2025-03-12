@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.6.0](https://github.com/lifinance/types/compare/v17.5.0...v17.6.0) (2025-03-12)
+
+
+### Features
+
+* make diamond address optional ([#329](https://github.com/lifinance/types/issues/329)) ([4196325](https://github.com/lifinance/types/commit/41963259eb15c001156cae4ea67847d6f9bee524))
+
 ## [17.5.0](https://github.com/lifinance/types/compare/v17.4.0...v17.5.0) (2025-03-04)
 
 
