@@ -1,5 +1,10 @@
-import type { Address, Hash, Hex, TypedDataDomain } from 'viem'
-import type { TypedData } from 'viem'
+import type {
+  Address,
+  Hash,
+  Hex,
+  TypedDataDomain,
+  TypedDataParameter,
+} from 'viem'
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
@@ -755,7 +760,7 @@ export type PermitBase<T extends bigint | string> = {
   deadline: T
 }
 
-export type PermitValues<T extends bigint | string> = PermitBase<T> & {
+export type PermitMessage<T extends bigint | string> = PermitBase<T> & {
   owner: Address
   value: T
 }
@@ -765,42 +770,36 @@ export type TokenPermissions<T extends bigint | string> = {
   amount: T
 }
 
-export type PermitWitnessTransferFromValues<T extends bigint | string> =
+export type PermitWitnessTransferFromMessage<T extends bigint | string> =
   PermitBase<T> & {
     permitted: TokenPermissions<T>
   }
 
-export type PermitData<
-  T extends
-    | PermitValues<bigint | string>
-    | PermitWitnessTransferFromValues<bigint | string>,
-> = {
+export type TypedDataPrimaryType =
+  | 'Permit'
+  | 'PermitTransferFrom'
+  | 'PermitBatchTransferFrom'
+  | 'PermitWitnessTransferFrom'
+  | 'PermitBatchWitnessTransferFrom'
+  | 'Order'
+
+/**
+ * EIP-712 Typed Data
+ * @link https://eips.ethereum.org/EIPS/eip-712
+ */
+export type TypedData = {
+  primaryType: TypedDataPrimaryType
   domain: TypedDataDomain
-  types: TypedData
-  values: T
+  types: Record<string, TypedDataParameter[]>
+  message: Record<string, any>
 }
 
-export type Permit =
-  | {
-      permitType: 'Permit'
-      permitData: PermitData<PermitValues<string>>
-    }
-  | {
-      permitType: 'PermitWitnessTransferFrom'
-      permitData: PermitData<PermitWitnessTransferFromValues<string>>
-    }
-
-export type SignedPermit =
-  | {
-      permitType: 'Permit'
-      permit: PermitValues<bigint | string>
-      signature: Hex
-    }
-  | {
-      permitType: 'PermitWitnessTransferFrom'
-      permit: PermitWitnessTransferFromValues<bigint | string>
-      signature: Hex
-    }
+/**
+ * EIP-712 Typed Data with signature
+ */
+export interface SignedTypedData extends TypedData {
+  signature: Hex
+}
 
 export type RelayerErrorResponse = {
   status: 'error'
@@ -814,20 +813,9 @@ export type RelayerResponse<T> =
   | { status: 'ok'; data: T }
   | RelayerErrorResponse
 
-export type RelayerQuoteResponseData = {
-  quote: LiFiStep
-  permits: Permit[]
-  approvals: TransactionRequest[]
-}
+export type RelayerQuoteResponse = RelayerResponse<LiFiStep>
 
-export type RelayerQuoteResponse = RelayerResponse<RelayerQuoteResponseData>
-
-export type RelayRequest = {
-  tokenOwner: Address
-  chainId: number
-  permits: SignedPermit[]
-  callData: Hex
-}
+export type RelayRequest = LiFiStep
 
 export type RelayResponseData = {
   taskId: string
