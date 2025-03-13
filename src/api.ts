@@ -790,7 +790,7 @@ export type TypedDataPrimaryType =
 export type TypedData = {
   primaryType: TypedDataPrimaryType
   domain: TypedDataDomain
-  types: Record<string, readonly TypedDataParameter[]>
+  types: Record<string, TypedDataParameter[]>
   message: Record<string, any>
 }
 
