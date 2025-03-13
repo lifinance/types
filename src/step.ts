@@ -1,4 +1,4 @@
-import type { TransactionRequest } from './api.js'
+import type { TypedData, TransactionRequest } from './api.js'
 import type { Token } from './tokens/index.js'
 
 export interface FeeCost {
@@ -94,6 +94,11 @@ export interface StepBase {
   action: Action
   estimate?: Estimate
   transactionRequest?: TransactionRequest
+  /**
+   * EIP-712 Typed Data
+   * @link https://eips.ethereum.org/EIPS/eip-712
+   */
+  typedData?: TypedData[]
 }
 
 export interface DestinationCallInfo {
