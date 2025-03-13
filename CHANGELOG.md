@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [17.7.1](https://github.com/lifinance/types/compare/v17.7.0...v17.7.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* make TypedDataParameter readonly ([f5ee1bb](https://github.com/lifinance/types/commit/f5ee1bb8e91954a8d03511f3cc57fdec0208b386))
+
 ## [17.7.0](https://github.com/lifinance/types/compare/v17.6.0...v17.7.0) (2025-03-13)
 
 
