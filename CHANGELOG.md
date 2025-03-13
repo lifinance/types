@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.7.0](https://github.com/lifinance/types/compare/v17.6.0...v17.7.0) (2025-03-13)
+
+
+### Features
+
+* add EIP-712 typed data interfaces ([#331](https://github.com/lifinance/types/issues/331)) ([4f5aab5](https://github.com/lifinance/types/commit/4f5aab515c1cccc130c6466257a4e681bdf43db6))
+
 ## [17.6.0](https://github.com/lifinance/types/compare/v17.5.0...v17.6.0) (2025-03-12)
 
 
