@@ -29,6 +29,7 @@ export enum CoinKey {
   BERA = 'BERA', // Berachain Token
   S = 'S', // Sonic Token
   APE = 'APE', // ApeCoin
+  ZKF = 'ZKF', // ZKFair Token
 
   // Solana
   SOL = 'SOL',
@@ -78,4 +79,5 @@ export enum CoinKey {
   WBERA = 'WBERA', // Wrapped BERA Token
   wS = 'wS', // Wrapped Sonic Token
   WAPE = 'WAPE', // Wrapped ApeCoin
+  WZKF = 'WZKF', // Wrapped ZKF Token
 }
