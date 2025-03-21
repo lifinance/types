@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.8.0](https://github.com/lifinance/types/compare/v17.7.1...v17.8.0) (2025-03-21)
+
+
+### Features
+
+* add apeusd ([9b682b0](https://github.com/lifinance/types/commit/9b682b0ad6c4c0e17cbe4647482d6e6d907b1b33))
+* update mayan logo ([#333](https://github.com/lifinance/types/issues/333)) ([52d0d3d](https://github.com/lifinance/types/commit/52d0d3d70c33973ef96deeea19e1286ac8fcc0ec))
+
 ### [17.7.1](https://github.com/lifinance/types/compare/v17.7.0...v17.7.1) (2025-03-13)
 
 

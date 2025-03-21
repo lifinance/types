@@ -54,6 +54,7 @@ export enum CoinKey {
   FDUSD = 'FDUSD', // First Digital USD
   HONEY = 'HONEY', // Stablecoin on Berachain
   BYUSD = 'BYUSD', // Stablecoin on Berachain
+  APEUSD = 'APEUSD', // Stablecoin on ApeChain
 
   // Other tokens
   WBTC = 'WBTC',
