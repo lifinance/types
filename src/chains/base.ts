@@ -48,7 +48,6 @@ export enum ChainKey {
   APE = 'ape',
   SOE = 'soe',
   INK = 'ink',
-  LNS = 'lns',
 
   // None-EVM
   SOL = 'sol',
@@ -114,7 +113,6 @@ export enum ChainId {
   APE = 33139,
   SOE = 1868,
   INK = 57073,
-  LNS = 232,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
