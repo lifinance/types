@@ -29,7 +29,6 @@ export enum CoinKey {
   BERA = 'BERA', // Berachain Token
   S = 'S', // Sonic Token
   APE = 'APE', // ApeCoin
-  GHO = 'GHO', // Lens
 
   // Solana
   SOL = 'SOL',
