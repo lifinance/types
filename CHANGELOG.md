@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.9.0](https://github.com/lifinance/types/compare/v17.7.1...v17.9.0) (2025-04-01)
+
+
+### Features
+
+* add apeusd ([#334](https://github.com/lifinance/types/issues/334)) ([8f6d602](https://github.com/lifinance/types/commit/8f6d6028a1ef6ec126e7f0a510c520312723a5f4))
+* **chains:** add lens chain ([#336](https://github.com/lifinance/types/issues/336)) ([650d010](https://github.com/lifinance/types/commit/650d010edf54da87de02f05ab699bf79b75f0a88))
+* extend relay status request ([#339](https://github.com/lifinance/types/issues/339)) ([d2922e1](https://github.com/lifinance/types/commit/d2922e1aaaebb6a335cd1c3a813cad40d6c89c84))
+* update mayan logo ([#333](https://github.com/lifinance/types/issues/333)) ([52d0d3d](https://github.com/lifinance/types/commit/52d0d3d70c33973ef96deeea19e1286ac8fcc0ec))
+
 ## [17.8.0](https://github.com/lifinance/types/compare/v17.7.1...v17.8.0) (2025-03-21)
 
 
