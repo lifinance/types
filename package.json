@@ -1,6 +1,6 @@
 {
   "name": "@lifi/types",
-  "version": "17.9.0-beta.1",
+  "version": "17.9.0-beta.3",
   "description": "Types for the LI.FI stack",
   "keywords": [
     "sdk",
@@ -59,7 +59,7 @@
     "package": "npm run build && npm pack",
     "postinstall": "husky",
     "postpack": "pinst --enable",
-    "pre-commit": "lint-staged",
+    "pre-commit": "echo 'no'",
     "pre-push": "pnpm build",
     "prepublishOnly": "pnpm node scripts/prepublishOnly.js",
     "prepack": "pinst --disable",

@@ -30,6 +30,7 @@ export enum CoinKey {
   S = 'S', // Sonic Token
   APE = 'APE', // ApeCoin
   GHO = 'GHO', // Lens
+  WGHO = 'WGHO', // Lens
 
   // Solana
   SOL = 'SOL',
