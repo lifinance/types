@@ -824,6 +824,9 @@ export type RelayResponse = RelayerResponse<RelayResponseData>
 
 export type RelayStatusRequest = {
   taskId: Hash
+  bridge?: string
+  fromChain?: number
+  toChain?: number
 }
 
 export type RelayStatusResponseData = {
