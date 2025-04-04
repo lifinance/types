@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.10.0](https://github.com/lifinance/types/compare/v17.9.0...v17.10.0) (2025-04-04)
+
+
+### Features
+
+* **chains:** add lens ([#338](https://github.com/lifinance/types/issues/338)) ([71beb54](https://github.com/lifinance/types/commit/71beb547d792c3f7c8b905150f85a4b9c4c5998c))
+
 ## [17.9.0](https://github.com/lifinance/types/compare/v17.7.1...v17.9.0) (2025-04-01)
 
 
