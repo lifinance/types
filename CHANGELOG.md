@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.11.0-beta.0](https://github.com/lifinance/types/compare/v17.10.0...v17.11.0-beta.0) (2025-04-07)
+
+
+### Features
+
+* **chain:** add Swell ([0cf26bc](https://github.com/lifinance/types/commit/0cf26bc987f1244f8915507b07a3f66b84945aa5))
+
 ## [17.10.0](https://github.com/lifinance/types/compare/v17.9.0...v17.10.0) (2025-04-04)
 
 
