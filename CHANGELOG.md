@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [17.11.0](https://github.com/lifinance/types/compare/v17.11.0-beta.0...v17.11.0) (2025-04-09)
 
-## [17.11.0-beta.0](https://github.com/lifinance/types/compare/v17.10.0...v17.11.0-beta.0) (2025-04-07)
-
 
 ### Features
 
