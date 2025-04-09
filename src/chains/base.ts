@@ -50,6 +50,7 @@ export enum ChainKey {
   INK = 'ink',
   LNS = 'lns',
   SWL = 'swl',
+  CRN = 'crn',
 
   // None-EVM
   SOL = 'sol',
@@ -117,6 +118,7 @@ export enum ChainId {
   INK = 57073,
   LNS = 232,
   SWL = 1923,
+  CRN = 21000000,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,

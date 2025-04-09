@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [17.11.0](https://github.com/lifinance/types/compare/v17.11.0-beta.0...v17.11.0) (2025-04-09)
+## [17.12.0](https://github.com/lifinance/types/compare/v17.11.0...v17.12.0) (2025-04-09)
+
+
+### Features
+
+* **chain:** add Corn ([1a9b8ab](https://github.com/lifinance/types/commit/1a9b8ab8919f0049fc776962e655743566dbd1ce))
+
+## [17.11.0](https://github.com/lifinance/types/compare/v17.10.0...v17.11.0) (2025-04-09)
 
 
 ### Features
