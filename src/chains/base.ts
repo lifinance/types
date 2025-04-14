@@ -51,6 +51,7 @@ export enum ChainKey {
   LNS = 'lns',
   SWL = 'swl',
   CRN = 'crn',
+  ETL = 'etl',
 
   // None-EVM
   SOL = 'sol',
@@ -119,6 +120,7 @@ export enum ChainId {
   LNS = 232,
   SWL = 1923,
   CRN = 21000000,
+  ETL = 42793,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
