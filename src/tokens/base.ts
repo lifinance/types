@@ -31,6 +31,7 @@ export enum CoinKey {
   APE = 'APE', // ApeCoin
   GHO = 'GHO', // Lens
   WGHO = 'WGHO', // Lens
+  XTZ = 'XTZ', // Etherlink Native
 
   // Solana
   SOL = 'SOL',
@@ -81,4 +82,5 @@ export enum CoinKey {
   WBERA = 'WBERA', // Wrapped BERA Token
   wS = 'wS', // Wrapped Sonic Token
   WAPE = 'WAPE', // Wrapped ApeCoin
+  WXTZ = 'WXTZ', // Etherlink Wrapped Native
 }
