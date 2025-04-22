@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.13.0](https://github.com/lifinance/types/compare/v17.10.0...v17.13.0) (2025-04-17)
+
+
+### Features
+
+* **chain:** add Corn ([#343](https://github.com/lifinance/types/issues/343)) ([a6cf825](https://github.com/lifinance/types/commit/a6cf8256dc0d8d76759240e6a9fc79c76b6a30b1))
+* **chain:** add Etherlink ([#344](https://github.com/lifinance/types/issues/344)) ([d0a15ba](https://github.com/lifinance/types/commit/d0a15ba062ae2dd3d371dd6ad2d5c5fcd6aec886))
+* **chain:** add Superposition ([#348](https://github.com/lifinance/types/issues/348)) ([8b19bed](https://github.com/lifinance/types/commit/8b19bedff12797547255bfd8d07e41a609ca9466))
+* **chain:** add Swell ([#341](https://github.com/lifinance/types/issues/341)) ([daaf860](https://github.com/lifinance/types/commit/daaf860427ac4869150384795d3d1e45a40107de))
+* introduce semantic pr ([#346](https://github.com/lifinance/types/issues/346)) ([8422be1](https://github.com/lifinance/types/commit/8422be18e42310849e97fa43b50fa5b6a809e897))
+
 ## [17.12.0](https://github.com/lifinance/types/compare/v17.11.0...v17.12.0) (2025-04-09)
 
 
