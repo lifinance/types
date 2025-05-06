@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
   <path fill="#F6F6F6" d="M0 0h32v32H0z"/>
   <path fill="url(#a)" d="M19.452 20.426 22.998 6 6 23.93l10.531-6.126 2.921-2.942v5.564Z"/>
-  <path fill="url(#b)" d="M22.998 23.93V6l-3.545 14.426h-5.266l8.811 3.504Z"/>
+  <path fill="url(#b)" d="M22.998 23.93V6l-3.546 14.426h-5.266l8.812 3.504Z"/>
   <path fill="url(#c)" d="M22.998 23.93H6l13.452-9.068-5.266 5.564 8.812 3.504Z"/>
-  <path fill="url(#d)" d="M14.192 20.422 23 22.363v1.567h-5.541l-3.267-3.508Z"/>
-  <path fill="url(#e)" d="M22.998 22.407v-4.874l-3.565 2.894h-5.241l8.806 1.98Z"/>
+  <path fill="url(#d)" d="M14.192 20.423 23 22.363v1.567h-5.541l-3.267-3.507Z"/>
+  <path fill="url(#e)" d="M22.998 22.407v-4.874l-3.565 2.893h-5.241l8.806 1.98Z"/>
   <defs>
     <linearGradient id="a" x1="14.499" x2="14.499" y1="6" y2="23.93" gradientUnits="userSpaceOnUse">
       <stop stop-color="#3A413E"/>
