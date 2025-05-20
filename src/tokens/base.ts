@@ -59,6 +59,7 @@ export enum CoinKey {
   HONEY = 'HONEY', // Stablecoin on Berachain
   BYUSD = 'BYUSD', // Stablecoin on Berachain
   APEUSD = 'APEUSD', // Stablecoin on ApeChain
+  FEUSD = 'FEUSD', // Stablecoin on HyperEVM
 
   // Other tokens
   WBTC = 'WBTC',
