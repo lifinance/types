@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.15.0](https://github.com/lifinance/types/compare/v17.14.0...v17.15.0) (2025-05-21)
+
+
+### Features
+
+* **chain:** add XDC ([#360](https://github.com/lifinance/types/issues/360)) ([40aa249](https://github.com/lifinance/types/commit/40aa2495a6967a828f7e49d39b807d5334063f6a))
+
 ## [17.14.0](https://github.com/lifinance/types/compare/v17.13.0...v17.14.0) (2025-05-20)
 
 
