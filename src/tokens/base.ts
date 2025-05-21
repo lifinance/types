@@ -33,6 +33,7 @@ export enum CoinKey {
   WGHO = 'WGHO', // Lens
   XTZ = 'XTZ', // Etherlink Native
   HYPE = 'HYPE', // HyperEVM native
+  XDC = 'XDC', // XDC native
 
   // Solana
   SOL = 'SOL',
@@ -86,4 +87,5 @@ export enum CoinKey {
   WAPE = 'WAPE', // Wrapped ApeCoin
   WXTZ = 'WXTZ', // Etherlink Wrapped Native
   WHYPE = 'WHYPE', // HyperEVM Wrapped Native
+  WXDC = 'WXDC', // XDC Wrapped Native
 }
