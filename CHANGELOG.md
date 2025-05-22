@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.16.0](https://github.com/lifinance/types/compare/v17.15.0...v17.16.0) (2025-05-22)
+
+
+### Features
+
+* **chain:** add bob ([#362](https://github.com/lifinance/types/issues/362)) ([8c1c09e](https://github.com/lifinance/types/commit/8c1c09ead6051846adf9516d1fb396a0c7ecf166))
+
 ## [17.15.0](https://github.com/lifinance/types/compare/v17.14.0...v17.15.0) (2025-05-21)
 
 
