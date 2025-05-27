@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.16.0](https://github.com/lifinance/types/compare/v17.15.0...v17.16.0) (2025-05-22)
+
+
+### Features
+
+* **chain:** add bob ([#362](https://github.com/lifinance/types/issues/362)) ([8c1c09e](https://github.com/lifinance/types/commit/8c1c09ead6051846adf9516d1fb396a0c7ecf166))
+
+## [17.15.0](https://github.com/lifinance/types/compare/v17.14.0...v17.15.0) (2025-05-21)
+
+
+### Features
+
+* **chain:** add XDC ([#360](https://github.com/lifinance/types/issues/360)) ([40aa249](https://github.com/lifinance/types/commit/40aa2495a6967a828f7e49d39b807d5334063f6a))
+
+## [17.14.0](https://github.com/lifinance/types/compare/v17.13.0...v17.14.0) (2025-05-20)
+
+
+### Features
+
+* add HyperEVM ([#359](https://github.com/lifinance/types/issues/359)) ([6421201](https://github.com/lifinance/types/commit/64212018300d7c32d60e4dd0d082ab67e133743d))
+* add usdt0 token image ([#357](https://github.com/lifinance/types/issues/357)) ([0c9c795](https://github.com/lifinance/types/commit/0c9c7953e96c98b399193043d0a3b281fc7d1568))
+
 ## [17.13.0](https://github.com/lifinance/types/compare/v17.10.0...v17.13.0) (2025-04-17)
 
 

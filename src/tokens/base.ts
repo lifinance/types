@@ -32,6 +32,8 @@ export enum CoinKey {
   GHO = 'GHO', // Lens
   WGHO = 'WGHO', // Lens
   XTZ = 'XTZ', // Etherlink Native
+  HYPE = 'HYPE', // HyperEVM native
+  XDC = 'XDC', // XDC native
 
   // Solana
   SOL = 'SOL',
@@ -58,6 +60,7 @@ export enum CoinKey {
   HONEY = 'HONEY', // Stablecoin on Berachain
   BYUSD = 'BYUSD', // Stablecoin on Berachain
   APEUSD = 'APEUSD', // Stablecoin on ApeChain
+  FEUSD = 'FEUSD', // Stablecoin on HyperEVM
 
   // Other tokens
   WBTC = 'WBTC',
@@ -83,4 +86,6 @@ export enum CoinKey {
   wS = 'wS', // Wrapped Sonic Token
   WAPE = 'WAPE', // Wrapped ApeCoin
   WXTZ = 'WXTZ', // Etherlink Wrapped Native
+  WHYPE = 'WHYPE', // HyperEVM Wrapped Native
+  WXDC = 'WXDC', // XDC Wrapped Native
 }
