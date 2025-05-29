@@ -582,6 +582,7 @@ export type TokensRequest = {
   chains?: (ChainId | ChainKey)[]
   chainTypes?: ChainType[]
   minPriceUSD?: number
+  search?: string
 }
 
 export type TokensResponse = {
