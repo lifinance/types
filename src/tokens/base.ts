@@ -35,6 +35,7 @@ export enum CoinKey {
   HYPE = 'HYPE', // HyperEVM native
   XDC = 'XDC', // XDC native
   VIC = 'VIC', // Viction native
+  FLR = 'FLR', // Flare native
 
   // Solana
   SOL = 'SOL',
@@ -90,4 +91,5 @@ export enum CoinKey {
   WHYPE = 'WHYPE', // HyperEVM Wrapped Native
   WXDC = 'WXDC', // XDC Wrapped Native
   WVIC = 'WVIC', // Viction Wrapped Native
+  WFLR = 'WFLR', // Flare Wrapped Native
 }
