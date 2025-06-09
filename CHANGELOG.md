@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.18.0](https://github.com/lifinance/types/compare/v17.17.0...v17.18.0) (2025-06-09)
+
+
+### Features
+
+* **chain:** add Flare & Katana ([#367](https://github.com/lifinance/types/issues/367)) ([72f67ec](https://github.com/lifinance/types/commit/72f67ec368c813479b5db8b44f486b69e39fa86d))
+
 ## [17.17.0](https://github.com/lifinance/types/compare/v17.16.0...v17.17.0) (2025-06-05)
 
 
