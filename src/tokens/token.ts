@@ -16,9 +16,9 @@ export interface StaticToken extends BaseToken {
 
 export interface Token extends StaticToken {
   priceUSD: string
-  marketCapUSD: string | null
-  volumeUSD24H?: string
-  fdvUSD?: string
+  marketCapUSD: number | null
+  volumeUSD24H?: number
+  fdvUSD?: number
 }
 
 export interface TokenAmount extends Token {
