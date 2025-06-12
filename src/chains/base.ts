@@ -56,6 +56,9 @@ export enum ChainKey {
   HYP = 'hyp',
   XDC = 'xdc',
   BOC = 'boc', // BOB was already taken by Boba
+  VIC = 'vic',
+  FLR = 'flr',
+  KAT = 'kat',
 
   // None-EVM
   SOL = 'sol',
@@ -129,6 +132,9 @@ export enum ChainId {
   HYP = 999,
   XDC = 50,
   BOC = 60808, // BOB was already taken by Boba
+  VIC = 88,
+  FLR = 14,
+  KAT = 747474,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
