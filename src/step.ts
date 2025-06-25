@@ -1,4 +1,4 @@
-import type { TypedData, TransactionRequest } from './api.js'
+import type { TypedData, TransactionRequest, SignedTypedData } from './api.js'
 import type { Token } from './tokens/index.js'
 
 export interface FeeCost {
@@ -44,6 +44,8 @@ export interface Estimate {
   toAmountMin: string
   toAmountUSD?: string
   approvalAddress: string
+  permit2Address?: string | null
+  permit2ProxyAddress?: string | null
   feeCosts?: FeeCost[]
   // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
   gasCosts?: GasCost[]
@@ -139,6 +141,10 @@ export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
 export interface LiFiStep extends Omit<Step, 'type'> {
   type: 'lifi'
   includedSteps: Step[]
+}
+
+export interface SignedLiFiStep extends LiFiStep {
+  typedData: SignedTypedData[]
 }
 
 export function isSwapStep(step: Step): step is SwapStep {

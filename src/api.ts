@@ -8,7 +8,13 @@ import type {
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
-import type { Action, FeeCost, LiFiStep, StepToolDetails } from './step.js'
+import type {
+  Action,
+  FeeCost,
+  LiFiStep,
+  SignedLiFiStep,
+  StepToolDetails,
+} from './step.js'
 import type { Token } from './tokens/index.js'
 
 /**
@@ -815,7 +821,7 @@ export type RelayerResponse<T> =
 
 export type RelayerQuoteResponse = RelayerResponse<LiFiStep>
 
-export type RelayRequest = LiFiStep
+export type RelayRequest = SignedLiFiStep
 
 export type RelayResponseData = {
   taskId: string
