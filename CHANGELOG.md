@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.19.0](https://github.com/lifinance/types/compare/v17.18.0...v17.19.0) (2025-06-30)
+
+
+### Features
+
+* add liquidswap icon ([#372](https://github.com/lifinance/types/issues/372)) ([9cc5851](https://github.com/lifinance/types/commit/9cc5851e744f0cdf679536d09601d778907f7372))
+* add merkle logo ([#370](https://github.com/lifinance/types/issues/370)) ([2cc581f](https://github.com/lifinance/types/commit/2cc581f6ed3639fd836cb28b100977526477fd86))
+* add Vana, Plume, and Ronin info ([#376](https://github.com/lifinance/types/issues/376)) ([aaf8dd0](https://github.com/lifinance/types/commit/aaf8dd06e29c625d12d34e5896310c95b74744b4))
+
 ## [17.18.0](https://github.com/lifinance/types/compare/v17.17.0...v17.18.0) (2025-06-09)
 
 
