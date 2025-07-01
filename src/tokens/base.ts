@@ -36,6 +36,9 @@ export enum CoinKey {
   XDC = 'XDC', // XDC native
   VIC = 'VIC', // Viction native
   FLR = 'FLR', // Flare native
+  VAN = 'VAN', // Vana native
+  RON = 'RON', // Ronin native
+  PLU = 'PLU', // Plume native
 
   // Solana
   SOL = 'SOL',
@@ -92,4 +95,7 @@ export enum CoinKey {
   WXDC = 'WXDC', // XDC Wrapped Native
   WVIC = 'WVIC', // Viction Wrapped Native
   WFLR = 'WFLR', // Flare Wrapped Native
+  WVAN = 'WVAN', // Vana Wrapped Native
+  WRON = 'WRON', // Ronin Wrapped Native
+  WPLU = 'WPLU', // Plume Wrapped Native
 }
