@@ -76,7 +76,7 @@
     ]
   },
   "dependencies": {
-    "viem": "^2.31.4"
+    "viem": "^2.31.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
