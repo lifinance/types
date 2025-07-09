@@ -1,4 +1,4 @@
-import type { TypedData, TransactionRequest } from './api.js'
+import type { TypedData, TransactionRequest, SignedTypedData } from './api.js'
 import type { Token } from './tokens/index.js'
 
 export interface FeeCost {
@@ -139,6 +139,10 @@ export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
 export interface LiFiStep extends Omit<Step, 'type'> {
   type: 'lifi'
   includedSteps: Step[]
+}
+
+export interface SignedLiFiStep extends LiFiStep {
+  typedData: SignedTypedData[]
 }
 
 export function isSwapStep(step: Step): step is SwapStep {
