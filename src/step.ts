@@ -44,8 +44,6 @@ export interface Estimate {
   toAmountMin: string
   toAmountUSD?: string
   approvalAddress: string
-  permit2Address?: string | null
-  permit2ProxyAddress?: string | null
   feeCosts?: FeeCost[]
   // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
   gasCosts?: GasCost[]
