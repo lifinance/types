@@ -39,7 +39,7 @@ export enum CoinKey {
   VAN = 'VAN', // Vana native
   RON = 'RON', // Ronin native
   PLU = 'PLU', // Plume native
-  NIB = 'NIB', // Nibiru native
+  NIBI = 'NIBI', // Nibiru native
 
   // Solana
   SOL = 'SOL',
@@ -99,5 +99,5 @@ export enum CoinKey {
   WVAN = 'WVAN', // Vana Wrapped Native
   WRON = 'WRON', // Ronin Wrapped Native
   WPLU = 'WPLU', // Plume Wrapped Native
-  WNIB = 'WNIB', // Nibiru Wrapped Native
+  WNIBI = 'WNIBI', // Nibiru Wrapped Native
 }
