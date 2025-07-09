@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.21.0](https://github.com/lifinance/types/compare/v17.19.1...v17.21.0) (2025-07-09)
+
+
+### Features
+
+* add Nibiru chain ([#383](https://github.com/lifinance/types/issues/383)) ([bd371f7](https://github.com/lifinance/types/commit/bd371f7e4a8d0ac3721192cba02056314a515e86))
+* add USDe token symbol ([#382](https://github.com/lifinance/types/issues/382)) ([81e8ce5](https://github.com/lifinance/types/commit/81e8ce59611c4757272a54713c2b242c61848138))
+
 ## [17.20.0](https://github.com/lifinance/types/compare/v17.19.1...v17.20.0) (2025-07-09)
 
 
