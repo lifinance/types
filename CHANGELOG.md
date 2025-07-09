@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.22.0](https://github.com/lifinance/types/compare/v17.21.0...v17.22.0) (2025-07-09)
+
+
+### Features
+
+* add hyperbloom icon ([#384](https://github.com/lifinance/types/issues/384)) ([c0cec00](https://github.com/lifinance/types/commit/c0cec00eb767d23a909c97ad35f0e3d920e6907c))
+
+
+### Bug Fixes
+
+* adjust relayer types to have signed typed data field ([#374](https://github.com/lifinance/types/issues/374)) ([50e3cfe](https://github.com/lifinance/types/commit/50e3cfedcf9447985f93a59cd37a3cb661c33d08))
+
 ## [17.21.0](https://github.com/lifinance/types/compare/v17.19.1...v17.21.0) (2025-07-09)
 
 
