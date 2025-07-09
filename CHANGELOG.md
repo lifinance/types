@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.20.0](https://github.com/lifinance/types/compare/v17.19.1...v17.20.0) (2025-07-09)
+
+
+### Features
+
+* add USDe token symbol ([15fa548](https://github.com/lifinance/types/commit/15fa5488b9638f12e49d8e2a4856dde45e0b54ef))
+
 ### [17.19.1](https://github.com/lifinance/types/compare/v17.19.0...v17.19.1) (2025-07-01)
 
 ## [17.19.0](https://github.com/lifinance/types/compare/v17.18.0...v17.19.0) (2025-06-30)
