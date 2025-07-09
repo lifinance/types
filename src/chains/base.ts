@@ -62,6 +62,7 @@ export enum ChainKey {
   VAN = 'van',
   RON = 'ron',
   PLU = 'plu',
+  NIB = 'nib',
 
   // None-EVM
   SOL = 'sol',
@@ -141,6 +142,7 @@ export enum ChainId {
   VAN = 1480,
   RON = 2020,
   PLU = 98866,
+  NIB = 6900,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
