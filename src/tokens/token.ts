@@ -21,6 +21,10 @@ export interface Token extends StaticToken {
   fdvUSD?: number
 }
 
+export interface TokenWithPriceOnly extends Token {
+  priceUSD: string
+}
+
 export interface TokenAmount extends Token {
   amount?: bigint
   blockNumber?: bigint

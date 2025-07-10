@@ -9,7 +9,7 @@ import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
 import type { Action, FeeCost, LiFiStep, StepToolDetails } from './step.js'
-import type { Token } from './tokens/index.js'
+import type { Token, TokenWithPriceOnly } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -403,8 +403,8 @@ export interface ConnectionsRequest extends ToolConfiguration {
 export interface Connection {
   fromChainId: number
   toChainId: number
-  fromTokens: Token[]
-  toTokens: Token[]
+  fromTokens: TokenWithPriceOnly[]
+  toTokens: TokenWithPriceOnly[]
 }
 
 export interface ConnectionsResponse {
@@ -585,7 +585,7 @@ export type TokensRequest = {
 }
 
 export type TokensResponse = {
-  tokens: { [chainId: number]: Token[] }
+  tokens: { [chainId: number]: TokenWithPriceOnly[] }
 }
 
 export type RequestOptions = {
