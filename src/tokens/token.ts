@@ -16,16 +16,16 @@ export interface StaticToken extends BaseToken {
 
 export interface Token extends StaticToken {
   priceUSD: string
+}
+
+export interface TokenExtended extends StaticToken {
+  priceUSD: string
   marketCapUSD: number | null
   volumeUSD24H?: number
   fdvUSD?: number
 }
 
-export interface TokenWithPriceOnly extends Token {
-  priceUSD: string
-}
-
-export interface TokenAmount extends Token {
+export interface TokenAmount extends TokenExtended {
   amount?: bigint
   blockNumber?: bigint
 }

@@ -15,7 +15,7 @@ import type {
   SignedLiFiStep,
   StepToolDetails,
 } from './step.js'
-import type { Token, TokenWithPriceOnly } from './tokens/index.js'
+import type { TokenExtended, Token } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -182,14 +182,14 @@ export interface Route {
   fromChainId: number
   fromAmountUSD: string
   fromAmount: string
-  fromToken: Token
+  fromToken: TokenExtended
   fromAddress?: string
 
   toChainId: number
   toAmountUSD: string
   toAmount: string
   toAmountMin: string
-  toToken: Token
+  toToken: TokenExtended
   toAddress?: string
 
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
@@ -252,7 +252,7 @@ export interface PossibilitiesRequest {
  */
 export interface PossibilitiesResponse {
   chains?: Chain[]
-  tokens?: Token[]
+  tokens?: TokenExtended[]
   bridges?: BridgeDefinition[]
   exchanges?: ExchangeDefinition[]
 }
@@ -409,8 +409,8 @@ export interface ConnectionsRequest extends ToolConfiguration {
 export interface Connection {
   fromChainId: number
   toChainId: number
-  fromTokens: TokenWithPriceOnly[]
-  toTokens: TokenWithPriceOnly[]
+  fromTokens: Token[]
+  toTokens: Token[]
 }
 
 export interface ConnectionsResponse {
@@ -433,10 +433,10 @@ export interface BaseTransactionInfo {
 export interface ExtendedTransactionInfo extends BaseTransactionInfo {
   amount?: string
   amountUSD?: string
-  token?: Token
+  token?: TokenExtended
   gasPrice: string
   gasUsed: string
-  gasToken: Token
+  gasToken: TokenExtended
   gasAmount: string
   gasAmountUSD: string
   timestamp?: number
@@ -545,9 +545,9 @@ interface TransferMetadata {
 
 export type IncludedStep = {
   fromAmount: string
-  fromToken: Token
+  fromToken: TokenExtended
   toAmount: string
-  toToken: Token
+  toToken: TokenExtended
   bridgedAmount?: string
   tool: string
   toolDetails: StepToolDetails
@@ -566,7 +566,7 @@ export interface FullStatusData extends StatusData {
 }
 
 export interface ExtendedChain extends Chain {
-  nativeToken: Token
+  nativeToken: TokenExtended
   diamondAddress?: string
   permit2?: string
   permit2Proxy?: string
@@ -591,7 +591,7 @@ export type TokensRequest = {
 }
 
 export type TokensResponse = {
-  tokens: { [chainId: number]: TokenWithPriceOnly[] }
+  tokens: { [chainId: number]: Token[] }
 }
 
 export type RequestOptions = {
@@ -609,7 +609,7 @@ export type FeeBalance = {
 }
 
 export type TokenBalance = {
-  token: Token
+  token: TokenExtended
   amount: string
   amountUsd: string
 }
@@ -663,7 +663,7 @@ export type GasRecommendationResponse = {
   serviceFee?: TokenBalance // LI.FI fee for providing the service
 
   // information about what the user has to pay to get the recommended gas amount
-  fromToken?: Token
+  fromToken?: TokenExtended
   fromAmount?: string
 }
 
