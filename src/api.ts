@@ -15,7 +15,7 @@ import type {
   SignedLiFiStep,
   StepToolDetails,
 } from './step.js'
-import type { TokenExtended, Token } from './tokens/index.js'
+import type { Token } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -182,14 +182,14 @@ export interface Route {
   fromChainId: number
   fromAmountUSD: string
   fromAmount: string
-  fromToken: TokenExtended
+  fromToken: Token
   fromAddress?: string
 
   toChainId: number
   toAmountUSD: string
   toAmount: string
   toAmountMin: string
-  toToken: TokenExtended
+  toToken: Token
   toAddress?: string
 
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
@@ -252,7 +252,7 @@ export interface PossibilitiesRequest {
  */
 export interface PossibilitiesResponse {
   chains?: Chain[]
-  tokens?: TokenExtended[]
+  tokens?: Token[]
   bridges?: BridgeDefinition[]
   exchanges?: ExchangeDefinition[]
 }
@@ -433,10 +433,10 @@ export interface BaseTransactionInfo {
 export interface ExtendedTransactionInfo extends BaseTransactionInfo {
   amount?: string
   amountUSD?: string
-  token?: TokenExtended
+  token?: Token
   gasPrice: string
   gasUsed: string
-  gasToken: TokenExtended
+  gasToken: Token
   gasAmount: string
   gasAmountUSD: string
   timestamp?: number
@@ -545,9 +545,9 @@ interface TransferMetadata {
 
 export type IncludedStep = {
   fromAmount: string
-  fromToken: TokenExtended
+  fromToken: Token
   toAmount: string
-  toToken: TokenExtended
+  toToken: Token
   bridgedAmount?: string
   tool: string
   toolDetails: StepToolDetails
@@ -566,7 +566,7 @@ export interface FullStatusData extends StatusData {
 }
 
 export interface ExtendedChain extends Chain {
-  nativeToken: TokenExtended
+  nativeToken: Token
   diamondAddress?: string
   permit2?: string
   permit2Proxy?: string
@@ -609,7 +609,7 @@ export type FeeBalance = {
 }
 
 export type TokenBalance = {
-  token: TokenExtended
+  token: Token
   amount: string
   amountUsd: string
 }
@@ -663,7 +663,7 @@ export type GasRecommendationResponse = {
   serviceFee?: TokenBalance // LI.FI fee for providing the service
 
   // information about what the user has to pay to get the recommended gas amount
-  fromToken?: TokenExtended
+  fromToken?: Token
   fromAmount?: string
 }
 

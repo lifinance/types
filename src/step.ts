@@ -1,11 +1,11 @@
 import type { TypedData, TransactionRequest, SignedTypedData } from './api.js'
-import type { TokenExtended } from './tokens/index.js'
+import type { Token } from './tokens/index.js'
 
 export interface FeeCost {
   name: string
   description: string
   percentage: string
-  token: TokenExtended
+  token: Token
   amount: string
   amountUSD: string
   included: boolean
@@ -18,18 +18,18 @@ export interface GasCost {
   limit: string // suggested gas limit (estimate +25%)
   amount: string // estimate * price = amount of tokens that will be needed
   amountUSD: string // usd value of token amount
-  token: TokenExtended // the used gas token
+  token: Token // the used gas token
 }
 
 // ACTION
 export interface Action {
   fromChainId: number
   fromAmount: string
-  fromToken: TokenExtended
+  fromToken: Token
   fromAddress?: string
 
   toChainId: number
-  toToken: TokenExtended
+  toToken: Token
   toAddress?: string
 
   slippage?: number
