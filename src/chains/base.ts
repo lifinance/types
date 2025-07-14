@@ -71,6 +71,10 @@ export enum ChainKey {
 
   // MVM
   SUI = 'sui',
+  APT = 'apt',
+
+  // Tron
+  TRON = 'tron',
 
   // UTXO
   BTC = 'btc',
@@ -151,6 +155,10 @@ export enum ChainId {
 
   // MVM (IDs are made up by the LI.FI team)
   SUI = 9270000000000000, // First 16 non-letter hex digits of SUI genesis blob
+  APT = 9271000000000010,
+
+  // Tron
+  TRON = 1885080386571452, // First 16 non-letter hex digits of Tron genesis blob
 
   // UTXO (IDs are made up by the LI.FI team)
   BTC = 20000000000001,
