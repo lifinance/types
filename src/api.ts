@@ -422,6 +422,7 @@ export interface GetStatusRequest {
   bridge?: string
   fromChain?: number | string
   toChain?: number | string
+  fromAddress?: string
 }
 
 export interface BaseTransactionInfo {
