@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.23.0](https://github.com/lifinance/types/compare/v17.22.0...v17.23.0) (2025-07-21)
+
+
+### Features
+
+* add market cap and volume to token ([#345](https://github.com/lifinance/types/issues/345)) ([b138ee9](https://github.com/lifinance/types/commit/b138ee9198a905e17f3113b3dea8cf6462e2806d))
+
 ## [17.22.0](https://github.com/lifinance/types/compare/v17.21.0...v17.22.0) (2025-07-09)
 
 
