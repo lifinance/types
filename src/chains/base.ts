@@ -144,7 +144,7 @@ export enum ChainId {
   RON = 2020,
   PLU = 98866,
   NIB = 6900,
-  HPL = 998,
+  HPL = 1337, // Hyperliquid's core (non-EVM) chain hard-codes 1337 in every EIP-712-signed message
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
