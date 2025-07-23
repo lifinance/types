@@ -68,7 +68,7 @@ export enum CoinKey {
   BYUSD = 'BYUSD', // Stablecoin on Berachain
   APEUSD = 'APEUSD', // Stablecoin on ApeChain
   FEUSD = 'FEUSD', // Stablecoin on HyperEVM
-  USDT0 = 'USDT0', // Bridged USDT offered by LayerZero
+  'USD₮0' = 'USD₮0', // USDT built on LayerZero Token Standard
 
   // Other tokens
   WBTC = 'WBTC',
