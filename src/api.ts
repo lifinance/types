@@ -584,10 +584,20 @@ export interface ToolsRequest {
   chains?: (ChainKey | ChainId)[]
 }
 
+export const TokensSortOrders = [
+  'marketCapUSD',
+  'priceUSD',
+  'volumeUSD24H',
+  'fdvUSD',
+] as const
+export type TokensSortOrder = (typeof TokensSortOrders)[number]
+
 export type TokensRequest = {
   chains?: (ChainId | ChainKey)[]
   chainTypes?: ChainType[]
   minPriceUSD?: number
+  orderBy?: TokensSortOrder
+  limit?: number
 }
 
 export type TokensResponse = {
