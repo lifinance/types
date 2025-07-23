@@ -597,6 +597,7 @@ export type TokensRequest = {
   chainTypes?: ChainType[]
   minPriceUSD?: number
   orderBy?: TokensSortOrder
+  limit?: number
 }
 
 export type TokensResponse = {
