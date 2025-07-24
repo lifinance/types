@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.26.0](https://github.com/lifinance/types/compare/v17.25.0...v17.26.0) (2025-07-24)
+
+
+### Features
+
+* **CoinKey:** add Noble issued USDC (USDCn) ([#394](https://github.com/lifinance/types/issues/394)) ([e338bd9](https://github.com/lifinance/types/commit/e338bd91bf0cb1d3d8f032c45348360a09d939a5))
+
 ## [17.25.0](https://github.com/lifinance/types/compare/v17.24.0...v17.25.0) (2025-07-24)
 
 
