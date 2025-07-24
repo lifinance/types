@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.24.0](https://github.com/lifinance/types/compare/v17.23.0...v17.24.0) (2025-07-23)
+
+
+### Features
+
+* add USDT0 stablecoin ([#392](https://github.com/lifinance/types/issues/392)) ([54aaa0b](https://github.com/lifinance/types/commit/54aaa0b39793b9d07db2fc58fbef219aad150150))
+
 ## [17.23.0](https://github.com/lifinance/types/compare/v17.22.0...v17.23.0) (2025-07-21)
 
 
