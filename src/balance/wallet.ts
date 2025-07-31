@@ -1,3 +1,5 @@
+import type { StaticToken, TokenExtended } from '../tokens/token.js'
+
 /**
  * Parameters for getting wallet balance
  */
@@ -18,23 +20,16 @@ export interface GetWalletBalanceFilter {
 /**
  * Basic wallet token following EIP structure
  */
-export interface WalletToken {
-  address: string
-  symbol?: string
-  decimals: number
+export interface WalletToken extends Omit<StaticToken, 'chainId'> {
   amount: number
 }
 
 /**
  * Extended wallet token with pricing and metadata information
+ * Reuses TokenExtended but adapts for wallet context
  */
-export interface WalletTokenExtended extends WalletToken {
-  priceUSD?: number
-  marketCapUSD?: number | null
-  volumeUSD24H?: number | null
-  fdvUSD?: number | null
-  logoURI?: string
-  name?: string
+export interface WalletTokenExtended extends Omit<TokenExtended, 'chainId'> {
+  amount: number
 }
 
 /**
