@@ -36,7 +36,7 @@ export interface WalletTokenExtended extends Omit<TokenExtended, 'chainId'> {
  * Wallet balance response following EIP structure
  * Balances are grouped by chainId as numeric keys
  *
- * @example
+ * @example Basic response
  * ```json
  * {
  *   "walletAddress": "0x742d35Cc6466C7b9d5b52b8e5d8bD9D9F4B12345",
@@ -52,11 +52,31 @@ export interface WalletTokenExtended extends Omit<TokenExtended, 'chainId'> {
  *         "address": "0x0000000000000000000000000000000000000000",
  *         "symbol": "ETH",
  *         "decimals": 18,
- *         "amount": 1
+ *         "amount": 15965635006674968
  *       }
- *     ],
- *     "137": [
- *       // Polygon tokens...
+ *     ]
+ *   }
+ * }
+ * ```
+ *
+ * @example Extended response (with pricing data)
+ * ```json
+ * {
+ *   "walletAddress": "0x742d35Cc6466C7b9d5b52b8e5d8bD9D9F4B12345",
+ *   "balances": {
+ *     "1": [
+ *       {
+ *         "address": "0x0000000000000000000000000000000000000000",
+ *         "symbol": "ETH",
+ *         "decimals": 18,
+ *         "amount": 15965635006674968,
+ *         "name": "ETH",
+ *         "priceUSD": "3647.66",
+ *         "marketCapUSD": 22112274762505,
+ *         "volumeUSD24H": 67057337.09,
+ *         "fdvUSD": null,
+ *         "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+ *       }
  *     ]
  *   }
  * }
