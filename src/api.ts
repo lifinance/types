@@ -835,6 +835,7 @@ export type RelayRequest = SignedLiFiStep
 
 export type RelayResponseData = {
   taskId: string
+  txLink?: string
 }
 export type RelayResponse = RelayerResponse<RelayResponseData>
 
