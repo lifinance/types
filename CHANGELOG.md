@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.27.0](https://github.com/lifinance/types/compare/v17.26.0...v17.27.0) (2025-08-05)
+
+
+### Features
+
+* add dflow dex icon ([#398](https://github.com/lifinance/types/issues/398)) ([eef8131](https://github.com/lifinance/types/commit/eef813186f4786c823b7999b022eebccd1c68224))
+* **api:** add optional tx link to relay response ([#400](https://github.com/lifinance/types/issues/400)) ([592dfc1](https://github.com/lifinance/types/commit/592dfc1753e9bedb994b696ef131ce509d3e2e81))
+
 ## [17.26.0](https://github.com/lifinance/types/compare/v17.25.0...v17.26.0) (2025-07-24)
 
 
