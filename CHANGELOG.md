@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.28.0](https://github.com/lifinance/types/compare/v17.27.0...v17.28.0) (2025-08-06)
+
+
+### Features
+
+* **chains:** add Sophon ([#401](https://github.com/lifinance/types/issues/401)) ([09046c4](https://github.com/lifinance/types/commit/09046c4fc015de840b6ad885aa37ee27e31567d7))
+
 ## [17.27.0](https://github.com/lifinance/types/compare/v17.26.0...v17.27.0) (2025-08-05)
 
 
