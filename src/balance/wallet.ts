@@ -85,9 +85,7 @@ export interface WalletTokenExtended extends TokenExtended {
  */
 export interface GetWalletBalanceResponse {
   walletAddress: string
-  balances: {
-    [chainId: number]: WalletToken[]
-  }
+  balances: Record<number, WalletToken[]>
   offset?: string
   limit?: number
 }
