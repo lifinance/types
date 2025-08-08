@@ -105,4 +105,5 @@ export enum CoinKey {
   WPLU = 'WPLU', // Plume Wrapped Native
   WNIBI = 'WNIBI', // Nibiru Wrapped Native
   WSOPH = 'WSOPH', // Sophon Wrapped Native
+  WFRAX = 'WFRAX', // Fraxtal Wrapped Native
 }
