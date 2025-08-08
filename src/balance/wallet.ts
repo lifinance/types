@@ -1,4 +1,5 @@
 import type { StaticToken, TokenExtended } from '../tokens/token.js'
+import type { ChainId } from '../chains/base.js'
 
 /**
  * Parameters for getting wallet balance
@@ -11,7 +12,7 @@ export interface GetWalletBalanceParams {
  * Filter options for wallet balance requests
  */
 export interface GetWalletBalanceFilter {
-  chainIds?: (string | number)[]
+  chainIds?: ChainId[]
   offset?: string
   limit?: number
   extended?: boolean
@@ -20,7 +21,7 @@ export interface GetWalletBalanceFilter {
 /**
  * Basic wallet token following EIP structure
  */
-export interface WalletToken extends Omit<StaticToken, 'chainId'> {
+export interface WalletToken extends StaticToken {
   amount: number
 }
 
@@ -28,7 +29,7 @@ export interface WalletToken extends Omit<StaticToken, 'chainId'> {
  * Extended wallet token with pricing and metadata information
  * Reuses TokenExtended but adapts for wallet context
  */
-export interface WalletTokenExtended extends Omit<TokenExtended, 'chainId'> {
+export interface WalletTokenExtended extends TokenExtended {
   amount: number
 }
 
@@ -97,9 +98,7 @@ export interface GetWalletBalanceResponse {
  */
 export interface GetWalletBalanceExtendedResponse {
   walletAddress: string
-  balances: {
-    [chainId: number]: WalletTokenExtended[]
-  }
+  balances: Record<number, WalletTokenExtended[]>
   offset?: string
   limit?: number
 }
