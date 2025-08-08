@@ -15,7 +15,7 @@ import type {
   SignedLiFiStep,
   StepToolDetails,
 } from './step.js'
-import type { Token } from './tokens/index.js'
+import type { Token, TokenExtended } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -598,10 +598,15 @@ export type TokensRequest = {
   minPriceUSD?: number
   orderBy?: TokensSortOrder
   limit?: number
+  extended?: boolean
 }
 
 export type TokensResponse = {
   tokens: { [chainId: number]: Token[] }
+}
+
+export type TokensExtendedResponse = {
+  tokens: { [chainId: number]: TokenExtended[] }
 }
 
 export type RequestOptions = {
