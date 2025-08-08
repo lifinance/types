@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.28.0](https://github.com/lifinance/types/compare/v17.27.0...v17.28.0) (2025-08-06)
+
+
+### Features
+
+* **chains:** add Sophon ([#401](https://github.com/lifinance/types/issues/401)) ([09046c4](https://github.com/lifinance/types/commit/09046c4fc015de840b6ad885aa37ee27e31567d7))
+
+## [17.27.0](https://github.com/lifinance/types/compare/v17.26.0...v17.27.0) (2025-08-05)
+
+
+### Features
+
+* add dflow dex icon ([#398](https://github.com/lifinance/types/issues/398)) ([eef8131](https://github.com/lifinance/types/commit/eef813186f4786c823b7999b022eebccd1c68224))
+* **api:** add optional tx link to relay response ([#400](https://github.com/lifinance/types/issues/400)) ([592dfc1](https://github.com/lifinance/types/commit/592dfc1753e9bedb994b696ef131ce509d3e2e81))
+
+## [17.26.0](https://github.com/lifinance/types/compare/v17.25.0...v17.26.0) (2025-07-24)
+
+
+### Features
+
+* **CoinKey:** add Noble issued USDC (USDCn) ([#394](https://github.com/lifinance/types/issues/394)) ([e338bd9](https://github.com/lifinance/types/commit/e338bd91bf0cb1d3d8f032c45348360a09d939a5))
+
+## [17.25.0](https://github.com/lifinance/types/compare/v17.24.0...v17.25.0) (2025-07-24)
+
+
+### Features
+
+* add hyperliquid ([#389](https://github.com/lifinance/types/issues/389)) ([350db96](https://github.com/lifinance/types/commit/350db960f830aae0e59d68144785deaafa7878df))
+
+## [17.24.0](https://github.com/lifinance/types/compare/v17.23.0...v17.24.0) (2025-07-23)
+
+
+### Features
+
+* add USDT0 stablecoin ([#392](https://github.com/lifinance/types/issues/392)) ([54aaa0b](https://github.com/lifinance/types/commit/54aaa0b39793b9d07db2fc58fbef219aad150150))
+
 ## [17.23.0](https://github.com/lifinance/types/compare/v17.22.0...v17.23.0) (2025-07-21)
 
 
