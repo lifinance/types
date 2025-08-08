@@ -15,7 +15,7 @@ import type {
   SignedLiFiStep,
   StepToolDetails,
 } from './step.js'
-import type { Token } from './tokens/index.js'
+import type { Token, TokenExtended } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -588,14 +588,29 @@ export interface ToolsRequest {
   chains?: (ChainKey | ChainId)[]
 }
 
+export const TokensSortOrders = [
+  'marketCapUSD',
+  'priceUSD',
+  'volumeUSD24H',
+  'fdvUSD',
+] as const
+export type TokensSortOrder = (typeof TokensSortOrders)[number]
+
 export type TokensRequest = {
   chains?: (ChainId | ChainKey)[]
   chainTypes?: ChainType[]
   minPriceUSD?: number
+  orderBy?: TokensSortOrder
+  limit?: number
+  extended?: boolean
 }
 
 export type TokensResponse = {
   tokens: { [chainId: number]: Token[] }
+}
+
+export type TokensExtendedResponse = {
+  tokens: { [chainId: number]: TokenExtended[] }
 }
 
 export type RequestOptions = {
@@ -830,6 +845,7 @@ export type RelayRequest = SignedLiFiStep
 
 export type RelayResponseData = {
   taskId: string
+  txLink?: string
 }
 export type RelayResponse = RelayerResponse<RelayResponseData>
 
