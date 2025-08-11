@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.29.0](https://github.com/lifinance/types/compare/v17.28.0...v17.29.0) (2025-08-08)
+
+
+### Features
+
+* add extended details flag to tokens endpoint ([#396](https://github.com/lifinance/types/issues/396)) ([bad8f1b](https://github.com/lifinance/types/commit/bad8f1bd17070e62d175729e03f1e8870995019d))
+* add tokens endpoint limit ([#391](https://github.com/lifinance/types/issues/391)) ([d17ea51](https://github.com/lifinance/types/commit/d17ea51a1c4379d6662c5f778ce30f5491e4e128))
+* add wallet balance endpoint request/response types ([#399](https://github.com/lifinance/types/issues/399)) ([ad92ec6](https://github.com/lifinance/types/commit/ad92ec645269048c3c59eee14c95a20aabdcf119))
+* ordering for /tokens endpoint after token service merged ([#390](https://github.com/lifinance/types/issues/390)) ([f14848c](https://github.com/lifinance/types/commit/f14848caa6422737e4d18ac63bc237782f7fcef3))
+
+## [17.28.0](https://github.com/lifinance/types/compare/v17.27.0...v17.28.0) (2025-08-06)
+
+
+### Features
+
+* **chains:** add Sophon ([#401](https://github.com/lifinance/types/issues/401)) ([09046c4](https://github.com/lifinance/types/commit/09046c4fc015de840b6ad885aa37ee27e31567d7))
+
 ## [17.27.0](https://github.com/lifinance/types/compare/v17.26.0...v17.27.0) (2025-08-05)
 
 

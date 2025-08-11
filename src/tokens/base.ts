@@ -40,6 +40,7 @@ export enum CoinKey {
   RON = 'RON', // Ronin native
   PLU = 'PLU', // Plume native
   NIBI = 'NIBI', // Nibiru native
+  SOPH = 'SOPH', // Sophon native
 
   // Solana
   SOL = 'SOL',
@@ -103,4 +104,6 @@ export enum CoinKey {
   WRON = 'WRON', // Ronin Wrapped Native
   WPLU = 'WPLU', // Plume Wrapped Native
   WNIBI = 'WNIBI', // Nibiru Wrapped Native
+  WSOPH = 'WSOPH', // Sophon Wrapped Native
+  WFRAX = 'WFRAX', // Fraxtal Wrapped Native
 }
