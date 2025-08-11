@@ -1,4 +1,9 @@
-import type { TypedData, TransactionRequest, SignedTypedData } from './api.js'
+import type {
+  TypedData,
+  TransactionRequest,
+  SignedTypedData,
+  ExecutionType,
+} from './api.js'
 import type { Token } from './tokens/index.js'
 
 export interface FeeCost {
@@ -44,6 +49,8 @@ export interface Estimate {
   toAmountMin: string
   toAmountUSD?: string
   approvalAddress: string
+  permit2Address?: string
+  permit2ProxyAddress?: string
   feeCosts?: FeeCost[]
   // This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not used at the moment
   gasCosts?: GasCost[]
@@ -93,6 +100,7 @@ export interface StepBase {
   referrer?: string
   action: Action
   estimate?: Estimate
+  executionType?: ExecutionType
   transactionRequest?: TransactionRequest
   /**
    * EIP-712 Typed Data
