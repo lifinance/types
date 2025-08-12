@@ -126,7 +126,8 @@ export interface RouteOptions {
   exchanges?: AllowDenyPrefer
   timing?: Timing
   /**
-   * (default: 'transaction') Whether to include routes that require a transaction or a message, or both
+   * Whether to include routes that require a transaction or a message, or both
+   * @default 'transaction'
    */
   executionType?: ExecutionType
 
