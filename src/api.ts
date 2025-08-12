@@ -125,12 +125,20 @@ export interface RouteOptions {
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
   timing?: Timing
+  /**
+   * Whether to include routes that require a transaction or a message, or both
+   * @default 'transaction'
+   */
+  executionType?: ExecutionType
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
    */
   insurance?: boolean // Whether the user wants to insure their tx
 }
+
+export const ExecutionTypes = ['transaction', 'message', 'all'] as const
+export type ExecutionType = (typeof ExecutionTypes)[number]
 
 export type ToolsResponse = {
   exchanges: {
