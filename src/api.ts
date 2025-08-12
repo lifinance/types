@@ -125,7 +125,10 @@ export interface RouteOptions {
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
   timing?: Timing
-  executionType?: ExecutionType // (default: 'transaction') Whether to include routes that require a transaction or a message, or both
+  /**
+   * (default: 'transaction') Whether to include routes that require a transaction or a message, or both
+   */
+  executionType?: ExecutionType
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
