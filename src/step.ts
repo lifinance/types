@@ -52,14 +52,15 @@ export interface Estimate {
 }
 
 // STEP
-export const _StepType = [
-  'lifi',
-  'swap',
-  'cross',
-  'protocol',
-  'custom',
-] as const
-export type StepType = (typeof _StepType)[number]
+export const enum StepType {
+  LIFI = 'lifi',
+  SWAP = 'swap',
+  CROSS = 'cross',
+  PROTOCOL = 'protocol',
+  CUSTOM = 'custom',
+  TOKEN_APPROVAL_RESET = 'approvalReset',
+}
+
 export type StepTool = string
 export type StepToolDetails = {
   key: string
@@ -111,33 +112,44 @@ export interface DestinationCallInfo {
 export type CallAction = Action & DestinationCallInfo
 
 export interface SwapStep extends StepBase {
-  type: 'swap'
+  type: StepType.SWAP
   action: Action
   estimate: Estimate
 }
 
 export interface CrossStep extends StepBase {
-  type: 'cross'
+  type: StepType.CROSS
   action: Action
   estimate: Estimate
 }
 
 export interface ProtocolStep extends StepBase {
-  type: 'protocol'
+  type: StepType.PROTOCOL
   action: Action
   estimate: Estimate
 }
 
 export interface CustomStep extends StepBase {
-  type: 'custom'
+  type: StepType.CUSTOM
   action: CallAction
   estimate: Estimate
 }
 
-export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
+export interface TokenApprovalResetStep extends StepBase {
+  type: StepType.TOKEN_APPROVAL_RESET
+  action: Action
+  estimate: Estimate
+}
+
+export type Step =
+  | SwapStep
+  | CrossStep
+  | CustomStep
+  | ProtocolStep
+  | TokenApprovalResetStep
 
 export interface LiFiStep extends Omit<Step, 'type'> {
-  type: 'lifi'
+  type: StepType.LIFI
   includedSteps: Step[]
 }
 
@@ -146,17 +158,23 @@ export interface SignedLiFiStep extends LiFiStep {
 }
 
 export function isSwapStep(step: Step): step is SwapStep {
-  return step.type === 'swap'
+  return step.type === StepType.SWAP
 }
 
 export function isCrossStep(step: Step): step is CrossStep {
-  return step.type === 'cross'
+  return step.type === StepType.CROSS
 }
 
 export function isProtocolStep(step: Step): step is ProtocolStep {
-  return step.type === 'protocol'
+  return step.type === StepType.PROTOCOL
 }
 
 export function isCustomStep(step: Step): step is CustomStep {
-  return step.type === 'custom'
+  return step.type === StepType.CUSTOM
+}
+
+export function isTokenApprovalResetStep(
+  step: Step
+): step is TokenApprovalResetStep {
+  return step.type === StepType.TOKEN_APPROVAL_RESET
 }
