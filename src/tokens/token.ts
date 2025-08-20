@@ -29,6 +29,8 @@ export interface TokenAmount extends Token {
   blockNumber?: bigint
 }
 
+export interface TokenAmountExtended extends TokenExtended, TokenAmount {}
+
 export interface Coin {
   key: CoinKey
   name: string
