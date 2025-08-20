@@ -54,7 +54,7 @@ export interface Estimate {
 }
 
 // STEP
-export const enum StepType {
+export enum StepType {
   LIFI = 'lifi',
   SWAP = 'swap',
   CROSS = 'cross',
