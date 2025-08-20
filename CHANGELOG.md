@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.30.0](https://github.com/lifinance/types/compare/v17.29.0...v17.30.0) (2025-08-20)
+
+
+### Features
+
+* add wfrax coinkey ([#402](https://github.com/lifinance/types/issues/402)) ([a4a9d0a](https://github.com/lifinance/types/commit/a4a9d0ad3470e38bd21cae7c3af38238353f99f6))
+
 ## [17.29.0](https://github.com/lifinance/types/compare/v17.28.0...v17.29.0) (2025-08-08)
 
 
