@@ -79,6 +79,9 @@ export enum ChainKey {
   BCH = 'bch',
   LTC = 'ltc',
   DGE = 'dge',
+
+  // Tron
+  TRN = 'trn',
 }
 
 export enum ChainId {
@@ -161,4 +164,7 @@ export enum ChainId {
   BCH = 20000000000002,
   LTC = 20000000000003,
   DGE = 20000000000004,
+
+  // Tron
+  TRN = 728126428,
 }
