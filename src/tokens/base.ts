@@ -39,6 +39,8 @@ export enum CoinKey {
   VAN = 'VAN', // Vana native
   RON = 'RON', // Ronin native
   PLU = 'PLU', // Plume native
+  NIBI = 'NIBI', // Nibiru native
+  SOPH = 'SOPH', // Sophon native
 
   // Solana
   SOL = 'SOL',
@@ -58,6 +60,8 @@ export enum CoinKey {
   USDC = 'USDC',
   BUSD = 'BUSD',
   USDCe = 'USDCe',
+  USDCn = 'USDCn',
+  USDe = 'USDe',
   USDB = 'USDB', // Blast native stablecoin
   FRAX = 'FRAX', // Fraxtal stablecoin
   AXLUSDC = 'axlUSDC', // Axelar Wrapped USDC
@@ -66,6 +70,7 @@ export enum CoinKey {
   BYUSD = 'BYUSD', // Stablecoin on Berachain
   APEUSD = 'APEUSD', // Stablecoin on ApeChain
   FEUSD = 'FEUSD', // Stablecoin on HyperEVM
+  USDT0 = 'USDT0', // Bridged USDT offered by LayerZero
 
   // Other tokens
   WBTC = 'WBTC',
@@ -98,4 +103,7 @@ export enum CoinKey {
   WVAN = 'WVAN', // Vana Wrapped Native
   WRON = 'WRON', // Ronin Wrapped Native
   WPLU = 'WPLU', // Plume Wrapped Native
+  WNIBI = 'WNIBI', // Nibiru Wrapped Native
+  WSOPH = 'WSOPH', // Sophon Wrapped Native
+  WFRAX = 'WFRAX', // Fraxtal Wrapped Native
 }

@@ -2,6 +2,93 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.30.0](https://github.com/lifinance/types/compare/v17.29.0...v17.30.0) (2025-08-20)
+
+
+### Features
+
+* add wfrax coinkey ([#402](https://github.com/lifinance/types/issues/402)) ([a4a9d0a](https://github.com/lifinance/types/commit/a4a9d0ad3470e38bd21cae7c3af38238353f99f6))
+
+## [17.29.0](https://github.com/lifinance/types/compare/v17.28.0...v17.29.0) (2025-08-08)
+
+
+### Features
+
+* add extended details flag to tokens endpoint ([#396](https://github.com/lifinance/types/issues/396)) ([bad8f1b](https://github.com/lifinance/types/commit/bad8f1bd17070e62d175729e03f1e8870995019d))
+* add tokens endpoint limit ([#391](https://github.com/lifinance/types/issues/391)) ([d17ea51](https://github.com/lifinance/types/commit/d17ea51a1c4379d6662c5f778ce30f5491e4e128))
+* add wallet balance endpoint request/response types ([#399](https://github.com/lifinance/types/issues/399)) ([ad92ec6](https://github.com/lifinance/types/commit/ad92ec645269048c3c59eee14c95a20aabdcf119))
+* ordering for /tokens endpoint after token service merged ([#390](https://github.com/lifinance/types/issues/390)) ([f14848c](https://github.com/lifinance/types/commit/f14848caa6422737e4d18ac63bc237782f7fcef3))
+
+## [17.28.0](https://github.com/lifinance/types/compare/v17.27.0...v17.28.0) (2025-08-06)
+
+
+### Features
+
+* **chains:** add Sophon ([#401](https://github.com/lifinance/types/issues/401)) ([09046c4](https://github.com/lifinance/types/commit/09046c4fc015de840b6ad885aa37ee27e31567d7))
+
+## [17.27.0](https://github.com/lifinance/types/compare/v17.26.0...v17.27.0) (2025-08-05)
+
+
+### Features
+
+* add dflow dex icon ([#398](https://github.com/lifinance/types/issues/398)) ([eef8131](https://github.com/lifinance/types/commit/eef813186f4786c823b7999b022eebccd1c68224))
+* **api:** add optional tx link to relay response ([#400](https://github.com/lifinance/types/issues/400)) ([592dfc1](https://github.com/lifinance/types/commit/592dfc1753e9bedb994b696ef131ce509d3e2e81))
+
+## [17.26.0](https://github.com/lifinance/types/compare/v17.25.0...v17.26.0) (2025-07-24)
+
+
+### Features
+
+* **CoinKey:** add Noble issued USDC (USDCn) ([#394](https://github.com/lifinance/types/issues/394)) ([e338bd9](https://github.com/lifinance/types/commit/e338bd91bf0cb1d3d8f032c45348360a09d939a5))
+
+## [17.25.0](https://github.com/lifinance/types/compare/v17.24.0...v17.25.0) (2025-07-24)
+
+
+### Features
+
+* add hyperliquid ([#389](https://github.com/lifinance/types/issues/389)) ([350db96](https://github.com/lifinance/types/commit/350db960f830aae0e59d68144785deaafa7878df))
+
+## [17.24.0](https://github.com/lifinance/types/compare/v17.23.0...v17.24.0) (2025-07-23)
+
+
+### Features
+
+* add USDT0 stablecoin ([#392](https://github.com/lifinance/types/issues/392)) ([54aaa0b](https://github.com/lifinance/types/commit/54aaa0b39793b9d07db2fc58fbef219aad150150))
+
+## [17.23.0](https://github.com/lifinance/types/compare/v17.22.0...v17.23.0) (2025-07-21)
+
+
+### Features
+
+* add market cap and volume to token ([#345](https://github.com/lifinance/types/issues/345)) ([b138ee9](https://github.com/lifinance/types/commit/b138ee9198a905e17f3113b3dea8cf6462e2806d))
+
+## [17.22.0](https://github.com/lifinance/types/compare/v17.21.0...v17.22.0) (2025-07-09)
+
+
+### Features
+
+* add hyperbloom icon ([#384](https://github.com/lifinance/types/issues/384)) ([c0cec00](https://github.com/lifinance/types/commit/c0cec00eb767d23a909c97ad35f0e3d920e6907c))
+
+
+### Bug Fixes
+
+* adjust relayer types to have signed typed data field ([#374](https://github.com/lifinance/types/issues/374)) ([50e3cfe](https://github.com/lifinance/types/commit/50e3cfedcf9447985f93a59cd37a3cb661c33d08))
+
+## [17.21.0](https://github.com/lifinance/types/compare/v17.19.1...v17.21.0) (2025-07-09)
+
+
+### Features
+
+* add Nibiru chain ([#383](https://github.com/lifinance/types/issues/383)) ([bd371f7](https://github.com/lifinance/types/commit/bd371f7e4a8d0ac3721192cba02056314a515e86))
+* add USDe token symbol ([#382](https://github.com/lifinance/types/issues/382)) ([81e8ce5](https://github.com/lifinance/types/commit/81e8ce59611c4757272a54713c2b242c61848138))
+
+## [17.20.0](https://github.com/lifinance/types/compare/v17.19.1...v17.20.0) (2025-07-09)
+
+
+### Features
+
+* add USDe token symbol ([15fa548](https://github.com/lifinance/types/commit/15fa5488b9638f12e49d8e2a4856dde45e0b54ef))
+
 ### [17.19.1](https://github.com/lifinance/types/compare/v17.19.0...v17.19.1) (2025-07-01)
 
 ## [17.19.0](https://github.com/lifinance/types/compare/v17.18.0...v17.19.0) (2025-06-30)

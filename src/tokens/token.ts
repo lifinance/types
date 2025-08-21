@@ -18,10 +18,18 @@ export interface Token extends StaticToken {
   priceUSD: string
 }
 
+export interface TokenExtended extends Token {
+  marketCapUSD?: number | null
+  volumeUSD24H?: number | null
+  fdvUSD?: number | null
+}
+
 export interface TokenAmount extends Token {
   amount?: bigint
   blockNumber?: bigint
 }
+
+export interface TokenAmountExtended extends TokenExtended, TokenAmount {}
 
 export interface Coin {
   key: CoinKey

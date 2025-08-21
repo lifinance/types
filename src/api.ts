@@ -8,8 +8,14 @@ import type {
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
-import type { Action, FeeCost, LiFiStep, StepToolDetails } from './step.js'
-import type { Token } from './tokens/index.js'
+import type {
+  Action,
+  FeeCost,
+  LiFiStep,
+  SignedLiFiStep,
+  StepToolDetails,
+} from './step.js'
+import type { Token, TokenExtended } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -578,15 +584,30 @@ export interface ToolsRequest {
   chains?: (ChainKey | ChainId)[]
 }
 
+export const TokensSortOrders = [
+  'marketCapUSD',
+  'priceUSD',
+  'volumeUSD24H',
+  'fdvUSD',
+] as const
+export type TokensSortOrder = (typeof TokensSortOrders)[number]
+
 export type TokensRequest = {
   chains?: (ChainId | ChainKey)[]
   chainTypes?: ChainType[]
   minPriceUSD?: number
   search?: string
+  orderBy?: TokensSortOrder
+  limit?: number
+  extended?: boolean
 }
 
 export type TokensResponse = {
   tokens: { [chainId: number]: Token[] }
+}
+
+export type TokensExtendedResponse = {
+  tokens: { [chainId: number]: TokenExtended[] }
 }
 
 export type RequestOptions = {
@@ -783,6 +804,7 @@ export type TypedDataPrimaryType =
   | 'PermitWitnessTransferFrom'
   | 'PermitBatchWitnessTransferFrom'
   | 'Order'
+  | 'HyperliquidTransaction:Withdraw'
 
 /**
  * EIP-712 Typed Data
@@ -816,10 +838,11 @@ export type RelayerResponse<T> =
 
 export type RelayerQuoteResponse = RelayerResponse<LiFiStep>
 
-export type RelayRequest = LiFiStep
+export type RelayRequest = SignedLiFiStep
 
 export type RelayResponseData = {
   taskId: string
+  txLink?: string
 }
 export type RelayResponse = RelayerResponse<RelayResponseData>
 

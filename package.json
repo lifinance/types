@@ -1,6 +1,6 @@
 {
   "name": "@lifi/types",
-  "version": "17.20.0-alpha.1",
+  "version": "17.30.0",
   "description": "Types for the LI.FI stack",
   "keywords": [
     "sdk",
@@ -76,26 +76,26 @@
     ]
   },
   "dependencies": {
-    "viem": "^2.31.6"
+    "viem": "^2.33.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@types/fs-extra": "^11.0.4",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.5",
+    "eslint-plugin-prettier": "^5.5.3",
     "fs-extra": "^11.2.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^16.1.4",
     "pinst": "^3.0.0",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "standard-version": "^9.5.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184",
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
   "publishConfig": {
     "access": "public"
   },
