@@ -38,7 +38,7 @@ export enum CoinKey {
   FLR = 'FLR', // Flare native
   VAN = 'VAN', // Vana native
   RON = 'RON', // Ronin native
-  PLU = 'PLU', // Plume native
+  PLU = 'PLUME', // Plume native
   NIBI = 'NIBI', // Nibiru native
   SOPH = 'SOPH', // Sophon native
 
@@ -102,7 +102,7 @@ export enum CoinKey {
   WFLR = 'WFLR', // Flare Wrapped Native
   WVAN = 'WVAN', // Vana Wrapped Native
   WRON = 'WRON', // Ronin Wrapped Native
-  WPLU = 'WPLU', // Plume Wrapped Native
+  WPLU = 'WPLUME', // Plume Wrapped Native
   WNIBI = 'WNIBI', // Nibiru Wrapped Native
   WSOPH = 'WSOPH', // Sophon Wrapped Native
   WFRAX = 'WFRAX', // Fraxtal Wrapped Native
