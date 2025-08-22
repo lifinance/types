@@ -54,13 +54,14 @@ export interface Estimate {
 }
 
 // STEP
-export enum StepType {
-  LIFI = 'lifi',
-  SWAP = 'swap',
-  CROSS = 'cross',
-  PROTOCOL = 'protocol',
-  CUSTOM = 'custom',
-}
+export const _StepType = [
+  'lifi',
+  'swap',
+  'cross',
+  'protocol',
+  'custom',
+] as const
+export type StepType = (typeof _StepType)[number]
 
 export type StepTool = string
 export type StepToolDetails = {
@@ -113,25 +114,25 @@ export interface DestinationCallInfo {
 export type CallAction = Action & DestinationCallInfo
 
 export interface SwapStep extends StepBase {
-  type: StepType.SWAP
+  type: 'swap'
   action: Action
   estimate: Estimate
 }
 
 export interface CrossStep extends StepBase {
-  type: StepType.CROSS
+  type: 'cross'
   action: Action
   estimate: Estimate
 }
 
 export interface ProtocolStep extends StepBase {
-  type: StepType.PROTOCOL
+  type: 'protocol'
   action: Action
   estimate: Estimate
 }
 
 export interface CustomStep extends StepBase {
-  type: StepType.CUSTOM
+  type: 'custom'
   action: CallAction
   estimate: Estimate
 }
@@ -139,7 +140,7 @@ export interface CustomStep extends StepBase {
 export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
 
 export interface LiFiStep extends Omit<Step, 'type'> {
-  type: StepType.LIFI
+  type: 'lifi'
   includedSteps: Step[]
 }
 
@@ -148,17 +149,17 @@ export interface SignedLiFiStep extends LiFiStep {
 }
 
 export function isSwapStep(step: Step): step is SwapStep {
-  return step.type === StepType.SWAP
+  return step.type === 'swap'
 }
 
 export function isCrossStep(step: Step): step is CrossStep {
-  return step.type === StepType.CROSS
+  return step.type === 'cross'
 }
 
 export function isProtocolStep(step: Step): step is ProtocolStep {
-  return step.type === StepType.PROTOCOL
+  return step.type === 'protocol'
 }
 
 export function isCustomStep(step: Step): step is CustomStep {
-  return step.type === StepType.CUSTOM
+  return step.type === 'custom'
 }
