@@ -22,7 +22,7 @@ export interface GetWalletBalanceFilter {
  * Basic wallet token following EIP structure
  */
 export interface WalletToken extends StaticToken {
-  amount: number
+  amount: string
 }
 
 /**
@@ -30,7 +30,7 @@ export interface WalletToken extends StaticToken {
  * Reuses TokenExtended but adapts for wallet context
  */
 export interface WalletTokenExtended extends TokenExtended {
-  amount: number
+  amount: string
 }
 
 /**
@@ -47,13 +47,13 @@ export interface WalletTokenExtended extends TokenExtended {
  *         "address": "0x4200000000000000000000000000000000000006",
  *         "symbol": "WETH",
  *         "decimals": 18,
- *         "amount": 100000000000000
+ *         "amount": "100000000000000"
  *       },
  *       {
  *         "address": "0x0000000000000000000000000000000000000000",
  *         "symbol": "ETH",
  *         "decimals": 18,
- *         "amount": 15965635006674968
+ *         "amount": "15965635006674968"
  *       }
  *     ]
  *   }
@@ -70,7 +70,7 @@ export interface WalletTokenExtended extends TokenExtended {
  *         "address": "0x0000000000000000000000000000000000000000",
  *         "symbol": "ETH",
  *         "decimals": 18,
- *         "amount": 15965635006674968,
+ *         "amount": "15965635006674968",
  *         "name": "ETH",
  *         "priceUSD": "3647.66",
  *         "marketCapUSD": 22112274762505,
