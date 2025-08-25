@@ -607,6 +607,7 @@ export type TokensRequest = {
   orderBy?: TokensSortOrder
   limit?: number
   extended?: boolean
+  search?: string
 }
 
 export type TokensResponse = {
