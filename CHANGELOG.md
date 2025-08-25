@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.32.0](https://github.com/lifinance/types/compare/v17.31.0...v17.32.0) (2025-08-22)
+
+
+### Features
+
+* make wallet balance amount as string ([#409](https://github.com/lifinance/types/issues/409)) ([3c8b191](https://github.com/lifinance/types/commit/3c8b191bc24e0458399838bb08610655e634a7ae))
+
+## [17.31.0](https://github.com/lifinance/types/compare/v17.30.0...v17.31.0) (2025-08-22)
+
+
+### Features
+
+* add TokenAmountExtended type ([#408](https://github.com/lifinance/types/issues/408)) ([df4711f](https://github.com/lifinance/types/commit/df4711f836e8d5fadf66307cd5baf0b2717b5183))
+* update Plume token symbol ([#411](https://github.com/lifinance/types/issues/411)) ([caf56b4](https://github.com/lifinance/types/commit/caf56b480263fe2ff6471ef8924a8af00f6d3f43))
+
 ## [17.30.0](https://github.com/lifinance/types/compare/v17.29.0...v17.30.0) (2025-08-20)
 
 
