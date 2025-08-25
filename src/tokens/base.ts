@@ -55,6 +55,10 @@ export enum CoinKey {
   LTC = 'LTC',
   DOGE = 'DOGE',
 
+  // Tron
+  TRX = 'TRX',
+  WTRX = 'WTRX',
+
   // Stable coins
   USDT = 'USDT',
   USDC = 'USDC',
