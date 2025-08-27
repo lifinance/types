@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.33.0](https://github.com/lifinance/types/compare/v17.32.0...v17.33.0) (2025-08-27)
+
+
+### Features
+
+* add optional search attribute for Token request ([#416](https://github.com/lifinance/types/issues/416)) ([51ee85f](https://github.com/lifinance/types/commit/51ee85f6337284c0056f36777f9dfb66cda02255))
+* new flagging in `step.estimate` of legacy token requiring approval reset ([#407](https://github.com/lifinance/types/issues/407)) ([c1dc10c](https://github.com/lifinance/types/commit/c1dc10c0ea096f1f88b371696c4048fd58f05e97))
+
 ## [17.32.0](https://github.com/lifinance/types/compare/v17.31.0...v17.32.0) (2025-08-22)
 
 
