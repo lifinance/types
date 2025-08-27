@@ -49,8 +49,6 @@ export interface Estimate {
   gasCosts?: GasCost[]
   /** Estimated duration in seconds */
   executionDuration: number
-  /** Flag the potential need for the source token approval reset */
-  approvalReset?: boolean
 }
 
 // STEP
