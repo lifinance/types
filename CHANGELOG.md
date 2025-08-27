@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.34.0](https://github.com/lifinance/types/compare/v17.33.0...v17.34.0) (2025-08-27)
+
+
+### Features
+
+* remove approvalReset from internal estimate ([#419](https://github.com/lifinance/types/issues/419)) ([1eff890](https://github.com/lifinance/types/commit/1eff89058c2015a709505d60b1dc229eab08e489))
+
 ## [17.33.0](https://github.com/lifinance/types/compare/v17.32.0...v17.33.0) (2025-08-27)
 
 

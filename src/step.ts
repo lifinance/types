@@ -49,8 +49,6 @@ export interface Estimate {
   gasCosts?: GasCost[]
   /** Estimated duration in seconds */
   executionDuration: number
-  /** Flag the potential need for the source token approval reset */
-  approvalReset?: boolean
 }
 
 // STEP
@@ -62,7 +60,6 @@ export const _StepType = [
   'custom',
 ] as const
 export type StepType = (typeof _StepType)[number]
-
 export type StepTool = string
 export type StepToolDetails = {
   key: string
