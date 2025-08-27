@@ -49,6 +49,8 @@ export interface Estimate {
   gasCosts?: GasCost[]
   /** Estimated duration in seconds */
   executionDuration: number
+  /** Optional flagging of approval reset requirement for legacy ERC-20 tokens */
+  approvalReset?: boolean
 }
 
 // STEP
