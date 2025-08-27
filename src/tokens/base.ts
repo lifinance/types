@@ -22,7 +22,7 @@ export enum CoinKey {
   SEI = 'SEI',
   G = 'G',
   IMX = 'IMX',
-  KLAY = 'KLAY',
+  KAIA = 'KAIA',
   OKB = 'OKB',
   WLD = 'WLD', // World Coin Token
   LSK = 'LSK', // Lisk Token
@@ -88,7 +88,7 @@ export enum CoinKey {
   WG = 'WG', // Wrapped G Token on Gravity chain
   WIMX = 'WIMX', // Wrapped IMX Token
   WPOL = 'WPOL', // Wrapped POL Token
-  WKLAY = 'WKLAY', // Wrapped KLAY Token
+  WKAIA = 'WKAIA', // Wrapped KAIA Token
   WOKB = 'WOKB', // Wrapped OKB Token
   WBNB = 'WBNB', // Wrapped BNB Token
   WCRO = 'WCRO', // Wrapped CRO Token
