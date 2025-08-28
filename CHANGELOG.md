@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.35.0](https://github.com/lifinance/types/compare/v17.34.0...v17.35.0) (2025-08-28)
+
+
+### Features
+
+* update klay token to kaia ([#422](https://github.com/lifinance/types/issues/422)) ([3f5873e](https://github.com/lifinance/types/commit/3f5873e764dba1c493bf1b85a0d6a5882185ca83))
+
 ## [17.34.0](https://github.com/lifinance/types/compare/v17.33.0...v17.34.0) (2025-08-27)
 
 
