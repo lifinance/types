@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.36.0](https://github.com/lifinance/types/compare/v17.35.0...v17.36.0) (2025-08-29)
+
+
+### Features
+
+* add tron types ([#410](https://github.com/lifinance/types/issues/410)) ([4cdd124](https://github.com/lifinance/types/commit/4cdd124c3fd54cc9892a353f8239e80460ff680a))
+* remove stellaswap icon ([#423](https://github.com/lifinance/types/issues/423)) ([f09666d](https://github.com/lifinance/types/commit/f09666d888bf4ea37e90424f25898de26d06e384))
+
 ## [17.35.0](https://github.com/lifinance/types/compare/v17.34.0...v17.35.0) (2025-08-28)
 
 
