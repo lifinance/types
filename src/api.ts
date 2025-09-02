@@ -813,6 +813,7 @@ export type TypedDataPrimaryType =
   | 'PermitBatchWitnessTransferFrom'
   | 'Order'
   | 'HyperliquidTransaction:Withdraw'
+  | 'HyperliquidTransaction:UsdSend'
 
 /**
  * EIP-712 Typed Data
