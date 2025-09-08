@@ -425,12 +425,11 @@ export interface ConnectionsResponse {
   connections: Connection[]
 }
 
-export interface GetStatusRequest {
-  txHash: string
+export type GetStatusRequest = {
   bridge?: string
   fromChain?: number | string
   toChain?: number | string
-}
+} & ({ txHash: string } | { taskId: string })
 
 export interface BaseTransactionInfo {
   txHash: string
