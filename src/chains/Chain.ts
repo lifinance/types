@@ -9,6 +9,8 @@ export enum ChainType {
   MVM = 'MVM',
   // Unspent transaction output (e.g. Bitcoin)
   UTXO = 'UTXO',
+  // Tron virtual machine
+  TVM = 'TVM',
 }
 
 export interface _Chain {
