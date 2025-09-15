@@ -41,6 +41,7 @@ export enum CoinKey {
   PLU = 'PLUME', // Plume native
   NIBI = 'NIBI', // Nibiru native
   SOPH = 'SOPH', // Sophon native
+  XPL = 'XPL', // Plasma native
 
   // Solana
   SOL = 'SOL',
@@ -110,4 +111,5 @@ export enum CoinKey {
   WNIBI = 'WNIBI', // Nibiru Wrapped Native
   WSOPH = 'WSOPH', // Sophon Wrapped Native
   WFRAX = 'WFRAX', // Fraxtal Wrapped Native
+  WXPL = 'WXPL', // Plasma Wrapped Native
 }
