@@ -1,6 +1,10 @@
 import type { ChainId } from '../chains/base.js'
 import type { CoinKey } from './base.js'
 
+export enum TokenTags {
+  STABLE_COIN = 'stablecoin',
+}
+
 export interface BaseToken {
   chainId: ChainId
   address: string
@@ -12,6 +16,7 @@ export interface StaticToken extends BaseToken {
   name: string
   coinKey?: CoinKey
   logoURI?: string
+  tags?: TokenTags[]
 }
 
 export interface Token extends StaticToken {
