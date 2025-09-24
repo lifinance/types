@@ -814,6 +814,7 @@ export type TypedDataPrimaryType =
   | 'Order'
   | 'HyperliquidTransaction:Withdraw'
   | 'HyperliquidTransaction:UsdSend'
+  | 'HyperliquidTransaction:SpotSend'
 
 /**
  * EIP-712 Typed Data
