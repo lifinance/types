@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.38.0](https://github.com/lifinance/types/compare/v17.37.0...v17.38.0) (2025-09-25)
+
+
+### Features
+
+* add flow chains and tokens ([#433](https://github.com/lifinance/types/issues/433)) ([d9b8fc1](https://github.com/lifinance/types/commit/d9b8fc18d9035637d2f3f8ea4ccbc6307ff42600))
+
 ## [17.37.0](https://github.com/lifinance/types/compare/v17.36.0...v17.37.0) (2025-09-15)
 
 
