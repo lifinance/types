@@ -1,6 +1,6 @@
 {
   "name": "@lifi/types",
-  "version": "17.38.0",
+  "version": "17.39.0-alpha.0",
   "description": "Types for the LI.FI stack",
   "keywords": [
     "sdk",
