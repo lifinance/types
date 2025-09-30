@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.38.0](https://github.com/lifinance/types/compare/v17.37.0...v17.38.0) (2025-09-25)
+
+
+### Features
+
+* add flow chains and tokens ([#433](https://github.com/lifinance/types/issues/433)) ([d9b8fc1](https://github.com/lifinance/types/commit/d9b8fc18d9035637d2f3f8ea4ccbc6307ff42600))
+
+## [17.37.0](https://github.com/lifinance/types/compare/v17.36.0...v17.37.0) (2025-09-15)
+
+
+### Features
+
+* add eisen exchange icon ([#427](https://github.com/lifinance/types/issues/427)) ([3556d20](https://github.com/lifinance/types/commit/3556d20c278e68a670e0d790683fbd368d609a01))
+* add Hyperflow icon ([#425](https://github.com/lifinance/types/issues/425)) ([7ff69d4](https://github.com/lifinance/types/commit/7ff69d4b0e0810fb67e1dd24ebaecfb3d0710519))
+* add oogabooga icon ([#424](https://github.com/lifinance/types/issues/424)) ([767f62b](https://github.com/lifinance/types/commit/767f62b17c7519c599a1f0e01139f46e7b97d1ca))
+* add plasma chain and tokens ([#429](https://github.com/lifinance/types/issues/429)) ([bbf2067](https://github.com/lifinance/types/commit/bbf2067a35ab86b4b8fb590feffa6f3364e647bf))
+* add titan exchange logo ([#428](https://github.com/lifinance/types/issues/428)) ([5316e01](https://github.com/lifinance/types/commit/5316e011f3a5d0aed0c8d7e2c86763385cfa557a))
+
 ## [17.36.0](https://github.com/lifinance/types/compare/v17.35.0...v17.36.0) (2025-08-29)
 
 
