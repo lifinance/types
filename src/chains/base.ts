@@ -65,6 +65,8 @@ export enum ChainKey {
   NIB = 'nib',
   HPL = 'hpl',
   SOP = 'sop',
+  PLA = 'pla',
+  FLW = 'flw',
 
   // None-EVM
   SOL = 'sol',
@@ -150,6 +152,8 @@ export enum ChainId {
   NIB = 6900,
   HPL = 1337, // Hyperliquid's core (non-EVM) chain hard-codes 1337 in every EIP-712-signed message
   SOP = 50104,
+  PLA = 9745,
+  FLW = 747,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
