@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.40.0](https://github.com/lifinance/types/compare/v17.39.1...v17.40.0) (2025-10-02)
+
+
+### Features
+
+* add executionType types ([#405](https://github.com/lifinance/types/issues/405)) ([8a314e1](https://github.com/lifinance/types/commit/8a314e1233039633c6e76fe6c2507f463133dbe8))
+* add Perena logo ([#435](https://github.com/lifinance/types/issues/435)) ([c0ed0b5](https://github.com/lifinance/types/commit/c0ed0b5aa5c14bb7cf358ec1573cd9ed61b58e73))
+* add TokenTag enum and optional tags property to StaticToken ([#436](https://github.com/lifinance/types/issues/436)) ([01793e1](https://github.com/lifinance/types/commit/01793e1ab1dd100da87bc6161f64ad2f64756ce5))
+
 ### [17.39.1](https://github.com/lifinance/types/compare/v17.38.0...v17.39.1) (2025-09-30)
 
 ## [17.38.0](https://github.com/lifinance/types/compare/v17.37.0...v17.38.0) (2025-09-25)
