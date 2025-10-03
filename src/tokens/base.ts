@@ -61,6 +61,12 @@ export enum CoinKey {
   TRX = 'TRX',
   WTRX = 'WTRX',
 
+  // Tether Gold
+  XAUt = 'XAUt',
+
+  // Hemi chain token
+  HEMI = 'HEMI',
+
   // Stable coins
   USDT = 'USDT',
   USDC = 'USDC',
