@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.41.0](https://github.com/lifinance/types/compare/v17.40.0...v17.41.0) (2025-10-06)
+
+
+### Features
+
+* add hemi chain and tokens ([#437](https://github.com/lifinance/types/issues/437)) ([9b0609a](https://github.com/lifinance/types/commit/9b0609a4b4d6c5d0fab9df348f06be5025279623))
+* Add new bridge Eco icon ([#438](https://github.com/lifinance/types/issues/438)) ([5d78485](https://github.com/lifinance/types/commit/5d784858c73c314c1e32fd90ef27f87cba871084))
+
 ## [17.40.0](https://github.com/lifinance/types/compare/v17.39.1...v17.40.0) (2025-10-02)
 
 
