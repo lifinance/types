@@ -43,6 +43,7 @@ export enum CoinKey {
   SOPH = 'SOPH', // Sophon native
   XPL = 'XPL', // Plasma native
   FLOW = 'FLOW', // Flow native
+  MON = 'MON', // Monad native
 
   // Solana
   SOL = 'SOL',
@@ -121,4 +122,5 @@ export enum CoinKey {
   WFRAX = 'WFRAX', // Fraxtal Wrapped Native
   WXPL = 'WXPL', // Plasma Wrapped Native
   WFLOW = 'WFLOW', // Flow Wrapped Native
+  WMON = 'WMON', // Monad Wrapped Native
 }
