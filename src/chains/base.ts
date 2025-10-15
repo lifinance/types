@@ -68,6 +68,7 @@ export enum ChainKey {
   PLA = 'pla',
   FLW = 'flw',
   HMI = 'hmi',
+  MON = 'mon',
 
   // None-EVM
   SOL = 'sol',
@@ -156,6 +157,7 @@ export enum ChainId {
   PLA = 9745,
   FLW = 747,
   HMI = 43111,
+  MON = 143,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
