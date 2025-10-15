@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.43.0](https://github.com/lifinance/types/compare/v17.42.0...v17.43.0) (2025-10-15)
+
+
+### Features
+
+* add GlueX icon ([#441](https://github.com/lifinance/types/issues/441)) ([ce615f1](https://github.com/lifinance/types/commit/ce615f10a804c035edc02fb1a92dca1af21636a2))
+* add Monad chain ([#442](https://github.com/lifinance/types/issues/442)) ([6d02553](https://github.com/lifinance/types/commit/6d025535b4875459759ab36356c036bde97c6d90))
+
 ## [17.42.0](https://github.com/lifinance/types/compare/v17.42.0-beta.0...v17.42.0) (2025-10-13)
 
 ## [17.41.0](https://github.com/lifinance/types/compare/v17.40.0...v17.41.0) (2025-10-06)
