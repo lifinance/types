@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [17.44.0](https://github.com/lifinance/types/compare/v17.43.0...v17.44.0) (2025-10-16)
+
+
+### Bug Fixes
+
+* add transactionId to StepBase ([#444](https://github.com/lifinance/types/issues/444)) ([ee4e15f](https://github.com/lifinance/types/commit/ee4e15f1078c77699a96a50dc5d37a10468e4d39))
+
 ## [17.43.0](https://github.com/lifinance/types/compare/v17.42.0...v17.43.0) (2025-10-15)
 
 
