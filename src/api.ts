@@ -130,7 +130,7 @@ export interface RouteOptions {
    * @default 'transaction'
    */
   executionType?: ExecutionType
-  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
+  jito?: boolean // Jito bundle. Solana specific option, without it implicit source swaps routes are discarded
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
@@ -322,7 +322,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   fromAmountForGas?: string // the amount of token to convert to gas
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
-  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
+  jito?: boolean // Jito bundle. Solana specific option, without it implicit source swaps routes are discarded
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
