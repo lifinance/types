@@ -130,6 +130,7 @@ export interface RouteOptions {
    * @default 'transaction'
    */
   executionType?: ExecutionType
+  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
@@ -322,6 +323,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
   executionType?: ExecutionType // (default: 'transaction') // the execution type of the quote
+  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.

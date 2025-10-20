@@ -106,6 +106,7 @@ export interface StepBase {
   estimate?: Estimate
   executionType?: ExecutionType
   transactionRequest?: TransactionRequest
+  transactionId?: string
   /**
    * EIP-712 Typed Data
    * @link https://eips.ethereum.org/EIPS/eip-712
