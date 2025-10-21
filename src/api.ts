@@ -130,12 +130,19 @@ export interface RouteOptions {
    * @default 'transaction'
    */
   executionType?: ExecutionType
-  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
+
+  /** Solana specific option, without it implicit source swaps routes are discarded */
+  jitoBundle?: boolean
+
+  /** Preset configuration for stablecoin routing optimization.
+   * When provided, this preset will override other route options with optimized settings */
+  preset?: string
 
   /**
+   * Whether the user wants to insure their tx
    * @deprecated This property is deprecated and will be removed in future versions.
    */
-  insurance?: boolean // Whether the user wants to insure their tx
+  insurance?: boolean
 }
 
 export const ExecutionTypes = ['transaction', 'message', 'all'] as const
@@ -322,12 +329,17 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   fromAmountForGas?: string // the amount of token to convert to gas
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
-  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
 
-  /**
-   * @deprecated This property is deprecated and will be removed in future versions.
-   */
-  insurance?: boolean // indicates whether the user wants a quote with bridge insurance
+  /** Solana specific option, without it implicit source swaps routes are discarded */
+  jitoBundle?: boolean
+
+  /** Preset configuration for stablecoin routing optimization
+   * When provided, this preset will override other route options with optimized settings */
+  preset?: string
+
+  /** Indicates whether the user wants a quote with bridge insurance
+   * @deprecated This property is deprecated and will be removed in future versions. */
+  insurance?: boolean
 }
 
 export interface QuoteToAmountRequest
