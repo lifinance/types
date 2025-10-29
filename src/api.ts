@@ -131,6 +131,7 @@ export interface RouteOptions {
    */
   executionType?: ExecutionType
   jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
+  svmSponsor?: string // Solana specific option, wallet to sponsor tx costs
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
@@ -323,6 +324,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
   jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
+  svmSponsor?: string // Solana specific option, wallet to sponsor tx costs
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
