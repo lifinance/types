@@ -322,6 +322,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   fromAmountForGas?: string // the amount of token to convert to gas
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
+  executionType?: ExecutionType // (default: 'transaction') // the execution type of the quote
   jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
 
   /**
@@ -427,12 +428,11 @@ export interface ConnectionsResponse {
   connections: Connection[]
 }
 
-export interface GetStatusRequest {
-  txHash: string
+export type GetStatusRequest = {
   bridge?: string
   fromChain?: number | string
   toChain?: number | string
-}
+} & ({ txHash: string } | { taskId: string })
 
 export interface BaseTransactionInfo {
   txHash: string
