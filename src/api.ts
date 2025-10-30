@@ -350,6 +350,10 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
   skipSimulation?: boolean
 
+  /** The execution type of the quote
+   * @default 'transaction' */
+  executionType?: ExecutionType
+
   /** Solana specific option, without it implicit source swaps routes are discarded */
   jitoBundle?: boolean
 
@@ -459,12 +463,11 @@ export interface ConnectionsResponse {
   connections: Connection[]
 }
 
-export interface GetStatusRequest {
-  txHash: string
+export type GetStatusRequest = {
   bridge?: string
   fromChain?: number | string
   toChain?: number | string
-}
+} & ({ txHash: string } | { taskId: string })
 
 export interface BaseTransactionInfo {
   txHash: string

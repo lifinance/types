@@ -56,8 +56,10 @@ export interface Estimate {
   gasCosts?: GasCost[]
   /** Estimated duration in seconds */
   executionDuration: number
-  /** Optional flagging of approval reset requirement for legacy ERC-20 tokens */
+  /** Optional flag to indicate approval reset requirement for legacy ERC-20 tokens */
   approvalReset?: boolean
+  /** Optional flag to skip approval in the cases where we only need to sign the message (e.g. Hyperliquid)*/
+  skipApproval?: boolean
 }
 
 // STEP
