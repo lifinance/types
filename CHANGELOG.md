@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.45.0](https://github.com/lifinance/types/compare/v17.44.1...v17.45.0) (2025-10-30)
+
+
+### Features
+
+* add hyperflowcorewriter icon ([#448](https://github.com/lifinance/types/issues/448)) ([37351e1](https://github.com/lifinance/types/commit/37351e17582faf73add45bc4ef491d022b7208fb))
+* update GetStatusRequest type and Quote ([#426](https://github.com/lifinance/types/issues/426)) ([5d3a9c0](https://github.com/lifinance/types/commit/5d3a9c024cf5eff75af662bb3f64b9c8922d2407))
+
 ### [17.44.1](https://github.com/lifinance/types/compare/v17.44.0...v17.44.1) (2025-10-16)
 
 ### [17.44.0](https://github.com/lifinance/types/compare/v17.43.0...v17.44.0) (2025-10-16)
