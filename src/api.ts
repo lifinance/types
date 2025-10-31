@@ -156,6 +156,9 @@ export interface RouteOptions extends RouteOptionsBase {
   /** Solana specific option, without it implicit source swaps routes are discarded */
   jitoBundle?: boolean
 
+  /** Solana specific option, wallet to sponsor tx costs */
+  svmSponsor?: string
+
   /** Preset configuration for stablecoin routing optimization.
    * When provided, this preset will override other route options with optimized settings */
   preset?: string
@@ -356,6 +359,9 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
   /** Solana specific option, without it implicit source swaps routes are discarded */
   jitoBundle?: boolean
+
+  /** Solana specific option, wallet to sponsor tx costs */
+  svmSponsor?: string
 
   /** Preset configuration for stablecoin routing optimization
    * When provided, this preset will override other route options with optimized settings */
