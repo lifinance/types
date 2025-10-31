@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.46.0](https://github.com/lifinance/types/compare/v17.45.0...v17.46.0) (2025-10-31)
+
+
+### Features
+
+* add solana tx sponsor option to api ([#449](https://github.com/lifinance/types/issues/449)) ([7e6bd87](https://github.com/lifinance/types/commit/7e6bd871139a3953f7f8f347038f3559b8537d80))
+
 ## [17.45.0](https://github.com/lifinance/types/compare/v17.44.1...v17.45.0) (2025-10-30)
 
 
