@@ -44,6 +44,7 @@ export enum CoinKey {
   XPL = 'XPL', // Plasma native
   FLOW = 'FLOW', // Flow native
   MON = 'MON', // Monad native
+  XOC = 'XOC', // Xoco native
 
   // Solana
   SOL = 'SOL',
@@ -123,4 +124,5 @@ export enum CoinKey {
   WXPL = 'WXPL', // Plasma Wrapped Native
   WFLOW = 'WFLOW', // Flow Wrapped Native
   WMON = 'WMON', // Monad Wrapped Native
+  WXOC = 'WXOC', // Xoco Wrapped Native
 }
