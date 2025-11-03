@@ -348,9 +348,18 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   integrator?: string
   referrer?: string
   fee?: number | string
-  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
-  fromAmountForGas?: string // the amount of token to convert to gas
-  maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
+
+  /** Whether destination calls are enabled by default
+   * @default true */
+  allowDestinationCall?: boolean
+
+  /** The amount of token to convert to gas */
+  fromAmountForGas?: string
+
+  /** Hide routes with price impact greater than or equal to this value */
+  maxPriceImpact?: number
+
+  /** Whether to skip simulation of the quote */
   skipSimulation?: boolean
 
   /** The execution type of the quote
