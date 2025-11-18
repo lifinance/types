@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.47.0](https://github.com/lifinance/types/compare/v17.46.0...v17.47.0) (2025-11-18)
+
+
+### Features
+
+* add kuru logo ([#451](https://github.com/lifinance/types/issues/451)) ([530749c](https://github.com/lifinance/types/commit/530749c29fb2da858ae41c634a1b3831b37866e1))
+* add lido icon ([#453](https://github.com/lifinance/types/issues/453)) ([f7e2dff](https://github.com/lifinance/types/commit/f7e2dff02e77de7cb76538cf028355323590fcd5))
+* add monorail logo ([#452](https://github.com/lifinance/types/issues/452)) ([a980b93](https://github.com/lifinance/types/commit/a980b93287efb95ff081a01df98d1416d572b5c8))
+* add Nordstern Finance logo ([#458](https://github.com/lifinance/types/issues/458)) ([e5d14d8](https://github.com/lifinance/types/commit/e5d14d848032d68ab97a2e1f2fff3e6d851ef807))
+
 ## [17.46.0](https://github.com/lifinance/types/compare/v17.45.0...v17.46.0) (2025-10-31)
 
 
