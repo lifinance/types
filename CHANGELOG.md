@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.48.0](https://github.com/lifinance/types/compare/v17.47.0...v17.48.0) (2025-11-19)
+
+
+### Features
+
+* add stable chain ([#459](https://github.com/lifinance/types/issues/459)) ([2574d1f](https://github.com/lifinance/types/commit/2574d1fe5a40a3606bd3fa9fc424d45ab125c575))
+
 ## [17.47.0](https://github.com/lifinance/types/compare/v17.46.0...v17.47.0) (2025-11-18)
 
 
