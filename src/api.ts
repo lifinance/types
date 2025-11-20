@@ -132,6 +132,7 @@ export interface RouteOptions {
   executionType?: ExecutionType
   jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
   svmSponsor?: string // Solana specific option, wallet to sponsor tx costs
+  mayanNonEvmPermitSignature?: string // Mayan option for Hyperliquid routes
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
@@ -326,6 +327,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   executionType?: ExecutionType // (default: 'transaction') // the execution type of the quote
   jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
   svmSponsor?: string // Solana specific option, wallet to sponsor tx costs
+  mayanNonEvmPermitSignature?: string // Mayan option for Hyperliquid routes
 
   /**
    * @deprecated This property is deprecated and will be removed in future versions.
