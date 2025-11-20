@@ -44,6 +44,7 @@ export enum CoinKey {
   XPL = 'XPL', // Plasma native
   FLOW = 'FLOW', // Flow native
   MON = 'MON', // Monad native
+  GUSDT = 'GUSDT', // Stable native (Gas USDT)
 
   // Solana
   SOL = 'SOL',
