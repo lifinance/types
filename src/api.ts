@@ -612,6 +612,7 @@ export type TokensRequest = {
   limit?: number
   extended?: boolean
   search?: string
+  tags?: string[]
 }
 
 export type TokensResponse = {
