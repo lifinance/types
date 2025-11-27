@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.49.0](https://github.com/lifinance/types/compare/v17.48.0...v17.49.0) (2025-11-27)
+
+
+### Features
+
+* implement major asset tagging mechanism ([#455](https://github.com/lifinance/types/issues/455)) ([4792062](https://github.com/lifinance/types/commit/479206202f842c5dafbda3e805d706cc5c2ea048))
+
 ## [17.48.0](https://github.com/lifinance/types/compare/v17.47.0...v17.48.0) (2025-11-19)
 
 
