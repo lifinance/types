@@ -162,6 +162,7 @@ export enum ChainId {
   MON = 143,
   STA = 988,
   MEG = 4326,
+  
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
   TER = 1161011141099710,
