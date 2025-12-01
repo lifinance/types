@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.50.0](https://github.com/lifinance/types/compare/v17.49.0...v17.50.0) (2025-12-01)
+
+
+### Features
+
+* Add MegaETH chain and bridge assets and chainId ([#462](https://github.com/lifinance/types/issues/462)) ([49aeece](https://github.com/lifinance/types/commit/49aeece036be7e54a795718ea149d35e044be910))
+
 ## [17.49.0](https://github.com/lifinance/types/compare/v17.48.0...v17.49.0) (2025-11-27)
 
 
