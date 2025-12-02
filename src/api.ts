@@ -124,6 +124,7 @@ export interface RouteOptions {
   allowDestinationCall?: boolean // (default: true) destination calls are enabled by default
   bridges?: AllowDenyPrefer
   exchanges?: AllowDenyPrefer
+  protocols?: AllowDenyPrefer
   timing?: Timing
   /**
    * Whether to include routes that require a transaction or a message, or both
@@ -302,6 +303,8 @@ export interface ToolConfiguration {
   allowExchanges?: string[]
   denyExchanges?: string[]
   preferExchanges?: string[]
+  allowProtocols?: string[]
+  denyProtocols?: string[]
 }
 
 export interface QuoteRequest extends ToolConfiguration, TimingStrings {
@@ -754,7 +757,7 @@ export type TransferSummary = {
 }
 
 export interface TransferSummariesResponse
-  extends PaginatedResponse<TransferSummary> {}
+  extends PaginatedResponse<TransferSummary> { }
 
 export interface GetStepRequest {
   stepId: string
