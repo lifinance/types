@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.51.0](https://github.com/lifinance/types/compare/v17.50.0...v17.51.0) (2025-12-03)
+
+
+### Features
+
+* add kumbaya logo ([#463](https://github.com/lifinance/types/issues/463)) ([a5e45d1](https://github.com/lifinance/types/commit/a5e45d1024ae3884fcadd0a16db1ea66d6cc56bb))
+* **preset:** extend routes and quote requests to support API `preset` ([faa11cb](https://github.com/lifinance/types/commit/faa11cbaff6e951d81853cd45c42bf97c4d33fd6))
+
 ### [17.50.1](https://github.com/lifinance/types/compare/v17.49.0-alpha.0...v17.50.1) (2025-12-03)
 
 ## [17.50.0](https://github.com/lifinance/types/compare/v17.49.0...v17.50.0) (2025-12-01)
