@@ -15,7 +15,7 @@ import type {
   SignedLiFiStep,
   StepToolDetails,
 } from './step.js'
-import type { Token, TokenExtended } from './tokens/index.js'
+import type { Token, TokenExtended, TokenTag } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -660,7 +660,7 @@ export type TokensRequest = {
   limit?: number
   extended?: boolean
   search?: string
-  tags?: string[]
+  tags?: TokenTag[]
 }
 
 export type TokensResponse = {
@@ -803,7 +803,7 @@ export type TransferSummary = {
 }
 
 export interface TransferSummariesResponse
-  extends PaginatedResponse<TransferSummary> { }
+  extends PaginatedResponse<TransferSummary> {}
 
 export interface GetStepRequest {
   stepId: string
