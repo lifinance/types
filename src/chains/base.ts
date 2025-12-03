@@ -70,6 +70,7 @@ export enum ChainKey {
   HMI = 'hmi',
   MON = 'mon',
   STA = 'sta',
+  MEG = 'meg',
 
   // None-EVM
   SOL = 'sol',
@@ -160,6 +161,7 @@ export enum ChainId {
   HMI = 43111,
   MON = 143,
   STA = 988,
+  MEG = 4326,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,

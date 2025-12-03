@@ -12,6 +12,7 @@ export interface StaticToken extends BaseToken {
   name: string
   coinKey?: CoinKey
   logoURI?: string
+  tags?: TokenTag[]
 }
 
 export interface Token extends StaticToken {
@@ -39,4 +40,12 @@ export interface Coin {
   chains: {
     [ChainId: string]: StaticToken
   }
+}
+
+export enum TokenTag {
+  STABLECOIN = 'stablecoin',
+  MAJOR_ASSET = 'major_asset',
+  // Legacy tags
+  SUPERTOKEN = 'supertoken',
+  TESTNET = 'testnet',
 }
