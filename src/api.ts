@@ -660,6 +660,7 @@ export type TokensRequest = {
   limit?: number
   extended?: boolean
   search?: string
+  tags?: string[]
 }
 
 export type TokensResponse = {
@@ -802,7 +803,7 @@ export type TransferSummary = {
 }
 
 export interface TransferSummariesResponse
-  extends PaginatedResponse<TransferSummary> {}
+  extends PaginatedResponse<TransferSummary> { }
 
 export interface GetStepRequest {
   stepId: string
