@@ -159,6 +159,9 @@ export interface RouteOptions extends RouteOptionsBase {
   /** Solana specific option, wallet to sponsor tx costs */
   svmSponsor?: string
 
+  /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
+  mayanNonEvmPermitSignature?: boolean
+
   /** Preset configuration for stablecoin routing optimization.
    * When provided, this preset will override other route options with optimized settings */
   preset?: string
