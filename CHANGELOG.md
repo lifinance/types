@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.53.0](https://github.com/lifinance/types/compare/v17.52.0...v17.53.0) (2025-12-08)
+
+
+### Features
+
+* add tags to tokens request ([#464](https://github.com/lifinance/types/issues/464)) ([b2cf50e](https://github.com/lifinance/types/commit/b2cf50e9b61711c4e2ba93490eae1a770dfbee31))
+
 ## [17.52.0](https://github.com/lifinance/types/compare/v17.51.0...v17.52.0) (2025-12-08)
 
 
