@@ -51,7 +51,7 @@ export type TransactionRequest = {
   gasLimit?: BigIntish
   gasPrice?: BigIntish
 
-  data?: string
+  data?: string | string[]
   value?: BigIntish
   chainId?: number
 
