@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.53.0](https://github.com/lifinance/types/compare/v17.52.0...v17.53.0) (2025-12-08)
+
+
+### Features
+
+* add tags to tokens request ([#464](https://github.com/lifinance/types/issues/464)) ([b2cf50e](https://github.com/lifinance/types/commit/b2cf50e9b61711c4e2ba93490eae1a770dfbee31))
+
+## [17.52.0](https://github.com/lifinance/types/compare/v17.51.0...v17.52.0) (2025-12-08)
+
+
+### Features
+
+* add mayanNonEvmPermitSignature to route api options ([#465](https://github.com/lifinance/types/issues/465)) ([ea1c783](https://github.com/lifinance/types/commit/ea1c783f8e1f7def789735d7f5b863911f4072d7))
+* add stable icon ([04e3770](https://github.com/lifinance/types/commit/04e37706b93f95e7c72a8d1ed3fec67fa3e274eb))
+
+## [17.51.0](https://github.com/lifinance/types/compare/v17.50.0...v17.51.0) (2025-12-03)
+
+
+### Features
+
+* add kumbaya logo ([#463](https://github.com/lifinance/types/issues/463)) ([a5e45d1](https://github.com/lifinance/types/commit/a5e45d1024ae3884fcadd0a16db1ea66d6cc56bb))
+* **preset:** extend routes and quote requests to support API `preset` ([faa11cb](https://github.com/lifinance/types/commit/faa11cbaff6e951d81853cd45c42bf97c4d33fd6))
+
+### [17.50.1](https://github.com/lifinance/types/compare/v17.49.0-alpha.0...v17.50.1) (2025-12-03)
+
 ## [17.50.0](https://github.com/lifinance/types/compare/v17.49.0...v17.50.0) (2025-12-01)
 
 

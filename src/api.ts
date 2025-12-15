@@ -15,7 +15,7 @@ import type {
   SignedLiFiStep,
   StepToolDetails,
 } from './step.js'
-import type { Token, TokenExtended } from './tokens/index.js'
+import type { Token, TokenExtended, TokenTag } from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -113,30 +113,62 @@ export interface RoutesRequest {
   fromAmountForGas?: string
 }
 
-export interface RouteOptions {
-  integrator?: string // Should contain the identifier of the integrator. Usually, it's dApp/company name.
-  fee?: number // 0.03 = take 3% integrator fee (requires verified integrator to be set)
-  maxPriceImpact?: number // Hide routes with price impact greater than or equal to this value
-  order?: Order // (default: CHEAPEST) 'FASTEST' | 'CHEAPEST'
-  slippage?: number // (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%
-  referrer?: string // Integrators can set a wallet address as a referrer to track them
-  allowSwitchChain?: boolean // (default: false) Whether chain switches should be allowed in the routes
-  allowDestinationCall?: boolean // (default: true) destination calls are enabled by default
-  bridges?: AllowDenyPrefer
-  exchanges?: AllowDenyPrefer
-  timing?: Timing
-  /**
-   * Whether to include routes that require a transaction or a message, or both
-   * @default 'transaction'
-   */
-  executionType?: ExecutionType
-  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
-  svmSponsor?: string // Solana specific option, wallet to sponsor tx costs
+export interface RouteOptionsBase {
+  /** 0.03 = take 3% integrator fee (requires verified integrator to be set) */
+  fee?: number
 
-  /**
-   * @deprecated This property is deprecated and will be removed in future versions.
-   */
-  insurance?: boolean // Whether the user wants to insure their tx
+  /** Hide routes with price impact greater than or equal to this value */
+  maxPriceImpact?: number
+
+  /** (default: CHEAPEST) 'FASTEST' | 'CHEAPEST' */
+  order?: Order
+
+  /** (default: 0.03) Expressed as decimal proportion, 0.03 represents 3% */
+  slippage?: number
+
+  /** (default: false) Whether chain switches should be allowed in the routes */
+  allowSwitchChain?: boolean
+
+  /** (default: true) destination calls are enabled by default */
+  allowDestinationCall?: boolean
+
+  /** Bridges that should or should not be taken into consideration for the possibilities */
+  bridges?: AllowDenyPrefer
+
+  /** Exchanges that should or should not be taken into consideration for the possibilities */
+  exchanges?: AllowDenyPrefer
+
+  /** Timing strategies for the routes */
+  timing?: Timing
+
+  /** Whether to include routes that require a transaction or a message, or both
+   * @default 'transaction' */
+  executionType?: ExecutionType
+}
+
+export interface RouteOptions extends RouteOptionsBase {
+  /** Should contain the identifier of the integrator. Usually, it's dApp/company name. */
+  integrator?: string
+
+  /** Integrators can set a wallet address as a referrer to track them */
+  referrer?: string
+
+  /** Solana specific option, without it implicit source swaps routes are discarded */
+  jitoBundle?: boolean
+
+  /** Solana specific option, wallet to sponsor tx costs */
+  svmSponsor?: string
+
+  /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
+  mayanNonEvmPermitSignature?: boolean
+
+  /** Preset configuration for stablecoin routing optimization.
+   * When provided, this preset will override other route options with optimized settings */
+  preset?: string
+
+  /** Whether the user wants to insure their tx
+   * @deprecated This property is deprecated and will be removed in future versions. */
+  insurance?: boolean
 }
 
 export const ExecutionTypes = ['transaction', 'message', 'all'] as const
@@ -319,18 +351,37 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   integrator?: string
   referrer?: string
   fee?: number | string
-  allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
-  fromAmountForGas?: string // the amount of token to convert to gas
-  maxPriceImpact?: number // hide routes with price impact greater than or equal to this value
-  skipSimulation?: boolean
-  executionType?: ExecutionType // (default: 'transaction') // the execution type of the quote
-  jitoBundle?: boolean // Solana specific option, without it implicit source swaps routes are discarded
-  svmSponsor?: string // Solana specific option, wallet to sponsor tx costs
 
-  /**
-   * @deprecated This property is deprecated and will be removed in future versions.
-   */
-  insurance?: boolean // indicates whether the user wants a quote with bridge insurance
+  /** Whether destination calls are enabled by default
+   * @default true */
+  allowDestinationCall?: boolean
+
+  /** The amount of token to convert to gas */
+  fromAmountForGas?: string
+
+  /** Hide routes with price impact greater than or equal to this value */
+  maxPriceImpact?: number
+
+  /** Whether to skip simulation of the quote */
+  skipSimulation?: boolean
+
+  /** The execution type of the quote
+   * @default 'transaction' */
+  executionType?: ExecutionType
+
+  /** Solana specific option, without it implicit source swaps routes are discarded */
+  jitoBundle?: boolean
+
+  /** Solana specific option, wallet to sponsor tx costs */
+  svmSponsor?: string
+
+  /** Preset configuration for stablecoin routing optimization
+   * When provided, this preset will override other route options with optimized settings */
+  preset?: string
+
+  /** Indicates whether the user wants a quote with bridge insurance
+   * @deprecated This property is deprecated and will be removed in future versions. */
+  insurance?: boolean
 }
 
 export interface QuoteToAmountRequest
@@ -612,6 +663,7 @@ export type TokensRequest = {
   limit?: number
   extended?: boolean
   search?: string
+  tags?: TokenTag[]
 }
 
 export type TokensResponse = {
