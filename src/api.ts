@@ -928,3 +928,15 @@ export type RelayStatusResponseData = {
 }
 
 export type RelayStatusResponse = RelayerResponse<RelayStatusResponseData>
+
+export type PatchCallDataRequest = {
+  chainId: ChainId
+  fromTokenAddress: string
+  targetContractAddress: string
+  callDataToPatch: string
+  patches: {
+    amountToReplace: string
+  }[]
+  value?: string
+  delegateCall?: boolean
+}[]
