@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.54.0](https://github.com/lifinance/types/compare/v17.53.0...v17.54.0) (2026-01-08)
+
+
+### Features
+
+* add chainlink icon ([#470](https://github.com/lifinance/types/issues/470)) ([16bf424](https://github.com/lifinance/types/commit/16bf424a01003dc3d205620fec1cd9854ff4e518))
+* add kumbaya logo ([#466](https://github.com/lifinance/types/issues/466)) ([d5f5b72](https://github.com/lifinance/types/commit/d5f5b72cdae73a50b1b59edfac4cb8beeab1c1df))
+* add patch call data request type ([#471](https://github.com/lifinance/types/issues/471)) ([ca47632](https://github.com/lifinance/types/commit/ca47632a391db5e0918d5949b7640676af08d2a6))
+* Add polymer bridge logo ([#467](https://github.com/lifinance/types/issues/467)) ([506b546](https://github.com/lifinance/types/commit/506b5463722dd86416174d5a310e48c45fd4c7b8))
+* update oneinch logo ([#469](https://github.com/lifinance/types/issues/469)) ([29095a5](https://github.com/lifinance/types/commit/29095a5aef2f53a2eb6cececdc743001c0e44959))
+
 ## [17.53.0](https://github.com/lifinance/types/compare/v17.52.0...v17.53.0) (2025-12-08)
 
 
