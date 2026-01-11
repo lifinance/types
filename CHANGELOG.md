@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.55.0](https://github.com/lifinance/types/compare/v17.54.0...v17.55.0) (2026-01-11)
+
+
+### Features
+
+* add MegaUSD stablecoin ([#472](https://github.com/lifinance/types/issues/472)) ([45571d3](https://github.com/lifinance/types/commit/45571d300740efbc87784337c3a428bab16385c7))
+
 ## [17.54.0](https://github.com/lifinance/types/compare/v17.53.0...v17.54.0) (2026-01-08)
 
 
