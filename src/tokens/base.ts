@@ -86,6 +86,7 @@ export enum CoinKey {
   FEUSD = 'FEUSD', // Stablecoin on HyperEVM
   USDT0 = 'USDT0', // Bridged USDT offered by LayerZero
   USDF = 'USDF', // Stablecoin on Flow: USD Flow
+  USDm = 'USDm', // Stablecoin on MegaETH: MegaUSD
 
   // Other tokens
   WBTC = 'WBTC',
