@@ -138,6 +138,9 @@ export interface RouteOptionsBase {
   /** Exchanges that should or should not be taken into consideration for the possibilities */
   exchanges?: AllowDenyPrefer
 
+  /** Protocols that should or should not be taken into consideration for the possibilities */
+  protocols?: AllowDenyPrefer
+
   /** Timing strategies for the routes */
   timing?: Timing
 
@@ -334,6 +337,8 @@ export interface ToolConfiguration {
   allowExchanges?: string[]
   denyExchanges?: string[]
   preferExchanges?: string[]
+  allowProtocols?: string[]
+  denyProtocols?: string[]
 }
 
 export interface QuoteRequest extends ToolConfiguration, TimingStrings {
