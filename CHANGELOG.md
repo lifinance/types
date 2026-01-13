@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.56.0](https://github.com/lifinance/types/compare/v17.55.0...v17.56.0) (2026-01-13)
+
+
+### Features
+
+* add botanix chain ([#476](https://github.com/lifinance/types/issues/476)) ([f1c4e58](https://github.com/lifinance/types/commit/f1c4e581eb9c4f0d228c2556228252cde3ff6c58))
+* add USDm logo ([#473](https://github.com/lifinance/types/issues/473)) ([21de04c](https://github.com/lifinance/types/commit/21de04c759f74516d8a143f60e9fc8805201f3ef))
+
 ## [17.55.0](https://github.com/lifinance/types/compare/v17.54.0...v17.55.0) (2026-01-11)
 
 
