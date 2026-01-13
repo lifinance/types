@@ -49,8 +49,6 @@ export interface Estimate {
   toAmountMin: string
   toAmountUSD?: string
   approvalAddress: string
-  permit2Address?: string
-  permit2ProxyAddress?: string
   feeCosts?: FeeCost[]
   /** This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not integrated yet. */
   gasCosts?: GasCost[]
@@ -60,6 +58,8 @@ export interface Estimate {
   approvalReset?: boolean
   /** Optional flag to skip approval in the cases where we only need to sign the message (e.g. Hyperliquid)*/
   skipApproval?: boolean
+  /** Optional flag to skip permit usage when the tx doesn't include diamond interaction (some HyperEVM txs) */
+  skipPermit?: boolean
 }
 
 // STEP
