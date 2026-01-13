@@ -125,4 +125,5 @@ export enum CoinKey {
   WXPL = 'WXPL', // Plasma Wrapped Native
   WFLOW = 'WFLOW', // Flow Wrapped Native
   WMON = 'WMON', // Monad Wrapped Native
+  pBTC = 'pBTC', // Botanix Wrapped Native
 }
