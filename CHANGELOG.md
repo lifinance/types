@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.57.0](https://github.com/lifinance/types/compare/v17.56.0...v17.57.0) (2026-01-15)
+
+
+### Features
+
+* add botanix logo ([#478](https://github.com/lifinance/types/issues/478)) ([4161a05](https://github.com/lifinance/types/commit/4161a05b3fc18dacd8bb22135d8021fd132cbbb3))
+* add mega token ([#480](https://github.com/lifinance/types/issues/480)) ([b1f9de7](https://github.com/lifinance/types/commit/b1f9de7a5e5b835884ddbcbc9dc534f401d7c5d1))
+* remove permit details from estimate, add skipPermit flag ([#477](https://github.com/lifinance/types/issues/477)) ([d19b26b](https://github.com/lifinance/types/commit/d19b26bb9de21eef058ec5c5e79822e5ff61efd3))
+
 ## [17.56.0](https://github.com/lifinance/types/compare/v17.55.0...v17.56.0) (2026-01-13)
 
 
