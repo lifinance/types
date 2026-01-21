@@ -46,9 +46,13 @@ export enum CoinKey {
   MON = 'MON', // Monad native
   GUSDT = 'GUSDT', // Stable native (Gas USDT)
 
-  // Solana
+  // SVM
   SOL = 'SOL',
   WSOL = 'wSOL',
+
+  // Fogo
+  FOGO = 'FOGO',
+  WFOGO = 'wFOGO',
 
   // MVM
   SUI = 'SUI',

@@ -153,10 +153,10 @@ export interface RouteOptions extends RouteOptionsBase {
   /** Integrators can set a wallet address as a referrer to track them */
   referrer?: string
 
-  /** Solana specific option, without it implicit source swaps routes are discarded */
+  /** SVM specific option, without it implicit source swaps routes are discarded */
   jitoBundle?: boolean
 
-  /** Solana specific option, wallet to sponsor tx costs */
+  /** SVM specific option, wallet to sponsor tx costs */
   svmSponsor?: string
 
   /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
@@ -369,10 +369,10 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
    * @default 'transaction' */
   executionType?: ExecutionType
 
-  /** Solana specific option, without it implicit source swaps routes are discarded */
+  /** SVM specific option, without it implicit source swaps routes are discarded */
   jitoBundle?: boolean
 
-  /** Solana specific option, wallet to sponsor tx costs */
+  /** SVM specific option, wallet to sponsor tx costs */
   svmSponsor?: string
 
   /** Preset configuration for stablecoin routing optimization
