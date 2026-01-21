@@ -65,8 +65,8 @@
     "prepack": "pinst --disable",
     "prettier:fix": "prettier --write ./src/.",
     "release": "standard-version -a",
-    "release:alpha": "standard-version -a --prerelease alpha --skip.changelog 2>&1 | sed 's/ && npm publish --tag alpha//'",
-    "release:beta": "standard-version -a --prerelease beta --skip.changelog 2>&1 | sed 's/ && npm publish --tag beta//'",
+    "release:alpha": "standard-version -a --prerelease alpha --skip.changelog 2>&1 | node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>console.log(d.replace(/ && npm publish --tag \\w+/g,'').trim()))\"",
+    "release:beta": "standard-version -a --prerelease beta --skip.changelog 2>&1 | node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>console.log(d.replace(/ && npm publish --tag \\w+/g,'').trim()))\"",
     "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
