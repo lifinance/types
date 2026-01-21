@@ -75,9 +75,12 @@ export enum ChainKey {
   JOV = 'jov',
 
   // None-EVM
-  SOL = 'sol',
   TER = 'ter',
   OAS = 'oas',
+
+  // SVM
+  SOL = 'sol',
+  FOG = 'fog',
 
   // MVM
   SUI = 'sui',
@@ -168,9 +171,12 @@ export enum ChainId {
   JOV = 5734951,
 
   // None-EVM (IDs are made up by the LI.FI team)
-  SOL = 1151111081099710,
   TER = 1161011141099710,
   OAS = 111971151099710,
+
+  // SVM
+  SOL = 1151111081099710,
+  FOG = 1021111031099710,
 
   // MVM (IDs are made up by the LI.FI team)
   SUI = 9270000000000000, // First 16 non-letter hex digits of SUI genesis blob

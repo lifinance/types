@@ -46,9 +46,13 @@ export enum CoinKey {
   MON = 'MON', // Monad native
   GUSDT = 'GUSDT', // Stable native (Gas USDT)
 
-  // Solana
+  // SVM
   SOL = 'SOL',
   WSOL = 'wSOL',
+
+  // Fogo
+  FOGO = 'FOGO',
+  WFOGO = 'wFOGO',
 
   // MVM
   SUI = 'SUI',
@@ -74,6 +78,7 @@ export enum CoinKey {
   USDC = 'USDC',
   BUSD = 'BUSD',
   USDCe = 'USDCe',
+  USDCs = 'USDCs', // Wormhole bridged USDC from Solana to Fogo
   USDCn = 'USDCn',
   USDe = 'USDe',
   USDB = 'USDB', // Blast native stablecoin
