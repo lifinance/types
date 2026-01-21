@@ -50,6 +50,10 @@ export enum CoinKey {
   SOL = 'SOL',
   WSOL = 'wSOL',
 
+  // Fogo
+  FOGO = 'FOGO',
+  WFOGO = 'wFOGO',
+
   // MVM
   SUI = 'SUI',
 
