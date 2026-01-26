@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.58.0](https://github.com/lifinance/types/compare/v17.57.0...v17.58.0) (2026-01-22)
+
+
+### Features
+
+* add wrapped Telo token ([#486](https://github.com/lifinance/types/issues/486)) ([526c1da](https://github.com/lifinance/types/commit/526c1daea5ffd407b538dfa2281076182e7a9a96))
+
 ## [17.57.0](https://github.com/lifinance/types/compare/v17.56.0...v17.57.0) (2026-01-15)
 
 
