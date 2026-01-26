@@ -78,6 +78,7 @@ export enum CoinKey {
   USDC = 'USDC',
   BUSD = 'BUSD',
   USDCe = 'USDCe',
+  USDCs = 'USDCs', // Wormhole bridged USDC from Solana to Fogo
   USDCn = 'USDCn',
   USDe = 'USDe',
   USDB = 'USDB', // Blast native stablecoin
