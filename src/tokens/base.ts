@@ -126,5 +126,5 @@ export enum CoinKey {
   WFLOW = 'WFLOW', // Flow Wrapped Native
   WMON = 'WMON', // Monad Wrapped Native
   pBTC = 'pBTC', // Botanix Wrapped Native
-  WTLOS = 'WTLOS', // Telo Wrapped Native
+  WTLOS = 'WTLOS', // Telos Wrapped Native
 }
