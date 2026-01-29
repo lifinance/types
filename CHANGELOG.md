@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.58.0](https://github.com/lifinance/types/compare/v17.57.0...v17.58.0) (2026-01-22)
+
+
+### Features
+
+* add wrapped Telo token ([#486](https://github.com/lifinance/types/issues/486)) ([526c1da](https://github.com/lifinance/types/commit/526c1daea5ffd407b538dfa2281076182e7a9a96))
+
+## [17.57.0](https://github.com/lifinance/types/compare/v17.56.0...v17.57.0) (2026-01-15)
+
+
+### Features
+
+* add botanix logo ([#478](https://github.com/lifinance/types/issues/478)) ([4161a05](https://github.com/lifinance/types/commit/4161a05b3fc18dacd8bb22135d8021fd132cbbb3))
+* add mega token ([#480](https://github.com/lifinance/types/issues/480)) ([b1f9de7](https://github.com/lifinance/types/commit/b1f9de7a5e5b835884ddbcbc9dc534f401d7c5d1))
+* remove permit details from estimate, add skipPermit flag ([#477](https://github.com/lifinance/types/issues/477)) ([d19b26b](https://github.com/lifinance/types/commit/d19b26bb9de21eef058ec5c5e79822e5ff61efd3))
+
+## [17.56.0](https://github.com/lifinance/types/compare/v17.55.0...v17.56.0) (2026-01-13)
+
+
+### Features
+
+* add botanix chain ([#476](https://github.com/lifinance/types/issues/476)) ([f1c4e58](https://github.com/lifinance/types/commit/f1c4e581eb9c4f0d228c2556228252cde3ff6c58))
+* add USDm logo ([#473](https://github.com/lifinance/types/issues/473)) ([21de04c](https://github.com/lifinance/types/commit/21de04c759f74516d8a143f60e9fc8805201f3ef))
+
+## [17.55.0](https://github.com/lifinance/types/compare/v17.54.0...v17.55.0) (2026-01-11)
+
+
+### Features
+
+* add MegaUSD stablecoin ([#472](https://github.com/lifinance/types/issues/472)) ([45571d3](https://github.com/lifinance/types/commit/45571d300740efbc87784337c3a428bab16385c7))
+
+## [17.54.0](https://github.com/lifinance/types/compare/v17.53.0...v17.54.0) (2026-01-08)
+
+
+### Features
+
+* add chainlink icon ([#470](https://github.com/lifinance/types/issues/470)) ([16bf424](https://github.com/lifinance/types/commit/16bf424a01003dc3d205620fec1cd9854ff4e518))
+* add kumbaya logo ([#466](https://github.com/lifinance/types/issues/466)) ([d5f5b72](https://github.com/lifinance/types/commit/d5f5b72cdae73a50b1b59edfac4cb8beeab1c1df))
+* add patch call data request type ([#471](https://github.com/lifinance/types/issues/471)) ([ca47632](https://github.com/lifinance/types/commit/ca47632a391db5e0918d5949b7640676af08d2a6))
+* Add polymer bridge logo ([#467](https://github.com/lifinance/types/issues/467)) ([506b546](https://github.com/lifinance/types/commit/506b5463722dd86416174d5a310e48c45fd4c7b8))
+* update oneinch logo ([#469](https://github.com/lifinance/types/issues/469)) ([29095a5](https://github.com/lifinance/types/commit/29095a5aef2f53a2eb6cececdc743001c0e44959))
+
 ## [17.53.0](https://github.com/lifinance/types/compare/v17.52.0...v17.53.0) (2025-12-08)
 
 

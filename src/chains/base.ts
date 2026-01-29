@@ -71,6 +71,7 @@ export enum ChainKey {
   MON = 'mon',
   STA = 'sta',
   MEG = 'meg',
+  BOT = 'bot',
   JOV = 'jov',
 
   // None-EVM
@@ -163,6 +164,7 @@ export enum ChainId {
   MON = 143,
   STA = 988,
   MEG = 4326,
+  BOT = 3637,
   JOV = 5734951,
 
   // None-EVM (IDs are made up by the LI.FI team)

@@ -86,6 +86,7 @@ export enum CoinKey {
   FEUSD = 'FEUSD', // Stablecoin on HyperEVM
   USDT0 = 'USDT0', // Bridged USDT offered by LayerZero
   USDF = 'USDF', // Stablecoin on Flow: USD Flow
+  USDm = 'USDm', // Stablecoin on MegaETH: MegaUSD
 
   // Other tokens
   WBTC = 'WBTC',
@@ -124,4 +125,6 @@ export enum CoinKey {
   WXPL = 'WXPL', // Plasma Wrapped Native
   WFLOW = 'WFLOW', // Flow Wrapped Native
   WMON = 'WMON', // Monad Wrapped Native
+  pBTC = 'pBTC', // Botanix Wrapped Native
+  WTLOS = 'WTLOS', // Telo Wrapped Native
 }
