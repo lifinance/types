@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.59.0](https://github.com/lifinance/types/compare/v17.58.0...v17.59.0) (2026-01-29)
+
+
+### Features
+
+* add jovay chain ([#468](https://github.com/lifinance/types/issues/468)) ([813513e](https://github.com/lifinance/types/commit/813513ef77f2d054d2fa45de17194a72fbd1acc1))
+* update mega token ([#487](https://github.com/lifinance/types/issues/487)) ([e7fb0f1](https://github.com/lifinance/types/commit/e7fb0f143613136f7934725686710f5ff46a9d17))
+
 ## [17.58.0](https://github.com/lifinance/types/compare/v17.57.0...v17.58.0) (2026-01-22)
 
 
