@@ -15,7 +15,12 @@ import type {
   SignedLiFiStep,
   StepToolDetails,
 } from './step.js'
-import type { Token, TokenExtended, TokenTag } from './tokens/index.js'
+import type {
+  BaseToken,
+  Token,
+  TokenExtended,
+  TokenTag,
+} from './tokens/index.js'
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -466,9 +471,9 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
 }
 
 export interface ConnectionsRequest extends ToolConfiguration {
-  fromChain?: number | string
+  fromChain: number | string
   fromToken?: string
-  toChain?: number | string
+  toChain: number | string
   toToken?: string
   allowSwitchChain?: boolean // (default: true) the connections that require chain switch (multiple signatures) are included by default
   allowDestinationCall?: boolean // (default: true) the connections that includes destination calls are included by default
@@ -482,8 +487,13 @@ export interface Connection {
   toTokens: Token[]
 }
 
+export type BasicConnection = Omit<Connection, 'fromTokens' | 'toTokens'> & {
+  fromTokens: BaseToken[]
+  toTokens: BaseToken[]
+}
+
 export interface ConnectionsResponse {
-  connections: Connection[]
+  connections: BasicConnection[]
 }
 
 export type GetStatusRequest = {
