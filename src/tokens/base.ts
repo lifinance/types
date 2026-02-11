@@ -58,6 +58,7 @@ export enum CoinKey {
   BCH = 'BCH',
   LTC = 'LTC',
   DOGE = 'DOGE',
+  ZEC = 'ZEC',
 
   // Tron
   TRX = 'TRX',
