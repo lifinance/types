@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.61.0](https://github.com/lifinance/types/compare/v17.60.1-beta.0...v17.61.0) (2026-02-13)
+
+
+### Features
+
+* zcash added ([#492](https://github.com/lifinance/types/issues/492)) ([99105ff](https://github.com/lifinance/types/commit/99105ff0926ee6756a5f2bfe9cc379361cd5e06d))
+
+## [17.60.0](https://github.com/lifinance/types/compare/v17.59.0...v17.60.0) (2026-02-12)
+
+
+### Features
+
+* refactor connections endpoint ([#488](https://github.com/lifinance/types/issues/488)) ([9cb5180](https://github.com/lifinance/types/commit/9cb5180ab781298822f3f8622f0a1c4d72d21999))
+
 ## [17.59.0](https://github.com/lifinance/types/compare/v17.58.0...v17.59.0) (2026-01-29)
 
 
