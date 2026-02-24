@@ -72,6 +72,7 @@ export enum ChainKey {
   STA = 'sta',
   MEG = 'meg',
   BOT = 'bot',
+  JOV = 'jov',
 
   // None-EVM
   SOL = 'sol',
@@ -86,6 +87,7 @@ export enum ChainKey {
   BCH = 'bch',
   LTC = 'ltc',
   DGE = 'dge',
+  ZEC = 'zec',
 
   // Tron
   TRN = 'trn',
@@ -164,6 +166,7 @@ export enum ChainId {
   STA = 988,
   MEG = 4326,
   BOT = 3637,
+  JOV = 5734951,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
@@ -178,6 +181,7 @@ export enum ChainId {
   BCH = 20000000000002,
   LTC = 20000000000003,
   DGE = 20000000000004,
+  ZEC = 20000000000005,
 
   // Tron
   TRN = 728126428,
