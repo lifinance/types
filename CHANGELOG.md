@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.62.0](https://github.com/lifinance/types/compare/v17.61.0...v17.62.0) (2026-02-25)
+
+
+### Features
+
+* add Morph chain and tokens ([#494](https://github.com/lifinance/types/issues/494)) ([58674f3](https://github.com/lifinance/types/commit/58674f339841177634d0d19d349d42aba9cc790c))
+
 ## [17.61.0](https://github.com/lifinance/types/compare/v17.60.1-beta.0...v17.61.0) (2026-02-13)
 
 
