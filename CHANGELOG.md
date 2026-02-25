@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.63.0](https://github.com/lifinance/types/compare/v17.62.0...v17.63.0) (2026-02-25)
+
+
+### Features
+
+* add fogo chain ([#484](https://github.com/lifinance/types/issues/484)) ([46f9afd](https://github.com/lifinance/types/commit/46f9afdc96301abb6c5c8e9b62355e9ea1028a2b))
+* add Morph logo ([#495](https://github.com/lifinance/types/issues/495)) ([8620f85](https://github.com/lifinance/types/commit/8620f8590262a1cd4777dc3b8e998055e2ebc490))
+
 ## [17.62.0](https://github.com/lifinance/types/compare/v17.61.0...v17.62.0) (2026-02-25)
 
 
