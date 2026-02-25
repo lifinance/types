@@ -810,6 +810,7 @@ export type ChainWalletConfiguration = {
 export enum IntegratorFeeType {
   FIXED = 'FIXED',
   SHARED = 'SHARED',
+  DYNAMIC = 'DYNAMIC',
 }
 
 export type TransferSummary = {
