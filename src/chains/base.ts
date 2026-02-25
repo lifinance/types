@@ -73,6 +73,7 @@ export enum ChainKey {
   MEG = 'meg',
   BOT = 'bot',
   JOV = 'jov',
+  MOP = 'mop',
 
   // None-EVM
   SOL = 'sol',
@@ -167,6 +168,7 @@ export enum ChainId {
   MEG = 4326,
   BOT = 3637,
   JOV = 5734951,
+  MOP = 2818,
 
   // None-EVM (IDs are made up by the LI.FI team)
   SOL = 1151111081099710,
