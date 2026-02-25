@@ -88,6 +88,7 @@ export enum CoinKey {
   USDT0 = 'USDT0', // Bridged USDT offered by LayerZero
   USDF = 'USDF', // Stablecoin on Flow: USD Flow
   USDm = 'USDm', // Stablecoin on MegaETH: MegaUSD
+  USD1 = 'USD1', // World Liberty Financial USD
 
   // Other tokens
   WBTC = 'WBTC',
