@@ -22,8 +22,8 @@ export interface StaticToken extends BaseToken {
   coinKey?: CoinKey
   logoURI?: string
   tags?: TokenTag[]
-  verificationStatus: VerificationStatus
-  verificationStatusBreakdown: VerificationStatusBreakdown[]
+  verificationStatus?: VerificationStatus
+  verificationStatusBreakdown?: VerificationStatusBreakdown[]
 }
 
 export interface Token extends StaticToken {
