@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.64.0](https://github.com/lifinance/types/compare/v17.63.0...v17.64.0) (2026-02-26)
+
+
+### Features
+
+* partners need dynamic fee type for fee resolve ([#496](https://github.com/lifinance/types/issues/496)) ([d3d0a95](https://github.com/lifinance/types/commit/d3d0a956e768d74e23d817cb663c1dff48ea6d69))
+
+## [17.63.0](https://github.com/lifinance/types/compare/v17.62.0...v17.63.0) (2026-02-25)
+
+
+### Features
+
+* add fogo chain ([#484](https://github.com/lifinance/types/issues/484)) ([46f9afd](https://github.com/lifinance/types/commit/46f9afdc96301abb6c5c8e9b62355e9ea1028a2b))
+* add Morph logo ([#495](https://github.com/lifinance/types/issues/495)) ([8620f85](https://github.com/lifinance/types/commit/8620f8590262a1cd4777dc3b8e998055e2ebc490))
+
+## [17.62.0](https://github.com/lifinance/types/compare/v17.61.0...v17.62.0) (2026-02-25)
+
+
+### Features
+
+* add Morph chain and tokens ([#494](https://github.com/lifinance/types/issues/494)) ([58674f3](https://github.com/lifinance/types/commit/58674f339841177634d0d19d349d42aba9cc790c))
+
 ## [17.61.0](https://github.com/lifinance/types/compare/v17.60.1-beta.0...v17.61.0) (2026-02-13)
 
 
