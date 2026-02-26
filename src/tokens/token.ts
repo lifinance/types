@@ -1,6 +1,15 @@
 import type { ChainId } from '../chains/base.js'
 import type { CoinKey } from './base.js'
 
+export type VerificationStatus = 'verified' | 'unverified' | 'flagged'
+
+export type VerificationStatusBreakdown = {
+  provider: string
+  result: VerificationStatus
+  providerResult?: string
+  reason?: string
+}
+
 export interface BaseToken {
   chainId: ChainId
   address: string
@@ -13,6 +22,8 @@ export interface StaticToken extends BaseToken {
   coinKey?: CoinKey
   logoURI?: string
   tags?: TokenTag[]
+  verificationStatus?: VerificationStatus
+  verificationStatusBreakdown?: VerificationStatusBreakdown[]
 }
 
 export interface Token extends StaticToken {
