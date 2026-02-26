@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [17.64.1](https://github.com/lifinance/types/compare/v17.64.0...v17.64.1) (2026-02-26)
+
+### [17.61.1-alpha.2](https://github.com/lifinance/types/compare/v17.61.1-alpha.1...v17.61.1-alpha.2) (2026-02-20)
+
+### [17.61.1-alpha.1](https://github.com/lifinance/types/compare/v17.61.1-alpha.0...v17.61.1-alpha.1) (2026-02-19)
+
+### [17.61.1-alpha.0](https://github.com/lifinance/types/compare/v17.61.0...v17.61.1-alpha.0) (2026-02-17)
+
+### [17.59.1-alpha.0](https://github.com/lifinance/types/compare/v17.59.0...v17.59.1-alpha.0) (2026-02-10)
+
 ## [17.64.0](https://github.com/lifinance/types/compare/v17.63.0...v17.64.0) (2026-02-26)
 
 

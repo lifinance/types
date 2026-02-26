@@ -888,6 +888,9 @@ export type TypedDataPrimaryType =
   | 'HyperliquidTransaction:UsdSend'
   | 'HyperliquidTransaction:SpotSend'
   | 'HyperliquidTransaction:SendAsset'
+  | 'HyperliquidTransaction:Withdraw'
+  | 'HyperliquidTransaction:ApproveAgent'
+  | 'Agent'
 
 /**
  * EIP-712 Typed Data
