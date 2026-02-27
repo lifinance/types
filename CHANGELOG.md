@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.65.0](https://github.com/lifinance/types/compare/v17.64.0...v17.65.0) (2026-02-27)
+
+
+### Features
+
+* add tempo chain ([#497](https://github.com/lifinance/types/issues/497)) ([b0aa3c1](https://github.com/lifinance/types/commit/b0aa3c14b7b7bf5fb460ead19b16fe8b2600febe))
+
 ### [17.64.1](https://github.com/lifinance/types/compare/v17.64.0...v17.64.1) (2026-02-26)
 
 ### [17.61.1-alpha.2](https://github.com/lifinance/types/compare/v17.61.1-alpha.1...v17.61.1-alpha.2) (2026-02-20)
