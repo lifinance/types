@@ -74,6 +74,7 @@ export enum ChainKey {
   BOT = 'bot',
   JOV = 'jov',
   MOP = 'mop',
+  TEM = 'tem',
 
   // None-EVM
   TER = 'ter',
@@ -172,6 +173,7 @@ export enum ChainId {
   BOT = 3637,
   JOV = 5734951,
   MOP = 2818,
+  TEM = 4217,
 
   // None-EVM (IDs are made up by the LI.FI team)
   TER = 1161011141099710,

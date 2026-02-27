@@ -94,6 +94,7 @@ export enum CoinKey {
   USDF = 'USDF', // Stablecoin on Flow: USD Flow
   USDm = 'USDm', // Stablecoin on MegaETH: MegaUSD
   USD1 = 'USD1', // World Liberty Financial USD
+  PathUSD = 'PathUSD', // Stablecoin on Tempo chain
 
   // Other tokens
   WBTC = 'WBTC',
