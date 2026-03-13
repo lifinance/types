@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.66.0](https://github.com/lifinance/types/compare/v17.65.0...v17.66.0) (2026-03-13)
+
+
+### Features
+
+* add pathUSD icon ([#498](https://github.com/lifinance/types/issues/498)) ([a4cdb2a](https://github.com/lifinance/types/commit/a4cdb2aaf7723e7f238ddb8fd99f6bd49f63dd0c))
+* add tempo logo ([#499](https://github.com/lifinance/types/issues/499)) ([90f3da8](https://github.com/lifinance/types/commit/90f3da84cd3a846ff03bd03530007081eb162a5b))
+* introduce tokens verified statuses ([#493](https://github.com/lifinance/types/issues/493)) ([b33770b](https://github.com/lifinance/types/commit/b33770b69d2a0fea6a95f7b9bea64a6656517fda))
+
 ## [17.65.0](https://github.com/lifinance/types/compare/v17.64.0...v17.65.0) (2026-02-27)
 
 
