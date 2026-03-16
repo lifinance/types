@@ -891,6 +891,7 @@ export type TypedDataPrimaryType =
   | 'HyperliquidTransaction:Withdraw'
   | 'HyperliquidTransaction:ApproveAgent'
   | 'Agent'
+  | 'NonceMapping'
 
 /**
  * EIP-712 Typed Data
