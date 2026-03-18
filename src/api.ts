@@ -22,6 +22,12 @@ import type {
   TokenTag,
 } from './tokens/index.js'
 
+export enum SVMPriorityFeeLevel {
+  NORMAL = 'NORMAL',
+  FAST = 'FAST',
+  ULTRA = 'ULTRA',
+}
+
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
  */
@@ -168,7 +174,7 @@ export interface RouteOptions extends RouteOptionsBase {
   svmSponsor?: string
 
   /** SVM specific option, priority fee level */
-  svmPriorityFeeLevel?: string
+  svmPriorityFeeLevel?: SVMPriorityFeeLevel
 
   /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
   mayanNonEvmPermitSignature?: boolean
@@ -389,7 +395,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   svmSponsor?: string
 
   /** SVM specific option, priority fee level */
-  svmPriorityFeeLevel?: string
+  svmPriorityFeeLevel?: SVMPriorityFeeLevel
 
   /** Preset configuration for stablecoin routing optimization
    * When provided, this preset will override other route options with optimized settings */
