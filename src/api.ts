@@ -167,6 +167,9 @@ export interface RouteOptions extends RouteOptionsBase {
   /** SVM specific option, wallet to sponsor tx costs */
   svmSponsor?: string
 
+  /** SVM specific option, priority fee level */
+  svmPriorityFeeLevel?: string
+
   /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
   mayanNonEvmPermitSignature?: boolean
 
@@ -384,6 +387,9 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
   /** SVM specific option, wallet to sponsor tx costs */
   svmSponsor?: string
+
+  /** SVM specific option, priority fee level */
+  svmPriorityFeeLevel?: string
 
   /** Preset configuration for stablecoin routing optimization
    * When provided, this preset will override other route options with optimized settings */
