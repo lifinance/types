@@ -96,6 +96,7 @@ export enum CoinKey {
   USD1 = 'USD1', // World Liberty Financial USD
   PathUSD = 'PathUSD', // Stablecoin on Tempo chain
   frxUSD = 'frxUSD', // Stablecoin on Fraxtal chain
+  EURC = 'EURC', // Stablecoin for Euro
 
   // Other tokens
   WBTC = 'WBTC',
