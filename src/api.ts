@@ -883,7 +883,6 @@ export const TypedDataPrimaryTypes = [
   'PermitWitnessTransferFrom',
   'PermitBatchWitnessTransferFrom',
   'Order',
-  'HyperliquidTransaction:Withdraw',
   'HyperliquidTransaction:UsdSend',
   'HyperliquidTransaction:SpotSend',
   'HyperliquidTransaction:SendAsset',
