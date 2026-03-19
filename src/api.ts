@@ -876,23 +876,24 @@ export type PermitWitnessTransferFromMessage<T extends bigint | string> =
   PermitBase<T> & {
     permitted: TokenPermissions<T>
   }
-
-export type TypedDataPrimaryType =
-  | 'Permit'
-  | 'PermitTransferFrom'
-  | 'PermitBatchTransferFrom'
-  | 'PermitWitnessTransferFrom'
-  | 'PermitBatchWitnessTransferFrom'
-  | 'Order'
-  | 'HyperliquidTransaction:Withdraw'
-  | 'HyperliquidTransaction:UsdSend'
-  | 'HyperliquidTransaction:SpotSend'
-  | 'HyperliquidTransaction:SendAsset'
-  | 'HyperliquidTransaction:Withdraw'
-  | 'HyperliquidTransaction:ApproveAgent'
-  | 'Agent'
-  | 'NonceMapping'
-  | 'HyperliquidTransaction:ApproveBuilderFee'
+export const TypedDataPrimaryTypes = [
+  'Permit',
+  'PermitTransferFrom',
+  'PermitBatchTransferFrom',
+  'PermitWitnessTransferFrom',
+  'PermitBatchWitnessTransferFrom',
+  'Order',
+  'HyperliquidTransaction:Withdraw',
+  'HyperliquidTransaction:UsdSend',
+  'HyperliquidTransaction:SpotSend',
+  'HyperliquidTransaction:SendAsset',
+  'HyperliquidTransaction:Withdraw',
+  'HyperliquidTransaction:ApproveAgent',
+  'Agent',
+  'NonceMapping',
+  'HyperliquidTransaction:ApproveBuilderFee',
+] as const
+export type TypedDataPrimaryType = (typeof TypedDataPrimaryTypes)[number]
 
 /**
  * EIP-712 Typed Data
