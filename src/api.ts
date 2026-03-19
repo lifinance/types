@@ -892,6 +892,7 @@ export type TypedDataPrimaryType =
   | 'HyperliquidTransaction:ApproveAgent'
   | 'Agent'
   | 'NonceMapping'
+  | 'HyperliquidTransaction:ApproveBuilderFee'
 
 /**
  * EIP-712 Typed Data
