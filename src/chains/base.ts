@@ -96,6 +96,9 @@ export enum ChainKey {
 
   // Tron
   TRN = 'trn',
+
+  // Testnet
+  ARCT = 'arct',
 }
 
 export enum ChainId {
@@ -195,4 +198,7 @@ export enum ChainId {
 
   // Tron
   TRN = 728126428,
+
+  // Testnet
+  ARCT = 5042002,
 }
