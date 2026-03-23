@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [17.68.1](https://github.com/lifinance/types/compare/v17.68.0...v17.68.1) (2026-03-20)
+
+## [17.68.0](https://github.com/lifinance/types/compare/v17.67.1...v17.68.0) (2026-03-19)
+
+
+### Features
+
+* add Arct testnet chain ([#506](https://github.com/lifinance/types/issues/506)) ([a3dc3c2](https://github.com/lifinance/types/commit/a3dc3c21f9d9905b059b129f5f19dd88394ccfe5))
+* add houdini logo ([#503](https://github.com/lifinance/types/issues/503)) ([876df48](https://github.com/lifinance/types/commit/876df48d715966e2c209436fc024013892d33fd8))
+
+### [17.67.1](https://github.com/lifinance/types/compare/v17.67.0...v17.67.1) (2026-03-16)
+
+## [17.67.0](https://github.com/lifinance/types/compare/v17.66.0...v17.67.0) (2026-03-13)
+
+
+### Features
+
+* add frxUSD token and bitget logo ([#500](https://github.com/lifinance/types/issues/500)) ([7885438](https://github.com/lifinance/types/commit/7885438d7983a22f92f286966780c8b24e3caa33))
+
 ## [17.66.0](https://github.com/lifinance/types/compare/v17.65.0...v17.66.0) (2026-03-13)
 
 
