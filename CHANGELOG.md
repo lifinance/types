@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.69.0](https://github.com/lifinance/types/compare/v17.68.1...v17.69.0) (2026-03-24)
+
+
+### Features
+
+* add arct icon ([#507](https://github.com/lifinance/types/issues/507)) ([c80b115](https://github.com/lifinance/types/commit/c80b115c3cb93ca9e0ce3bae19d8994a5cc336b5))
+* add stellar base types ([#508](https://github.com/lifinance/types/issues/508)) ([75338c2](https://github.com/lifinance/types/commit/75338c28f4bad52dfc58292644561d71478d574c))
+
 ### [17.68.1](https://github.com/lifinance/types/compare/v17.68.0...v17.68.1) (2026-03-20)
 
 ## [17.68.0](https://github.com/lifinance/types/compare/v17.67.1...v17.68.0) (2026-03-19)
