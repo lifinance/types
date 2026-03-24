@@ -68,6 +68,9 @@ export enum CoinKey {
   TRX = 'TRX',
   WTRX = 'WTRX',
 
+  // Stellar
+  XLM = 'XLM',
+
   // Tether Gold
   XAUt = 'XAUt',
 
