@@ -11,6 +11,8 @@ export enum ChainType {
   UTXO = 'UTXO',
   // Tron virtual machine
   TVM = 'TVM',
+  // Stellar consensus protocol
+  STL = 'STL',
 }
 
 export interface _Chain {

@@ -97,6 +97,9 @@ export enum ChainKey {
   // Tron
   TRN = 'trn',
 
+  // Stellar
+  XLM = 'xlm',
+
   // Testnet
   ARCT = 'arct',
 }
@@ -198,6 +201,9 @@ export enum ChainId {
 
   // Tron
   TRN = 728126428,
+
+  // Stellar (ID pattern: ASCII decimal of lowercase key letters + 1099710 suffix, x=120, l=108, m=109)
+  XLM = 1201081091099710,
 
   // Testnet
   ARCT = 5042002,
