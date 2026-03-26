@@ -45,6 +45,7 @@ export enum CoinKey {
   FLOW = 'FLOW', // Flow native
   MON = 'MON', // Monad native
   GUSDT = 'GUSDT', // Stable native (Gas USDT)
+  ZEROG = '0G', // 0G native
 
   // SVM
   SOL = 'SOL',
@@ -137,4 +138,5 @@ export enum CoinKey {
   WMON = 'WMON', // Monad Wrapped Native
   pBTC = 'pBTC', // Botanix Wrapped Native
   WTLOS = 'WTLOS', // Telos Wrapped Native
+  W0G = 'W0G', // 0G Wrapped Native
 }
