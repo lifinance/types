@@ -1,3 +1,4 @@
+// Please ensure the key and value are the same, only case difference is allowed,
 export enum ChainKey {
   // EVM
   ETH = 'eth',
@@ -75,7 +76,7 @@ export enum ChainKey {
   JOV = 'jov',
   MOP = 'mop',
   TEM = 'tem',
-  ZEROG = '0g',
+  ZEROG = 'zerog',
 
   // None-EVM
   TER = 'ter',
