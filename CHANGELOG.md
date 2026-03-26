@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.71.0](https://github.com/lifinance/types/compare/v17.70.0...v17.71.0) (2026-03-26)
+
+
+### Features
+
+* update 0G chainkey to ZEROG ([#510](https://github.com/lifinance/types/issues/510)) ([6ddae73](https://github.com/lifinance/types/commit/6ddae7342a3408534c2ff091653535eef0d47120))
+
 ## [17.70.0](https://github.com/lifinance/types/compare/v17.69.0...v17.70.0) (2026-03-26)
 
 
