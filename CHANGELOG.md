@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.72.0](https://github.com/lifinance/types/compare/v17.71.0...v17.72.0) (2026-03-30)
+
+
+### Features
+
+* add 0g icon ([#512](https://github.com/lifinance/types/issues/512)) ([12b9729](https://github.com/lifinance/types/commit/12b9729b535ac9b4baedcd6ea10a56e9fc0f72f4))
+* add new chain Arbitrum Nova ([#511](https://github.com/lifinance/types/issues/511)) ([105f41b](https://github.com/lifinance/types/commit/105f41b4c671832407f07f8acbac4dd88039cf7a))
+
 ## [17.71.0](https://github.com/lifinance/types/compare/v17.70.0...v17.71.0) (2026-03-26)
 
 
