@@ -104,6 +104,7 @@ export enum ChainKey {
 
   // Testnet
   ARCT = 'arct',
+  OPST = 'opst',
 }
 
 export enum ChainId {
@@ -210,4 +211,5 @@ export enum ChainId {
 
   // Testnet
   ARCT = 5042002,
+  OPST = 11155420,
 }
