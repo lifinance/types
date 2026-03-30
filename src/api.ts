@@ -512,6 +512,7 @@ export type GetStatusRequest = {
   bridge?: string
   fromChain?: number | string
   toChain?: number | string
+  depositAddress?: string
 } & ({ txHash: string } | { taskId: string })
 
 export interface BaseTransactionInfo {
@@ -565,6 +566,16 @@ const _SubstatusPending = [
   'REFUND_IN_PROGRESS',
   // We cannot determine the status of the transfer
   'UNKNOWN_ERROR',
+  // Intent is waiting for funds to arrive at the smart contract account
+  'INTENT_AWAITING_FUNDS',
+  // Intent funds detected, preparing execution
+  'INTENT_READY',
+  // Intent is being executed by solver
+  'INTENT_EXECUTING',
+  // Intent execution failed, solver retrying
+  'INTENT_FAILED_RETRYABLE',
+  // Intent simulation failed, solver retrying
+  'INTENT_SIMULATION_FAILURE',
 ] as const
 export type SubstatusPending = (typeof _SubstatusPending)[number]
 
