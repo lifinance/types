@@ -1,3 +1,4 @@
+// Please ensure the key and value are the same, only case difference is allowed,
 export enum ChainKey {
   // EVM
   ETH = 'eth',
@@ -75,6 +76,7 @@ export enum ChainKey {
   JOV = 'jov',
   MOP = 'mop',
   TEM = 'tem',
+  ZEROG = 'zerog',
 
   // None-EVM
   TER = 'ter',
@@ -97,8 +99,14 @@ export enum ChainKey {
   // Tron
   TRN = 'trn',
 
+  // Stellar
+  XLM = 'xlm',
+
   // Testnet
   ARCT = 'arct',
+  OPST = 'opst',
+  BAST = 'bast',
+  ARBS = 'arbs',
 }
 
 export enum ChainId {
@@ -177,6 +185,7 @@ export enum ChainId {
   JOV = 5734951,
   MOP = 2818,
   TEM = 4217,
+  ZEROG = 16661,
 
   // None-EVM (IDs are made up by the LI.FI team)
   TER = 1161011141099710,
@@ -199,6 +208,12 @@ export enum ChainId {
   // Tron
   TRN = 728126428,
 
+  // Stellar (ID pattern: ASCII decimal of lowercase key letters + 1099710 suffix, x=120, l=108, m=109)
+  XLM = 1201081091099710,
+
   // Testnet
   ARCT = 5042002,
+  OPST = 11155420,
+  BAST = 84532,
+  ARBS = 421614,
 }

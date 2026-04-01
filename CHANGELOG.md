@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.73.0](https://github.com/lifinance/types/compare/v17.72.0...v17.73.0) (2026-04-01)
+
+
+### Features
+
+* add new chains Base Sepolia and Arbitrum Sepolia ([#515](https://github.com/lifinance/types/issues/515)) ([323c280](https://github.com/lifinance/types/commit/323c28021995d5b8f6d07ce01fc9256a551ecf2b))
+
+## [17.72.0](https://github.com/lifinance/types/compare/v17.71.0...v17.72.0) (2026-03-30)
+
+
+### Features
+
+* add 0g icon ([#512](https://github.com/lifinance/types/issues/512)) ([12b9729](https://github.com/lifinance/types/commit/12b9729b535ac9b4baedcd6ea10a56e9fc0f72f4))
+* add new chain Arbitrum Nova ([#511](https://github.com/lifinance/types/issues/511)) ([105f41b](https://github.com/lifinance/types/commit/105f41b4c671832407f07f8acbac4dd88039cf7a))
+
+## [17.71.0](https://github.com/lifinance/types/compare/v17.70.0...v17.71.0) (2026-03-26)
+
+
+### Features
+
+* update 0G chainkey to ZEROG ([#510](https://github.com/lifinance/types/issues/510)) ([6ddae73](https://github.com/lifinance/types/commit/6ddae7342a3408534c2ff091653535eef0d47120))
+
+## [17.70.0](https://github.com/lifinance/types/compare/v17.69.0...v17.70.0) (2026-03-26)
+
+
+### Features
+
+* add 0G chain and token ([#509](https://github.com/lifinance/types/issues/509)) ([11e66cb](https://github.com/lifinance/types/commit/11e66cbb1d5a3715c64018bcc2b8aeaf3d6369f9))
+
+## [17.69.0](https://github.com/lifinance/types/compare/v17.68.1...v17.69.0) (2026-03-24)
+
+
+### Features
+
+* add arct icon ([#507](https://github.com/lifinance/types/issues/507)) ([c80b115](https://github.com/lifinance/types/commit/c80b115c3cb93ca9e0ce3bae19d8994a5cc336b5))
+* add stellar base types ([#508](https://github.com/lifinance/types/issues/508)) ([75338c2](https://github.com/lifinance/types/commit/75338c28f4bad52dfc58292644561d71478d574c))
+
 ### [17.68.1](https://github.com/lifinance/types/compare/v17.68.0...v17.68.1) (2026-03-20)
 
 ## [17.68.0](https://github.com/lifinance/types/compare/v17.67.1...v17.68.0) (2026-03-19)
