@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.73.0](https://github.com/lifinance/types/compare/v17.72.0...v17.73.0) (2026-04-01)
+
+
+### Features
+
+* add new chains Base Sepolia and Arbitrum Sepolia ([#515](https://github.com/lifinance/types/issues/515)) ([323c280](https://github.com/lifinance/types/commit/323c28021995d5b8f6d07ce01fc9256a551ecf2b))
+
 ## [17.72.0](https://github.com/lifinance/types/compare/v17.71.0...v17.72.0) (2026-03-30)
 
 
