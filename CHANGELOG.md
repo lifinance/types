@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.74.0](https://github.com/lifinance/types/compare/v17.73.0...v17.74.0) (2026-04-01)
+
+
+### Features
+
+* add optional svmPriorityFeeLevel api param ([#504](https://github.com/lifinance/types/issues/504)) ([8930888](https://github.com/lifinance/types/commit/8930888816642cafe9f34f45433085a3b5f18cc8))
+
 ## [17.73.0](https://github.com/lifinance/types/compare/v17.72.0...v17.73.0) (2026-04-01)
 
 
