@@ -512,6 +512,7 @@ export type GetStatusRequest = {
   bridge?: string
   fromChain?: number | string
   toChain?: number | string
+  transactionId?: string
 } & ({ txHash: string } | { taskId: string })
 
 export interface BaseTransactionInfo {
