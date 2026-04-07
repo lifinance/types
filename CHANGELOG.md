@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.75.0](https://github.com/lifinance/types/compare/v17.74.0...v17.75.0) (2026-04-07)
+
+
+### Features
+
+* add optional txId to status request ([#482](https://github.com/lifinance/types/issues/482)) ([6225771](https://github.com/lifinance/types/commit/6225771ef9c5088784c819a9da2cbdbe51286da8))
+
 ## [17.74.0](https://github.com/lifinance/types/compare/v17.73.0...v17.74.0) (2026-04-01)
 
 
