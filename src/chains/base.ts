@@ -77,6 +77,7 @@ export enum ChainKey {
   MOP = 'mop',
   TEM = 'tem',
   ZEROG = 'zerog',
+  PHR = 'phr',
 
   // None-EVM
   TER = 'ter',
@@ -186,6 +187,7 @@ export enum ChainId {
   MOP = 2818,
   TEM = 4217,
   ZEROG = 16661,
+  PHR = 1672,
 
   // None-EVM (IDs are made up by the LI.FI team)
   TER = 1161011141099710,

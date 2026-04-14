@@ -46,6 +46,8 @@ export enum CoinKey {
   MON = 'MON', // Monad native
   GUSDT = 'GUSDT', // Stable native (Gas USDT)
   ZEROG = '0G', // 0G native
+  PROS = 'PROS', // Pharos native
+  WPROS = 'WPROS', // Wrapped Pharos
 
   // SVM
   SOL = 'SOL',
