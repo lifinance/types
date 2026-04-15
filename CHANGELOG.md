@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.76.0](https://github.com/lifinance/types/compare/v17.75.1...v17.76.0) (2026-04-15)
+
+
+### Features
+
+* add new chain Pharos Mainnet ([#519](https://github.com/lifinance/types/issues/519)) ([3ba1c65](https://github.com/lifinance/types/commit/3ba1c650333ed3830d4ab3f2fcfea1cf1e49d676))
+
+
+### Bug Fixes
+
+* **security:** AI Fix for 3rd party Github Actions should be pinned ([#518](https://github.com/lifinance/types/issues/518)) ([0bae281](https://github.com/lifinance/types/commit/0bae2812607bd812357128eab9624844cbfcf892))
+
 ### [17.75.1](https://github.com/lifinance/types/compare/v17.75.0...v17.75.1) (2026-04-09)
 
 ## [17.75.0](https://github.com/lifinance/types/compare/v17.74.0...v17.75.0) (2026-04-07)
