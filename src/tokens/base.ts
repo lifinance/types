@@ -107,6 +107,7 @@ export enum CoinKey {
   // Other tokens
   WBTC = 'WBTC',
   WETH = 'WETH',
+  LINK = 'LINK', // Chainlink Token
   SUSHI = 'SUSHI',
   DODO = 'DODO',
   MCB = 'MCB',
