@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.77.0](https://github.com/lifinance/types/compare/v17.76.0...v17.77.0) (2026-04-16)
+
+
+### Features
+
+* **intent factory:** extend types with if substatus values and deposit ([#514](https://github.com/lifinance/types/issues/514)) ([a706132](https://github.com/lifinance/types/commit/a70613217d8196da66b7a1bf929dd1265b46f81e))
+
 ## [17.76.0](https://github.com/lifinance/types/compare/v17.75.1...v17.76.0) (2026-04-15)
 
 
