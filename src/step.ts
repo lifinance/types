@@ -101,6 +101,9 @@ export interface StepBase {
   tool: StepTool
   toolDetails: StepToolDetails
   integrator?: string
+  /** Intermediary identifier set when the route was generated with a multi-party fee split.
+   *  Threaded through to /stepTransaction so the same split can be reproduced at tx-generation time. */
+  intermediary?: string
   referrer?: string
   action: Action
   estimate?: Estimate
