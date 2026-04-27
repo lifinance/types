@@ -14,6 +14,11 @@ export interface FeeCost {
   amount: string
   amountUSD: string
   included: boolean
+  feeSplit?: {
+    lifiFee: string
+    integratorFee: string
+    intermediaryFee?: string
+  }
 }
 
 export interface GasCost {
