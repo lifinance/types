@@ -15,6 +15,10 @@ export interface FeeRecipient {
   feeType: FeeRecipientType
   /** Absolute fee amount, in source token base units (string-encoded). */
   fee: string
+  /**
+   * Recipient wallet address on the source chain.
+   */
+  walletAddress?: string
 }
 
 export interface FeeCost {
