@@ -29,12 +29,12 @@ export interface FeeCost {
   amount: string
   amountUSD: string
   included: boolean
-  /**
-   * Per-recipient fee breakdown. Sum of `fee` across entries equals `amount`.
-   * Always includes a `'lifi'` entry; integrator and intermediary entries are
-   * present when a non-zero share applies.
-   */
-  feeSplit?: FeeRecipient[]
+  feeSplit?: {
+    lifiFee: string
+    integratorFee: string
+    intermediaryFee?: string
+    recipients?: FeeRecipient[]
+  }
 }
 
 export interface GasCost {
