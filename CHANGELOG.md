@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.78.0](https://github.com/lifinance/types/compare/v17.77.0...v17.78.0) (2026-04-29)
+
+
+### Features
+
+* add new chain Lighter ([#521](https://github.com/lifinance/types/issues/521)) ([5d4705a](https://github.com/lifinance/types/commit/5d4705acb1ad541cc53b225c1991226f3ef91d1d))
+
 ## [17.77.0](https://github.com/lifinance/types/compare/v17.76.0...v17.77.0) (2026-04-16)
 
 
