@@ -6,6 +6,17 @@ import type {
 } from './api.js'
 import type { Token } from './tokens/index.js'
 
+export type FeeRecipientType = 'FIXED' | 'SHARED' | 'DYNAMIC' | 'INTERMEDIARY'
+
+export interface FeeRecipient {
+  /** Integration identifier — `'lifi'` for LI.FI, otherwise the integrator/intermediary id. */
+  integration: string
+  /** How this recipient's fee was calculated. */
+  feeType: FeeRecipientType
+  /** Absolute fee amount, in source token base units (string-encoded). */
+  fee: string
+}
+
 export interface FeeCost {
   name: string
   description: string
@@ -14,11 +25,12 @@ export interface FeeCost {
   amount: string
   amountUSD: string
   included: boolean
-  feeSplit?: {
-    lifiFee: string
-    integratorFee: string
-    intermediaryFee?: string
-  }
+  /**
+   * Per-recipient fee breakdown. Sum of `fee` across entries equals `amount`.
+   * Always includes a `'lifi'` entry; integrator and intermediary entries are
+   * present when a non-zero share applies.
+   */
+  feeSplit?: FeeRecipient[]
 }
 
 export interface GasCost {
