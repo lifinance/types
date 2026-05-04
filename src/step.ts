@@ -6,6 +6,22 @@ import type {
 } from './api.js'
 import type { Token } from './tokens/index.js'
 
+/**
+ * How a fee was calculated / the role of the recipient in the split.
+ *
+ * - `FIXED` — a fixed LI.FI cut applied alongside the integrator's own fee.
+ * - `SHARED` — a single shared pool divided between LI.FI and the integrator.
+ * - `DYNAMIC` — fee resolved at quote time from configured rules (e.g. dynamic
+ *   stablecoin pricing).
+ * - `INTERMEDIARY` — a third-party recipient that carves a configured share
+ *   from the integrator pool (e.g. a widget or aggregator).
+ * - `DISTRIBUTION` — a partner-specified extra recipient added in parallel to
+ *   the integrator/intermediary split via the `distributionFees` request param.
+ *
+ * The union is expected to grow over time. When pattern-matching with a
+ * `switch`, always include a `default` branch so adding a new value remains
+ * a non-breaking minor for consumers.
+ */
 export type FeeSplitType =
   | 'FIXED'
   | 'SHARED'
@@ -14,11 +30,25 @@ export type FeeSplitType =
   | 'DISTRIBUTION'
 
 export interface FeeRecipient {
-  /** Recipient identifier — `'lifi'` for LI.FI, the integrator id, the intermediary id, or a partner wallet for distribution entries. */
+  /**
+   * Recipient identifier. Polymorphic — interpret in conjunction with `type`:
+   * - `'lifi'` for the LI.FI platform recipient,
+   * - the integrator id (e.g. `'jumper'`) for the integrator recipient,
+   * - the intermediary id (e.g. `'mesh'`) when `type === 'INTERMEDIARY'`,
+   * - the recipient wallet address when `type === 'DISTRIBUTION'`.
+   *
+   * Do not display this value directly in user-facing UI without
+   * `type`-aware formatting — for `DISTRIBUTION` rows the value is a
+   * raw hex address.
+   */
   name: string
   /** Absolute fee amount, in source token base units (string-encoded). */
   fee: string
-  /** How this recipient's fee was calculated / its role in the split. */
+  /**
+   * Fee calculation type. Absent when not statically determinable (e.g.
+   * an integrator entry whose `feeType` could not be resolved from the
+   * matching planned fee cost). Consumers should null-check before reading.
+   */
   type?: FeeSplitType
   /** Recipient wallet address on the source chain. */
   walletAddress?: string
@@ -33,9 +63,33 @@ export interface FeeCost {
   amountUSD: string
   included: boolean
   feeSplit?: {
+    /** Sum of LI.FI's portion of the fee. */
     lifiFee: string
+    /**
+     * Aggregate of every non-LI.FI recipient (integrator + intermediary +
+     * any distribution entries). Provided for backward compatibility with
+     * 2-recipient consumers; new consumers should iterate `recipients`.
+     *
+     * NOTE: this value already includes `intermediaryFee` (and any
+     * distribution-recipient amounts). The legacy aggregate fields are
+     * not disjoint — never compute `lifiFee + integratorFee + intermediaryFee`
+     * to derive the parent `FeeCost.amount`; that double-counts the
+     * intermediary. The parent `amount` is the total.
+     */
     integratorFee: string
+    /**
+     * Sum of the intermediary recipient's portion when `type === 'INTERMEDIARY'`
+     * is present in `recipients`. Absent when no intermediary participates.
+     *
+     * NOTE: this value is also included in `integratorFee` above. Provided
+     * separately for consumers that need to attribute the intermediary slice
+     * without iterating `recipients`.
+     */
     intermediaryFee?: string
+    /**
+     * Per-recipient fee breakdown. Source of truth for new consumers; the
+     * aggregate fields above are derived sums kept for backward compatibility.
+     */
     recipients?: FeeRecipient[]
   }
 }
