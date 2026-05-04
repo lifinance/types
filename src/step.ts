@@ -6,18 +6,21 @@ import type {
 } from './api.js'
 import type { Token } from './tokens/index.js'
 
-export type FeeRecipientType = 'FIXED' | 'SHARED' | 'DYNAMIC' | 'INTERMEDIARY'
+export type FeeSplitType =
+  | 'FIXED'
+  | 'SHARED'
+  | 'DYNAMIC'
+  | 'INTERMEDIARY'
+  | 'DISTRIBUTION'
 
 export interface FeeRecipient {
-  /** Integration identifier — `'lifi'` for LI.FI, otherwise the integrator/intermediary id. */
-  integration: string
-  /** How this recipient's fee was calculated. */
-  feeType: FeeRecipientType
+  /** Recipient identifier — `'lifi'` for LI.FI, the integrator id, the intermediary id, or a partner wallet for distribution entries. */
+  name: string
   /** Absolute fee amount, in source token base units (string-encoded). */
   fee: string
-  /**
-   * Recipient wallet address on the source chain.
-   */
+  /** How this recipient's fee was calculated / its role in the split. */
+  type?: FeeSplitType
+  /** Recipient wallet address on the source chain. */
   walletAddress?: string
 }
 
