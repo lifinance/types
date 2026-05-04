@@ -63,24 +63,29 @@ export interface FeeCost {
   amountUSD: string
   included: boolean
   feeSplit?: {
-    /** LI.FI's slice of the fee. */
+    /** LI.FI's slice of THIS `FeeCost.amount`. */
     lifiFee: string
     /**
-     * The integrator's slice of the fee — the integrator's portion only,
-     * NOT including any intermediary or distribution-recipient amounts.
+     * The integrator's slice of THIS `FeeCost.amount` — the integrator's
+     * portion only, NOT including any intermediary or distribution amounts.
      */
     integratorFee: string
     /**
-     * The intermediary's slice when an intermediary participates in the
-     * split. Absent otherwise.
+     * The intermediary's slice of THIS `FeeCost.amount` when an intermediary
+     * participates in the split. Absent otherwise.
      */
     intermediaryFee?: string
     /**
-     * Per-recipient fee breakdown. Source of truth for new consumers — the
-     * aggregate fields above are disjoint slices kept for backward
-     * compatibility with 2-recipient consumers and can be summed alongside
-     * `recipients[]` of `type: 'DISTRIBUTION'` entries to derive the parent
-     * `FeeCost.amount`. New consumers should iterate `recipients` directly.
+     * Per-recipient breakdown of THIS `FeeCost.amount`. Source of truth for
+     * new consumers — the aggregate fields above are disjoint slices kept
+     * for backward compatibility with 2-recipient consumers.
+     *
+     * Note: partner-specified distribution recipients are emitted as
+     * separate `FeeCost` entries (one per receiver, `name: "Fee Forward"`)
+     * at quote/route estimation time. At status-response time the same
+     * recipients may appear merged on the integrator's `FeeCost` for
+     * compactness. Iterate `estimate.feeCosts[]` to discover all
+     * recipients across both shapes.
      */
     recipients?: FeeRecipient[]
   }
