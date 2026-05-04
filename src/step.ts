@@ -63,32 +63,24 @@ export interface FeeCost {
   amountUSD: string
   included: boolean
   feeSplit?: {
-    /** Sum of LI.FI's portion of the fee. */
+    /** LI.FI's slice of the fee. */
     lifiFee: string
     /**
-     * Aggregate of every non-LI.FI recipient (integrator + intermediary +
-     * any distribution entries). Provided for backward compatibility with
-     * 2-recipient consumers; new consumers should iterate `recipients`.
-     *
-     * NOTE: this value already includes `intermediaryFee` (and any
-     * distribution-recipient amounts). The legacy aggregate fields are
-     * not disjoint — never compute `lifiFee + integratorFee + intermediaryFee`
-     * to derive the parent `FeeCost.amount`; that double-counts the
-     * intermediary. The parent `amount` is the total.
+     * The integrator's slice of the fee — the integrator's portion only,
+     * NOT including any intermediary or distribution-recipient amounts.
      */
     integratorFee: string
     /**
-     * Sum of the intermediary recipient's portion when `type === 'INTERMEDIARY'`
-     * is present in `recipients`. Absent when no intermediary participates.
-     *
-     * NOTE: this value is also included in `integratorFee` above. Provided
-     * separately for consumers that need to attribute the intermediary slice
-     * without iterating `recipients`.
+     * The intermediary's slice when an intermediary participates in the
+     * split. Absent otherwise.
      */
     intermediaryFee?: string
     /**
-     * Per-recipient fee breakdown. Source of truth for new consumers; the
-     * aggregate fields above are derived sums kept for backward compatibility.
+     * Per-recipient fee breakdown. Source of truth for new consumers — the
+     * aggregate fields above are disjoint slices kept for backward
+     * compatibility with 2-recipient consumers and can be summed alongside
+     * `recipients[]` of `type: 'DISTRIBUTION'` entries to derive the parent
+     * `FeeCost.amount`. New consumers should iterate `recipients` directly.
      */
     recipients?: FeeRecipient[]
   }
