@@ -1,10 +1,3 @@
-import type {
-  Address,
-  Hash,
-  Hex,
-  TypedDataDomain,
-  TypedDataParameter,
-} from 'viem'
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
@@ -21,6 +14,13 @@ import type {
   TokenExtended,
   TokenTag,
 } from './tokens/index.js'
+import type {
+  Address,
+  Hash,
+  Hex,
+  TypedDataDomain,
+  TypedDataParameter,
+} from './typed-data.js'
 
 export enum SVMPriorityFeeLevel {
   NORMAL = 'NORMAL',
