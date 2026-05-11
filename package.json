@@ -75,9 +75,6 @@
       "pnpm run prettier:fix"
     ]
   },
-  "dependencies": {
-    "viem": "^2.33.2"
-  },
   "devDependencies": {
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
