@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.80.0](https://github.com/lifinance/types/compare/v17.79.0...v17.80.0) (2026-05-11)
+
+
+### Features
+
+* drop viem dependency in favor of local typed-data declarations ([#524](https://github.com/lifinance/types/issues/524)) ([5ae66a5](https://github.com/lifinance/types/commit/5ae66a5d25d1dc640c237e29bba20116539b2916))
+
 ## [17.79.0](https://github.com/lifinance/types/compare/v17.78.0...v17.79.0) (2026-05-07)
 
 
