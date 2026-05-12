@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.81.0](https://github.com/lifinance/types/compare/v17.80.0...v17.81.0) (2026-05-12)
+
+
+### Features
+
+* be tag rwa tokens via coingecko categories ([#522](https://github.com/lifinance/types/issues/522)) ([f1bee5f](https://github.com/lifinance/types/commit/f1bee5f47c07feeea7877103a2d29306e03ecde0))
+
 ## [17.80.0](https://github.com/lifinance/types/compare/v17.79.0...v17.80.0) (2026-05-11)
 
 
