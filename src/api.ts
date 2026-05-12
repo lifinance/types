@@ -179,6 +179,12 @@ export interface RouteOptions extends RouteOptionsBase {
   /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
   mayanNonEvmPermitSignature?: boolean
 
+  /** Solana specific option, maximum byte size of the aggregator swap instructions
+   * returned for Solana swaps. Must be <= 1232 (Solana max packet size).
+   * Aggregators that don't support a size constraint are skipped when this value
+   * is set on a same-chain Solana swap. */
+  solanaSwapIxSizeLimit?: number
+
   /** Preset configuration for stablecoin routing optimization.
    * When provided, this preset will override other route options with optimized settings */
   preset?: string
@@ -396,6 +402,12 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
   /** SVM specific option, priority fee level */
   svmPriorityFeeLevel?: SVMPriorityFeeLevel
+
+  /** Solana specific option, maximum byte size of the aggregator swap instructions
+   * returned for Solana swaps. Must be <= 1232 (Solana max packet size).
+   * Aggregators that don't support a size constraint are skipped when this value
+   * is set on a same-chain Solana swap. */
+  solanaSwapIxSizeLimit?: number
 
   /** Preset configuration for stablecoin routing optimization
    * When provided, this preset will override other route options with optimized settings */
