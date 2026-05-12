@@ -164,10 +164,6 @@ export interface RouteOptions extends RouteOptionsBase {
   /** Should contain the identifier of the integrator. Usually, it's dApp/company name. */
   integrator?: string
 
-  /** Optional intermediary identifier for multi-party fee splitting.
-   *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
-  intermediary?: string
-
   /** Integrators can set a wallet address as a referrer to track them */
   referrer?: string
 
@@ -372,9 +368,6 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   order?: Order
   slippage?: number | string
   integrator?: string
-  /** Optional intermediary identifier for multi-party fee splitting.
-   *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
-  intermediary?: string
   referrer?: string
   fee?: number | string
 
