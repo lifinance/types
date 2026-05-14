@@ -672,6 +672,11 @@ export interface ExtendedChain extends Chain {
   diamondAddress?: string
   permit2?: string
   permit2Proxy?: string
+  /**
+   * Whether the chain has a non-standard native decimals handling like Tempo or Stable
+   * @default false
+   */
+  nonStandardNativeDecimals?: boolean
 }
 
 export interface ChainsResponse {
