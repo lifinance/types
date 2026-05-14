@@ -48,6 +48,8 @@ export enum CoinKey {
   ZEROG = '0G', // 0G native
   PROS = 'PROS', // Pharos native
   WPROS = 'WPROS', // Wrapped Pharos
+  SOMI = 'SOMI', // Somnia native
+  WSOMI = 'WSOMI', // Somnia Wrapped Native
 
   // SVM
   SOL = 'SOL',
