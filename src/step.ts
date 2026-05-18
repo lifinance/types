@@ -30,8 +30,7 @@ export type FeeSplitType =
   | 'DISTRIBUTION'
 
 export interface FeeRecipient {
-  /**
-   * Recipient identifier. Polymorphic — interpret in conjunction with `type`:
+  /** Recipient identifier. Polymorphic — interpret in conjunction with `type`:
    * - `'lifi'` for the LI.FI platform recipient,
    * - the integrator id (e.g. `'jumper'`) for the integrator recipient,
    * - the intermediary id (e.g. `'mesh'`) when `type === 'INTERMEDIARY'`,
@@ -39,19 +38,44 @@ export interface FeeRecipient {
    *
    * Do not display this value directly in user-facing UI without
    * `type`-aware formatting — for `DISTRIBUTION` rows the value is a
-   * raw hex address.
-   */
+   * raw hex address. */
   name: string
-  /** Absolute fee amount, in source token base units (string-encoded). */
+
+  /** Absolute fee amount, a big number in source token base units (string-encoded). */
   fee: string
-  /**
-   * Fee calculation type. Absent when not statically determinable (e.g.
+
+  /** Fee calculation type. Absent when not statically determinable (e.g.
    * an integrator entry whose `feeType` could not be resolved from the
-   * matching planned fee cost). Consumers should null-check before reading.
-   */
+   * matching planned fee cost). Consumers should null-check before reading. */
   type?: FeeSplitType
+
   /** Recipient wallet address on the source chain. */
   walletAddress?: string
+}
+
+export interface FeeSplit {
+  /** LI.FI's slice of THIS `FeeCost.amount`. */
+  lifiFee: string
+
+  /** The integrator's slice of THIS `FeeCost.amount` — the integrator's
+   * portion only, NOT including any intermediary or distribution amounts. */
+  integratorFee: string
+
+  /** The intermediary's slice of THIS `FeeCost.amount` when an intermediary
+   * participates in the split. Absent otherwise. */
+  intermediaryFee?: string
+
+  /** Per-recipient breakdown of THIS `FeeCost.amount`. Source of truth for
+   * new consumers — the aggregate fields above are disjoint slices kept
+   * for backward compatibility with 2-recipient consumers.
+   *
+   * Note: partner-specified distribution recipients are emitted as
+   * separate `FeeCost` entries (one per receiver, `name: "Fee Forward"`)
+   * at quote/route estimation time. At status-response time the same
+   * recipients may appear merged on the integrator's `FeeCost` for
+   * compactness. Iterate `estimate.feeCosts[]` to discover all
+   * recipients across both shapes. */
+  recipients?: FeeRecipient[]
 }
 
 export interface FeeCost {
@@ -62,33 +86,8 @@ export interface FeeCost {
   amount: string
   amountUSD: string
   included: boolean
-  feeSplit?: {
-    /** LI.FI's slice of THIS `FeeCost.amount`. */
-    lifiFee: string
-    /**
-     * The integrator's slice of THIS `FeeCost.amount` — the integrator's
-     * portion only, NOT including any intermediary or distribution amounts.
-     */
-    integratorFee: string
-    /**
-     * The intermediary's slice of THIS `FeeCost.amount` when an intermediary
-     * participates in the split. Absent otherwise.
-     */
-    intermediaryFee?: string
-    /**
-     * Per-recipient breakdown of THIS `FeeCost.amount`. Source of truth for
-     * new consumers — the aggregate fields above are disjoint slices kept
-     * for backward compatibility with 2-recipient consumers.
-     *
-     * Note: partner-specified distribution recipients are emitted as
-     * separate `FeeCost` entries (one per receiver, `name: "Fee Forward"`)
-     * at quote/route estimation time. At status-response time the same
-     * recipients may appear merged on the integrator's `FeeCost` for
-     * compactness. Iterate `estimate.feeCosts[]` to discover all
-     * recipients across both shapes.
-     */
-    recipients?: FeeRecipient[]
-  }
+
+  feeSplit?: FeeSplit
 }
 
 export interface GasCost {
