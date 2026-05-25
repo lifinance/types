@@ -105,6 +105,7 @@ export enum CoinKey {
   PathUSD = 'PathUSD', // Stablecoin on Tempo chain
   frxUSD = 'frxUSD', // Stablecoin on Fraxtal chain
   EURC = 'EURC', // Stablecoin for Euro
+  USDG = 'USDG', // Global Dollar stablecoin on Outlaw chain
 
   // Other tokens
   WBTC = 'WBTC',
