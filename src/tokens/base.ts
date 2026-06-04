@@ -147,4 +147,5 @@ export enum CoinKey {
   pBTC = 'pBTC', // Botanix Wrapped Native
   WTLOS = 'WTLOS', // Telos Wrapped Native
   W0G = 'W0G', // 0G Wrapped Native
+  cirBTC = 'cirBTC', // Arc Circulating BTC
 }
