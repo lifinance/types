@@ -50,6 +50,7 @@ export enum CoinKey {
   WPROS = 'WPROS', // Wrapped Pharos
   SOMI = 'SOMI', // Somnia native
   WSOMI = 'WSOMI', // Somnia Wrapped Native
+  TURK = 'TURK', // TURKCHAIN native Token
 
   // SVM
   SOL = 'SOL',
