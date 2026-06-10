@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.83.0](https://github.com/lifinance/types/compare/v17.82.1...v17.83.0) (2026-06-04)
+
+
+### Features
+
+* add new chain Arc ([#531](https://github.com/lifinance/types/issues/531)) ([d7e4311](https://github.com/lifinance/types/commit/d7e4311cbe76f2b1201e8c3ec7c84c3c74969bae))
+* add nexroute logo ([#532](https://github.com/lifinance/types/issues/532)) ([10e1530](https://github.com/lifinance/types/commit/10e1530935ca5781ffa48e8deef74769f99ed02d))
+
 ### [17.82.1](https://github.com/lifinance/types/compare/v17.82.0...v17.82.1) (2026-05-14)
 
 ## [17.82.0](https://github.com/lifinance/types/compare/v17.81.1...v17.82.0) (2026-05-14)
