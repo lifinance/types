@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.84.0](https://github.com/lifinance/types/compare/v17.83.0...v17.84.0) (2026-06-15)
+
+
+### Features
+
+* intermediary fee types (re-apply after [#525](https://github.com/lifinance/types/issues/525) revert) ([#528](https://github.com/lifinance/types/issues/528)) ([16b5ef3](https://github.com/lifinance/types/commit/16b5ef329c38f08307caef0aab3acf0803b1145a))
+
 ## [17.83.0](https://github.com/lifinance/types/compare/v17.82.1...v17.83.0) (2026-06-04)
 
 
