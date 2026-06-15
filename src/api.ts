@@ -160,9 +160,53 @@ export interface RouteOptionsBase {
   executionType?: ExecutionType
 }
 
+/**
+ * A single entry in the `distributionFees` request parameter.
+ *
+ * `distributionFees` lets a verified integrator carve additional on-chain
+ * recipients out of their integrator-fee pool, in parallel with the
+ * optional `intermediary` carve. Each entry produces an extra fee transfer
+ * to `receiver` proportional to `percentage` of the source amount, executed
+ * via the LI.FI FeeForwarder contract. Partner-provided receivers are
+ * sanction-screened at quote time (warn-log on failure, see backend logs).
+ *
+ * Constraints (enforced server-side, subject to change without a types
+ * major bump — read the current values from the API error responses if
+ * you need them programmatically):
+ * - `percentage` is a decimal proportion ( `0.001` = 0.1% ), exclusive of 0
+ *   and bounded by a per-request cap. The aggregate fee (integrator `fee`
+ *   plus all `distributionFees[].percentage`) is also capped by the
+ *   backend; exceeding either limit yields a `ValidationError`.
+ * - At most ~10 entries per request.
+ * - `receiver` must be a non-zero EVM address (`0x` followed by 40 hex
+ *   characters). Non-EVM receivers are not yet supported.
+ *
+ * Only meaningful when `integrator` is set and has an active fee agreement.
+ */
+export interface DistributionFee {
+  /** Fraction of the swap input taken as a distribution fee (e.g. `0.001` = 0.1%). */
+  percentage: number
+  /** On-chain EVM recipient address; must be a non-zero `0x`-prefixed hex address. */
+  receiver: string
+}
+
 export interface RouteOptions extends RouteOptionsBase {
   /** Should contain the identifier of the integrator. Usually, it's dApp/company name. */
   integrator?: string
+
+  /** Optional intermediary identifier for multi-party fee splitting.
+   *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
+  intermediary?: string
+
+  /**
+   * Partner-provided fee distribution recipients. Each entry adds an
+   * independent on-chain transfer to `receiver` in proportion to
+   * `percentage` of the swap input, in parallel with the integrator and
+   * (optional) intermediary carves. Requires a verified `integrator` with
+   * an active fee agreement.
+   * @see {@link DistributionFee} for per-entry constraints.
+   */
+  distributionFees?: DistributionFee[]
 
   /** Integrators can set a wallet address as a referrer to track them */
   referrer?: string
@@ -368,6 +412,11 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   order?: Order
   slippage?: number | string
   integrator?: string
+  /** Optional intermediary identifier for multi-party fee splitting.
+   *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
+  intermediary?: string
+  /** @see {@link RouteOptions.distributionFees} and {@link DistributionFee} */
+  distributionFees?: DistributionFee[]
   referrer?: string
   fee?: number | string
 
@@ -406,8 +455,10 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   insurance?: boolean
 }
 
-export interface QuoteToAmountRequest
-  extends Omit<QuoteRequest, 'fromAmount' | 'fromAmountForGas' | 'insurance'> {
+export interface QuoteToAmountRequest extends Omit<
+  QuoteRequest,
+  'fromAmount' | 'fromAmountForGas' | 'insurance'
+> {
   toAmount: string
 }
 
@@ -850,8 +901,7 @@ export type TransferSummary = {
   totalReceivedAmount: number
 }
 
-export interface TransferSummariesResponse
-  extends PaginatedResponse<TransferSummary> {}
+export interface TransferSummariesResponse extends PaginatedResponse<TransferSummary> {}
 
 export interface GetStepRequest {
   stepId: string
