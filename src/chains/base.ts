@@ -81,6 +81,7 @@ export enum ChainKey {
   LTR = 'ltr',
   SOM = 'som',
   OUT = 'out',
+  ARC = 'arc',
 
   // None-EVM
   TER = 'ter',
@@ -194,6 +195,7 @@ export enum ChainId {
   LTR = 3586256,
   SOM = 5031,
   OUT = 4663,
+  ARC = 5042,
 
   // None-EVM (IDs are made up by the LI.FI team)
   TER = 1161011141099710,
