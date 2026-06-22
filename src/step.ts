@@ -69,12 +69,11 @@ export interface FeeSplit {
    * new consumers — the aggregate fields above are disjoint slices kept
    * for backward compatibility with 2-recipient consumers.
    *
-   * Note: partner-specified distribution recipients are emitted as
-   * separate `FeeCost` entries (one per receiver, `name: "Fee Forward"`)
-   * at quote/route estimation time. At status-response time the same
-   * recipients may appear merged on the integrator's `FeeCost` for
-   * compactness. Iterate `estimate.feeCosts[]` to discover all
-   * recipients across both shapes. */
+   * Note: partner-specified distribution recipients are aggregated into a
+   * single `FeeCost` entry (`name: "Distributions"`) whose `amount` is the
+   * total distributed and whose `recipients[]` lists each receiver. This
+   * entry sits beside the integrator/LI.FI/intermediary entry, with the same
+   * shape on quote, route, and status responses. */
   recipients?: FeeRecipient[]
 }
 
