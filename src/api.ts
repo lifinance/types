@@ -910,7 +910,7 @@ export type TransferSummary = {
   totalReceivedAmount: number
 }
 
-export interface TransferSummariesResponse extends PaginatedResponse<TransferSummary> {}
+export type TransferSummariesResponse = PaginatedResponse<TransferSummary>
 
 export interface GetStepRequest {
   stepId: string

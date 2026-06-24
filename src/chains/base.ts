@@ -80,6 +80,7 @@ export enum ChainKey {
   PHR = 'phr',
   LTR = 'ltr',
   SOM = 'som',
+  OUT = 'out',
   ARC = 'arc',
 
   // None-EVM
@@ -193,6 +194,7 @@ export enum ChainId {
   PHR = 1672,
   LTR = 3586256,
   SOM = 5031,
+  OUT = 4663,
   ARC = 5042,
 
   // None-EVM (IDs are made up by the LI.FI team)

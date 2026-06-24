@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.85.0](https://github.com/lifinance/types/compare/v17.84.0...v17.85.0) (2026-06-18)
+
+
+### Features
+
+* add checkout logos (binance, coinbase, visa, mastercard) ([#536](https://github.com/lifinance/types/issues/536)) ([519f55c](https://github.com/lifinance/types/commit/519f55cacb60b2bae260606d40b8c331ff5f22fe))
+* add new chain Outlaw ([#530](https://github.com/lifinance/types/issues/530)) ([c081abf](https://github.com/lifinance/types/commit/c081abf6a2409951dc4112b4aef4e9a5b8b9d419))
+
 ## [17.84.0](https://github.com/lifinance/types/compare/v17.83.0...v17.84.0) (2026-06-15)
 
 
