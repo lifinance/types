@@ -208,6 +208,16 @@ export interface RouteOptions extends RouteOptionsBase {
    */
   distributionFees?: DistributionFee[]
 
+  /**
+   * Disable the backend integrator fee for this request.
+   *
+   * Permissioned: honoured only for allowlisted integrations (authenticated via
+   * their API key). Non-allowlisted callers that set it are ignored and charged
+   * normally. Attribution and integrator-specific config still resolve from
+   * `integrator` — only the fee is suppressed.
+   */
+  disableFees?: boolean
+
   /** Integrators can set a wallet address as a referrer to track them */
   referrer?: string
 
@@ -429,6 +439,8 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   distributionFees?: DistributionFee[]
   referrer?: string
   fee?: number | string
+  /** @see {@link RouteOptions.disableFees} */
+  disableFees?: boolean
 
   /** Whether destination calls are enabled by default
    * @default true */
@@ -498,6 +510,8 @@ type PartialContractCallsQuoteRequest = ToolConfiguration & {
   integrator?: string
   referrer?: string
   fee?: number | string
+  /** @see {@link RouteOptions.disableFees} */
+  disableFees?: boolean
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
 }
 
