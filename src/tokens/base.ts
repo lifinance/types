@@ -50,6 +50,7 @@ export enum CoinKey {
   WPROS = 'WPROS', // Wrapped Pharos
   SOMI = 'SOMI', // Somnia native
   WSOMI = 'WSOMI', // Somnia Wrapped Native
+  INJ = 'INJ', // Injective native
 
   // SVM
   SOL = 'SOL',
@@ -149,4 +150,5 @@ export enum CoinKey {
   WTLOS = 'WTLOS', // Telos Wrapped Native
   W0G = 'W0G', // 0G Wrapped Native
   cirBTC = 'cirBTC', // Arc Circulating BTC
+  WINJ = 'WINJ', // Injective Wrapped Native
 }
