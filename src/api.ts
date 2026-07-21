@@ -891,6 +891,7 @@ export enum IntegratorFeeType {
   FIXED = 'FIXED',
   SHARED = 'SHARED',
   DYNAMIC = 'DYNAMIC',
+  INTERMEDIARY = 'INTERMEDIARY',
 }
 
 export type TransferSummary = {
