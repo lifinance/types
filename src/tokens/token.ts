@@ -56,6 +56,7 @@ export interface Coin {
 export enum TokenTag {
   STABLECOIN = 'stablecoin',
   MAJOR_ASSET = 'major_asset',
+  RWA = 'rwa',
   // Legacy tags
   SUPERTOKEN = 'supertoken',
   TESTNET = 'testnet',

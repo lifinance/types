@@ -24,8 +24,9 @@
     "checkJs": false,
 
     // Interop constraints
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": false,
+    // NOTE: `esModuleInterop` becomes `true` by default in TypeScript 7.0. We set it explicitly so behavior stays consistent across versions.
+    // All source imports use `import type` from relative `.js` paths, so this flag has no observable impact on emitted code.
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true,
     // Language and environment

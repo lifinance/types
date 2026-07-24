@@ -2,6 +2,157 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.86.0](https://github.com/lifinance/types/compare/v17.85.0...v17.86.0) (2026-07-16)
+
+
+### Features
+
+* add new chain Injective ([#548](https://github.com/lifinance/types/issues/548)) ([b42105e](https://github.com/lifinance/types/commit/b42105ea27f723f235e87516fe5509508f95b11c))
+
+## [17.85.0](https://github.com/lifinance/types/compare/v17.84.0...v17.85.0) (2026-06-18)
+
+
+### Features
+
+* add checkout logos (binance, coinbase, visa, mastercard) ([#536](https://github.com/lifinance/types/issues/536)) ([519f55c](https://github.com/lifinance/types/commit/519f55cacb60b2bae260606d40b8c331ff5f22fe))
+* add new chain Outlaw ([#530](https://github.com/lifinance/types/issues/530)) ([c081abf](https://github.com/lifinance/types/commit/c081abf6a2409951dc4112b4aef4e9a5b8b9d419))
+
+## [17.84.0](https://github.com/lifinance/types/compare/v17.83.0...v17.84.0) (2026-06-15)
+
+
+### Features
+
+* intermediary fee types (re-apply after [#525](https://github.com/lifinance/types/issues/525) revert) ([#528](https://github.com/lifinance/types/issues/528)) ([16b5ef3](https://github.com/lifinance/types/commit/16b5ef329c38f08307caef0aab3acf0803b1145a))
+
+## [17.83.0](https://github.com/lifinance/types/compare/v17.82.1...v17.83.0) (2026-06-04)
+
+
+### Features
+
+* add new chain Arc ([#531](https://github.com/lifinance/types/issues/531)) ([d7e4311](https://github.com/lifinance/types/commit/d7e4311cbe76f2b1201e8c3ec7c84c3c74969bae))
+* add nexroute logo ([#532](https://github.com/lifinance/types/issues/532)) ([10e1530](https://github.com/lifinance/types/commit/10e1530935ca5781ffa48e8deef74769f99ed02d))
+
+### [17.82.1](https://github.com/lifinance/types/compare/v17.82.0...v17.82.1) (2026-05-14)
+
+## [17.82.0](https://github.com/lifinance/types/compare/v17.81.1...v17.82.0) (2026-05-14)
+
+
+### Features
+
+* add Somnia chain ([#526](https://github.com/lifinance/types/issues/526)) ([47633a5](https://github.com/lifinance/types/commit/47633a563accdefe7a75f6c1a0fbe901aad634aa))
+
+### [17.81.1](https://github.com/lifinance/types/compare/v17.81.0...v17.81.1) (2026-05-12)
+
+## [17.81.0](https://github.com/lifinance/types/compare/v17.80.0...v17.81.0) (2026-05-12)
+
+
+### Features
+
+* be tag rwa tokens via coingecko categories ([#522](https://github.com/lifinance/types/issues/522)) ([f1bee5f](https://github.com/lifinance/types/commit/f1bee5f47c07feeea7877103a2d29306e03ecde0))
+
+## [17.80.0](https://github.com/lifinance/types/compare/v17.79.0...v17.80.0) (2026-05-11)
+
+
+### Features
+
+* drop viem dependency in favor of local typed-data declarations ([#524](https://github.com/lifinance/types/issues/524)) ([5ae66a5](https://github.com/lifinance/types/commit/5ae66a5d25d1dc640c237e29bba20116539b2916))
+
+## [17.79.0](https://github.com/lifinance/types/compare/v17.78.0...v17.79.0) (2026-05-07)
+
+
+### Features
+
+* intermediary fee types ([#520](https://github.com/lifinance/types/issues/520)) ([f81b13e](https://github.com/lifinance/types/commit/f81b13edc856f72b260392b143b8f32d84019d59))
+
+## [17.78.0](https://github.com/lifinance/types/compare/v17.77.0...v17.78.0) (2026-04-29)
+
+
+### Features
+
+* add new chain Lighter ([#521](https://github.com/lifinance/types/issues/521)) ([5d4705a](https://github.com/lifinance/types/commit/5d4705acb1ad541cc53b225c1991226f3ef91d1d))
+
+## [17.77.0](https://github.com/lifinance/types/compare/v17.76.0...v17.77.0) (2026-04-16)
+
+
+### Features
+
+* **intent factory:** extend types with if substatus values and deposit ([#514](https://github.com/lifinance/types/issues/514)) ([a706132](https://github.com/lifinance/types/commit/a70613217d8196da66b7a1bf929dd1265b46f81e))
+
+## [17.76.0](https://github.com/lifinance/types/compare/v17.75.1...v17.76.0) (2026-04-15)
+
+
+### Features
+
+* add new chain Pharos Mainnet ([#519](https://github.com/lifinance/types/issues/519)) ([3ba1c65](https://github.com/lifinance/types/commit/3ba1c650333ed3830d4ab3f2fcfea1cf1e49d676))
+
+
+### Bug Fixes
+
+* **security:** AI Fix for 3rd party Github Actions should be pinned ([#518](https://github.com/lifinance/types/issues/518)) ([0bae281](https://github.com/lifinance/types/commit/0bae2812607bd812357128eab9624844cbfcf892))
+
+### [17.75.1](https://github.com/lifinance/types/compare/v17.75.0...v17.75.1) (2026-04-09)
+
+## [17.75.0](https://github.com/lifinance/types/compare/v17.74.0...v17.75.0) (2026-04-07)
+
+
+### Features
+
+* add optional txId to status request ([#482](https://github.com/lifinance/types/issues/482)) ([6225771](https://github.com/lifinance/types/commit/6225771ef9c5088784c819a9da2cbdbe51286da8))
+
+## [17.74.0](https://github.com/lifinance/types/compare/v17.73.0...v17.74.0) (2026-04-01)
+
+
+### Features
+
+* add optional svmPriorityFeeLevel api param ([#504](https://github.com/lifinance/types/issues/504)) ([8930888](https://github.com/lifinance/types/commit/8930888816642cafe9f34f45433085a3b5f18cc8))
+
+## [17.73.0](https://github.com/lifinance/types/compare/v17.72.0...v17.73.0) (2026-04-01)
+
+
+### Features
+
+* add new chains Base Sepolia and Arbitrum Sepolia ([#515](https://github.com/lifinance/types/issues/515)) ([323c280](https://github.com/lifinance/types/commit/323c28021995d5b8f6d07ce01fc9256a551ecf2b))
+
+## [17.72.0](https://github.com/lifinance/types/compare/v17.71.0...v17.72.0) (2026-03-30)
+
+
+### Features
+
+* add 0g icon ([#512](https://github.com/lifinance/types/issues/512)) ([12b9729](https://github.com/lifinance/types/commit/12b9729b535ac9b4baedcd6ea10a56e9fc0f72f4))
+* add new chain Arbitrum Nova ([#511](https://github.com/lifinance/types/issues/511)) ([105f41b](https://github.com/lifinance/types/commit/105f41b4c671832407f07f8acbac4dd88039cf7a))
+
+## [17.71.0](https://github.com/lifinance/types/compare/v17.70.0...v17.71.0) (2026-03-26)
+
+
+### Features
+
+* update 0G chainkey to ZEROG ([#510](https://github.com/lifinance/types/issues/510)) ([6ddae73](https://github.com/lifinance/types/commit/6ddae7342a3408534c2ff091653535eef0d47120))
+
+## [17.70.0](https://github.com/lifinance/types/compare/v17.69.0...v17.70.0) (2026-03-26)
+
+
+### Features
+
+* add 0G chain and token ([#509](https://github.com/lifinance/types/issues/509)) ([11e66cb](https://github.com/lifinance/types/commit/11e66cbb1d5a3715c64018bcc2b8aeaf3d6369f9))
+
+## [17.69.0](https://github.com/lifinance/types/compare/v17.68.1...v17.69.0) (2026-03-24)
+
+
+### Features
+
+* add arct icon ([#507](https://github.com/lifinance/types/issues/507)) ([c80b115](https://github.com/lifinance/types/commit/c80b115c3cb93ca9e0ce3bae19d8994a5cc336b5))
+* add stellar base types ([#508](https://github.com/lifinance/types/issues/508)) ([75338c2](https://github.com/lifinance/types/commit/75338c28f4bad52dfc58292644561d71478d574c))
+
+### [17.68.1](https://github.com/lifinance/types/compare/v17.68.0...v17.68.1) (2026-03-20)
+
+## [17.68.0](https://github.com/lifinance/types/compare/v17.67.1...v17.68.0) (2026-03-19)
+
+
+### Features
+
+* add Arct testnet chain ([#506](https://github.com/lifinance/types/issues/506)) ([a3dc3c2](https://github.com/lifinance/types/commit/a3dc3c21f9d9905b059b129f5f19dd88394ccfe5))
+* add houdini logo ([#503](https://github.com/lifinance/types/issues/503)) ([876df48](https://github.com/lifinance/types/commit/876df48d715966e2c209436fc024013892d33fd8))
+
 ### [17.67.1](https://github.com/lifinance/types/compare/v17.67.0...v17.67.1) (2026-03-16)
 
 ## [17.67.0](https://github.com/lifinance/types/compare/v17.66.0...v17.67.0) (2026-03-13)

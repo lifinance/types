@@ -6,7 +6,10 @@
     "src/assets"
   ],
   "compilerOptions": {
-    "moduleResolution": "node",
+    // `bundler` works with every `--module` value the build scripts pass on the CLI
+    // (`commonjs`, `es2015`, `esnext`) in TypeScript 6.0+ (see microsoft/TypeScript#62320),
+    // and replaces the legacy `node`/`node10` resolution that is removed in TypeScript 7.0.
+    "moduleResolution": "bundler",
     "sourceMap": true,
     "rootDir": "./src"
   }

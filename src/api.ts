@@ -1,10 +1,3 @@
-import type {
-  Address,
-  Hash,
-  Hex,
-  TypedDataDomain,
-  TypedDataParameter,
-} from 'viem'
 import type { BridgeDefinition } from './bridges.js'
 import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
@@ -21,6 +14,19 @@ import type {
   TokenExtended,
   TokenTag,
 } from './tokens/index.js'
+import type {
+  Address,
+  Hash,
+  Hex,
+  TypedDataDomain,
+  TypedDataParameter,
+} from './typed-data.js'
+
+export enum SVMPriorityFeeLevel {
+  NORMAL = 'NORMAL',
+  FAST = 'FAST',
+  ULTRA = 'ULTRA',
+}
 
 /**
  * Used as a bigint replacement for TransactionRequest because bigint is not serializable
@@ -154,9 +160,53 @@ export interface RouteOptionsBase {
   executionType?: ExecutionType
 }
 
+/**
+ * A single entry in the `distributionFees` request parameter.
+ *
+ * `distributionFees` lets a verified integrator carve additional on-chain
+ * recipients out of their integrator-fee pool, in parallel with the
+ * optional `intermediary` carve. Each entry produces an extra fee transfer
+ * to `receiver` proportional to `percentage` of the source amount, executed
+ * via the LI.FI FeeForwarder contract. Partner-provided receivers are
+ * sanction-screened at quote time (warn-log on failure, see backend logs).
+ *
+ * Constraints (enforced server-side, subject to change without a types
+ * major bump — read the current values from the API error responses if
+ * you need them programmatically):
+ * - `percentage` is a decimal proportion ( `0.001` = 0.1% ), exclusive of 0
+ *   and bounded by a per-request cap. The aggregate fee (integrator `fee`
+ *   plus all `distributionFees[].percentage`) is also capped by the
+ *   backend; exceeding either limit yields a `ValidationError`.
+ * - At most ~10 entries per request.
+ * - `receiver` must be a non-zero EVM address (`0x` followed by 40 hex
+ *   characters). Non-EVM receivers are not yet supported.
+ *
+ * Only meaningful when `integrator` is set and has an active fee agreement.
+ */
+export interface DistributionFee {
+  /** Fraction of the swap input taken as a distribution fee (e.g. `0.001` = 0.1%). */
+  percentage: number
+  /** On-chain EVM recipient address; must be a non-zero `0x`-prefixed hex address. */
+  receiver: string
+}
+
 export interface RouteOptions extends RouteOptionsBase {
   /** Should contain the identifier of the integrator. Usually, it's dApp/company name. */
   integrator?: string
+
+  /** Optional intermediary identifier for multi-party fee splitting.
+   *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
+  intermediary?: string
+
+  /**
+   * Partner-provided fee distribution recipients. Each entry adds an
+   * independent on-chain transfer to `receiver` in proportion to
+   * `percentage` of the swap input, in parallel with the integrator and
+   * (optional) intermediary carves. Requires a verified `integrator` with
+   * an active fee agreement.
+   * @see {@link DistributionFee} for per-entry constraints.
+   */
+  distributionFees?: DistributionFee[]
 
   /** Integrators can set a wallet address as a referrer to track them */
   referrer?: string
@@ -166,6 +216,9 @@ export interface RouteOptions extends RouteOptionsBase {
 
   /** SVM specific option, wallet to sponsor tx costs */
   svmSponsor?: string
+
+  /** SVM specific option, priority fee level */
+  svmPriorityFeeLevel?: SVMPriorityFeeLevel
 
   /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
   mayanNonEvmPermitSignature?: boolean
@@ -359,6 +412,11 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   order?: Order
   slippage?: number | string
   integrator?: string
+  /** Optional intermediary identifier for multi-party fee splitting.
+   *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
+  intermediary?: string
+  /** @see {@link RouteOptions.distributionFees} and {@link DistributionFee} */
+  distributionFees?: DistributionFee[]
   referrer?: string
   fee?: number | string
 
@@ -385,6 +443,9 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   /** SVM specific option, wallet to sponsor tx costs */
   svmSponsor?: string
 
+  /** SVM specific option, priority fee level */
+  svmPriorityFeeLevel?: SVMPriorityFeeLevel
+
   /** Preset configuration for stablecoin routing optimization
    * When provided, this preset will override other route options with optimized settings */
   preset?: string
@@ -394,8 +455,10 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   insurance?: boolean
 }
 
-export interface QuoteToAmountRequest
-  extends Omit<QuoteRequest, 'fromAmount' | 'fromAmountForGas' | 'insurance'> {
+export interface QuoteToAmountRequest extends Omit<
+  QuoteRequest,
+  'fromAmount' | 'fromAmountForGas' | 'insurance'
+> {
   toAmount: string
 }
 
@@ -500,6 +563,8 @@ export type GetStatusRequest = {
   bridge?: string
   fromChain?: number | string
   toChain?: number | string
+  transactionId?: string
+  depositAddress?: string
 } & ({ txHash: string } | { taskId: string })
 
 export interface BaseTransactionInfo {
@@ -553,6 +618,16 @@ const _SubstatusPending = [
   'REFUND_IN_PROGRESS',
   // We cannot determine the status of the transfer
   'UNKNOWN_ERROR',
+  // Intent is waiting for funds to arrive at the smart contract account
+  'INTENT_AWAITING_FUNDS',
+  // Intent funds detected, preparing execution
+  'INTENT_READY',
+  // Intent is being executed by solver
+  'INTENT_EXECUTING',
+  // Intent execution failed, solver retrying
+  'INTENT_FAILED_RETRYABLE',
+  // Intent simulation failed, solver retrying
+  'INTENT_SIMULATION_FAILURE',
 ] as const
 export type SubstatusPending = (typeof _SubstatusPending)[number]
 
@@ -648,6 +723,11 @@ export interface ExtendedChain extends Chain {
   diamondAddress?: string
   permit2?: string
   permit2Proxy?: string
+  /**
+   * Whether the chain has a non-standard native decimals handling like Tempo or Stable
+   * @default false
+   */
+  nonStandardNativeDecimals?: boolean
 }
 
 export interface ChainsResponse {
@@ -811,6 +891,7 @@ export enum IntegratorFeeType {
   FIXED = 'FIXED',
   SHARED = 'SHARED',
   DYNAMIC = 'DYNAMIC',
+  INTERMEDIARY = 'INTERMEDIARY',
 }
 
 export type TransferSummary = {
@@ -821,8 +902,7 @@ export type TransferSummary = {
   totalReceivedAmount: number
 }
 
-export interface TransferSummariesResponse
-  extends PaginatedResponse<TransferSummary> {}
+export type TransferSummariesResponse = PaginatedResponse<TransferSummary>
 
 export interface GetStepRequest {
   stepId: string
@@ -876,22 +956,23 @@ export type PermitWitnessTransferFromMessage<T extends bigint | string> =
   PermitBase<T> & {
     permitted: TokenPermissions<T>
   }
-
-export type TypedDataPrimaryType =
-  | 'Permit'
-  | 'PermitTransferFrom'
-  | 'PermitBatchTransferFrom'
-  | 'PermitWitnessTransferFrom'
-  | 'PermitBatchWitnessTransferFrom'
-  | 'Order'
-  | 'HyperliquidTransaction:Withdraw'
-  | 'HyperliquidTransaction:UsdSend'
-  | 'HyperliquidTransaction:SpotSend'
-  | 'HyperliquidTransaction:SendAsset'
-  | 'HyperliquidTransaction:Withdraw'
-  | 'HyperliquidTransaction:ApproveAgent'
-  | 'Agent'
-  | 'NonceMapping'
+export const TypedDataPrimaryTypes = [
+  'Permit',
+  'PermitTransferFrom',
+  'PermitBatchTransferFrom',
+  'PermitWitnessTransferFrom',
+  'PermitBatchWitnessTransferFrom',
+  'Order',
+  'HyperliquidTransaction:UsdSend',
+  'HyperliquidTransaction:SpotSend',
+  'HyperliquidTransaction:SendAsset',
+  'HyperliquidTransaction:Withdraw',
+  'HyperliquidTransaction:ApproveAgent',
+  'Agent',
+  'NonceMapping',
+  'HyperliquidTransaction:ApproveBuilderFee',
+] as const
+export type TypedDataPrimaryType = (typeof TypedDataPrimaryTypes)[number]
 
 /**
  * EIP-712 Typed Data

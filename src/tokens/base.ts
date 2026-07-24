@@ -45,6 +45,12 @@ export enum CoinKey {
   FLOW = 'FLOW', // Flow native
   MON = 'MON', // Monad native
   GUSDT = 'GUSDT', // Stable native (Gas USDT)
+  ZEROG = '0G', // 0G native
+  PROS = 'PROS', // Pharos native
+  WPROS = 'WPROS', // Wrapped Pharos
+  SOMI = 'SOMI', // Somnia native
+  WSOMI = 'WSOMI', // Somnia Wrapped Native
+  INJ = 'INJ', // Injective native
 
   // SVM
   SOL = 'SOL',
@@ -67,6 +73,9 @@ export enum CoinKey {
   // Tron
   TRX = 'TRX',
   WTRX = 'WTRX',
+
+  // Stellar
+  XLM = 'XLM',
 
   // Tether Gold
   XAUt = 'XAUt',
@@ -96,10 +105,13 @@ export enum CoinKey {
   USD1 = 'USD1', // World Liberty Financial USD
   PathUSD = 'PathUSD', // Stablecoin on Tempo chain
   frxUSD = 'frxUSD', // Stablecoin on Fraxtal chain
+  EURC = 'EURC', // Stablecoin for Euro
+  USDG = 'USDG', // Global Dollar stablecoin on Outlaw chain
 
   // Other tokens
   WBTC = 'WBTC',
   WETH = 'WETH',
+  LINK = 'LINK', // Chainlink Token
   SUSHI = 'SUSHI',
   DODO = 'DODO',
   MCB = 'MCB',
@@ -136,4 +148,7 @@ export enum CoinKey {
   WMON = 'WMON', // Monad Wrapped Native
   pBTC = 'pBTC', // Botanix Wrapped Native
   WTLOS = 'WTLOS', // Telos Wrapped Native
+  W0G = 'W0G', // 0G Wrapped Native
+  cirBTC = 'cirBTC', // Arc Circulating BTC
+  WINJ = 'WINJ', // Injective Wrapped Native
 }
