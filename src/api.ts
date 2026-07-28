@@ -446,6 +446,14 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
    * @default true */
   allowDestinationCall?: boolean
 
+  /** Requests a destination-side action executed after the bridge leg (Smart Deposits routes only).
+   *  Must be sent together with `destinationActionVault`; cross-chain EVM routes only. */
+  destinationActionKind?: 'erc4626_deposit'
+
+  /** The ERC-4626 vault the bridged funds are deposited into. Must be on the curated allowlist
+   *  and its underlying asset must equal `toToken`. Must be sent together with `destinationActionKind`. */
+  destinationActionVault?: string
+
   /** The amount of token to convert to gas */
   fromAmountForGas?: string
 
