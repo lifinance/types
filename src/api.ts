@@ -3,6 +3,7 @@ import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
 import type {
   Action,
+  DestinationActionKind,
   FeeCost,
   LiFiStep,
   SignedLiFiStep,
@@ -448,7 +449,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
   /** Requests a destination-side action executed after the bridge leg (Smart Deposits routes only).
    *  Must be sent together with `destinationActionVault`; cross-chain EVM routes only. */
-  destinationActionKind?: 'erc4626_deposit'
+  destinationActionKind?: DestinationActionKind
 
   /** The ERC-4626 vault the bridged funds are deposited into. Must be on the curated allowlist
    *  and its underlying asset must equal `toToken`. Must be sent together with `destinationActionKind`. */
@@ -487,7 +488,13 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
 export interface QuoteToAmountRequest extends Omit<
   QuoteRequest,
-  'fromAmount' | 'fromAmountForGas' | 'insurance'
+  // Destination actions are excluded: a target output amount cannot be
+  // inverted across the action leg, and the endpoint rejects the params.
+  | 'fromAmount'
+  | 'fromAmountForGas'
+  | 'insurance'
+  | 'destinationActionKind'
+  | 'destinationActionVault'
 > {
   toAmount: string
 }
