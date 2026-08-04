@@ -3,6 +3,7 @@ import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
 import type {
   Action,
+  DestinationAction,
   DestinationActionKind,
   FeeCost,
   LiFiStep,
@@ -251,6 +252,13 @@ export interface RouteOptions extends RouteOptionsBase {
    * support it.
    * @default false */
   amountFlexible?: boolean
+
+  /** Requests a destination-side action executed after the bridge leg
+   * (cross-chain EVM Smart Deposits routes only). The returned route's Smart
+   * Deposits step carries the action — post that step unchanged to
+   * `/v1/advanced/stepTransaction`. Routes that cannot execute the action are
+   * rejected or excluded rather than silently served without it. */
+  destinationAction?: DestinationAction
 
   /** Whether the user wants to insure their tx
    * @deprecated This property is deprecated and will be removed in future versions. */

@@ -232,9 +232,23 @@ export const DESTINATION_ACTION_KINDS = ['erc4626_deposit'] as const
 
 export type DestinationActionKind = (typeof DESTINATION_ACTION_KINDS)[number]
 
+/** One destination-side action, executed by the Smart Deposits lane on the
+ * destination chain after the bridge leg. The vault address is forwarded
+ * verbatim — the Intent Factory's curated allowlist is the enforcement point. */
+export interface DestinationAction {
+  kind: DestinationActionKind
+  vault: string
+}
+
 export interface LiFiStep extends Omit<Step, 'type'> {
   type: 'lifi'
   includedSteps: Step[]
+
+  /** Present on Smart Deposits steps whose route was requested with a
+   * destination action. Round-trip the step unchanged to
+   * `/v1/advanced/stepTransaction` — a step posted without it prepares a
+   * plain bundle that delivers the raw token instead of the action's output. */
+  destinationAction?: DestinationAction
 }
 
 export interface SignedLiFiStep extends LiFiStep {
