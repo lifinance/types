@@ -40,7 +40,6 @@ export enum CoinKey {
   RON = 'RON', // Ronin native
   PLU = 'PLUME', // Plume native
   NIBI = 'NIBI', // Nibiru native
-  SOPH = 'SOPH', // Sophon native
   XPL = 'XPL', // Plasma native
   FLOW = 'FLOW', // Flow native
   MON = 'MON', // Monad native
@@ -141,12 +140,11 @@ export enum CoinKey {
   WRON = 'WRON', // Ronin Wrapped Native
   WPLU = 'WPLUME', // Plume Wrapped Native
   WNIBI = 'WNIBI', // Nibiru Wrapped Native
-  WSOPH = 'WSOPH', // Sophon Wrapped Native
   WFRAX = 'WFRAX', // Fraxtal Wrapped Native
   WXPL = 'WXPL', // Plasma Wrapped Native
   WFLOW = 'WFLOW', // Flow Wrapped Native
   WMON = 'WMON', // Monad Wrapped Native
-  pBTC = 'pBTC', // Botanix Wrapped Native
+  pBTC = 'pBTC', // Botanix Pegged Bitcoin — deployed on STA / TLO / ETH / BSC, not Botanix-only
   WTLOS = 'WTLOS', // Telos Wrapped Native
   W0G = 'W0G', // 0G Wrapped Native
   cirBTC = 'cirBTC', // Arc Circulating BTC

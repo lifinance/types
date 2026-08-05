@@ -225,6 +225,13 @@ export interface CustomStep extends StepBase {
 
 export type Step = SwapStep | CrossStep | CustomStep | ProtocolStep
 
+/** Destination-side actions the Smart Deposits lane can execute once the
+ * bridged funds land. A closed set: the kind is the forward-compatibility
+ * axis, so a new action ships as a new literal rather than a free-form string. */
+export const DESTINATION_ACTION_KINDS = ['erc4626_deposit'] as const
+
+export type DestinationActionKind = (typeof DESTINATION_ACTION_KINDS)[number]
+
 export interface LiFiStep extends Omit<Step, 'type'> {
   type: 'lifi'
   includedSteps: Step[]

@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.0.0](https://github.com/lifinance/types/compare/v17.90.0...v18.0.0) (2026-08-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove deprecated chains Taiko, Swellchain, Corn, Superposition, Sophon, Botanix (#563)
+
+### Features
+
+* remove deprecated chains Taiko, Swellchain, Corn, Superposition, Sophon, Botanix ([#563](https://github.com/lifinance/types/issues/563)) ([bcc0267](https://github.com/lifinance/types/commit/bcc026768b7741ef373cc0bebbef48164e371763))
+
+## [17.90.0](https://github.com/lifinance/types/compare/v17.89.0...v17.90.0) (2026-08-04)
+
+
+### Features
+
+* add destinationAction params to QuoteRequest ([#556](https://github.com/lifinance/types/issues/556)) ([1b0a469](https://github.com/lifinance/types/commit/1b0a4694e414240c897b7446600febfe8e70bbea))
+
+## [17.89.0](https://github.com/lifinance/types/compare/v17.88.0...v17.89.0) (2026-08-04)
+
+
+### Features
+
+* add permissioned disableFees request param ([#547](https://github.com/lifinance/types/issues/547)) ([c0d2f3b](https://github.com/lifinance/types/commit/c0d2f3b1ebcfaebeb9ebb9fb3201db87f6bd3a3f))
+
 ## [17.88.0](https://github.com/lifinance/types/compare/v17.87.0...v17.88.0) (2026-08-04)
 
 

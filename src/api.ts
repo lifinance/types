@@ -3,6 +3,7 @@ import type { Chain, ChainId, ChainKey, ChainType } from './chains/index.js'
 import type { ExchangeDefinition } from './exchanges.js'
 import type {
   Action,
+  DestinationActionKind,
   FeeCost,
   LiFiStep,
   SignedLiFiStep,
@@ -211,6 +212,16 @@ export interface RouteOptions extends RouteOptionsBase {
    * @see {@link DistributionFee} for per-entry constraints.
    */
   distributionFees?: DistributionFee[]
+
+  /**
+   * Disable the backend integrator fee for this request.
+   *
+   * Permissioned: honoured only for allowlisted integrations (authenticated via
+   * their API key). Non-allowlisted callers that set it are ignored and charged
+   * normally. Attribution and integrator-specific config still resolve from
+   * `integrator` — only the fee is suppressed.
+   */
+  disableFees?: boolean
 
   /** Integrators can set a wallet address as a referrer to track them */
   referrer?: string
@@ -446,10 +457,20 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   distributionFees?: DistributionFee[]
   referrer?: string
   fee?: number | string
+  /** @see {@link RouteOptions.disableFees} */
+  disableFees?: boolean
 
   /** Whether destination calls are enabled by default
    * @default true */
   allowDestinationCall?: boolean
+
+  /** Requests a destination-side action executed after the bridge leg (Smart Deposits routes only).
+   *  Must be sent together with `destinationActionVault`; cross-chain EVM routes only. */
+  destinationActionKind?: DestinationActionKind
+
+  /** The ERC-4626 vault the bridged funds are deposited into. Must be on the curated allowlist
+   *  and its underlying asset must equal `toToken`. Must be sent together with `destinationActionKind`. */
+  destinationActionVault?: string
 
   /** The amount of token to convert to gas */
   fromAmountForGas?: string
@@ -484,7 +505,13 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
 export interface QuoteToAmountRequest extends Omit<
   QuoteRequest,
-  'fromAmount' | 'fromAmountForGas' | 'insurance'
+  // Destination actions are excluded: a target output amount cannot be
+  // inverted across the action leg, and the endpoint rejects the params.
+  | 'fromAmount'
+  | 'fromAmountForGas'
+  | 'insurance'
+  | 'destinationActionKind'
+  | 'destinationActionVault'
 > {
   toAmount: string
 }
@@ -515,6 +542,8 @@ type PartialContractCallsQuoteRequest = ToolConfiguration & {
   integrator?: string
   referrer?: string
   fee?: number | string
+  /** @see {@link RouteOptions.disableFees} */
+  disableFees?: boolean
   allowDestinationCall?: boolean // (default : true) // destination calls are enabled by default
 }
 
