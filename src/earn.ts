@@ -3,7 +3,7 @@
  *
  * Derived from the live API rather than from `earn-openapi.yaml`, which
  * disagrees with the service in several places — each noted inline. Verified
- * against 710 vaults across 19 chains and 27 protocols (Aug 2026).
+ * against 703 vaults across 17 chains and 27 protocols (9 Aug 2026).
  */
 
 /**
@@ -63,7 +63,7 @@ export interface EarnPack {
  * The OpenAPI spec, the quickstart and the how-it-works page all describe
  * these as decimals, and the quickstart multiplies by 100. They are wrong:
  * doing so overstates every yield by 100x. Values above 1 are common, and
- * a normaliser keyed on "below 1 means decimal" would misread the 161 vaults
+ * a normaliser keyed on "below 1 means decimal" would misread the 165 vaults
  * that legitimately yield under 1%.
  *
  * `reward` is three-valued and the distinction is load-bearing:
@@ -96,9 +96,11 @@ export interface EarnTvl {
 /**
  * Vault analytics.
  *
- * `updatedAt` is documented as refreshing every 15 minutes. Observed floor is
- * 87 minutes, median 90, so treat it as a coarse staleness signal rather than
- * a freshness guarantee.
+ * `updatedAt` is documented as refreshing every 15 minutes. In practice the
+ * fleet refreshes in one hourly batch — 338 of 703 vaults share a single
+ * `updatedAt` minute — so the freshest reading is over an hour old and a tail
+ * runs to ~97 hours. Treat it as a coarse staleness signal, not a freshness
+ * guarantee.
  */
 export interface EarnAnalytics {
   apy: EarnApy
@@ -156,7 +158,7 @@ export interface EarnVault {
   redeemPacks: EarnPack[]
   /**
    * Vault quality signal — undocumented, but present on every vault and set to
-   * `flagged` on roughly 9% of them.
+   * `flagged` on roughly 10% of them.
    */
   verificationStatus?: string
   verificationStatusBreakdown?: EarnVerificationBreakdown[]
