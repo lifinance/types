@@ -97,10 +97,11 @@ export interface EarnTvl {
  * Vault analytics.
  *
  * `updatedAt` is documented as refreshing every 15 minutes. In practice the
- * fleet refreshes in one hourly batch — 338 of 703 vaults share a single
- * `updatedAt` minute — so the freshest reading is over an hour old and a tail
- * runs to ~97 hours. Treat it as a coarse staleness signal, not a freshness
- * guarantee.
+ * fleet refreshes in one hourly batch firing at :01–:03, so most vaults share a
+ * single `updatedAt` minute and the freshest reading is over an hour old. The
+ * size of that cluster is a function of how far into the hour you sample, so it
+ * is not worth quoting as a constant. A tail runs past 90 hours. Treat this as
+ * a coarse staleness signal, not a freshness guarantee.
  */
 export interface EarnAnalytics {
   apy: EarnApy
