@@ -770,6 +770,11 @@ export interface FailedStatusData extends BaseStatusData {
 export type StatusResponse = FullStatusData | StatusData | FailedStatusData
 interface TransferMetadata {
   integrator: string
+  /**
+   * The referrer recorded for this transfer. Address-shaped on bridge
+   * transfers, where it is emitted on-chain; an opaque integrator-supplied
+   * string on generic swaps. Absent when no referrer was recorded.
+   */
   referrer?: string
 }
 
