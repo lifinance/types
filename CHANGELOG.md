@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.3.0](https://github.com/lifinance/types/compare/v18.2.0...v18.3.0) (2026-08-27)
+
+
+### Features
+
+* add gasless request flags to `QuoteRequest` and `RouteOptions` ([ff71a15](https://github.com/lifinance/types/commit/ff71a15beaa9599b7083550ebfb3996a8b6c7494))
+
 ## [18.2.0](https://github.com/lifinance/types/compare/v18.1.0...v18.2.0) (2026-08-05)
 
 
