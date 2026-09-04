@@ -348,7 +348,7 @@ export interface Route {
 
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
-  containsSwitchChain?: boolean // Features required for route execution
+  containsSwitchChain?: boolean // Whether the route contains a chain switch during execution
 
   steps: LiFiStep[]
 
@@ -588,7 +588,9 @@ export const isContractCallsRequestWithToAmount = (
   r: ContractCallsQuoteRequestFromAmount | ContractCallsQuoteRequestToAmount
 ): r is ContractCallsQuoteRequestToAmount => 'toAmount' in r
 
-/* @deprecated */
+/**
+* @deprecated ContractCallQuoteRequest is deprecated and will be removed in future versions.
+*/
 export interface ContractCallQuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
@@ -670,7 +672,7 @@ export interface PendingReceivingInfo {
 const _StatusMessage = [
   // The transaction was not found -- likely not mined yet
   'NOT_FOUND',
-  // A third party service is not available
+  // The txHash is not tied to the requested tool (bridge / chains)
   'INVALID',
   // The transfer is pending
   'PENDING',
@@ -1091,7 +1093,7 @@ export type RelayResponseData = {
 export type RelayResponse = RelayerResponse<RelayResponseData>
 
 export type RelayStatusRequest = {
-  taskId: Hash
+  taskId: string
   bridge?: string
   fromChain?: number
   toChain?: number
