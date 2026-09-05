@@ -1,79 +1,43 @@
 /**
- * Types for the LI.FI Earn Data API (`earn.li.fi`).
+ * JSON response types for the LI.FI Earn Data API (`earn.li.fi/v1`).
  *
- * Derived from the live API rather than from `earn-openapi.yaml`, which
- * disagrees with the service in several places — each noted inline. Verified
- * against 799 vaults across 17 chains and 27 protocols (1 Sep 2026).
+ * These describe the current response contract, not historical response shapes
+ * or guarantees inferred from a sample of vaults. Timestamps are serialized
+ * strings, and token metadata can be absent until it has been resolved.
  */
 
-/**
- * Protocol a vault belongs to.
- *
- * `id` is the filter key for `?protocol=`. Ids are read from
- * `GET /v1/protocols` and never assumed: most are unversioned (`morpho`, not
- * `morpho-v1`), but `spark-v2` is not, and the convention has changed twice.
- * Filtering on an id that no longer exists returns `200` with zero results
- * rather than an error, so a stale value is indistinguishable from an empty
- * result set.
- */
+/** A protocol returned by the API. Use its id when filtering vaults. */
 export interface EarnProtocol {
-  id?: string
+  id: string
   name: string
   url: string
+  logoUri?: string
 }
 
-/** A token the vault holds. */
-export interface EarnUnderlyingToken {
-  symbol: string
-  address: string
-  decimals: number
-  /** Decimal string, present on every token observed live. */
-  priceUsd?: string
-  /** Documented for multi-asset vaults, but not currently emitted. */
-  weight?: number
-}
-
-/**
- * An incentive token the vault distributes.
- *
- * `symbol` and `decimals` are marked required in the OpenAPI spec but are
- * absent on some entries, so both are optional here.
- */
-export interface EarnRewardToken {
+/** A vault token reference. Only its address is guaranteed to be available. */
+export interface EarnToken {
   address: string
   symbol?: string
   decimals?: number
+  /** Token price in USD, represented as a decimal string. */
   priceUsd?: string
 }
 
-/**
- * Deposit or redeem route metadata.
- *
- * Originally Composer zap-pack metadata. The zap-pack endpoints were
- * decommissioned in Jun 2026, but the field still populates on vaults.
- */
+/** An underlying asset held by a vault. */
+export type EarnUnderlyingToken = EarnToken
+
+/** An incentive token distributed by a vault. */
+export type EarnRewardToken = EarnToken
+
+/** A vault's deposit or redeem route metadata. */
 export interface EarnPack {
   name: string
-  stepsType: string
+  stepsType: 'instant' | 'complex'
 }
 
 /**
- * APY breakdown. **All values are percentages** — `4.63` means 4.63%.
- *
- * The OpenAPI spec, the quickstart and the how-it-works page all describe
- * these as decimals, and the quickstart multiplies by 100. They are wrong:
- * doing so overstates every yield by 100x. Values above 1 are common, and
- * a normaliser keyed on "below 1 means decimal" would misread every vault
- * that legitimately yields under 1%, of which there are always some.
- *
- * `reward` is three-valued and the distinction is load-bearing:
- * - `null` — the protocol reported nothing. Unknown, not zero.
- * - `0` — the protocol reported that there are no incentives.
- * - `> 0` — incentives, as a percentage.
- *
- * The split varies *within* a protocol, so it cannot be inferred from
- * `protocol.id`. Coercing `null` to `0` destroys the only signal that
- * separates organic yield from an emission that can end.
+ * APY values in percentage points: `5.34` means 5.34%, not 534%.
+ * A null component is unavailable; callers should not conflate it with zero.
  */
 export interface EarnApy {
   base: number | null
@@ -81,121 +45,92 @@ export interface EarnApy {
   reward: number | null
 }
 
-/**
- * Total value locked.
- *
- * `usd` is a **number**. The OpenAPI spec declares it a string, and it was one
- * before the Apr 2026 rewrite. Typed as a union so a flip in either direction
- * is not a breaking change for consumers.
- */
+/** Total value locked: USD is a JSON number, native units a decimal string. */
 export interface EarnTvl {
-  usd: number | string
-  native?: number | string
+  usd: number
+  native?: string
 }
 
-/**
- * Vault analytics.
- *
- * `updatedAt` is documented as refreshing every 15 minutes. In practice the
- * fleet refreshes in one hourly batch firing at :01–:03, so most vaults share a
- * single `updatedAt` minute and the freshest reading is over an hour old. The
- * size of that cluster is a function of how far into the hour you sample, so it
- * is not worth quoting as a constant. A tail runs past 90 hours. Treat this as
- * a coarse staleness signal, not a freshness guarantee.
- */
 export interface EarnAnalytics {
   apy: EarnApy
   tvl: EarnTvl
   apy1d: number | null
   apy7d: number | null
-  apy30d: number | null
+  apy30d: number
+  /** ISO timestamp of the analytics observation, not a freshness guarantee. */
   updatedAt: string
 }
 
-/** One reason contributing to a vault's verification status. */
+/** Rule-based screening output, not a security audit or safety guarantee. */
+export type EarnVerificationStatus = 'none' | 'flagged'
+
+export type EarnVerificationReason =
+  | 'none'
+  | 'zero_apy'
+  | 'apy_outlier'
+  | 'stale_data'
+
 export interface EarnVerificationBreakdown {
-  /** e.g. `zero_apy`, `apy_outlier`. */
-  reason: string
-  /** e.g. `flagged`, `passed`. */
-  result: string
+  reason: EarnVerificationReason
+  result: EarnVerificationStatus
 }
 
-/** Deposit capacity limits. Documented in the spec; not currently emitted. */
+/** Optional deposit capacity limits, represented as decimal strings. */
 export interface EarnCaps {
-  totalCap?: number | string
-  maxCap?: number | string
+  totalCap?: string
+  maxCap?: string
 }
 
-/**
- * A yield vault indexed by LI.FI Earn.
- *
- * `caps`, `timeLock` and `kyc` are documented in `earn-openapi.yaml` but are
- * sent by zero vaults; they are optional here so code written against the spec
- * still compiles, but they should not be relied on.
- *
- * Note also that `isTransactional` describes intent, not capability: the Earn
- * index is a superset of what Composer can route, so a vault can carry
- * `isTransactional: true` and still have no routing edge to enter it.
- */
+/** A vault indexed by LI.FI Earn. */
 export interface EarnVault {
   address: string
   chainId: number
   name: string
   slug: string
   network: string
-  /** Present on roughly 23% of vaults. */
   description?: string
   protocol: EarnProtocol
+  /** ISO timestamp of the vault's sync. */
   syncedAt: string
-  /** Observed values include `single`, `multi`, `stablecoin`, `il-risk`. */
   tags: string[]
-  underlyingTokens: EarnUnderlyingToken[]
-  /** Absent rather than empty when the vault emits no rewards. */
+  underlyingTokens?: EarnUnderlyingToken[]
+  lpTokens?: EarnToken[]
   rewardTokens?: EarnRewardToken[]
   analytics: EarnAnalytics
+  /** Capability metadata; a successful executable quote is still required. */
   isTransactional: boolean
   isRedeemable: boolean
   depositPacks: EarnPack[]
   redeemPacks: EarnPack[]
-  /**
-   * Vault quality signal — undocumented, but present on every vault and set to
-   * `flagged` on roughly 10% of them.
-   */
-  verificationStatus?: string
-  verificationStatusBreakdown?: EarnVerificationBreakdown[]
-  /** Documented but never emitted. */
+  verificationStatus: EarnVerificationStatus
+  verificationStatusBreakdown: EarnVerificationBreakdown[]
   caps?: EarnCaps
-  /** Documented but never emitted. */
   timeLock?: number
-  /** Documented but never emitted. */
   kyc?: boolean
 }
 
-/**
- * A page of vaults.
- *
- * `nextCursor` is **absent from the JSON** on the final page — not null, not an
- * empty string — so it must be both optional and nullable. Callers should treat
- * missing and null identically when paginating.
- */
+/** A page from GET /v1/vaults. */
 export interface EarnVaultListResponse {
   data: EarnVault[]
-  nextCursor?: string | null
+  /** Omitted on the final page. Pass unchanged as the next request's cursor. */
+  nextCursor?: string
   total: number
+  /** ISO timestamp of the catalog normalization. */
+  normalizedAt: string
 }
 
-/** A chain with at least one indexed vault. Returned as a bare array. */
+/** GET /v1/chains returns a bare array of these objects. */
 export interface EarnChain {
   chainId: number
   name: string
   networkCaip: string
 }
 
-/** A single position in a wallet's Earn portfolio. */
+/** One position returned by GET /v1/portfolio/{userAddress}/positions. */
 export interface EarnPosition {
   chainId: number
-  /** The vault contract. */
-  address?: string
+  /** The vault contract address, or null when unresolved. */
+  address: string | null
   protocolName: string | null
   asset: {
     address: string
@@ -204,28 +139,18 @@ export interface EarnPosition {
     decimals: number
   }
   balanceUsd: string | null
-  balanceNative: string | null
+  balanceNative: string
 }
 
-/**
- * A wallet's Earn positions.
- *
- * The array was renamed `positions` → `data` in Aug 2026 with no changelog
- * entry. Both are declared so consumers can migrate without a breaking change.
- */
+/** A page from GET /v1/portfolio/{userAddress}/positions. */
 export interface EarnPortfolioResponse {
-  data?: EarnPosition[]
-  /** @deprecated Renamed to `data` in Aug 2026. */
-  positions?: EarnPosition[]
-  limit?: number
+  data: EarnPosition[]
+  /** Omitted on the final page. Continue until no cursor is returned. */
+  nextCursor?: string
+  limit: number
 }
 
-/**
- * Field-level validation failure.
- *
- * Only `400` responses carry these. `404` returns a bare
- * `{ statusCode, message }` despite the changelog announcing structured 404s.
- */
+/** One field-level issue in a validation error response's errors array. */
 export interface EarnApiFieldError {
   code: string
   message: string

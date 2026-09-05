@@ -67,7 +67,7 @@
     "release": "standard-version -a",
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
     "release:beta": "standard-version -a --prerelease beta --skip.changelog",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit && tsc --project tests/tsconfig.json"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
