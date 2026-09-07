@@ -460,6 +460,8 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   toChain: number | string
   toToken: string
   toAddress?: string
+  /** Refund recipient on the origin chain for a bridge that cannot deliver. Defaults to fromAddress. */
+  refundAddress?: string
 
   order?: Order
   slippage?: number | string

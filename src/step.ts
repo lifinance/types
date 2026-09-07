@@ -109,6 +109,8 @@ export interface Action {
   toChainId: number
   toToken: Token
   toAddress?: string
+  /** Refund recipient on the origin chain when the carrier honours one. */
+  refundAddress?: string
 
   slippage?: number
 }
