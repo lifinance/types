@@ -109,6 +109,7 @@ export interface Action {
   toChainId: number
   toToken: Token
   toAddress?: string
+  refundAddress?: string
 
   slippage?: number
 }

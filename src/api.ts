@@ -460,6 +460,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   toChain: number | string
   toToken: string
   toAddress?: string
+  refundAddress?: string
 
   order?: Order
   slippage?: number | string
