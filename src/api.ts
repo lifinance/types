@@ -1048,6 +1048,7 @@ export const TypedDataPrimaryTypes = [
   'Agent',
   'NonceMapping',
   'HyperliquidTransaction:ApproveBuilderFee',
+  'PermitSingle',
 ] as const
 export type TypedDataPrimaryType = (typeof TypedDataPrimaryTypes)[number]
 
