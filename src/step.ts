@@ -4,6 +4,7 @@ import type {
   SignedTypedData,
   ExecutionType,
 } from './api.js'
+import type { RouteSlippageProtection } from './routeSlippage.js'
 import type { Token } from './tokens/index.js'
 
 /**
@@ -250,6 +251,13 @@ export interface LiFiStep extends Omit<Step, 'type'> {
    * `/v1/advanced/stepTransaction` — a step posted without it prepares a
    * plain bundle that delivers the raw token instead of the action's output. */
   destinationAction?: DestinationAction
+
+  /** Present iff the step belongs to a route admitted with
+   * `slippageScope: 'route'`. Same object as `Route.slippageProtection` —
+   * round-trip it unchanged to `/v1/advanced/stepTransaction` and through SDK
+   * resume/continuation; the server verifies the embedded `protectionToken`
+   * and rejects a protected build without it. Absent on legacy steps. */
+  slippageProtection?: RouteSlippageProtection
 }
 
 export interface SignedLiFiStep extends LiFiStep {

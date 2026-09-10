@@ -17,6 +17,11 @@ import type {
   TokenTag,
 } from './tokens/index.js'
 import type {
+  RouteSlippageProtection,
+  RouteSlippageProtectionStatus,
+  SlippageScope,
+} from './routeSlippage.js'
+import type {
   Address,
   Hash,
   Hex,
@@ -136,8 +141,18 @@ export interface RouteOptionsBase {
   /** (default: CHEAPEST) 'FASTEST' | 'CHEAPEST' */
   order?: Order
 
-  /** (default: 0.03) Expressed as decimal proportion, 0.03 represents 3% */
+  /** (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%.
+   * With `slippageScope: 'route'` this is the route-wide tolerance S instead
+   * (explicit finite value in `[0, 1)` required; the 0.03 default does not
+   * apply) — see {@link SlippageScope}. */
   slippage?: number
+
+  /** Scope of `slippage`. Omitted and `'step'` are identical (existing
+   * per-step behavior). `'route'` opts into route-wide slippage protection:
+   * the response carries a {@link RouteSlippageProtection} acknowledgement,
+   * and unsupported paths reject the request instead of downgrading.
+   * @default 'step' */
+  slippageScope?: SlippageScope
 
   /** (default: false) Whether chain switches should be allowed in the routes */
   allowSwitchChain?: boolean
@@ -352,6 +367,13 @@ export interface Route {
 
   steps: LiFiStep[]
 
+  /** Present iff the route was admitted with `slippageScope: 'route'`.
+   * Server acknowledgement plus opaque protection carrier; also attached to
+   * every participating root step. Clients must reject a protected response
+   * where this is absent or inconsistent — never fall back to legacy
+   * execution. Absent on legacy routes. */
+  slippageProtection?: RouteSlippageProtection
+
   tags?: Order[]
 }
 
@@ -463,7 +485,13 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   refundAddress?: string
 
   order?: Order
+  /** With `slippageScope: 'route'`, prefer the string form: it is parsed as
+   * an exact canonical decimal (max 8 fractional digits, never rounded). */
   slippage?: number | string
+  /** Scope of `slippage` — see {@link RouteOptionsBase.slippageScope}.
+   * Exact-input quotes only; unsupported surfaces reject `'route'`.
+   * @default 'step' */
+  slippageScope?: SlippageScope
   integrator?: string
   /** Optional intermediary identifier for multi-party fee splitting.
    *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
@@ -533,8 +561,12 @@ export interface QuoteToAmountRequest extends Omit<
   | 'insurance'
   | 'destinationActionKind'
   | 'destinationActionVault'
+  // Route protection is initially exact-input-only. Exact-output exposes
+  // legacy step scope, never route scope.
+  | 'slippageScope'
 > {
   toAmount: string
+  slippageScope?: 'step'
 }
 
 export interface ContractCall {
@@ -793,6 +825,13 @@ export interface FullStatusData extends StatusData {
   toAddress: string
   metadata: TransferMetadata
   bridgeExplorerLink?: string
+
+  /** Settlement report of a route-wide slippage protection, orthogonal to
+   * `status`/`substatus`. Present only for transfers executed under a
+   * protection; `FULFILLED` requires verified delivery ≥ `minimumToAmount`
+   * to the designated recipient — refunds/recovery are reported separately
+   * and are never fulfillment. */
+  slippageProtection?: RouteSlippageProtectionStatus
 }
 
 export interface ExtendedChain extends Chain {
