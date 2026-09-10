@@ -233,6 +233,15 @@ export interface RouteOptions extends RouteOptionsBase {
   /** Integrators can set a wallet address as a referrer to track them */
   referrer?: string
 
+  /**
+   * Recipient of source-chain bridge principal refunds, independent of the
+   * funding sender and successful recipient. Must be valid on the source chain.
+   * When supplied, bridges and quote variants that cannot honor it are excluded
+   * or rejected rather than falling back to the sender. Does not redirect
+   * destination swap/call recovery. Omission preserves the bridge's default.
+   */
+  refundAddress?: string
+
   /** SVM specific option, without it implicit source swaps routes are discarded */
   jitoBundle?: boolean
 
@@ -460,6 +469,7 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   toChain: number | string
   toToken: string
   toAddress?: string
+  /** @see {@link RouteOptions.refundAddress} */
   refundAddress?: string
 
   order?: Order
@@ -551,6 +561,8 @@ type PartialContractCallsQuoteRequest = ToolConfiguration & {
   fromChain: number | string
   fromToken: string
   fromAddress: string
+  /** @see {@link RouteOptions.refundAddress} */
+  refundAddress?: string
 
   toChain: number | string
   toToken: string
@@ -594,6 +606,8 @@ export interface ContractCallQuoteRequest extends ToolConfiguration {
   fromChain: number | string
   fromToken: string
   fromAddress: string
+  /** @see {@link RouteOptions.refundAddress} */
+  refundAddress?: string
   toChain: number | string
   toToken: string
   toAmount: string
