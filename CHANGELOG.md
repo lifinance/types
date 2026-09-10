@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.6.0](https://github.com/lifinance/types/compare/v18.5.0...v18.6.0) (2026-09-10)
+
+
+### Features
+
+* add PermitSingle to TypedDataPrimaryTypes ([#577](https://github.com/lifinance/types/issues/577)) ([f3759a2](https://github.com/lifinance/types/commit/f3759a299b7d3fa415d359d94a3f523a116b1ddd))
+
 ## [18.5.0](https://github.com/lifinance/types/compare/v18.4.0...v18.5.0) (2026-09-08)
 
 
