@@ -470,9 +470,7 @@ export interface ToolConfiguration {
   allowProtocols?: string[]
   denyProtocols?: string[]
   denyPools?: string[]
-  /** Flat form of `RouteOptions.liquiditySources.source` — see {@link LiquiditySources}. */
   liquiditySourcesSource?: string[]
-  /** Flat form of `RouteOptions.liquiditySources.destination` — see {@link LiquiditySources}. */
   liquiditySourcesDestination?: string[]
 }
 
