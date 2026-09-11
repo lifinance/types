@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.7.0](https://github.com/lifinance/types/compare/v18.6.0...v18.7.0) (2026-09-11)
+
+
+### Features
+
+* add per-side liquidity source parameters ([#576](https://github.com/lifinance/types/issues/576)) ([24b60e1](https://github.com/lifinance/types/commit/24b60e1faeb1ed97e72a8a001718b250a07d21b4))
+
 ## [18.6.0](https://github.com/lifinance/types/compare/v18.5.0...v18.6.0) (2026-09-10)
 
 
