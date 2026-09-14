@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.7.0](https://github.com/lifinance/types/compare/v18.6.0...v18.7.0) (2026-09-11)
+
+
+### Features
+
+* add per-side liquidity source parameters ([#576](https://github.com/lifinance/types/issues/576)) ([24b60e1](https://github.com/lifinance/types/commit/24b60e1faeb1ed97e72a8a001718b250a07d21b4))
+
+## [18.6.0](https://github.com/lifinance/types/compare/v18.5.0...v18.6.0) (2026-09-10)
+
+
+### Features
+
+* add PermitSingle to TypedDataPrimaryTypes ([#577](https://github.com/lifinance/types/issues/577)) ([f3759a2](https://github.com/lifinance/types/commit/f3759a299b7d3fa415d359d94a3f523a116b1ddd))
+
+## [18.5.0](https://github.com/lifinance/types/compare/v18.4.0...v18.5.0) (2026-09-08)
+
+
+### Features
+
+* add fynd protocol icon ([#570](https://github.com/lifinance/types/issues/570)) ([29e2fea](https://github.com/lifinance/types/commit/29e2feaa715a59c4b78888a9049272ee9241a95a))
+* add refundAddress to QuoteRequest and Action ([#573](https://github.com/lifinance/types/issues/573)) ([e84a706](https://github.com/lifinance/types/commit/e84a706c939af73613d3984707e81a2be1e0c5b0))
+* add uniswap logo ([#572](https://github.com/lifinance/types/issues/572)) ([6ae38b6](https://github.com/lifinance/types/commit/6ae38b69eb7232a76ba1d7cb47b91b7973cc152c))
+
 ## [18.4.0](https://github.com/lifinance/types/compare/v18.3.0...v18.4.0) (2026-08-27)
 
 
