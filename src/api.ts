@@ -756,6 +756,8 @@ const _SubstatusFailed = [
   'SLIPPAGE_EXCEEDED',
   // We cannot determine the cause of the failure
   'UNKNOWN_FAILED_ERROR',
+  // A Smart Deposits refund attempt failed
+  'INTENT_REFUND_FAILED',
 ] as const
 export type SubstatusFailed = (typeof _SubstatusFailed)[number]
 
