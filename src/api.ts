@@ -796,6 +796,7 @@ export interface FailedStatusData extends BaseStatusData {
 export type StatusResponse = FullStatusData | StatusData | FailedStatusData
 interface TransferMetadata {
   integrator: string
+  referrer?: string
 }
 
 export type IncludedStep = {
