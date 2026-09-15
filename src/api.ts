@@ -594,11 +594,13 @@ type PartialContractCallsQuoteRequest = ToolConfiguration & {
 export type ContractCallsQuoteRequestToAmount =
   PartialContractCallsQuoteRequest & {
     toAmount: string
+    fromAmount?: never
   }
 
 export type ContractCallsQuoteRequestFromAmount =
   PartialContractCallsQuoteRequest & {
     fromAmount: string
+    toAmount?: never
   }
 
 export type ContractCallsQuoteRequest =
@@ -665,7 +667,7 @@ export type GetStatusRequest = {
   toChain?: number | string
   transactionId?: string
   depositAddress?: string
-} & ({ txHash: string } | { taskId: string })
+} & ({ txHash: string; taskId?: never } | { taskId: string; txHash?: never })
 
 export interface BaseTransactionInfo {
   txHash: string
