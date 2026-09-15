@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.9.0](https://github.com/lifinance/types/compare/v18.8.0...v18.9.0) (2026-09-15)
+
+
+### Features
+
+* add optional referrer to TransferMetadata ([#566](https://github.com/lifinance/types/issues/566)) ([d8ea4f0](https://github.com/lifinance/types/commit/d8ea4f04733dece23c41fbc87bfd81b78d406064))
+* centrifuge icon ([#581](https://github.com/lifinance/types/issues/581)) ([17b723a](https://github.com/lifinance/types/commit/17b723a6490312834af91296bc1710bbb3e2edac))
+
 ## [18.8.0](https://github.com/lifinance/types/compare/v18.7.0...v18.8.0) (2026-09-14)
 
 
