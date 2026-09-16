@@ -158,6 +158,10 @@ export interface RouteOptionsBase {
    *  Only supported by the `fly` exchange — see {@link PoolDeny}. */
   pools?: PoolDeny
 
+  /** Liquidity venues each swap leg may execute against, per side.
+   *  Only supported by the `fly` exchange — see {@link LiquiditySources}. */
+  liquiditySources?: LiquiditySources
+
   /** Timing strategies for the routes */
   timing?: Timing
 
@@ -320,6 +324,23 @@ export interface PoolDeny {
 }
 
 /**
+ * Liquidity venues a swap leg is allowed to execute against, scoped per side of
+ * the route. Names come from Fly's liquidity-source list and are chain-specific
+ * (e.g. `aerodrome-stable` on Base); a name valid on another chain simply yields
+ * no route. Venue-level filtering is only supported by the `fly` exchange
+ * aggregator, so a side with a list set is restricted to `fly`.
+ *
+ * On a same-chain route the single swap counts as the source leg, so `source`
+ * applies and `destination` is ignored.
+ */
+export interface LiquiditySources {
+  /** Venues allowed for the swap on the source chain. */
+  source?: string[]
+  /** Venues allowed for the swap on the destination chain. */
+  destination?: string[]
+}
+
+/**
  * @deprecated _InsuranceState is deprecated and will be removed in future versions.
  */
 export const _InsuranceState = [
@@ -458,6 +479,8 @@ export interface ToolConfiguration {
   allowProtocols?: string[]
   denyProtocols?: string[]
   denyPools?: string[]
+  liquiditySourcesSource?: string[]
+  liquiditySourcesDestination?: string[]
 }
 
 export interface QuoteRequest extends ToolConfiguration, TimingStrings {
@@ -747,6 +770,8 @@ const _SubstatusFailed = [
   'SLIPPAGE_EXCEEDED',
   // We cannot determine the cause of the failure
   'UNKNOWN_FAILED_ERROR',
+  // A Smart Deposits refund attempt failed
+  'INTENT_REFUND_FAILED',
 ] as const
 export type SubstatusFailed = (typeof _SubstatusFailed)[number]
 
@@ -785,6 +810,7 @@ export interface FailedStatusData extends BaseStatusData {
 export type StatusResponse = FullStatusData | StatusData | FailedStatusData
 interface TransferMetadata {
   integrator: string
+  referrer?: string
 }
 
 export type IncludedStep = {
@@ -1062,6 +1088,7 @@ export const TypedDataPrimaryTypes = [
   'Agent',
   'NonceMapping',
   'HyperliquidTransaction:ApproveBuilderFee',
+  'PermitSingle',
 ] as const
 export type TypedDataPrimaryType = (typeof TypedDataPrimaryTypes)[number]
 
