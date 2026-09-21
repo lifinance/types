@@ -58,6 +58,7 @@
     "lint:fix": "eslint ./src --fix",
     "package": "npm run build && npm pack",
     "postinstall": "husky",
+    "prepare": "pnpm build",
     "postpack": "pinst --enable",
     "pre-commit": "lint-staged",
     "pre-push": "pnpm build",
