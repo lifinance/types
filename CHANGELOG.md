@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.10.0](https://github.com/lifinance/types/compare/v18.9.0...v18.10.0) (2026-09-21)
+
+
+### Features
+
+* expose source-chain principal refund recipients ([#575](https://github.com/lifinance/types/issues/575)) ([05c08a9](https://github.com/lifinance/types/commit/05c08a9576c0e219d2af4879248a894c48a5e1ec))
+
 ## [18.9.0](https://github.com/lifinance/types/compare/v18.8.0...v18.9.0) (2026-09-15)
 
 
