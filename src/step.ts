@@ -109,6 +109,7 @@ export interface Action {
   toChainId: number
   toToken: Token
   toAddress?: string
+  /** Recipient of source-chain bridge principal refunds, not destination swap/call recovery. */
   refundAddress?: string
 
   slippage?: number

@@ -24,7 +24,8 @@ jobs:
           generate_release_notes: true
           name: ${{ github.ref_name }}
           draft: false
-          prerelease: false
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          make_latest: ${{ contains(github.ref_name, '-') && 'false' || 'true' }}
 
   publish:
     permissions:
