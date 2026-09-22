@@ -16,6 +16,7 @@ import type {
   TokenExtended,
   TokenTag,
 } from './tokens/index.js'
+import type { RouteSlippageCommitment, SlippageScope } from './routeSlippage.js'
 import type {
   Address,
   Hash,
@@ -136,8 +137,16 @@ export interface RouteOptionsBase {
   /** (default: CHEAPEST) 'FASTEST' | 'CHEAPEST' */
   order?: Order
 
-  /** (default: 0.03) Expressed as decimal proportion, 0.03 represents 3% */
+  /** (default: 0.03) Expressed as decimal proportion, 0.03 represents 3%.
+   * With `slippageScope: 'route'` this is the total budget `S` for the whole
+   * route instead (explicit value in `[0, 1)` required; no default applies). */
   slippage?: number
+
+  /** Scope of `slippage`. Omitted and `'step'` are identical (per-step
+   * slippage, today's behaviour). `'route'` opts into route-wide protection:
+   * the response carries a {@link RouteSlippageCommitment} and unsupported
+   * paths are rejected instead of downgraded. @default 'step' */
+  slippageScope?: SlippageScope
 
   /** (default: false) Whether chain switches should be allowed in the routes */
   allowSwitchChain?: boolean
@@ -376,6 +385,10 @@ export interface Route {
   toToken: Token
   toAddress?: string
 
+  /** Present iff the route was admitted with `slippageScope: 'route'`; also
+   * mirrored onto every participating root step. Absent on step-scope routes. */
+  routeSlippage?: RouteSlippageCommitment
+
   gasCostUSD?: string // Aggregation of underlying gas costs in usd
 
   containsSwitchChain?: boolean // Features required for route execution
@@ -497,6 +510,9 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
   order?: Order
   slippage?: number | string
+  /** Scope of `slippage` — see {@link RouteOptionsBase.slippageScope}.
+   * Exact-input quotes only; other surfaces reject `'route'`. @default 'step' */
+  slippageScope?: SlippageScope
   integrator?: string
   /** Optional intermediary identifier for multi-party fee splitting.
    *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
@@ -566,8 +582,12 @@ export interface QuoteToAmountRequest extends Omit<
   | 'insurance'
   | 'destinationActionKind'
   | 'destinationActionVault'
+  // Route-wide protection is exact-input only: exact-output stays on step
+  // scope and rejects `'route'` instead of downgrading.
+  | 'slippageScope'
 > {
   toAmount: string
+  slippageScope?: 'step'
 }
 
 export interface ContractCall {
@@ -595,6 +615,8 @@ type PartialContractCallsQuoteRequest = ToolConfiguration & {
   contractCalls: ContractCall[]
 
   slippage?: number | string
+  /** Contract-call quotes stay on step scope; `'route'` is rejected. */
+  slippageScope?: 'step'
   integrator?: string
   referrer?: string
   fee?: number | string

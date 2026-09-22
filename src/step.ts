@@ -4,6 +4,7 @@ import type {
   SignedTypedData,
   ExecutionType,
 } from './api.js'
+import type { RouteSlippageCommitment } from './routeSlippage.js'
 import type { Token } from './tokens/index.js'
 
 /**
@@ -251,6 +252,12 @@ export interface LiFiStep extends Omit<Step, 'type'> {
    * `/v1/advanced/stepTransaction` — a step posted without it prepares a
    * plain bundle that delivers the raw token instead of the action's output. */
   destinationAction?: DestinationAction
+
+  /** Present iff the step belongs to a route admitted with
+   * `slippageScope: 'route'`. Same object as `Route.routeSlippage` — round-trip
+   * it unchanged to `/v1/advanced/stepTransaction` and through SDK resume; the
+   * server validates it and refuses to build below its floor. */
+  routeSlippage?: RouteSlippageCommitment
 }
 
 export interface SignedLiFiStep extends LiFiStep {
