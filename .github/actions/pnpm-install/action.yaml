@@ -1,12 +1,12 @@
 name: 'PNPM install'
-description: 'Run pnpm install (pnpm store cache on by default)'
+description: 'Run pnpm install (pnpm store cache off unless the job opts in)'
 
 inputs:
   cache:
     description: >-
-      Use the pnpm store cache. Set "false" in privileged jobs (publish / version
-      PR / preview) so a poisoned cache can't reach a context with publish/write perms.
-    default: 'true'
+      Use the pnpm store cache. Off by default so privileged jobs (publish / version
+      PR / preview) never restore a poisoned cache; read-only jobs opt in with 'true'.
+    default: 'false'
 
 runs:
   using: 'composite'
