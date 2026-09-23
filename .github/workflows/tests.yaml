@@ -29,3 +29,19 @@ jobs:
         run: pnpm typecheck
       - name: Build
         run: pnpm build
+
+  version-guard:
+    # Versions change only in the Changesets Version PR (branch changeset-release/*).
+    # Never runs in publish.yaml's verify gate (workflow_call from a push).
+    if: github.event_name == 'pull_request' && !startsWith(github.head_ref, 'changeset-release/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false # public repo: the fetch below needs no token
+      - name: package.json version must not change outside the Version PR
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git fetch --depth=1 origin "$BASE_REF"
+          bash .github/scripts/version-guard.sh FETCH_HEAD
