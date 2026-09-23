@@ -125,3 +125,7 @@ yarn.lock
 package-lock.json
 
 .DS_Store
+
+# Claude Code (local only)
+.claude/settings.local.json
+.claude/worktrees/
