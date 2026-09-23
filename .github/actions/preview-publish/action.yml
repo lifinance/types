@@ -47,13 +47,24 @@ runs:
         if [ -z "$pkg" ]; then
           echo "::warning::The changesets do not bump this package — nothing to publish as a preview."
           echo "publish=false" >> "$GITHUB_OUTPUT"
-        elif npm view "$pkg" version >/dev/null 2>&1; then
-          # Same head commit as an earlier preview (for example the label was re-added).
-          echo "::warning::$pkg is already on npm — push a new commit for a new preview."
-          echo "publish=false" >> "$GITHUB_OUTPUT"
         else
-          echo "publish=true" >> "$GITHUB_OUTPUT"
-          echo "Preview version to publish: $pkg"
+          rc=0
+          bash .github/scripts/npm-has-version.sh "$pkg" || rc=$?
+          case "$rc" in
+            0)
+              # Same head commit as an earlier preview (for example the label was re-added).
+              echo "::warning::$pkg is already on npm — push a new commit for a new preview."
+              echo "publish=false" >> "$GITHUB_OUTPUT"
+              ;;
+            1)
+              echo "publish=true" >> "$GITHUB_OUTPUT"
+              echo "Preview version to publish: $pkg"
+              ;;
+            *)
+              echo "::error::Cannot tell whether $pkg is on npm (the registry did not answer with 404)."
+              exit 1
+              ;;
+          esac
         fi
 
     # Same script as the real release (build + changeset publish), with the preview tag.
