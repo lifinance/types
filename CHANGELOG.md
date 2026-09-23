@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.12.0](https://github.com/lifinance/types/compare/v18.11.0...v18.12.0) (2026-09-23)
+
+
+### Features
+
+* add sunswap icon ([#583](https://github.com/lifinance/types/issues/583)) ([1f094ee](https://github.com/lifinance/types/commit/1f094ee35f5b90b04a0ba96ae5927c4d3ccd704f))
+
 ## [18.11.0](https://github.com/lifinance/types/compare/v18.10.0...v18.11.0) (2026-09-23)
 
 
