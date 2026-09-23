@@ -37,9 +37,9 @@ npm install --save @lifi/types
 - `pnpm typecheck` — type-check with TypeScript 7
 - `pnpm build` — build CJS, ESM and declarations
 
-TypeScript 7 ships only the `tsc` binary and no language server. VS Code therefore falls
-back to its bundled TypeScript. Install the "TypeScript (Native Preview)" extension to get
-editor diagnostics that match `pnpm typecheck`.
+TypeScript 7 does not ship `tsserver`, so VS Code's built-in TypeScript support falls back
+to its bundled version. Install the "TypeScript 7" extension
+(`TypeScriptTeam.native-preview`) to get editor diagnostics that match `pnpm typecheck`.
 
 Git hooks ([husky](https://github.com/typicode/husky) +
 [lint-staged](https://github.com/lint-staged/lint-staged)) run oxlint and oxfmt on staged
