@@ -55,7 +55,7 @@
     "build:esm": "tsc --project ./tsconfig.build.json --module es2015 --outDir ./src/_esm && printf '{\"type\": \"module\",\"sideEffects\":false}' > ./src/_esm/package.json",
     "build:types": "tsc --project ./tsconfig.build.json --module esnext --declarationDir ./src/_types --emitDeclarationOnly --declaration --declarationMap",
     "clean": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo src/tsconfig.build.tsbuildinfo src/_esm src/_cjs src/_types",
-    "lint:fix": "eslint ./src --fix",
+    "lint:fix": "oxlint --fix",
     "package": "npm run build && npm pack",
     "postinstall": "husky",
     "prepare": "pnpm build",
@@ -68,7 +68,8 @@
     "release": "standard-version -a",
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
     "release:beta": "standard-version -a --prerelease beta --skip.changelog",
-    "typecheck": "tsc --noEmit && tsc --project tests/tsconfig.json"
+    "typecheck": "tsc --noEmit && tsc --project tests/tsconfig.json",
+    "lint": "oxlint --deny-warnings"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -80,14 +81,10 @@
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
     "@types/fs-extra": "^11.0.4",
-    "@typescript-eslint/eslint-plugin": "^8.59.2",
-    "@typescript-eslint/parser": "^8.59.2",
-    "eslint": "^10.3.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
     "fs-extra": "^11.3.5",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.4",
+    "oxlint": "^1.85.0",
     "pinst": "^3.0.0",
     "prettier": "^3.8.3",
     "standard-version": "^9.5.0",
