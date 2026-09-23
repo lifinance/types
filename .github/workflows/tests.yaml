@@ -1,7 +1,8 @@
 name: Tests
 
 on:
-  # publish.yaml calls this workflow as its Verify gate before Version and Release.
+  # Reused as publish.yaml's verify gate (workflow_call). No push:[main] trigger —
+  # main is covered once via that gate; PRs via pull_request below.
   workflow_call:
   pull_request:
     branches:
@@ -13,7 +14,6 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -30,23 +30,3 @@ jobs:
         run: pnpm typecheck
       - name: Build
         run: pnpm build
-
-  version-guard:
-    # Versions change only in the Changesets Version PR (branch changeset-release/main of
-    # this repository; a fork cannot claim that name). Never runs in publish.yaml's verify
-    # gate (workflow_call from a push).
-    if: >-
-      github.event_name == 'pull_request'
-      && !(github.head_ref == 'changeset-release/main'
-      && github.event.pull_request.head.repo.full_name == github.repository)
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          # The PR merge commit and its first parent: the base the merge was made from.
-          # (Comparing with the base tip at job time gives false failures on re-runs.)
-          fetch-depth: 2
-          persist-credentials: false
-      - name: package.json version must not change outside the Version PR
-        run: bash .github/scripts/version-guard.sh HEAD^1

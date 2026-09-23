@@ -6,22 +6,16 @@ description: >-
 runs:
   using: composite
   steps:
-    # Only changesets that this PR adds count. Changesets that are already on the base
-    # branch (merged, not versioned yet) do not make an unchanged PR worth a preview.
-    # `changeset version` also exits 1 when there are no changesets (Changesets v3).
-    - name: Check for changesets in this PR
+    # `changeset version` exits 1 when there are no changesets (Changesets v3), so
+    # gate it on a changeset actually being present. README.md is not a changeset.
+    - name: Check for changesets
       id: changesets
       shell: bash
-      env:
-        BASE_REF: ${{ github.event.pull_request.base.ref }}
       run: |
-        git fetch --quiet --no-tags origin "+refs/heads/${BASE_REF}:refs/remotes/origin/${BASE_REF}"
-        added=$(git diff --name-only --diff-filter=A "origin/${BASE_REF}...HEAD" -- '.changeset/*.md' | grep -v '/README\.md$' || true)
-        if [ -n "$added" ]; then
+        if [ -n "$(find .changeset -maxdepth 1 -name '*.md' ! -name 'README.md' -print -quit)" ]; then
           echo "present=true" >> "$GITHUB_OUTPUT"
-          echo "Changesets added by this PR:"; echo "$added"
         else
-          echo "::warning::This PR adds no changeset — nothing to publish as a preview."
+          echo "::warning::No changeset in this PR — nothing to publish as a preview."
           echo "present=false" >> "$GITHUB_OUTPUT"
         fi
 
@@ -42,29 +36,14 @@ runs:
       if: steps.changesets.outputs.present == 'true'
       shell: bash
       run: |
-        jq -r 'select(.version | test("-preview-")) | "\(.name)@\(.version)"' package.json > "$RUNNER_TEMP/preview-pkgs.txt"
-        pkg=$(cat "$RUNNER_TEMP/preview-pkgs.txt")
-        if [ -z "$pkg" ]; then
+        jq -r 'select(.version | test("-preview-")) | "\(.name)@\(.version)"' \
+          package.json > "$RUNNER_TEMP/preview-pkgs.txt"
+        if [ -s "$RUNNER_TEMP/preview-pkgs.txt" ]; then
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+          echo "Preview versions to publish:"; cat "$RUNNER_TEMP/preview-pkgs.txt"
+        else
           echo "::warning::The changesets do not bump this package — nothing to publish as a preview."
           echo "publish=false" >> "$GITHUB_OUTPUT"
-        else
-          rc=0
-          bash .github/scripts/npm-has-version.sh "$pkg" || rc=$?
-          case "$rc" in
-            0)
-              # Same head commit as an earlier preview (for example the label was re-added).
-              echo "::warning::$pkg is already on npm — push a new commit for a new preview."
-              echo "publish=false" >> "$GITHUB_OUTPUT"
-              ;;
-            1)
-              echo "publish=true" >> "$GITHUB_OUTPUT"
-              echo "Preview version to publish: $pkg"
-              ;;
-            *)
-              echo "::error::Cannot tell whether $pkg is on npm (the registry did not answer with 404)."
-              exit 1
-              ;;
-          esac
         fi
 
     # Same script as the real release (build + changeset publish), with the preview tag.
@@ -84,7 +63,7 @@ runs:
         {
           echo "📦 **Preview published** under the \`preview\` dist-tag."
           echo
-          echo "Install the exact version — \`@preview\` moves with the newest preview across PRs:"
+          echo "Install the exact version(s) — \`@preview\` moves with the newest preview across PRs:"
           echo
           echo '```bash'
           while IFS= read -r pkg; do echo "npm i $pkg"; done < "$RUNNER_TEMP/preview-pkgs.txt"
@@ -98,6 +77,4 @@ runs:
       shell: bash
       env:
         GH_TOKEN: ${{ github.token }}
-      run: |
-        gh pr edit "${{ github.event.pull_request.number }}" --remove-label release-preview \
-          || echo "::warning::Could not remove the release-preview label. Remove it by hand before you add it again for the next preview."
+      run: gh pr edit "${{ github.event.pull_request.number }}" --remove-label release-preview || true

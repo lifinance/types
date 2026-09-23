@@ -1,12 +1,8 @@
 name: Release & Publish
 
-# Changesets-driven release pipeline. On each push to main, after Verify:
-#   - Version opens or updates the "chore: version packages" PR from pending changesets;
-#   - Release publishes the version in package.json if npm does not have it yet. On main
-#     that version only changes through a merged Version PR, so Release does not wait for
-#     pending changesets and does not depend on the Version job.
+# Changesets-driven release pipeline: push to main → version PR → publish.
 #
-# npm auth = OIDC trusted publishing, bound to this workflow path. Do not rename
+# npm auth = OIDC trusted publishing, pinned to this workflow path. Do not rename
 # `publish.yaml` — renaming breaks publishing.
 on:
   push:
@@ -16,17 +12,16 @@ on:
   pull_request:
     types: [labeled]
 
-# Concurrency is set per job, not per workflow, and skipped jobs do not join a group (so
-# other labels never cancel a preview). GitHub keeps one pending job per group: a newer
-# pending job replaces an older one. For Version that is harmless (the newest run computes
-# from the newest main). For Release the newest run publishes the newest version; only if
-# two Version PRs merge while a release is running is the middle version skipped.
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions: {} # each job declares only the permissions it needs
 
 jobs:
   verify:
     name: Verify
-    # The release chain runs on push / dispatch only, not on the preview label event.
+    # Main release chain runs on push only, not the preview label event.
     if: github.event_name != 'pull_request'
     permissions:
       contents: read
@@ -35,24 +30,21 @@ jobs:
   changesets:
     name: Version
     needs: verify
-    # Prevent this job from running on forks, and never version or release from a
-    # branch other than main (e.g. a workflow_dispatch on an old feature branch).
+    # Prevent this job from running on forks or on a branch other than main.
     if: github.repository == 'lifinance/types' && github.ref == 'refs/heads/main'
     permissions:
-      contents: write # to push the version branch
+      contents: write # to push the version branch / create the version PR
       pull-requests: write # to open the "chore: version packages" PR
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    concurrency:
-      group: changesets-version
-      cancel-in-progress: false
+    outputs:
+      has-changesets: ${{ steps.changesets.outputs.has-changesets }}
     steps:
       - name: Checkout code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          # Full history so changelog-github can find commits and PRs.
+          # Full history so Changesets can build correct changelogs.
           fetch-depth: 0
-          # changesets/action v2 commits through the GitHub API, so git needs no token.
           persist-credentials: false
 
       - name: Install dependencies
@@ -64,7 +56,7 @@ jobs:
         id: changesets
         uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
         with:
-          version-script: pnpm changeset version
+          version-script: pnpm changeset:version
           pr-title: 'chore: version packages'
           commit-message: 'chore: version packages'
         # No `env: GITHUB_TOKEN` — v2 throws when it is set and differs from the
@@ -73,55 +65,41 @@ jobs:
 
   release:
     name: Release
-    needs: verify
-    # Prevent this job from running on forks, and never release from a branch other than
-    # main (e.g. a workflow_dispatch on an old feature branch).
-    if: github.repository == 'lifinance/types' && github.ref == 'refs/heads/main'
+    needs: changesets
+    # Only publish once the version PR has been merged (no pending changesets left).
+    if: needs.changesets.outputs.has-changesets == 'false'
     permissions:
       contents: write # to create GitHub Releases / tags
-      id-token: write # OIDC token for npm trusted publishing + provenance
+      id-token: write # OIDC token for npm provenance (trusted publishing)
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    concurrency:
-      group: changesets-release
-      cancel-in-progress: false
     steps:
       - name: Checkout code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          # Full history: the version check reads the commit that last changed `version`.
           fetch-depth: 0
-          # Tags and releases go through the GitHub API; `git ls-remote` on this public repo needs no token.
           persist-credentials: false
 
-      # Decides whether npm lacks the version, and refuses a version that did not come from
-      # a Version PR (main has no required checks, so version-guard can be bypassed).
-      - name: Check the version to publish
-        id: check
-        run: bash .github/scripts/release-version-check.sh
-
       - name: Install dependencies
-        if: steps.check.outputs.publish == 'true'
         uses: ./.github/actions/pnpm-install
         with:
           cache: 'false' # privileged job — don't restore a potentially poisoned cache
 
-      # The publish sub-action runs the script without the Version logic, pushes the
-      # vX.Y.Z tag and creates the GitHub Release from the CHANGELOG section.
       - name: Publish to npm
-        if: steps.check.outputs.publish == 'true'
-        uses: changesets/action/publish@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+        id: changesets
+        uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
         with:
-          script: pnpm changeset:publish
+          publish-script: pnpm changeset:publish
           create-github-releases: true
-        # No `env: GITHUB_TOKEN` — the action injects its own token. It reads the published
-        # packages from the CHANGESETS_OUTPUT file it gives the publish script, not stdout.
+        # No `env: GITHUB_TOKEN` — see the Version job. v2 reads the published
+        # packages from the CHANGESETS_OUTPUT file it injects into the publish
+        # script's environment, not from stdout.
         env:
           NPM_CONFIG_PROVENANCE: true
 
   # Preview release (opt-in): the `release-preview` label publishes a throwaway
   # 0.0.0-preview-<sha> to the `preview` dist-tag. Gated by same-repo + Triage+-to-label
-  # (forks can't trigger); 0.0.0-preview can't become latest.
+  # (forks can't trigger); secret-isolated; 0.0.0-preview can't become latest/beta.
   # NEVER convert this to pull_request_target.
   preview:
     name: Preview release (PR)
@@ -131,9 +109,6 @@ jobs:
       && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    concurrency:
-      group: preview-${{ github.event.pull_request.number }}
-      cancel-in-progress: false
     permissions:
       contents: read
       id-token: write # npm OIDC trusted publishing + provenance
