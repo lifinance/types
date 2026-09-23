@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  # Reused as publish.yaml's verify gate (workflow_call) once Changesets lands.
+  workflow_call:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install dependencies
+        uses: ./.github/actions/pnpm-install
+        with:
+          cache: 'true' # read-only job
+      - name: Lint
+        run: pnpm lint
+      - name: Format check
+        run: pnpm format:check
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Build
+        run: pnpm build

@@ -75,6 +75,7 @@ export type TransactionRequest = {
   maxPriorityFeePerGas?: BigIntish
   maxFeePerGas?: BigIntish
 
+  // oxlint-disable-next-line typescript/no-explicit-any -- public API type; narrowing it is a breaking change
   customData?: Record<string, any>
   ccipReadEnabled?: boolean
 }
@@ -1122,6 +1123,7 @@ export type TypedData = {
   primaryType: TypedDataPrimaryType
   domain: TypedDataDomain
   types: Record<string, readonly TypedDataParameter[]>
+  // oxlint-disable-next-line typescript/no-explicit-any -- public API type; narrowing it is a breaking change
   message: Record<string, any>
 }
 
