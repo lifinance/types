@@ -35,14 +35,17 @@ matters, not "fix bug". Keep it to 1–2 lines max.
 Add optional `refundAddress` to `QuoteRequest` and `Action`.
 ```
 
-**A type fix that does not break consumers:**
+**A fix that cannot break consumers (here a doc comment):**
 ```markdown
 ---
 "@lifi/types": patch
 ---
 
-Allow `null` for `Token.priceUSD` to match what the API returns for unpriced tokens.
+Fix the `QuoteRequest.order` doc comment to list every `Order` value.
 ```
+
+Adding `null` or a wider type to a field that consumers read (for example
+`Token.priceUSD`) is **not** a patch: consumer code stops compiling, so it is `major`.
 
 **A breaking change:**
 ```markdown

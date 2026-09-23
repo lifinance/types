@@ -66,9 +66,12 @@ on the PR, and removes the label (re-add it for another preview).
 (`node scripts/prepublishOnly.js`). The hook rewrites `package.json` in place to the minimal
 published manifest (no `type`, `scripts`, `devDependencies`, …) and leaves a
 `package.json.tmp` backup. That is fine in CI's throwaway checkout — never run it locally
-without restoring the file. Because the rewritten manifest has no `devDependencies`,
-`changeset publish` runs as `pnpm --config.verify-deps-before-run=false changeset publish`
-(pnpm 11+ would otherwise fail with `ERR_PNPM_OUTDATED_LOCKFILE`).
+without restoring the file. The hook also refuses to publish when the build output
+(entry points and the `_cjs`/`_esm` module-type files) is missing.
+
+`changeset publish` runs as `pnpm --config.verify-deps-before-run=false changeset publish`.
+The flag is a harmless safeguard copied from the SDK, which rewrites its manifests before
+`changeset publish`; pnpm 12 already turns the check off for children of `pnpm run`/`exec`.
 
 ## Changesets v3 / changesets/action v2 pitfalls
 
@@ -81,8 +84,9 @@ without restoring the file. Because the rewritten manifest has no `devDependenci
 - Only **empty** changesets pending → no Version PR opens and `has-changesets` stays true,
   so Release stays blocked until a real changeset lands.
 - Action v2 inputs/outputs are kebab-case (`version-script`, `publish-script`, `pr-title`,
-  `commit-message`, `create-github-releases`, `has-changesets`). The v1 names fail silently:
-  the pipeline stays green and never releases.
+  `commit-message`, `create-github-releases`, `has-changesets`). v1 input names make the
+  action fail; v1 output names (`hasChangesets`, `publishedPackages`) are silently empty, so
+  the pipeline stays green and Release never runs.
 - Do not set `env: GITHUB_TOKEN` on the action step — v2 throws on a mismatch and injects its
   own token (changelog-github reads it).
 - `changeset publish` reports published packages to the action through the file named in
@@ -90,7 +94,7 @@ without restoring the file. Because the rewritten manifest has no `devDependenci
   and GitHub Releases are silently skipped.
 - This is a single-package repo, so tags are `vX.Y.Z` (the same format as the old
   standard-version tags). `pnpm changeset publish-plan` prints
-  `No projects to publish or tag.` when the current version is published and tagged.
+  `No projects to publish or tag.` when the current version is already on npm.
 
 ## Dist-tags
 

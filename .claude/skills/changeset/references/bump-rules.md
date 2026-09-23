@@ -8,8 +8,10 @@ Package name for the changeset frontmatter: `"@lifi/types"`.
 |---|---|
 | New optional field, new type, new enum value or union member | minor |
 | New runtime constant exported from `src/` (for example an `as const` list) | minor |
-| Fix to a type that does not break consumers (for example widening an overly strict type) | patch |
-| Removed or renamed export, optional field made required, narrowed type, removed union member or constant value | major |
+| Doc-comment fix, or a type fix that cannot break consumers (for example widening a field that consumers only pass in, such as a request field) | patch |
+| Removed or renamed export, optional field made required, narrowed type, removed union member or constant value, a field that consumers read made nullable or wider (for example adding `null`) | major |
+
+When unsure, ask: can existing consumer code stop compiling? If yes, the bump is `major`.
 
 ## No changeset
 
