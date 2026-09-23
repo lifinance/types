@@ -12,6 +12,7 @@
     "CHANGELOG.md",
     "LICENSE.md",
     "pnpm-lock.yaml",
-    "**/.claude/**"
+    "**/.claude/**",
+    ".changeset/*.md"
   ]
 }
