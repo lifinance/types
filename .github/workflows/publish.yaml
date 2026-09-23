@@ -12,10 +12,9 @@ on:
   pull_request:
     types: [labeled]
 
-concurrency:
-  group: release-${{ github.ref }}
-  cancel-in-progress: false
-
+# Concurrency is set per job, not per workflow: a workflow-level group would let a newer
+# run cancel a pending one (for example the run of a Version PR merge, or a preview run
+# when a PR gets several labels at once). Skipped jobs do not join a group.
 permissions: {} # each job declares only the permissions it needs
 
 jobs:
@@ -38,6 +37,9 @@ jobs:
       pull-requests: write # to open the "chore: version packages" PR
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    concurrency:
+      group: changesets-version
+      cancel-in-progress: false
     outputs:
       has-changesets: ${{ steps.changesets.outputs.has-changesets }}
     steps:
@@ -75,6 +77,9 @@ jobs:
       id-token: write # OIDC token for npm trusted publishing + provenance
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    concurrency:
+      group: changesets-release
+      cancel-in-progress: false
     steps:
       - name: Checkout code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -88,15 +93,10 @@ jobs:
         with:
           cache: 'false' # privileged job — don't restore a potentially poisoned cache
 
-      # A prerelease version on main can only come from a PR that bypassed the
-      # version guard (e.g. checked before the guard existed). Never publish it to latest.
-      - name: Refuse prerelease versions
-        run: |
-          V=$(jq -r .version package.json)
-          case "$V" in
-            *-*) echo "::error::Refusing to publish prerelease $V from main. Restore the last released version in package.json."; exit 1 ;;
-          esac
-          echo "Releasing from version $V."
+      # main has no required checks, so a hand-edited version can get past version-guard.
+      # Refuse prerelease versions and versions without a Changesets CHANGELOG entry.
+      - name: Check the version to publish
+        run: bash .github/scripts/release-version-check.sh
 
       - name: Publish to npm
         uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
@@ -121,6 +121,9 @@ jobs:
       && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    concurrency:
+      group: preview-${{ github.event.pull_request.number }}
+      cancel-in-progress: false
     permissions:
       contents: read
       id-token: write # npm OIDC trusted publishing + provenance
