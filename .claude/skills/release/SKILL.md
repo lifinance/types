@@ -31,10 +31,12 @@ skill starts where that one ends.
 3. **Release** — runs on every push to `main`, independent of Version and of pending
    changesets: on `main` the `version` in `package.json` only changes through a merged
    Version PR. `.github/scripts/release-version-check.sh` first decides whether npm lacks
-   that version; if npm has it, the job stops there (no install, no build). Otherwise it
-   refuses the version unless (a) it has no prerelease suffix, (b) the commit that last
-   changed `version` is `chore: version packages` by `github-actions[bot]`, and (c)
-   `CHANGELOG.md` has its `## x.y.z` heading. Then `changesets/action/publish` runs
+   that version; if npm has it, the job stops there (no install, no build) and only warns
+   when the `vX.Y.Z` tag is missing. Otherwise it refuses the version unless (a) it has no
+   prerelease suffix, (b) the commit that last changed `version` is authored by
+   `github-actions[bot]` (the Version PR; an edited squash title is fine), and (c)
+   `CHANGELOG.md` has its `## x.y.z` heading. `.github/scripts/npm-has-version.sh` tells
+   "not on npm" (404) apart from registry errors, which fail the job. Then `changesets/action/publish` runs
    `pnpm changeset:publish` (build + `changeset publish`), pushes the `vX.Y.Z` tag and
    creates the GitHub Release from the changelog section.
 
@@ -56,7 +58,8 @@ skill starts where that one ends.
 
 - `tests.yaml` has a `version-guard` job (`.github/scripts/version-guard.sh`): a PR that
   changes `version` in `package.json` fails unless it is the Version PR
-  (`changeset-release/main` from this repository).
+  (`changeset-release/main` from this repository). It compares the PR merge commit with its
+  first parent, so a re-run after a release on `main` does not fail falsely.
 - `main` has no required status checks, so a red `version-guard` does not block a merge.
   The Release job's version check is the backstop (see step 3 above). The real fix is
   branch rules that require `check` and `version-guard`.
@@ -119,8 +122,9 @@ and pnpm 12 does not verify dependencies for it.
 ## Recovering a release
 
 If the npm publish succeeded but the tag or the GitHub Release is missing (for example an
-API error after the upload), a re-run cannot fix it: `changeset publish` skips versions
-npm already has. Create both by hand from the Version PR's merge commit:
+API error after the upload), a re-run cannot fix it: the version check sees the version on
+npm and stops (it warns when the tag is missing). Create both by hand from the Version PR's
+merge commit:
 
 ```bash
 V=18.13.0                              # the published version
