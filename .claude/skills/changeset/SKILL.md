@@ -64,5 +64,4 @@ one is your job.
   pending, no Version PR opens and releases stay blocked until a real changeset lands.
 - Several changesets in one PR are fine when distinct changes deserve distinct changelog
   lines.
-- Never edit `version` in `package.json` or `CHANGELOG.md` by hand. The Version PR does it,
-  and CI's `version-guard` job fails any other PR that changes `version`.
+- Never edit `version` in `package.json` or `CHANGELOG.md` by hand. The Version PR does it.

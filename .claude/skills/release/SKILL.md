@@ -13,9 +13,9 @@ description: >-
 
 # Releasing
 
-Releases use **Changesets**; `standard-version` is gone. The pipeline lives in
-`.github/workflows/publish.yaml` and runs on every push to `main`. Read it for the current
-job graph rather than trusting a copy here.
+Releases use **Changesets**, the same setup as `lifinance/sdk` (without Linear);
+`standard-version` is gone. The pipeline lives in `.github/workflows/publish.yaml` and runs
+on every push to `main`. Read it for the current job graph rather than trusting a copy here.
 
 For *authoring* a changeset and choosing the bump, use the **`changeset` skill** — this
 skill starts where that one ends.
@@ -28,41 +28,23 @@ skill starts where that one ends.
    `changeset-release/main` and opens or updates the **chore: version packages** PR. That PR
    deletes the consumed `.changeset/*.md` files, bumps `version` in `package.json` and adds a
    section to `CHANGELOG.md`.
-3. **Release** — runs on every push to `main`, independent of Version and of pending
-   changesets: on `main` the `version` in `package.json` only changes through a merged
-   Version PR. `.github/scripts/release-version-check.sh` first decides whether npm lacks
-   that version; if npm has it, the job stops there (no install, no build) and only warns
-   when the `vX.Y.Z` tag is missing. Otherwise it refuses the version unless (a) it has no
-   prerelease suffix, (b) the commit that last changed `version` is authored by
-   `github-actions[bot]` (the Version PR; an edited squash title is fine), and (c)
-   `CHANGELOG.md` has its `## x.y.z` heading. `.github/scripts/npm-has-version.sh` tells
-   "not on npm" (404) apart from registry errors, which fail the job. Then `changesets/action/publish` runs
-   `pnpm changeset:publish` (build + `changeset publish`), pushes the `vX.Y.Z` tag and
-   creates the GitHub Release from the changelog section.
+3. **Release** — runs only when no changesets are pending (normally the push that merges
+   the Version PR). `pnpm changeset:publish` builds and runs `changeset publish`, which
+   publishes only versions npm does not have yet, pushes the `vX.Y.Z` tag and creates the
+   GitHub Release from the changelog section. On any other push it is a no-op.
 
 - npm auth is OIDC trusted publishing, bound to the file name `publish.yaml`. **Never rename
   it.** No `NPM_TOKEN` exists or is needed. Provenance comes from `NPM_CONFIG_PROVENANCE: true`.
+- Version and Release run only on `main` of this repository.
 - The Version PR is opened with `GITHUB_TOKEN`, so no `pull_request` workflow runs on it.
   That is expected: Verify runs on the push to `main` before Release.
 - To re-run a release after a failed npm publish, use **Run workflow** on `publish.yaml`
-  (`workflow_dispatch`) on `main`. If npm already has the version but the tag or the GitHub
-  Release is missing, a re-run does nothing — see "Recovering a release" below.
-- Concurrency is per job (`changesets-version`, `changesets-release`, `preview-<PR>`).
-  GitHub keeps one pending job per group, so a newer pending job replaces an older one:
-  harmless for Version (the newest run computes from the newest `main`); for Release the
-  newest run publishes the newest version, and a middle version is skipped only if two
-  Version PRs merge while a release runs. Other labels never cancel a preview (skipped
-  jobs do not join a group).
+  (`workflow_dispatch`) on `main`. A re-run cannot create a missing tag or GitHub Release
+  for a version that npm already has — see "Recovering a release".
 
 ## Versions change only in the Version PR
 
-- `tests.yaml` has a `version-guard` job (`.github/scripts/version-guard.sh`): a PR that
-  changes `version` in `package.json` fails unless it is the Version PR
-  (`changeset-release/main` from this repository). It compares the PR merge commit with its
-  first parent, so a re-run after a release on `main` does not fail falsely.
-- `main` has no required status checks, so a red `version-guard` does not block a merge.
-  The Release job's version check is the backstop (see step 3 above). The real fix is
-  branch rules that require `check` and `version-guard`.
+- Never edit `version` in `package.json` or `CHANGELOG.md` by hand; add a changeset.
 - There is no pre mode and no `alpha`/`beta` channel. Do not run `changeset pre enter`: pre
   mode leaks prerelease versions into `main` through squash merges.
 
@@ -71,16 +53,13 @@ skill starts where that one ends.
 Add the **`release-preview`** label to a PR that has a changeset. The `preview` job in
 `publish.yaml` (composite action `.github/actions/preview-publish`) publishes
 `0.0.0-preview-<short-sha>` to the **`preview`** dist-tag, comments the exact `npm i` command
-on the PR, and removes the label (re-add it for another preview).
+on the PR, and removes the label (re-add it after a new commit for another preview).
 
 - Install the exact version from the comment; `@preview` moves with the newest preview
   across PRs. `0.0.0-…` can never become `latest`.
 - Same-repo branches only; applying a label needs Triage+. Never change the trigger to
   `pull_request_target`.
-- The PR must **add** a changeset of its own. Changesets that are already on `main` (merged
-  but not versioned) do not count; without one the job only warns and publishes nothing.
-- Re-adding the label on the same commit publishes nothing (that preview version is already
-  on npm). Push a new commit for a new preview.
+- No changeset in the PR → the job only warns and publishes nothing.
 
 ## The published manifest
 
@@ -88,12 +67,7 @@ on the PR, and removes the label (re-add it for another preview).
 (`node scripts/prepublishOnly.js`). The hook rewrites `package.json` in place to the minimal
 published manifest (no `type`, `scripts`, `devDependencies`, …) and leaves a
 `package.json.tmp` backup. That is fine in CI's throwaway checkout — never run it locally
-without restoring the file. The hook also refuses to publish when the build output
-(entry points and the `_cjs`/`_esm` module-type files) is missing.
-
-The SDK needs `pnpm --config.verify-deps-before-run=false` because it rewrites manifests
-before `changeset publish`. This repo does not: the rewrite happens inside `pnpm publish`,
-and pnpm 12 does not verify dependencies for it.
+without restoring the file. `pnpm changeset:publish` always builds first.
 
 ## Changesets v3 / changesets/action v2 pitfalls
 
@@ -103,13 +77,12 @@ and pnpm 12 does not verify dependencies for it.
   `format:check`.
 - `changeset version` exits 1 when there are no changesets. Guard any unconditional call
   (see the preview action).
-- Only **empty** changesets pending → no Version PR opens until a real changeset lands
-  (Release is not affected: it does not wait for pending changesets).
+- Only **empty** changesets pending → no Version PR opens and `has-changesets` stays true,
+  so Release stays blocked until a real changeset lands.
 - Action v2 inputs/outputs are kebab-case (`version-script`, `publish-script`, `pr-title`,
   `commit-message`, `create-github-releases`, `has-changesets`). v1 input names make the
-  action fail; v1 output names (`hasChangesets`, `publishedPackages`) are silently empty.
-  The Release job uses the `changesets/action/publish` sub-action (input `script`), which
-  publishes without the Version logic.
+  action fail; v1 output names (`hasChangesets`, `publishedPackages`) are silently empty, so
+  the pipeline stays green and Release never runs.
 - Do not set `env: GITHUB_TOKEN` on the action step — v2 throws on a mismatch and injects its
   own token (changelog-github reads it).
 - `changeset publish` reports published packages to the action through the file named in
@@ -122,9 +95,7 @@ and pnpm 12 does not verify dependencies for it.
 ## Recovering a release
 
 If the npm publish succeeded but the tag or the GitHub Release is missing (for example an
-API error after the upload), a re-run cannot fix it: the version check sees the version on
-npm and stops (it warns when the tag is missing). Create both by hand from the Version PR's
-merge commit:
+API error after the upload), create both by hand from the Version PR's merge commit:
 
 ```bash
 V=18.13.0                              # the published version
