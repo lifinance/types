@@ -28,13 +28,15 @@ skill starts where that one ends.
    `changeset-release/main` and opens or updates the **chore: version packages** PR. That PR
    deletes the consumed `.changeset/*.md` files, bumps `version` in `package.json` and adds a
    section to `CHANGELOG.md`.
-3. **Release** — runs only when no changesets are pending (normally the push that merges
-   the Version PR). `.github/scripts/release-version-check.sh` first refuses a version that
-   is not on npm yet and either has a prerelease suffix or has no `## x.y.z` Changesets
-   heading in `CHANGELOG.md` (a hand-edited version). Then `pnpm changeset:publish` builds
-   and runs `changeset publish`, which publishes only versions npm does not have yet,
-   pushes the `vX.Y.Z` tag and creates the GitHub Release from the changelog section. On
-   any other push it is a no-op.
+3. **Release** — runs on every push to `main`, independent of Version and of pending
+   changesets: on `main` the `version` in `package.json` only changes through a merged
+   Version PR. `.github/scripts/release-version-check.sh` first decides whether npm lacks
+   that version; if npm has it, the job stops there (no install, no build). Otherwise it
+   refuses the version unless (a) it has no prerelease suffix, (b) the commit that last
+   changed `version` is `chore: version packages` by `github-actions[bot]`, and (c)
+   `CHANGELOG.md` has its `## x.y.z` heading. Then `changesets/action/publish` runs
+   `pnpm changeset:publish` (build + `changeset publish`), pushes the `vX.Y.Z` tag and
+   creates the GitHub Release from the changelog section.
 
 - npm auth is OIDC trusted publishing, bound to the file name `publish.yaml`. **Never rename
   it.** No `NPM_TOKEN` exists or is needed. Provenance comes from `NPM_CONFIG_PROVENANCE: true`.
@@ -43,8 +45,12 @@ skill starts where that one ends.
 - To re-run a release after a failed npm publish, use **Run workflow** on `publish.yaml`
   (`workflow_dispatch`) on `main`. If npm already has the version but the tag or the GitHub
   Release is missing, a re-run does nothing — see "Recovering a release" below.
-- Concurrency is per job (`changesets-version`, `changesets-release`, `preview-<PR>`), so a
-  newer run never cancels a pending release run.
+- Concurrency is per job (`changesets-version`, `changesets-release`, `preview-<PR>`).
+  GitHub keeps one pending job per group, so a newer pending job replaces an older one:
+  harmless for Version (the newest run computes from the newest `main`); for Release the
+  newest run publishes the newest version, and a middle version is skipped only if two
+  Version PRs merge while a release runs. Other labels never cancel a preview (skipped
+  jobs do not join a group).
 
 ## Versions change only in the Version PR
 
@@ -52,8 +58,8 @@ skill starts where that one ends.
   changes `version` in `package.json` fails unless it is the Version PR
   (`changeset-release/main` from this repository).
 - `main` has no required status checks, so a red `version-guard` does not block a merge.
-  The Release job's version check is the backstop: it refuses an unpublished version
-  without a `## x.y.z` Changesets heading, and any prerelease version.
+  The Release job's version check is the backstop (see step 3 above). The real fix is
+  branch rules that require `check` and `version-guard`.
 - There is no pre mode and no `alpha`/`beta` channel. Do not run `changeset pre enter`: pre
   mode leaks prerelease versions into `main` through squash merges.
 
@@ -82,9 +88,9 @@ published manifest (no `type`, `scripts`, `devDependencies`, …) and leaves a
 without restoring the file. The hook also refuses to publish when the build output
 (entry points and the `_cjs`/`_esm` module-type files) is missing.
 
-`changeset publish` runs as `pnpm --config.verify-deps-before-run=false changeset publish`.
-The flag is a harmless safeguard copied from the SDK, which rewrites its manifests before
-`changeset publish`; pnpm 12 already turns the check off for children of `pnpm run`/`exec`.
+The SDK needs `pnpm --config.verify-deps-before-run=false` because it rewrites manifests
+before `changeset publish`. This repo does not: the rewrite happens inside `pnpm publish`,
+and pnpm 12 does not verify dependencies for it.
 
 ## Changesets v3 / changesets/action v2 pitfalls
 
@@ -94,12 +100,13 @@ The flag is a harmless safeguard copied from the SDK, which rewrites its manifes
   `format:check`.
 - `changeset version` exits 1 when there are no changesets. Guard any unconditional call
   (see the preview action).
-- Only **empty** changesets pending → no Version PR opens and `has-changesets` stays true,
-  so Release stays blocked until a real changeset lands.
+- Only **empty** changesets pending → no Version PR opens until a real changeset lands
+  (Release is not affected: it does not wait for pending changesets).
 - Action v2 inputs/outputs are kebab-case (`version-script`, `publish-script`, `pr-title`,
   `commit-message`, `create-github-releases`, `has-changesets`). v1 input names make the
-  action fail; v1 output names (`hasChangesets`, `publishedPackages`) are silently empty, so
-  the pipeline stays green and Release never runs.
+  action fail; v1 output names (`hasChangesets`, `publishedPackages`) are silently empty.
+  The Release job uses the `changesets/action/publish` sub-action (input `script`), which
+  publishes without the Version logic.
 - Do not set `env: GITHUB_TOKEN` on the action step — v2 throws on a mismatch and injects its
   own token (changelog-github reads it).
 - `changeset publish` reports published packages to the action through the file named in

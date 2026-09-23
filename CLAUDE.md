@@ -18,7 +18,7 @@ published to npm; GitHub Pages serves them from `main`.
 - No changeset for icon-only (`src/assets/**`), test, CI, docs or tooling changes.
 - Never edit `version` in `package.json` or `CHANGELOG.md` by hand — the Version PR does it.
   CI's `version-guard` fails other PRs that change `version`, and the Release job refuses a
-  version without a Changesets `## x.y.z` changelog entry.
+  version that the Version PR did not set.
 - Publishing, preview builds (`release-preview` label) and pitfalls: the `release` skill
   (`.claude/skills/release/SKILL.md`). Never rename `.github/workflows/publish.yaml`.
 
