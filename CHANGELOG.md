@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.11.0](https://github.com/lifinance/types/compare/v18.10.0...v18.11.0) (2026-09-23)
+
+
+### Features
+
+* add slippageScope and the route-wide slippage commitment ([#582](https://github.com/lifinance/types/issues/582)) ([5856227](https://github.com/lifinance/types/commit/58562272a1eea43cf79428b915c4b25412c22e66))
+
 ## [18.10.0](https://github.com/lifinance/types/compare/v18.9.0...v18.10.0) (2026-09-21)
 
 
