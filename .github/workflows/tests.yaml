@@ -1,7 +1,7 @@
 name: Tests
 
 on:
-  # Reused as publish.yaml's verify gate (workflow_call) once Changesets lands.
+  # publish.yaml calls this workflow as its Verify gate before Version and Release.
   workflow_call:
   pull_request:
     branches:

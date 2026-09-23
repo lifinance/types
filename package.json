@@ -67,7 +67,7 @@
     "lint": "oxlint --deny-warnings",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "changeset:publish": "pnpm build && pnpm --config.verify-deps-before-run=false changeset publish"
+    "changeset:publish": "pnpm build && changeset publish"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs,cjs}": [

@@ -87,4 +87,6 @@ runs:
       shell: bash
       env:
         GH_TOKEN: ${{ github.token }}
-      run: gh pr edit "${{ github.event.pull_request.number }}" --remove-label release-preview || true
+      run: |
+        gh pr edit "${{ github.event.pull_request.number }}" --remove-label release-preview \
+          || echo "::warning::Could not remove the release-preview label. Remove it by hand before you add it again for the next preview."
