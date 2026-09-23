@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - name: Create GitHub Release
         uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
         env:
@@ -33,9 +35,13 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - name: Install dependencies
         uses: ./.github/actions/pnpm-install
+        with:
+          cache: 'false' # privileged job — don't restore a potentially poisoned cache
       - name: Build
         run: pnpm build
       - name: Publish to npm
