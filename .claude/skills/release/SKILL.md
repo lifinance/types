@@ -29,21 +29,31 @@ skill starts where that one ends.
    deletes the consumed `.changeset/*.md` files, bumps `version` in `package.json` and adds a
    section to `CHANGELOG.md`.
 3. **Release** — runs only when no changesets are pending (normally the push that merges
-   the Version PR). `pnpm changeset:publish` builds and runs `changeset publish`, which
-   publishes only versions npm does not have yet, pushes the `vX.Y.Z` tag and creates the
-   GitHub Release from the changelog section. On any other push it is a no-op.
+   the Version PR). `.github/scripts/release-version-check.sh` first refuses a version that
+   is not on npm yet and either has a prerelease suffix or has no `## x.y.z` Changesets
+   heading in `CHANGELOG.md` (a hand-edited version). Then `pnpm changeset:publish` builds
+   and runs `changeset publish`, which publishes only versions npm does not have yet,
+   pushes the `vX.Y.Z` tag and creates the GitHub Release from the changelog section. On
+   any other push it is a no-op.
 
 - npm auth is OIDC trusted publishing, bound to the file name `publish.yaml`. **Never rename
   it.** No `NPM_TOKEN` exists or is needed. Provenance comes from `NPM_CONFIG_PROVENANCE: true`.
 - The Version PR is opened with `GITHUB_TOKEN`, so no `pull_request` workflow runs on it.
   That is expected: Verify runs on the push to `main` before Release.
-- To re-run a release after a failed publish, use **Run workflow** on `publish.yaml`
-  (`workflow_dispatch`) on `main`.
+- To re-run a release after a failed npm publish, use **Run workflow** on `publish.yaml`
+  (`workflow_dispatch`) on `main`. If npm already has the version but the tag or the GitHub
+  Release is missing, a re-run does nothing — see "Recovering a release" below.
+- Concurrency is per job (`changesets-version`, `changesets-release`, `preview-<PR>`), so a
+  newer run never cancels a pending release run.
 
 ## Versions change only in the Version PR
 
 - `tests.yaml` has a `version-guard` job (`.github/scripts/version-guard.sh`): a PR that
-  changes `version` in `package.json` fails unless its branch is `changeset-release/*`.
+  changes `version` in `package.json` fails unless it is the Version PR
+  (`changeset-release/main` from this repository).
+- `main` has no required status checks, so a red `version-guard` does not block a merge.
+  The Release job's version check is the backstop: it refuses an unpublished version
+  without a `## x.y.z` Changesets heading, and any prerelease version.
 - There is no pre mode and no `alpha`/`beta` channel. Do not run `changeset pre enter`: pre
   mode leaks prerelease versions into `main` through squash merges.
 
@@ -58,7 +68,10 @@ on the PR, and removes the label (re-add it for another preview).
   across PRs. `0.0.0-…` can never become `latest`.
 - Same-repo branches only; applying a label needs Triage+. Never change the trigger to
   `pull_request_target`.
-- No changeset in the PR → the job only warns and publishes nothing.
+- The PR must **add** a changeset of its own. Changesets that are already on `main` (merged
+  but not versioned) do not count; without one the job only warns and publishes nothing.
+- Re-adding the label on the same commit publishes nothing (that preview version is already
+  on npm). Push a new commit for a new preview.
 
 ## The published manifest
 
@@ -95,6 +108,20 @@ The flag is a harmless safeguard copied from the SDK, which rewrites its manifes
 - This is a single-package repo, so tags are `vX.Y.Z` (the same format as the old
   standard-version tags). `pnpm changeset publish-plan` prints
   `No projects to publish or tag.` when the current version is already on npm.
+
+## Recovering a release
+
+If the npm publish succeeded but the tag or the GitHub Release is missing (for example an
+API error after the upload), a re-run cannot fix it: `changeset publish` skips versions
+npm already has. Create both by hand from the Version PR's merge commit:
+
+```bash
+V=18.13.0                              # the published version
+SHA=<merge commit of the Version PR>   # gh pr view <n> --json mergeCommit --jq .mergeCommit.oid
+git tag "v$V" "$SHA" && git push origin "v$V"   # push at once: fetch.pruneTags deletes unpushed tags
+awk -v h="## $V" '$0 == h {f=1; next} /^## / {f=0} f' CHANGELOG.md > "$TMPDIR/notes.md"
+gh release create "v$V" --verify-tag --title "v$V" --notes-file "$TMPDIR/notes.md"
+```
 
 ## Dist-tags
 

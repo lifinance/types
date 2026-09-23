@@ -16,8 +16,9 @@ published to npm; GitHub Pages serves them from `main`.
 - Every PR that changes the published package needs a changeset: `pnpm changeset` or
   `/changeset`. The `changeset` skill (`.claude/skills/changeset/`) picks the bump.
 - No changeset for icon-only (`src/assets/**`), test, CI, docs or tooling changes.
-- Never edit `version` in `package.json` or `CHANGELOG.md` by hand — the Version PR does it,
-  and CI's `version-guard` fails other PRs that change `version`.
+- Never edit `version` in `package.json` or `CHANGELOG.md` by hand — the Version PR does it.
+  CI's `version-guard` fails other PRs that change `version`, and the Release job refuses a
+  version without a Changesets `## x.y.z` changelog entry.
 - Publishing, preview builds (`release-preview` label) and pitfalls: the `release` skill
   (`.claude/skills/release/SKILL.md`). Never rename `.github/workflows/publish.yaml`.
 
