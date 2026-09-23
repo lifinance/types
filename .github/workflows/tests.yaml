@@ -31,9 +31,13 @@ jobs:
         run: pnpm build
 
   version-guard:
-    # Versions change only in the Changesets Version PR (branch changeset-release/*).
-    # Never runs in publish.yaml's verify gate (workflow_call from a push).
-    if: github.event_name == 'pull_request' && !startsWith(github.head_ref, 'changeset-release/')
+    # Versions change only in the Changesets Version PR (branch changeset-release/main of
+    # this repository; a fork cannot claim that name). Never runs in publish.yaml's verify
+    # gate (workflow_call from a push).
+    if: >-
+      github.event_name == 'pull_request'
+      && !(github.head_ref == 'changeset-release/main'
+      && github.event.pull_request.head.repo.full_name == github.repository)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

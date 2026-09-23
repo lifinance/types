@@ -46,6 +46,8 @@ jobs:
         with:
           # Full history so changelog-github can find commits and PRs.
           fetch-depth: 0
+          # changesets/action v2 commits through the GitHub API, so git needs no token.
+          persist-credentials: false
 
       - name: Install dependencies
         uses: ./.github/actions/pnpm-install
@@ -78,6 +80,8 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          # Tags and releases go through the GitHub API; `git ls-remote` on this public repo needs no token.
+          persist-credentials: false
 
       - name: Install dependencies
         uses: ./.github/actions/pnpm-install
@@ -127,6 +131,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Install dependencies
         uses: ./.github/actions/pnpm-install
