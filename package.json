@@ -64,17 +64,21 @@
     "pre-push": "pnpm build",
     "prepublishOnly": "pnpm node scripts/prepublishOnly.js",
     "prepack": "pinst --disable",
-    "prettier:fix": "prettier --write ./src/.",
     "release": "standard-version -a",
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
     "release:beta": "standard-version -a --prerelease beta --skip.changelog",
     "typecheck": "tsc --noEmit && tsc --project tests/tsconfig.json",
-    "lint": "oxlint --deny-warnings"
+    "lint": "oxlint --deny-warnings",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check ."
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "pnpm run lint:fix",
-      "pnpm run prettier:fix"
+    "*.{ts,tsx,js,mjs,cjs}": [
+      "oxlint --fix --no-error-on-unmatched-pattern",
+      "oxfmt --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{json,jsonc,md}": [
+      "oxfmt --write --no-error-on-unmatched-pattern"
     ]
   },
   "devDependencies": {
@@ -84,9 +88,9 @@
     "fs-extra": "^11.3.5",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.4",
+    "oxfmt": "0.70.0",
     "oxlint": "^1.85.0",
     "pinst": "^3.0.0",
-    "prettier": "^3.8.3",
     "standard-version": "^9.5.0",
     "typescript": "^6.0.3"
   },

@@ -30,6 +30,21 @@ or
 npm install --save @lifi/types
 ```
 
+## Development
+
+- `pnpm lint` / `pnpm lint:fix` — lint with [oxlint](https://oxc.rs)
+- `pnpm format` / `pnpm format:check` — format with [oxfmt](https://oxc.rs)
+- `pnpm typecheck` — type-check with TypeScript 7
+- `pnpm build` — build CJS, ESM and declarations
+
+TypeScript 7 ships only the `tsc` binary and no language server. VS Code therefore falls
+back to its bundled TypeScript. Install the "TypeScript (Native Preview)" extension to get
+editor diagnostics that match `pnpm typecheck`.
+
+Git hooks ([husky](https://github.com/typicode/husky) +
+[lint-staged](https://github.com/lint-staged/lint-staged)) run oxlint and oxfmt on staged
+files and check commit messages with commitlint.
+
 ## Release
 
 The package uses `standard-version` to generate a changelog based on semantic commit history. The `standard-version` package also handles version numbering.
