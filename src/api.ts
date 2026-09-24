@@ -509,18 +509,23 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   /** @see {@link RouteOptions.refundAddress} */
   refundAddress?: string
 
+  /** @see {@link RouteOptionsBase.order} */
   order?: Order
+  /** @see {@link RouteOptionsBase.slippage} */
   slippage?: number | string
   /** Scope of `slippage` — see {@link RouteOptionsBase.slippageScope}.
    * Exact-input quotes only; other surfaces reject `'route'`. @default 'step' */
   slippageScope?: SlippageScope
+  /** @see {@link RouteOptions.integrator} */
   integrator?: string
   /** Optional intermediary identifier for multi-party fee splitting.
    *  Requires a registered integrator with a `fee` and a configured intermediary share on the backend. */
   intermediary?: string
   /** @see {@link RouteOptions.distributionFees} and {@link DistributionFee} */
   distributionFees?: DistributionFee[]
+  /** @see {@link RouteOptions.referrer} */
   referrer?: string
+  /** @see {@link RouteOptionsBase.fee} */
   fee?: number | string
   /** @see {@link RouteOptions.disableFees} */
   disableFees?: boolean
