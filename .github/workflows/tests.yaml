@@ -1,7 +1,8 @@
 name: Tests
 
 on:
-  # Reused as publish.yaml's verify gate (workflow_call) once Changesets lands.
+  # Reused as publish.yaml's verify gate (workflow_call). No push:[main] trigger —
+  # main is covered once via that gate; PRs via pull_request below.
   workflow_call:
   pull_request:
     branches:

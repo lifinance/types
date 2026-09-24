@@ -1,0 +1,80 @@
+name: Preview publish
+description: >-
+  Snapshot-publish this package to the npm `preview` dist-tag, comment the
+  install command on the PR, and remove the `release-preview` label.
+
+runs:
+  using: composite
+  steps:
+    # `changeset version` exits 1 when there are no changesets (Changesets v3), so
+    # gate it on a changeset actually being present. README.md is not a changeset.
+    - name: Check for changesets
+      id: changesets
+      shell: bash
+      run: |
+        if [ -n "$(find .changeset -maxdepth 1 -name '*.md' ! -name 'README.md' -print -quit)" ]; then
+          echo "present=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "::warning::No changeset in this PR — nothing to publish as a preview."
+          echo "present=false" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Version the package as a preview snapshot
+      if: steps.changesets.outputs.present == 'true'
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ github.token }} # changeset version hits the GitHub API (changelog-github)
+      run: |
+        # snapshot tag = short SHA → version 0.0.0-preview-<sha> (prereleaseTemplate "{tag}")
+        SHA=$(git rev-parse --short HEAD)
+        pnpm changeset version --snapshot "preview-$SHA"
+
+    # Skipped when no changeset is present: `publish` is then empty, so every
+    # downstream step below skips too.
+    - name: Detect the preview version
+      id: detect
+      if: steps.changesets.outputs.present == 'true'
+      shell: bash
+      run: |
+        jq -r 'select(.version | test("-preview-")) | "\(.name)@\(.version)"' \
+          package.json > "$RUNNER_TEMP/preview-pkgs.txt"
+        if [ -s "$RUNNER_TEMP/preview-pkgs.txt" ]; then
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+          echo "Preview versions to publish:"; cat "$RUNNER_TEMP/preview-pkgs.txt"
+        else
+          echo "::warning::The changesets do not bump this package — nothing to publish as a preview."
+          echo "publish=false" >> "$GITHUB_OUTPUT"
+        fi
+
+    # Same script as the real release (build + changeset publish), with the preview tag.
+    - name: Build and publish the preview to npm
+      if: steps.detect.outputs.publish == 'true'
+      shell: bash
+      run: pnpm changeset:publish --tag preview --no-git-tag
+      env:
+        NPM_CONFIG_PROVENANCE: true
+
+    - name: Comment the install command on the PR
+      if: steps.detect.outputs.publish == 'true'
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        {
+          echo "📦 **Preview published** under the \`preview\` dist-tag."
+          echo
+          echo "Install the exact version(s) — \`@preview\` moves with the newest preview across PRs:"
+          echo
+          echo '```bash'
+          while IFS= read -r pkg; do echo "npm i $pkg"; done < "$RUNNER_TEMP/preview-pkgs.txt"
+          echo '```'
+        } > "$RUNNER_TEMP/preview-comment.md"
+        gh pr comment "${{ github.event.pull_request.number }}" --body-file "$RUNNER_TEMP/preview-comment.md"
+
+    # success only: a failed run keeps the label as a signal (remove + re-add to retry)
+    - name: Remove the release-preview label (one-shot)
+      if: success()
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: gh pr edit "${{ github.event.pull_request.number }}" --remove-label release-preview || true

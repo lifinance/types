@@ -61,15 +61,13 @@
     "postpack": "pinst --enable",
     "pre-commit": "lint-staged",
     "pre-push": "pnpm build",
-    "prepublishOnly": "pnpm node scripts/prepublishOnly.js",
+    "prepublishOnly": "node scripts/prepublishOnly.js",
     "prepack": "pinst --disable",
-    "release": "standard-version -a",
-    "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
-    "release:beta": "standard-version -a --prerelease beta --skip.changelog",
     "typecheck": "tsc --noEmit && tsc --project tests/tsconfig.json",
     "lint": "oxlint --deny-warnings",
     "format": "oxfmt --write .",
-    "format:check": "oxfmt --check ."
+    "format:check": "oxfmt --check .",
+    "changeset:publish": "pnpm build && changeset publish"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs,cjs}": [
@@ -81,6 +79,8 @@
     ]
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^1.0.1",
+    "@changesets/cli": "^3.0.3",
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
     "@types/fs-extra": "^11.0.4",
@@ -90,16 +90,10 @@
     "oxfmt": "0.70.0",
     "oxlint": "^1.85.0",
     "pinst": "^3.0.0",
-    "standard-version": "^9.5.0",
     "typescript": "^7.0.2"
   },
-  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+  "packageManager": "pnpm@12.5.1+sha512.e3f305bc784a2bc89f5ad3b6138889470fae8d2af5f36b61216ec91c2c3d64089775f9de38aac331044ea40f245cb0d5666392dfdf65824e1907ef6a2c62de5f",
   "publishConfig": {
     "access": "public"
-  },
-  "standard-version": {
-    "scripts": {
-      "postbump": "git add ."
-    }
   }
 }

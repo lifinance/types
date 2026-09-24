@@ -47,18 +47,13 @@ files and check commit messages with commitlint.
 
 ## Release
 
-The package uses `standard-version` to generate a changelog based on semantic commit history. The `standard-version` package also handles version numbering.
+This package is released with [Changesets](https://changesets.dev).
 
-Once main is up to date with the changes to be released execute the following command on the main branch to invoke `standard-version`:
+1. Add a changeset to your PR: `pnpm changeset` (pick the bump and write a 1–2 line summary).
+2. When the PR merges, CI opens or updates the **chore: version packages** PR.
+3. Merging that PR publishes the new version to npm, pushes the `vX.Y.Z` tag and creates a
+   GitHub Release.
 
-```bash
-pnpm release
-```
-
-Then to release:
-
-```bash
-git push --follow-tags origin main
-```
-
-This will push a newly created git tag to the remote repository, which will trigger a github action which will publish the new version to npm
+To share an unmerged build, add the `release-preview` label to a PR that has a changeset.
+CI publishes `0.0.0-preview-<sha>` under the `preview` dist-tag and comments the install
+command on the PR.

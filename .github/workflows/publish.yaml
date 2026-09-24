@@ -1,52 +1,131 @@
 name: Release & Publish
 
+# Changesets-driven release pipeline: push to main → version PR → publish.
+#
+# npm auth = OIDC trusted publishing, pinned to this workflow path. Do not rename
+# `publish.yaml` — renaming breaks publishing.
 on:
   push:
-    tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+'
-      - 'v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+'
-      - 'v[0-9]+.[0-9]+.[0-9]+'
-  workflow_dispatch:
+    branches: [main]
+  workflow_dispatch: # manual re-trigger if a Version-PR merge push needs re-running
+  # Preview releases are opt-in via the `release-preview` PR label.
+  pull_request:
+    types: [labeled]
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions: {} # each job declares only the permissions it needs
 
 jobs:
-  release:
+  verify:
+    name: Verify
+    # Main release chain runs on push only, not the preview label event.
+    if: github.event_name != 'pull_request'
     permissions:
-      contents: write
+      contents: read
+    uses: ./.github/workflows/tests.yaml
+
+  changesets:
+    name: Version
+    needs: verify
+    # Prevent this job from running on forks or on a branch other than main.
+    if: github.repository == 'lifinance/types' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write # to push the version branch / create the version PR
+      pull-requests: write # to open the "chore: version packages" PR
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      has-changesets: ${{ steps.changesets.outputs.has-changesets }}
     steps:
       - name: Checkout code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          # Full history so Changesets can build correct changelogs.
+          fetch-depth: 0
           persist-credentials: false
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          generate_release_notes: true
-          name: ${{ github.ref_name }}
-          draft: false
-          prerelease: ${{ contains(github.ref_name, '-') }}
-          make_latest: ${{ contains(github.ref_name, '-') && 'false' || 'true' }}
 
-  publish:
-    permissions:
-      contents: write
-      id-token: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
       - name: Install dependencies
         uses: ./.github/actions/pnpm-install
         with:
           cache: 'false' # privileged job — don't restore a potentially poisoned cache
-      - name: Build
-        run: pnpm build
+
+      - name: Create version PR
+        id: changesets
+        uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+        with:
+          version-script: pnpm changeset version
+          pr-title: 'chore: version packages'
+          commit-message: 'chore: version packages'
+        # No `env: GITHUB_TOKEN` — v2 throws when it is set and differs from the
+        # `github-token` input. The action injects its own token into the version
+        # script's environment, which is what changelog-github reads.
+
+  release:
+    name: Release
+    needs: changesets
+    # Only publish once the version PR has been merged (no pending changesets left).
+    if: needs.changesets.outputs.has-changesets == 'false'
+    permissions:
+      contents: write # to create GitHub Releases / tags
+      id-token: write # OIDC token for npm provenance (trusted publishing)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install dependencies
+        uses: ./.github/actions/pnpm-install
+        with:
+          cache: 'false' # privileged job — don't restore a potentially poisoned cache
+
       - name: Publish to npm
-        run: |
-          pnpm publish --no-git-checks --access public \
-          ${{ contains(github.ref_name, 'alpha') && '--tag alpha' || contains(github.ref_name, 'beta') && '--tag beta' || '' }}
+        id: changesets
+        uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+        with:
+          publish-script: pnpm changeset:publish
+          create-github-releases: true
+        # No `env: GITHUB_TOKEN` — see the Version job. v2 reads the published
+        # packages from the CHANGESETS_OUTPUT file it injects into the publish
+        # script's environment, not from stdout.
         env:
           NPM_CONFIG_PROVENANCE: true
+
+  # Preview release (opt-in): the `release-preview` label publishes a throwaway
+  # 0.0.0-preview-<sha> to the `preview` dist-tag. Gated by same-repo + Triage+-to-label
+  # (forks can't trigger); secret-isolated; 0.0.0-preview can't become latest/beta.
+  # NEVER convert this to pull_request_target.
+  preview:
+    name: Preview release (PR)
+    if: >-
+      github.event_name == 'pull_request'
+      && github.event.label.name == 'release-preview'
+      && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write # npm OIDC trusted publishing + provenance
+      pull-requests: write # post the install comment + remove the label
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install dependencies
+        uses: ./.github/actions/pnpm-install
+        with:
+          cache: 'false' # privileged job — don't restore a potentially poisoned cache
+
+      # Composite (not a reusable workflow) so npm OIDC stays bound to publish.yaml.
+      - name: Publish preview
+        uses: ./.github/actions/preview-publish
