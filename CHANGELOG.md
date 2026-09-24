@@ -1,5 +1,11 @@
 # Changelog
 
+## 18.12.1
+
+### Patch Changes
+
+- [#586](https://github.com/lifinance/types/pull/586) [`6f76911`](https://github.com/lifinance/types/commit/6f7691175fa08e8f4e9a1b116be7742089aa91c2) Thanks [@chybisov](https://github.com/chybisov)! - Link the `order`, `slippage`, `fee`, `integrator` and `referrer` fields of `QuoteRequest` to their `RouteOptions` docs, so editors show them.
+
 ## [18.12.0](https://github.com/lifinance/types/compare/v18.11.0...v18.12.0) (2026-09-23)
 
 
