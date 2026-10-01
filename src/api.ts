@@ -78,6 +78,10 @@ export type TransactionRequest = {
   // oxlint-disable-next-line typescript/no-explicit-any -- public API type; narrowing it is a breaking change
   customData?: Record<string, any>
   ccipReadEnabled?: boolean
+
+  /** Solana transaction version actually built. May be lower than the
+   * requested maximum. Present on Solana transaction responses. */
+  svmTransactionVersion?: 0 | 1
 }
 
 /**
@@ -264,6 +268,13 @@ export interface RouteOptions extends RouteOptionsBase {
 
   /** SVM specific option, priority fee level */
   svmPriorityFeeLevel?: SVMPriorityFeeLevel
+
+  /** Maximum Solana transaction version the client can sign. Defaults to 0.
+   * Set to 1 to allow V1 where enabled; the API may still return v0.
+   * Jito requests always use v0, including single-transaction responses.
+   * Read transactionRequest.svmTransactionVersion
+   * for the version actually built. */
+  svmMaxSupportedTransactionVersion?: 0 | 1
 
   /** Mayan specific option to bridge from non-EVM chain to Hyperliquid */
   mayanNonEvmPermitSignature?: boolean
@@ -569,6 +580,13 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
   /** SVM specific option, priority fee level */
   svmPriorityFeeLevel?: SVMPriorityFeeLevel
+
+  /** Maximum Solana transaction version the client can sign. Defaults to 0.
+   * Set to 1 to allow V1 where enabled; the API may still return v0.
+   * Jito requests always use v0, including single-transaction responses.
+   * Read transactionRequest.svmTransactionVersion
+   * for the version actually built. */
+  svmMaxSupportedTransactionVersion?: 0 | 1
 
   /** Preset configuration for stablecoin routing optimization
    * When provided, this preset will override other route options with optimized settings */
