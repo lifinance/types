@@ -271,7 +271,8 @@ export interface RouteOptions extends RouteOptionsBase {
 
   /** Maximum Solana transaction version the client can sign. Defaults to 0.
    * Set to 1 to allow V1 where enabled; the API may still return v0.
-   * Jito bundles always use v0. Read transactionRequest.svmTransactionVersion
+   * Jito requests always use v0, including single-transaction responses.
+   * Read transactionRequest.svmTransactionVersion
    * for the version actually built. */
   svmMaxSupportedTransactionVersion?: 0 | 1
 
@@ -582,7 +583,8 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
 
   /** Maximum Solana transaction version the client can sign. Defaults to 0.
    * Set to 1 to allow V1 where enabled; the API may still return v0.
-   * Jito bundles always use v0. Read transactionRequest.svmTransactionVersion
+   * Jito requests always use v0, including single-transaction responses.
+   * Read transactionRequest.svmTransactionVersion
    * for the version actually built. */
   svmMaxSupportedTransactionVersion?: 0 | 1
 
@@ -1094,10 +1096,6 @@ export interface GetTokenApprovalResponse {
     maxFeePerGas?: string
     customData?: string
     ccipReadEnabled?: boolean
-
-    /** Solana transaction version actually built. May be lower than the
-     * requested maximum. Present on Solana transaction responses. */
-    svmTransactionVersion?: 0 | 1
   }
 }
 
