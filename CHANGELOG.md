@@ -1,5 +1,11 @@
 # Changelog
 
+## 18.13.0
+
+### Minor Changes
+
+- [#588](https://github.com/lifinance/types/pull/588) [`6a2d350`](https://github.com/lifinance/types/commit/6a2d350f4cb9e67b0e12f4d0c2a8cc3972d52a58) Thanks [@thesems](https://github.com/thesems)! - Add optional Solana maximum transaction version to quote and route options, and the built transaction version to transaction requests.
+
 ## 18.12.1
 
 ### Patch Changes
