@@ -840,6 +840,13 @@ export interface BaseStatusData {
   status: StatusMessage
   substatus?: Substatus
   substatusMessage?: string
+  /**
+   * One entry per LI.FI userOp, in bundle order. Present only on the response
+   * for an ERC-4337 bundle with at least one LI.FI userOp, never on an entry.
+   * The rest of the response describes one of those userOps, as for any other
+   * transaction.
+   */
+  batchStatus?: BatchStatusEntry[]
 }
 
 export interface StatusData extends BaseStatusData {
@@ -854,6 +861,20 @@ export interface FailedStatusData extends BaseStatusData {
 }
 
 export type StatusResponse = FullStatusData | StatusData | FailedStatusData
+
+/**
+ * The status of one LI.FI userOp of an ERC-4337 bundle.
+ */
+export type BatchStatusEntry = StatusResponse & {
+  /**
+   * The userOp's 0-based position in the bundle, counting every userOp, LI.FI
+   * or not, so it matches the order of the `handleOps` calldata.
+   */
+  index: number
+  /** The hash of the userOp, as the EntryPoint emits it. */
+  userOpHash: string
+}
+
 interface TransferMetadata {
   integrator: string
   referrer?: string
