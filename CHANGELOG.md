@@ -1,5 +1,11 @@
 # Changelog
 
+## 18.14.0
+
+### Minor Changes
+
+- [#593](https://github.com/lifinance/types/pull/593) [`c6d913d`](https://github.com/lifinance/types/commit/c6d913d38ea1649260e2458dc36ff4fd267333b0) Thanks [@konstantinabl](https://github.com/konstantinabl)! - Add the optional `batchStatus` to `StatusResponse`: for an ERC-4337 bundle, one `BatchStatusEntry` per LI.FI userOp, with its `index` in the bundle, `userOpHash`, `sender`, `success` and `gas`, and a `BatchStatusCall` (a `StatusResponse` with its `callIndex`) for each LI.FI call the userOp made.
+
 ## 18.13.0
 
 ### Minor Changes
