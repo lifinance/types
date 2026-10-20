@@ -840,6 +840,13 @@ export interface BaseStatusData {
   status: StatusMessage
   substatus?: Substatus
   substatusMessage?: string
+  /**
+   * One entry per LI.FI userOp, in bundle order. Present only on the response
+   * for an ERC-4337 bundle with at least one LI.FI userOp, never on a call.
+   * The rest of the response describes one LI.FI call of those userOps, as for
+   * any other transaction.
+   */
+  batchStatus?: BatchStatusEntry[]
 }
 
 export interface StatusData extends BaseStatusData {
@@ -854,6 +861,45 @@ export interface FailedStatusData extends BaseStatusData {
 }
 
 export type StatusResponse = FullStatusData | StatusData | FailedStatusData
+
+/**
+ * One LI.FI userOp of an ERC-4337 bundle: what the EntryPoint reports about it,
+ * and the status of each LI.FI call it made.
+ */
+export interface BatchStatusEntry {
+  /**
+   * The userOp's 0-based position in the bundle, counting every userOp, LI.FI
+   * or not, so it matches the order of the `handleOps` calldata.
+   */
+  index: number
+  /** The hash of the userOp, as the EntryPoint emits it. */
+  userOpHash: string
+  /** The smart account that sent the userOp. */
+  sender: string
+  /** False when the userOp reverted, which makes each of its calls FAILED. */
+  success: boolean
+  /**
+   * The gas the userOp paid. The EntryPoint charges it once for all the
+   * calls, so the calls report no gas of their own.
+   */
+  gas: Pick<
+    ExtendedTransactionInfo,
+    'gasPrice' | 'gasUsed' | 'gasToken' | 'gasAmount' | 'gasAmountUSD'
+  >
+  /** The status of each LI.FI call the userOp made, in call order. */
+  calls: BatchStatusCall[]
+}
+
+/**
+ * The status of one LI.FI call of a userOp, such as one of several swaps a
+ * smart account batched. Each call is its own transfer, with its own
+ * `transactionId`.
+ */
+export type BatchStatusCall = StatusResponse & {
+  /** The call's 0-based position among the userOp's LI.FI calls. */
+  callIndex: number
+}
+
 interface TransferMetadata {
   integrator: string
   referrer?: string
