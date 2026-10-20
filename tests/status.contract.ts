@@ -1,5 +1,6 @@
 import {
   type BaseTransactionInfo,
+  type BatchStatusCall,
   type BatchStatusEntry,
   ChainId,
   type FailedStatusData,
@@ -30,37 +31,71 @@ const sending: BaseTransactionInfo = {
   txLink: 'https://explorer.example/tx/0x1',
 }
 
-export const pendingLeg = {
+export const pendingCall = {
   status: 'PENDING',
   tool: 'relaydepository',
   sending,
   receiving: { chainId: ChainId.BAS },
-  index: 15,
-  userOpHash: '0x2',
-} satisfies BatchStatusEntry
+  callIndex: 0,
+} satisfies BatchStatusCall
 
-export const failedLeg = {
+export const failedCall = {
   status: 'FAILED',
   sending,
-  index: 16,
-  userOpHash: '0x3',
+  callIndex: 0,
+} satisfies BatchStatusCall
+
+const gas = {
+  gasPrice: '0',
+  gasUsed: '0',
+  gasToken: {
+    chainId: ChainId.BAS,
+    address: '0x0000000000000000000000000000000000000000',
+    symbol: 'ETH',
+    decimals: 18,
+    name: 'ETH',
+    priceUSD: '0',
+  },
+  gasAmount: '0',
+  gasAmountUSD: '0',
+}
+
+export const userOpWithTwoCalls = {
+  index: 15,
+  userOpHash: '0x2',
+  sender: '0x4',
+  success: true,
+  gas,
+  calls: [pendingCall, { ...pendingCall, callIndex: 1 }],
 } satisfies BatchStatusEntry
 
-// The response describes one leg and lists every leg, in bundle order.
+export const revertedUserOp = {
+  index: 16,
+  userOpHash: '0x3',
+  sender: '0x5',
+  success: false,
+  gas,
+  calls: [failedCall],
+} satisfies BatchStatusEntry
+
+// The response describes one call and lists every LI.FI userOp, in bundle
+// order, with its calls.
 export const bundleStatus = {
   status: 'PENDING',
   tool: 'relaydepository',
   sending,
   receiving: { chainId: ChainId.BAS },
-  batchStatus: [pendingLeg, failedLeg],
+  batchStatus: [userOpWithTwoCalls, revertedUserOp],
 } satisfies StatusResponse
 
-// @ts-expect-error A leg names its position in the bundle.
-export const legWithoutIndex: BatchStatusEntry = {
+// @ts-expect-error A call names its position among the userOp's LI.FI calls.
+export const callWithoutIndex: BatchStatusCall = {
   status: 'FAILED',
   sending,
-  userOpHash: '0x3',
 }
+
+// @ts-expect-error An entry is a userOp, not a status: its calls hold those.
+export const callAsEntry: BatchStatusEntry = failedCall
 
 // A guard on StatusResponse still removes the status interfaces from a union
 // of them and other data, the way the backend tells an early status answer
