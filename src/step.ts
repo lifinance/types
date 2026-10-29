@@ -92,10 +92,18 @@ export interface FeeCost {
 
 export interface GasCost {
   type: 'SUM' | 'APPROVE' | 'SEND' | 'FEE'
-  price: string // suggested current standard price for chain
-  estimate: string // estimate how much gas will be needed
-  limit: string // suggested gas limit (estimate +25%)
-  amount: string // estimate * price = amount of tokens that will be needed
+  /** Suggested gas price or fee rate, in chain-specific units. */
+  price: string
+  /** Estimated gas usage, in chain-specific units. */
+  estimate: string
+  /** Suggested gas limit, in chain-specific units. */
+  limit: string
+  /**
+   * Authoritative fee estimate in the smallest units of `token`. Use this value
+   * directly instead of assuming `estimate * price` applies to every chain.
+   * On Stellar, the network fee is in stroops (XLM, 7 decimals).
+   */
+  amount: string
   amountUSD: string // usd value of token amount
   token: Token // the used gas token
 }
@@ -124,6 +132,13 @@ export interface Estimate {
   toAmount: string
   toAmountMin: string
   toAmountUSD?: string
+  /**
+   * Token allowance spender. On Stellar, use the estimate of an included step
+   * with `skipApproval !== true` and a valid Soroban contract (`C...`) address.
+   * The top-level estimate can contain a placeholder; do not approve it.
+   * Use that included step's `action.fromToken.address` and `estimate.fromAmount`
+   * for the approval token and required amount.
+   */
   approvalAddress: string
   feeCosts?: FeeCost[]
   /** This is a list to account for approval gas costs and transaction gas costs. However, approval gas costs are not integrated yet. */
@@ -132,7 +147,12 @@ export interface Estimate {
   executionDuration: number
   /** Optional flag to indicate approval reset requirement for legacy ERC-20 tokens */
   approvalReset?: boolean
-  /** Optional flag to skip approval in the cases where we only need to sign the message (e.g. Hyperliquid)*/
+  /**
+   * Whether this step needs no separate token approval (e.g. a message-only
+   * Hyperliquid step or a Stellar step using direct transaction authorization).
+   * On Stellar, evaluate each included step together with its `approvalAddress`;
+   * only `true` explicitly skips approval.
+   */
   skipApproval?: boolean
   /** Optional flag to skip permit usage when the tx doesn't include diamond interaction (some HyperEVM txs) */
   skipPermit?: boolean

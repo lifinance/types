@@ -65,6 +65,15 @@ export type TransactionRequest = {
   gasLimit?: BigIntish
   gasPrice?: BigIntish
 
+  /**
+   * Transaction data in the source chain's format. On Stellar, a base64-encoded,
+   * unsigned TransactionEnvelope XDR, prepared by the backend with simulated
+   * fees and Soroban resources. Sign and submit it promptly without modification.
+   *
+   * Request fresh data after any approval transaction is confirmed. The envelope
+   * is built against the sender's current account sequence and expires through
+   * timebounds; request a new one if the sequence advances or it becomes stale.
+   */
   data?: string
   value?: BigIntish
   chainId?: number
