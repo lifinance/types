@@ -1,5 +1,11 @@
 # Changelog
 
+## 18.15.0
+
+### Minor Changes
+
+- [#599](https://github.com/lifinance/types/pull/599) [`26b1d11`](https://github.com/lifinance/types/commit/26b1d112e2754ed0d7ea31297d93e74c2a8a2b7c) Thanks [@thesems](https://github.com/thesems)! - Add the Elysium chain (`ChainId.ELY`).
+
 ## 18.14.0
 
 ### Minor Changes
