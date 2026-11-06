@@ -5,6 +5,7 @@ import {
   type GetStatusRequest,
   type LiFiStep,
   type Step,
+  type SmartDepositsRefundFailureReason,
   type SmartDepositsRefundStage,
   type SmartDepositsStatus,
   type SmartDepositsStatusResponse,
@@ -16,6 +17,8 @@ import {
 // part of `pnpm typecheck`.
 type Expect<T extends true> = T
 type IsAssignable<From, To> = [From] extends [To] ? true : false
+type KeysOfUnion<T> = T extends unknown ? keyof T : never
+type Equal<A, B> = IsAssignable<A, B> extends true ? IsAssignable<B, A> : false
 
 export const byDepositAddress = {
   depositAddress: '0xdeposit',
@@ -50,6 +53,33 @@ export const refundBlock = {
     attempts: 2,
   },
 } satisfies SmartDepositsStatus
+
+export const submittedRefundBlock = {
+  refund: {
+    stage: 'submitted',
+    txHash: null,
+    initiatedAt: null,
+    submittedAt: '2026-11-06T10:01:00.000Z',
+    confirmedAt: null,
+    failedAt: null,
+    failureReason: null,
+    attempts: 1,
+  },
+} satisfies SmartDepositsStatus
+
+export type RefundStageIsExhaustive = Expect<
+  Equal<
+    SmartDepositsRefundStage,
+    'initiated' | 'submitted' | 'confirmed' | 'failed'
+  >
+>
+
+export type RefundFailureReasonIsExhaustive = Expect<
+  Equal<
+    SmartDepositsRefundFailureReason,
+    'tx_failed' | 'tx_incomplete' | 'never_broadcast' | 'unknown'
+  >
+>
 
 // @ts-expect-error 'none' is not a refund stage
 export const refundStageNone: SmartDepositsRefundStage = 'none'
@@ -86,6 +116,19 @@ export const preDeposit = {
   tool: 'smartDeposits',
   sending: { chainId: ChainId.BAS },
   smartDeposits: depositBlock,
+} satisfies SmartDepositsStatusResponse
+
+export const depositAddressAnswer = {
+  status: 'PENDING',
+  tool: 'smartDeposits',
+  fromAddress: '0xfrom',
+  toAddress: '0xto',
+  metadata: { integrator: 'jumper.exchange' },
+  sending: {
+    chainId: ChainId.BAS,
+    txHash: '0x1',
+    txLink: 'https://explorer.example/tx/0x1',
+  },
 } satisfies SmartDepositsStatusResponse
 
 export const chainedReceiving = {
@@ -147,7 +190,10 @@ export const markers: Pick<
 > = { smartDepositsComposed: true, amountFlexible: true }
 
 export type MarkersStayOffStep = Expect<
-  Extract<keyof Step, 'smartDepositsComposed' | 'amountFlexible'> extends never
+  Extract<
+    KeysOfUnion<Step>,
+    'smartDepositsComposed' | 'amountFlexible'
+  > extends never
     ? true
     : false
 >
