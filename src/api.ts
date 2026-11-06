@@ -728,8 +728,11 @@ export type GetStatusRequest = {
 } & (
   | { txHash: string }
   | { taskId: string }
-  /** Smart Deposit Address routes: `fromChain` is the deposit's source chain. */
-  | { depositAddress: string; fromChain: number | string }
+  | {
+      depositAddress: string
+      /** Smart Deposit Address routes: the deposit's source chain. */
+      fromChain: number | string
+    }
 )
 
 export interface BaseTransactionInfo {
@@ -909,13 +912,16 @@ export interface SmartDepositsTransactionInfo {
   chainId: ChainId
   txHash?: string
   txLink?: string
+  amount?: string
+  amountUSD?: string
+  token?: Token
 }
 
 /**
- * The `GET /v1/status` answer for a Smart Deposits deposit address (or the
- * Solana and Bitcoin lanes) before the deposit transaction is known: `sending`
- * may carry only the chain. Not part of `StatusResponse`, whose `sending` always
- * has a `txHash`.
+ * What `GET /v1/status` answers for a Smart Deposits deposit-address lookup at
+ * every stage, and for the Bitcoin-origin lane and the Solana-origin (txHash)
+ * lanes: `sending` and `receiving` may carry only the chain, and there is no
+ * `transactionId`. Not part of `StatusResponse`.
  */
 export interface SmartDepositsStatusResponse {
   status: StatusMessage

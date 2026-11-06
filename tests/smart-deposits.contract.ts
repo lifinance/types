@@ -4,10 +4,11 @@ import {
   type FullStatusData,
   type GetStatusRequest,
   type LiFiStep,
+  type Step,
+  type SmartDepositsRefundStage,
   type SmartDepositsStatus,
   type SmartDepositsStatusResponse,
   type SmartDepositsToolData,
-  type StatusData,
   type StatusResponse,
 } from '../src/index.js'
 
@@ -50,6 +51,9 @@ export const refundBlock = {
   },
 } satisfies SmartDepositsStatus
 
+// @ts-expect-error 'none' is not a refund stage
+export const refundStageNone: SmartDepositsRefundStage = 'none'
+
 // @ts-expect-error a block carries a deposit or a refund, never both
 export const bothBlocks: SmartDepositsStatus = {
   ...depositBlock,
@@ -64,11 +68,11 @@ const sending = {
 
 export const statusWithBlock = {
   status: 'PENDING',
-  tool: 'smartdeposits',
+  tool: 'smartDeposits',
   sending,
   receiving: { chainId: ChainId.OPT },
   smartDeposits: depositBlock,
-} satisfies StatusData
+} satisfies StatusResponse
 
 export type FullStatusCarriesBlock = Expect<
   IsAssignable<
@@ -77,18 +81,31 @@ export type FullStatusCarriesBlock = Expect<
   >
 >
 
-export type StatusDataIsResponse = Expect<
-  IsAssignable<StatusData, StatusResponse>
->
-export type FullStatusIsResponse = Expect<
-  IsAssignable<FullStatusData, StatusResponse>
->
-
 export const preDeposit = {
   status: 'NOT_FOUND',
-  tool: 'smartdeposits',
+  tool: 'smartDeposits',
   sending: { chainId: ChainId.BAS },
   smartDeposits: depositBlock,
+} satisfies SmartDepositsStatusResponse
+
+export const chainedReceiving = {
+  status: 'PENDING',
+  tool: 'smartDeposits',
+  sending: { chainId: ChainId.BAS },
+  receiving: {
+    chainId: ChainId.OPT,
+    amount: '100',
+    amountUSD: '100.00',
+    token: {
+      address: '0x0000000000000000000000000000000000000000',
+      chainId: ChainId.OPT,
+      symbol: 'ETH',
+      decimals: 18,
+      name: 'ETH',
+      priceUSD: '1',
+      logoURI: '',
+    },
+  },
 } satisfies SmartDepositsStatusResponse
 
 export type PreDepositIsNotStatusResponse = Expect<
@@ -122,3 +139,29 @@ export const markers: Pick<
   LiFiStep,
   'smartDepositsComposed' | 'amountFlexible'
 > = { smartDepositsComposed: true, amountFlexible: true }
+
+export type MarkersStayOffStep = Expect<
+  'smartDepositsComposed' extends keyof Step ? false : true
+>
+
+export const venueToolData = {
+  quoteId: 'abc',
+  fee: { amount: '1' },
+} satisfies Estimate['toolData']
+
+export const venueToolDataWithoutAddress: Estimate['toolData'] = {
+  quoteId: 'abc',
+  expiry: 12,
+}
+
+export function depositAddressOf(estimate: Estimate): string | undefined {
+  const toolData = estimate.toolData
+  if (toolData?.depositAddress !== undefined) {
+    const sd: SmartDepositsToolData = toolData
+    return sd.depositAddress
+  }
+  return undefined
+}
+
+// @ts-expect-error a venue object cannot carry a malformed depositAddress
+export const badVenueAddress: Estimate['toolData'] = { depositAddress: 1 }

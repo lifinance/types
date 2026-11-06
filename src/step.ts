@@ -136,18 +136,22 @@ export interface Estimate {
   skipApproval?: boolean
   /** Optional flag to skip permit usage when the tx doesn't include diamond interaction (some HyperEVM txs) */
   skipPermit?: boolean
-  /** Returned on Smart Deposits steps only; other tools do not expose it. */
-  toolData?: SmartDepositsToolData
+  /** Smart Deposits steps carry `SmartDepositsToolData`; Bitcoin-origin steps of other tools carry their venue's own data. */
+  toolData?:
+    | SmartDepositsToolData
+    | { depositAddress?: never; amountModel?: never; [key: string]: unknown }
 }
 
 export type SmartDepositsToolData =
   | { depositAddress: string; amountModel?: never }
-  /** Amount-flexible terms: the signed rate floor, minimum deposit and rate expiry (ISO-8601). */
   | {
       depositAddress: string
       amountModel: 'solve_time_quote'
+      /** Minimum raw destination units per raw source unit, after fees. */
       minRate: { numerator: string; denominator: string }
+      /** Minimum deposit, in raw source units. */
       sourceAmountMin: string
+      /** ISO-8601. */
       rateExpiresAt: string
     }
 
@@ -266,8 +270,9 @@ export interface LiFiStep extends Omit<Step, 'type'> {
    * plain bundle that delivers the raw token instead of the action's output. */
   destinationAction?: DestinationAction
 
-  /** Present on Smart Deposits steps composed with other steps. Round-trip the
-   * step unchanged to `/v1/advanced/stepTransaction`. */
+  /** On EVM cross-chain Smart Deposits steps: whether the routing-time quote
+   * was a two-leg composed route (`false` = direct, absent = unknown).
+   * Round-trip the step unchanged to `/v1/advanced/stepTransaction`. */
   smartDepositsComposed?: boolean
 
   /** Present on Smart Deposits steps of an amount-flexible route. Round-trip
