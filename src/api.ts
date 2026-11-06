@@ -730,7 +730,7 @@ export type GetStatusRequest = {
   | { taskId: string }
   | {
       depositAddress: string
-      /** Smart Deposit Address routes: the deposit's source chain. */
+      /** Smart Deposit Address routes: the deposit's source chain. EVM or Bitcoin source chains; Solana-origin deposits are looked up by `txHash`. */
       fromChain: number | string
     }
 )

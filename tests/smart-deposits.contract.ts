@@ -126,6 +126,12 @@ export const flexibleToolData = {
   rateExpiresAt: '2026-11-06T10:00:00.000Z',
 } satisfies SmartDepositsToolData
 
+export const otherModel: SmartDepositsToolData = {
+  ...flexibleToolData,
+  // @ts-expect-error amountModel is the closed literal 'solve_time_quote'
+  amountModel: 'reference_quote',
+}
+
 export function rateTerms(toolData: SmartDepositsToolData): string | undefined {
   if (toolData.amountModel === 'solve_time_quote') {
     return `${toolData.minRate.numerator}/${toolData.minRate.denominator}@${toolData.rateExpiresAt}`
@@ -141,7 +147,9 @@ export const markers: Pick<
 > = { smartDepositsComposed: true, amountFlexible: true }
 
 export type MarkersStayOffStep = Expect<
-  'smartDepositsComposed' extends keyof Step ? false : true
+  Extract<keyof Step, 'smartDepositsComposed' | 'amountFlexible'> extends never
+    ? true
+    : false
 >
 
 export const venueToolData = {
