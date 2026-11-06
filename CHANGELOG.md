@@ -1,5 +1,12 @@
 # Changelog
 
+## 18.16.0
+
+### Minor Changes
+
+- [#602](https://github.com/lifinance/types/pull/602) [`44e9d18`](https://github.com/lifinance/types/commit/44e9d189ceca4a182b0c6ea513085ad9e2fcf56e) Thanks [@glarov95](https://github.com/glarov95)! - Add the Smart Deposits contract: status lookup by deposit address, the status `smartDeposits` block, `SmartDepositsStatusResponse`, typed `estimate.toolData`, and the `smartDepositsComposed` and `amountFlexible` step markers.
+  `GetStatusRequest` gains a `{ depositAddress, fromChain }` variant; code that narrows with `'txHash' in r ? r.txHash : r.taskId` must handle it.
+
 ## 18.15.0
 
 ### Minor Changes
