@@ -725,7 +725,12 @@ export type GetStatusRequest = {
   toChain?: number | string
   transactionId?: string
   depositAddress?: string
-} & ({ txHash: string } | { taskId: string })
+} & (
+  | { txHash: string }
+  | { taskId: string }
+  /** Smart Deposit Address routes: `fromChain` is the deposit's source chain. */
+  | { depositAddress: string; fromChain: number | string }
+)
 
 export interface BaseTransactionInfo {
   txHash: string
@@ -840,6 +845,8 @@ export interface BaseStatusData {
   status: StatusMessage
   substatus?: Substatus
   substatusMessage?: string
+  /** Present on Smart Deposits statuses: the deposit shortfall or the refund lifecycle. */
+  smartDeposits?: SmartDepositsStatus
   /**
    * One entry per LI.FI userOp, in bundle order. Present only on the response
    * for an ERC-4337 bundle with at least one LI.FI userOp, never on a call.
@@ -861,6 +868,67 @@ export interface FailedStatusData extends BaseStatusData {
 }
 
 export type StatusResponse = FullStatusData | StatusData | FailedStatusData
+
+export type SmartDepositsRefundStage =
+  | 'initiated'
+  | 'submitted'
+  | 'confirmed'
+  | 'failed'
+
+export type SmartDepositsRefundFailureReason =
+  | 'tx_failed'
+  | 'tx_incomplete'
+  | 'never_broadcast'
+  | 'unknown'
+
+export interface SmartDepositsDepositStatus {
+  token: string
+  received: string
+  required: string
+  outstanding: string
+  observedAt: string | null
+}
+
+export interface SmartDepositsRefundStatus {
+  stage: SmartDepositsRefundStage
+  txHash: string | null
+  initiatedAt: string | null
+  submittedAt: string | null
+  confirmedAt: string | null
+  failedAt: string | null
+  failureReason: SmartDepositsRefundFailureReason | null
+  attempts: number
+}
+
+/** Exactly one of `deposit` (still short of the required amount) or `refund`. */
+export type SmartDepositsStatus =
+  | { deposit: SmartDepositsDepositStatus; refund?: never }
+  | { refund: SmartDepositsRefundStatus; deposit?: never }
+
+export interface SmartDepositsTransactionInfo {
+  chainId: ChainId
+  txHash?: string
+  txLink?: string
+}
+
+/**
+ * The `GET /v1/status` answer for a Smart Deposits deposit address (or the
+ * Solana and Bitcoin lanes) before the deposit transaction is known: `sending`
+ * may carry only the chain. Not part of `StatusResponse`, whose `sending` always
+ * has a `txHash`.
+ */
+export interface SmartDepositsStatusResponse {
+  status: StatusMessage
+  substatus?: Substatus
+  substatusMessage?: string
+  tool: string
+  fromAddress?: string
+  toAddress?: string
+  sending: SmartDepositsTransactionInfo
+  receiving?: SmartDepositsTransactionInfo
+  smartDeposits?: SmartDepositsStatus
+  metadata?: { integrator: string }
+}
 
 /**
  * One LI.FI userOp of an ERC-4337 bundle: what the EntryPoint reports about it,

@@ -136,7 +136,20 @@ export interface Estimate {
   skipApproval?: boolean
   /** Optional flag to skip permit usage when the tx doesn't include diamond interaction (some HyperEVM txs) */
   skipPermit?: boolean
+  /** Returned on Smart Deposits steps only; other tools do not expose it. */
+  toolData?: SmartDepositsToolData
 }
+
+export type SmartDepositsToolData =
+  | { depositAddress: string; amountModel?: never }
+  /** Amount-flexible terms: the signed rate floor, minimum deposit and rate expiry (ISO-8601). */
+  | {
+      depositAddress: string
+      amountModel: 'solve_time_quote'
+      minRate: { numerator: string; denominator: string }
+      sourceAmountMin: string
+      rateExpiresAt: string
+    }
 
 // STEP
 export const _StepType = [
@@ -252,6 +265,14 @@ export interface LiFiStep extends Omit<Step, 'type'> {
    * `/v1/advanced/stepTransaction` — a step posted without it prepares a
    * plain bundle that delivers the raw token instead of the action's output. */
   destinationAction?: DestinationAction
+
+  /** Present on Smart Deposits steps composed with other steps. Round-trip the
+   * step unchanged to `/v1/advanced/stepTransaction`. */
+  smartDepositsComposed?: boolean
+
+  /** Present on Smart Deposits steps of an amount-flexible route. Round-trip
+   * the step unchanged to `/v1/advanced/stepTransaction`. */
+  amountFlexible?: boolean
 
   /** Present iff the step belongs to a route admitted with
    * `slippageScope: 'route'`. Same object as `Route.routeSlippage` — round-trip
