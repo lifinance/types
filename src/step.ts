@@ -136,7 +136,24 @@ export interface Estimate {
   skipApproval?: boolean
   /** Optional flag to skip permit usage when the tx doesn't include diamond interaction (some HyperEVM txs) */
   skipPermit?: boolean
+  /** Smart Deposits steps carry `SmartDepositsToolData`; Bitcoin- and Zcash-origin steps of other tools carry their venue's own data. */
+  toolData?:
+    | SmartDepositsToolData
+    | { depositAddress?: never; amountModel?: never; [key: string]: unknown }
 }
+
+export type SmartDepositsToolData =
+  | { depositAddress: string; amountModel?: never }
+  | {
+      depositAddress: string
+      amountModel: 'solve_time_quote'
+      /** Minimum raw destination units per raw source unit, after fees. */
+      minRate: { numerator: string; denominator: string }
+      /** Minimum deposit, in raw source units. */
+      sourceAmountMin: string
+      /** ISO-8601. */
+      rateExpiresAt: string
+    }
 
 // STEP
 export const _StepType = [
@@ -252,6 +269,15 @@ export interface LiFiStep extends Omit<Step, 'type'> {
    * `/v1/advanced/stepTransaction` — a step posted without it prepares a
    * plain bundle that delivers the raw token instead of the action's output. */
   destinationAction?: DestinationAction
+
+  /** On EVM cross-chain Smart Deposits steps: whether the routing-time quote
+   * was a two-leg composed route (`false` = direct, absent = unknown).
+   * Round-trip the step unchanged to `/v1/advanced/stepTransaction`. */
+  smartDepositsComposed?: boolean
+
+  /** Present on Smart Deposits steps of an amount-flexible route. Round-trip
+   * the step unchanged to `/v1/advanced/stepTransaction`. */
+  amountFlexible?: boolean
 
   /** Present iff the step belongs to a route admitted with
    * `slippageScope: 'route'`. Same object as `Route.routeSlippage` — round-trip
