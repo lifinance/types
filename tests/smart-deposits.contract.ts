@@ -1,6 +1,9 @@
 import {
   ChainId,
   type Estimate,
+  type QuoteRequest,
+  type QuoteToAmountRequest,
+  type RouteOptions,
   type FullStatusData,
   type GetStatusRequest,
   type LiFiStep,
@@ -223,6 +226,41 @@ export function rateTerms(toolData: SmartDepositsToolData): string | undefined {
   return undefined
 }
 
+export const windowedToolData = {
+  depositAddress: '0xdeposit',
+  expiresAt: '2026-11-13T09:30:00.000Z',
+} satisfies SmartDepositsToolData
+
+export const windowedFlexibleToolData = {
+  ...flexibleToolData,
+  expiresAt: '2026-11-13T09:30:00.000Z',
+} satisfies SmartDepositsToolData
+
+export const depositWindowOnRouteOptions = {
+  depositWindow: 900,
+} satisfies RouteOptions
+
+export const depositWindowOnQuote = {
+  fromChain: 1,
+  fromToken: '0xfrom',
+  fromAddress: '0xaddress',
+  fromAmount: '1',
+  toChain: 8453,
+  toToken: '0xto',
+  depositWindow: 900,
+} satisfies QuoteRequest
+
+// @ts-expect-error depositWindow is a number of seconds
+export const stringDepositWindow: RouteOptions = { depositWindow: '900' }
+
+export type DepositWindowStaysOffToAmount = Expect<
+  'depositWindow' extends keyof QuoteToAmountRequest ? false : true
+>
+
+export const depositWindowMarker: Pick<LiFiStep, 'depositWindow'> = {
+  depositWindow: 900,
+}
+
 export const estimateToolData: Estimate['toolData'] = flexibleToolData
 
 export const markers: Pick<
@@ -233,7 +271,7 @@ export const markers: Pick<
 export type MarkersStayOffStep = Expect<
   Extract<
     KeysOfUnion<Step>,
-    'smartDepositsComposed' | 'amountFlexible'
+    'smartDepositsComposed' | 'amountFlexible' | 'depositWindow'
   > extends never
     ? true
     : false

@@ -300,6 +300,12 @@ export interface RouteOptions extends RouteOptionsBase {
    * rejected or excluded rather than silently served without it. */
   destinationAction?: DestinationAction
 
+  /** Seconds the Smart Deposits deposit address stays open, 600 to 86400.
+   * EVM-source Smart Deposits routes only, not composed routes or target
+   * amounts; routes that cannot honour it are rejected or excluded. The
+   * effective expiry is echoed at `estimate.toolData.expiresAt`. */
+  depositWindow?: number
+
   /** Whether the user wants to insure their tx
    * @deprecated This property is deprecated and will be removed in future versions. */
   insurance?: boolean
@@ -553,6 +559,9 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
    *  and its underlying asset must equal `toToken`. Must be sent together with `destinationActionKind`. */
   destinationActionVault?: string
 
+  /** @see {@link RouteOptions.depositWindow} */
+  depositWindow?: number
+
   /** The amount of token to convert to gas */
   fromAmountForGas?: string
 
@@ -606,6 +615,7 @@ export interface QuoteToAmountRequest extends Omit<
   | 'insurance'
   | 'destinationActionKind'
   | 'destinationActionVault'
+  | 'depositWindow'
   // Route-wide protection is exact-input only: exact-output stays on step
   // scope and rejects `'route'` instead of downgrading.
   | 'slippageScope'
