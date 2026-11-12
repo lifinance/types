@@ -7,7 +7,6 @@ export enum CoinKey {
   FTM = 'FTM',
   AVAX = 'AVAX',
   ONE = 'ONE',
-  FSN = 'FSN',
   MOVR = 'MOVR',
   CELO = 'CELO',
   FUSE = 'FUSE',
@@ -15,7 +14,6 @@ export enum CoinKey {
   CRO = 'CRO',
   RBTC = 'RBTC',
   VLX = 'VLX',
-  GLMR = 'GLMR',
   METIS = 'METIS',
   EVM = 'EVM',
   MNT = 'MNT',
@@ -29,8 +27,6 @@ export enum CoinKey {
   BERA = 'BERA', // Berachain Token
   S = 'S', // Sonic Token
   APE = 'APE', // ApeCoin
-  GHO = 'GHO', // Lens
-  WGHO = 'WGHO', // Lens
   XTZ = 'XTZ', // Etherlink Native
   HYPE = 'HYPE', // HyperEVM native
   XDC = 'XDC', // XDC native
@@ -90,7 +86,6 @@ export enum CoinKey {
   USDCs = 'USDCs', // Wormhole bridged USDC from Solana to Fogo
   USDCn = 'USDCn',
   USDe = 'USDe',
-  USDB = 'USDB', // Blast native stablecoin
   FRAX = 'FRAX', // Fraxtal stablecoin
   AXLUSDC = 'axlUSDC', // Axelar Wrapped USDC
   FDUSD = 'FDUSD', // First Digital USD
@@ -121,7 +116,6 @@ export enum CoinKey {
   frxETH = 'frxETH',
   wfrxETH = 'wfrxETH', // Wrapped frxETH Token
   WSEI = 'WSEI', // Wrapped SEI Token
-  WG = 'WG', // Wrapped G Token on Gravity chain
   WIMX = 'WIMX', // Wrapped IMX Token
   WPOL = 'WPOL', // Wrapped POL Token
   WKAIA = 'WKAIA', // Wrapped KAIA Token
