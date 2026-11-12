@@ -1,11 +1,15 @@
 import {
   ChainId,
   type Estimate,
+  type QuoteRequest,
+  type QuoteToAmountRequest,
+  type RouteOptions,
   type FullStatusData,
   type GetStatusRequest,
   type LiFiStep,
   type Step,
   type SmartDepositsRefundFailureReason,
+  type SmartDepositsRefundOutlook,
   type SmartDepositsRefundStage,
   type SmartDepositsStatus,
   type SmartDepositsStatusResponse,
@@ -84,9 +88,49 @@ export type RefundFailureReasonIsExhaustive = Expect<
 // @ts-expect-error 'none' is not a refund stage
 export const refundStageNone: SmartDepositsRefundStage = 'none'
 
+export const neitherBlock = {} satisfies SmartDepositsStatus
+
+export const commonFieldsBesideDeposit = {
+  ...depositBlock,
+  expiresAt: '2026-11-13T09:30:00.000Z',
+  requiredDeposit: { token: '0xtoken', amount: '100' },
+  refundOutlook: 'expected',
+} satisfies SmartDepositsStatus
+
+export const commonFieldsBesideRefund = {
+  ...refundBlock,
+  expiresAt: '2026-11-13T09:30:00.000Z',
+  refundOutlook: 'not_expected',
+} satisfies SmartDepositsStatus
+
+export const commonFieldsAlone = {
+  expiresAt: '2026-11-13T09:30:00.000Z',
+  requiredDeposit: { token: '0xtoken', amount: '100' },
+} satisfies SmartDepositsStatus
+
+export type RefundOutlookIsExhaustive = Expect<
+  Equal<SmartDepositsRefundOutlook, 'expected' | 'not_expected'>
+>
+
+export const unknownOutlook: SmartDepositsStatus = {
+  // @ts-expect-error 'maybe' is not a refund outlook
+  refundOutlook: 'maybe',
+}
+
+export const incompleteRequiredDeposit: SmartDepositsStatus = {
+  // @ts-expect-error requiredDeposit carries a token and an amount
+  requiredDeposit: { token: '0xtoken' },
+}
+
 // @ts-expect-error a block carries a deposit or a refund, never both
 export const bothBlocks: SmartDepositsStatus = {
   ...depositBlock,
+  refund: refundBlock.refund,
+}
+
+// @ts-expect-error the common fields do not lift the never-both rule
+export const bothBlocksWithCommonFields: SmartDepositsStatus = {
+  ...commonFieldsBesideDeposit,
   refund: refundBlock.refund,
 }
 
@@ -182,6 +226,65 @@ export function rateTerms(toolData: SmartDepositsToolData): string | undefined {
   return undefined
 }
 
+export const windowedToolData = {
+  depositAddress: '0xdeposit',
+  expiresAt: '2026-11-13T09:30:00.000Z',
+} satisfies SmartDepositsToolData
+
+export const windowedFlexibleToolData = {
+  ...flexibleToolData,
+  expiresAt: '2026-11-13T09:30:00.000Z',
+} satisfies SmartDepositsToolData
+
+export const depositWindowOnRouteOptions = {
+  depositWindow: 900,
+} satisfies RouteOptions
+
+export const depositWindowOnQuote = {
+  fromChain: 1,
+  fromToken: '0xfrom',
+  fromAddress: '0xaddress',
+  fromAmount: '1',
+  toChain: 8453,
+  toToken: '0xto',
+  depositWindow: 900,
+} satisfies QuoteRequest
+
+// @ts-expect-error depositWindow is a number of seconds
+export const stringDepositWindow: RouteOptions = { depositWindow: '900' }
+
+export type DepositWindowStaysOffToAmount = Expect<
+  'depositWindow' extends keyof QuoteToAmountRequest ? false : true
+>
+
+export const forwardOnRouteOptions = {
+  forward: true,
+} satisfies RouteOptions
+
+export const forwardOnQuote = {
+  fromChain: 1,
+  fromToken: '0xtoken',
+  fromAddress: '0xaddress',
+  fromAmount: '1',
+  toChain: 1,
+  toToken: '0xtoken',
+  toAddress: '0xrecipient',
+  forward: true,
+} satisfies QuoteRequest
+
+// @ts-expect-error forward is a boolean
+export const stringForward: RouteOptions = { forward: 'true' }
+
+export type ForwardStaysOffToAmount = Expect<
+  'forward' extends keyof QuoteToAmountRequest ? false : true
+>
+
+export const forwardMarker: Pick<LiFiStep, 'forward'> = { forward: true }
+
+export const depositWindowMarker: Pick<LiFiStep, 'depositWindow'> = {
+  depositWindow: 900,
+}
+
 export const estimateToolData: Estimate['toolData'] = flexibleToolData
 
 export const markers: Pick<
@@ -192,7 +295,7 @@ export const markers: Pick<
 export type MarkersStayOffStep = Expect<
   Extract<
     KeysOfUnion<Step>,
-    'smartDepositsComposed' | 'amountFlexible'
+    'smartDepositsComposed' | 'amountFlexible' | 'depositWindow' | 'forward'
   > extends never
     ? true
     : false
