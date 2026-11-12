@@ -6,6 +6,7 @@ import {
   type LiFiStep,
   type Step,
   type SmartDepositsRefundFailureReason,
+  type SmartDepositsRefundOutlook,
   type SmartDepositsRefundStage,
   type SmartDepositsStatus,
   type SmartDepositsStatusResponse,
@@ -84,9 +85,49 @@ export type RefundFailureReasonIsExhaustive = Expect<
 // @ts-expect-error 'none' is not a refund stage
 export const refundStageNone: SmartDepositsRefundStage = 'none'
 
+export const neitherBlock = {} satisfies SmartDepositsStatus
+
+export const commonFieldsBesideDeposit = {
+  ...depositBlock,
+  expiresAt: '2026-11-13T09:30:00.000Z',
+  requiredDeposit: { token: '0xtoken', amount: '100' },
+  refundOutlook: 'expected',
+} satisfies SmartDepositsStatus
+
+export const commonFieldsBesideRefund = {
+  ...refundBlock,
+  expiresAt: '2026-11-13T09:30:00.000Z',
+  refundOutlook: 'not_expected',
+} satisfies SmartDepositsStatus
+
+export const commonFieldsAlone = {
+  expiresAt: '2026-11-13T09:30:00.000Z',
+  requiredDeposit: { token: '0xtoken', amount: '100' },
+} satisfies SmartDepositsStatus
+
+export type RefundOutlookIsExhaustive = Expect<
+  Equal<SmartDepositsRefundOutlook, 'expected' | 'not_expected'>
+>
+
+export const unknownOutlook: SmartDepositsStatus = {
+  // @ts-expect-error 'maybe' is not a refund outlook
+  refundOutlook: 'maybe',
+}
+
+export const incompleteRequiredDeposit: SmartDepositsStatus = {
+  // @ts-expect-error requiredDeposit carries a token and an amount
+  requiredDeposit: { token: '0xtoken' },
+}
+
 // @ts-expect-error a block carries a deposit or a refund, never both
 export const bothBlocks: SmartDepositsStatus = {
   ...depositBlock,
+  refund: refundBlock.refund,
+}
+
+// @ts-expect-error the common fields do not lift the never-both rule
+export const bothBlocksWithCommonFields: SmartDepositsStatus = {
+  ...commonFieldsBesideDeposit,
   refund: refundBlock.refund,
 }
 

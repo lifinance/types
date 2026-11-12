@@ -848,7 +848,7 @@ export interface BaseStatusData {
   status: StatusMessage
   substatus?: Substatus
   substatusMessage?: string
-  /** Present on Smart Deposits statuses: the deposit shortfall or the refund lifecycle. */
+  /** Present on Smart Deposits statuses: the deposit shortfall or the refund lifecycle, and the deposit-level fields. */
   smartDeposits?: SmartDepositsStatus
   /**
    * One entry per LI.FI userOp, in bundle order. Present only on the response
@@ -903,10 +903,62 @@ export interface SmartDepositsRefundStatus {
   attempts: number
 }
 
-/** Exactly one of `deposit` (still short of the required amount) or `refund`. */
-export type SmartDepositsStatus =
-  | { deposit: SmartDepositsDepositStatus; refund?: never }
-  | { refund: SmartDepositsRefundStatus; deposit?: never }
+/**
+ * `expected`: LI.FI still has an automatic step scheduled for the deposit (a
+ * refund, a carrier refund, a delivery or a re-drive). `not_expected`: no
+ * automatic step is scheduled for the funds LI.FI has observed. A deposit on
+ * which nothing was observed (for example one that expired empty) also reads
+ * `not_expected`: there is nothing to refund.
+ */
+export type SmartDepositsRefundOutlook = 'expected' | 'not_expected'
+
+/**
+ * The minimum total balance the deposit address must hold before the payment
+ * executes. Partial deposits do not reduce it; what is still missing is
+ * `deposit.outstanding`.
+ */
+export interface SmartDepositsRequiredDeposit {
+  /** The token's address on the source chain. */
+  token: string
+  /** The minimum total balance, in the token's raw base units. */
+  amount: string
+}
+
+/**
+ * Deposit-level detail, independent of the `deposit` and `refund` blocks.
+ * Every field is optional; later fields are added here.
+ */
+export interface SmartDepositsCommonStatus {
+  /**
+   * When the deposit address expires (ISO 8601). Present before execution
+   * starts (waiting for funds, ready, retrying), including before anything
+   * was received, and on an expired deposit until LI.FI starts its refund, so
+   * it can accompany REFUND_IN_PROGRESS while that refund is due. Absent once
+   * execution has started or the refund is under way.
+   */
+  expiresAt?: string
+  /**
+   * Present while the deposit waits for funds and holds less than its
+   * committed minimum. For an amount-flexible deposit the minimum is the
+   * route minimum, not a target. A deposit-address lookup drops it once LI.FI
+   * has accepted the deposit as funded; a transaction-hash lookup keeps it
+   * while the deposit waits for funds with an amount outstanding.
+   */
+  requiredDeposit?: SmartDepositsRequiredDeposit
+  /**
+   * Present when LI.FI reports one for the deposit's current state (an
+   * expired deposit, a failed settlement, a failed refund).
+   */
+  refundOutlook?: SmartDepositsRefundOutlook
+}
+
+/** At most one of `deposit` (still short of the required amount) or `refund`, plus the deposit-level fields. */
+export type SmartDepositsStatus = SmartDepositsCommonStatus &
+  (
+    | { deposit: SmartDepositsDepositStatus; refund?: never }
+    | { refund: SmartDepositsRefundStatus; deposit?: never }
+    | { deposit?: never; refund?: never }
+  )
 
 export interface SmartDepositsTransactionInfo {
   chainId: ChainId
