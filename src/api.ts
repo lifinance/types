@@ -306,6 +306,14 @@ export interface RouteOptions extends RouteOptionsBase {
    * effective expiry is echoed at `estimate.toolData.expiresAt`. */
   depositWindow?: number
 
+  /** Requests a Smart Deposits payment that delivers the same token on the
+   * same chain to `toAddress`, which is required. EVM, non-native tokens only,
+   * and only on chains where the capability is enabled. Refused together with
+   * `destinationAction`, `amountFlexible`, `fee`, `distributionFees`,
+   * `intermediary` or `disableFees`, and with a target amount. The returned
+   * route's step carries the forward marker. */
+  forward?: boolean
+
   /** Whether the user wants to insure their tx
    * @deprecated This property is deprecated and will be removed in future versions. */
   insurance?: boolean
@@ -562,6 +570,9 @@ export interface QuoteRequest extends ToolConfiguration, TimingStrings {
   /** @see {@link RouteOptions.depositWindow} */
   depositWindow?: number
 
+  /** @see {@link RouteOptions.forward} */
+  forward?: boolean
+
   /** The amount of token to convert to gas */
   fromAmountForGas?: string
 
@@ -616,6 +627,7 @@ export interface QuoteToAmountRequest extends Omit<
   | 'destinationActionKind'
   | 'destinationActionVault'
   | 'depositWindow'
+  | 'forward'
   // Route-wide protection is exact-input only: exact-output stays on step
   // scope and rejects `'route'` instead of downgrading.
   | 'slippageScope'

@@ -291,6 +291,11 @@ export interface LiFiStep extends Omit<Step, 'type'> {
    * to `/v1/advanced/stepTransaction`. */
   depositWindow?: number
 
+  /** Present on the Smart Deposits step of a route requested with `forward`.
+   * Round-trip the step unchanged to `/v1/advanced/stepTransaction`; a
+   * same-token Smart Deposits step posted without it is refused. */
+  forward?: boolean
+
   /** Present iff the step belongs to a route admitted with
    * `slippageScope: 'route'`. Same object as `Route.routeSlippage` — round-trip
    * it unchanged to `/v1/advanced/stepTransaction` and through SDK resume; the

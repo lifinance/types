@@ -257,6 +257,30 @@ export type DepositWindowStaysOffToAmount = Expect<
   'depositWindow' extends keyof QuoteToAmountRequest ? false : true
 >
 
+export const forwardOnRouteOptions = {
+  forward: true,
+} satisfies RouteOptions
+
+export const forwardOnQuote = {
+  fromChain: 1,
+  fromToken: '0xtoken',
+  fromAddress: '0xaddress',
+  fromAmount: '1',
+  toChain: 1,
+  toToken: '0xtoken',
+  toAddress: '0xrecipient',
+  forward: true,
+} satisfies QuoteRequest
+
+// @ts-expect-error forward is a boolean
+export const stringForward: RouteOptions = { forward: 'true' }
+
+export type ForwardStaysOffToAmount = Expect<
+  'forward' extends keyof QuoteToAmountRequest ? false : true
+>
+
+export const forwardMarker: Pick<LiFiStep, 'forward'> = { forward: true }
+
 export const depositWindowMarker: Pick<LiFiStep, 'depositWindow'> = {
   depositWindow: 900,
 }
@@ -271,7 +295,7 @@ export const markers: Pick<
 export type MarkersStayOffStep = Expect<
   Extract<
     KeysOfUnion<Step>,
-    'smartDepositsComposed' | 'amountFlexible' | 'depositWindow'
+    'smartDepositsComposed' | 'amountFlexible' | 'depositWindow' | 'forward'
   > extends never
     ? true
     : false
