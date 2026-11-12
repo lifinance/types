@@ -5,7 +5,7 @@ import type {
   ExecutionType,
 } from './api.js'
 import type { RouteSlippageCommitment } from './routeSlippage.js'
-import type { Token } from './tokens/index.js'
+import type { BaseToken, Token } from './tokens/index.js'
 
 /**
  * How a fee was calculated / the role of the recipient in the split.
@@ -117,6 +117,22 @@ export interface Action {
 }
 
 // ESTIMATE
+/** One hop of a swap route: a trade through a single venue and pool. */
+export interface EstimateHop {
+  /** Display name of the venue, e.g. 'Aquarius' */
+  venue: string
+  /** Pool id or address, when the venue has one */
+  pool?: string
+  /** Split path index. Hops with the same index run in order. */
+  path?: number
+  /** chainId + address only; clients resolve symbol/decimals via /v1/token */
+  fromToken: BaseToken
+  toToken: BaseToken
+  /** Base units, quote-time estimates. Only `toAmountMin` is enforced on chain. */
+  fromAmount: string
+  toAmount: string
+}
+
 export interface Estimate {
   tool: string
   fromAmount: string
@@ -140,6 +156,8 @@ export interface Estimate {
   toolData?:
     | SmartDepositsToolData
     | { depositAddress?: never; amountModel?: never; [key: string]: unknown }
+  /** Per-hop breakdown of a swap step, when the tool returns one */
+  hops?: EstimateHop[]
 }
 
 export type SmartDepositsToolData =
