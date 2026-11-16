@@ -1,5 +1,11 @@
 # Changelog
 
+## 19.1.0
+
+### Minor Changes
+
+- [#608](https://github.com/lifinance/types/pull/608) [`7125184`](https://github.com/lifinance/types/commit/71251846a61e95845ac32f71f9b2b12c1ceed094) Thanks [@melianessa](https://github.com/melianessa)! - Add `EstimateHop` and optional `Estimate.hops`: a per-hop, per-split-path breakdown of a swap step's route, with each hop's venue, pool, tokens and amounts.
+
 ## 19.0.0
 
 ### Major Changes
