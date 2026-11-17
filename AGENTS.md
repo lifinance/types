@@ -27,3 +27,8 @@ published to npm; GitHub Pages serves them from `main`.
 - TypeScript 7 does not ship `tsserver`, so VS Code's built-in TypeScript support uses its
   bundled version. Install the "TypeScript 7" extension (`TypeScriptTeam.native-preview`) so
   the editor matches `pnpm typecheck`.
+
+## Ownership
+
+Jumper squad, reviewer Eugene (`@chybisov`). Review requests: request the
+reviewer above on the PR.
