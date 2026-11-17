@@ -30,5 +30,6 @@ published to npm; GitHub Pages serves them from `main`.
 
 ## Ownership
 
-Jumper squad, reviewer Eugene (`@chybisov`). Review requests: request the
-reviewer above on the PR.
+Jumper squad and Fullstack team, maintainer Eugene (`@chybisov`). Review
+requests: request a relevant person from your team on the PR. If you do not
+know who to request, request Eugene.
