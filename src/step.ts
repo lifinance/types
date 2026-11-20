@@ -152,6 +152,8 @@ export interface Estimate {
   skipApproval?: boolean
   /** Optional flag to skip permit usage when the tx doesn't include diamond interaction (some HyperEVM txs) */
   skipPermit?: boolean
+  /** Optional allowance to request when approving `approvalAddress`, in base units. Defaults to `fromAmount` when absent. */
+  approvalAmount?: string
   /** Smart Deposits steps carry `SmartDepositsToolData`; Bitcoin- and Zcash-origin steps of other tools carry their venue's own data. */
   toolData?:
     | SmartDepositsToolData
