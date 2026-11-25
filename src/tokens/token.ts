@@ -57,6 +57,9 @@ export enum TokenTag {
   STABLECOIN = 'stablecoin',
   MAJOR_ASSET = 'major_asset',
   RWA = 'rwa',
+  // Request-only filter for GET /tokens: tokens submitted by allowlisted
+  // integrators. Never present in a token's `tags`.
+  EXTERNAL_DISCOVERY = 'external_discovery',
   // Legacy tags
   SUPERTOKEN = 'supertoken',
   TESTNET = 'testnet',
