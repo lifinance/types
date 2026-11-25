@@ -1,5 +1,11 @@
 # Changelog
 
+## 19.2.0
+
+### Minor Changes
+
+- [#611](https://github.com/lifinance/types/pull/611) [`43867ad`](https://github.com/lifinance/types/commit/43867ad36e03714cbdd1d07f8a0c5240a31832a9) Thanks [@CallumGrindle](https://github.com/CallumGrindle)! - Add `TokenTag.EXTERNAL_DISCOVERY` (`external_discovery`): a request-only tag for `GET /tokens` that returns the tokens submitted by allowlisted integrators. It is never present in a token's `tags`.
+
 ## 19.1.0
 
 ### Minor Changes
