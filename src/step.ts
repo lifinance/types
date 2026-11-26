@@ -161,7 +161,12 @@ export interface Estimate {
 }
 
 export type SmartDepositsToolData =
-  | { depositAddress: string; amountModel?: never }
+  | {
+      depositAddress: string
+      amountModel?: never
+      /** ISO-8601 expiry of the deposit address; present when `depositWindow` was requested. */
+      expiresAt?: string
+    }
   | {
       depositAddress: string
       amountModel: 'solve_time_quote'
@@ -171,6 +176,8 @@ export type SmartDepositsToolData =
       sourceAmountMin: string
       /** ISO-8601. */
       rateExpiresAt: string
+      /** ISO-8601 expiry of the deposit address; present when `depositWindow` was requested. */
+      expiresAt?: string
     }
 
 // STEP
@@ -296,6 +303,16 @@ export interface LiFiStep extends Omit<Step, 'type'> {
   /** Present on Smart Deposits steps of an amount-flexible route. Round-trip
    * the step unchanged to `/v1/advanced/stepTransaction`. */
   amountFlexible?: boolean
+
+  /** Present on Smart Deposits steps of a route requested with `depositWindow`:
+   * the seconds the deposit address stays open. Round-trip the step unchanged
+   * to `/v1/advanced/stepTransaction`. */
+  depositWindow?: number
+
+  /** Present on the Smart Deposits step of a route requested with `forward`.
+   * Round-trip the step unchanged to `/v1/advanced/stepTransaction`; a
+   * same-token Smart Deposits step posted without it is refused. */
+  forward?: boolean
 
   /** Present iff the step belongs to a route admitted with
    * `slippageScope: 'route'`. Same object as `Route.routeSlippage` — round-trip
